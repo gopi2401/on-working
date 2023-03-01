@@ -5,27 +5,34 @@ describe('numbers chacking and convering', () => {
         const input = "hello|world";
         expect(isMulti(input)).toBe(true);
     });
-});
-describe('null,none,inhert checking', () => {
-    test('', () => {
+    test('(|) vertical bar to chacking the words (failer code)', () => {
+        const input = "helloworld";
+        expect(isMulti(input)).toBe(false);
+    });
+    // describe('null,none,inhert checking', () => {
+    test('null,none,inhert checking', () => {
         const input = "none";
         expect(isNone(input)).toBe(true);
     });
-});
-describe('toNum check', () => {
-    test('', () => {
+    test('null,none,inhert checking (failer code)', () => {
+        const input = "any";
+        expect(isNone(input)).toBe(false);
+    });
+    // });
+    // describe('toNum check', () => {
+    test('Number only to return', () => {
         const input = "24px";
         expect(toNum(input)).toBe(24);
     });
-});
-describe('toRadian check', () => {
-    test('', () => {
+    // });
+    // describe('toRadian check', () => {
+    test('Radian', () => {
         const input = "180deg";
         expect(toRadian(input)).toBe(3.141);
     });
-});
-describe('toRound check', () => {
-    test('toRound the number', () => {
+    // });
+    // describe('toRound check', () => {
+    test('Round the number', () => {
         const input = "5.0077767";
         expect(toRound(input)).toBe(5.008);
     });
