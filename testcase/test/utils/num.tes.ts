@@ -1,7 +1,7 @@
 import { describe, expect, test } from '@jest/globals';
 import { isMulti, isNone, toNum, toRadian, toRound } from '../../src/utils/num';
-describe('Vertical bar check', () => {
-    test('key word |', () => {
+describe('numbers chacking and convering', () => {
+    test('(|) vertical bar to chacking the words', () => {
         const input = "hello|world";
         expect(isMulti(input)).toBe(true);
     });
