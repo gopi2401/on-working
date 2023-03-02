@@ -15,12 +15,12 @@ let run = async () => {
 
     const parsedDecls = await parseCssDecls(ast.root);
     data.data = parsedDecls;
+    let style = {}
     data.data.forEach(decl => {
         let key = decl["key"];
         let val = decl["val"];
         console.log(key, val);
-        return key:'$'
-
+        style[key] = val
     });
     // const newObj = { ...parsedDecls };
     // const newObj = Object.assign({}, parsedDecls);
@@ -37,11 +37,12 @@ let run = async () => {
     // } catch (error) {
     // handle error here
     // }
+    return style
 
 };
 describe('css to flutter convert', () => {
     test('', async () => {
-        expect(await run()).toBe(output);
+        expect(await run()).toEqual({ "background-color": "#e0e0e0", });
     });
 });
 
