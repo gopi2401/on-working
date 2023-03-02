@@ -17,7 +17,7 @@ const isName = val => {
   return false;
 };
 
-// 0% 50% -> topCenter
+// 0% 50% -> leftCenter
 // center left -> centerLeft
 const toNameVal = val => {
   let result = "";

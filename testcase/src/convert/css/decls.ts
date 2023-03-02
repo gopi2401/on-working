@@ -17,14 +17,14 @@ class Decls {
     this.decls.forEach((decl, index) => func(decl, index));
   }
 
-  merge(decls) {
-    for (let key in decls) {
-      this.add({
-        key,
-        val: decls[key]
-      });
-    }
-  }
+  // merge(decls) {
+  //   for (let key in decls) {
+  //     this.add({
+  //       key,
+  //       val: decls[key]
+  //     });
+  //   }
+  // }
 
   remove(key) {
     for (let i = this.decls.length - 1; i >= 0; i--) {
@@ -34,12 +34,12 @@ class Decls {
     }
   }
 
-  getVal(key, defaultVal) {
+  getVal(key) {
     let val = null;
     this.decls.forEach(decl => {
       if (decl.key === key) val = decl.val;
     });
-    return val || defaultVal;
+    return val;
   }
 
   clone() {

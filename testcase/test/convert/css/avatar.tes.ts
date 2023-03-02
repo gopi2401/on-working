@@ -2,11 +2,10 @@
 import { describe, expect, test } from '@jest/globals';
 import { getStyle, setStyle } from '../../../src/convert/css/avatar';
 const input = {
-    "background-color": "#e0e0e0"
+    'background-color': '#e0e0e0',
 }
-let run = (val: object) => {
+let run = (val) => {
     var d = setStyle(val);
-    console.log(d)
     return d
 };
 describe('css to detail css convert and temporary store data', () => {

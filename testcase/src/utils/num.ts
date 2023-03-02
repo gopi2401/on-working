@@ -1,26 +1,26 @@
-// import toNumber from "lodash/toNumber";
+import toNumber from "lodash/toNumber";
 
 const isMulti = key => {
   if (key.indexOf("|") > 0) return true;
   else return false;
 };
 
-// const findSimilarNumber = (n, rule) => {
-//   if (rule[n + ""]) return n;
+const findSimilarNumber = (n, rule) => {
+  if (rule[n + ""]) return n;
 
-//   const nums = [];
-//   for (let key in rule) {
-//     nums.push(parseInt(key));
-//   }
-//   nums.sort((n1, n2) => n2 - n1);
+  const nums = [];
+  for (let key in rule) {
+    nums.push(parseInt(key));
+  }
+  nums.sort((n1, n2) => n2 - n1);
 
-//   for (let i = 0; i < nums.length; i++) {
-//     const num = nums[i];
-//     if (n > num) return num;
-//   }
+  for (let i = 0; i < nums.length; i++) {
+    const num = nums[i];
+    if (n > num) return num;
+  }
 
-//   return 0;
-// };
+  return 0;
+};
 
 const isNone = val => {
   if (!val) return true;
@@ -44,7 +44,7 @@ const toNum = val => {
     val = typeof val === 'number' ? val : parseFloat(val);
     return val;
   } else {
-    return Number(val);
+    return toNumber(val);
   }
 };
 
@@ -61,4 +61,4 @@ const toRound = (val, n = 3) => {
   return num / d;
 };
 
-export { isMulti, isNone, toNum, toRadian, toRound };
+export { isMulti, isNone, toNum, findSimilarNumber, toRadian, toRound };
