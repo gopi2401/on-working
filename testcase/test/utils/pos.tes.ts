@@ -27,7 +27,7 @@ describe('toNameVal check', () => {
         expect(toNameVal(input)).toBe("topCenter");
     });
     test('value to', () => {
-        const input = "center left";
-        expect(toNameVal(input)).toBe("centerLeft");
+        const input = "0% 25% 50% 75%";
+        expect(toNameVal(input)).toBe("topRightCenterRight");
     });
 });
