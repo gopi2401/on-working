@@ -1,10 +1,7 @@
 import intercept from '../../../../src/convert/flutter/transform/intercept';
 import { describe, expect, test } from '@jest/globals';
-const input = {}
-let run = () => {
-};
-describe('', () => {
+describe('space to split in starting', () => {
   test("", () => {
-    expect(run()).toBe(undefined);
+    expect(intercept("hello world", "")).toBe("hello");
   });
 });
