@@ -15,7 +15,8 @@ const toFunit = (val: any) => {
   // like 50%
   else if (isPercentage(val)) {
     val = toNum(val) / 100;
-    return `_parent_ * ${val} // percentage of parent width. like 'MediaQuery.of(context).size.width * 0.2'`;
+    return val
+    // return `_parent_ * ${val} // percentage of parent width. like 'MediaQuery.of(context).size.width * 0.2'`;
   }
 
   // like 120px
@@ -28,7 +29,8 @@ const toFunit = (val: any) => {
   // like 3.2em
   else if (isEm(val)) {
     val = toNum(val);
-    return `_parent_font_width_ * ${val} // https://www.w3.org/Style/Examples/007/units`;
+    return val
+    // return `_parent_font_width_ * ${val} // https://www.w3.org/Style/Examples/007/units`;
   }
 
   // like 10rem
@@ -41,7 +43,8 @@ const toFunit = (val: any) => {
   // like 12pt
   else if (isPt(val)) {
     val = toNum(val);
-    return `${val} * 72 / _dpi_ // pt = px * dpi / 72`;
+    return val
+    // return `${val} * 72 / _dpi_ // pt = px * dpi / 72`;
   } else {
     return 0;
   }
