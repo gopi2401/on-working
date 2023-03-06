@@ -46,12 +46,12 @@ const isPositioned = ({ key, val, decls }) => {
   return false;
 };
 
-const isOpacity = ({ key, val, decls }) => {
+const isOpacity = key => {
   if (key === "opacity") return true;
   return false;
 };
 
-const isFlex = ({ key, val, decls }) => {
+const isFlex = (key, val) => {
   if (/^flex/.test(key)) return true;
   if (key === "display" && /flex/gi.test(val)) return true;
   if (key === "justify-content" || key === "align-items") return true;
@@ -59,7 +59,7 @@ const isFlex = ({ key, val, decls }) => {
 };
 
 const isCenter = ({ key, val, decls }) => {
-  if (isFlex({ key, val, decls })) {
+  if (isFlex(key, val)) {
     const alignItems = decls.getVal("align-items");
     const justifyContent = decls.getVal("justify-content");
     if (alignItems === "center" && justifyContent === "center") return true;
@@ -68,7 +68,7 @@ const isCenter = ({ key, val, decls }) => {
 };
 
 const isRow = ({ key, val, decls }) => {
-  if (isFlex({ key, val, decls })) {
+  if (isFlex(key, val)) {
     const direction = decls.getVal("flex-direction", "row");
     if (direction === "row") return true;
   }
@@ -76,14 +76,14 @@ const isRow = ({ key, val, decls }) => {
 };
 
 const isColumn = ({ key, val, decls }) => {
-  if (isFlex({ key, val, decls })) {
+  if (isFlex(key, val)) {
     const direction = decls.getVal("flex-direction", "row");
     if (direction === "column") return true;
   }
   return false;
 };
 
-const isTransform = ({ key, val, decls }) => {
+const isTransform = key => {
   if (key && /transform$/gi.test(key)) return true;
   return false;
 };

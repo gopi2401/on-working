@@ -7,14 +7,9 @@ const output = `Container(
     color: Color (0xffE0E0E0),
   )
 ),`
-let run = async () => {
-  var d = await convert2Flutter(input);
-  // var result = d.replaceAll("\\s", "");
-  return d
-};
 describe('css to flutter convert', () => {
   test('', async () => {
-    expect(await run()).toBe(output);
+    expect(await convert2Flutter(input)).toBe(output);
   });
 });
 
