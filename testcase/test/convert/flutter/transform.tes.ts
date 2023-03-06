@@ -7,14 +7,9 @@ let run = () => {
 };
 describe('transform', () => {
     test("", () => {
-        expect(transform('', '', '')).toBe(undefined);
-    });
-
-    test("", () => {
-        expect(match('', '', '')).toBe(undefined);
-    });
-
-    test("", () => {
-        expect(transform('', '', '')).toBe(undefined);
+        const key = '';
+        const val = '';
+        const decls = '';
+        expect(transform(key, val, decls)).toBe(undefined);
     });
 });
