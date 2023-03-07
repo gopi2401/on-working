@@ -34,12 +34,12 @@ class Decls {
     }
   }
 
-  getVal(key) {
+  getVal(key, defaultVal) {
     let val = null;
     this.decls.forEach(decl => {
       if (decl.key === key) val = decl.val;
     });
-    return val;
+    return val || defaultVal;
   }
 
   clone() {
