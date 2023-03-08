@@ -101,20 +101,20 @@ describe('widget', () => {
     expect(widget.decoration.lines).toEqual(["color: Color (0xff3B82F6),"]);
   });
 
-  // test("clearAllPseudoTags", () => {
-  //   widget.codeString = "<-tab-><-tab->Text(\n<-tab-><-tab->  \"Hello World\",\n<-tab-><-tab->  style: TextStyle(\n<-tab-><-tab->    color: Color (0xffFFFFFF),\n<-tab-><-tab->    fontWeight: FontWeight.w700,\n<-tab-><-tab->    <-prop->\n<-tab-><-tab->  ),\n<-tab-><-tab->  <-prop2->\n<-tab-><-tab->),"
-  //   const run = widget.clearAllPseudoTags()
-  //   const output = `    Text(
-  //     \"Hello World\",
-  //     style: TextStyle(
-  //       color: Color (0xffFFFFFF),
-  //       fontWeight: FontWeight.w700,
-
-  //     ),
-
-  //   ),`
-  //   expect(widget.codeString).toBe(output);
-  // });
+  test("clearAllPseudoTags", () => {
+    widget.codeString = "<-tab-><-tab->Text(\n<-tab-><-tab->  \"Hello World\",\n<-tab-><-tab->  style: TextStyle(\n<-tab-><-tab->    color: Color (0xffFFFFFF),\n<-tab-><-tab->    fontWeight: FontWeight.w700,\n<-tab-><-tab->    <-prop->\n<-tab-><-tab->  ),\n<-tab-><-tab->  <-prop2->\n<-tab-><-tab->),"
+    const run = widget.clearAllPseudoTags()
+    const output = `    Text(
+      \"Hello World\",
+      style: TextStyle(
+        color: Color (0xffFFFFFF),
+        fontWeight: FontWeight.w700,
+        
+      ),
+      
+    ),`
+    expect(widget.codeString).toBe(output);
+  });
 
   test("clearBlankLines", () => {
     widget.codeString = '    Text(\n      "Hello World",\n      style: TextStyle(\n        color: Color (0xffFFFFFF),\n        fontWeight: FontWeight.w700,\n        \n      ),\n      \n    ),'
