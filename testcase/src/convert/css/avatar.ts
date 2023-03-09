@@ -1,5 +1,5 @@
-import Detailcss from "./detailcss";
-const detailcss = new Detailcss();
+import Decls from './decls'
+const detailcss = new Decls()
 const setStyle = (css) => {
   Object.entries(css)
     .map(([property, val]) => {
