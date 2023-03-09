@@ -61,10 +61,7 @@ describe('widget', () => {
     //   root: undefined,
     // }
     const run = widget.addChildTo(parent)
-    expect(widget.parent.template).toBe(` Transform(
- <-children->
-     <-prop->
-   ),"`);
+    expect(widget.parent.template).toBe("\n Transform(\n  <-children->\n  <-prop->\n),");
     expect(widget.parent.parent).toBe(null);
     // expect(widget.parent.children[0].parent.children[0].parent.children[0].parent.children[0].parent).toBe(null);
   });
@@ -98,11 +95,13 @@ describe('widget', () => {
     expect(widget.prop.lines).toEqual(["padding: const EdgeInsets.all(8.0),"]);
   });
 
-  // test("setProp2", () => {
-  //   const okey = '';
-  //   const oval = '';
-  //   expect(widget.setProp2(okey, oval)).toBe(undefined);
-  // });
+  test("setProp2", () => {
+    const widget = new Widget('text')
+    const okey = 'text-align';
+    const oval = 'center';
+    const run = widget.setProp2(okey, oval);
+    expect(widget.prop2.lines).toEqual(["  textAlign: TextAlign.center,"]);
+  });
 
   test("setDecoration", () => {
     const okey = 'background-color';
@@ -278,17 +277,19 @@ describe('widget', () => {
 
   test("propToCodeString", () => {
     const widget = new Widget('container')
-    // "    fontWeight: FontWeight.w700,"
-    widget.prop.lines = ["padding: const EdgeInsets.all(8.0),"];
+    widget.prop.lines = ["padding: const EdgeInsets.all(8.0),", "    fontWeight: FontWeight.w700,"];
     expect(widget.codelines.lines).toEqual(["Container(", "  <-children->", "  <-prop->", "  <-decoration->", "),"])
     const run = widget.propToCodeString()
-    expect(widget.codelines.lines).toEqual(["Container(", "  <-children->", "<-tab->padding: const EdgeInsets.all(8.0),", "  <-prop->", "  <-decoration->", "),"]);
+    expect(widget.codelines.lines).toEqual(["Container(", "  <-children->", "<-tab->padding: const EdgeInsets.all(8.0),\n<-tab->    fontWeight: FontWeight.w700,", "  <-prop->", "  <-decoration->", "),"]);
   });
 
-  // test("prop2ToCodeString", () => {
-  //   const run = widget.prop2ToCodeString()
-  //   expect().toBe(undefined);
-  // });
+  test("prop2ToCodeString", () => {
+    const widget = new Widget('text');
+    widget.prop2.lines = ["  textAlign: TextAlign.center,"];
+    expect(widget.codelines.lines).toEqual(["Text(", "  \"Hello World\",", "  style: TextStyle(", "    <-prop->", "  ),", "  <-prop2->", "),"]);
+    const run = widget.prop2ToCodeString();
+    expect(widget.codelines.lines).toEqual(["Text(", "  \"Hello World\",", "  style: TextStyle(", "    <-prop->", "  ),", "  textAlign: TextAlign.center,", "  <-prop2->", "),"]);
+  });
 
   test("decorationToCodeString", () => {
     const widget = new Widget('container');
@@ -304,15 +305,110 @@ describe('widget', () => {
     expect(widget.codelines.lines).toEqual(output);
   });
 
-  //   test("", () => {
-  //     const TAG = '';
-  //     const code = '';
-  //     expect(widget.replaceTag(TAG, code)).toBe(undefined);
-  //   });
+  test("replaceTag", () => {
+    const widget = new Widget('container');
+    const TAG = '<-children->';
+    const code = '  child: Text(    "Hello World",    style: TextStyle(      decoration: TextDecoration.underline,      decorationStyle: TextDecorationStyle.wavy,      decorationColor: Color (0xffFF0000),      fontStyle: FontStyle.normal,      fontWeight: FontWeight.w900,      fontSize: 24.0,      fontFamily: "Georgia",    ),    textAlign: TextAlign.center,  ),';
+    expect(widget.codelines.lines).toEqual(["Container(", "  <-children->", "  <-prop->", "  <-decoration->", "),"]);
+    const run = widget.replaceTag(TAG, code);
+    expect(widget.codelines.lines).toEqual(["Container(", "  child: Text(    \"Hello World\",    style: TextStyle(      decoration: TextDecoration.underline,      decorationStyle: TextDecorationStyle.wavy,      decorationColor: Color (0xffFF0000),      fontStyle: FontStyle.normal,      fontWeight: FontWeight.w900,      fontSize: 24.0,      fontFamily: \"Georgia\",    ),    textAlign: TextAlign.center,  ),", "  <-children->", "  <-prop->", "  <-decoration->", "),"]);
+  });
 
-  //   test("", () => {
-  //     expect(widget.toString()).toBe(undefined);
-  //   });
+  test("toString", () => {
+    // one widget
+    const widget = new Widget('text');
+    widget.prop.lines = [
+      "    decoration: TextDecoration.underline,",
+      "    decorationStyle: TextDecorationStyle.wavy,",
+      "    decorationColor: Color (0xffFF0000),",
+      "    fontStyle: FontStyle.normal,",
+      "    fontWeight: FontWeight.w900,",
+      "    fontSize: 24.0,",
+      "    fontFamily: \"Georgia\",",
+    ];
+    widget.prop2.lines = [
+      "  textAlign: TextAlign.center,",
+    ];
+    const run = widget.toString()
+    const output = `
+Text(
+  "Hello World",
+  style: TextStyle(
+    decoration: TextDecoration.underline,
+    decorationStyle: TextDecorationStyle.wavy,
+    decorationColor: Color (0xffFF0000),
+    fontStyle: FontStyle.normal,
+    fontWeight: FontWeight.w900,
+    fontSize: 24.0,
+    fontFamily: "Georgia",
+  ),
+  textAlign: TextAlign.center,
+),`.trim()
+    expect(run).toBe(output);
+  });
+
+  test("toString (two widget)", () => {
+    // two widget
+    const text = new Widget('text');
+    text.prop.lines = [
+      "    decoration: TextDecoration.underline,",
+      "    decorationStyle: TextDecorationStyle.wavy,",
+      "    decorationColor: Color (0xffFF0000),",
+      "    fontStyle: FontStyle.normal,",
+      "    fontWeight: FontWeight.w900,",
+      "    fontSize: 24.0,",
+      "    fontFamily: \"Georgia\",",
+    ];
+    text.prop2.lines = [
+      "  textAlign: TextAlign.center,",
+    ];
+    const widget = new Widget('container');
+    widget.children = [text]
+    widget.decoration.lines = [
+      "color: Color (0xffE0E0E0),",
+      "borderRadius: BorderRadius.all(const Radius.circular(10.0)),",
+      "border: Border.all(\n  color: Color (0xffFF0000),\n  width: 5.0,\n  style: BorderStyle.solid\n),",
+    ];
+    widget.prop.lines = [
+      "width: 320.0,",
+      "height: 240.0,",
+      "padding: const EdgeInsets.only(top: 2.0, right: 10.0, bottom: 2.0, left: 10.0),",
+      "margin: const EdgeInsets.all(3.0),",
+    ];
+    const run = widget.toString()
+    const output = `
+Container(
+  child: Text(
+  "Hello World",
+  style: TextStyle(
+    decoration: TextDecoration.underline,
+    decorationStyle: TextDecorationStyle.wavy,
+    decorationColor: Color (0xffFF0000),
+    fontStyle: FontStyle.normal,
+    fontWeight: FontWeight.w900,
+    fontSize: 24.0,
+    fontFamily: \"Georgia\",
+  ),
+  textAlign: TextAlign.center,
+),
+  width: 320.0,
+  height: 240.0,
+  padding: const EdgeInsets.only(top: 2.0, right: 10.0, bottom: 2.0, left: 10.0),
+  margin: const EdgeInsets.all(3.0),
+  decoration: BoxDecoration(
+    color: Color (0xffE0E0E0),
+    borderRadius: BorderRadius.all(const Radius.circular(10.0)),
+    border: Border.all(
+      color: Color (0xffFF0000),
+      width: 5.0,
+      style: BorderStyle.solid
+    ),
+  )
+),`.trim()
+    expect(run).toBe(output);
+  });
+
+
 });
 
 
