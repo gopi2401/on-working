@@ -417,8 +417,7 @@ describe('WidgetManager', () => {
   test("Text template get", () => {
     const widgetmanager = new WidgetManager()
     // const output = { "children": [], "codeString": "", "codelines": { "lines": ["Text(", "  \"Hello World\",", "  style: TextStyle(", "    <-prop->", "  ),", "  <-prop2->", "),"] }, "decls": null, "decoration": { "lines": [] }, "id": "de3abe91-aeb7-4178-987b-177649ff3cee", "parent": null, "prop": { "lines": [] }, "prop2": { "lines": [] }, "template": '', "type": "text" }
-    const run = widgetmanager.get({ target: "child", type: "text" })
-    console.log(run.template)
+    const run = widgetmanager.get({ target: "child", type: "text" });
     expect(run.codelines.lines).toEqual(["Text(", "  \"Hello World\",", "  style: TextStyle(", "    <-prop->", "  ),", "  <-prop2->", "),"]);
     expect(run.template).toBe(`Text(
   \"Hello World\",
