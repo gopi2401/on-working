@@ -1,5 +1,4 @@
 import { describe, expect, test } from '@jest/globals';
-import postcss from 'postcss';
 import Decls from '../../../src/convert/css/decls';
 import splitCssAttr from '../../../src/convert/css/split-cssattr';
 

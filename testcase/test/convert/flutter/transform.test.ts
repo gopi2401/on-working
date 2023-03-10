@@ -29,36 +29,30 @@ describe('transform', () => {
     });
 
     test("width height", () => {
-        const key = 'width';
-        // width
-        // height
-        const val = '500px';
         const decls = null;
-        const output = { "key": "width", "val": "500.0", };
-        expect(transform(key, val, decls)).toEqual(output);
+        expect(transform('width', '500px', decls)).toEqual({ "key": "width", "val": "500.0", });
+        expect(transform('height', '500px', decls)).toEqual({ "key": "height", "val": "500.0", });
     });
 
     test("top right left bottom", () => {
-        const key = 'top';
-        // top
-        // right
-        // left
-        // bottom
-        const val = '500px';
         const decls = null;
-        const output = { "key": "top", "val": "500.0", };
-        expect(transform(key, val, decls)).toEqual(output);
+        expect(transform('top', '500px', decls)).toEqual({ "key": "top", "val": "500.0", });
+        expect(transform('right', '500px', decls)).toEqual({ "key": "right", "val": "500.0", });
+        expect(transform('left', '500px', decls)).toEqual({ "key": "left", "val": "500.0", });
+        expect(transform('bottom', '500px', decls)).toEqual({ "key": "bottom", "val": "500.0", });
+
     });
 
     test("max min width and height", () => {
         const key = 'max-width';
-        // max-width
-        // min-width
-        // max-height
-        // min-height
         const val = '500px';
-        decls.decls = [{ data: null, valueList: ["500px",], key: "max-width", val: "500px" }];
-        const output = { "key": "constraints", "val": "BoxConstraints(maxWidth: 500.0)", };
+        decls.decls = [
+            { data: null, valueList: null, key: "max-width", val: "500px" },
+            { data: null, valueList: null, key: "min-width", val: "300px" },
+            { data: null, valueList: null, key: "max-height", val: "500px" },
+            { data: null, valueList: null, key: "min-height", val: "300px" }
+        ];
+        const output = { "key": "constraints", "val": "BoxConstraints(maxWidth: 500.0, minWidth: 300.0, maxHeight: 500.0, minHeight: 300.0)", };
         expect(transform(key, val, decls)).toEqual(output);
     });
 
@@ -136,16 +130,24 @@ describe('transform', () => {
     });
 
     test("padding margin", () => {
-        const key = 'margin';
-        const val = '10px';
+
         decls.decls = [
             { data: null, valueList: null, key: "margin-top", val: "10px" },
             { data: null, valueList: null, key: "margin-right", val: "10px" },
             { data: null, valueList: null, key: "margin-bottom", val: "10px" },
-            { data: null, valueList: null, key: "margin-left", val: "10px" }
+            { data: null, valueList: null, key: "margin-left", val: "10px" },
+            { data: null, valueList: null, key: "padding-top", val: "5px" },
+            { data: null, valueList: null, key: "padding-right", val: "5px" },
+            { data: null, valueList: null, key: "padding-bottom", val: "5px" },
+            { data: null, valueList: null, key: "padding-left", val: "5px" }
         ];
+        const key = 'margin';
+        const val = '10px';
         const output = { "key": "margin", "val": "const EdgeInsets.all(10.0)" }
         expect(transform(key, val, decls)).toEqual(output);
+
+        const output1 = { "key": "padding", "val": "const EdgeInsets.all(5.0)" }
+        expect(transform('padding', '5px', decls)).toEqual(output1);
     });
 
     test("justify-content", () => {
@@ -223,8 +225,7 @@ describe('transform', () => {
         const key = 'opacity';
         const val = '0.5';
         const decls = null;
-        const output = { "key": "opacity", "val": "0.5" }
-        expect(transform(key, val, decls)).toEqual(output);
+        expect(transform(key, val, decls)).toEqual({ "key": "opacity", "val": "0.5" });
     });
 
 });

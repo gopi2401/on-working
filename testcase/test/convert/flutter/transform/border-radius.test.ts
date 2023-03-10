@@ -3,7 +3,7 @@ import { describe, expect, test } from '@jest/globals';
 import Decls from '../../../../src/convert/css/decls';
 
 
-let run = async () => {
+let run = () => {
   const decls = new Decls()
   decls.decls = [
     { data: null, key: 'border-top-left-radius', val: '10px', valueList: null },
@@ -16,8 +16,8 @@ let run = async () => {
   return border
 };
 describe('css border-radius to convert flutter design', () => {
-  test("", async () => {
+  test("", () => {
     const output = "BorderRadius.all(const Radius.circular(10.0))"
-    expect(await run()).toBe(output);
+    expect(run()).toBe(output);
   });
 });

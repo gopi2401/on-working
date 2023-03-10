@@ -9,9 +9,8 @@ describe('css to detail css convert and temporary store data', () => {
     test("set css style (it's not return value)", () => {
 
         const input = { 'background-color': '#e0e0e0' }
-        const run = setStyle(input);
         const output = { "decls": [{ "data": null, "key": "background-color", "val": "#e0e0e0", "valueList": null }] }
-        expect(run).toEqual(output);
+        expect(setStyle(input)).toEqual(output);
     });
 
     test('temporary store data to get the style', () => {
