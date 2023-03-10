@@ -46,4 +46,14 @@ export class AppController {
       console.log('data:', data);
     }
   }
+  @Post('json')
+  async json(@Body() data, @Req() req) {
+    if (req.readable) {
+      const raw = await rawbody(req);
+      const input = raw.toString().trim();
+      return await this.appService.j(input);
+    } else {
+      console.log('data:', data);
+    }
+  }
 }
