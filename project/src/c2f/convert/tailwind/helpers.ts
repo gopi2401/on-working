@@ -22,11 +22,8 @@ const arbitrarySupportedClasses = {
 };
 
 const convertToCss = (classNames: string[]) => {
-  console.log(classNames);
   let cssCode = ``;
-  console.log('CheatSheet==>', CheatSheet);
   CheatSheet.forEach((element) => {
-    console.log('',);
 
     element.content.forEach((content) => {
       content.table.forEach((list) => {
@@ -76,16 +73,11 @@ const getHoverClass = (input: string) => {
 };
 
 export const getConvertedClasses = (input) => {
-  console.log('input', input);
 
   const classNames = input.split(/\s+/).map((i) => "." + i.trim());
-  console.log('input.split and map', classNames);
   const breakpoints = CheatSheet[0].content[3].table;
-  console.log('CheatSheet', breakpoints);
 
   const hoverClasses = getHoverClass(input);
-  console.log('getHoverClass', hoverClasses);
-  console.log('',);
 
   const smClasses = getBreakPoints(input, "sm");
   const mdClasses = getBreakPoints(input, "md");
@@ -116,7 +108,6 @@ ${_2xlClasses.length !== 0
     }
 ${hoverClasses.length !== 0 ? `:hover {\n ${convertToCss(hoverClasses)} }` : ""}
 `;
-  console.log('==>', resultCss);
 
   return resultCss;
 };

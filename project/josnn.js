@@ -13,7 +13,7 @@ const j = {
             {
               component: 'image',
               src: 'Instagram.png',
-              className: ['w-[250px]    '],
+              className: ['w-[250px]'],
             },
 
           ]

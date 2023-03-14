@@ -409,6 +409,100 @@ Container(
   });
 
 
+
+  test("toString (two widget)", () => {
+    // two widget
+    const text = new Widget('text');
+    text.prop.lines = [
+      "    decoration: TextDecoration.underline,",
+      "    decorationStyle: TextDecorationStyle.wavy,",
+      "    decorationColor: Color (0xffFF0000),",
+      "    fontStyle: FontStyle.normal,",
+      "    fontWeight: FontWeight.w900,",
+      "    fontSize: 24.0,",
+      "    fontFamily: \"Georgia\",",
+    ];
+    text.prop2.lines = [
+      "  textAlign: TextAlign.center,",
+    ];
+    const text2 = new Widget('text');
+    text2.prop.lines = [
+      "    decoration: TextDecoration.underline,",
+      "    decorationStyle: TextDecorationStyle.wavy,",
+      "    decorationColor: Color (0xffFF0000),",
+      "    fontStyle: FontStyle.normal,",
+      "    fontWeight: FontWeight.w900,",
+      "    fontSize: 24.0,",
+      "    fontFamily: \"Georgia\",",
+    ];
+    text2.prop2.lines = [
+      "  textAlign: TextAlign.center,",
+    ];
+    const text3 = new Widget('text');
+    text3.prop.lines = [
+      "    decoration: TextDecoration.underline,",
+      "    decorationStyle: TextDecorationStyle.wavy,",
+      "    decorationColor: Color (0xffFF0000),",
+      "    fontStyle: FontStyle.normal,",
+      "    fontWeight: FontWeight.w900,",
+      "    fontSize: 24.0,",
+      "    fontFamily: \"Georgia\",",
+    ];
+    text3.prop2.lines = [
+      "  textAlign: TextAlign.center,",
+    ];
+    const widget = new Widget('container');
+    widget.children = [text]
+    widget.decoration.lines = [
+      "color: Color (0xffE0E0E0),",
+      "borderRadius: BorderRadius.all(const Radius.circular(10.0)),",
+      "border: Border.all(\n  color: Color (0xffFF0000),\n  width: 5.0,\n  style: BorderStyle.solid\n),",
+    ];
+    widget.prop.lines = [
+      "width: 320.0,",
+      "height: 240.0,",
+      "padding: const EdgeInsets.only(top: 2.0, right: 10.0, bottom: 2.0, left: 10.0),",
+      "margin: const EdgeInsets.all(3.0),",
+    ];
+    const run = widget.toString()
+    const output = `
+Container(
+  child: Text(
+  "Hello World",
+  style: TextStyle(
+    decoration: TextDecoration.underline,
+    decorationStyle: TextDecorationStyle.wavy,
+    decorationColor: Color (0xffFF0000),
+    fontStyle: FontStyle.normal,
+    fontWeight: FontWeight.w900,
+    fontSize: 24.0,
+    fontFamily: \"Georgia\",
+  ),
+  textAlign: TextAlign.center,
+),
+  width: 320.0,
+  height: 240.0,
+  padding: const EdgeInsets.only(top: 2.0, right: 10.0, bottom: 2.0, left: 10.0),
+  margin: const EdgeInsets.all(3.0),
+  decoration: BoxDecoration(
+    color: Color (0xffE0E0E0),
+    borderRadius: BorderRadius.all(const Radius.circular(10.0)),
+    border: Border.all(
+      color: Color (0xffFF0000),
+      width: 5.0,
+      style: BorderStyle.solid
+    ),
+  )
+),`.trim()
+    expect(run).toBe('');
+  });
+
+
+
+
+
+
+
 });
 
 

@@ -1,7 +1,8 @@
 import { Injectable } from '@nestjs/common';
 import { convert2Flutter } from './c2f/convert/converter';
 import { getConvertedClasses } from './c2f/convert/tailwind/helpers';
-import { jsonConvert } from './jsonCon';
+import jsonConvert from './jsonconveter';
+
 
 @Injectable()
 export class AppService {
