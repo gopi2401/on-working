@@ -1,0 +1,29 @@
+{
+    "component": "layout",
+    "className": [
+        " w-[360px] h-[740px] border-2 "
+    ],
+    "children": [
+        {
+            "component": "layout",
+            "className": [
+                " flex  justify-center items-center  h-[200px] mt-10"
+            ],
+            "children": [
+                {
+                    "component": "layout",
+                    "className": [],
+                    "children": [
+                        {
+                            "component": "image",
+                            "src": "Instagram.png",
+                            "className": [
+                                "w-[250px]"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

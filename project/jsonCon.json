@@ -20,7 +20,7 @@
                             "component": "image",
                             "src": "Instagram.png",
                             "className": [
-                                "w-[250px ]"
+                                "w-[250px]"
                             ]
                         }
                     ]

@@ -1,11 +1,18 @@
-import CodeFill from './newjsonclass'
-const codefill = new CodeFill()
+import { nextFilter } from './nextfilter'
+
+
 export default async function jsonConvert(obj: any) {
-    codefill.children = obj
-    const c = codefill.getDepth();
-    const a = await codefill.codeConvert();
-    console.log(c);
-    console.log(a);
+    let conver = await nextFilter(obj);
+
+    console.log('1111111', conver);
+    return conver;
+    // codefill.children = obj
+    // const c = codefill.getDepth();
+    // const a = await codefill.codeConvert();
+    // const b = await codefill.getCode();
+    // console.log('fin', b);
+    // return b
+    // console.log(a);
     // for (let i = 0; i < obj.children.length; i++) {
     //     let c: any = []
     //     c = obj.children[i];
