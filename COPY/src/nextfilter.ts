@@ -5,12 +5,9 @@ import { getConvertedClasses } from "./c2f/convert/tailwind/helpers";
 export async function nextFilter(chil: any) {
     let codeArray = [];
     async function loop(target) {
-        const componend = target.component === 'layout'
         if (target.children) {
-            await codeFilter(target)
+            const data = await codeFilter(target)
             await loop(target.children);
-        } else if (!componend) {
-            await codeFilter(target)
         } else {
             for (let i = 0; i < target.length; i++) {
                 await loop(target[i]);
@@ -20,50 +17,23 @@ export async function nextFilter(chil: any) {
     await loop(chil);
 
     async function codeFilter(target) {
-        // if (target.className.length === 0 || target.className[0].trim() === "") {
-        // const code = 'Container(),'
-        // if (target.children) {
-        // const ccc = await addTag(target, code)
-        // }
-        // } else
-        if (target.component === 'layout') {
-            const check1 = target.className.length === 0;
-            const check2 = target.className[0].trim() === "";
-            if (check1 || check2) {
-                const code = 'Container(),';
-                await addTag(target, code);
-            } else {
+        if (target.className.length === 0 || target.className[0].trim() === "") {
+            const code = 'Container(),'
+            if (target.children) {
+                const ccc = await addTag(target, code)
+            }
+        } else
+            if (target.component === 'layout') {
+                // switch (target.component) {
+                //     case 'layout':
                 const code = await code2(target.className[0]);
-                await addTag(target, code);
+                if (target.children) {
+                    const ccc = await addTag(target, code)
+                }
+                //         break;
+
+                // };
             };
-        } else {
-            switch (target.componend) {
-                case 'image':
-                    const image = "Image.network('https://picsum.photos/250?image=9',width: 250.0,),"
-                    await addTag(target, image);
-                    break
-
-                case 'text':
-                    const text = 'Text("Text Widget Example")'
-                    await addTag(target, text);
-                    break
-
-                case 'input':
-                    const input = "TextFormField(\n decoration: const InputDecoration(\n hintText: 'Enter your email',\n),"
-                    await addTag(target, input);
-                    break
-
-                case 'span':
-                    const span = '<-span->'
-                    await addTag(target, span);
-                    break
-
-                case 'Heading':
-                    const Heading = '<-Heading->'
-                    await addTag(target, Heading);
-                    break
-            };
-        };
 
     };
 
