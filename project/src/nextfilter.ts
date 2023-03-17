@@ -3,41 +3,37 @@ import { getConvertedClasses } from "./c2f/convert/tailwind/helpers";
 
 
 export async function nextFilter(chil: any) {
-    let data = new Data()
     let codeArray = [];
-    let depth = 0;
-    function loop(target) {
-        if (target) {
-            if (target.children) {
-                const data = codeFilter(target)
-                depth++;
-                loop(target.children);
-            } else {
-                for (let i = 0; i < target.length; i++) {
-                    // depth++;
-                    loop(target[i]);
-                }
-            }
+    async function loop(target) {
+        if (target.children) {
+            const data = await codeFilter(target)
+            await loop(target.children);
         } else {
-            return
+            for (let i = 0; i < target.length; i++) {
+                await loop(target[i]);
+            }
         }
     };
-    loop(chil);
-
+    await loop(chil);
 
     async function codeFilter(target) {
-        if (target.component === 'layout') {
-            // switch (target.component) {
-            //     case 'layout':
-            const code = await code2(target.className[0]);
+        if (target.className.length === 0 || target.className[0].trim() === "") {
+            const code = 'Container(),'
             if (target.children) {
-                const ccc = addTag(target, code)
+                const ccc = await addTag(target, code)
             }
-            //         break;
+        } else
+            if (target.component === 'layout') {
+                // switch (target.component) {
+                //     case 'layout':
+                const code = await code2(target.className[0]);
+                if (target.children) {
+                    const ccc = await addTag(target, code)
+                }
+                //         break;
 
-            // };
-            return code
-        };
+                // };
+            };
 
     };
 
@@ -48,42 +44,89 @@ export async function nextFilter(chil: any) {
             return flutter
         };
     }
-    function addTag(target, code) {
+    async function addTag(target, code) {
         const WIDGET = "<-widget->";
         const n = target.children.length
-        if (codeArray.includes(WIDGET)) {
+        const secondConponend = target.children[0].component === 'layout'
+        if (codeArray.includes(WIDGET) && secondConponend) {
             const i = codeArray.indexOf(WIDGET);
-            codeArray[i] = code
+            // const cod =
+            codeArray[i] = remove(code)
+            widgetTag(i, n, code)
         } else if (1 < n) {
-            codeArray.push(code.replace(/\),$/, ","));
+            remove(code)
+            // codeArray.push(code.replace(/\),$/, ","));
             codeArray.push("child: Column(children:[");
             const n = target.children.length
             for (let i = 0; i < n; i++) codeArray.push(WIDGET);
             codeArray.push("])),");
-        } else if (n === 1 && target.children[0].component === 'layout') {
-            codeArray.push(code.replace(/\),$/, ""));
-            codeArray.push("child:");
-            codeArray.push(WIDGET);
-            codeArray.push("),");
-        } else {
-            const code2 = code3(target.children[0])
-            codeArray.push(`child:${code2}`);
+        } else if (n === 1) {
+            // codeArray.push(remove(code));
+            // codeArray.push(code.replace(/\),$/, ""));
+            const secondConponend = target.children[0].component === 'layout'
+            if (!secondConponend) {
+                const code2 = await code3(target.children[0])
+                const i = codeArray.indexOf(WIDGET);
+                codeArray[i] = `child:${code2}`
+                // widgetTag(i, n, code)
+                // codeArray.push(`child:${code2}`);
+                // codeArray.push("),");
+            } else {
+                codeArray.push(remove(code));
+                codeArray.push("child:");
+                // widgetTag(n, code)
+                codeArray.push(WIDGET);
+                codeArray.push("),");
+            }
         }
+        // else {
+        //     const code2 = await code3(target.children[0])
+        //     codeArray.push(`child:${code2}`);
+        // }
     }
-    function code3(target) {
+    function remove(coder) {
+        if (/\bchild\b/.test(coder)) {
+            const code = coder.replace(/\),\n\),$/, "");
+            return code
+        } else if (/^.*\),$/.test(coder)) {
+            const code = coder.replace(/\),$/, "");
+            return code
+        } else {
+            const code = coder.replace(/\n\),$/, ",");
+            return code
+        }
+    };
+    // / ^.*(\bchild\b)?.*$/
+    function widgetTag(index, n, coder) {
+        const WIDGET = "<-widget->";
+        index++;
+        for (let i = 0; i < n; i++) codeArray.splice(index, 0, WIDGET);
+        index++;
+        if (/\bchild\b/.test(coder)) {
+            codeArray.splice(index, 0, "),),");
+        } else {
+            codeArray.splice(index, 0, "),");
+        }
+    };
+    // splice(2, 0, "Brooks Brothers")
+    async function code3(target) {
         switch (target.component) {
             // span
             // text
             // Heading
             // input
             case 'image':
-                const flutter = code2(target.className[0]);
-                return `Image.network('${target.src}',${flutter})`
-                break;
-            case 'Button':
-                // const flutter = await this.code2(target.className[0]);
-                return `Image.network('${target.src}',${flutter})`
-                break;
+                const css = getConvertedClasses(target.className[0]);
+                if (/\bwidth\b/.test(css)) {
+                    return `Image.network('${target.src}',width: 250.0,)`
+                } else {
+                    const flutter = await convert2Flutter(css);
+                    return `Image.network('${target.src}',${flutter})`
+                }
+            // case 'Button':
+            //     // const flutter = await this.code2(target.className[0]);
+            //     return `Image.network('${target.src}',${flutter})`
+            //     break;
 
         }
         // if (typeof tailwindCss === 'string') {
@@ -119,19 +162,13 @@ export async function nextFilter(chil: any) {
     // }
 
 
-    // getCode() {
-    //     this.codeArr
-    //     let str = ""
-    //     for (let i = 0; i < this.codeArr.length; i++) str += this.codeArr[i]
-    //     return str
-    // }
-    if (depth === 9) return codeArray;
+    function getCode(codeArr) {
+        let str = ""
+        for (let i = 0; i < codeArr.length; i++) str += codeArr[i]
+        return str
+    }
 
-};
-
-export class Data {
-    data: any;
-    constructor() { this.data = null; }
+    return getCode(codeArray);
 };
 
 
