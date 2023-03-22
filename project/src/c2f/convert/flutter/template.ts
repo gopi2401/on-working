@@ -31,7 +31,7 @@ const CENTER = `
 `.trim();
 
 const ROW = `
- ROW(
+ Row(
   ${CHILDREN}
   ${PROP}
 ),

@@ -178,7 +178,10 @@ class Widget {
 
   childToCodeString(child) {
     const childStr = child.toString().trim();
-    this.replaceTag(CHILDREN, `  child: ${childStr}`);
+    const cod = this.type === "row" ? `  children:[${childStr}]` : `  child: ${childStr}`;
+    this.replaceTag(CHILDREN, cod);
+    // this.replaceTag(CHILDREN, `  child: ${childStr}`);
+
   }
 
   propToCodeString() {

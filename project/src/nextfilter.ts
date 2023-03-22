@@ -5,11 +5,11 @@ import { getConvertedClasses } from "./c2f/convert/tailwind/helpers";
 export async function nextFilter(chil: any) {
     let codeArray = [];
     async function loop(target) {
-        const componend = target.component === 'layout'
+        const componend = ['layout', 'image', 'Button', 'text', 'input', 'span', 'Heading']
         if (target.children) {
             await codeFilter(target)
             await loop(target.children);
-        } else if (!componend) {
+        } else if (componend.includes(target.component)) {
             await codeFilter(target)
         } else {
             for (let i = 0; i < target.length; i++) {
@@ -26,30 +26,38 @@ export async function nextFilter(chil: any) {
         // const ccc = await addTag(target, code)
         // }
         // } else
-        if (target.component === 'layout') {
+        if (target.children) {
             const check1 = target.className.length === 0;
             const check2 = target.className[0].trim() === "";
+            const n = target.children.length
             if (check1 || check2) {
                 const code = 'Container(),';
-                await addTag(target, code);
+                await addTag(target, code, n);
             } else {
                 const code = await code2(target.className[0]);
-                await addTag(target, code);
+                await addTag(target, code, n);
             };
         } else {
-            switch (target.componend) {
+            switch (target.component) {
+                case 'layout':
+                    const layout = await code2(target.className[0]);
+                    await addTag(target, layout);
+                    break
                 case 'image':
                     const image = "Image.network('https://picsum.photos/250?image=9',width: 250.0,),"
                     await addTag(target, image);
                     break
-
+                case 'Button':
+                    const Button = `ElevatedButton(\n onPressed: () { },\n child: Text('${target.value}'),),`
+                    await addTag(target, Button);
+                    break
                 case 'text':
                     const text = 'Text("Text Widget Example")'
                     await addTag(target, text);
                     break
 
                 case 'input':
-                    const input = "TextFormField(\n decoration: const InputDecoration(\n hintText: 'Enter your email',\n),"
+                    const input = "TextFormField(\n decoration: const InputDecoration(\n hintText: 'Enter your email',\n),\n),"
                     await addTag(target, input);
                     break
 
@@ -67,26 +75,36 @@ export async function nextFilter(chil: any) {
 
     };
 
-    async function code2(tailwindCss) {
-        if (typeof tailwindCss === 'string') {
-            const css = getConvertedClasses(tailwindCss);
+    async function code2(css) {
+        if (typeof css === 'string') {
+            // const css = getConvertedClasses(tailwindCss);
             const flutter = await convert2Flutter(css);
             return flutter
         };
     }
-    async function addTag(target, code) {
+    async function addTag(target, code, n = 0, secondConponend = null) {
         const WIDGET = "<-widget->";
-        const n = target.children.length
-        const secondConponend = target.children[0].component === 'layout'
-        if (codeArray.includes(WIDGET) && secondConponend) {
-            const i = codeArray.indexOf(WIDGET);
-            // const cod =
-            codeArray[i] = remove(code)
-            widgetTag(i, n, code)
+        // const secondConponend = target.children[0].component === 'layout'
+        // const n = target.children.length
+        // const n = null
+        if (codeArray.includes(WIDGET)) {
+            let i = codeArray.indexOf(WIDGET);
+            n === 0 ? codeArray[i] = code : codeArray[i] = remove(code);
+            if (n === 1) {
+                i++;
+                codeArray.splice(i, 0, 'child:')
+                widgetTag(i, n, code)
+            } else if (1 < n) {
+                i++;
+                codeArray.splice(i, 0, 'child: Column(children:[')
+                widgetTag(i, n, code)
+            }
+
         } else if (1 < n) {
             codeArray.push(remove(code));
             codeArray.push("child: Column(children:[");
-            codeArray.push(WIDGET);
+            for (let i = 0; i < n; i++) codeArray.push(WIDGET);
+            // codeArray.push(WIDGET);
             codeArray.push("])),");
             // codeArray.push(code.replace(/\),$/, ","));
             // codeArray.push("child: Column(children:[");
@@ -118,28 +136,55 @@ export async function nextFilter(chil: any) {
         // }
     }
     function remove(coder) {
-        if (/\bchild\b/.test(coder)) {
+        if (/\bchildren\b/.test(coder)) {
             const code = coder.replace(/\),\n\),$/, "");
             return code
-        } else if (/^.*\),$/.test(coder)) {
+        }
+        if (/\bchild: Container\b/.test(coder)) {
+            // if (/\bContainer\b/.test(coder)) {
+            const code = coder.replace(/\),\n\),$/, "");
+            return code
+            // } else {
+            // const code = coder.replace(/\),$/, "");
+            // return code
+            // }
+        } else if (/,\s?\n\),$/.test(coder)) {
+            const code = coder.replace(/\),$/, "");
+            return code
+        } else if (/\bContainer\b/.test(coder)) {
             const code = coder.replace(/\),$/, "");
             return code
         } else {
-            const code = coder.replace(/\n\),$/, ",");
+            const code = coder.replace(/\n?\),$/, "");
             return code
         }
     };
+    // /,\s?\n\),$/
     // / ^.*(\bchild\b)?.*$/
     function widgetTag(index, n, coder) {
+        const ind = index
         const WIDGET = "<-widget->";
         index++;
-        for (let i = 0; i < n; i++) codeArray.splice(index, 0, WIDGET);
-        index++;
-        if (/\bchild\b/.test(coder)) {
+        for (let i = 0; i < n; i++) {
+            codeArray.splice(index, 0, WIDGET);
+            index++;
+        }
+        if (codeArray[ind] === 'child: Column(children:[') {
+            codeArray.splice(index, 0, "],),"
+            );
+            index++;
+            if (/\bchild: Container\b/.test(coder)) {
+                codeArray.splice(index, 0, "),),");
+            } else {
+                codeArray.splice(index, 0, "),");
+            }
+        } else if (/\bchild: Container\b/.test(coder)) {
+            // if (/\bContainer\b/.test(coder)) {
             codeArray.splice(index, 0, "),),");
         } else {
             codeArray.splice(index, 0, "),");
         }
+        // }
     };
     // splice(2, 0, "Brooks Brothers")
     async function code3(target) {
