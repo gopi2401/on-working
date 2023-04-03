@@ -1,0 +1,181 @@
+{
+    "component": "layout",
+    "className": [
+        "border-width: 2px; width: 360px; height: 740px;"
+    ],
+    "children": [
+        {
+            "component": "layout",
+            "className": [
+                " display: flex; justify-content: center; align-items: center; background: #2dd36f; height: 25%;"
+            ],
+            "children": [
+                {
+                    "component": "layout",
+                    "className": [
+                        " "
+                    ],
+                    "children": [
+                        {
+                            "component": "image",
+                            "src": "whatsapp.png",
+                            "className": [
+                                "width: 100px; height: 100px;"
+                            ],
+                        },
+                        {
+                            "component": "Heading",
+                            "value": "WhatsApp",
+                            "className": [
+                                " color: #ffffff; font-weight: 700; "
+                            ]
+                        }
+                    ]
+                },
+            ]
+        },
+        {
+            "component": "Heading",
+            "value": "Create a New Account",
+            "className": [
+                "margin-top: 1.25rem; font-weight: 700; text-align: center; color: #12655d;"
+            ],
+        },
+        {
+            "component": "layout",
+            "className": [
+                " padding: 0.5rem; "
+            ],
+            "children": [
+                {
+                    "component": "layout",
+                    "className": [
+                        " padding: 0.5rem; border-bottom-width: 1px; "
+                    ],
+                    "children": [
+                        {
+                            "component": "input",
+                            "type": "text",
+                            "className": [
+                                " display: block; color: #000000; width: 100%; outline: 0; "
+                            ],
+                            "placeholder": "Enter your Number",
+                            "values": [
+                                {
+                                    "component": "label",
+                                    "className": [
+                                        " font-weight: 400; color: #12655d;"
+                                    ],
+                                    "value": "phone",
+                                    "slot": "start"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "component": "layout",
+                    "className": [
+                        " padding: 0.5rem; border-bottom-width: 1px; "
+                    ],
+                    "children": [
+                        {
+                            "component": "input",
+                            "type": "email",
+                            "className": [
+                                "  display: block; color: #000000; width: 100%; outline: 0; "
+                            ],
+                            "placeholder": "Enter your Email",
+                            "values": [
+                                {
+                                    "component": "label",
+                                    "className": [
+                                        "font-weight: 400; color: #12655d;"
+                                    ],
+                                    "value": "Email Address",
+                                    "slot": "start"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "component": "layout",
+                    "className": [
+                        "  padding: 0.5rem; border-bottom-width: 1px; "
+                    ],
+                    "children": [
+                        {
+                            "component": "input",
+                            "type": "password",
+                            "className": [
+                                " display: block; color: #000000; width: 100%; outline: 0; "
+                            ],
+                            "placeholder": "Enter your password",
+                            "values": [
+                                {
+                                    "component": "label",
+                                    "className": [
+                                        " font-weight: 400; color: #12655d;"
+                                    ],
+                                    "value": "password",
+                                    "slot": "start",
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "component": "Button",
+                    "value": "SIGN UP",
+                    "className": [
+                        " padding-top: 0.5rem; padding-bottom: 0.5rem; margin-top: 1.25rem; color: #ffffff; font-weight: 500; width: 100%; border-radius: 0.5rem; border-width: 1px; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05); background: #2dd36f; "
+                    ]
+                },
+                {
+                    "component": "layout",
+                    "className": [
+                        "display: flex; position: relative; padding-top: 1.25rem; padding-bottom: 1.25rem; align-items: center; "
+                    ],
+                    "children": [
+                        {
+                            "component": "layout",
+                            "className": [
+                                "flex-grow: 1; border-top-width: 1px; "
+                            ]
+                        },
+                        {
+                            "component": "span",
+                            "value": " or signup with ",
+                            "className": [
+                                "margin-left: 1rem; margin-right: 1rem; color: #9CA3AF; flex-shrink: 1; "
+                            ]
+                        },
+                        {
+                            "component": "layout",
+                            "className": [
+                                "flex-grow: 1; border-top-width: 1px; "
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "component": "layout",
+                    "className": [
+                        " font-weight: 400; text-align: center; "
+                    ],
+                    "value": " Already have an Account? ",
+                    "children": [
+                        {
+                            "component": "span",
+                            "value": " Login Here ",
+                            "className": [
+                                " font-weight: 700; text-align: center; color: #3930d8; "
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+    ]
+},

@@ -15,12 +15,13 @@ const CONTAINER = `
 `.trim();
 
 const TEXT = `
- Text(
-  "Hello World",
-  style: TextStyle(
-    ${PROP}
-  ),
+RichText(
   ${PROP2}
+    text: TextSpan(
+      text: 'Hello',
+      style: TextStyle(
+    ${PROP}),
+),
 ),
 `.trim();
 
@@ -32,8 +33,8 @@ const CENTER = `
 
 const ROW = `
  Row(
-  ${CHILDREN}
   ${PROP}
+  ${CHILDREN}
 ),
 `.trim();
 

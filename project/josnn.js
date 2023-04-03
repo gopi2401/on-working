@@ -69,7 +69,6 @@ const j = {
                   className: [" flex-grow: 1; border-top-width: 1px; "],
 
                 },
-
                 {
                   component: 'span',
                   value: ' or  ',
@@ -98,12 +97,16 @@ const j = {
                 },
               ]
             },
-
             {
               component: "layout",
               className: [" font-weight: 400; text-align: center; "],
               value: ' Dont have an account? ',
               children: [
+                {
+                  component: 'span',
+                  value: ' Dont have an account? ',
+                  className: [],
+                },
                 {
                   component: 'span',
                   value: ' Sign up ',

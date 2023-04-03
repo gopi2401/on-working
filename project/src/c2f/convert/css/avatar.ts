@@ -154,7 +154,8 @@ const setStyle = (css) => {
                   } else {
                     detailcss.add({ key: property, val: value });
                   }
-    })
+    });
+  return detailcss
 };
 const getStyle = key => {
   return detailcss.getVal(key)
