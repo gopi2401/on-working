@@ -52,4 +52,10 @@ export class AppController {
     return await this.appService.j(data);
 
   }
+  @Post('json2')
+  async json2(@Body() data, @Req() req) {
+
+    return await this.appService.j2(data);
+
+  }
 }

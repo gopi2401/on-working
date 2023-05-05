@@ -1,0 +1,39 @@
+name: my_module
+description: A new Flutter project.
+publish_to: 'none'
+version: 1.0.0+1
+environment:
+  sdk: '>=3.1.0-63.0.dev <4.0.0'
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.2
+  freezed_annotation: ^2.2.0
+  json_annotation: ^4.7.0
+  url_launcher: ^6.1.7
+  http: ^0.13.5
+  collection: ^1.17.0
+  vector_math: ^2.1.4
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+  build_runner: ^2.3.3
+  freezed: ^2.3.2
+  json_serializable: ^6.5.4
+flutter:
+
+  uses-material-design: true
+
+scripts:
+  rebuild: flutter pub run build_runner build
+  build: flutter pub run build_runner build --delete-conflicting-outputs
+  watch: flutter pub run build_runner watch --delete-conflicting-outputs
+  clean:
+    - flutter pub run build_runner clean
+    - find ./lib -name '*.g.dart' -delete
+    - find ./lib -name '*.freezed.dart' -delete
+  demo:
+    - cd example && flutter build web --no-tree-shake-icons
+    - dart doc -o example/build/web/docs
+    - dhttpd --path example/build/web

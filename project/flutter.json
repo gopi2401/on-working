@@ -1,0 +1,242 @@
+{
+    "body": {
+        "type": "container",
+        "args": {
+            "padding": 2,
+            "width": 360,
+            "height": 740
+        },
+        "child": [
+            {
+                "type": "container",
+                "args": {
+                    "display": "flex",
+                    "margin": [
+                        20,
+                        0,
+                        0,
+                        0
+                    ],
+                    "crossAxisAlignment": "center",
+                    "mainAxisAlignment": "center",
+                    "height": 200
+                },
+                "children": [
+                    {
+                        "type": "container",
+                        "args": {},
+                        "child": {
+                            "type": "image",
+                            "args": {
+                                "src": "any",
+                                "width": 250
+                            }
+                        }
+                    },
+                    {
+                        "type": "container",
+                        "args": {
+                            "padding": 4
+                        },
+                        "children": [
+                            {
+                                "type": "container",
+                                "args": {
+                                    "padding": 4
+                                },
+                                "child": {
+                                    "type": "container",
+                                    "args": {
+                                        "padding": 4
+                                    },
+                                    "child": {
+                                        "type": "input",
+                                        "text": "text",
+                                        "placeholder": "Phone number, username, or email",
+                                        "args": {
+                                            "padding": 4,
+                                            "color": "#000000",
+                                            "width": "100%",
+                                            "border-radius": 4,
+                                            "border-width": 1,
+                                            "outline": 0,
+                                            "background": "#fafafa"
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "type": "container",
+                                "args": {
+                                    "padding": 4
+                                },
+                                "children": [
+                                    {
+                                        "type": "input",
+                                        "text": "password",
+                                        "args": {
+                                            "padding": 4,
+                                            "color": "#000000",
+                                            "width": "100%",
+                                            "border-radius": 4,
+                                            "border-width": 1,
+                                            "outline": 0,
+                                            "background": "#fafafa"
+                                        },
+                                        "placeholder": "password"
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "Forget password",
+                                        "args": {
+                                            "font-weight": 700,
+                                            "text-align": "right",
+                                            "color": "#523783"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "button",
+                                "text": "log in",
+                                "args": {
+                                    "padding": [
+                                        4,
+                                        0,
+                                        4,
+                                        0
+                                    ],
+                                    "margin": [
+                                        18,
+                                        0,
+                                        0,
+                                        0
+                                    ],
+                                    "color": "#ffffff",
+                                    "font-weight": 500,
+                                    "width": "100%",
+                                    "border-radius": 4,
+                                    "border-width": 1,
+                                    "box-shadow": [
+                                        0,
+                                        10.15,
+                                        3,
+                                        "rgba(0,0,0,0.1)",
+                                        0,
+                                        4,
+                                        6,
+                                        2,
+                                        "rgba(0,0,0,0.05)"
+                                    ],
+                                    "background": "#4db5f9"
+                                }
+                            },
+                            {
+                                "type": "container",
+                                "args": {
+                                    "display": "flex",
+                                    "position": "relative",
+                                    "padding": [
+                                        20,
+                                        0,
+                                        20,
+                                        0
+                                    ],
+                                    "crossAxisAlignment": "center"
+                                },
+                                "children": [
+                                    {
+                                        "type": "container",
+                                        "args": {
+                                            "flex-grow": 1,
+                                            "border-top-width": 1
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "  or  ",
+                                        "args": {
+                                            "margin": [
+                                                0,
+                                                16,
+                                                0,
+                                                16
+                                            ],
+                                            "color": "#9CA3AF",
+                                            "flex-shrink": 1
+                                        }
+                                    },
+                                    {
+                                        "type": "container",
+                                        "args": {
+                                            "flex-grow": 1,
+                                            "border-top-width": 1
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "container",
+                                "args": {
+                                    "display": "flex",
+                                    "margin": [
+                                        0,
+                                        0,
+                                        20,
+                                        0
+                                    ],
+                                    "crossAxisAlignment": "center",
+                                    "mainAxisAlignment": "center"
+                                },
+                                "children": [
+                                    {
+                                        "type": "image",
+                                        "arge": {
+                                            "src": "facebook.png",
+                                            "width": 20
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "Log in With Facebook",
+                                        "arge": {
+                                            "padding": [
+                                                0,
+                                                16,
+                                                0,
+                                                16
+                                            ],
+                                            "font-weight": 700,
+                                            "color": "#523783"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "container",
+                                "args": {
+                                    "font-weight": 400,
+                                    "text-align": "center"
+                                },
+                                "children": [
+                                    {
+                                        "type": "text",
+                                        "text": "Dont have an account?",
+                                        "args": {}
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "Sign up",
+                                        "args": {
+                                            "color": "#523783"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}
