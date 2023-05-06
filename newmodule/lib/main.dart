@@ -3,8 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:my_module/flutter.dart';
 
 void main() {
-  runApp( MyApp());
+  runApp(MyApp());
 }
+
 const EXAMPLE = r'''
 {
   "appBar": {
@@ -83,21 +84,22 @@ const EXAMPLE = r'''
   "runtimeType": "scaffold"
 }
 ''';
+
 class MyApp extends StatelessWidget {
-   MyApp({super.key});
+  MyApp({super.key});
   final controller = TextEditingController(text: EXAMPLE);
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Flutter Json Widgets',
-      theme: ThemeData.light(useMaterial3: true),
-      darkTheme: ThemeData.dark(useMaterial3: true),
-      themeMode: ThemeMode.system,
-      home: FlutterWidget.json(json: getJson());
-    );
+        debugShowCheckedModeBanner: false,
+        title: 'Flutter Json Widgets',
+        theme: ThemeData.light(useMaterial3: true),
+        darkTheme: ThemeData.dark(useMaterial3: true),
+        themeMode: ThemeMode.system,
+        home: FlutterWidget.json(json: getJson()));
   }
+
   Map<String, Object?> getJson() {
     try {
       return jsonDecode(controller.text);
