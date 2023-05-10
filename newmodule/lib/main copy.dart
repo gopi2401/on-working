@@ -1,8 +1,6 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:my_module/flutter.dart';
-import 'dart:async';
 
 void main() {
   runApp(const MyApp());
@@ -128,64 +126,17 @@ const EXAMPLE = r'''
 ''';
 
 class _HomePageState extends State<HomePage> {
-  int counter = 0;
-  //  ta = [];
-// Fetch content from the json file
-  Future<dynamic> readJson() async {
-    final String response = await rootBundle.loadString('json/sample.json');
-    // final data = await json.decode(response);
-    final controller = TextEditingController(text: response);
-    return controller.text;
-  }
-
-  Future<String> readJso() async {
-    return await rootBundle.loadString('json/sample.json');
-  }
-  // Map<String, Object?> getJson() {
-  //   try {
-  //     return jsonDecode();
-  //   } catch (e) {
-  //     return {};
-  //   }
-  // }
-
   final controller = TextEditingController(text: EXAMPLE);
   @override
   Widget build(BuildContext context) {
-    return FutureBuilder(
-      future: readJson(),
-      builder: (BuildContext context, AsyncSnapshot snapshot) {
-        if (snapshot.hasData) {
-          // final data = json.decode(snapshot.data);
-          // final controller = TextEditingController(text: data);
-          Map<String, Object?> getJson() {
-            try {
-              return jsonDecode(snapshot.data);
-            } catch (e) {
-              return {};
-            }
-          }
-
-          return FlutterWidget.json(json: getJson());
-        } else if (snapshot.hasError) {
-          return Text("Error loading data");
-        } else {
-          // show a loading indicator while data is being loaded
-          return CircularProgressIndicator();
-        }
-      },
-    );
+    return FlutterWidget.json(json: getJson());
   }
-  // @override
-  // Widget build(BuildContext context) {
-  //   return FlutterWidget.json(json: getJson());
-  // }
 
-  // Map<String, Object?> getJson() {
-  //   try {
-  //     return jsonDecode(controller.text);
-  //   } catch (e) {
-  //     return {};
-  //   }
-  // }
+  Map<String, Object?> getJson() {
+    try {
+      return jsonDecode(controller.text);
+    } catch (e) {
+      return {};
+    }
+  }
 }
