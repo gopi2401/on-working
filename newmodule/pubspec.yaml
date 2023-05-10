@@ -9,6 +9,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  freezed: ^2.3.3
   my_module:
     path: ./my_module/
 dev_dependencies:
