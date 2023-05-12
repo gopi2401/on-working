@@ -1,0 +1,30 @@
+{
+    "child": {
+        "elevation": 5,
+        "runtimeType": "card",
+        "borderOnForeground": false,
+        "semanticContainer": false
+    },
+    "borderOnForeground": true,
+    "semanticContainer": true,
+    "elevation": 10,
+    "runtimeType": "card"
+}
+"shape": {
+    "border": {
+        "top": {
+            "width": 45
+        }
+    }
+},
+"margin": {
+    "symmetric": {
+        "horizontal": 20.0
+    }
+},
+"margin": {
+    "EdgeInsets.only": {
+        "left": 20.0,
+        "right": 20.0
+    }
+},

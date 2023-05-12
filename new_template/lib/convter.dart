@@ -57,6 +57,8 @@
 /// ```
 library flutter_widget;
 
+export 'package:new_template/convter.dart';
+
 // import 'dart:convert';
 // import 'dart:typed_data';
 
