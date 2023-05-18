@@ -29,24 +29,42 @@ class MyHomePage extends StatefulWidget {
 }
 
 const EXAMPLE = r'''
-{
-    "child": {
-        "elevation": 5,
-        "runtimeType": "card",
-        "borderOnForeground": false,
-        "semanticContainer": false
-    },
-    "margin": {
-        "EdgeInsets.only": {
-            "left": 20.0,
-            "right": 20.0
-        }
-    },
-    "borderOnForeground": true,
-    "semanticContainer": true,
-    "elevation": 10,
-    "runtimeType": "card"
-}
+ {
+        "child": {
+            "color": {
+                "runtimeType": "primary"
+            },
+            "shadowColor": {
+                "runtimeType": "error"
+            },
+            "surfaceTintColor": {
+                "runtimeType": "onSecondaryContainer"
+            },
+            "shape": {
+                "eccentricity": 50,
+                "runtimeType": "circle"
+            },
+            "margin": {
+                "top": 10.0,
+                "right": 20.0,
+                "bottom": 30.0,
+                "left": 40.0,
+                "runtimeType": "only"
+            },
+            "elevation": 5,
+            "runtimeType": "card",
+            "borderOnForeground": false,
+            "semanticContainer": false
+        },
+        "color": {
+            "runtimeType": "shadow"
+        },
+        "clipBehavior": "antiAlias",
+        "borderOnForeground": true,
+        "semanticContainer": true,
+        "elevation": 10,
+        "runtimeType": "card"
+    }
 ''';
 
 class _MyHomePageState extends State<MyHomePage> {
