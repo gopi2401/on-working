@@ -35,50 +35,73 @@
         "elevation": 10,
         "runtimeType": "card"
     },
-    "margin": {
-        "edgeInsets": {
-            "all": 20.0
-        }
+    "butten": {
+        "onPressed": {
+            "runtimeType": "empty"
+        },
+        "child": {
+            "data": "Elevated Button",
+            "runtimeType": "text"
+        },
+        "runtimeType": "elevatedButton"
     },
-    "margin": {
-        "all": 20.0
+    "butten1": {
+        "onPressed": {
+            "runtimeType": "empty"
+        },
+        "child": {
+            "data": "Filled Button",
+            "runtimeType": "text"
+        },
+        "runtimeType": "filledButton"
     },
-    "margin": {
-        "edgeInsets": {
-            "all": {
-                "value": 20.0
-            }
-        }
+    "butten2": {
+        "onPressed": {
+            "runtimeType": "empty"
+        },
+        "child": {
+            "data": "filledTonalButton",
+            "runtimeType": "text"
+        },
+        "runtimeType": "filledTonalButton"
     },
-    "margin": {
-        "all": {
-            "value": 20.0
-        }
+    "butten3": {
+        "onPressed": {
+            "runtimeType": "empty"
+        },
+        "child": {
+            "data": " OutlinedButton",
+            "runtimeType": "text"
+        },
+        "runtimeType": "outlinedButton"
     },
-    "shape": {
-        "border": {
-            "top": {
-                "width": 45
-            }
-        }
+    "butten4": {
+        "onPressed": {
+            "runtimeType": "empty"
+        },
+        "child": {
+            "data": " TextButton",
+            "runtimeType": "text"
+        },
+        "runtimeType": "textButton"
     },
-    "margin": {
-        "symmetric": {
-            "horizontal": 20.0
-        }
-    },
-    "margin": {
-        "EdgeInsets.only": {
-            "left": 20.0,
-            "right": 20.0
-        }
-    },
-    "margin": {
-        "only": {
-            "left": 20.0,
-            "right": 20.0,
-            "top": 20.0,
-            "bottom": 20.0
-        }
+    "floatingActionButton": {
+        "child": {
+            "icon": {
+                "codePoint": 57415,
+                "fontFamily": "MaterialIcons",
+                "matchTextDirection": false
+            },
+            "runtimeType": "icon"
+        },
+        "tooltip": "none",
+        "onPressed": {
+            "runtimeType": "empty"
+        },
+        "mini": false,
+        "clipBehavior": "none",
+        "autofocus": false,
+        "isExtended": false,
+        "runtimeType": "floatingActionButton"
     }
 }
