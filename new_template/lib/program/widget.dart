@@ -1,6 +1,7 @@
 library widget;
 
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:vector_math/vector_math.dart';
 
 import 'color.dart';
 import 'edge_insets.dart';
@@ -13,10 +14,16 @@ import 'locale.dart';
 import 'text_style.dart';
 import 'strut_style.dart';
 import 'text_height_behavior.dart';
-import 'package:new_template/program/mouse_cursor.dart';
-import 'package:new_template/program/alignment.dart';
-import 'package:new_template/program/floating_action_button_location.dart';
-import 'package:new_template/program/preferred_size_widget.dart';
+import 'mouse_cursor.dart';
+import 'alignment.dart';
+import 'floating_action_button_location.dart';
+import 'preferred_size_widget.dart';
+import 'decoration.dart';
+import 'box_constraints.dart';
+import 'matrix_4.dart';
+import 'icon_data.dart';
+import 'shadow.dart';
+import 'visual_density.dart';
 
 part 'widget.freezed.dart';
 part 'widget.g.dart';
@@ -83,6 +90,30 @@ class Widget with _$Widget {
     required Widget child,
   }) = TextButton;
 
+  const factory Widget.iconButton({
+    Key? key,
+    double? iconSize,
+    VisualDensity? visualDensity,
+    EdgeInsets? padding,
+    Alignment? alignment,
+    double? splashRadius,
+    Color? color,
+    Color? focusColor,
+    Color? hoverColor,
+    Color? highlightColor,
+    Color? splashColor,
+    Color? disabledColor,
+    required Callback onPressed,
+    MouseCursor? mouseCursor,
+    @Default(false) bool autofocus,
+    String? tooltip,
+    bool? enableFeedback,
+    BoxConstraints? constraints,
+    bool? isSelected,
+    Widget? selectedIcon,
+    required Widget icon,
+  }) = IconButton;
+
   const factory Widget.scaffold({
     Key? key,
     PreferredSizeWidget? appBar,
@@ -132,6 +163,31 @@ class Widget with _$Widget {
     bool? enableFeedback,
   }) = FloatingActionButton;
 
+  const factory Widget.floatingActionButtonExtended({
+    Key? key,
+    required Widget label,
+    Widget? icon,
+    String? tooltip,
+    Color? foregroundColor,
+    Color? backgroundColor,
+    Color? focusColor,
+    Color? hoverColor,
+    Color? splashColor,
+    double? elevation,
+    double? focusElevation,
+    double? hoverElevation,
+    double? highlightElevation,
+    double? disabledElevation,
+    required Callback? onPressed,
+    MouseCursor? mouseCursor,
+    ShapeBorder? shape,
+    @Default(Clip.none) Clip clipBehavior,
+    @Default(false) bool autofocus,
+    MaterialTapTargetSize? materialTapTargetSize,
+    @Default(true) bool isExtended,
+    bool? enableFeedback,
+  }) = FloatingActionButtonExtended;
+
   const factory Widget.text(
     String data, {
     Key? key,
@@ -150,5 +206,71 @@ class Widget with _$Widget {
     Color? selectionColor,
   }) = Text;
 
+  const factory Widget.container({
+    Key? key,
+    Alignment? alignment,
+    EdgeInsets? padding,
+    Color? color,
+    Decoration? decoration,
+    Decoration? foregroundDecoration,
+    double? width,
+    double? height,
+    BoxConstraints? constraints,
+    EdgeInsets? margin,
+    @matrixConverter Matrix4? transform,
+    Alignment? transformAlignment,
+    Widget? child,
+    @Default(Clip.none) Clip clipBehavior,
+  }) = Container;
+
+  const factory Widget.center({
+    Key? key,
+    double? widthFactor,
+    double? heightFactor,
+    required Widget child,
+  }) = Center;
+
+  const factory Widget.icon(
+    IconData? icon, {
+    Key? key,
+    double? size,
+    double? fill,
+    double? weight,
+    double? grade,
+    double? opticalSize,
+    Color? color,
+    List<Shadow>? shadows,
+    String? semanticLabel,
+    TextDirection? textDirection,
+  }) = Icon;
+
+  const factory Widget.column({
+    Key? key,
+    @Default(MainAxisAlignment.start) MainAxisAlignment mainAxisAlignment,
+    @Default(MainAxisSize.max) MainAxisSize mainAxisSize,
+    @Default(CrossAxisAlignment.center) CrossAxisAlignment crossAxisAlignment,
+    TextDirection? textDirection,
+    @Default(VerticalDirection.down) VerticalDirection verticalDirection,
+    TextBaseline? textBaseline,
+    @Default([]) List<Widget> children,
+  }) = Column;
+
+  const factory Widget.row({
+    Key? key,
+    @Default(MainAxisAlignment.start) MainAxisAlignment mainAxisAlignment,
+    @Default(MainAxisSize.max) MainAxisSize mainAxisSize,
+    @Default(CrossAxisAlignment.center) CrossAxisAlignment crossAxisAlignment,
+    TextDirection? textDirection,
+    @Default(VerticalDirection.down) VerticalDirection verticalDirection,
+    TextBaseline? textBaseline,
+    @Default([]) List<Widget> children,
+  }) = Row;
+
+  const factory Widget.sizedBox({
+    Key? key,
+    double? width,
+    double? height,
+    Widget? child,
+  }) = SizedBox;
   factory Widget.fromJson(Map<String, Object?> json) => _$WidgetFromJson(json);
 }

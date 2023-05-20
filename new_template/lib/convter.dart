@@ -70,7 +70,7 @@ import 'dart:ui' as ui;
 // import 'package:flutter_json_widgets/flutter_json_widgets.dart' as widgets;
 import 'package:http/http.dart' as http;
 import 'package:url_launcher/url_launcher.dart';
-// import 'package:vector_math/vector_math.dart';
+import 'package:vector_math/vector_math.dart';
 import 'package:new_template/exports.dart' as widgets;
 
 /// Custom widget builder.
@@ -130,6 +130,8 @@ class _FlutterWidgetState extends material.State<FlutterWidget> {
     if (widget.json != null) {
       try {
         final widget = widgets.Widget.fromJson(this.widget.json!);
+        print(widget);
+        // print($widget(context, widget));
         return $widget(context, widget)!;
       } catch (e) {
         return material.Container();
@@ -1991,6 +1993,50 @@ class _FlutterWidgetState extends material.State<FlutterWidget> {
     );
   }
 
+  material.BoxConstraints? $boxConstraints(
+    final widgets.BoxConstraints? boxConstraints,
+  ) {
+    if (boxConstraints == null) return null;
+    return material.BoxConstraints(
+      minWidth: boxConstraints.minWidth,
+      maxWidth: boxConstraints.maxWidth,
+      minHeight: boxConstraints.minHeight,
+      maxHeight: boxConstraints.maxHeight,
+    );
+  }
+
+  material.Matrix4? $matrix4(final Matrix4? matrix4) {
+    if (matrix4 == null) return null;
+    return material.Matrix4.fromList(matrix4.storage.toList());
+  }
+
+  material.IconData? $iconData(
+    final widgets.IconData? iconData,
+  ) {
+    if (iconData == null) return null;
+    return material.IconData(
+      iconData.codePoint,
+      fontFamily: iconData.fontFamily,
+      fontPackage: iconData.fontPackage,
+      matchTextDirection: iconData.matchTextDirection,
+    );
+  }
+
+  material.VisualDensity? $visualDensity(
+    final material.BuildContext context,
+    final widgets.VisualDensity? visualDensity,
+  ) {
+    if (visualDensity == null) return null;
+    return visualDensity.map(
+      (value) => material.VisualDensity(
+        horizontal: value.horizontal,
+        vertical: value.vertical,
+      ),
+      adaptivePlatformDensity: (value) =>
+          material.VisualDensity.adaptivePlatformDensity,
+    );
+  }
+
   List<material.Widget>? $widgets(
     final material.BuildContext context,
     final List<widgets.Widget>? widgets,
@@ -2083,6 +2129,29 @@ class _FlutterWidgetState extends material.State<FlutterWidget> {
         )!,
         child: $widget(context, value.child)!,
       ),
+      iconButton: (value) => material.IconButton(
+        key: $key(value.key),
+        iconSize: value.iconSize,
+        visualDensity: $visualDensity(context, value.visualDensity),
+        padding: $edgeInsets(value.padding),
+        alignment: $alignment(value.alignment),
+        splashRadius: value.splashRadius,
+        color: $color(context, value.color),
+        focusColor: $color(context, value.focusColor),
+        hoverColor: $color(context, value.hoverColor),
+        highlightColor: $color(context, value.highlightColor),
+        splashColor: $color(context, value.splashColor),
+        disabledColor: $color(context, value.disabledColor),
+        onPressed: $callback(context, value.onPressed),
+        mouseCursor: $mouseCursor(value.mouseCursor),
+        autofocus: value.autofocus,
+        tooltip: value.tooltip,
+        enableFeedback: value.enableFeedback,
+        constraints: $boxConstraints(value.constraints),
+        isSelected: value.isSelected,
+        selectedIcon: $widget(context, value.selectedIcon),
+        icon: $widget(context, value.icon)!,
+      ),
       floatingActionButton: (value) => material.FloatingActionButton(
         key: $key(value.key),
         child: $widget(context, value.child),
@@ -2100,6 +2169,34 @@ class _FlutterWidgetState extends material.State<FlutterWidget> {
         onPressed: $callback(context, value.onPressed),
         mouseCursor: $mouseCursor(value.mouseCursor),
         mini: value.mini,
+        shape: $shapeBorder(context, value.shape),
+        clipBehavior: $enum(value.clipBehavior, material.Clip.values)!,
+        autofocus: value.autofocus,
+        materialTapTargetSize: $enum(
+          value.materialTapTargetSize,
+          material.MaterialTapTargetSize.values,
+        ),
+        isExtended: value.isExtended,
+        enableFeedback: value.enableFeedback,
+      ),
+      floatingActionButtonExtended: (value) =>
+          material.FloatingActionButton.extended(
+        key: $key(value.key),
+        label: $widget(context, value.label)!,
+        icon: $widget(context, value.icon),
+        tooltip: value.tooltip,
+        foregroundColor: $color(context, value.foregroundColor),
+        backgroundColor: $color(context, value.backgroundColor),
+        focusColor: $color(context, value.focusColor),
+        hoverColor: $color(context, value.hoverColor),
+        splashColor: $color(context, value.splashColor),
+        elevation: value.elevation,
+        focusElevation: value.focusElevation,
+        hoverElevation: value.hoverElevation,
+        highlightElevation: value.highlightElevation,
+        disabledElevation: value.disabledElevation,
+        onPressed: $callback(context, value.onPressed),
+        mouseCursor: $mouseCursor(value.mouseCursor),
         shape: $shapeBorder(context, value.shape),
         clipBehavior: $enum(value.clipBehavior, material.Clip.values)!,
         autofocus: value.autofocus,
@@ -2167,6 +2264,109 @@ class _FlutterWidgetState extends material.State<FlutterWidget> {
         textHeightBehavior:
             $textHeightBehavior(context, value.textHeightBehavior),
         selectionColor: $color(context, value.selectionColor),
+      ),
+      container: (value) => material.Container(
+        key: $key(value.key),
+        alignment: $alignment(value.alignment),
+        padding: $edgeInsets(value.padding),
+        color: $color(context, value.color),
+        decoration: $decoration(context, value.decoration),
+        foregroundDecoration: $decoration(context, value.foregroundDecoration),
+        width: value.width,
+        height: value.height,
+        constraints: $boxConstraints(value.constraints),
+        margin: $edgeInsets(value.margin),
+        transform: $matrix4(value.transform),
+        transformAlignment: $alignment(value.transformAlignment),
+        child: $widget(context, value.child),
+        clipBehavior: $enum(
+          value.clipBehavior,
+          material.Clip.values,
+        )!,
+      ),
+      center: (value) => material.Center(
+        key: $key(value.key),
+        child: $widget(context, value.child),
+        widthFactor: value.widthFactor,
+        heightFactor: value.heightFactor,
+      ),
+      icon: (value) => material.Icon(
+        $iconData(value.icon),
+        key: $key(value.key),
+        size: value.size,
+        fill: value.fill,
+        weight: value.weight,
+        grade: value.grade,
+        opticalSize: value.opticalSize,
+        color: $color(context, value.color),
+        shadows: value.shadows?.map((s) => $shadow(context, s)!).toList(),
+        semanticLabel: value.semanticLabel,
+        textDirection: $enum(
+          value.textDirection,
+          material.TextDirection.values,
+        ),
+      ),
+      column: (value) => material.Column(
+        key: $key(value.key),
+        children: $widgets(context, value.children)!,
+        mainAxisSize: $enum(
+          value.mainAxisSize,
+          material.MainAxisSize.values,
+        )!,
+        mainAxisAlignment: $enum(
+          value.mainAxisAlignment,
+          material.MainAxisAlignment.values,
+        )!,
+        crossAxisAlignment: $enum(
+          value.crossAxisAlignment,
+          material.CrossAxisAlignment.values,
+        )!,
+        textDirection: $enum(
+          value.textDirection,
+          material.TextDirection.values,
+        ),
+        verticalDirection: $enum(
+          value.verticalDirection,
+          material.VerticalDirection.values,
+        )!,
+        textBaseline: $enum(
+          value.textBaseline,
+          material.TextBaseline.values,
+        ),
+      ),
+      row: (value) => material.Row(
+        key: $key(value.key),
+        children: $widgets(context, value.children)!,
+        mainAxisSize: $enum(
+          value.mainAxisSize,
+          material.MainAxisSize.values,
+        )!,
+        mainAxisAlignment: $enum(
+          value.mainAxisAlignment,
+          material.MainAxisAlignment.values,
+        )!,
+        crossAxisAlignment: $enum(
+          value.crossAxisAlignment,
+          material.CrossAxisAlignment.values,
+        )!,
+        textDirection: $enum(
+          value.textDirection,
+          material.TextDirection.values,
+        ),
+        verticalDirection: $enum(
+          value.verticalDirection,
+          material.VerticalDirection.values,
+        )!,
+        textBaseline: $enum(
+          value.textBaseline,
+          material.TextBaseline.values,
+        ),
+      ),
+      sizedBox: (value) => material.SizedBox(
+        key: $key(value.key),
+        width: value.width,
+        height: value.height,
+        child: $widget(context, value.child),
       ),
     );
     if (this.widget.wrappingBuilder != null) {

@@ -1,5 +1,7 @@
 library exports;
 
+export 'program/new/buttonStyle.dart';
+
 export 'program/border_radius.dart';
 export 'program/border_side.dart';
 export 'program/color.dart';
@@ -40,4 +42,6 @@ export 'program/rect.dart';
 export 'program/gradient.dart';
 export 'program/gradient_transform.dart';
 export 'program/floating_action_button_location.dart';
-export 'program/new/buttonStyle.dart';
+export 'program/box_constraints.dart';
+export 'program/icon_data.dart';
+export 'program/visual_density.dart';

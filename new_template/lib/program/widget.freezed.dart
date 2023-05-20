@@ -28,12 +28,28 @@ Widget _$WidgetFromJson(Map<String, dynamic> json) {
       return OutlinedButton.fromJson(json);
     case 'textButton':
       return TextButton.fromJson(json);
+    case 'iconButton':
+      return IconButton.fromJson(json);
     case 'scaffold':
       return Scaffold.fromJson(json);
     case 'floatingActionButton':
       return FloatingActionButton.fromJson(json);
+    case 'floatingActionButtonExtended':
+      return FloatingActionButtonExtended.fromJson(json);
     case 'text':
       return Text.fromJson(json);
+    case 'container':
+      return Container.fromJson(json);
+    case 'center':
+      return Center.fromJson(json);
+    case 'icon':
+      return Icon.fromJson(json);
+    case 'column':
+      return Column.fromJson(json);
+    case 'row':
+      return Row.fromJson(json);
+    case 'sizedBox':
+      return SizedBox.fromJson(json);
 
     default:
       throw CheckedFromJsonException(json, 'runtimeType', 'Widget',
@@ -78,6 +94,29 @@ mixin _$Widget {
         textButton,
     required TResult Function(
             Key? key,
+            double? iconSize,
+            VisualDensity? visualDensity,
+            EdgeInsets? padding,
+            Alignment? alignment,
+            double? splashRadius,
+            Color? color,
+            Color? focusColor,
+            Color? hoverColor,
+            Color? highlightColor,
+            Color? splashColor,
+            Color? disabledColor,
+            Callback onPressed,
+            MouseCursor? mouseCursor,
+            bool autofocus,
+            String? tooltip,
+            bool? enableFeedback,
+            BoxConstraints? constraints,
+            bool? isSelected,
+            Widget? selectedIcon,
+            Widget icon)
+        iconButton,
+    required TResult Function(
+            Key? key,
             PreferredSizeWidget? appBar,
             Widget? body,
             Widget? floatingActionButton,
@@ -99,31 +138,15 @@ mixin _$Widget {
             bool endDrawerEnableOpenDragGesture,
             String? restorationId)
         scaffold,
-    required TResult Function(
-            Key? key,
-            Widget? child,
-            String? tooltip,
-            Color? foregroundColor,
-            Color? backgroundColor,
-            Color? focusColor,
-            Color? hoverColor,
-            Color? splashColor,
-            double? elevation,
-            double? focusElevation,
-            double? hoverElevation,
-            double? highlightElevation,
-            double? disabledElevation,
-            Callback? onPressed,
-            MouseCursor? mouseCursor,
-            bool mini,
-            ShapeBorder? shape,
-            Clip clipBehavior,
-            bool autofocus,
-            MaterialTapTargetSize? materialTapTargetSize,
-            bool isExtended,
-            bool? enableFeedback)
-        floatingActionButton,
+    required TResult Function(Key? key, Widget? child, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, bool mini, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback) floatingActionButton,
+    required TResult Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback) floatingActionButtonExtended,
     required TResult Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor) text,
+    required TResult Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior) container,
+    required TResult Function(Key? key, double? widthFactor, double? heightFactor, Widget child) center,
+    required TResult Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection) icon,
+    required TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children) column,
+    required TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children) row,
+    required TResult Function(Key? key, double? width, double? height, Widget? child) sizedBox,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -160,6 +183,29 @@ mixin _$Widget {
         textButton,
     TResult? Function(
             Key? key,
+            double? iconSize,
+            VisualDensity? visualDensity,
+            EdgeInsets? padding,
+            Alignment? alignment,
+            double? splashRadius,
+            Color? color,
+            Color? focusColor,
+            Color? hoverColor,
+            Color? highlightColor,
+            Color? splashColor,
+            Color? disabledColor,
+            Callback onPressed,
+            MouseCursor? mouseCursor,
+            bool autofocus,
+            String? tooltip,
+            bool? enableFeedback,
+            BoxConstraints? constraints,
+            bool? isSelected,
+            Widget? selectedIcon,
+            Widget icon)?
+        iconButton,
+    TResult? Function(
+            Key? key,
             PreferredSizeWidget? appBar,
             Widget? body,
             Widget? floatingActionButton,
@@ -181,31 +227,15 @@ mixin _$Widget {
             bool endDrawerEnableOpenDragGesture,
             String? restorationId)?
         scaffold,
-    TResult? Function(
-            Key? key,
-            Widget? child,
-            String? tooltip,
-            Color? foregroundColor,
-            Color? backgroundColor,
-            Color? focusColor,
-            Color? hoverColor,
-            Color? splashColor,
-            double? elevation,
-            double? focusElevation,
-            double? hoverElevation,
-            double? highlightElevation,
-            double? disabledElevation,
-            Callback? onPressed,
-            MouseCursor? mouseCursor,
-            bool mini,
-            ShapeBorder? shape,
-            Clip clipBehavior,
-            bool autofocus,
-            MaterialTapTargetSize? materialTapTargetSize,
-            bool isExtended,
-            bool? enableFeedback)?
-        floatingActionButton,
+    TResult? Function(Key? key, Widget? child, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, bool mini, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButton,
+    TResult? Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButtonExtended,
     TResult? Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor)? text,
+    TResult? Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior)? container,
+    TResult? Function(Key? key, double? widthFactor, double? heightFactor, Widget child)? center,
+    TResult? Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection)? icon,
+    TResult? Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? column,
+    TResult? Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? row,
+    TResult? Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -242,6 +272,29 @@ mixin _$Widget {
         textButton,
     TResult Function(
             Key? key,
+            double? iconSize,
+            VisualDensity? visualDensity,
+            EdgeInsets? padding,
+            Alignment? alignment,
+            double? splashRadius,
+            Color? color,
+            Color? focusColor,
+            Color? hoverColor,
+            Color? highlightColor,
+            Color? splashColor,
+            Color? disabledColor,
+            Callback onPressed,
+            MouseCursor? mouseCursor,
+            bool autofocus,
+            String? tooltip,
+            bool? enableFeedback,
+            BoxConstraints? constraints,
+            bool? isSelected,
+            Widget? selectedIcon,
+            Widget icon)?
+        iconButton,
+    TResult Function(
+            Key? key,
             PreferredSizeWidget? appBar,
             Widget? body,
             Widget? floatingActionButton,
@@ -263,31 +316,15 @@ mixin _$Widget {
             bool endDrawerEnableOpenDragGesture,
             String? restorationId)?
         scaffold,
-    TResult Function(
-            Key? key,
-            Widget? child,
-            String? tooltip,
-            Color? foregroundColor,
-            Color? backgroundColor,
-            Color? focusColor,
-            Color? hoverColor,
-            Color? splashColor,
-            double? elevation,
-            double? focusElevation,
-            double? hoverElevation,
-            double? highlightElevation,
-            double? disabledElevation,
-            Callback? onPressed,
-            MouseCursor? mouseCursor,
-            bool mini,
-            ShapeBorder? shape,
-            Clip clipBehavior,
-            bool autofocus,
-            MaterialTapTargetSize? materialTapTargetSize,
-            bool isExtended,
-            bool? enableFeedback)?
-        floatingActionButton,
+    TResult Function(Key? key, Widget? child, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, bool mini, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButton,
+    TResult Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButtonExtended,
     TResult Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor)? text,
+    TResult Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior)? container,
+    TResult Function(Key? key, double? widthFactor, double? heightFactor, Widget child)? center,
+    TResult Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection)? icon,
+    TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? column,
+    TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? row,
+    TResult Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -299,9 +336,18 @@ mixin _$Widget {
     required TResult Function(FilledTonalButton value) filledTonalButton,
     required TResult Function(OutlinedButton value) outlinedButton,
     required TResult Function(TextButton value) textButton,
+    required TResult Function(IconButton value) iconButton,
     required TResult Function(Scaffold value) scaffold,
     required TResult Function(FloatingActionButton value) floatingActionButton,
+    required TResult Function(FloatingActionButtonExtended value)
+        floatingActionButtonExtended,
     required TResult Function(Text value) text,
+    required TResult Function(Container value) container,
+    required TResult Function(Center value) center,
+    required TResult Function(Icon value) icon,
+    required TResult Function(Column value) column,
+    required TResult Function(Row value) row,
+    required TResult Function(SizedBox value) sizedBox,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -312,9 +358,18 @@ mixin _$Widget {
     TResult? Function(FilledTonalButton value)? filledTonalButton,
     TResult? Function(OutlinedButton value)? outlinedButton,
     TResult? Function(TextButton value)? textButton,
+    TResult? Function(IconButton value)? iconButton,
     TResult? Function(Scaffold value)? scaffold,
     TResult? Function(FloatingActionButton value)? floatingActionButton,
+    TResult? Function(FloatingActionButtonExtended value)?
+        floatingActionButtonExtended,
     TResult? Function(Text value)? text,
+    TResult? Function(Container value)? container,
+    TResult? Function(Center value)? center,
+    TResult? Function(Icon value)? icon,
+    TResult? Function(Column value)? column,
+    TResult? Function(Row value)? row,
+    TResult? Function(SizedBox value)? sizedBox,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -325,9 +380,18 @@ mixin _$Widget {
     TResult Function(FilledTonalButton value)? filledTonalButton,
     TResult Function(OutlinedButton value)? outlinedButton,
     TResult Function(TextButton value)? textButton,
+    TResult Function(IconButton value)? iconButton,
     TResult Function(Scaffold value)? scaffold,
     TResult Function(FloatingActionButton value)? floatingActionButton,
+    TResult Function(FloatingActionButtonExtended value)?
+        floatingActionButtonExtended,
     TResult Function(Text value)? text,
+    TResult Function(Container value)? container,
+    TResult Function(Center value)? center,
+    TResult Function(Icon value)? icon,
+    TResult Function(Column value)? column,
+    TResult Function(Row value)? row,
+    TResult Function(SizedBox value)? sizedBox,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -687,6 +751,29 @@ class _$Card implements Card {
         textButton,
     required TResult Function(
             Key? key,
+            double? iconSize,
+            VisualDensity? visualDensity,
+            EdgeInsets? padding,
+            Alignment? alignment,
+            double? splashRadius,
+            Color? color,
+            Color? focusColor,
+            Color? hoverColor,
+            Color? highlightColor,
+            Color? splashColor,
+            Color? disabledColor,
+            Callback onPressed,
+            MouseCursor? mouseCursor,
+            bool autofocus,
+            String? tooltip,
+            bool? enableFeedback,
+            BoxConstraints? constraints,
+            bool? isSelected,
+            Widget? selectedIcon,
+            Widget icon)
+        iconButton,
+    required TResult Function(
+            Key? key,
             PreferredSizeWidget? appBar,
             Widget? body,
             Widget? floatingActionButton,
@@ -708,31 +795,15 @@ class _$Card implements Card {
             bool endDrawerEnableOpenDragGesture,
             String? restorationId)
         scaffold,
-    required TResult Function(
-            Key? key,
-            Widget? child,
-            String? tooltip,
-            Color? foregroundColor,
-            Color? backgroundColor,
-            Color? focusColor,
-            Color? hoverColor,
-            Color? splashColor,
-            double? elevation,
-            double? focusElevation,
-            double? hoverElevation,
-            double? highlightElevation,
-            double? disabledElevation,
-            Callback? onPressed,
-            MouseCursor? mouseCursor,
-            bool mini,
-            ShapeBorder? shape,
-            Clip clipBehavior,
-            bool autofocus,
-            MaterialTapTargetSize? materialTapTargetSize,
-            bool isExtended,
-            bool? enableFeedback)
-        floatingActionButton,
+    required TResult Function(Key? key, Widget? child, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, bool mini, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback) floatingActionButton,
+    required TResult Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback) floatingActionButtonExtended,
     required TResult Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor) text,
+    required TResult Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior) container,
+    required TResult Function(Key? key, double? widthFactor, double? heightFactor, Widget child) center,
+    required TResult Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection) icon,
+    required TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children) column,
+    required TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children) row,
+    required TResult Function(Key? key, double? width, double? height, Widget? child) sizedBox,
   }) {
     return card(key, color, shadowColor, surfaceTintColor, elevation, shape,
         borderOnForeground, margin, clipBehavior, child, semanticContainer);
@@ -773,6 +844,29 @@ class _$Card implements Card {
         textButton,
     TResult? Function(
             Key? key,
+            double? iconSize,
+            VisualDensity? visualDensity,
+            EdgeInsets? padding,
+            Alignment? alignment,
+            double? splashRadius,
+            Color? color,
+            Color? focusColor,
+            Color? hoverColor,
+            Color? highlightColor,
+            Color? splashColor,
+            Color? disabledColor,
+            Callback onPressed,
+            MouseCursor? mouseCursor,
+            bool autofocus,
+            String? tooltip,
+            bool? enableFeedback,
+            BoxConstraints? constraints,
+            bool? isSelected,
+            Widget? selectedIcon,
+            Widget icon)?
+        iconButton,
+    TResult? Function(
+            Key? key,
             PreferredSizeWidget? appBar,
             Widget? body,
             Widget? floatingActionButton,
@@ -794,31 +888,15 @@ class _$Card implements Card {
             bool endDrawerEnableOpenDragGesture,
             String? restorationId)?
         scaffold,
-    TResult? Function(
-            Key? key,
-            Widget? child,
-            String? tooltip,
-            Color? foregroundColor,
-            Color? backgroundColor,
-            Color? focusColor,
-            Color? hoverColor,
-            Color? splashColor,
-            double? elevation,
-            double? focusElevation,
-            double? hoverElevation,
-            double? highlightElevation,
-            double? disabledElevation,
-            Callback? onPressed,
-            MouseCursor? mouseCursor,
-            bool mini,
-            ShapeBorder? shape,
-            Clip clipBehavior,
-            bool autofocus,
-            MaterialTapTargetSize? materialTapTargetSize,
-            bool isExtended,
-            bool? enableFeedback)?
-        floatingActionButton,
+    TResult? Function(Key? key, Widget? child, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, bool mini, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButton,
+    TResult? Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButtonExtended,
     TResult? Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor)? text,
+    TResult? Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior)? container,
+    TResult? Function(Key? key, double? widthFactor, double? heightFactor, Widget child)? center,
+    TResult? Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection)? icon,
+    TResult? Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? column,
+    TResult? Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? row,
+    TResult? Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
   }) {
     return card?.call(
         key,
@@ -869,6 +947,29 @@ class _$Card implements Card {
         textButton,
     TResult Function(
             Key? key,
+            double? iconSize,
+            VisualDensity? visualDensity,
+            EdgeInsets? padding,
+            Alignment? alignment,
+            double? splashRadius,
+            Color? color,
+            Color? focusColor,
+            Color? hoverColor,
+            Color? highlightColor,
+            Color? splashColor,
+            Color? disabledColor,
+            Callback onPressed,
+            MouseCursor? mouseCursor,
+            bool autofocus,
+            String? tooltip,
+            bool? enableFeedback,
+            BoxConstraints? constraints,
+            bool? isSelected,
+            Widget? selectedIcon,
+            Widget icon)?
+        iconButton,
+    TResult Function(
+            Key? key,
             PreferredSizeWidget? appBar,
             Widget? body,
             Widget? floatingActionButton,
@@ -890,31 +991,15 @@ class _$Card implements Card {
             bool endDrawerEnableOpenDragGesture,
             String? restorationId)?
         scaffold,
-    TResult Function(
-            Key? key,
-            Widget? child,
-            String? tooltip,
-            Color? foregroundColor,
-            Color? backgroundColor,
-            Color? focusColor,
-            Color? hoverColor,
-            Color? splashColor,
-            double? elevation,
-            double? focusElevation,
-            double? hoverElevation,
-            double? highlightElevation,
-            double? disabledElevation,
-            Callback? onPressed,
-            MouseCursor? mouseCursor,
-            bool mini,
-            ShapeBorder? shape,
-            Clip clipBehavior,
-            bool autofocus,
-            MaterialTapTargetSize? materialTapTargetSize,
-            bool isExtended,
-            bool? enableFeedback)?
-        floatingActionButton,
+    TResult Function(Key? key, Widget? child, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, bool mini, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButton,
+    TResult Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButtonExtended,
     TResult Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor)? text,
+    TResult Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior)? container,
+    TResult Function(Key? key, double? widthFactor, double? heightFactor, Widget child)? center,
+    TResult Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection)? icon,
+    TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? column,
+    TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? row,
+    TResult Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
     required TResult orElse(),
   }) {
     if (card != null) {
@@ -933,9 +1018,18 @@ class _$Card implements Card {
     required TResult Function(FilledTonalButton value) filledTonalButton,
     required TResult Function(OutlinedButton value) outlinedButton,
     required TResult Function(TextButton value) textButton,
+    required TResult Function(IconButton value) iconButton,
     required TResult Function(Scaffold value) scaffold,
     required TResult Function(FloatingActionButton value) floatingActionButton,
+    required TResult Function(FloatingActionButtonExtended value)
+        floatingActionButtonExtended,
     required TResult Function(Text value) text,
+    required TResult Function(Container value) container,
+    required TResult Function(Center value) center,
+    required TResult Function(Icon value) icon,
+    required TResult Function(Column value) column,
+    required TResult Function(Row value) row,
+    required TResult Function(SizedBox value) sizedBox,
   }) {
     return card(this);
   }
@@ -949,9 +1043,18 @@ class _$Card implements Card {
     TResult? Function(FilledTonalButton value)? filledTonalButton,
     TResult? Function(OutlinedButton value)? outlinedButton,
     TResult? Function(TextButton value)? textButton,
+    TResult? Function(IconButton value)? iconButton,
     TResult? Function(Scaffold value)? scaffold,
     TResult? Function(FloatingActionButton value)? floatingActionButton,
+    TResult? Function(FloatingActionButtonExtended value)?
+        floatingActionButtonExtended,
     TResult? Function(Text value)? text,
+    TResult? Function(Container value)? container,
+    TResult? Function(Center value)? center,
+    TResult? Function(Icon value)? icon,
+    TResult? Function(Column value)? column,
+    TResult? Function(Row value)? row,
+    TResult? Function(SizedBox value)? sizedBox,
   }) {
     return card?.call(this);
   }
@@ -965,9 +1068,18 @@ class _$Card implements Card {
     TResult Function(FilledTonalButton value)? filledTonalButton,
     TResult Function(OutlinedButton value)? outlinedButton,
     TResult Function(TextButton value)? textButton,
+    TResult Function(IconButton value)? iconButton,
     TResult Function(Scaffold value)? scaffold,
     TResult Function(FloatingActionButton value)? floatingActionButton,
+    TResult Function(FloatingActionButtonExtended value)?
+        floatingActionButtonExtended,
     TResult Function(Text value)? text,
+    TResult Function(Container value)? container,
+    TResult Function(Center value)? center,
+    TResult Function(Icon value)? icon,
+    TResult Function(Column value)? column,
+    TResult Function(Row value)? row,
+    TResult Function(SizedBox value)? sizedBox,
     required TResult orElse(),
   }) {
     if (card != null) {
@@ -1244,6 +1356,29 @@ class _$ElevatedButton implements ElevatedButton {
         textButton,
     required TResult Function(
             Key? key,
+            double? iconSize,
+            VisualDensity? visualDensity,
+            EdgeInsets? padding,
+            Alignment? alignment,
+            double? splashRadius,
+            Color? color,
+            Color? focusColor,
+            Color? hoverColor,
+            Color? highlightColor,
+            Color? splashColor,
+            Color? disabledColor,
+            Callback onPressed,
+            MouseCursor? mouseCursor,
+            bool autofocus,
+            String? tooltip,
+            bool? enableFeedback,
+            BoxConstraints? constraints,
+            bool? isSelected,
+            Widget? selectedIcon,
+            Widget icon)
+        iconButton,
+    required TResult Function(
+            Key? key,
             PreferredSizeWidget? appBar,
             Widget? body,
             Widget? floatingActionButton,
@@ -1265,31 +1400,15 @@ class _$ElevatedButton implements ElevatedButton {
             bool endDrawerEnableOpenDragGesture,
             String? restorationId)
         scaffold,
-    required TResult Function(
-            Key? key,
-            Widget? child,
-            String? tooltip,
-            Color? foregroundColor,
-            Color? backgroundColor,
-            Color? focusColor,
-            Color? hoverColor,
-            Color? splashColor,
-            double? elevation,
-            double? focusElevation,
-            double? hoverElevation,
-            double? highlightElevation,
-            double? disabledElevation,
-            Callback? onPressed,
-            MouseCursor? mouseCursor,
-            bool mini,
-            ShapeBorder? shape,
-            Clip clipBehavior,
-            bool autofocus,
-            MaterialTapTargetSize? materialTapTargetSize,
-            bool isExtended,
-            bool? enableFeedback)
-        floatingActionButton,
+    required TResult Function(Key? key, Widget? child, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, bool mini, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback) floatingActionButton,
+    required TResult Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback) floatingActionButtonExtended,
     required TResult Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor) text,
+    required TResult Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior) container,
+    required TResult Function(Key? key, double? widthFactor, double? heightFactor, Widget child) center,
+    required TResult Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection) icon,
+    required TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children) column,
+    required TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children) row,
+    required TResult Function(Key? key, double? width, double? height, Widget? child) sizedBox,
   }) {
     return elevatedButton(
         key, onPressed, onLongPress, autofocus, clipBehavior, child, style);
@@ -1330,6 +1449,29 @@ class _$ElevatedButton implements ElevatedButton {
         textButton,
     TResult? Function(
             Key? key,
+            double? iconSize,
+            VisualDensity? visualDensity,
+            EdgeInsets? padding,
+            Alignment? alignment,
+            double? splashRadius,
+            Color? color,
+            Color? focusColor,
+            Color? hoverColor,
+            Color? highlightColor,
+            Color? splashColor,
+            Color? disabledColor,
+            Callback onPressed,
+            MouseCursor? mouseCursor,
+            bool autofocus,
+            String? tooltip,
+            bool? enableFeedback,
+            BoxConstraints? constraints,
+            bool? isSelected,
+            Widget? selectedIcon,
+            Widget icon)?
+        iconButton,
+    TResult? Function(
+            Key? key,
             PreferredSizeWidget? appBar,
             Widget? body,
             Widget? floatingActionButton,
@@ -1351,31 +1493,15 @@ class _$ElevatedButton implements ElevatedButton {
             bool endDrawerEnableOpenDragGesture,
             String? restorationId)?
         scaffold,
-    TResult? Function(
-            Key? key,
-            Widget? child,
-            String? tooltip,
-            Color? foregroundColor,
-            Color? backgroundColor,
-            Color? focusColor,
-            Color? hoverColor,
-            Color? splashColor,
-            double? elevation,
-            double? focusElevation,
-            double? hoverElevation,
-            double? highlightElevation,
-            double? disabledElevation,
-            Callback? onPressed,
-            MouseCursor? mouseCursor,
-            bool mini,
-            ShapeBorder? shape,
-            Clip clipBehavior,
-            bool autofocus,
-            MaterialTapTargetSize? materialTapTargetSize,
-            bool isExtended,
-            bool? enableFeedback)?
-        floatingActionButton,
+    TResult? Function(Key? key, Widget? child, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, bool mini, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButton,
+    TResult? Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButtonExtended,
     TResult? Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor)? text,
+    TResult? Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior)? container,
+    TResult? Function(Key? key, double? widthFactor, double? heightFactor, Widget child)? center,
+    TResult? Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection)? icon,
+    TResult? Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? column,
+    TResult? Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? row,
+    TResult? Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
   }) {
     return elevatedButton?.call(
         key, onPressed, onLongPress, autofocus, clipBehavior, child, style);
@@ -1416,6 +1542,29 @@ class _$ElevatedButton implements ElevatedButton {
         textButton,
     TResult Function(
             Key? key,
+            double? iconSize,
+            VisualDensity? visualDensity,
+            EdgeInsets? padding,
+            Alignment? alignment,
+            double? splashRadius,
+            Color? color,
+            Color? focusColor,
+            Color? hoverColor,
+            Color? highlightColor,
+            Color? splashColor,
+            Color? disabledColor,
+            Callback onPressed,
+            MouseCursor? mouseCursor,
+            bool autofocus,
+            String? tooltip,
+            bool? enableFeedback,
+            BoxConstraints? constraints,
+            bool? isSelected,
+            Widget? selectedIcon,
+            Widget icon)?
+        iconButton,
+    TResult Function(
+            Key? key,
             PreferredSizeWidget? appBar,
             Widget? body,
             Widget? floatingActionButton,
@@ -1437,31 +1586,15 @@ class _$ElevatedButton implements ElevatedButton {
             bool endDrawerEnableOpenDragGesture,
             String? restorationId)?
         scaffold,
-    TResult Function(
-            Key? key,
-            Widget? child,
-            String? tooltip,
-            Color? foregroundColor,
-            Color? backgroundColor,
-            Color? focusColor,
-            Color? hoverColor,
-            Color? splashColor,
-            double? elevation,
-            double? focusElevation,
-            double? hoverElevation,
-            double? highlightElevation,
-            double? disabledElevation,
-            Callback? onPressed,
-            MouseCursor? mouseCursor,
-            bool mini,
-            ShapeBorder? shape,
-            Clip clipBehavior,
-            bool autofocus,
-            MaterialTapTargetSize? materialTapTargetSize,
-            bool isExtended,
-            bool? enableFeedback)?
-        floatingActionButton,
+    TResult Function(Key? key, Widget? child, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, bool mini, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButton,
+    TResult Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButtonExtended,
     TResult Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor)? text,
+    TResult Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior)? container,
+    TResult Function(Key? key, double? widthFactor, double? heightFactor, Widget child)? center,
+    TResult Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection)? icon,
+    TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? column,
+    TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? row,
+    TResult Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
     required TResult orElse(),
   }) {
     if (elevatedButton != null) {
@@ -1480,9 +1613,18 @@ class _$ElevatedButton implements ElevatedButton {
     required TResult Function(FilledTonalButton value) filledTonalButton,
     required TResult Function(OutlinedButton value) outlinedButton,
     required TResult Function(TextButton value) textButton,
+    required TResult Function(IconButton value) iconButton,
     required TResult Function(Scaffold value) scaffold,
     required TResult Function(FloatingActionButton value) floatingActionButton,
+    required TResult Function(FloatingActionButtonExtended value)
+        floatingActionButtonExtended,
     required TResult Function(Text value) text,
+    required TResult Function(Container value) container,
+    required TResult Function(Center value) center,
+    required TResult Function(Icon value) icon,
+    required TResult Function(Column value) column,
+    required TResult Function(Row value) row,
+    required TResult Function(SizedBox value) sizedBox,
   }) {
     return elevatedButton(this);
   }
@@ -1496,9 +1638,18 @@ class _$ElevatedButton implements ElevatedButton {
     TResult? Function(FilledTonalButton value)? filledTonalButton,
     TResult? Function(OutlinedButton value)? outlinedButton,
     TResult? Function(TextButton value)? textButton,
+    TResult? Function(IconButton value)? iconButton,
     TResult? Function(Scaffold value)? scaffold,
     TResult? Function(FloatingActionButton value)? floatingActionButton,
+    TResult? Function(FloatingActionButtonExtended value)?
+        floatingActionButtonExtended,
     TResult? Function(Text value)? text,
+    TResult? Function(Container value)? container,
+    TResult? Function(Center value)? center,
+    TResult? Function(Icon value)? icon,
+    TResult? Function(Column value)? column,
+    TResult? Function(Row value)? row,
+    TResult? Function(SizedBox value)? sizedBox,
   }) {
     return elevatedButton?.call(this);
   }
@@ -1512,9 +1663,18 @@ class _$ElevatedButton implements ElevatedButton {
     TResult Function(FilledTonalButton value)? filledTonalButton,
     TResult Function(OutlinedButton value)? outlinedButton,
     TResult Function(TextButton value)? textButton,
+    TResult Function(IconButton value)? iconButton,
     TResult Function(Scaffold value)? scaffold,
     TResult Function(FloatingActionButton value)? floatingActionButton,
+    TResult Function(FloatingActionButtonExtended value)?
+        floatingActionButtonExtended,
     TResult Function(Text value)? text,
+    TResult Function(Container value)? container,
+    TResult Function(Center value)? center,
+    TResult Function(Icon value)? icon,
+    TResult Function(Column value)? column,
+    TResult Function(Row value)? row,
+    TResult Function(SizedBox value)? sizedBox,
     required TResult orElse(),
   }) {
     if (elevatedButton != null) {
@@ -1761,6 +1921,29 @@ class _$FilledButton implements FilledButton {
         textButton,
     required TResult Function(
             Key? key,
+            double? iconSize,
+            VisualDensity? visualDensity,
+            EdgeInsets? padding,
+            Alignment? alignment,
+            double? splashRadius,
+            Color? color,
+            Color? focusColor,
+            Color? hoverColor,
+            Color? highlightColor,
+            Color? splashColor,
+            Color? disabledColor,
+            Callback onPressed,
+            MouseCursor? mouseCursor,
+            bool autofocus,
+            String? tooltip,
+            bool? enableFeedback,
+            BoxConstraints? constraints,
+            bool? isSelected,
+            Widget? selectedIcon,
+            Widget icon)
+        iconButton,
+    required TResult Function(
+            Key? key,
             PreferredSizeWidget? appBar,
             Widget? body,
             Widget? floatingActionButton,
@@ -1782,31 +1965,15 @@ class _$FilledButton implements FilledButton {
             bool endDrawerEnableOpenDragGesture,
             String? restorationId)
         scaffold,
-    required TResult Function(
-            Key? key,
-            Widget? child,
-            String? tooltip,
-            Color? foregroundColor,
-            Color? backgroundColor,
-            Color? focusColor,
-            Color? hoverColor,
-            Color? splashColor,
-            double? elevation,
-            double? focusElevation,
-            double? hoverElevation,
-            double? highlightElevation,
-            double? disabledElevation,
-            Callback? onPressed,
-            MouseCursor? mouseCursor,
-            bool mini,
-            ShapeBorder? shape,
-            Clip clipBehavior,
-            bool autofocus,
-            MaterialTapTargetSize? materialTapTargetSize,
-            bool isExtended,
-            bool? enableFeedback)
-        floatingActionButton,
+    required TResult Function(Key? key, Widget? child, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, bool mini, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback) floatingActionButton,
+    required TResult Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback) floatingActionButtonExtended,
     required TResult Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor) text,
+    required TResult Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior) container,
+    required TResult Function(Key? key, double? widthFactor, double? heightFactor, Widget child) center,
+    required TResult Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection) icon,
+    required TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children) column,
+    required TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children) row,
+    required TResult Function(Key? key, double? width, double? height, Widget? child) sizedBox,
   }) {
     return filledButton(
         key, onPressed, onLongPress, autofocus, clipBehavior, child);
@@ -1847,6 +2014,29 @@ class _$FilledButton implements FilledButton {
         textButton,
     TResult? Function(
             Key? key,
+            double? iconSize,
+            VisualDensity? visualDensity,
+            EdgeInsets? padding,
+            Alignment? alignment,
+            double? splashRadius,
+            Color? color,
+            Color? focusColor,
+            Color? hoverColor,
+            Color? highlightColor,
+            Color? splashColor,
+            Color? disabledColor,
+            Callback onPressed,
+            MouseCursor? mouseCursor,
+            bool autofocus,
+            String? tooltip,
+            bool? enableFeedback,
+            BoxConstraints? constraints,
+            bool? isSelected,
+            Widget? selectedIcon,
+            Widget icon)?
+        iconButton,
+    TResult? Function(
+            Key? key,
             PreferredSizeWidget? appBar,
             Widget? body,
             Widget? floatingActionButton,
@@ -1868,31 +2058,15 @@ class _$FilledButton implements FilledButton {
             bool endDrawerEnableOpenDragGesture,
             String? restorationId)?
         scaffold,
-    TResult? Function(
-            Key? key,
-            Widget? child,
-            String? tooltip,
-            Color? foregroundColor,
-            Color? backgroundColor,
-            Color? focusColor,
-            Color? hoverColor,
-            Color? splashColor,
-            double? elevation,
-            double? focusElevation,
-            double? hoverElevation,
-            double? highlightElevation,
-            double? disabledElevation,
-            Callback? onPressed,
-            MouseCursor? mouseCursor,
-            bool mini,
-            ShapeBorder? shape,
-            Clip clipBehavior,
-            bool autofocus,
-            MaterialTapTargetSize? materialTapTargetSize,
-            bool isExtended,
-            bool? enableFeedback)?
-        floatingActionButton,
+    TResult? Function(Key? key, Widget? child, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, bool mini, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButton,
+    TResult? Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButtonExtended,
     TResult? Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor)? text,
+    TResult? Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior)? container,
+    TResult? Function(Key? key, double? widthFactor, double? heightFactor, Widget child)? center,
+    TResult? Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection)? icon,
+    TResult? Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? column,
+    TResult? Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? row,
+    TResult? Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
   }) {
     return filledButton?.call(
         key, onPressed, onLongPress, autofocus, clipBehavior, child);
@@ -1933,6 +2107,29 @@ class _$FilledButton implements FilledButton {
         textButton,
     TResult Function(
             Key? key,
+            double? iconSize,
+            VisualDensity? visualDensity,
+            EdgeInsets? padding,
+            Alignment? alignment,
+            double? splashRadius,
+            Color? color,
+            Color? focusColor,
+            Color? hoverColor,
+            Color? highlightColor,
+            Color? splashColor,
+            Color? disabledColor,
+            Callback onPressed,
+            MouseCursor? mouseCursor,
+            bool autofocus,
+            String? tooltip,
+            bool? enableFeedback,
+            BoxConstraints? constraints,
+            bool? isSelected,
+            Widget? selectedIcon,
+            Widget icon)?
+        iconButton,
+    TResult Function(
+            Key? key,
             PreferredSizeWidget? appBar,
             Widget? body,
             Widget? floatingActionButton,
@@ -1954,31 +2151,15 @@ class _$FilledButton implements FilledButton {
             bool endDrawerEnableOpenDragGesture,
             String? restorationId)?
         scaffold,
-    TResult Function(
-            Key? key,
-            Widget? child,
-            String? tooltip,
-            Color? foregroundColor,
-            Color? backgroundColor,
-            Color? focusColor,
-            Color? hoverColor,
-            Color? splashColor,
-            double? elevation,
-            double? focusElevation,
-            double? hoverElevation,
-            double? highlightElevation,
-            double? disabledElevation,
-            Callback? onPressed,
-            MouseCursor? mouseCursor,
-            bool mini,
-            ShapeBorder? shape,
-            Clip clipBehavior,
-            bool autofocus,
-            MaterialTapTargetSize? materialTapTargetSize,
-            bool isExtended,
-            bool? enableFeedback)?
-        floatingActionButton,
+    TResult Function(Key? key, Widget? child, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, bool mini, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButton,
+    TResult Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButtonExtended,
     TResult Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor)? text,
+    TResult Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior)? container,
+    TResult Function(Key? key, double? widthFactor, double? heightFactor, Widget child)? center,
+    TResult Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection)? icon,
+    TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? column,
+    TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? row,
+    TResult Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
     required TResult orElse(),
   }) {
     if (filledButton != null) {
@@ -1997,9 +2178,18 @@ class _$FilledButton implements FilledButton {
     required TResult Function(FilledTonalButton value) filledTonalButton,
     required TResult Function(OutlinedButton value) outlinedButton,
     required TResult Function(TextButton value) textButton,
+    required TResult Function(IconButton value) iconButton,
     required TResult Function(Scaffold value) scaffold,
     required TResult Function(FloatingActionButton value) floatingActionButton,
+    required TResult Function(FloatingActionButtonExtended value)
+        floatingActionButtonExtended,
     required TResult Function(Text value) text,
+    required TResult Function(Container value) container,
+    required TResult Function(Center value) center,
+    required TResult Function(Icon value) icon,
+    required TResult Function(Column value) column,
+    required TResult Function(Row value) row,
+    required TResult Function(SizedBox value) sizedBox,
   }) {
     return filledButton(this);
   }
@@ -2013,9 +2203,18 @@ class _$FilledButton implements FilledButton {
     TResult? Function(FilledTonalButton value)? filledTonalButton,
     TResult? Function(OutlinedButton value)? outlinedButton,
     TResult? Function(TextButton value)? textButton,
+    TResult? Function(IconButton value)? iconButton,
     TResult? Function(Scaffold value)? scaffold,
     TResult? Function(FloatingActionButton value)? floatingActionButton,
+    TResult? Function(FloatingActionButtonExtended value)?
+        floatingActionButtonExtended,
     TResult? Function(Text value)? text,
+    TResult? Function(Container value)? container,
+    TResult? Function(Center value)? center,
+    TResult? Function(Icon value)? icon,
+    TResult? Function(Column value)? column,
+    TResult? Function(Row value)? row,
+    TResult? Function(SizedBox value)? sizedBox,
   }) {
     return filledButton?.call(this);
   }
@@ -2029,9 +2228,18 @@ class _$FilledButton implements FilledButton {
     TResult Function(FilledTonalButton value)? filledTonalButton,
     TResult Function(OutlinedButton value)? outlinedButton,
     TResult Function(TextButton value)? textButton,
+    TResult Function(IconButton value)? iconButton,
     TResult Function(Scaffold value)? scaffold,
     TResult Function(FloatingActionButton value)? floatingActionButton,
+    TResult Function(FloatingActionButtonExtended value)?
+        floatingActionButtonExtended,
     TResult Function(Text value)? text,
+    TResult Function(Container value)? container,
+    TResult Function(Center value)? center,
+    TResult Function(Icon value)? icon,
+    TResult Function(Column value)? column,
+    TResult Function(Row value)? row,
+    TResult Function(SizedBox value)? sizedBox,
     required TResult orElse(),
   }) {
     if (filledButton != null) {
@@ -2277,6 +2485,29 @@ class _$FilledTonalButton implements FilledTonalButton {
         textButton,
     required TResult Function(
             Key? key,
+            double? iconSize,
+            VisualDensity? visualDensity,
+            EdgeInsets? padding,
+            Alignment? alignment,
+            double? splashRadius,
+            Color? color,
+            Color? focusColor,
+            Color? hoverColor,
+            Color? highlightColor,
+            Color? splashColor,
+            Color? disabledColor,
+            Callback onPressed,
+            MouseCursor? mouseCursor,
+            bool autofocus,
+            String? tooltip,
+            bool? enableFeedback,
+            BoxConstraints? constraints,
+            bool? isSelected,
+            Widget? selectedIcon,
+            Widget icon)
+        iconButton,
+    required TResult Function(
+            Key? key,
             PreferredSizeWidget? appBar,
             Widget? body,
             Widget? floatingActionButton,
@@ -2298,31 +2529,15 @@ class _$FilledTonalButton implements FilledTonalButton {
             bool endDrawerEnableOpenDragGesture,
             String? restorationId)
         scaffold,
-    required TResult Function(
-            Key? key,
-            Widget? child,
-            String? tooltip,
-            Color? foregroundColor,
-            Color? backgroundColor,
-            Color? focusColor,
-            Color? hoverColor,
-            Color? splashColor,
-            double? elevation,
-            double? focusElevation,
-            double? hoverElevation,
-            double? highlightElevation,
-            double? disabledElevation,
-            Callback? onPressed,
-            MouseCursor? mouseCursor,
-            bool mini,
-            ShapeBorder? shape,
-            Clip clipBehavior,
-            bool autofocus,
-            MaterialTapTargetSize? materialTapTargetSize,
-            bool isExtended,
-            bool? enableFeedback)
-        floatingActionButton,
+    required TResult Function(Key? key, Widget? child, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, bool mini, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback) floatingActionButton,
+    required TResult Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback) floatingActionButtonExtended,
     required TResult Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor) text,
+    required TResult Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior) container,
+    required TResult Function(Key? key, double? widthFactor, double? heightFactor, Widget child) center,
+    required TResult Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection) icon,
+    required TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children) column,
+    required TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children) row,
+    required TResult Function(Key? key, double? width, double? height, Widget? child) sizedBox,
   }) {
     return filledTonalButton(
         key, onPressed, onLongPress, autofocus, clipBehavior, child);
@@ -2363,6 +2578,29 @@ class _$FilledTonalButton implements FilledTonalButton {
         textButton,
     TResult? Function(
             Key? key,
+            double? iconSize,
+            VisualDensity? visualDensity,
+            EdgeInsets? padding,
+            Alignment? alignment,
+            double? splashRadius,
+            Color? color,
+            Color? focusColor,
+            Color? hoverColor,
+            Color? highlightColor,
+            Color? splashColor,
+            Color? disabledColor,
+            Callback onPressed,
+            MouseCursor? mouseCursor,
+            bool autofocus,
+            String? tooltip,
+            bool? enableFeedback,
+            BoxConstraints? constraints,
+            bool? isSelected,
+            Widget? selectedIcon,
+            Widget icon)?
+        iconButton,
+    TResult? Function(
+            Key? key,
             PreferredSizeWidget? appBar,
             Widget? body,
             Widget? floatingActionButton,
@@ -2384,31 +2622,15 @@ class _$FilledTonalButton implements FilledTonalButton {
             bool endDrawerEnableOpenDragGesture,
             String? restorationId)?
         scaffold,
-    TResult? Function(
-            Key? key,
-            Widget? child,
-            String? tooltip,
-            Color? foregroundColor,
-            Color? backgroundColor,
-            Color? focusColor,
-            Color? hoverColor,
-            Color? splashColor,
-            double? elevation,
-            double? focusElevation,
-            double? hoverElevation,
-            double? highlightElevation,
-            double? disabledElevation,
-            Callback? onPressed,
-            MouseCursor? mouseCursor,
-            bool mini,
-            ShapeBorder? shape,
-            Clip clipBehavior,
-            bool autofocus,
-            MaterialTapTargetSize? materialTapTargetSize,
-            bool isExtended,
-            bool? enableFeedback)?
-        floatingActionButton,
+    TResult? Function(Key? key, Widget? child, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, bool mini, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButton,
+    TResult? Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButtonExtended,
     TResult? Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor)? text,
+    TResult? Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior)? container,
+    TResult? Function(Key? key, double? widthFactor, double? heightFactor, Widget child)? center,
+    TResult? Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection)? icon,
+    TResult? Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? column,
+    TResult? Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? row,
+    TResult? Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
   }) {
     return filledTonalButton?.call(
         key, onPressed, onLongPress, autofocus, clipBehavior, child);
@@ -2449,6 +2671,29 @@ class _$FilledTonalButton implements FilledTonalButton {
         textButton,
     TResult Function(
             Key? key,
+            double? iconSize,
+            VisualDensity? visualDensity,
+            EdgeInsets? padding,
+            Alignment? alignment,
+            double? splashRadius,
+            Color? color,
+            Color? focusColor,
+            Color? hoverColor,
+            Color? highlightColor,
+            Color? splashColor,
+            Color? disabledColor,
+            Callback onPressed,
+            MouseCursor? mouseCursor,
+            bool autofocus,
+            String? tooltip,
+            bool? enableFeedback,
+            BoxConstraints? constraints,
+            bool? isSelected,
+            Widget? selectedIcon,
+            Widget icon)?
+        iconButton,
+    TResult Function(
+            Key? key,
             PreferredSizeWidget? appBar,
             Widget? body,
             Widget? floatingActionButton,
@@ -2470,31 +2715,15 @@ class _$FilledTonalButton implements FilledTonalButton {
             bool endDrawerEnableOpenDragGesture,
             String? restorationId)?
         scaffold,
-    TResult Function(
-            Key? key,
-            Widget? child,
-            String? tooltip,
-            Color? foregroundColor,
-            Color? backgroundColor,
-            Color? focusColor,
-            Color? hoverColor,
-            Color? splashColor,
-            double? elevation,
-            double? focusElevation,
-            double? hoverElevation,
-            double? highlightElevation,
-            double? disabledElevation,
-            Callback? onPressed,
-            MouseCursor? mouseCursor,
-            bool mini,
-            ShapeBorder? shape,
-            Clip clipBehavior,
-            bool autofocus,
-            MaterialTapTargetSize? materialTapTargetSize,
-            bool isExtended,
-            bool? enableFeedback)?
-        floatingActionButton,
+    TResult Function(Key? key, Widget? child, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, bool mini, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButton,
+    TResult Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButtonExtended,
     TResult Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor)? text,
+    TResult Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior)? container,
+    TResult Function(Key? key, double? widthFactor, double? heightFactor, Widget child)? center,
+    TResult Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection)? icon,
+    TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? column,
+    TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? row,
+    TResult Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
     required TResult orElse(),
   }) {
     if (filledTonalButton != null) {
@@ -2513,9 +2742,18 @@ class _$FilledTonalButton implements FilledTonalButton {
     required TResult Function(FilledTonalButton value) filledTonalButton,
     required TResult Function(OutlinedButton value) outlinedButton,
     required TResult Function(TextButton value) textButton,
+    required TResult Function(IconButton value) iconButton,
     required TResult Function(Scaffold value) scaffold,
     required TResult Function(FloatingActionButton value) floatingActionButton,
+    required TResult Function(FloatingActionButtonExtended value)
+        floatingActionButtonExtended,
     required TResult Function(Text value) text,
+    required TResult Function(Container value) container,
+    required TResult Function(Center value) center,
+    required TResult Function(Icon value) icon,
+    required TResult Function(Column value) column,
+    required TResult Function(Row value) row,
+    required TResult Function(SizedBox value) sizedBox,
   }) {
     return filledTonalButton(this);
   }
@@ -2529,9 +2767,18 @@ class _$FilledTonalButton implements FilledTonalButton {
     TResult? Function(FilledTonalButton value)? filledTonalButton,
     TResult? Function(OutlinedButton value)? outlinedButton,
     TResult? Function(TextButton value)? textButton,
+    TResult? Function(IconButton value)? iconButton,
     TResult? Function(Scaffold value)? scaffold,
     TResult? Function(FloatingActionButton value)? floatingActionButton,
+    TResult? Function(FloatingActionButtonExtended value)?
+        floatingActionButtonExtended,
     TResult? Function(Text value)? text,
+    TResult? Function(Container value)? container,
+    TResult? Function(Center value)? center,
+    TResult? Function(Icon value)? icon,
+    TResult? Function(Column value)? column,
+    TResult? Function(Row value)? row,
+    TResult? Function(SizedBox value)? sizedBox,
   }) {
     return filledTonalButton?.call(this);
   }
@@ -2545,9 +2792,18 @@ class _$FilledTonalButton implements FilledTonalButton {
     TResult Function(FilledTonalButton value)? filledTonalButton,
     TResult Function(OutlinedButton value)? outlinedButton,
     TResult Function(TextButton value)? textButton,
+    TResult Function(IconButton value)? iconButton,
     TResult Function(Scaffold value)? scaffold,
     TResult Function(FloatingActionButton value)? floatingActionButton,
+    TResult Function(FloatingActionButtonExtended value)?
+        floatingActionButtonExtended,
     TResult Function(Text value)? text,
+    TResult Function(Container value)? container,
+    TResult Function(Center value)? center,
+    TResult Function(Icon value)? icon,
+    TResult Function(Column value)? column,
+    TResult Function(Row value)? row,
+    TResult Function(SizedBox value)? sizedBox,
     required TResult orElse(),
   }) {
     if (filledTonalButton != null) {
@@ -2793,6 +3049,29 @@ class _$OutlinedButton implements OutlinedButton {
         textButton,
     required TResult Function(
             Key? key,
+            double? iconSize,
+            VisualDensity? visualDensity,
+            EdgeInsets? padding,
+            Alignment? alignment,
+            double? splashRadius,
+            Color? color,
+            Color? focusColor,
+            Color? hoverColor,
+            Color? highlightColor,
+            Color? splashColor,
+            Color? disabledColor,
+            Callback onPressed,
+            MouseCursor? mouseCursor,
+            bool autofocus,
+            String? tooltip,
+            bool? enableFeedback,
+            BoxConstraints? constraints,
+            bool? isSelected,
+            Widget? selectedIcon,
+            Widget icon)
+        iconButton,
+    required TResult Function(
+            Key? key,
             PreferredSizeWidget? appBar,
             Widget? body,
             Widget? floatingActionButton,
@@ -2814,31 +3093,15 @@ class _$OutlinedButton implements OutlinedButton {
             bool endDrawerEnableOpenDragGesture,
             String? restorationId)
         scaffold,
-    required TResult Function(
-            Key? key,
-            Widget? child,
-            String? tooltip,
-            Color? foregroundColor,
-            Color? backgroundColor,
-            Color? focusColor,
-            Color? hoverColor,
-            Color? splashColor,
-            double? elevation,
-            double? focusElevation,
-            double? hoverElevation,
-            double? highlightElevation,
-            double? disabledElevation,
-            Callback? onPressed,
-            MouseCursor? mouseCursor,
-            bool mini,
-            ShapeBorder? shape,
-            Clip clipBehavior,
-            bool autofocus,
-            MaterialTapTargetSize? materialTapTargetSize,
-            bool isExtended,
-            bool? enableFeedback)
-        floatingActionButton,
+    required TResult Function(Key? key, Widget? child, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, bool mini, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback) floatingActionButton,
+    required TResult Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback) floatingActionButtonExtended,
     required TResult Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor) text,
+    required TResult Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior) container,
+    required TResult Function(Key? key, double? widthFactor, double? heightFactor, Widget child) center,
+    required TResult Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection) icon,
+    required TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children) column,
+    required TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children) row,
+    required TResult Function(Key? key, double? width, double? height, Widget? child) sizedBox,
   }) {
     return outlinedButton(
         key, onPressed, onLongPress, autofocus, clipBehavior, child);
@@ -2879,6 +3142,29 @@ class _$OutlinedButton implements OutlinedButton {
         textButton,
     TResult? Function(
             Key? key,
+            double? iconSize,
+            VisualDensity? visualDensity,
+            EdgeInsets? padding,
+            Alignment? alignment,
+            double? splashRadius,
+            Color? color,
+            Color? focusColor,
+            Color? hoverColor,
+            Color? highlightColor,
+            Color? splashColor,
+            Color? disabledColor,
+            Callback onPressed,
+            MouseCursor? mouseCursor,
+            bool autofocus,
+            String? tooltip,
+            bool? enableFeedback,
+            BoxConstraints? constraints,
+            bool? isSelected,
+            Widget? selectedIcon,
+            Widget icon)?
+        iconButton,
+    TResult? Function(
+            Key? key,
             PreferredSizeWidget? appBar,
             Widget? body,
             Widget? floatingActionButton,
@@ -2900,31 +3186,15 @@ class _$OutlinedButton implements OutlinedButton {
             bool endDrawerEnableOpenDragGesture,
             String? restorationId)?
         scaffold,
-    TResult? Function(
-            Key? key,
-            Widget? child,
-            String? tooltip,
-            Color? foregroundColor,
-            Color? backgroundColor,
-            Color? focusColor,
-            Color? hoverColor,
-            Color? splashColor,
-            double? elevation,
-            double? focusElevation,
-            double? hoverElevation,
-            double? highlightElevation,
-            double? disabledElevation,
-            Callback? onPressed,
-            MouseCursor? mouseCursor,
-            bool mini,
-            ShapeBorder? shape,
-            Clip clipBehavior,
-            bool autofocus,
-            MaterialTapTargetSize? materialTapTargetSize,
-            bool isExtended,
-            bool? enableFeedback)?
-        floatingActionButton,
+    TResult? Function(Key? key, Widget? child, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, bool mini, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButton,
+    TResult? Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButtonExtended,
     TResult? Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor)? text,
+    TResult? Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior)? container,
+    TResult? Function(Key? key, double? widthFactor, double? heightFactor, Widget child)? center,
+    TResult? Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection)? icon,
+    TResult? Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? column,
+    TResult? Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? row,
+    TResult? Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
   }) {
     return outlinedButton?.call(
         key, onPressed, onLongPress, autofocus, clipBehavior, child);
@@ -2965,6 +3235,29 @@ class _$OutlinedButton implements OutlinedButton {
         textButton,
     TResult Function(
             Key? key,
+            double? iconSize,
+            VisualDensity? visualDensity,
+            EdgeInsets? padding,
+            Alignment? alignment,
+            double? splashRadius,
+            Color? color,
+            Color? focusColor,
+            Color? hoverColor,
+            Color? highlightColor,
+            Color? splashColor,
+            Color? disabledColor,
+            Callback onPressed,
+            MouseCursor? mouseCursor,
+            bool autofocus,
+            String? tooltip,
+            bool? enableFeedback,
+            BoxConstraints? constraints,
+            bool? isSelected,
+            Widget? selectedIcon,
+            Widget icon)?
+        iconButton,
+    TResult Function(
+            Key? key,
             PreferredSizeWidget? appBar,
             Widget? body,
             Widget? floatingActionButton,
@@ -2986,31 +3279,15 @@ class _$OutlinedButton implements OutlinedButton {
             bool endDrawerEnableOpenDragGesture,
             String? restorationId)?
         scaffold,
-    TResult Function(
-            Key? key,
-            Widget? child,
-            String? tooltip,
-            Color? foregroundColor,
-            Color? backgroundColor,
-            Color? focusColor,
-            Color? hoverColor,
-            Color? splashColor,
-            double? elevation,
-            double? focusElevation,
-            double? hoverElevation,
-            double? highlightElevation,
-            double? disabledElevation,
-            Callback? onPressed,
-            MouseCursor? mouseCursor,
-            bool mini,
-            ShapeBorder? shape,
-            Clip clipBehavior,
-            bool autofocus,
-            MaterialTapTargetSize? materialTapTargetSize,
-            bool isExtended,
-            bool? enableFeedback)?
-        floatingActionButton,
+    TResult Function(Key? key, Widget? child, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, bool mini, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButton,
+    TResult Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButtonExtended,
     TResult Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor)? text,
+    TResult Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior)? container,
+    TResult Function(Key? key, double? widthFactor, double? heightFactor, Widget child)? center,
+    TResult Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection)? icon,
+    TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? column,
+    TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? row,
+    TResult Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
     required TResult orElse(),
   }) {
     if (outlinedButton != null) {
@@ -3029,9 +3306,18 @@ class _$OutlinedButton implements OutlinedButton {
     required TResult Function(FilledTonalButton value) filledTonalButton,
     required TResult Function(OutlinedButton value) outlinedButton,
     required TResult Function(TextButton value) textButton,
+    required TResult Function(IconButton value) iconButton,
     required TResult Function(Scaffold value) scaffold,
     required TResult Function(FloatingActionButton value) floatingActionButton,
+    required TResult Function(FloatingActionButtonExtended value)
+        floatingActionButtonExtended,
     required TResult Function(Text value) text,
+    required TResult Function(Container value) container,
+    required TResult Function(Center value) center,
+    required TResult Function(Icon value) icon,
+    required TResult Function(Column value) column,
+    required TResult Function(Row value) row,
+    required TResult Function(SizedBox value) sizedBox,
   }) {
     return outlinedButton(this);
   }
@@ -3045,9 +3331,18 @@ class _$OutlinedButton implements OutlinedButton {
     TResult? Function(FilledTonalButton value)? filledTonalButton,
     TResult? Function(OutlinedButton value)? outlinedButton,
     TResult? Function(TextButton value)? textButton,
+    TResult? Function(IconButton value)? iconButton,
     TResult? Function(Scaffold value)? scaffold,
     TResult? Function(FloatingActionButton value)? floatingActionButton,
+    TResult? Function(FloatingActionButtonExtended value)?
+        floatingActionButtonExtended,
     TResult? Function(Text value)? text,
+    TResult? Function(Container value)? container,
+    TResult? Function(Center value)? center,
+    TResult? Function(Icon value)? icon,
+    TResult? Function(Column value)? column,
+    TResult? Function(Row value)? row,
+    TResult? Function(SizedBox value)? sizedBox,
   }) {
     return outlinedButton?.call(this);
   }
@@ -3061,9 +3356,18 @@ class _$OutlinedButton implements OutlinedButton {
     TResult Function(FilledTonalButton value)? filledTonalButton,
     TResult Function(OutlinedButton value)? outlinedButton,
     TResult Function(TextButton value)? textButton,
+    TResult Function(IconButton value)? iconButton,
     TResult Function(Scaffold value)? scaffold,
     TResult Function(FloatingActionButton value)? floatingActionButton,
+    TResult Function(FloatingActionButtonExtended value)?
+        floatingActionButtonExtended,
     TResult Function(Text value)? text,
+    TResult Function(Container value)? container,
+    TResult Function(Center value)? center,
+    TResult Function(Icon value)? icon,
+    TResult Function(Column value)? column,
+    TResult Function(Row value)? row,
+    TResult Function(SizedBox value)? sizedBox,
     required TResult orElse(),
   }) {
     if (outlinedButton != null) {
@@ -3308,6 +3612,29 @@ class _$TextButton implements TextButton {
         textButton,
     required TResult Function(
             Key? key,
+            double? iconSize,
+            VisualDensity? visualDensity,
+            EdgeInsets? padding,
+            Alignment? alignment,
+            double? splashRadius,
+            Color? color,
+            Color? focusColor,
+            Color? hoverColor,
+            Color? highlightColor,
+            Color? splashColor,
+            Color? disabledColor,
+            Callback onPressed,
+            MouseCursor? mouseCursor,
+            bool autofocus,
+            String? tooltip,
+            bool? enableFeedback,
+            BoxConstraints? constraints,
+            bool? isSelected,
+            Widget? selectedIcon,
+            Widget icon)
+        iconButton,
+    required TResult Function(
+            Key? key,
             PreferredSizeWidget? appBar,
             Widget? body,
             Widget? floatingActionButton,
@@ -3329,31 +3656,15 @@ class _$TextButton implements TextButton {
             bool endDrawerEnableOpenDragGesture,
             String? restorationId)
         scaffold,
-    required TResult Function(
-            Key? key,
-            Widget? child,
-            String? tooltip,
-            Color? foregroundColor,
-            Color? backgroundColor,
-            Color? focusColor,
-            Color? hoverColor,
-            Color? splashColor,
-            double? elevation,
-            double? focusElevation,
-            double? hoverElevation,
-            double? highlightElevation,
-            double? disabledElevation,
-            Callback? onPressed,
-            MouseCursor? mouseCursor,
-            bool mini,
-            ShapeBorder? shape,
-            Clip clipBehavior,
-            bool autofocus,
-            MaterialTapTargetSize? materialTapTargetSize,
-            bool isExtended,
-            bool? enableFeedback)
-        floatingActionButton,
+    required TResult Function(Key? key, Widget? child, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, bool mini, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback) floatingActionButton,
+    required TResult Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback) floatingActionButtonExtended,
     required TResult Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor) text,
+    required TResult Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior) container,
+    required TResult Function(Key? key, double? widthFactor, double? heightFactor, Widget child) center,
+    required TResult Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection) icon,
+    required TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children) column,
+    required TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children) row,
+    required TResult Function(Key? key, double? width, double? height, Widget? child) sizedBox,
   }) {
     return textButton(
         key, onPressed, onLongPress, autofocus, clipBehavior, child);
@@ -3394,6 +3705,29 @@ class _$TextButton implements TextButton {
         textButton,
     TResult? Function(
             Key? key,
+            double? iconSize,
+            VisualDensity? visualDensity,
+            EdgeInsets? padding,
+            Alignment? alignment,
+            double? splashRadius,
+            Color? color,
+            Color? focusColor,
+            Color? hoverColor,
+            Color? highlightColor,
+            Color? splashColor,
+            Color? disabledColor,
+            Callback onPressed,
+            MouseCursor? mouseCursor,
+            bool autofocus,
+            String? tooltip,
+            bool? enableFeedback,
+            BoxConstraints? constraints,
+            bool? isSelected,
+            Widget? selectedIcon,
+            Widget icon)?
+        iconButton,
+    TResult? Function(
+            Key? key,
             PreferredSizeWidget? appBar,
             Widget? body,
             Widget? floatingActionButton,
@@ -3415,31 +3749,15 @@ class _$TextButton implements TextButton {
             bool endDrawerEnableOpenDragGesture,
             String? restorationId)?
         scaffold,
-    TResult? Function(
-            Key? key,
-            Widget? child,
-            String? tooltip,
-            Color? foregroundColor,
-            Color? backgroundColor,
-            Color? focusColor,
-            Color? hoverColor,
-            Color? splashColor,
-            double? elevation,
-            double? focusElevation,
-            double? hoverElevation,
-            double? highlightElevation,
-            double? disabledElevation,
-            Callback? onPressed,
-            MouseCursor? mouseCursor,
-            bool mini,
-            ShapeBorder? shape,
-            Clip clipBehavior,
-            bool autofocus,
-            MaterialTapTargetSize? materialTapTargetSize,
-            bool isExtended,
-            bool? enableFeedback)?
-        floatingActionButton,
+    TResult? Function(Key? key, Widget? child, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, bool mini, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButton,
+    TResult? Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButtonExtended,
     TResult? Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor)? text,
+    TResult? Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior)? container,
+    TResult? Function(Key? key, double? widthFactor, double? heightFactor, Widget child)? center,
+    TResult? Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection)? icon,
+    TResult? Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? column,
+    TResult? Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? row,
+    TResult? Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
   }) {
     return textButton?.call(
         key, onPressed, onLongPress, autofocus, clipBehavior, child);
@@ -3480,6 +3798,29 @@ class _$TextButton implements TextButton {
         textButton,
     TResult Function(
             Key? key,
+            double? iconSize,
+            VisualDensity? visualDensity,
+            EdgeInsets? padding,
+            Alignment? alignment,
+            double? splashRadius,
+            Color? color,
+            Color? focusColor,
+            Color? hoverColor,
+            Color? highlightColor,
+            Color? splashColor,
+            Color? disabledColor,
+            Callback onPressed,
+            MouseCursor? mouseCursor,
+            bool autofocus,
+            String? tooltip,
+            bool? enableFeedback,
+            BoxConstraints? constraints,
+            bool? isSelected,
+            Widget? selectedIcon,
+            Widget icon)?
+        iconButton,
+    TResult Function(
+            Key? key,
             PreferredSizeWidget? appBar,
             Widget? body,
             Widget? floatingActionButton,
@@ -3501,31 +3842,15 @@ class _$TextButton implements TextButton {
             bool endDrawerEnableOpenDragGesture,
             String? restorationId)?
         scaffold,
-    TResult Function(
-            Key? key,
-            Widget? child,
-            String? tooltip,
-            Color? foregroundColor,
-            Color? backgroundColor,
-            Color? focusColor,
-            Color? hoverColor,
-            Color? splashColor,
-            double? elevation,
-            double? focusElevation,
-            double? hoverElevation,
-            double? highlightElevation,
-            double? disabledElevation,
-            Callback? onPressed,
-            MouseCursor? mouseCursor,
-            bool mini,
-            ShapeBorder? shape,
-            Clip clipBehavior,
-            bool autofocus,
-            MaterialTapTargetSize? materialTapTargetSize,
-            bool isExtended,
-            bool? enableFeedback)?
-        floatingActionButton,
+    TResult Function(Key? key, Widget? child, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, bool mini, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButton,
+    TResult Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButtonExtended,
     TResult Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor)? text,
+    TResult Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior)? container,
+    TResult Function(Key? key, double? widthFactor, double? heightFactor, Widget child)? center,
+    TResult Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection)? icon,
+    TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? column,
+    TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? row,
+    TResult Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
     required TResult orElse(),
   }) {
     if (textButton != null) {
@@ -3544,9 +3869,18 @@ class _$TextButton implements TextButton {
     required TResult Function(FilledTonalButton value) filledTonalButton,
     required TResult Function(OutlinedButton value) outlinedButton,
     required TResult Function(TextButton value) textButton,
+    required TResult Function(IconButton value) iconButton,
     required TResult Function(Scaffold value) scaffold,
     required TResult Function(FloatingActionButton value) floatingActionButton,
+    required TResult Function(FloatingActionButtonExtended value)
+        floatingActionButtonExtended,
     required TResult Function(Text value) text,
+    required TResult Function(Container value) container,
+    required TResult Function(Center value) center,
+    required TResult Function(Icon value) icon,
+    required TResult Function(Column value) column,
+    required TResult Function(Row value) row,
+    required TResult Function(SizedBox value) sizedBox,
   }) {
     return textButton(this);
   }
@@ -3560,9 +3894,18 @@ class _$TextButton implements TextButton {
     TResult? Function(FilledTonalButton value)? filledTonalButton,
     TResult? Function(OutlinedButton value)? outlinedButton,
     TResult? Function(TextButton value)? textButton,
+    TResult? Function(IconButton value)? iconButton,
     TResult? Function(Scaffold value)? scaffold,
     TResult? Function(FloatingActionButton value)? floatingActionButton,
+    TResult? Function(FloatingActionButtonExtended value)?
+        floatingActionButtonExtended,
     TResult? Function(Text value)? text,
+    TResult? Function(Container value)? container,
+    TResult? Function(Center value)? center,
+    TResult? Function(Icon value)? icon,
+    TResult? Function(Column value)? column,
+    TResult? Function(Row value)? row,
+    TResult? Function(SizedBox value)? sizedBox,
   }) {
     return textButton?.call(this);
   }
@@ -3576,9 +3919,18 @@ class _$TextButton implements TextButton {
     TResult Function(FilledTonalButton value)? filledTonalButton,
     TResult Function(OutlinedButton value)? outlinedButton,
     TResult Function(TextButton value)? textButton,
+    TResult Function(IconButton value)? iconButton,
     TResult Function(Scaffold value)? scaffold,
     TResult Function(FloatingActionButton value)? floatingActionButton,
+    TResult Function(FloatingActionButtonExtended value)?
+        floatingActionButtonExtended,
     TResult Function(Text value)? text,
+    TResult Function(Container value)? container,
+    TResult Function(Center value)? center,
+    TResult Function(Icon value)? icon,
+    TResult Function(Column value)? column,
+    TResult Function(Row value)? row,
+    TResult Function(SizedBox value)? sizedBox,
     required TResult orElse(),
   }) {
     if (textButton != null) {
@@ -3617,6 +3969,981 @@ abstract class TextButton implements Widget {
   @override
   @JsonKey(ignore: true)
   _$$TextButtonCopyWith<_$TextButton> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$IconButtonCopyWith<$Res> implements $WidgetCopyWith<$Res> {
+  factory _$$IconButtonCopyWith(
+          _$IconButton value, $Res Function(_$IconButton) then) =
+      __$$IconButtonCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {Key? key,
+      double? iconSize,
+      VisualDensity? visualDensity,
+      EdgeInsets? padding,
+      Alignment? alignment,
+      double? splashRadius,
+      Color? color,
+      Color? focusColor,
+      Color? hoverColor,
+      Color? highlightColor,
+      Color? splashColor,
+      Color? disabledColor,
+      Callback onPressed,
+      MouseCursor? mouseCursor,
+      bool autofocus,
+      String? tooltip,
+      bool? enableFeedback,
+      BoxConstraints? constraints,
+      bool? isSelected,
+      Widget? selectedIcon,
+      Widget icon});
+
+  @override
+  $KeyCopyWith<$Res>? get key;
+  $VisualDensityCopyWith<$Res>? get visualDensity;
+  $EdgeInsetsCopyWith<$Res>? get padding;
+  $AlignmentCopyWith<$Res>? get alignment;
+  $ColorCopyWith<$Res>? get color;
+  $ColorCopyWith<$Res>? get focusColor;
+  $ColorCopyWith<$Res>? get hoverColor;
+  $ColorCopyWith<$Res>? get highlightColor;
+  $ColorCopyWith<$Res>? get splashColor;
+  $ColorCopyWith<$Res>? get disabledColor;
+  $CallbackCopyWith<$Res> get onPressed;
+  $MouseCursorCopyWith<$Res>? get mouseCursor;
+  $BoxConstraintsCopyWith<$Res>? get constraints;
+  $WidgetCopyWith<$Res>? get selectedIcon;
+  $WidgetCopyWith<$Res> get icon;
+}
+
+/// @nodoc
+class __$$IconButtonCopyWithImpl<$Res>
+    extends _$WidgetCopyWithImpl<$Res, _$IconButton>
+    implements _$$IconButtonCopyWith<$Res> {
+  __$$IconButtonCopyWithImpl(
+      _$IconButton _value, $Res Function(_$IconButton) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? key = freezed,
+    Object? iconSize = freezed,
+    Object? visualDensity = freezed,
+    Object? padding = freezed,
+    Object? alignment = freezed,
+    Object? splashRadius = freezed,
+    Object? color = freezed,
+    Object? focusColor = freezed,
+    Object? hoverColor = freezed,
+    Object? highlightColor = freezed,
+    Object? splashColor = freezed,
+    Object? disabledColor = freezed,
+    Object? onPressed = null,
+    Object? mouseCursor = freezed,
+    Object? autofocus = null,
+    Object? tooltip = freezed,
+    Object? enableFeedback = freezed,
+    Object? constraints = freezed,
+    Object? isSelected = freezed,
+    Object? selectedIcon = freezed,
+    Object? icon = null,
+  }) {
+    return _then(_$IconButton(
+      key: freezed == key
+          ? _value.key
+          : key // ignore: cast_nullable_to_non_nullable
+              as Key?,
+      iconSize: freezed == iconSize
+          ? _value.iconSize
+          : iconSize // ignore: cast_nullable_to_non_nullable
+              as double?,
+      visualDensity: freezed == visualDensity
+          ? _value.visualDensity
+          : visualDensity // ignore: cast_nullable_to_non_nullable
+              as VisualDensity?,
+      padding: freezed == padding
+          ? _value.padding
+          : padding // ignore: cast_nullable_to_non_nullable
+              as EdgeInsets?,
+      alignment: freezed == alignment
+          ? _value.alignment
+          : alignment // ignore: cast_nullable_to_non_nullable
+              as Alignment?,
+      splashRadius: freezed == splashRadius
+          ? _value.splashRadius
+          : splashRadius // ignore: cast_nullable_to_non_nullable
+              as double?,
+      color: freezed == color
+          ? _value.color
+          : color // ignore: cast_nullable_to_non_nullable
+              as Color?,
+      focusColor: freezed == focusColor
+          ? _value.focusColor
+          : focusColor // ignore: cast_nullable_to_non_nullable
+              as Color?,
+      hoverColor: freezed == hoverColor
+          ? _value.hoverColor
+          : hoverColor // ignore: cast_nullable_to_non_nullable
+              as Color?,
+      highlightColor: freezed == highlightColor
+          ? _value.highlightColor
+          : highlightColor // ignore: cast_nullable_to_non_nullable
+              as Color?,
+      splashColor: freezed == splashColor
+          ? _value.splashColor
+          : splashColor // ignore: cast_nullable_to_non_nullable
+              as Color?,
+      disabledColor: freezed == disabledColor
+          ? _value.disabledColor
+          : disabledColor // ignore: cast_nullable_to_non_nullable
+              as Color?,
+      onPressed: null == onPressed
+          ? _value.onPressed
+          : onPressed // ignore: cast_nullable_to_non_nullable
+              as Callback,
+      mouseCursor: freezed == mouseCursor
+          ? _value.mouseCursor
+          : mouseCursor // ignore: cast_nullable_to_non_nullable
+              as MouseCursor?,
+      autofocus: null == autofocus
+          ? _value.autofocus
+          : autofocus // ignore: cast_nullable_to_non_nullable
+              as bool,
+      tooltip: freezed == tooltip
+          ? _value.tooltip
+          : tooltip // ignore: cast_nullable_to_non_nullable
+              as String?,
+      enableFeedback: freezed == enableFeedback
+          ? _value.enableFeedback
+          : enableFeedback // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      constraints: freezed == constraints
+          ? _value.constraints
+          : constraints // ignore: cast_nullable_to_non_nullable
+              as BoxConstraints?,
+      isSelected: freezed == isSelected
+          ? _value.isSelected
+          : isSelected // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      selectedIcon: freezed == selectedIcon
+          ? _value.selectedIcon
+          : selectedIcon // ignore: cast_nullable_to_non_nullable
+              as Widget?,
+      icon: null == icon
+          ? _value.icon
+          : icon // ignore: cast_nullable_to_non_nullable
+              as Widget,
+    ));
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $VisualDensityCopyWith<$Res>? get visualDensity {
+    if (_value.visualDensity == null) {
+      return null;
+    }
+
+    return $VisualDensityCopyWith<$Res>(_value.visualDensity!, (value) {
+      return _then(_value.copyWith(visualDensity: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $EdgeInsetsCopyWith<$Res>? get padding {
+    if (_value.padding == null) {
+      return null;
+    }
+
+    return $EdgeInsetsCopyWith<$Res>(_value.padding!, (value) {
+      return _then(_value.copyWith(padding: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $AlignmentCopyWith<$Res>? get alignment {
+    if (_value.alignment == null) {
+      return null;
+    }
+
+    return $AlignmentCopyWith<$Res>(_value.alignment!, (value) {
+      return _then(_value.copyWith(alignment: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ColorCopyWith<$Res>? get color {
+    if (_value.color == null) {
+      return null;
+    }
+
+    return $ColorCopyWith<$Res>(_value.color!, (value) {
+      return _then(_value.copyWith(color: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ColorCopyWith<$Res>? get focusColor {
+    if (_value.focusColor == null) {
+      return null;
+    }
+
+    return $ColorCopyWith<$Res>(_value.focusColor!, (value) {
+      return _then(_value.copyWith(focusColor: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ColorCopyWith<$Res>? get hoverColor {
+    if (_value.hoverColor == null) {
+      return null;
+    }
+
+    return $ColorCopyWith<$Res>(_value.hoverColor!, (value) {
+      return _then(_value.copyWith(hoverColor: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ColorCopyWith<$Res>? get highlightColor {
+    if (_value.highlightColor == null) {
+      return null;
+    }
+
+    return $ColorCopyWith<$Res>(_value.highlightColor!, (value) {
+      return _then(_value.copyWith(highlightColor: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ColorCopyWith<$Res>? get splashColor {
+    if (_value.splashColor == null) {
+      return null;
+    }
+
+    return $ColorCopyWith<$Res>(_value.splashColor!, (value) {
+      return _then(_value.copyWith(splashColor: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ColorCopyWith<$Res>? get disabledColor {
+    if (_value.disabledColor == null) {
+      return null;
+    }
+
+    return $ColorCopyWith<$Res>(_value.disabledColor!, (value) {
+      return _then(_value.copyWith(disabledColor: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $CallbackCopyWith<$Res> get onPressed {
+    return $CallbackCopyWith<$Res>(_value.onPressed, (value) {
+      return _then(_value.copyWith(onPressed: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $MouseCursorCopyWith<$Res>? get mouseCursor {
+    if (_value.mouseCursor == null) {
+      return null;
+    }
+
+    return $MouseCursorCopyWith<$Res>(_value.mouseCursor!, (value) {
+      return _then(_value.copyWith(mouseCursor: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $BoxConstraintsCopyWith<$Res>? get constraints {
+    if (_value.constraints == null) {
+      return null;
+    }
+
+    return $BoxConstraintsCopyWith<$Res>(_value.constraints!, (value) {
+      return _then(_value.copyWith(constraints: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $WidgetCopyWith<$Res>? get selectedIcon {
+    if (_value.selectedIcon == null) {
+      return null;
+    }
+
+    return $WidgetCopyWith<$Res>(_value.selectedIcon!, (value) {
+      return _then(_value.copyWith(selectedIcon: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $WidgetCopyWith<$Res> get icon {
+    return $WidgetCopyWith<$Res>(_value.icon, (value) {
+      return _then(_value.copyWith(icon: value));
+    });
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$IconButton implements IconButton {
+  const _$IconButton(
+      {this.key,
+      this.iconSize,
+      this.visualDensity,
+      this.padding,
+      this.alignment,
+      this.splashRadius,
+      this.color,
+      this.focusColor,
+      this.hoverColor,
+      this.highlightColor,
+      this.splashColor,
+      this.disabledColor,
+      required this.onPressed,
+      this.mouseCursor,
+      this.autofocus = false,
+      this.tooltip,
+      this.enableFeedback,
+      this.constraints,
+      this.isSelected,
+      this.selectedIcon,
+      required this.icon,
+      final String? $type})
+      : $type = $type ?? 'iconButton';
+
+  factory _$IconButton.fromJson(Map<String, dynamic> json) =>
+      _$$IconButtonFromJson(json);
+
+  @override
+  final Key? key;
+  @override
+  final double? iconSize;
+  @override
+  final VisualDensity? visualDensity;
+  @override
+  final EdgeInsets? padding;
+  @override
+  final Alignment? alignment;
+  @override
+  final double? splashRadius;
+  @override
+  final Color? color;
+  @override
+  final Color? focusColor;
+  @override
+  final Color? hoverColor;
+  @override
+  final Color? highlightColor;
+  @override
+  final Color? splashColor;
+  @override
+  final Color? disabledColor;
+  @override
+  final Callback onPressed;
+  @override
+  final MouseCursor? mouseCursor;
+  @override
+  @JsonKey()
+  final bool autofocus;
+  @override
+  final String? tooltip;
+  @override
+  final bool? enableFeedback;
+  @override
+  final BoxConstraints? constraints;
+  @override
+  final bool? isSelected;
+  @override
+  final Widget? selectedIcon;
+  @override
+  final Widget icon;
+
+  @JsonKey(name: 'runtimeType')
+  final String $type;
+
+  @override
+  String toString() {
+    return 'Widget.iconButton(key: $key, iconSize: $iconSize, visualDensity: $visualDensity, padding: $padding, alignment: $alignment, splashRadius: $splashRadius, color: $color, focusColor: $focusColor, hoverColor: $hoverColor, highlightColor: $highlightColor, splashColor: $splashColor, disabledColor: $disabledColor, onPressed: $onPressed, mouseCursor: $mouseCursor, autofocus: $autofocus, tooltip: $tooltip, enableFeedback: $enableFeedback, constraints: $constraints, isSelected: $isSelected, selectedIcon: $selectedIcon, icon: $icon)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$IconButton &&
+            (identical(other.key, key) || other.key == key) &&
+            (identical(other.iconSize, iconSize) ||
+                other.iconSize == iconSize) &&
+            (identical(other.visualDensity, visualDensity) ||
+                other.visualDensity == visualDensity) &&
+            (identical(other.padding, padding) || other.padding == padding) &&
+            (identical(other.alignment, alignment) ||
+                other.alignment == alignment) &&
+            (identical(other.splashRadius, splashRadius) ||
+                other.splashRadius == splashRadius) &&
+            (identical(other.color, color) || other.color == color) &&
+            (identical(other.focusColor, focusColor) ||
+                other.focusColor == focusColor) &&
+            (identical(other.hoverColor, hoverColor) ||
+                other.hoverColor == hoverColor) &&
+            (identical(other.highlightColor, highlightColor) ||
+                other.highlightColor == highlightColor) &&
+            (identical(other.splashColor, splashColor) ||
+                other.splashColor == splashColor) &&
+            (identical(other.disabledColor, disabledColor) ||
+                other.disabledColor == disabledColor) &&
+            (identical(other.onPressed, onPressed) ||
+                other.onPressed == onPressed) &&
+            (identical(other.mouseCursor, mouseCursor) ||
+                other.mouseCursor == mouseCursor) &&
+            (identical(other.autofocus, autofocus) ||
+                other.autofocus == autofocus) &&
+            (identical(other.tooltip, tooltip) || other.tooltip == tooltip) &&
+            (identical(other.enableFeedback, enableFeedback) ||
+                other.enableFeedback == enableFeedback) &&
+            (identical(other.constraints, constraints) ||
+                other.constraints == constraints) &&
+            (identical(other.isSelected, isSelected) ||
+                other.isSelected == isSelected) &&
+            (identical(other.selectedIcon, selectedIcon) ||
+                other.selectedIcon == selectedIcon) &&
+            (identical(other.icon, icon) || other.icon == icon));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hashAll([
+        runtimeType,
+        key,
+        iconSize,
+        visualDensity,
+        padding,
+        alignment,
+        splashRadius,
+        color,
+        focusColor,
+        hoverColor,
+        highlightColor,
+        splashColor,
+        disabledColor,
+        onPressed,
+        mouseCursor,
+        autofocus,
+        tooltip,
+        enableFeedback,
+        constraints,
+        isSelected,
+        selectedIcon,
+        icon
+      ]);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$IconButtonCopyWith<_$IconButton> get copyWith =>
+      __$$IconButtonCopyWithImpl<_$IconButton>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(
+            Key? key,
+            Color? color,
+            Color? shadowColor,
+            Color? surfaceTintColor,
+            double? elevation,
+            ShapeBorder? shape,
+            bool borderOnForeground,
+            EdgeInsets? margin,
+            Clip? clipBehavior,
+            Widget? child,
+            bool semanticContainer)
+        card,
+    required TResult Function(
+            Key? key,
+            Callback? onPressed,
+            Callback? onLongPress,
+            bool autofocus,
+            Clip clipBehavior,
+            Widget child,
+            ButtonStyle? style)
+        elevatedButton,
+    required TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)
+        filledButton,
+    required TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)
+        filledTonalButton,
+    required TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)
+        outlinedButton,
+    required TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)
+        textButton,
+    required TResult Function(
+            Key? key,
+            double? iconSize,
+            VisualDensity? visualDensity,
+            EdgeInsets? padding,
+            Alignment? alignment,
+            double? splashRadius,
+            Color? color,
+            Color? focusColor,
+            Color? hoverColor,
+            Color? highlightColor,
+            Color? splashColor,
+            Color? disabledColor,
+            Callback onPressed,
+            MouseCursor? mouseCursor,
+            bool autofocus,
+            String? tooltip,
+            bool? enableFeedback,
+            BoxConstraints? constraints,
+            bool? isSelected,
+            Widget? selectedIcon,
+            Widget icon)
+        iconButton,
+    required TResult Function(
+            Key? key,
+            PreferredSizeWidget? appBar,
+            Widget? body,
+            Widget? floatingActionButton,
+            FloatingActionButtonLocation? floatingActionButtonLocation,
+            List<Widget>? persistentFooterButtons,
+            Alignment persistentFooterAlignment,
+            Widget? drawer,
+            Widget? endDrawer,
+            Widget? bottomNavigationBar,
+            Widget? bottomSheet,
+            Color? backgroundColor,
+            bool? resizeToAvoidBottomInset,
+            bool primary,
+            bool extendBody,
+            bool extendBodyBehindAppBar,
+            Color? drawerScrimColor,
+            double? drawerEdgeDragWidth,
+            bool drawerEnableOpenDragGesture,
+            bool endDrawerEnableOpenDragGesture,
+            String? restorationId)
+        scaffold,
+    required TResult Function(Key? key, Widget? child, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, bool mini, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback) floatingActionButton,
+    required TResult Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback) floatingActionButtonExtended,
+    required TResult Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor) text,
+    required TResult Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior) container,
+    required TResult Function(Key? key, double? widthFactor, double? heightFactor, Widget child) center,
+    required TResult Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection) icon,
+    required TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children) column,
+    required TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children) row,
+    required TResult Function(Key? key, double? width, double? height, Widget? child) sizedBox,
+  }) {
+    return iconButton(
+        key,
+        iconSize,
+        visualDensity,
+        padding,
+        alignment,
+        splashRadius,
+        color,
+        focusColor,
+        hoverColor,
+        highlightColor,
+        splashColor,
+        disabledColor,
+        onPressed,
+        mouseCursor,
+        autofocus,
+        tooltip,
+        enableFeedback,
+        constraints,
+        isSelected,
+        selectedIcon,
+        this.icon);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(
+            Key? key,
+            Color? color,
+            Color? shadowColor,
+            Color? surfaceTintColor,
+            double? elevation,
+            ShapeBorder? shape,
+            bool borderOnForeground,
+            EdgeInsets? margin,
+            Clip? clipBehavior,
+            Widget? child,
+            bool semanticContainer)?
+        card,
+    TResult? Function(
+            Key? key,
+            Callback? onPressed,
+            Callback? onLongPress,
+            bool autofocus,
+            Clip clipBehavior,
+            Widget child,
+            ButtonStyle? style)?
+        elevatedButton,
+    TResult? Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        filledButton,
+    TResult? Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        filledTonalButton,
+    TResult? Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        outlinedButton,
+    TResult? Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        textButton,
+    TResult? Function(
+            Key? key,
+            double? iconSize,
+            VisualDensity? visualDensity,
+            EdgeInsets? padding,
+            Alignment? alignment,
+            double? splashRadius,
+            Color? color,
+            Color? focusColor,
+            Color? hoverColor,
+            Color? highlightColor,
+            Color? splashColor,
+            Color? disabledColor,
+            Callback onPressed,
+            MouseCursor? mouseCursor,
+            bool autofocus,
+            String? tooltip,
+            bool? enableFeedback,
+            BoxConstraints? constraints,
+            bool? isSelected,
+            Widget? selectedIcon,
+            Widget icon)?
+        iconButton,
+    TResult? Function(
+            Key? key,
+            PreferredSizeWidget? appBar,
+            Widget? body,
+            Widget? floatingActionButton,
+            FloatingActionButtonLocation? floatingActionButtonLocation,
+            List<Widget>? persistentFooterButtons,
+            Alignment persistentFooterAlignment,
+            Widget? drawer,
+            Widget? endDrawer,
+            Widget? bottomNavigationBar,
+            Widget? bottomSheet,
+            Color? backgroundColor,
+            bool? resizeToAvoidBottomInset,
+            bool primary,
+            bool extendBody,
+            bool extendBodyBehindAppBar,
+            Color? drawerScrimColor,
+            double? drawerEdgeDragWidth,
+            bool drawerEnableOpenDragGesture,
+            bool endDrawerEnableOpenDragGesture,
+            String? restorationId)?
+        scaffold,
+    TResult? Function(Key? key, Widget? child, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, bool mini, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButton,
+    TResult? Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButtonExtended,
+    TResult? Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor)? text,
+    TResult? Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior)? container,
+    TResult? Function(Key? key, double? widthFactor, double? heightFactor, Widget child)? center,
+    TResult? Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection)? icon,
+    TResult? Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? column,
+    TResult? Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? row,
+    TResult? Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
+  }) {
+    return iconButton?.call(
+        key,
+        iconSize,
+        visualDensity,
+        padding,
+        alignment,
+        splashRadius,
+        color,
+        focusColor,
+        hoverColor,
+        highlightColor,
+        splashColor,
+        disabledColor,
+        onPressed,
+        mouseCursor,
+        autofocus,
+        tooltip,
+        enableFeedback,
+        constraints,
+        isSelected,
+        selectedIcon,
+        this.icon);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(
+            Key? key,
+            Color? color,
+            Color? shadowColor,
+            Color? surfaceTintColor,
+            double? elevation,
+            ShapeBorder? shape,
+            bool borderOnForeground,
+            EdgeInsets? margin,
+            Clip? clipBehavior,
+            Widget? child,
+            bool semanticContainer)?
+        card,
+    TResult Function(
+            Key? key,
+            Callback? onPressed,
+            Callback? onLongPress,
+            bool autofocus,
+            Clip clipBehavior,
+            Widget child,
+            ButtonStyle? style)?
+        elevatedButton,
+    TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        filledButton,
+    TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        filledTonalButton,
+    TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        outlinedButton,
+    TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        textButton,
+    TResult Function(
+            Key? key,
+            double? iconSize,
+            VisualDensity? visualDensity,
+            EdgeInsets? padding,
+            Alignment? alignment,
+            double? splashRadius,
+            Color? color,
+            Color? focusColor,
+            Color? hoverColor,
+            Color? highlightColor,
+            Color? splashColor,
+            Color? disabledColor,
+            Callback onPressed,
+            MouseCursor? mouseCursor,
+            bool autofocus,
+            String? tooltip,
+            bool? enableFeedback,
+            BoxConstraints? constraints,
+            bool? isSelected,
+            Widget? selectedIcon,
+            Widget icon)?
+        iconButton,
+    TResult Function(
+            Key? key,
+            PreferredSizeWidget? appBar,
+            Widget? body,
+            Widget? floatingActionButton,
+            FloatingActionButtonLocation? floatingActionButtonLocation,
+            List<Widget>? persistentFooterButtons,
+            Alignment persistentFooterAlignment,
+            Widget? drawer,
+            Widget? endDrawer,
+            Widget? bottomNavigationBar,
+            Widget? bottomSheet,
+            Color? backgroundColor,
+            bool? resizeToAvoidBottomInset,
+            bool primary,
+            bool extendBody,
+            bool extendBodyBehindAppBar,
+            Color? drawerScrimColor,
+            double? drawerEdgeDragWidth,
+            bool drawerEnableOpenDragGesture,
+            bool endDrawerEnableOpenDragGesture,
+            String? restorationId)?
+        scaffold,
+    TResult Function(Key? key, Widget? child, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, bool mini, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButton,
+    TResult Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButtonExtended,
+    TResult Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor)? text,
+    TResult Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior)? container,
+    TResult Function(Key? key, double? widthFactor, double? heightFactor, Widget child)? center,
+    TResult Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection)? icon,
+    TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? column,
+    TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? row,
+    TResult Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
+    required TResult orElse(),
+  }) {
+    if (iconButton != null) {
+      return iconButton(
+          key,
+          iconSize,
+          visualDensity,
+          padding,
+          alignment,
+          splashRadius,
+          color,
+          focusColor,
+          hoverColor,
+          highlightColor,
+          splashColor,
+          disabledColor,
+          onPressed,
+          mouseCursor,
+          autofocus,
+          tooltip,
+          enableFeedback,
+          constraints,
+          isSelected,
+          selectedIcon,
+          this.icon);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(Card value) card,
+    required TResult Function(ElevatedButton value) elevatedButton,
+    required TResult Function(FilledButton value) filledButton,
+    required TResult Function(FilledTonalButton value) filledTonalButton,
+    required TResult Function(OutlinedButton value) outlinedButton,
+    required TResult Function(TextButton value) textButton,
+    required TResult Function(IconButton value) iconButton,
+    required TResult Function(Scaffold value) scaffold,
+    required TResult Function(FloatingActionButton value) floatingActionButton,
+    required TResult Function(FloatingActionButtonExtended value)
+        floatingActionButtonExtended,
+    required TResult Function(Text value) text,
+    required TResult Function(Container value) container,
+    required TResult Function(Center value) center,
+    required TResult Function(Icon value) icon,
+    required TResult Function(Column value) column,
+    required TResult Function(Row value) row,
+    required TResult Function(SizedBox value) sizedBox,
+  }) {
+    return iconButton(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(Card value)? card,
+    TResult? Function(ElevatedButton value)? elevatedButton,
+    TResult? Function(FilledButton value)? filledButton,
+    TResult? Function(FilledTonalButton value)? filledTonalButton,
+    TResult? Function(OutlinedButton value)? outlinedButton,
+    TResult? Function(TextButton value)? textButton,
+    TResult? Function(IconButton value)? iconButton,
+    TResult? Function(Scaffold value)? scaffold,
+    TResult? Function(FloatingActionButton value)? floatingActionButton,
+    TResult? Function(FloatingActionButtonExtended value)?
+        floatingActionButtonExtended,
+    TResult? Function(Text value)? text,
+    TResult? Function(Container value)? container,
+    TResult? Function(Center value)? center,
+    TResult? Function(Icon value)? icon,
+    TResult? Function(Column value)? column,
+    TResult? Function(Row value)? row,
+    TResult? Function(SizedBox value)? sizedBox,
+  }) {
+    return iconButton?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(Card value)? card,
+    TResult Function(ElevatedButton value)? elevatedButton,
+    TResult Function(FilledButton value)? filledButton,
+    TResult Function(FilledTonalButton value)? filledTonalButton,
+    TResult Function(OutlinedButton value)? outlinedButton,
+    TResult Function(TextButton value)? textButton,
+    TResult Function(IconButton value)? iconButton,
+    TResult Function(Scaffold value)? scaffold,
+    TResult Function(FloatingActionButton value)? floatingActionButton,
+    TResult Function(FloatingActionButtonExtended value)?
+        floatingActionButtonExtended,
+    TResult Function(Text value)? text,
+    TResult Function(Container value)? container,
+    TResult Function(Center value)? center,
+    TResult Function(Icon value)? icon,
+    TResult Function(Column value)? column,
+    TResult Function(Row value)? row,
+    TResult Function(SizedBox value)? sizedBox,
+    required TResult orElse(),
+  }) {
+    if (iconButton != null) {
+      return iconButton(this);
+    }
+    return orElse();
+  }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$IconButtonToJson(
+      this,
+    );
+  }
+}
+
+abstract class IconButton implements Widget {
+  const factory IconButton(
+      {final Key? key,
+      final double? iconSize,
+      final VisualDensity? visualDensity,
+      final EdgeInsets? padding,
+      final Alignment? alignment,
+      final double? splashRadius,
+      final Color? color,
+      final Color? focusColor,
+      final Color? hoverColor,
+      final Color? highlightColor,
+      final Color? splashColor,
+      final Color? disabledColor,
+      required final Callback onPressed,
+      final MouseCursor? mouseCursor,
+      final bool autofocus,
+      final String? tooltip,
+      final bool? enableFeedback,
+      final BoxConstraints? constraints,
+      final bool? isSelected,
+      final Widget? selectedIcon,
+      required final Widget icon}) = _$IconButton;
+
+  factory IconButton.fromJson(Map<String, dynamic> json) =
+      _$IconButton.fromJson;
+
+  @override
+  Key? get key;
+  double? get iconSize;
+  VisualDensity? get visualDensity;
+  EdgeInsets? get padding;
+  Alignment? get alignment;
+  double? get splashRadius;
+  Color? get color;
+  Color? get focusColor;
+  Color? get hoverColor;
+  Color? get highlightColor;
+  Color? get splashColor;
+  Color? get disabledColor;
+  Callback get onPressed;
+  MouseCursor? get mouseCursor;
+  bool get autofocus;
+  String? get tooltip;
+  bool? get enableFeedback;
+  BoxConstraints? get constraints;
+  bool? get isSelected;
+  Widget? get selectedIcon;
+  Widget get icon;
+  @override
+  @JsonKey(ignore: true)
+  _$$IconButtonCopyWith<_$IconButton> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -4131,6 +5458,29 @@ class _$Scaffold implements Scaffold {
         textButton,
     required TResult Function(
             Key? key,
+            double? iconSize,
+            VisualDensity? visualDensity,
+            EdgeInsets? padding,
+            Alignment? alignment,
+            double? splashRadius,
+            Color? color,
+            Color? focusColor,
+            Color? hoverColor,
+            Color? highlightColor,
+            Color? splashColor,
+            Color? disabledColor,
+            Callback onPressed,
+            MouseCursor? mouseCursor,
+            bool autofocus,
+            String? tooltip,
+            bool? enableFeedback,
+            BoxConstraints? constraints,
+            bool? isSelected,
+            Widget? selectedIcon,
+            Widget icon)
+        iconButton,
+    required TResult Function(
+            Key? key,
             PreferredSizeWidget? appBar,
             Widget? body,
             Widget? floatingActionButton,
@@ -4152,31 +5502,15 @@ class _$Scaffold implements Scaffold {
             bool endDrawerEnableOpenDragGesture,
             String? restorationId)
         scaffold,
-    required TResult Function(
-            Key? key,
-            Widget? child,
-            String? tooltip,
-            Color? foregroundColor,
-            Color? backgroundColor,
-            Color? focusColor,
-            Color? hoverColor,
-            Color? splashColor,
-            double? elevation,
-            double? focusElevation,
-            double? hoverElevation,
-            double? highlightElevation,
-            double? disabledElevation,
-            Callback? onPressed,
-            MouseCursor? mouseCursor,
-            bool mini,
-            ShapeBorder? shape,
-            Clip clipBehavior,
-            bool autofocus,
-            MaterialTapTargetSize? materialTapTargetSize,
-            bool isExtended,
-            bool? enableFeedback)
-        floatingActionButton,
+    required TResult Function(Key? key, Widget? child, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, bool mini, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback) floatingActionButton,
+    required TResult Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback) floatingActionButtonExtended,
     required TResult Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor) text,
+    required TResult Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior) container,
+    required TResult Function(Key? key, double? widthFactor, double? heightFactor, Widget child) center,
+    required TResult Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection) icon,
+    required TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children) column,
+    required TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children) row,
+    required TResult Function(Key? key, double? width, double? height, Widget? child) sizedBox,
   }) {
     return scaffold(
         key,
@@ -4237,6 +5571,29 @@ class _$Scaffold implements Scaffold {
         textButton,
     TResult? Function(
             Key? key,
+            double? iconSize,
+            VisualDensity? visualDensity,
+            EdgeInsets? padding,
+            Alignment? alignment,
+            double? splashRadius,
+            Color? color,
+            Color? focusColor,
+            Color? hoverColor,
+            Color? highlightColor,
+            Color? splashColor,
+            Color? disabledColor,
+            Callback onPressed,
+            MouseCursor? mouseCursor,
+            bool autofocus,
+            String? tooltip,
+            bool? enableFeedback,
+            BoxConstraints? constraints,
+            bool? isSelected,
+            Widget? selectedIcon,
+            Widget icon)?
+        iconButton,
+    TResult? Function(
+            Key? key,
             PreferredSizeWidget? appBar,
             Widget? body,
             Widget? floatingActionButton,
@@ -4258,31 +5615,15 @@ class _$Scaffold implements Scaffold {
             bool endDrawerEnableOpenDragGesture,
             String? restorationId)?
         scaffold,
-    TResult? Function(
-            Key? key,
-            Widget? child,
-            String? tooltip,
-            Color? foregroundColor,
-            Color? backgroundColor,
-            Color? focusColor,
-            Color? hoverColor,
-            Color? splashColor,
-            double? elevation,
-            double? focusElevation,
-            double? hoverElevation,
-            double? highlightElevation,
-            double? disabledElevation,
-            Callback? onPressed,
-            MouseCursor? mouseCursor,
-            bool mini,
-            ShapeBorder? shape,
-            Clip clipBehavior,
-            bool autofocus,
-            MaterialTapTargetSize? materialTapTargetSize,
-            bool isExtended,
-            bool? enableFeedback)?
-        floatingActionButton,
+    TResult? Function(Key? key, Widget? child, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, bool mini, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButton,
+    TResult? Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButtonExtended,
     TResult? Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor)? text,
+    TResult? Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior)? container,
+    TResult? Function(Key? key, double? widthFactor, double? heightFactor, Widget child)? center,
+    TResult? Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection)? icon,
+    TResult? Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? column,
+    TResult? Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? row,
+    TResult? Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
   }) {
     return scaffold?.call(
         key,
@@ -4343,6 +5684,29 @@ class _$Scaffold implements Scaffold {
         textButton,
     TResult Function(
             Key? key,
+            double? iconSize,
+            VisualDensity? visualDensity,
+            EdgeInsets? padding,
+            Alignment? alignment,
+            double? splashRadius,
+            Color? color,
+            Color? focusColor,
+            Color? hoverColor,
+            Color? highlightColor,
+            Color? splashColor,
+            Color? disabledColor,
+            Callback onPressed,
+            MouseCursor? mouseCursor,
+            bool autofocus,
+            String? tooltip,
+            bool? enableFeedback,
+            BoxConstraints? constraints,
+            bool? isSelected,
+            Widget? selectedIcon,
+            Widget icon)?
+        iconButton,
+    TResult Function(
+            Key? key,
             PreferredSizeWidget? appBar,
             Widget? body,
             Widget? floatingActionButton,
@@ -4364,31 +5728,15 @@ class _$Scaffold implements Scaffold {
             bool endDrawerEnableOpenDragGesture,
             String? restorationId)?
         scaffold,
-    TResult Function(
-            Key? key,
-            Widget? child,
-            String? tooltip,
-            Color? foregroundColor,
-            Color? backgroundColor,
-            Color? focusColor,
-            Color? hoverColor,
-            Color? splashColor,
-            double? elevation,
-            double? focusElevation,
-            double? hoverElevation,
-            double? highlightElevation,
-            double? disabledElevation,
-            Callback? onPressed,
-            MouseCursor? mouseCursor,
-            bool mini,
-            ShapeBorder? shape,
-            Clip clipBehavior,
-            bool autofocus,
-            MaterialTapTargetSize? materialTapTargetSize,
-            bool isExtended,
-            bool? enableFeedback)?
-        floatingActionButton,
+    TResult Function(Key? key, Widget? child, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, bool mini, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButton,
+    TResult Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButtonExtended,
     TResult Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor)? text,
+    TResult Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior)? container,
+    TResult Function(Key? key, double? widthFactor, double? heightFactor, Widget child)? center,
+    TResult Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection)? icon,
+    TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? column,
+    TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? row,
+    TResult Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
     required TResult orElse(),
   }) {
     if (scaffold != null) {
@@ -4427,9 +5775,18 @@ class _$Scaffold implements Scaffold {
     required TResult Function(FilledTonalButton value) filledTonalButton,
     required TResult Function(OutlinedButton value) outlinedButton,
     required TResult Function(TextButton value) textButton,
+    required TResult Function(IconButton value) iconButton,
     required TResult Function(Scaffold value) scaffold,
     required TResult Function(FloatingActionButton value) floatingActionButton,
+    required TResult Function(FloatingActionButtonExtended value)
+        floatingActionButtonExtended,
     required TResult Function(Text value) text,
+    required TResult Function(Container value) container,
+    required TResult Function(Center value) center,
+    required TResult Function(Icon value) icon,
+    required TResult Function(Column value) column,
+    required TResult Function(Row value) row,
+    required TResult Function(SizedBox value) sizedBox,
   }) {
     return scaffold(this);
   }
@@ -4443,9 +5800,18 @@ class _$Scaffold implements Scaffold {
     TResult? Function(FilledTonalButton value)? filledTonalButton,
     TResult? Function(OutlinedButton value)? outlinedButton,
     TResult? Function(TextButton value)? textButton,
+    TResult? Function(IconButton value)? iconButton,
     TResult? Function(Scaffold value)? scaffold,
     TResult? Function(FloatingActionButton value)? floatingActionButton,
+    TResult? Function(FloatingActionButtonExtended value)?
+        floatingActionButtonExtended,
     TResult? Function(Text value)? text,
+    TResult? Function(Container value)? container,
+    TResult? Function(Center value)? center,
+    TResult? Function(Icon value)? icon,
+    TResult? Function(Column value)? column,
+    TResult? Function(Row value)? row,
+    TResult? Function(SizedBox value)? sizedBox,
   }) {
     return scaffold?.call(this);
   }
@@ -4459,9 +5825,18 @@ class _$Scaffold implements Scaffold {
     TResult Function(FilledTonalButton value)? filledTonalButton,
     TResult Function(OutlinedButton value)? outlinedButton,
     TResult Function(TextButton value)? textButton,
+    TResult Function(IconButton value)? iconButton,
     TResult Function(Scaffold value)? scaffold,
     TResult Function(FloatingActionButton value)? floatingActionButton,
+    TResult Function(FloatingActionButtonExtended value)?
+        floatingActionButtonExtended,
     TResult Function(Text value)? text,
+    TResult Function(Container value)? container,
+    TResult Function(Center value)? center,
+    TResult Function(Icon value)? icon,
+    TResult Function(Column value)? column,
+    TResult Function(Row value)? row,
+    TResult Function(SizedBox value)? sizedBox,
     required TResult orElse(),
   }) {
     if (scaffold != null) {
@@ -5017,6 +6392,29 @@ class _$FloatingActionButton implements FloatingActionButton {
         textButton,
     required TResult Function(
             Key? key,
+            double? iconSize,
+            VisualDensity? visualDensity,
+            EdgeInsets? padding,
+            Alignment? alignment,
+            double? splashRadius,
+            Color? color,
+            Color? focusColor,
+            Color? hoverColor,
+            Color? highlightColor,
+            Color? splashColor,
+            Color? disabledColor,
+            Callback onPressed,
+            MouseCursor? mouseCursor,
+            bool autofocus,
+            String? tooltip,
+            bool? enableFeedback,
+            BoxConstraints? constraints,
+            bool? isSelected,
+            Widget? selectedIcon,
+            Widget icon)
+        iconButton,
+    required TResult Function(
+            Key? key,
             PreferredSizeWidget? appBar,
             Widget? body,
             Widget? floatingActionButton,
@@ -5038,31 +6436,15 @@ class _$FloatingActionButton implements FloatingActionButton {
             bool endDrawerEnableOpenDragGesture,
             String? restorationId)
         scaffold,
-    required TResult Function(
-            Key? key,
-            Widget? child,
-            String? tooltip,
-            Color? foregroundColor,
-            Color? backgroundColor,
-            Color? focusColor,
-            Color? hoverColor,
-            Color? splashColor,
-            double? elevation,
-            double? focusElevation,
-            double? hoverElevation,
-            double? highlightElevation,
-            double? disabledElevation,
-            Callback? onPressed,
-            MouseCursor? mouseCursor,
-            bool mini,
-            ShapeBorder? shape,
-            Clip clipBehavior,
-            bool autofocus,
-            MaterialTapTargetSize? materialTapTargetSize,
-            bool isExtended,
-            bool? enableFeedback)
-        floatingActionButton,
+    required TResult Function(Key? key, Widget? child, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, bool mini, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback) floatingActionButton,
+    required TResult Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback) floatingActionButtonExtended,
     required TResult Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor) text,
+    required TResult Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior) container,
+    required TResult Function(Key? key, double? widthFactor, double? heightFactor, Widget child) center,
+    required TResult Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection) icon,
+    required TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children) column,
+    required TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children) row,
+    required TResult Function(Key? key, double? width, double? height, Widget? child) sizedBox,
   }) {
     return floatingActionButton(
         key,
@@ -5124,6 +6506,29 @@ class _$FloatingActionButton implements FloatingActionButton {
         textButton,
     TResult? Function(
             Key? key,
+            double? iconSize,
+            VisualDensity? visualDensity,
+            EdgeInsets? padding,
+            Alignment? alignment,
+            double? splashRadius,
+            Color? color,
+            Color? focusColor,
+            Color? hoverColor,
+            Color? highlightColor,
+            Color? splashColor,
+            Color? disabledColor,
+            Callback onPressed,
+            MouseCursor? mouseCursor,
+            bool autofocus,
+            String? tooltip,
+            bool? enableFeedback,
+            BoxConstraints? constraints,
+            bool? isSelected,
+            Widget? selectedIcon,
+            Widget icon)?
+        iconButton,
+    TResult? Function(
+            Key? key,
             PreferredSizeWidget? appBar,
             Widget? body,
             Widget? floatingActionButton,
@@ -5145,31 +6550,15 @@ class _$FloatingActionButton implements FloatingActionButton {
             bool endDrawerEnableOpenDragGesture,
             String? restorationId)?
         scaffold,
-    TResult? Function(
-            Key? key,
-            Widget? child,
-            String? tooltip,
-            Color? foregroundColor,
-            Color? backgroundColor,
-            Color? focusColor,
-            Color? hoverColor,
-            Color? splashColor,
-            double? elevation,
-            double? focusElevation,
-            double? hoverElevation,
-            double? highlightElevation,
-            double? disabledElevation,
-            Callback? onPressed,
-            MouseCursor? mouseCursor,
-            bool mini,
-            ShapeBorder? shape,
-            Clip clipBehavior,
-            bool autofocus,
-            MaterialTapTargetSize? materialTapTargetSize,
-            bool isExtended,
-            bool? enableFeedback)?
-        floatingActionButton,
+    TResult? Function(Key? key, Widget? child, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, bool mini, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButton,
+    TResult? Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButtonExtended,
     TResult? Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor)? text,
+    TResult? Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior)? container,
+    TResult? Function(Key? key, double? widthFactor, double? heightFactor, Widget child)? center,
+    TResult? Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection)? icon,
+    TResult? Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? column,
+    TResult? Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? row,
+    TResult? Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
   }) {
     return floatingActionButton?.call(
         key,
@@ -5231,6 +6620,29 @@ class _$FloatingActionButton implements FloatingActionButton {
         textButton,
     TResult Function(
             Key? key,
+            double? iconSize,
+            VisualDensity? visualDensity,
+            EdgeInsets? padding,
+            Alignment? alignment,
+            double? splashRadius,
+            Color? color,
+            Color? focusColor,
+            Color? hoverColor,
+            Color? highlightColor,
+            Color? splashColor,
+            Color? disabledColor,
+            Callback onPressed,
+            MouseCursor? mouseCursor,
+            bool autofocus,
+            String? tooltip,
+            bool? enableFeedback,
+            BoxConstraints? constraints,
+            bool? isSelected,
+            Widget? selectedIcon,
+            Widget icon)?
+        iconButton,
+    TResult Function(
+            Key? key,
             PreferredSizeWidget? appBar,
             Widget? body,
             Widget? floatingActionButton,
@@ -5252,31 +6664,15 @@ class _$FloatingActionButton implements FloatingActionButton {
             bool endDrawerEnableOpenDragGesture,
             String? restorationId)?
         scaffold,
-    TResult Function(
-            Key? key,
-            Widget? child,
-            String? tooltip,
-            Color? foregroundColor,
-            Color? backgroundColor,
-            Color? focusColor,
-            Color? hoverColor,
-            Color? splashColor,
-            double? elevation,
-            double? focusElevation,
-            double? hoverElevation,
-            double? highlightElevation,
-            double? disabledElevation,
-            Callback? onPressed,
-            MouseCursor? mouseCursor,
-            bool mini,
-            ShapeBorder? shape,
-            Clip clipBehavior,
-            bool autofocus,
-            MaterialTapTargetSize? materialTapTargetSize,
-            bool isExtended,
-            bool? enableFeedback)?
-        floatingActionButton,
+    TResult Function(Key? key, Widget? child, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, bool mini, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButton,
+    TResult Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButtonExtended,
     TResult Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor)? text,
+    TResult Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior)? container,
+    TResult Function(Key? key, double? widthFactor, double? heightFactor, Widget child)? center,
+    TResult Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection)? icon,
+    TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? column,
+    TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? row,
+    TResult Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
     required TResult orElse(),
   }) {
     if (floatingActionButton != null) {
@@ -5316,9 +6712,18 @@ class _$FloatingActionButton implements FloatingActionButton {
     required TResult Function(FilledTonalButton value) filledTonalButton,
     required TResult Function(OutlinedButton value) outlinedButton,
     required TResult Function(TextButton value) textButton,
+    required TResult Function(IconButton value) iconButton,
     required TResult Function(Scaffold value) scaffold,
     required TResult Function(FloatingActionButton value) floatingActionButton,
+    required TResult Function(FloatingActionButtonExtended value)
+        floatingActionButtonExtended,
     required TResult Function(Text value) text,
+    required TResult Function(Container value) container,
+    required TResult Function(Center value) center,
+    required TResult Function(Icon value) icon,
+    required TResult Function(Column value) column,
+    required TResult Function(Row value) row,
+    required TResult Function(SizedBox value) sizedBox,
   }) {
     return floatingActionButton(this);
   }
@@ -5332,9 +6737,18 @@ class _$FloatingActionButton implements FloatingActionButton {
     TResult? Function(FilledTonalButton value)? filledTonalButton,
     TResult? Function(OutlinedButton value)? outlinedButton,
     TResult? Function(TextButton value)? textButton,
+    TResult? Function(IconButton value)? iconButton,
     TResult? Function(Scaffold value)? scaffold,
     TResult? Function(FloatingActionButton value)? floatingActionButton,
+    TResult? Function(FloatingActionButtonExtended value)?
+        floatingActionButtonExtended,
     TResult? Function(Text value)? text,
+    TResult? Function(Container value)? container,
+    TResult? Function(Center value)? center,
+    TResult? Function(Icon value)? icon,
+    TResult? Function(Column value)? column,
+    TResult? Function(Row value)? row,
+    TResult? Function(SizedBox value)? sizedBox,
   }) {
     return floatingActionButton?.call(this);
   }
@@ -5348,9 +6762,18 @@ class _$FloatingActionButton implements FloatingActionButton {
     TResult Function(FilledTonalButton value)? filledTonalButton,
     TResult Function(OutlinedButton value)? outlinedButton,
     TResult Function(TextButton value)? textButton,
+    TResult Function(IconButton value)? iconButton,
     TResult Function(Scaffold value)? scaffold,
     TResult Function(FloatingActionButton value)? floatingActionButton,
+    TResult Function(FloatingActionButtonExtended value)?
+        floatingActionButtonExtended,
     TResult Function(Text value)? text,
+    TResult Function(Container value)? container,
+    TResult Function(Center value)? center,
+    TResult Function(Icon value)? icon,
+    TResult Function(Column value)? column,
+    TResult Function(Row value)? row,
+    TResult Function(SizedBox value)? sizedBox,
     required TResult orElse(),
   }) {
     if (floatingActionButton != null) {
@@ -5422,6 +6845,956 @@ abstract class FloatingActionButton implements Widget {
   @JsonKey(ignore: true)
   _$$FloatingActionButtonCopyWith<_$FloatingActionButton> get copyWith =>
       throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$FloatingActionButtonExtendedCopyWith<$Res>
+    implements $WidgetCopyWith<$Res> {
+  factory _$$FloatingActionButtonExtendedCopyWith(
+          _$FloatingActionButtonExtended value,
+          $Res Function(_$FloatingActionButtonExtended) then) =
+      __$$FloatingActionButtonExtendedCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {Key? key,
+      Widget label,
+      Widget? icon,
+      String? tooltip,
+      Color? foregroundColor,
+      Color? backgroundColor,
+      Color? focusColor,
+      Color? hoverColor,
+      Color? splashColor,
+      double? elevation,
+      double? focusElevation,
+      double? hoverElevation,
+      double? highlightElevation,
+      double? disabledElevation,
+      Callback? onPressed,
+      MouseCursor? mouseCursor,
+      ShapeBorder? shape,
+      Clip clipBehavior,
+      bool autofocus,
+      MaterialTapTargetSize? materialTapTargetSize,
+      bool isExtended,
+      bool? enableFeedback});
+
+  @override
+  $KeyCopyWith<$Res>? get key;
+  $WidgetCopyWith<$Res> get label;
+  $WidgetCopyWith<$Res>? get icon;
+  $ColorCopyWith<$Res>? get foregroundColor;
+  $ColorCopyWith<$Res>? get backgroundColor;
+  $ColorCopyWith<$Res>? get focusColor;
+  $ColorCopyWith<$Res>? get hoverColor;
+  $ColorCopyWith<$Res>? get splashColor;
+  $CallbackCopyWith<$Res>? get onPressed;
+  $MouseCursorCopyWith<$Res>? get mouseCursor;
+  $ShapeBorderCopyWith<$Res>? get shape;
+}
+
+/// @nodoc
+class __$$FloatingActionButtonExtendedCopyWithImpl<$Res>
+    extends _$WidgetCopyWithImpl<$Res, _$FloatingActionButtonExtended>
+    implements _$$FloatingActionButtonExtendedCopyWith<$Res> {
+  __$$FloatingActionButtonExtendedCopyWithImpl(
+      _$FloatingActionButtonExtended _value,
+      $Res Function(_$FloatingActionButtonExtended) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? key = freezed,
+    Object? label = null,
+    Object? icon = freezed,
+    Object? tooltip = freezed,
+    Object? foregroundColor = freezed,
+    Object? backgroundColor = freezed,
+    Object? focusColor = freezed,
+    Object? hoverColor = freezed,
+    Object? splashColor = freezed,
+    Object? elevation = freezed,
+    Object? focusElevation = freezed,
+    Object? hoverElevation = freezed,
+    Object? highlightElevation = freezed,
+    Object? disabledElevation = freezed,
+    Object? onPressed = freezed,
+    Object? mouseCursor = freezed,
+    Object? shape = freezed,
+    Object? clipBehavior = null,
+    Object? autofocus = null,
+    Object? materialTapTargetSize = freezed,
+    Object? isExtended = null,
+    Object? enableFeedback = freezed,
+  }) {
+    return _then(_$FloatingActionButtonExtended(
+      key: freezed == key
+          ? _value.key
+          : key // ignore: cast_nullable_to_non_nullable
+              as Key?,
+      label: null == label
+          ? _value.label
+          : label // ignore: cast_nullable_to_non_nullable
+              as Widget,
+      icon: freezed == icon
+          ? _value.icon
+          : icon // ignore: cast_nullable_to_non_nullable
+              as Widget?,
+      tooltip: freezed == tooltip
+          ? _value.tooltip
+          : tooltip // ignore: cast_nullable_to_non_nullable
+              as String?,
+      foregroundColor: freezed == foregroundColor
+          ? _value.foregroundColor
+          : foregroundColor // ignore: cast_nullable_to_non_nullable
+              as Color?,
+      backgroundColor: freezed == backgroundColor
+          ? _value.backgroundColor
+          : backgroundColor // ignore: cast_nullable_to_non_nullable
+              as Color?,
+      focusColor: freezed == focusColor
+          ? _value.focusColor
+          : focusColor // ignore: cast_nullable_to_non_nullable
+              as Color?,
+      hoverColor: freezed == hoverColor
+          ? _value.hoverColor
+          : hoverColor // ignore: cast_nullable_to_non_nullable
+              as Color?,
+      splashColor: freezed == splashColor
+          ? _value.splashColor
+          : splashColor // ignore: cast_nullable_to_non_nullable
+              as Color?,
+      elevation: freezed == elevation
+          ? _value.elevation
+          : elevation // ignore: cast_nullable_to_non_nullable
+              as double?,
+      focusElevation: freezed == focusElevation
+          ? _value.focusElevation
+          : focusElevation // ignore: cast_nullable_to_non_nullable
+              as double?,
+      hoverElevation: freezed == hoverElevation
+          ? _value.hoverElevation
+          : hoverElevation // ignore: cast_nullable_to_non_nullable
+              as double?,
+      highlightElevation: freezed == highlightElevation
+          ? _value.highlightElevation
+          : highlightElevation // ignore: cast_nullable_to_non_nullable
+              as double?,
+      disabledElevation: freezed == disabledElevation
+          ? _value.disabledElevation
+          : disabledElevation // ignore: cast_nullable_to_non_nullable
+              as double?,
+      onPressed: freezed == onPressed
+          ? _value.onPressed
+          : onPressed // ignore: cast_nullable_to_non_nullable
+              as Callback?,
+      mouseCursor: freezed == mouseCursor
+          ? _value.mouseCursor
+          : mouseCursor // ignore: cast_nullable_to_non_nullable
+              as MouseCursor?,
+      shape: freezed == shape
+          ? _value.shape
+          : shape // ignore: cast_nullable_to_non_nullable
+              as ShapeBorder?,
+      clipBehavior: null == clipBehavior
+          ? _value.clipBehavior
+          : clipBehavior // ignore: cast_nullable_to_non_nullable
+              as Clip,
+      autofocus: null == autofocus
+          ? _value.autofocus
+          : autofocus // ignore: cast_nullable_to_non_nullable
+              as bool,
+      materialTapTargetSize: freezed == materialTapTargetSize
+          ? _value.materialTapTargetSize
+          : materialTapTargetSize // ignore: cast_nullable_to_non_nullable
+              as MaterialTapTargetSize?,
+      isExtended: null == isExtended
+          ? _value.isExtended
+          : isExtended // ignore: cast_nullable_to_non_nullable
+              as bool,
+      enableFeedback: freezed == enableFeedback
+          ? _value.enableFeedback
+          : enableFeedback // ignore: cast_nullable_to_non_nullable
+              as bool?,
+    ));
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $WidgetCopyWith<$Res> get label {
+    return $WidgetCopyWith<$Res>(_value.label, (value) {
+      return _then(_value.copyWith(label: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $WidgetCopyWith<$Res>? get icon {
+    if (_value.icon == null) {
+      return null;
+    }
+
+    return $WidgetCopyWith<$Res>(_value.icon!, (value) {
+      return _then(_value.copyWith(icon: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ColorCopyWith<$Res>? get foregroundColor {
+    if (_value.foregroundColor == null) {
+      return null;
+    }
+
+    return $ColorCopyWith<$Res>(_value.foregroundColor!, (value) {
+      return _then(_value.copyWith(foregroundColor: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ColorCopyWith<$Res>? get backgroundColor {
+    if (_value.backgroundColor == null) {
+      return null;
+    }
+
+    return $ColorCopyWith<$Res>(_value.backgroundColor!, (value) {
+      return _then(_value.copyWith(backgroundColor: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ColorCopyWith<$Res>? get focusColor {
+    if (_value.focusColor == null) {
+      return null;
+    }
+
+    return $ColorCopyWith<$Res>(_value.focusColor!, (value) {
+      return _then(_value.copyWith(focusColor: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ColorCopyWith<$Res>? get hoverColor {
+    if (_value.hoverColor == null) {
+      return null;
+    }
+
+    return $ColorCopyWith<$Res>(_value.hoverColor!, (value) {
+      return _then(_value.copyWith(hoverColor: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ColorCopyWith<$Res>? get splashColor {
+    if (_value.splashColor == null) {
+      return null;
+    }
+
+    return $ColorCopyWith<$Res>(_value.splashColor!, (value) {
+      return _then(_value.copyWith(splashColor: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $CallbackCopyWith<$Res>? get onPressed {
+    if (_value.onPressed == null) {
+      return null;
+    }
+
+    return $CallbackCopyWith<$Res>(_value.onPressed!, (value) {
+      return _then(_value.copyWith(onPressed: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $MouseCursorCopyWith<$Res>? get mouseCursor {
+    if (_value.mouseCursor == null) {
+      return null;
+    }
+
+    return $MouseCursorCopyWith<$Res>(_value.mouseCursor!, (value) {
+      return _then(_value.copyWith(mouseCursor: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ShapeBorderCopyWith<$Res>? get shape {
+    if (_value.shape == null) {
+      return null;
+    }
+
+    return $ShapeBorderCopyWith<$Res>(_value.shape!, (value) {
+      return _then(_value.copyWith(shape: value));
+    });
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$FloatingActionButtonExtended implements FloatingActionButtonExtended {
+  const _$FloatingActionButtonExtended(
+      {this.key,
+      required this.label,
+      this.icon,
+      this.tooltip,
+      this.foregroundColor,
+      this.backgroundColor,
+      this.focusColor,
+      this.hoverColor,
+      this.splashColor,
+      this.elevation,
+      this.focusElevation,
+      this.hoverElevation,
+      this.highlightElevation,
+      this.disabledElevation,
+      required this.onPressed,
+      this.mouseCursor,
+      this.shape,
+      this.clipBehavior = Clip.none,
+      this.autofocus = false,
+      this.materialTapTargetSize,
+      this.isExtended = true,
+      this.enableFeedback,
+      final String? $type})
+      : $type = $type ?? 'floatingActionButtonExtended';
+
+  factory _$FloatingActionButtonExtended.fromJson(Map<String, dynamic> json) =>
+      _$$FloatingActionButtonExtendedFromJson(json);
+
+  @override
+  final Key? key;
+  @override
+  final Widget label;
+  @override
+  final Widget? icon;
+  @override
+  final String? tooltip;
+  @override
+  final Color? foregroundColor;
+  @override
+  final Color? backgroundColor;
+  @override
+  final Color? focusColor;
+  @override
+  final Color? hoverColor;
+  @override
+  final Color? splashColor;
+  @override
+  final double? elevation;
+  @override
+  final double? focusElevation;
+  @override
+  final double? hoverElevation;
+  @override
+  final double? highlightElevation;
+  @override
+  final double? disabledElevation;
+  @override
+  final Callback? onPressed;
+  @override
+  final MouseCursor? mouseCursor;
+  @override
+  final ShapeBorder? shape;
+  @override
+  @JsonKey()
+  final Clip clipBehavior;
+  @override
+  @JsonKey()
+  final bool autofocus;
+  @override
+  final MaterialTapTargetSize? materialTapTargetSize;
+  @override
+  @JsonKey()
+  final bool isExtended;
+  @override
+  final bool? enableFeedback;
+
+  @JsonKey(name: 'runtimeType')
+  final String $type;
+
+  @override
+  String toString() {
+    return 'Widget.floatingActionButtonExtended(key: $key, label: $label, icon: $icon, tooltip: $tooltip, foregroundColor: $foregroundColor, backgroundColor: $backgroundColor, focusColor: $focusColor, hoverColor: $hoverColor, splashColor: $splashColor, elevation: $elevation, focusElevation: $focusElevation, hoverElevation: $hoverElevation, highlightElevation: $highlightElevation, disabledElevation: $disabledElevation, onPressed: $onPressed, mouseCursor: $mouseCursor, shape: $shape, clipBehavior: $clipBehavior, autofocus: $autofocus, materialTapTargetSize: $materialTapTargetSize, isExtended: $isExtended, enableFeedback: $enableFeedback)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$FloatingActionButtonExtended &&
+            (identical(other.key, key) || other.key == key) &&
+            (identical(other.label, label) || other.label == label) &&
+            (identical(other.icon, icon) || other.icon == icon) &&
+            (identical(other.tooltip, tooltip) || other.tooltip == tooltip) &&
+            (identical(other.foregroundColor, foregroundColor) ||
+                other.foregroundColor == foregroundColor) &&
+            (identical(other.backgroundColor, backgroundColor) ||
+                other.backgroundColor == backgroundColor) &&
+            (identical(other.focusColor, focusColor) ||
+                other.focusColor == focusColor) &&
+            (identical(other.hoverColor, hoverColor) ||
+                other.hoverColor == hoverColor) &&
+            (identical(other.splashColor, splashColor) ||
+                other.splashColor == splashColor) &&
+            (identical(other.elevation, elevation) ||
+                other.elevation == elevation) &&
+            (identical(other.focusElevation, focusElevation) ||
+                other.focusElevation == focusElevation) &&
+            (identical(other.hoverElevation, hoverElevation) ||
+                other.hoverElevation == hoverElevation) &&
+            (identical(other.highlightElevation, highlightElevation) ||
+                other.highlightElevation == highlightElevation) &&
+            (identical(other.disabledElevation, disabledElevation) ||
+                other.disabledElevation == disabledElevation) &&
+            (identical(other.onPressed, onPressed) ||
+                other.onPressed == onPressed) &&
+            (identical(other.mouseCursor, mouseCursor) ||
+                other.mouseCursor == mouseCursor) &&
+            (identical(other.shape, shape) || other.shape == shape) &&
+            (identical(other.clipBehavior, clipBehavior) ||
+                other.clipBehavior == clipBehavior) &&
+            (identical(other.autofocus, autofocus) ||
+                other.autofocus == autofocus) &&
+            (identical(other.materialTapTargetSize, materialTapTargetSize) ||
+                other.materialTapTargetSize == materialTapTargetSize) &&
+            (identical(other.isExtended, isExtended) ||
+                other.isExtended == isExtended) &&
+            (identical(other.enableFeedback, enableFeedback) ||
+                other.enableFeedback == enableFeedback));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hashAll([
+        runtimeType,
+        key,
+        label,
+        icon,
+        tooltip,
+        foregroundColor,
+        backgroundColor,
+        focusColor,
+        hoverColor,
+        splashColor,
+        elevation,
+        focusElevation,
+        hoverElevation,
+        highlightElevation,
+        disabledElevation,
+        onPressed,
+        mouseCursor,
+        shape,
+        clipBehavior,
+        autofocus,
+        materialTapTargetSize,
+        isExtended,
+        enableFeedback
+      ]);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$FloatingActionButtonExtendedCopyWith<_$FloatingActionButtonExtended>
+      get copyWith => __$$FloatingActionButtonExtendedCopyWithImpl<
+          _$FloatingActionButtonExtended>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(
+            Key? key,
+            Color? color,
+            Color? shadowColor,
+            Color? surfaceTintColor,
+            double? elevation,
+            ShapeBorder? shape,
+            bool borderOnForeground,
+            EdgeInsets? margin,
+            Clip? clipBehavior,
+            Widget? child,
+            bool semanticContainer)
+        card,
+    required TResult Function(
+            Key? key,
+            Callback? onPressed,
+            Callback? onLongPress,
+            bool autofocus,
+            Clip clipBehavior,
+            Widget child,
+            ButtonStyle? style)
+        elevatedButton,
+    required TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)
+        filledButton,
+    required TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)
+        filledTonalButton,
+    required TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)
+        outlinedButton,
+    required TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)
+        textButton,
+    required TResult Function(
+            Key? key,
+            double? iconSize,
+            VisualDensity? visualDensity,
+            EdgeInsets? padding,
+            Alignment? alignment,
+            double? splashRadius,
+            Color? color,
+            Color? focusColor,
+            Color? hoverColor,
+            Color? highlightColor,
+            Color? splashColor,
+            Color? disabledColor,
+            Callback onPressed,
+            MouseCursor? mouseCursor,
+            bool autofocus,
+            String? tooltip,
+            bool? enableFeedback,
+            BoxConstraints? constraints,
+            bool? isSelected,
+            Widget? selectedIcon,
+            Widget icon)
+        iconButton,
+    required TResult Function(
+            Key? key,
+            PreferredSizeWidget? appBar,
+            Widget? body,
+            Widget? floatingActionButton,
+            FloatingActionButtonLocation? floatingActionButtonLocation,
+            List<Widget>? persistentFooterButtons,
+            Alignment persistentFooterAlignment,
+            Widget? drawer,
+            Widget? endDrawer,
+            Widget? bottomNavigationBar,
+            Widget? bottomSheet,
+            Color? backgroundColor,
+            bool? resizeToAvoidBottomInset,
+            bool primary,
+            bool extendBody,
+            bool extendBodyBehindAppBar,
+            Color? drawerScrimColor,
+            double? drawerEdgeDragWidth,
+            bool drawerEnableOpenDragGesture,
+            bool endDrawerEnableOpenDragGesture,
+            String? restorationId)
+        scaffold,
+    required TResult Function(Key? key, Widget? child, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, bool mini, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback) floatingActionButton,
+    required TResult Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback) floatingActionButtonExtended,
+    required TResult Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor) text,
+    required TResult Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior) container,
+    required TResult Function(Key? key, double? widthFactor, double? heightFactor, Widget child) center,
+    required TResult Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection) icon,
+    required TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children) column,
+    required TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children) row,
+    required TResult Function(Key? key, double? width, double? height, Widget? child) sizedBox,
+  }) {
+    return floatingActionButtonExtended(
+        key,
+        label,
+        this.icon,
+        tooltip,
+        foregroundColor,
+        backgroundColor,
+        focusColor,
+        hoverColor,
+        splashColor,
+        elevation,
+        focusElevation,
+        hoverElevation,
+        highlightElevation,
+        disabledElevation,
+        onPressed,
+        mouseCursor,
+        shape,
+        clipBehavior,
+        autofocus,
+        materialTapTargetSize,
+        isExtended,
+        enableFeedback);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(
+            Key? key,
+            Color? color,
+            Color? shadowColor,
+            Color? surfaceTintColor,
+            double? elevation,
+            ShapeBorder? shape,
+            bool borderOnForeground,
+            EdgeInsets? margin,
+            Clip? clipBehavior,
+            Widget? child,
+            bool semanticContainer)?
+        card,
+    TResult? Function(
+            Key? key,
+            Callback? onPressed,
+            Callback? onLongPress,
+            bool autofocus,
+            Clip clipBehavior,
+            Widget child,
+            ButtonStyle? style)?
+        elevatedButton,
+    TResult? Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        filledButton,
+    TResult? Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        filledTonalButton,
+    TResult? Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        outlinedButton,
+    TResult? Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        textButton,
+    TResult? Function(
+            Key? key,
+            double? iconSize,
+            VisualDensity? visualDensity,
+            EdgeInsets? padding,
+            Alignment? alignment,
+            double? splashRadius,
+            Color? color,
+            Color? focusColor,
+            Color? hoverColor,
+            Color? highlightColor,
+            Color? splashColor,
+            Color? disabledColor,
+            Callback onPressed,
+            MouseCursor? mouseCursor,
+            bool autofocus,
+            String? tooltip,
+            bool? enableFeedback,
+            BoxConstraints? constraints,
+            bool? isSelected,
+            Widget? selectedIcon,
+            Widget icon)?
+        iconButton,
+    TResult? Function(
+            Key? key,
+            PreferredSizeWidget? appBar,
+            Widget? body,
+            Widget? floatingActionButton,
+            FloatingActionButtonLocation? floatingActionButtonLocation,
+            List<Widget>? persistentFooterButtons,
+            Alignment persistentFooterAlignment,
+            Widget? drawer,
+            Widget? endDrawer,
+            Widget? bottomNavigationBar,
+            Widget? bottomSheet,
+            Color? backgroundColor,
+            bool? resizeToAvoidBottomInset,
+            bool primary,
+            bool extendBody,
+            bool extendBodyBehindAppBar,
+            Color? drawerScrimColor,
+            double? drawerEdgeDragWidth,
+            bool drawerEnableOpenDragGesture,
+            bool endDrawerEnableOpenDragGesture,
+            String? restorationId)?
+        scaffold,
+    TResult? Function(Key? key, Widget? child, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, bool mini, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButton,
+    TResult? Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButtonExtended,
+    TResult? Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor)? text,
+    TResult? Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior)? container,
+    TResult? Function(Key? key, double? widthFactor, double? heightFactor, Widget child)? center,
+    TResult? Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection)? icon,
+    TResult? Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? column,
+    TResult? Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? row,
+    TResult? Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
+  }) {
+    return floatingActionButtonExtended?.call(
+        key,
+        label,
+        this.icon,
+        tooltip,
+        foregroundColor,
+        backgroundColor,
+        focusColor,
+        hoverColor,
+        splashColor,
+        elevation,
+        focusElevation,
+        hoverElevation,
+        highlightElevation,
+        disabledElevation,
+        onPressed,
+        mouseCursor,
+        shape,
+        clipBehavior,
+        autofocus,
+        materialTapTargetSize,
+        isExtended,
+        enableFeedback);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(
+            Key? key,
+            Color? color,
+            Color? shadowColor,
+            Color? surfaceTintColor,
+            double? elevation,
+            ShapeBorder? shape,
+            bool borderOnForeground,
+            EdgeInsets? margin,
+            Clip? clipBehavior,
+            Widget? child,
+            bool semanticContainer)?
+        card,
+    TResult Function(
+            Key? key,
+            Callback? onPressed,
+            Callback? onLongPress,
+            bool autofocus,
+            Clip clipBehavior,
+            Widget child,
+            ButtonStyle? style)?
+        elevatedButton,
+    TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        filledButton,
+    TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        filledTonalButton,
+    TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        outlinedButton,
+    TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        textButton,
+    TResult Function(
+            Key? key,
+            double? iconSize,
+            VisualDensity? visualDensity,
+            EdgeInsets? padding,
+            Alignment? alignment,
+            double? splashRadius,
+            Color? color,
+            Color? focusColor,
+            Color? hoverColor,
+            Color? highlightColor,
+            Color? splashColor,
+            Color? disabledColor,
+            Callback onPressed,
+            MouseCursor? mouseCursor,
+            bool autofocus,
+            String? tooltip,
+            bool? enableFeedback,
+            BoxConstraints? constraints,
+            bool? isSelected,
+            Widget? selectedIcon,
+            Widget icon)?
+        iconButton,
+    TResult Function(
+            Key? key,
+            PreferredSizeWidget? appBar,
+            Widget? body,
+            Widget? floatingActionButton,
+            FloatingActionButtonLocation? floatingActionButtonLocation,
+            List<Widget>? persistentFooterButtons,
+            Alignment persistentFooterAlignment,
+            Widget? drawer,
+            Widget? endDrawer,
+            Widget? bottomNavigationBar,
+            Widget? bottomSheet,
+            Color? backgroundColor,
+            bool? resizeToAvoidBottomInset,
+            bool primary,
+            bool extendBody,
+            bool extendBodyBehindAppBar,
+            Color? drawerScrimColor,
+            double? drawerEdgeDragWidth,
+            bool drawerEnableOpenDragGesture,
+            bool endDrawerEnableOpenDragGesture,
+            String? restorationId)?
+        scaffold,
+    TResult Function(Key? key, Widget? child, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, bool mini, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButton,
+    TResult Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButtonExtended,
+    TResult Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor)? text,
+    TResult Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior)? container,
+    TResult Function(Key? key, double? widthFactor, double? heightFactor, Widget child)? center,
+    TResult Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection)? icon,
+    TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? column,
+    TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? row,
+    TResult Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
+    required TResult orElse(),
+  }) {
+    if (floatingActionButtonExtended != null) {
+      return floatingActionButtonExtended(
+          key,
+          label,
+          this.icon,
+          tooltip,
+          foregroundColor,
+          backgroundColor,
+          focusColor,
+          hoverColor,
+          splashColor,
+          elevation,
+          focusElevation,
+          hoverElevation,
+          highlightElevation,
+          disabledElevation,
+          onPressed,
+          mouseCursor,
+          shape,
+          clipBehavior,
+          autofocus,
+          materialTapTargetSize,
+          isExtended,
+          enableFeedback);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(Card value) card,
+    required TResult Function(ElevatedButton value) elevatedButton,
+    required TResult Function(FilledButton value) filledButton,
+    required TResult Function(FilledTonalButton value) filledTonalButton,
+    required TResult Function(OutlinedButton value) outlinedButton,
+    required TResult Function(TextButton value) textButton,
+    required TResult Function(IconButton value) iconButton,
+    required TResult Function(Scaffold value) scaffold,
+    required TResult Function(FloatingActionButton value) floatingActionButton,
+    required TResult Function(FloatingActionButtonExtended value)
+        floatingActionButtonExtended,
+    required TResult Function(Text value) text,
+    required TResult Function(Container value) container,
+    required TResult Function(Center value) center,
+    required TResult Function(Icon value) icon,
+    required TResult Function(Column value) column,
+    required TResult Function(Row value) row,
+    required TResult Function(SizedBox value) sizedBox,
+  }) {
+    return floatingActionButtonExtended(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(Card value)? card,
+    TResult? Function(ElevatedButton value)? elevatedButton,
+    TResult? Function(FilledButton value)? filledButton,
+    TResult? Function(FilledTonalButton value)? filledTonalButton,
+    TResult? Function(OutlinedButton value)? outlinedButton,
+    TResult? Function(TextButton value)? textButton,
+    TResult? Function(IconButton value)? iconButton,
+    TResult? Function(Scaffold value)? scaffold,
+    TResult? Function(FloatingActionButton value)? floatingActionButton,
+    TResult? Function(FloatingActionButtonExtended value)?
+        floatingActionButtonExtended,
+    TResult? Function(Text value)? text,
+    TResult? Function(Container value)? container,
+    TResult? Function(Center value)? center,
+    TResult? Function(Icon value)? icon,
+    TResult? Function(Column value)? column,
+    TResult? Function(Row value)? row,
+    TResult? Function(SizedBox value)? sizedBox,
+  }) {
+    return floatingActionButtonExtended?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(Card value)? card,
+    TResult Function(ElevatedButton value)? elevatedButton,
+    TResult Function(FilledButton value)? filledButton,
+    TResult Function(FilledTonalButton value)? filledTonalButton,
+    TResult Function(OutlinedButton value)? outlinedButton,
+    TResult Function(TextButton value)? textButton,
+    TResult Function(IconButton value)? iconButton,
+    TResult Function(Scaffold value)? scaffold,
+    TResult Function(FloatingActionButton value)? floatingActionButton,
+    TResult Function(FloatingActionButtonExtended value)?
+        floatingActionButtonExtended,
+    TResult Function(Text value)? text,
+    TResult Function(Container value)? container,
+    TResult Function(Center value)? center,
+    TResult Function(Icon value)? icon,
+    TResult Function(Column value)? column,
+    TResult Function(Row value)? row,
+    TResult Function(SizedBox value)? sizedBox,
+    required TResult orElse(),
+  }) {
+    if (floatingActionButtonExtended != null) {
+      return floatingActionButtonExtended(this);
+    }
+    return orElse();
+  }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$FloatingActionButtonExtendedToJson(
+      this,
+    );
+  }
+}
+
+abstract class FloatingActionButtonExtended implements Widget {
+  const factory FloatingActionButtonExtended(
+      {final Key? key,
+      required final Widget label,
+      final Widget? icon,
+      final String? tooltip,
+      final Color? foregroundColor,
+      final Color? backgroundColor,
+      final Color? focusColor,
+      final Color? hoverColor,
+      final Color? splashColor,
+      final double? elevation,
+      final double? focusElevation,
+      final double? hoverElevation,
+      final double? highlightElevation,
+      final double? disabledElevation,
+      required final Callback? onPressed,
+      final MouseCursor? mouseCursor,
+      final ShapeBorder? shape,
+      final Clip clipBehavior,
+      final bool autofocus,
+      final MaterialTapTargetSize? materialTapTargetSize,
+      final bool isExtended,
+      final bool? enableFeedback}) = _$FloatingActionButtonExtended;
+
+  factory FloatingActionButtonExtended.fromJson(Map<String, dynamic> json) =
+      _$FloatingActionButtonExtended.fromJson;
+
+  @override
+  Key? get key;
+  Widget get label;
+  Widget? get icon;
+  String? get tooltip;
+  Color? get foregroundColor;
+  Color? get backgroundColor;
+  Color? get focusColor;
+  Color? get hoverColor;
+  Color? get splashColor;
+  double? get elevation;
+  double? get focusElevation;
+  double? get hoverElevation;
+  double? get highlightElevation;
+  double? get disabledElevation;
+  Callback? get onPressed;
+  MouseCursor? get mouseCursor;
+  ShapeBorder? get shape;
+  Clip get clipBehavior;
+  bool get autofocus;
+  MaterialTapTargetSize? get materialTapTargetSize;
+  bool get isExtended;
+  bool? get enableFeedback;
+  @override
+  @JsonKey(ignore: true)
+  _$$FloatingActionButtonExtendedCopyWith<_$FloatingActionButtonExtended>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -5763,6 +8136,29 @@ class _$Text implements Text {
         textButton,
     required TResult Function(
             Key? key,
+            double? iconSize,
+            VisualDensity? visualDensity,
+            EdgeInsets? padding,
+            Alignment? alignment,
+            double? splashRadius,
+            Color? color,
+            Color? focusColor,
+            Color? hoverColor,
+            Color? highlightColor,
+            Color? splashColor,
+            Color? disabledColor,
+            Callback onPressed,
+            MouseCursor? mouseCursor,
+            bool autofocus,
+            String? tooltip,
+            bool? enableFeedback,
+            BoxConstraints? constraints,
+            bool? isSelected,
+            Widget? selectedIcon,
+            Widget icon)
+        iconButton,
+    required TResult Function(
+            Key? key,
             PreferredSizeWidget? appBar,
             Widget? body,
             Widget? floatingActionButton,
@@ -5784,31 +8180,15 @@ class _$Text implements Text {
             bool endDrawerEnableOpenDragGesture,
             String? restorationId)
         scaffold,
-    required TResult Function(
-            Key? key,
-            Widget? child,
-            String? tooltip,
-            Color? foregroundColor,
-            Color? backgroundColor,
-            Color? focusColor,
-            Color? hoverColor,
-            Color? splashColor,
-            double? elevation,
-            double? focusElevation,
-            double? hoverElevation,
-            double? highlightElevation,
-            double? disabledElevation,
-            Callback? onPressed,
-            MouseCursor? mouseCursor,
-            bool mini,
-            ShapeBorder? shape,
-            Clip clipBehavior,
-            bool autofocus,
-            MaterialTapTargetSize? materialTapTargetSize,
-            bool isExtended,
-            bool? enableFeedback)
-        floatingActionButton,
+    required TResult Function(Key? key, Widget? child, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, bool mini, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback) floatingActionButton,
+    required TResult Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback) floatingActionButtonExtended,
     required TResult Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor) text,
+    required TResult Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior) container,
+    required TResult Function(Key? key, double? widthFactor, double? heightFactor, Widget child) center,
+    required TResult Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection) icon,
+    required TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children) column,
+    required TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children) row,
+    required TResult Function(Key? key, double? width, double? height, Widget? child) sizedBox,
   }) {
     return text(
         data,
@@ -5863,6 +8243,29 @@ class _$Text implements Text {
         textButton,
     TResult? Function(
             Key? key,
+            double? iconSize,
+            VisualDensity? visualDensity,
+            EdgeInsets? padding,
+            Alignment? alignment,
+            double? splashRadius,
+            Color? color,
+            Color? focusColor,
+            Color? hoverColor,
+            Color? highlightColor,
+            Color? splashColor,
+            Color? disabledColor,
+            Callback onPressed,
+            MouseCursor? mouseCursor,
+            bool autofocus,
+            String? tooltip,
+            bool? enableFeedback,
+            BoxConstraints? constraints,
+            bool? isSelected,
+            Widget? selectedIcon,
+            Widget icon)?
+        iconButton,
+    TResult? Function(
+            Key? key,
             PreferredSizeWidget? appBar,
             Widget? body,
             Widget? floatingActionButton,
@@ -5884,31 +8287,15 @@ class _$Text implements Text {
             bool endDrawerEnableOpenDragGesture,
             String? restorationId)?
         scaffold,
-    TResult? Function(
-            Key? key,
-            Widget? child,
-            String? tooltip,
-            Color? foregroundColor,
-            Color? backgroundColor,
-            Color? focusColor,
-            Color? hoverColor,
-            Color? splashColor,
-            double? elevation,
-            double? focusElevation,
-            double? hoverElevation,
-            double? highlightElevation,
-            double? disabledElevation,
-            Callback? onPressed,
-            MouseCursor? mouseCursor,
-            bool mini,
-            ShapeBorder? shape,
-            Clip clipBehavior,
-            bool autofocus,
-            MaterialTapTargetSize? materialTapTargetSize,
-            bool isExtended,
-            bool? enableFeedback)?
-        floatingActionButton,
+    TResult? Function(Key? key, Widget? child, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, bool mini, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButton,
+    TResult? Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButtonExtended,
     TResult? Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor)? text,
+    TResult? Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior)? container,
+    TResult? Function(Key? key, double? widthFactor, double? heightFactor, Widget child)? center,
+    TResult? Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection)? icon,
+    TResult? Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? column,
+    TResult? Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? row,
+    TResult? Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
   }) {
     return text?.call(
         data,
@@ -5963,6 +8350,29 @@ class _$Text implements Text {
         textButton,
     TResult Function(
             Key? key,
+            double? iconSize,
+            VisualDensity? visualDensity,
+            EdgeInsets? padding,
+            Alignment? alignment,
+            double? splashRadius,
+            Color? color,
+            Color? focusColor,
+            Color? hoverColor,
+            Color? highlightColor,
+            Color? splashColor,
+            Color? disabledColor,
+            Callback onPressed,
+            MouseCursor? mouseCursor,
+            bool autofocus,
+            String? tooltip,
+            bool? enableFeedback,
+            BoxConstraints? constraints,
+            bool? isSelected,
+            Widget? selectedIcon,
+            Widget icon)?
+        iconButton,
+    TResult Function(
+            Key? key,
             PreferredSizeWidget? appBar,
             Widget? body,
             Widget? floatingActionButton,
@@ -5984,31 +8394,15 @@ class _$Text implements Text {
             bool endDrawerEnableOpenDragGesture,
             String? restorationId)?
         scaffold,
-    TResult Function(
-            Key? key,
-            Widget? child,
-            String? tooltip,
-            Color? foregroundColor,
-            Color? backgroundColor,
-            Color? focusColor,
-            Color? hoverColor,
-            Color? splashColor,
-            double? elevation,
-            double? focusElevation,
-            double? hoverElevation,
-            double? highlightElevation,
-            double? disabledElevation,
-            Callback? onPressed,
-            MouseCursor? mouseCursor,
-            bool mini,
-            ShapeBorder? shape,
-            Clip clipBehavior,
-            bool autofocus,
-            MaterialTapTargetSize? materialTapTargetSize,
-            bool isExtended,
-            bool? enableFeedback)?
-        floatingActionButton,
+    TResult Function(Key? key, Widget? child, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, bool mini, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButton,
+    TResult Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButtonExtended,
     TResult Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor)? text,
+    TResult Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior)? container,
+    TResult Function(Key? key, double? widthFactor, double? heightFactor, Widget child)? center,
+    TResult Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection)? icon,
+    TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? column,
+    TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? row,
+    TResult Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
     required TResult orElse(),
   }) {
     if (text != null) {
@@ -6041,9 +8435,18 @@ class _$Text implements Text {
     required TResult Function(FilledTonalButton value) filledTonalButton,
     required TResult Function(OutlinedButton value) outlinedButton,
     required TResult Function(TextButton value) textButton,
+    required TResult Function(IconButton value) iconButton,
     required TResult Function(Scaffold value) scaffold,
     required TResult Function(FloatingActionButton value) floatingActionButton,
+    required TResult Function(FloatingActionButtonExtended value)
+        floatingActionButtonExtended,
     required TResult Function(Text value) text,
+    required TResult Function(Container value) container,
+    required TResult Function(Center value) center,
+    required TResult Function(Icon value) icon,
+    required TResult Function(Column value) column,
+    required TResult Function(Row value) row,
+    required TResult Function(SizedBox value) sizedBox,
   }) {
     return text(this);
   }
@@ -6057,9 +8460,18 @@ class _$Text implements Text {
     TResult? Function(FilledTonalButton value)? filledTonalButton,
     TResult? Function(OutlinedButton value)? outlinedButton,
     TResult? Function(TextButton value)? textButton,
+    TResult? Function(IconButton value)? iconButton,
     TResult? Function(Scaffold value)? scaffold,
     TResult? Function(FloatingActionButton value)? floatingActionButton,
+    TResult? Function(FloatingActionButtonExtended value)?
+        floatingActionButtonExtended,
     TResult? Function(Text value)? text,
+    TResult? Function(Container value)? container,
+    TResult? Function(Center value)? center,
+    TResult? Function(Icon value)? icon,
+    TResult? Function(Column value)? column,
+    TResult? Function(Row value)? row,
+    TResult? Function(SizedBox value)? sizedBox,
   }) {
     return text?.call(this);
   }
@@ -6073,9 +8485,18 @@ class _$Text implements Text {
     TResult Function(FilledTonalButton value)? filledTonalButton,
     TResult Function(OutlinedButton value)? outlinedButton,
     TResult Function(TextButton value)? textButton,
+    TResult Function(IconButton value)? iconButton,
     TResult Function(Scaffold value)? scaffold,
     TResult Function(FloatingActionButton value)? floatingActionButton,
+    TResult Function(FloatingActionButtonExtended value)?
+        floatingActionButtonExtended,
     TResult Function(Text value)? text,
+    TResult Function(Container value)? container,
+    TResult Function(Center value)? center,
+    TResult Function(Icon value)? icon,
+    TResult Function(Column value)? column,
+    TResult Function(Row value)? row,
+    TResult Function(SizedBox value)? sizedBox,
     required TResult orElse(),
   }) {
     if (text != null) {
@@ -6130,4 +8551,3559 @@ abstract class Text implements Widget {
   @override
   @JsonKey(ignore: true)
   _$$TextCopyWith<_$Text> get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$ContainerCopyWith<$Res> implements $WidgetCopyWith<$Res> {
+  factory _$$ContainerCopyWith(
+          _$Container value, $Res Function(_$Container) then) =
+      __$$ContainerCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {Key? key,
+      Alignment? alignment,
+      EdgeInsets? padding,
+      Color? color,
+      Decoration? decoration,
+      Decoration? foregroundDecoration,
+      double? width,
+      double? height,
+      BoxConstraints? constraints,
+      EdgeInsets? margin,
+      @matrixConverter Matrix4? transform,
+      Alignment? transformAlignment,
+      Widget? child,
+      Clip clipBehavior});
+
+  @override
+  $KeyCopyWith<$Res>? get key;
+  $AlignmentCopyWith<$Res>? get alignment;
+  $EdgeInsetsCopyWith<$Res>? get padding;
+  $ColorCopyWith<$Res>? get color;
+  $DecorationCopyWith<$Res>? get decoration;
+  $DecorationCopyWith<$Res>? get foregroundDecoration;
+  $BoxConstraintsCopyWith<$Res>? get constraints;
+  $EdgeInsetsCopyWith<$Res>? get margin;
+  $AlignmentCopyWith<$Res>? get transformAlignment;
+  $WidgetCopyWith<$Res>? get child;
+}
+
+/// @nodoc
+class __$$ContainerCopyWithImpl<$Res>
+    extends _$WidgetCopyWithImpl<$Res, _$Container>
+    implements _$$ContainerCopyWith<$Res> {
+  __$$ContainerCopyWithImpl(
+      _$Container _value, $Res Function(_$Container) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? key = freezed,
+    Object? alignment = freezed,
+    Object? padding = freezed,
+    Object? color = freezed,
+    Object? decoration = freezed,
+    Object? foregroundDecoration = freezed,
+    Object? width = freezed,
+    Object? height = freezed,
+    Object? constraints = freezed,
+    Object? margin = freezed,
+    Object? transform = freezed,
+    Object? transformAlignment = freezed,
+    Object? child = freezed,
+    Object? clipBehavior = null,
+  }) {
+    return _then(_$Container(
+      key: freezed == key
+          ? _value.key
+          : key // ignore: cast_nullable_to_non_nullable
+              as Key?,
+      alignment: freezed == alignment
+          ? _value.alignment
+          : alignment // ignore: cast_nullable_to_non_nullable
+              as Alignment?,
+      padding: freezed == padding
+          ? _value.padding
+          : padding // ignore: cast_nullable_to_non_nullable
+              as EdgeInsets?,
+      color: freezed == color
+          ? _value.color
+          : color // ignore: cast_nullable_to_non_nullable
+              as Color?,
+      decoration: freezed == decoration
+          ? _value.decoration
+          : decoration // ignore: cast_nullable_to_non_nullable
+              as Decoration?,
+      foregroundDecoration: freezed == foregroundDecoration
+          ? _value.foregroundDecoration
+          : foregroundDecoration // ignore: cast_nullable_to_non_nullable
+              as Decoration?,
+      width: freezed == width
+          ? _value.width
+          : width // ignore: cast_nullable_to_non_nullable
+              as double?,
+      height: freezed == height
+          ? _value.height
+          : height // ignore: cast_nullable_to_non_nullable
+              as double?,
+      constraints: freezed == constraints
+          ? _value.constraints
+          : constraints // ignore: cast_nullable_to_non_nullable
+              as BoxConstraints?,
+      margin: freezed == margin
+          ? _value.margin
+          : margin // ignore: cast_nullable_to_non_nullable
+              as EdgeInsets?,
+      transform: freezed == transform
+          ? _value.transform
+          : transform // ignore: cast_nullable_to_non_nullable
+              as Matrix4?,
+      transformAlignment: freezed == transformAlignment
+          ? _value.transformAlignment
+          : transformAlignment // ignore: cast_nullable_to_non_nullable
+              as Alignment?,
+      child: freezed == child
+          ? _value.child
+          : child // ignore: cast_nullable_to_non_nullable
+              as Widget?,
+      clipBehavior: null == clipBehavior
+          ? _value.clipBehavior
+          : clipBehavior // ignore: cast_nullable_to_non_nullable
+              as Clip,
+    ));
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $AlignmentCopyWith<$Res>? get alignment {
+    if (_value.alignment == null) {
+      return null;
+    }
+
+    return $AlignmentCopyWith<$Res>(_value.alignment!, (value) {
+      return _then(_value.copyWith(alignment: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $EdgeInsetsCopyWith<$Res>? get padding {
+    if (_value.padding == null) {
+      return null;
+    }
+
+    return $EdgeInsetsCopyWith<$Res>(_value.padding!, (value) {
+      return _then(_value.copyWith(padding: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ColorCopyWith<$Res>? get color {
+    if (_value.color == null) {
+      return null;
+    }
+
+    return $ColorCopyWith<$Res>(_value.color!, (value) {
+      return _then(_value.copyWith(color: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $DecorationCopyWith<$Res>? get decoration {
+    if (_value.decoration == null) {
+      return null;
+    }
+
+    return $DecorationCopyWith<$Res>(_value.decoration!, (value) {
+      return _then(_value.copyWith(decoration: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $DecorationCopyWith<$Res>? get foregroundDecoration {
+    if (_value.foregroundDecoration == null) {
+      return null;
+    }
+
+    return $DecorationCopyWith<$Res>(_value.foregroundDecoration!, (value) {
+      return _then(_value.copyWith(foregroundDecoration: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $BoxConstraintsCopyWith<$Res>? get constraints {
+    if (_value.constraints == null) {
+      return null;
+    }
+
+    return $BoxConstraintsCopyWith<$Res>(_value.constraints!, (value) {
+      return _then(_value.copyWith(constraints: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $EdgeInsetsCopyWith<$Res>? get margin {
+    if (_value.margin == null) {
+      return null;
+    }
+
+    return $EdgeInsetsCopyWith<$Res>(_value.margin!, (value) {
+      return _then(_value.copyWith(margin: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $AlignmentCopyWith<$Res>? get transformAlignment {
+    if (_value.transformAlignment == null) {
+      return null;
+    }
+
+    return $AlignmentCopyWith<$Res>(_value.transformAlignment!, (value) {
+      return _then(_value.copyWith(transformAlignment: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $WidgetCopyWith<$Res>? get child {
+    if (_value.child == null) {
+      return null;
+    }
+
+    return $WidgetCopyWith<$Res>(_value.child!, (value) {
+      return _then(_value.copyWith(child: value));
+    });
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$Container implements Container {
+  const _$Container(
+      {this.key,
+      this.alignment,
+      this.padding,
+      this.color,
+      this.decoration,
+      this.foregroundDecoration,
+      this.width,
+      this.height,
+      this.constraints,
+      this.margin,
+      @matrixConverter this.transform,
+      this.transformAlignment,
+      this.child,
+      this.clipBehavior = Clip.none,
+      final String? $type})
+      : $type = $type ?? 'container';
+
+  factory _$Container.fromJson(Map<String, dynamic> json) =>
+      _$$ContainerFromJson(json);
+
+  @override
+  final Key? key;
+  @override
+  final Alignment? alignment;
+  @override
+  final EdgeInsets? padding;
+  @override
+  final Color? color;
+  @override
+  final Decoration? decoration;
+  @override
+  final Decoration? foregroundDecoration;
+  @override
+  final double? width;
+  @override
+  final double? height;
+  @override
+  final BoxConstraints? constraints;
+  @override
+  final EdgeInsets? margin;
+  @override
+  @matrixConverter
+  final Matrix4? transform;
+  @override
+  final Alignment? transformAlignment;
+  @override
+  final Widget? child;
+  @override
+  @JsonKey()
+  final Clip clipBehavior;
+
+  @JsonKey(name: 'runtimeType')
+  final String $type;
+
+  @override
+  String toString() {
+    return 'Widget.container(key: $key, alignment: $alignment, padding: $padding, color: $color, decoration: $decoration, foregroundDecoration: $foregroundDecoration, width: $width, height: $height, constraints: $constraints, margin: $margin, transform: $transform, transformAlignment: $transformAlignment, child: $child, clipBehavior: $clipBehavior)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$Container &&
+            (identical(other.key, key) || other.key == key) &&
+            (identical(other.alignment, alignment) ||
+                other.alignment == alignment) &&
+            (identical(other.padding, padding) || other.padding == padding) &&
+            (identical(other.color, color) || other.color == color) &&
+            (identical(other.decoration, decoration) ||
+                other.decoration == decoration) &&
+            (identical(other.foregroundDecoration, foregroundDecoration) ||
+                other.foregroundDecoration == foregroundDecoration) &&
+            (identical(other.width, width) || other.width == width) &&
+            (identical(other.height, height) || other.height == height) &&
+            (identical(other.constraints, constraints) ||
+                other.constraints == constraints) &&
+            (identical(other.margin, margin) || other.margin == margin) &&
+            (identical(other.transform, transform) ||
+                other.transform == transform) &&
+            (identical(other.transformAlignment, transformAlignment) ||
+                other.transformAlignment == transformAlignment) &&
+            (identical(other.child, child) || other.child == child) &&
+            (identical(other.clipBehavior, clipBehavior) ||
+                other.clipBehavior == clipBehavior));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      key,
+      alignment,
+      padding,
+      color,
+      decoration,
+      foregroundDecoration,
+      width,
+      height,
+      constraints,
+      margin,
+      transform,
+      transformAlignment,
+      child,
+      clipBehavior);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ContainerCopyWith<_$Container> get copyWith =>
+      __$$ContainerCopyWithImpl<_$Container>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(
+            Key? key,
+            Color? color,
+            Color? shadowColor,
+            Color? surfaceTintColor,
+            double? elevation,
+            ShapeBorder? shape,
+            bool borderOnForeground,
+            EdgeInsets? margin,
+            Clip? clipBehavior,
+            Widget? child,
+            bool semanticContainer)
+        card,
+    required TResult Function(
+            Key? key,
+            Callback? onPressed,
+            Callback? onLongPress,
+            bool autofocus,
+            Clip clipBehavior,
+            Widget child,
+            ButtonStyle? style)
+        elevatedButton,
+    required TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)
+        filledButton,
+    required TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)
+        filledTonalButton,
+    required TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)
+        outlinedButton,
+    required TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)
+        textButton,
+    required TResult Function(
+            Key? key,
+            double? iconSize,
+            VisualDensity? visualDensity,
+            EdgeInsets? padding,
+            Alignment? alignment,
+            double? splashRadius,
+            Color? color,
+            Color? focusColor,
+            Color? hoverColor,
+            Color? highlightColor,
+            Color? splashColor,
+            Color? disabledColor,
+            Callback onPressed,
+            MouseCursor? mouseCursor,
+            bool autofocus,
+            String? tooltip,
+            bool? enableFeedback,
+            BoxConstraints? constraints,
+            bool? isSelected,
+            Widget? selectedIcon,
+            Widget icon)
+        iconButton,
+    required TResult Function(
+            Key? key,
+            PreferredSizeWidget? appBar,
+            Widget? body,
+            Widget? floatingActionButton,
+            FloatingActionButtonLocation? floatingActionButtonLocation,
+            List<Widget>? persistentFooterButtons,
+            Alignment persistentFooterAlignment,
+            Widget? drawer,
+            Widget? endDrawer,
+            Widget? bottomNavigationBar,
+            Widget? bottomSheet,
+            Color? backgroundColor,
+            bool? resizeToAvoidBottomInset,
+            bool primary,
+            bool extendBody,
+            bool extendBodyBehindAppBar,
+            Color? drawerScrimColor,
+            double? drawerEdgeDragWidth,
+            bool drawerEnableOpenDragGesture,
+            bool endDrawerEnableOpenDragGesture,
+            String? restorationId)
+        scaffold,
+    required TResult Function(Key? key, Widget? child, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, bool mini, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback) floatingActionButton,
+    required TResult Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback) floatingActionButtonExtended,
+    required TResult Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor) text,
+    required TResult Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior) container,
+    required TResult Function(Key? key, double? widthFactor, double? heightFactor, Widget child) center,
+    required TResult Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection) icon,
+    required TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children) column,
+    required TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children) row,
+    required TResult Function(Key? key, double? width, double? height, Widget? child) sizedBox,
+  }) {
+    return container(
+        key,
+        alignment,
+        padding,
+        color,
+        decoration,
+        foregroundDecoration,
+        width,
+        height,
+        constraints,
+        margin,
+        transform,
+        transformAlignment,
+        child,
+        clipBehavior);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(
+            Key? key,
+            Color? color,
+            Color? shadowColor,
+            Color? surfaceTintColor,
+            double? elevation,
+            ShapeBorder? shape,
+            bool borderOnForeground,
+            EdgeInsets? margin,
+            Clip? clipBehavior,
+            Widget? child,
+            bool semanticContainer)?
+        card,
+    TResult? Function(
+            Key? key,
+            Callback? onPressed,
+            Callback? onLongPress,
+            bool autofocus,
+            Clip clipBehavior,
+            Widget child,
+            ButtonStyle? style)?
+        elevatedButton,
+    TResult? Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        filledButton,
+    TResult? Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        filledTonalButton,
+    TResult? Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        outlinedButton,
+    TResult? Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        textButton,
+    TResult? Function(
+            Key? key,
+            double? iconSize,
+            VisualDensity? visualDensity,
+            EdgeInsets? padding,
+            Alignment? alignment,
+            double? splashRadius,
+            Color? color,
+            Color? focusColor,
+            Color? hoverColor,
+            Color? highlightColor,
+            Color? splashColor,
+            Color? disabledColor,
+            Callback onPressed,
+            MouseCursor? mouseCursor,
+            bool autofocus,
+            String? tooltip,
+            bool? enableFeedback,
+            BoxConstraints? constraints,
+            bool? isSelected,
+            Widget? selectedIcon,
+            Widget icon)?
+        iconButton,
+    TResult? Function(
+            Key? key,
+            PreferredSizeWidget? appBar,
+            Widget? body,
+            Widget? floatingActionButton,
+            FloatingActionButtonLocation? floatingActionButtonLocation,
+            List<Widget>? persistentFooterButtons,
+            Alignment persistentFooterAlignment,
+            Widget? drawer,
+            Widget? endDrawer,
+            Widget? bottomNavigationBar,
+            Widget? bottomSheet,
+            Color? backgroundColor,
+            bool? resizeToAvoidBottomInset,
+            bool primary,
+            bool extendBody,
+            bool extendBodyBehindAppBar,
+            Color? drawerScrimColor,
+            double? drawerEdgeDragWidth,
+            bool drawerEnableOpenDragGesture,
+            bool endDrawerEnableOpenDragGesture,
+            String? restorationId)?
+        scaffold,
+    TResult? Function(Key? key, Widget? child, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, bool mini, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButton,
+    TResult? Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButtonExtended,
+    TResult? Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor)? text,
+    TResult? Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior)? container,
+    TResult? Function(Key? key, double? widthFactor, double? heightFactor, Widget child)? center,
+    TResult? Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection)? icon,
+    TResult? Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? column,
+    TResult? Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? row,
+    TResult? Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
+  }) {
+    return container?.call(
+        key,
+        alignment,
+        padding,
+        color,
+        decoration,
+        foregroundDecoration,
+        width,
+        height,
+        constraints,
+        margin,
+        transform,
+        transformAlignment,
+        child,
+        clipBehavior);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(
+            Key? key,
+            Color? color,
+            Color? shadowColor,
+            Color? surfaceTintColor,
+            double? elevation,
+            ShapeBorder? shape,
+            bool borderOnForeground,
+            EdgeInsets? margin,
+            Clip? clipBehavior,
+            Widget? child,
+            bool semanticContainer)?
+        card,
+    TResult Function(
+            Key? key,
+            Callback? onPressed,
+            Callback? onLongPress,
+            bool autofocus,
+            Clip clipBehavior,
+            Widget child,
+            ButtonStyle? style)?
+        elevatedButton,
+    TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        filledButton,
+    TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        filledTonalButton,
+    TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        outlinedButton,
+    TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        textButton,
+    TResult Function(
+            Key? key,
+            double? iconSize,
+            VisualDensity? visualDensity,
+            EdgeInsets? padding,
+            Alignment? alignment,
+            double? splashRadius,
+            Color? color,
+            Color? focusColor,
+            Color? hoverColor,
+            Color? highlightColor,
+            Color? splashColor,
+            Color? disabledColor,
+            Callback onPressed,
+            MouseCursor? mouseCursor,
+            bool autofocus,
+            String? tooltip,
+            bool? enableFeedback,
+            BoxConstraints? constraints,
+            bool? isSelected,
+            Widget? selectedIcon,
+            Widget icon)?
+        iconButton,
+    TResult Function(
+            Key? key,
+            PreferredSizeWidget? appBar,
+            Widget? body,
+            Widget? floatingActionButton,
+            FloatingActionButtonLocation? floatingActionButtonLocation,
+            List<Widget>? persistentFooterButtons,
+            Alignment persistentFooterAlignment,
+            Widget? drawer,
+            Widget? endDrawer,
+            Widget? bottomNavigationBar,
+            Widget? bottomSheet,
+            Color? backgroundColor,
+            bool? resizeToAvoidBottomInset,
+            bool primary,
+            bool extendBody,
+            bool extendBodyBehindAppBar,
+            Color? drawerScrimColor,
+            double? drawerEdgeDragWidth,
+            bool drawerEnableOpenDragGesture,
+            bool endDrawerEnableOpenDragGesture,
+            String? restorationId)?
+        scaffold,
+    TResult Function(Key? key, Widget? child, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, bool mini, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButton,
+    TResult Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButtonExtended,
+    TResult Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor)? text,
+    TResult Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior)? container,
+    TResult Function(Key? key, double? widthFactor, double? heightFactor, Widget child)? center,
+    TResult Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection)? icon,
+    TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? column,
+    TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? row,
+    TResult Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
+    required TResult orElse(),
+  }) {
+    if (container != null) {
+      return container(
+          key,
+          alignment,
+          padding,
+          color,
+          decoration,
+          foregroundDecoration,
+          width,
+          height,
+          constraints,
+          margin,
+          transform,
+          transformAlignment,
+          child,
+          clipBehavior);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(Card value) card,
+    required TResult Function(ElevatedButton value) elevatedButton,
+    required TResult Function(FilledButton value) filledButton,
+    required TResult Function(FilledTonalButton value) filledTonalButton,
+    required TResult Function(OutlinedButton value) outlinedButton,
+    required TResult Function(TextButton value) textButton,
+    required TResult Function(IconButton value) iconButton,
+    required TResult Function(Scaffold value) scaffold,
+    required TResult Function(FloatingActionButton value) floatingActionButton,
+    required TResult Function(FloatingActionButtonExtended value)
+        floatingActionButtonExtended,
+    required TResult Function(Text value) text,
+    required TResult Function(Container value) container,
+    required TResult Function(Center value) center,
+    required TResult Function(Icon value) icon,
+    required TResult Function(Column value) column,
+    required TResult Function(Row value) row,
+    required TResult Function(SizedBox value) sizedBox,
+  }) {
+    return container(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(Card value)? card,
+    TResult? Function(ElevatedButton value)? elevatedButton,
+    TResult? Function(FilledButton value)? filledButton,
+    TResult? Function(FilledTonalButton value)? filledTonalButton,
+    TResult? Function(OutlinedButton value)? outlinedButton,
+    TResult? Function(TextButton value)? textButton,
+    TResult? Function(IconButton value)? iconButton,
+    TResult? Function(Scaffold value)? scaffold,
+    TResult? Function(FloatingActionButton value)? floatingActionButton,
+    TResult? Function(FloatingActionButtonExtended value)?
+        floatingActionButtonExtended,
+    TResult? Function(Text value)? text,
+    TResult? Function(Container value)? container,
+    TResult? Function(Center value)? center,
+    TResult? Function(Icon value)? icon,
+    TResult? Function(Column value)? column,
+    TResult? Function(Row value)? row,
+    TResult? Function(SizedBox value)? sizedBox,
+  }) {
+    return container?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(Card value)? card,
+    TResult Function(ElevatedButton value)? elevatedButton,
+    TResult Function(FilledButton value)? filledButton,
+    TResult Function(FilledTonalButton value)? filledTonalButton,
+    TResult Function(OutlinedButton value)? outlinedButton,
+    TResult Function(TextButton value)? textButton,
+    TResult Function(IconButton value)? iconButton,
+    TResult Function(Scaffold value)? scaffold,
+    TResult Function(FloatingActionButton value)? floatingActionButton,
+    TResult Function(FloatingActionButtonExtended value)?
+        floatingActionButtonExtended,
+    TResult Function(Text value)? text,
+    TResult Function(Container value)? container,
+    TResult Function(Center value)? center,
+    TResult Function(Icon value)? icon,
+    TResult Function(Column value)? column,
+    TResult Function(Row value)? row,
+    TResult Function(SizedBox value)? sizedBox,
+    required TResult orElse(),
+  }) {
+    if (container != null) {
+      return container(this);
+    }
+    return orElse();
+  }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$ContainerToJson(
+      this,
+    );
+  }
+}
+
+abstract class Container implements Widget {
+  const factory Container(
+      {final Key? key,
+      final Alignment? alignment,
+      final EdgeInsets? padding,
+      final Color? color,
+      final Decoration? decoration,
+      final Decoration? foregroundDecoration,
+      final double? width,
+      final double? height,
+      final BoxConstraints? constraints,
+      final EdgeInsets? margin,
+      @matrixConverter final Matrix4? transform,
+      final Alignment? transformAlignment,
+      final Widget? child,
+      final Clip clipBehavior}) = _$Container;
+
+  factory Container.fromJson(Map<String, dynamic> json) = _$Container.fromJson;
+
+  @override
+  Key? get key;
+  Alignment? get alignment;
+  EdgeInsets? get padding;
+  Color? get color;
+  Decoration? get decoration;
+  Decoration? get foregroundDecoration;
+  double? get width;
+  double? get height;
+  BoxConstraints? get constraints;
+  EdgeInsets? get margin;
+  @matrixConverter
+  Matrix4? get transform;
+  Alignment? get transformAlignment;
+  Widget? get child;
+  Clip get clipBehavior;
+  @override
+  @JsonKey(ignore: true)
+  _$$ContainerCopyWith<_$Container> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$CenterCopyWith<$Res> implements $WidgetCopyWith<$Res> {
+  factory _$$CenterCopyWith(_$Center value, $Res Function(_$Center) then) =
+      __$$CenterCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {Key? key, double? widthFactor, double? heightFactor, Widget child});
+
+  @override
+  $KeyCopyWith<$Res>? get key;
+  $WidgetCopyWith<$Res> get child;
+}
+
+/// @nodoc
+class __$$CenterCopyWithImpl<$Res> extends _$WidgetCopyWithImpl<$Res, _$Center>
+    implements _$$CenterCopyWith<$Res> {
+  __$$CenterCopyWithImpl(_$Center _value, $Res Function(_$Center) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? key = freezed,
+    Object? widthFactor = freezed,
+    Object? heightFactor = freezed,
+    Object? child = null,
+  }) {
+    return _then(_$Center(
+      key: freezed == key
+          ? _value.key
+          : key // ignore: cast_nullable_to_non_nullable
+              as Key?,
+      widthFactor: freezed == widthFactor
+          ? _value.widthFactor
+          : widthFactor // ignore: cast_nullable_to_non_nullable
+              as double?,
+      heightFactor: freezed == heightFactor
+          ? _value.heightFactor
+          : heightFactor // ignore: cast_nullable_to_non_nullable
+              as double?,
+      child: null == child
+          ? _value.child
+          : child // ignore: cast_nullable_to_non_nullable
+              as Widget,
+    ));
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $WidgetCopyWith<$Res> get child {
+    return $WidgetCopyWith<$Res>(_value.child, (value) {
+      return _then(_value.copyWith(child: value));
+    });
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$Center implements Center {
+  const _$Center(
+      {this.key,
+      this.widthFactor,
+      this.heightFactor,
+      required this.child,
+      final String? $type})
+      : $type = $type ?? 'center';
+
+  factory _$Center.fromJson(Map<String, dynamic> json) =>
+      _$$CenterFromJson(json);
+
+  @override
+  final Key? key;
+  @override
+  final double? widthFactor;
+  @override
+  final double? heightFactor;
+  @override
+  final Widget child;
+
+  @JsonKey(name: 'runtimeType')
+  final String $type;
+
+  @override
+  String toString() {
+    return 'Widget.center(key: $key, widthFactor: $widthFactor, heightFactor: $heightFactor, child: $child)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$Center &&
+            (identical(other.key, key) || other.key == key) &&
+            (identical(other.widthFactor, widthFactor) ||
+                other.widthFactor == widthFactor) &&
+            (identical(other.heightFactor, heightFactor) ||
+                other.heightFactor == heightFactor) &&
+            (identical(other.child, child) || other.child == child));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, key, widthFactor, heightFactor, child);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$CenterCopyWith<_$Center> get copyWith =>
+      __$$CenterCopyWithImpl<_$Center>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(
+            Key? key,
+            Color? color,
+            Color? shadowColor,
+            Color? surfaceTintColor,
+            double? elevation,
+            ShapeBorder? shape,
+            bool borderOnForeground,
+            EdgeInsets? margin,
+            Clip? clipBehavior,
+            Widget? child,
+            bool semanticContainer)
+        card,
+    required TResult Function(
+            Key? key,
+            Callback? onPressed,
+            Callback? onLongPress,
+            bool autofocus,
+            Clip clipBehavior,
+            Widget child,
+            ButtonStyle? style)
+        elevatedButton,
+    required TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)
+        filledButton,
+    required TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)
+        filledTonalButton,
+    required TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)
+        outlinedButton,
+    required TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)
+        textButton,
+    required TResult Function(
+            Key? key,
+            double? iconSize,
+            VisualDensity? visualDensity,
+            EdgeInsets? padding,
+            Alignment? alignment,
+            double? splashRadius,
+            Color? color,
+            Color? focusColor,
+            Color? hoverColor,
+            Color? highlightColor,
+            Color? splashColor,
+            Color? disabledColor,
+            Callback onPressed,
+            MouseCursor? mouseCursor,
+            bool autofocus,
+            String? tooltip,
+            bool? enableFeedback,
+            BoxConstraints? constraints,
+            bool? isSelected,
+            Widget? selectedIcon,
+            Widget icon)
+        iconButton,
+    required TResult Function(
+            Key? key,
+            PreferredSizeWidget? appBar,
+            Widget? body,
+            Widget? floatingActionButton,
+            FloatingActionButtonLocation? floatingActionButtonLocation,
+            List<Widget>? persistentFooterButtons,
+            Alignment persistentFooterAlignment,
+            Widget? drawer,
+            Widget? endDrawer,
+            Widget? bottomNavigationBar,
+            Widget? bottomSheet,
+            Color? backgroundColor,
+            bool? resizeToAvoidBottomInset,
+            bool primary,
+            bool extendBody,
+            bool extendBodyBehindAppBar,
+            Color? drawerScrimColor,
+            double? drawerEdgeDragWidth,
+            bool drawerEnableOpenDragGesture,
+            bool endDrawerEnableOpenDragGesture,
+            String? restorationId)
+        scaffold,
+    required TResult Function(Key? key, Widget? child, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, bool mini, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback) floatingActionButton,
+    required TResult Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback) floatingActionButtonExtended,
+    required TResult Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor) text,
+    required TResult Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior) container,
+    required TResult Function(Key? key, double? widthFactor, double? heightFactor, Widget child) center,
+    required TResult Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection) icon,
+    required TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children) column,
+    required TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children) row,
+    required TResult Function(Key? key, double? width, double? height, Widget? child) sizedBox,
+  }) {
+    return center(key, widthFactor, heightFactor, child);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(
+            Key? key,
+            Color? color,
+            Color? shadowColor,
+            Color? surfaceTintColor,
+            double? elevation,
+            ShapeBorder? shape,
+            bool borderOnForeground,
+            EdgeInsets? margin,
+            Clip? clipBehavior,
+            Widget? child,
+            bool semanticContainer)?
+        card,
+    TResult? Function(
+            Key? key,
+            Callback? onPressed,
+            Callback? onLongPress,
+            bool autofocus,
+            Clip clipBehavior,
+            Widget child,
+            ButtonStyle? style)?
+        elevatedButton,
+    TResult? Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        filledButton,
+    TResult? Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        filledTonalButton,
+    TResult? Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        outlinedButton,
+    TResult? Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        textButton,
+    TResult? Function(
+            Key? key,
+            double? iconSize,
+            VisualDensity? visualDensity,
+            EdgeInsets? padding,
+            Alignment? alignment,
+            double? splashRadius,
+            Color? color,
+            Color? focusColor,
+            Color? hoverColor,
+            Color? highlightColor,
+            Color? splashColor,
+            Color? disabledColor,
+            Callback onPressed,
+            MouseCursor? mouseCursor,
+            bool autofocus,
+            String? tooltip,
+            bool? enableFeedback,
+            BoxConstraints? constraints,
+            bool? isSelected,
+            Widget? selectedIcon,
+            Widget icon)?
+        iconButton,
+    TResult? Function(
+            Key? key,
+            PreferredSizeWidget? appBar,
+            Widget? body,
+            Widget? floatingActionButton,
+            FloatingActionButtonLocation? floatingActionButtonLocation,
+            List<Widget>? persistentFooterButtons,
+            Alignment persistentFooterAlignment,
+            Widget? drawer,
+            Widget? endDrawer,
+            Widget? bottomNavigationBar,
+            Widget? bottomSheet,
+            Color? backgroundColor,
+            bool? resizeToAvoidBottomInset,
+            bool primary,
+            bool extendBody,
+            bool extendBodyBehindAppBar,
+            Color? drawerScrimColor,
+            double? drawerEdgeDragWidth,
+            bool drawerEnableOpenDragGesture,
+            bool endDrawerEnableOpenDragGesture,
+            String? restorationId)?
+        scaffold,
+    TResult? Function(Key? key, Widget? child, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, bool mini, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButton,
+    TResult? Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButtonExtended,
+    TResult? Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor)? text,
+    TResult? Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior)? container,
+    TResult? Function(Key? key, double? widthFactor, double? heightFactor, Widget child)? center,
+    TResult? Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection)? icon,
+    TResult? Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? column,
+    TResult? Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? row,
+    TResult? Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
+  }) {
+    return center?.call(key, widthFactor, heightFactor, child);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(
+            Key? key,
+            Color? color,
+            Color? shadowColor,
+            Color? surfaceTintColor,
+            double? elevation,
+            ShapeBorder? shape,
+            bool borderOnForeground,
+            EdgeInsets? margin,
+            Clip? clipBehavior,
+            Widget? child,
+            bool semanticContainer)?
+        card,
+    TResult Function(
+            Key? key,
+            Callback? onPressed,
+            Callback? onLongPress,
+            bool autofocus,
+            Clip clipBehavior,
+            Widget child,
+            ButtonStyle? style)?
+        elevatedButton,
+    TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        filledButton,
+    TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        filledTonalButton,
+    TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        outlinedButton,
+    TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        textButton,
+    TResult Function(
+            Key? key,
+            double? iconSize,
+            VisualDensity? visualDensity,
+            EdgeInsets? padding,
+            Alignment? alignment,
+            double? splashRadius,
+            Color? color,
+            Color? focusColor,
+            Color? hoverColor,
+            Color? highlightColor,
+            Color? splashColor,
+            Color? disabledColor,
+            Callback onPressed,
+            MouseCursor? mouseCursor,
+            bool autofocus,
+            String? tooltip,
+            bool? enableFeedback,
+            BoxConstraints? constraints,
+            bool? isSelected,
+            Widget? selectedIcon,
+            Widget icon)?
+        iconButton,
+    TResult Function(
+            Key? key,
+            PreferredSizeWidget? appBar,
+            Widget? body,
+            Widget? floatingActionButton,
+            FloatingActionButtonLocation? floatingActionButtonLocation,
+            List<Widget>? persistentFooterButtons,
+            Alignment persistentFooterAlignment,
+            Widget? drawer,
+            Widget? endDrawer,
+            Widget? bottomNavigationBar,
+            Widget? bottomSheet,
+            Color? backgroundColor,
+            bool? resizeToAvoidBottomInset,
+            bool primary,
+            bool extendBody,
+            bool extendBodyBehindAppBar,
+            Color? drawerScrimColor,
+            double? drawerEdgeDragWidth,
+            bool drawerEnableOpenDragGesture,
+            bool endDrawerEnableOpenDragGesture,
+            String? restorationId)?
+        scaffold,
+    TResult Function(Key? key, Widget? child, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, bool mini, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButton,
+    TResult Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButtonExtended,
+    TResult Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor)? text,
+    TResult Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior)? container,
+    TResult Function(Key? key, double? widthFactor, double? heightFactor, Widget child)? center,
+    TResult Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection)? icon,
+    TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? column,
+    TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? row,
+    TResult Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
+    required TResult orElse(),
+  }) {
+    if (center != null) {
+      return center(key, widthFactor, heightFactor, child);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(Card value) card,
+    required TResult Function(ElevatedButton value) elevatedButton,
+    required TResult Function(FilledButton value) filledButton,
+    required TResult Function(FilledTonalButton value) filledTonalButton,
+    required TResult Function(OutlinedButton value) outlinedButton,
+    required TResult Function(TextButton value) textButton,
+    required TResult Function(IconButton value) iconButton,
+    required TResult Function(Scaffold value) scaffold,
+    required TResult Function(FloatingActionButton value) floatingActionButton,
+    required TResult Function(FloatingActionButtonExtended value)
+        floatingActionButtonExtended,
+    required TResult Function(Text value) text,
+    required TResult Function(Container value) container,
+    required TResult Function(Center value) center,
+    required TResult Function(Icon value) icon,
+    required TResult Function(Column value) column,
+    required TResult Function(Row value) row,
+    required TResult Function(SizedBox value) sizedBox,
+  }) {
+    return center(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(Card value)? card,
+    TResult? Function(ElevatedButton value)? elevatedButton,
+    TResult? Function(FilledButton value)? filledButton,
+    TResult? Function(FilledTonalButton value)? filledTonalButton,
+    TResult? Function(OutlinedButton value)? outlinedButton,
+    TResult? Function(TextButton value)? textButton,
+    TResult? Function(IconButton value)? iconButton,
+    TResult? Function(Scaffold value)? scaffold,
+    TResult? Function(FloatingActionButton value)? floatingActionButton,
+    TResult? Function(FloatingActionButtonExtended value)?
+        floatingActionButtonExtended,
+    TResult? Function(Text value)? text,
+    TResult? Function(Container value)? container,
+    TResult? Function(Center value)? center,
+    TResult? Function(Icon value)? icon,
+    TResult? Function(Column value)? column,
+    TResult? Function(Row value)? row,
+    TResult? Function(SizedBox value)? sizedBox,
+  }) {
+    return center?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(Card value)? card,
+    TResult Function(ElevatedButton value)? elevatedButton,
+    TResult Function(FilledButton value)? filledButton,
+    TResult Function(FilledTonalButton value)? filledTonalButton,
+    TResult Function(OutlinedButton value)? outlinedButton,
+    TResult Function(TextButton value)? textButton,
+    TResult Function(IconButton value)? iconButton,
+    TResult Function(Scaffold value)? scaffold,
+    TResult Function(FloatingActionButton value)? floatingActionButton,
+    TResult Function(FloatingActionButtonExtended value)?
+        floatingActionButtonExtended,
+    TResult Function(Text value)? text,
+    TResult Function(Container value)? container,
+    TResult Function(Center value)? center,
+    TResult Function(Icon value)? icon,
+    TResult Function(Column value)? column,
+    TResult Function(Row value)? row,
+    TResult Function(SizedBox value)? sizedBox,
+    required TResult orElse(),
+  }) {
+    if (center != null) {
+      return center(this);
+    }
+    return orElse();
+  }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$CenterToJson(
+      this,
+    );
+  }
+}
+
+abstract class Center implements Widget {
+  const factory Center(
+      {final Key? key,
+      final double? widthFactor,
+      final double? heightFactor,
+      required final Widget child}) = _$Center;
+
+  factory Center.fromJson(Map<String, dynamic> json) = _$Center.fromJson;
+
+  @override
+  Key? get key;
+  double? get widthFactor;
+  double? get heightFactor;
+  Widget get child;
+  @override
+  @JsonKey(ignore: true)
+  _$$CenterCopyWith<_$Center> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$IconCopyWith<$Res> implements $WidgetCopyWith<$Res> {
+  factory _$$IconCopyWith(_$Icon value, $Res Function(_$Icon) then) =
+      __$$IconCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {IconData? icon,
+      Key? key,
+      double? size,
+      double? fill,
+      double? weight,
+      double? grade,
+      double? opticalSize,
+      Color? color,
+      List<Shadow>? shadows,
+      String? semanticLabel,
+      TextDirection? textDirection});
+
+  $IconDataCopyWith<$Res>? get icon;
+  @override
+  $KeyCopyWith<$Res>? get key;
+  $ColorCopyWith<$Res>? get color;
+}
+
+/// @nodoc
+class __$$IconCopyWithImpl<$Res> extends _$WidgetCopyWithImpl<$Res, _$Icon>
+    implements _$$IconCopyWith<$Res> {
+  __$$IconCopyWithImpl(_$Icon _value, $Res Function(_$Icon) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? icon = freezed,
+    Object? key = freezed,
+    Object? size = freezed,
+    Object? fill = freezed,
+    Object? weight = freezed,
+    Object? grade = freezed,
+    Object? opticalSize = freezed,
+    Object? color = freezed,
+    Object? shadows = freezed,
+    Object? semanticLabel = freezed,
+    Object? textDirection = freezed,
+  }) {
+    return _then(_$Icon(
+      freezed == icon
+          ? _value.icon
+          : icon // ignore: cast_nullable_to_non_nullable
+              as IconData?,
+      key: freezed == key
+          ? _value.key
+          : key // ignore: cast_nullable_to_non_nullable
+              as Key?,
+      size: freezed == size
+          ? _value.size
+          : size // ignore: cast_nullable_to_non_nullable
+              as double?,
+      fill: freezed == fill
+          ? _value.fill
+          : fill // ignore: cast_nullable_to_non_nullable
+              as double?,
+      weight: freezed == weight
+          ? _value.weight
+          : weight // ignore: cast_nullable_to_non_nullable
+              as double?,
+      grade: freezed == grade
+          ? _value.grade
+          : grade // ignore: cast_nullable_to_non_nullable
+              as double?,
+      opticalSize: freezed == opticalSize
+          ? _value.opticalSize
+          : opticalSize // ignore: cast_nullable_to_non_nullable
+              as double?,
+      color: freezed == color
+          ? _value.color
+          : color // ignore: cast_nullable_to_non_nullable
+              as Color?,
+      shadows: freezed == shadows
+          ? _value._shadows
+          : shadows // ignore: cast_nullable_to_non_nullable
+              as List<Shadow>?,
+      semanticLabel: freezed == semanticLabel
+          ? _value.semanticLabel
+          : semanticLabel // ignore: cast_nullable_to_non_nullable
+              as String?,
+      textDirection: freezed == textDirection
+          ? _value.textDirection
+          : textDirection // ignore: cast_nullable_to_non_nullable
+              as TextDirection?,
+    ));
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $IconDataCopyWith<$Res>? get icon {
+    if (_value.icon == null) {
+      return null;
+    }
+
+    return $IconDataCopyWith<$Res>(_value.icon!, (value) {
+      return _then(_value.copyWith(icon: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ColorCopyWith<$Res>? get color {
+    if (_value.color == null) {
+      return null;
+    }
+
+    return $ColorCopyWith<$Res>(_value.color!, (value) {
+      return _then(_value.copyWith(color: value));
+    });
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$Icon implements Icon {
+  const _$Icon(this.icon,
+      {this.key,
+      this.size,
+      this.fill,
+      this.weight,
+      this.grade,
+      this.opticalSize,
+      this.color,
+      final List<Shadow>? shadows,
+      this.semanticLabel,
+      this.textDirection,
+      final String? $type})
+      : _shadows = shadows,
+        $type = $type ?? 'icon';
+
+  factory _$Icon.fromJson(Map<String, dynamic> json) => _$$IconFromJson(json);
+
+  @override
+  final IconData? icon;
+  @override
+  final Key? key;
+  @override
+  final double? size;
+  @override
+  final double? fill;
+  @override
+  final double? weight;
+  @override
+  final double? grade;
+  @override
+  final double? opticalSize;
+  @override
+  final Color? color;
+  final List<Shadow>? _shadows;
+  @override
+  List<Shadow>? get shadows {
+    final value = _shadows;
+    if (value == null) return null;
+    if (_shadows is EqualUnmodifiableListView) return _shadows;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  final String? semanticLabel;
+  @override
+  final TextDirection? textDirection;
+
+  @JsonKey(name: 'runtimeType')
+  final String $type;
+
+  @override
+  String toString() {
+    return 'Widget.icon(icon: $icon, key: $key, size: $size, fill: $fill, weight: $weight, grade: $grade, opticalSize: $opticalSize, color: $color, shadows: $shadows, semanticLabel: $semanticLabel, textDirection: $textDirection)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$Icon &&
+            (identical(other.icon, icon) || other.icon == icon) &&
+            (identical(other.key, key) || other.key == key) &&
+            (identical(other.size, size) || other.size == size) &&
+            (identical(other.fill, fill) || other.fill == fill) &&
+            (identical(other.weight, weight) || other.weight == weight) &&
+            (identical(other.grade, grade) || other.grade == grade) &&
+            (identical(other.opticalSize, opticalSize) ||
+                other.opticalSize == opticalSize) &&
+            (identical(other.color, color) || other.color == color) &&
+            const DeepCollectionEquality().equals(other._shadows, _shadows) &&
+            (identical(other.semanticLabel, semanticLabel) ||
+                other.semanticLabel == semanticLabel) &&
+            (identical(other.textDirection, textDirection) ||
+                other.textDirection == textDirection));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      icon,
+      key,
+      size,
+      fill,
+      weight,
+      grade,
+      opticalSize,
+      color,
+      const DeepCollectionEquality().hash(_shadows),
+      semanticLabel,
+      textDirection);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$IconCopyWith<_$Icon> get copyWith =>
+      __$$IconCopyWithImpl<_$Icon>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(
+            Key? key,
+            Color? color,
+            Color? shadowColor,
+            Color? surfaceTintColor,
+            double? elevation,
+            ShapeBorder? shape,
+            bool borderOnForeground,
+            EdgeInsets? margin,
+            Clip? clipBehavior,
+            Widget? child,
+            bool semanticContainer)
+        card,
+    required TResult Function(
+            Key? key,
+            Callback? onPressed,
+            Callback? onLongPress,
+            bool autofocus,
+            Clip clipBehavior,
+            Widget child,
+            ButtonStyle? style)
+        elevatedButton,
+    required TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)
+        filledButton,
+    required TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)
+        filledTonalButton,
+    required TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)
+        outlinedButton,
+    required TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)
+        textButton,
+    required TResult Function(
+            Key? key,
+            double? iconSize,
+            VisualDensity? visualDensity,
+            EdgeInsets? padding,
+            Alignment? alignment,
+            double? splashRadius,
+            Color? color,
+            Color? focusColor,
+            Color? hoverColor,
+            Color? highlightColor,
+            Color? splashColor,
+            Color? disabledColor,
+            Callback onPressed,
+            MouseCursor? mouseCursor,
+            bool autofocus,
+            String? tooltip,
+            bool? enableFeedback,
+            BoxConstraints? constraints,
+            bool? isSelected,
+            Widget? selectedIcon,
+            Widget icon)
+        iconButton,
+    required TResult Function(
+            Key? key,
+            PreferredSizeWidget? appBar,
+            Widget? body,
+            Widget? floatingActionButton,
+            FloatingActionButtonLocation? floatingActionButtonLocation,
+            List<Widget>? persistentFooterButtons,
+            Alignment persistentFooterAlignment,
+            Widget? drawer,
+            Widget? endDrawer,
+            Widget? bottomNavigationBar,
+            Widget? bottomSheet,
+            Color? backgroundColor,
+            bool? resizeToAvoidBottomInset,
+            bool primary,
+            bool extendBody,
+            bool extendBodyBehindAppBar,
+            Color? drawerScrimColor,
+            double? drawerEdgeDragWidth,
+            bool drawerEnableOpenDragGesture,
+            bool endDrawerEnableOpenDragGesture,
+            String? restorationId)
+        scaffold,
+    required TResult Function(Key? key, Widget? child, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, bool mini, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback) floatingActionButton,
+    required TResult Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback) floatingActionButtonExtended,
+    required TResult Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor) text,
+    required TResult Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior) container,
+    required TResult Function(Key? key, double? widthFactor, double? heightFactor, Widget child) center,
+    required TResult Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection) icon,
+    required TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children) column,
+    required TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children) row,
+    required TResult Function(Key? key, double? width, double? height, Widget? child) sizedBox,
+  }) {
+    return icon(this.icon, key, size, fill, weight, grade, opticalSize, color,
+        shadows, semanticLabel, textDirection);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(
+            Key? key,
+            Color? color,
+            Color? shadowColor,
+            Color? surfaceTintColor,
+            double? elevation,
+            ShapeBorder? shape,
+            bool borderOnForeground,
+            EdgeInsets? margin,
+            Clip? clipBehavior,
+            Widget? child,
+            bool semanticContainer)?
+        card,
+    TResult? Function(
+            Key? key,
+            Callback? onPressed,
+            Callback? onLongPress,
+            bool autofocus,
+            Clip clipBehavior,
+            Widget child,
+            ButtonStyle? style)?
+        elevatedButton,
+    TResult? Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        filledButton,
+    TResult? Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        filledTonalButton,
+    TResult? Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        outlinedButton,
+    TResult? Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        textButton,
+    TResult? Function(
+            Key? key,
+            double? iconSize,
+            VisualDensity? visualDensity,
+            EdgeInsets? padding,
+            Alignment? alignment,
+            double? splashRadius,
+            Color? color,
+            Color? focusColor,
+            Color? hoverColor,
+            Color? highlightColor,
+            Color? splashColor,
+            Color? disabledColor,
+            Callback onPressed,
+            MouseCursor? mouseCursor,
+            bool autofocus,
+            String? tooltip,
+            bool? enableFeedback,
+            BoxConstraints? constraints,
+            bool? isSelected,
+            Widget? selectedIcon,
+            Widget icon)?
+        iconButton,
+    TResult? Function(
+            Key? key,
+            PreferredSizeWidget? appBar,
+            Widget? body,
+            Widget? floatingActionButton,
+            FloatingActionButtonLocation? floatingActionButtonLocation,
+            List<Widget>? persistentFooterButtons,
+            Alignment persistentFooterAlignment,
+            Widget? drawer,
+            Widget? endDrawer,
+            Widget? bottomNavigationBar,
+            Widget? bottomSheet,
+            Color? backgroundColor,
+            bool? resizeToAvoidBottomInset,
+            bool primary,
+            bool extendBody,
+            bool extendBodyBehindAppBar,
+            Color? drawerScrimColor,
+            double? drawerEdgeDragWidth,
+            bool drawerEnableOpenDragGesture,
+            bool endDrawerEnableOpenDragGesture,
+            String? restorationId)?
+        scaffold,
+    TResult? Function(Key? key, Widget? child, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, bool mini, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButton,
+    TResult? Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButtonExtended,
+    TResult? Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor)? text,
+    TResult? Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior)? container,
+    TResult? Function(Key? key, double? widthFactor, double? heightFactor, Widget child)? center,
+    TResult? Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection)? icon,
+    TResult? Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? column,
+    TResult? Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? row,
+    TResult? Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
+  }) {
+    return icon?.call(this.icon, key, size, fill, weight, grade, opticalSize,
+        color, shadows, semanticLabel, textDirection);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(
+            Key? key,
+            Color? color,
+            Color? shadowColor,
+            Color? surfaceTintColor,
+            double? elevation,
+            ShapeBorder? shape,
+            bool borderOnForeground,
+            EdgeInsets? margin,
+            Clip? clipBehavior,
+            Widget? child,
+            bool semanticContainer)?
+        card,
+    TResult Function(
+            Key? key,
+            Callback? onPressed,
+            Callback? onLongPress,
+            bool autofocus,
+            Clip clipBehavior,
+            Widget child,
+            ButtonStyle? style)?
+        elevatedButton,
+    TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        filledButton,
+    TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        filledTonalButton,
+    TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        outlinedButton,
+    TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        textButton,
+    TResult Function(
+            Key? key,
+            double? iconSize,
+            VisualDensity? visualDensity,
+            EdgeInsets? padding,
+            Alignment? alignment,
+            double? splashRadius,
+            Color? color,
+            Color? focusColor,
+            Color? hoverColor,
+            Color? highlightColor,
+            Color? splashColor,
+            Color? disabledColor,
+            Callback onPressed,
+            MouseCursor? mouseCursor,
+            bool autofocus,
+            String? tooltip,
+            bool? enableFeedback,
+            BoxConstraints? constraints,
+            bool? isSelected,
+            Widget? selectedIcon,
+            Widget icon)?
+        iconButton,
+    TResult Function(
+            Key? key,
+            PreferredSizeWidget? appBar,
+            Widget? body,
+            Widget? floatingActionButton,
+            FloatingActionButtonLocation? floatingActionButtonLocation,
+            List<Widget>? persistentFooterButtons,
+            Alignment persistentFooterAlignment,
+            Widget? drawer,
+            Widget? endDrawer,
+            Widget? bottomNavigationBar,
+            Widget? bottomSheet,
+            Color? backgroundColor,
+            bool? resizeToAvoidBottomInset,
+            bool primary,
+            bool extendBody,
+            bool extendBodyBehindAppBar,
+            Color? drawerScrimColor,
+            double? drawerEdgeDragWidth,
+            bool drawerEnableOpenDragGesture,
+            bool endDrawerEnableOpenDragGesture,
+            String? restorationId)?
+        scaffold,
+    TResult Function(Key? key, Widget? child, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, bool mini, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButton,
+    TResult Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButtonExtended,
+    TResult Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor)? text,
+    TResult Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior)? container,
+    TResult Function(Key? key, double? widthFactor, double? heightFactor, Widget child)? center,
+    TResult Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection)? icon,
+    TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? column,
+    TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? row,
+    TResult Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
+    required TResult orElse(),
+  }) {
+    if (icon != null) {
+      return icon(this.icon, key, size, fill, weight, grade, opticalSize, color,
+          shadows, semanticLabel, textDirection);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(Card value) card,
+    required TResult Function(ElevatedButton value) elevatedButton,
+    required TResult Function(FilledButton value) filledButton,
+    required TResult Function(FilledTonalButton value) filledTonalButton,
+    required TResult Function(OutlinedButton value) outlinedButton,
+    required TResult Function(TextButton value) textButton,
+    required TResult Function(IconButton value) iconButton,
+    required TResult Function(Scaffold value) scaffold,
+    required TResult Function(FloatingActionButton value) floatingActionButton,
+    required TResult Function(FloatingActionButtonExtended value)
+        floatingActionButtonExtended,
+    required TResult Function(Text value) text,
+    required TResult Function(Container value) container,
+    required TResult Function(Center value) center,
+    required TResult Function(Icon value) icon,
+    required TResult Function(Column value) column,
+    required TResult Function(Row value) row,
+    required TResult Function(SizedBox value) sizedBox,
+  }) {
+    return icon(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(Card value)? card,
+    TResult? Function(ElevatedButton value)? elevatedButton,
+    TResult? Function(FilledButton value)? filledButton,
+    TResult? Function(FilledTonalButton value)? filledTonalButton,
+    TResult? Function(OutlinedButton value)? outlinedButton,
+    TResult? Function(TextButton value)? textButton,
+    TResult? Function(IconButton value)? iconButton,
+    TResult? Function(Scaffold value)? scaffold,
+    TResult? Function(FloatingActionButton value)? floatingActionButton,
+    TResult? Function(FloatingActionButtonExtended value)?
+        floatingActionButtonExtended,
+    TResult? Function(Text value)? text,
+    TResult? Function(Container value)? container,
+    TResult? Function(Center value)? center,
+    TResult? Function(Icon value)? icon,
+    TResult? Function(Column value)? column,
+    TResult? Function(Row value)? row,
+    TResult? Function(SizedBox value)? sizedBox,
+  }) {
+    return icon?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(Card value)? card,
+    TResult Function(ElevatedButton value)? elevatedButton,
+    TResult Function(FilledButton value)? filledButton,
+    TResult Function(FilledTonalButton value)? filledTonalButton,
+    TResult Function(OutlinedButton value)? outlinedButton,
+    TResult Function(TextButton value)? textButton,
+    TResult Function(IconButton value)? iconButton,
+    TResult Function(Scaffold value)? scaffold,
+    TResult Function(FloatingActionButton value)? floatingActionButton,
+    TResult Function(FloatingActionButtonExtended value)?
+        floatingActionButtonExtended,
+    TResult Function(Text value)? text,
+    TResult Function(Container value)? container,
+    TResult Function(Center value)? center,
+    TResult Function(Icon value)? icon,
+    TResult Function(Column value)? column,
+    TResult Function(Row value)? row,
+    TResult Function(SizedBox value)? sizedBox,
+    required TResult orElse(),
+  }) {
+    if (icon != null) {
+      return icon(this);
+    }
+    return orElse();
+  }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$IconToJson(
+      this,
+    );
+  }
+}
+
+abstract class Icon implements Widget {
+  const factory Icon(final IconData? icon,
+      {final Key? key,
+      final double? size,
+      final double? fill,
+      final double? weight,
+      final double? grade,
+      final double? opticalSize,
+      final Color? color,
+      final List<Shadow>? shadows,
+      final String? semanticLabel,
+      final TextDirection? textDirection}) = _$Icon;
+
+  factory Icon.fromJson(Map<String, dynamic> json) = _$Icon.fromJson;
+
+  IconData? get icon;
+  @override
+  Key? get key;
+  double? get size;
+  double? get fill;
+  double? get weight;
+  double? get grade;
+  double? get opticalSize;
+  Color? get color;
+  List<Shadow>? get shadows;
+  String? get semanticLabel;
+  TextDirection? get textDirection;
+  @override
+  @JsonKey(ignore: true)
+  _$$IconCopyWith<_$Icon> get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$ColumnCopyWith<$Res> implements $WidgetCopyWith<$Res> {
+  factory _$$ColumnCopyWith(_$Column value, $Res Function(_$Column) then) =
+      __$$ColumnCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {Key? key,
+      MainAxisAlignment mainAxisAlignment,
+      MainAxisSize mainAxisSize,
+      CrossAxisAlignment crossAxisAlignment,
+      TextDirection? textDirection,
+      VerticalDirection verticalDirection,
+      TextBaseline? textBaseline,
+      List<Widget> children});
+
+  @override
+  $KeyCopyWith<$Res>? get key;
+}
+
+/// @nodoc
+class __$$ColumnCopyWithImpl<$Res> extends _$WidgetCopyWithImpl<$Res, _$Column>
+    implements _$$ColumnCopyWith<$Res> {
+  __$$ColumnCopyWithImpl(_$Column _value, $Res Function(_$Column) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? key = freezed,
+    Object? mainAxisAlignment = null,
+    Object? mainAxisSize = null,
+    Object? crossAxisAlignment = null,
+    Object? textDirection = freezed,
+    Object? verticalDirection = null,
+    Object? textBaseline = freezed,
+    Object? children = null,
+  }) {
+    return _then(_$Column(
+      key: freezed == key
+          ? _value.key
+          : key // ignore: cast_nullable_to_non_nullable
+              as Key?,
+      mainAxisAlignment: null == mainAxisAlignment
+          ? _value.mainAxisAlignment
+          : mainAxisAlignment // ignore: cast_nullable_to_non_nullable
+              as MainAxisAlignment,
+      mainAxisSize: null == mainAxisSize
+          ? _value.mainAxisSize
+          : mainAxisSize // ignore: cast_nullable_to_non_nullable
+              as MainAxisSize,
+      crossAxisAlignment: null == crossAxisAlignment
+          ? _value.crossAxisAlignment
+          : crossAxisAlignment // ignore: cast_nullable_to_non_nullable
+              as CrossAxisAlignment,
+      textDirection: freezed == textDirection
+          ? _value.textDirection
+          : textDirection // ignore: cast_nullable_to_non_nullable
+              as TextDirection?,
+      verticalDirection: null == verticalDirection
+          ? _value.verticalDirection
+          : verticalDirection // ignore: cast_nullable_to_non_nullable
+              as VerticalDirection,
+      textBaseline: freezed == textBaseline
+          ? _value.textBaseline
+          : textBaseline // ignore: cast_nullable_to_non_nullable
+              as TextBaseline?,
+      children: null == children
+          ? _value._children
+          : children // ignore: cast_nullable_to_non_nullable
+              as List<Widget>,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$Column implements Column {
+  const _$Column(
+      {this.key,
+      this.mainAxisAlignment = MainAxisAlignment.start,
+      this.mainAxisSize = MainAxisSize.max,
+      this.crossAxisAlignment = CrossAxisAlignment.center,
+      this.textDirection,
+      this.verticalDirection = VerticalDirection.down,
+      this.textBaseline,
+      final List<Widget> children = const [],
+      final String? $type})
+      : _children = children,
+        $type = $type ?? 'column';
+
+  factory _$Column.fromJson(Map<String, dynamic> json) =>
+      _$$ColumnFromJson(json);
+
+  @override
+  final Key? key;
+  @override
+  @JsonKey()
+  final MainAxisAlignment mainAxisAlignment;
+  @override
+  @JsonKey()
+  final MainAxisSize mainAxisSize;
+  @override
+  @JsonKey()
+  final CrossAxisAlignment crossAxisAlignment;
+  @override
+  final TextDirection? textDirection;
+  @override
+  @JsonKey()
+  final VerticalDirection verticalDirection;
+  @override
+  final TextBaseline? textBaseline;
+  final List<Widget> _children;
+  @override
+  @JsonKey()
+  List<Widget> get children {
+    if (_children is EqualUnmodifiableListView) return _children;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_children);
+  }
+
+  @JsonKey(name: 'runtimeType')
+  final String $type;
+
+  @override
+  String toString() {
+    return 'Widget.column(key: $key, mainAxisAlignment: $mainAxisAlignment, mainAxisSize: $mainAxisSize, crossAxisAlignment: $crossAxisAlignment, textDirection: $textDirection, verticalDirection: $verticalDirection, textBaseline: $textBaseline, children: $children)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$Column &&
+            (identical(other.key, key) || other.key == key) &&
+            (identical(other.mainAxisAlignment, mainAxisAlignment) ||
+                other.mainAxisAlignment == mainAxisAlignment) &&
+            (identical(other.mainAxisSize, mainAxisSize) ||
+                other.mainAxisSize == mainAxisSize) &&
+            (identical(other.crossAxisAlignment, crossAxisAlignment) ||
+                other.crossAxisAlignment == crossAxisAlignment) &&
+            (identical(other.textDirection, textDirection) ||
+                other.textDirection == textDirection) &&
+            (identical(other.verticalDirection, verticalDirection) ||
+                other.verticalDirection == verticalDirection) &&
+            (identical(other.textBaseline, textBaseline) ||
+                other.textBaseline == textBaseline) &&
+            const DeepCollectionEquality().equals(other._children, _children));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      key,
+      mainAxisAlignment,
+      mainAxisSize,
+      crossAxisAlignment,
+      textDirection,
+      verticalDirection,
+      textBaseline,
+      const DeepCollectionEquality().hash(_children));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ColumnCopyWith<_$Column> get copyWith =>
+      __$$ColumnCopyWithImpl<_$Column>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(
+            Key? key,
+            Color? color,
+            Color? shadowColor,
+            Color? surfaceTintColor,
+            double? elevation,
+            ShapeBorder? shape,
+            bool borderOnForeground,
+            EdgeInsets? margin,
+            Clip? clipBehavior,
+            Widget? child,
+            bool semanticContainer)
+        card,
+    required TResult Function(
+            Key? key,
+            Callback? onPressed,
+            Callback? onLongPress,
+            bool autofocus,
+            Clip clipBehavior,
+            Widget child,
+            ButtonStyle? style)
+        elevatedButton,
+    required TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)
+        filledButton,
+    required TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)
+        filledTonalButton,
+    required TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)
+        outlinedButton,
+    required TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)
+        textButton,
+    required TResult Function(
+            Key? key,
+            double? iconSize,
+            VisualDensity? visualDensity,
+            EdgeInsets? padding,
+            Alignment? alignment,
+            double? splashRadius,
+            Color? color,
+            Color? focusColor,
+            Color? hoverColor,
+            Color? highlightColor,
+            Color? splashColor,
+            Color? disabledColor,
+            Callback onPressed,
+            MouseCursor? mouseCursor,
+            bool autofocus,
+            String? tooltip,
+            bool? enableFeedback,
+            BoxConstraints? constraints,
+            bool? isSelected,
+            Widget? selectedIcon,
+            Widget icon)
+        iconButton,
+    required TResult Function(
+            Key? key,
+            PreferredSizeWidget? appBar,
+            Widget? body,
+            Widget? floatingActionButton,
+            FloatingActionButtonLocation? floatingActionButtonLocation,
+            List<Widget>? persistentFooterButtons,
+            Alignment persistentFooterAlignment,
+            Widget? drawer,
+            Widget? endDrawer,
+            Widget? bottomNavigationBar,
+            Widget? bottomSheet,
+            Color? backgroundColor,
+            bool? resizeToAvoidBottomInset,
+            bool primary,
+            bool extendBody,
+            bool extendBodyBehindAppBar,
+            Color? drawerScrimColor,
+            double? drawerEdgeDragWidth,
+            bool drawerEnableOpenDragGesture,
+            bool endDrawerEnableOpenDragGesture,
+            String? restorationId)
+        scaffold,
+    required TResult Function(Key? key, Widget? child, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, bool mini, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback) floatingActionButton,
+    required TResult Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback) floatingActionButtonExtended,
+    required TResult Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor) text,
+    required TResult Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior) container,
+    required TResult Function(Key? key, double? widthFactor, double? heightFactor, Widget child) center,
+    required TResult Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection) icon,
+    required TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children) column,
+    required TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children) row,
+    required TResult Function(Key? key, double? width, double? height, Widget? child) sizedBox,
+  }) {
+    return column(key, mainAxisAlignment, mainAxisSize, crossAxisAlignment,
+        textDirection, verticalDirection, textBaseline, children);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(
+            Key? key,
+            Color? color,
+            Color? shadowColor,
+            Color? surfaceTintColor,
+            double? elevation,
+            ShapeBorder? shape,
+            bool borderOnForeground,
+            EdgeInsets? margin,
+            Clip? clipBehavior,
+            Widget? child,
+            bool semanticContainer)?
+        card,
+    TResult? Function(
+            Key? key,
+            Callback? onPressed,
+            Callback? onLongPress,
+            bool autofocus,
+            Clip clipBehavior,
+            Widget child,
+            ButtonStyle? style)?
+        elevatedButton,
+    TResult? Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        filledButton,
+    TResult? Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        filledTonalButton,
+    TResult? Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        outlinedButton,
+    TResult? Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        textButton,
+    TResult? Function(
+            Key? key,
+            double? iconSize,
+            VisualDensity? visualDensity,
+            EdgeInsets? padding,
+            Alignment? alignment,
+            double? splashRadius,
+            Color? color,
+            Color? focusColor,
+            Color? hoverColor,
+            Color? highlightColor,
+            Color? splashColor,
+            Color? disabledColor,
+            Callback onPressed,
+            MouseCursor? mouseCursor,
+            bool autofocus,
+            String? tooltip,
+            bool? enableFeedback,
+            BoxConstraints? constraints,
+            bool? isSelected,
+            Widget? selectedIcon,
+            Widget icon)?
+        iconButton,
+    TResult? Function(
+            Key? key,
+            PreferredSizeWidget? appBar,
+            Widget? body,
+            Widget? floatingActionButton,
+            FloatingActionButtonLocation? floatingActionButtonLocation,
+            List<Widget>? persistentFooterButtons,
+            Alignment persistentFooterAlignment,
+            Widget? drawer,
+            Widget? endDrawer,
+            Widget? bottomNavigationBar,
+            Widget? bottomSheet,
+            Color? backgroundColor,
+            bool? resizeToAvoidBottomInset,
+            bool primary,
+            bool extendBody,
+            bool extendBodyBehindAppBar,
+            Color? drawerScrimColor,
+            double? drawerEdgeDragWidth,
+            bool drawerEnableOpenDragGesture,
+            bool endDrawerEnableOpenDragGesture,
+            String? restorationId)?
+        scaffold,
+    TResult? Function(Key? key, Widget? child, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, bool mini, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButton,
+    TResult? Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButtonExtended,
+    TResult? Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor)? text,
+    TResult? Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior)? container,
+    TResult? Function(Key? key, double? widthFactor, double? heightFactor, Widget child)? center,
+    TResult? Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection)? icon,
+    TResult? Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? column,
+    TResult? Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? row,
+    TResult? Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
+  }) {
+    return column?.call(
+        key,
+        mainAxisAlignment,
+        mainAxisSize,
+        crossAxisAlignment,
+        textDirection,
+        verticalDirection,
+        textBaseline,
+        children);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(
+            Key? key,
+            Color? color,
+            Color? shadowColor,
+            Color? surfaceTintColor,
+            double? elevation,
+            ShapeBorder? shape,
+            bool borderOnForeground,
+            EdgeInsets? margin,
+            Clip? clipBehavior,
+            Widget? child,
+            bool semanticContainer)?
+        card,
+    TResult Function(
+            Key? key,
+            Callback? onPressed,
+            Callback? onLongPress,
+            bool autofocus,
+            Clip clipBehavior,
+            Widget child,
+            ButtonStyle? style)?
+        elevatedButton,
+    TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        filledButton,
+    TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        filledTonalButton,
+    TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        outlinedButton,
+    TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        textButton,
+    TResult Function(
+            Key? key,
+            double? iconSize,
+            VisualDensity? visualDensity,
+            EdgeInsets? padding,
+            Alignment? alignment,
+            double? splashRadius,
+            Color? color,
+            Color? focusColor,
+            Color? hoverColor,
+            Color? highlightColor,
+            Color? splashColor,
+            Color? disabledColor,
+            Callback onPressed,
+            MouseCursor? mouseCursor,
+            bool autofocus,
+            String? tooltip,
+            bool? enableFeedback,
+            BoxConstraints? constraints,
+            bool? isSelected,
+            Widget? selectedIcon,
+            Widget icon)?
+        iconButton,
+    TResult Function(
+            Key? key,
+            PreferredSizeWidget? appBar,
+            Widget? body,
+            Widget? floatingActionButton,
+            FloatingActionButtonLocation? floatingActionButtonLocation,
+            List<Widget>? persistentFooterButtons,
+            Alignment persistentFooterAlignment,
+            Widget? drawer,
+            Widget? endDrawer,
+            Widget? bottomNavigationBar,
+            Widget? bottomSheet,
+            Color? backgroundColor,
+            bool? resizeToAvoidBottomInset,
+            bool primary,
+            bool extendBody,
+            bool extendBodyBehindAppBar,
+            Color? drawerScrimColor,
+            double? drawerEdgeDragWidth,
+            bool drawerEnableOpenDragGesture,
+            bool endDrawerEnableOpenDragGesture,
+            String? restorationId)?
+        scaffold,
+    TResult Function(Key? key, Widget? child, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, bool mini, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButton,
+    TResult Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButtonExtended,
+    TResult Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor)? text,
+    TResult Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior)? container,
+    TResult Function(Key? key, double? widthFactor, double? heightFactor, Widget child)? center,
+    TResult Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection)? icon,
+    TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? column,
+    TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? row,
+    TResult Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
+    required TResult orElse(),
+  }) {
+    if (column != null) {
+      return column(key, mainAxisAlignment, mainAxisSize, crossAxisAlignment,
+          textDirection, verticalDirection, textBaseline, children);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(Card value) card,
+    required TResult Function(ElevatedButton value) elevatedButton,
+    required TResult Function(FilledButton value) filledButton,
+    required TResult Function(FilledTonalButton value) filledTonalButton,
+    required TResult Function(OutlinedButton value) outlinedButton,
+    required TResult Function(TextButton value) textButton,
+    required TResult Function(IconButton value) iconButton,
+    required TResult Function(Scaffold value) scaffold,
+    required TResult Function(FloatingActionButton value) floatingActionButton,
+    required TResult Function(FloatingActionButtonExtended value)
+        floatingActionButtonExtended,
+    required TResult Function(Text value) text,
+    required TResult Function(Container value) container,
+    required TResult Function(Center value) center,
+    required TResult Function(Icon value) icon,
+    required TResult Function(Column value) column,
+    required TResult Function(Row value) row,
+    required TResult Function(SizedBox value) sizedBox,
+  }) {
+    return column(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(Card value)? card,
+    TResult? Function(ElevatedButton value)? elevatedButton,
+    TResult? Function(FilledButton value)? filledButton,
+    TResult? Function(FilledTonalButton value)? filledTonalButton,
+    TResult? Function(OutlinedButton value)? outlinedButton,
+    TResult? Function(TextButton value)? textButton,
+    TResult? Function(IconButton value)? iconButton,
+    TResult? Function(Scaffold value)? scaffold,
+    TResult? Function(FloatingActionButton value)? floatingActionButton,
+    TResult? Function(FloatingActionButtonExtended value)?
+        floatingActionButtonExtended,
+    TResult? Function(Text value)? text,
+    TResult? Function(Container value)? container,
+    TResult? Function(Center value)? center,
+    TResult? Function(Icon value)? icon,
+    TResult? Function(Column value)? column,
+    TResult? Function(Row value)? row,
+    TResult? Function(SizedBox value)? sizedBox,
+  }) {
+    return column?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(Card value)? card,
+    TResult Function(ElevatedButton value)? elevatedButton,
+    TResult Function(FilledButton value)? filledButton,
+    TResult Function(FilledTonalButton value)? filledTonalButton,
+    TResult Function(OutlinedButton value)? outlinedButton,
+    TResult Function(TextButton value)? textButton,
+    TResult Function(IconButton value)? iconButton,
+    TResult Function(Scaffold value)? scaffold,
+    TResult Function(FloatingActionButton value)? floatingActionButton,
+    TResult Function(FloatingActionButtonExtended value)?
+        floatingActionButtonExtended,
+    TResult Function(Text value)? text,
+    TResult Function(Container value)? container,
+    TResult Function(Center value)? center,
+    TResult Function(Icon value)? icon,
+    TResult Function(Column value)? column,
+    TResult Function(Row value)? row,
+    TResult Function(SizedBox value)? sizedBox,
+    required TResult orElse(),
+  }) {
+    if (column != null) {
+      return column(this);
+    }
+    return orElse();
+  }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$ColumnToJson(
+      this,
+    );
+  }
+}
+
+abstract class Column implements Widget {
+  const factory Column(
+      {final Key? key,
+      final MainAxisAlignment mainAxisAlignment,
+      final MainAxisSize mainAxisSize,
+      final CrossAxisAlignment crossAxisAlignment,
+      final TextDirection? textDirection,
+      final VerticalDirection verticalDirection,
+      final TextBaseline? textBaseline,
+      final List<Widget> children}) = _$Column;
+
+  factory Column.fromJson(Map<String, dynamic> json) = _$Column.fromJson;
+
+  @override
+  Key? get key;
+  MainAxisAlignment get mainAxisAlignment;
+  MainAxisSize get mainAxisSize;
+  CrossAxisAlignment get crossAxisAlignment;
+  TextDirection? get textDirection;
+  VerticalDirection get verticalDirection;
+  TextBaseline? get textBaseline;
+  List<Widget> get children;
+  @override
+  @JsonKey(ignore: true)
+  _$$ColumnCopyWith<_$Column> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$RowCopyWith<$Res> implements $WidgetCopyWith<$Res> {
+  factory _$$RowCopyWith(_$Row value, $Res Function(_$Row) then) =
+      __$$RowCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {Key? key,
+      MainAxisAlignment mainAxisAlignment,
+      MainAxisSize mainAxisSize,
+      CrossAxisAlignment crossAxisAlignment,
+      TextDirection? textDirection,
+      VerticalDirection verticalDirection,
+      TextBaseline? textBaseline,
+      List<Widget> children});
+
+  @override
+  $KeyCopyWith<$Res>? get key;
+}
+
+/// @nodoc
+class __$$RowCopyWithImpl<$Res> extends _$WidgetCopyWithImpl<$Res, _$Row>
+    implements _$$RowCopyWith<$Res> {
+  __$$RowCopyWithImpl(_$Row _value, $Res Function(_$Row) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? key = freezed,
+    Object? mainAxisAlignment = null,
+    Object? mainAxisSize = null,
+    Object? crossAxisAlignment = null,
+    Object? textDirection = freezed,
+    Object? verticalDirection = null,
+    Object? textBaseline = freezed,
+    Object? children = null,
+  }) {
+    return _then(_$Row(
+      key: freezed == key
+          ? _value.key
+          : key // ignore: cast_nullable_to_non_nullable
+              as Key?,
+      mainAxisAlignment: null == mainAxisAlignment
+          ? _value.mainAxisAlignment
+          : mainAxisAlignment // ignore: cast_nullable_to_non_nullable
+              as MainAxisAlignment,
+      mainAxisSize: null == mainAxisSize
+          ? _value.mainAxisSize
+          : mainAxisSize // ignore: cast_nullable_to_non_nullable
+              as MainAxisSize,
+      crossAxisAlignment: null == crossAxisAlignment
+          ? _value.crossAxisAlignment
+          : crossAxisAlignment // ignore: cast_nullable_to_non_nullable
+              as CrossAxisAlignment,
+      textDirection: freezed == textDirection
+          ? _value.textDirection
+          : textDirection // ignore: cast_nullable_to_non_nullable
+              as TextDirection?,
+      verticalDirection: null == verticalDirection
+          ? _value.verticalDirection
+          : verticalDirection // ignore: cast_nullable_to_non_nullable
+              as VerticalDirection,
+      textBaseline: freezed == textBaseline
+          ? _value.textBaseline
+          : textBaseline // ignore: cast_nullable_to_non_nullable
+              as TextBaseline?,
+      children: null == children
+          ? _value._children
+          : children // ignore: cast_nullable_to_non_nullable
+              as List<Widget>,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$Row implements Row {
+  const _$Row(
+      {this.key,
+      this.mainAxisAlignment = MainAxisAlignment.start,
+      this.mainAxisSize = MainAxisSize.max,
+      this.crossAxisAlignment = CrossAxisAlignment.center,
+      this.textDirection,
+      this.verticalDirection = VerticalDirection.down,
+      this.textBaseline,
+      final List<Widget> children = const [],
+      final String? $type})
+      : _children = children,
+        $type = $type ?? 'row';
+
+  factory _$Row.fromJson(Map<String, dynamic> json) => _$$RowFromJson(json);
+
+  @override
+  final Key? key;
+  @override
+  @JsonKey()
+  final MainAxisAlignment mainAxisAlignment;
+  @override
+  @JsonKey()
+  final MainAxisSize mainAxisSize;
+  @override
+  @JsonKey()
+  final CrossAxisAlignment crossAxisAlignment;
+  @override
+  final TextDirection? textDirection;
+  @override
+  @JsonKey()
+  final VerticalDirection verticalDirection;
+  @override
+  final TextBaseline? textBaseline;
+  final List<Widget> _children;
+  @override
+  @JsonKey()
+  List<Widget> get children {
+    if (_children is EqualUnmodifiableListView) return _children;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_children);
+  }
+
+  @JsonKey(name: 'runtimeType')
+  final String $type;
+
+  @override
+  String toString() {
+    return 'Widget.row(key: $key, mainAxisAlignment: $mainAxisAlignment, mainAxisSize: $mainAxisSize, crossAxisAlignment: $crossAxisAlignment, textDirection: $textDirection, verticalDirection: $verticalDirection, textBaseline: $textBaseline, children: $children)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$Row &&
+            (identical(other.key, key) || other.key == key) &&
+            (identical(other.mainAxisAlignment, mainAxisAlignment) ||
+                other.mainAxisAlignment == mainAxisAlignment) &&
+            (identical(other.mainAxisSize, mainAxisSize) ||
+                other.mainAxisSize == mainAxisSize) &&
+            (identical(other.crossAxisAlignment, crossAxisAlignment) ||
+                other.crossAxisAlignment == crossAxisAlignment) &&
+            (identical(other.textDirection, textDirection) ||
+                other.textDirection == textDirection) &&
+            (identical(other.verticalDirection, verticalDirection) ||
+                other.verticalDirection == verticalDirection) &&
+            (identical(other.textBaseline, textBaseline) ||
+                other.textBaseline == textBaseline) &&
+            const DeepCollectionEquality().equals(other._children, _children));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      key,
+      mainAxisAlignment,
+      mainAxisSize,
+      crossAxisAlignment,
+      textDirection,
+      verticalDirection,
+      textBaseline,
+      const DeepCollectionEquality().hash(_children));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$RowCopyWith<_$Row> get copyWith =>
+      __$$RowCopyWithImpl<_$Row>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(
+            Key? key,
+            Color? color,
+            Color? shadowColor,
+            Color? surfaceTintColor,
+            double? elevation,
+            ShapeBorder? shape,
+            bool borderOnForeground,
+            EdgeInsets? margin,
+            Clip? clipBehavior,
+            Widget? child,
+            bool semanticContainer)
+        card,
+    required TResult Function(
+            Key? key,
+            Callback? onPressed,
+            Callback? onLongPress,
+            bool autofocus,
+            Clip clipBehavior,
+            Widget child,
+            ButtonStyle? style)
+        elevatedButton,
+    required TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)
+        filledButton,
+    required TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)
+        filledTonalButton,
+    required TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)
+        outlinedButton,
+    required TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)
+        textButton,
+    required TResult Function(
+            Key? key,
+            double? iconSize,
+            VisualDensity? visualDensity,
+            EdgeInsets? padding,
+            Alignment? alignment,
+            double? splashRadius,
+            Color? color,
+            Color? focusColor,
+            Color? hoverColor,
+            Color? highlightColor,
+            Color? splashColor,
+            Color? disabledColor,
+            Callback onPressed,
+            MouseCursor? mouseCursor,
+            bool autofocus,
+            String? tooltip,
+            bool? enableFeedback,
+            BoxConstraints? constraints,
+            bool? isSelected,
+            Widget? selectedIcon,
+            Widget icon)
+        iconButton,
+    required TResult Function(
+            Key? key,
+            PreferredSizeWidget? appBar,
+            Widget? body,
+            Widget? floatingActionButton,
+            FloatingActionButtonLocation? floatingActionButtonLocation,
+            List<Widget>? persistentFooterButtons,
+            Alignment persistentFooterAlignment,
+            Widget? drawer,
+            Widget? endDrawer,
+            Widget? bottomNavigationBar,
+            Widget? bottomSheet,
+            Color? backgroundColor,
+            bool? resizeToAvoidBottomInset,
+            bool primary,
+            bool extendBody,
+            bool extendBodyBehindAppBar,
+            Color? drawerScrimColor,
+            double? drawerEdgeDragWidth,
+            bool drawerEnableOpenDragGesture,
+            bool endDrawerEnableOpenDragGesture,
+            String? restorationId)
+        scaffold,
+    required TResult Function(Key? key, Widget? child, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, bool mini, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback) floatingActionButton,
+    required TResult Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback) floatingActionButtonExtended,
+    required TResult Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor) text,
+    required TResult Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior) container,
+    required TResult Function(Key? key, double? widthFactor, double? heightFactor, Widget child) center,
+    required TResult Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection) icon,
+    required TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children) column,
+    required TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children) row,
+    required TResult Function(Key? key, double? width, double? height, Widget? child) sizedBox,
+  }) {
+    return row(key, mainAxisAlignment, mainAxisSize, crossAxisAlignment,
+        textDirection, verticalDirection, textBaseline, children);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(
+            Key? key,
+            Color? color,
+            Color? shadowColor,
+            Color? surfaceTintColor,
+            double? elevation,
+            ShapeBorder? shape,
+            bool borderOnForeground,
+            EdgeInsets? margin,
+            Clip? clipBehavior,
+            Widget? child,
+            bool semanticContainer)?
+        card,
+    TResult? Function(
+            Key? key,
+            Callback? onPressed,
+            Callback? onLongPress,
+            bool autofocus,
+            Clip clipBehavior,
+            Widget child,
+            ButtonStyle? style)?
+        elevatedButton,
+    TResult? Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        filledButton,
+    TResult? Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        filledTonalButton,
+    TResult? Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        outlinedButton,
+    TResult? Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        textButton,
+    TResult? Function(
+            Key? key,
+            double? iconSize,
+            VisualDensity? visualDensity,
+            EdgeInsets? padding,
+            Alignment? alignment,
+            double? splashRadius,
+            Color? color,
+            Color? focusColor,
+            Color? hoverColor,
+            Color? highlightColor,
+            Color? splashColor,
+            Color? disabledColor,
+            Callback onPressed,
+            MouseCursor? mouseCursor,
+            bool autofocus,
+            String? tooltip,
+            bool? enableFeedback,
+            BoxConstraints? constraints,
+            bool? isSelected,
+            Widget? selectedIcon,
+            Widget icon)?
+        iconButton,
+    TResult? Function(
+            Key? key,
+            PreferredSizeWidget? appBar,
+            Widget? body,
+            Widget? floatingActionButton,
+            FloatingActionButtonLocation? floatingActionButtonLocation,
+            List<Widget>? persistentFooterButtons,
+            Alignment persistentFooterAlignment,
+            Widget? drawer,
+            Widget? endDrawer,
+            Widget? bottomNavigationBar,
+            Widget? bottomSheet,
+            Color? backgroundColor,
+            bool? resizeToAvoidBottomInset,
+            bool primary,
+            bool extendBody,
+            bool extendBodyBehindAppBar,
+            Color? drawerScrimColor,
+            double? drawerEdgeDragWidth,
+            bool drawerEnableOpenDragGesture,
+            bool endDrawerEnableOpenDragGesture,
+            String? restorationId)?
+        scaffold,
+    TResult? Function(Key? key, Widget? child, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, bool mini, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButton,
+    TResult? Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButtonExtended,
+    TResult? Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor)? text,
+    TResult? Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior)? container,
+    TResult? Function(Key? key, double? widthFactor, double? heightFactor, Widget child)? center,
+    TResult? Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection)? icon,
+    TResult? Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? column,
+    TResult? Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? row,
+    TResult? Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
+  }) {
+    return row?.call(key, mainAxisAlignment, mainAxisSize, crossAxisAlignment,
+        textDirection, verticalDirection, textBaseline, children);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(
+            Key? key,
+            Color? color,
+            Color? shadowColor,
+            Color? surfaceTintColor,
+            double? elevation,
+            ShapeBorder? shape,
+            bool borderOnForeground,
+            EdgeInsets? margin,
+            Clip? clipBehavior,
+            Widget? child,
+            bool semanticContainer)?
+        card,
+    TResult Function(
+            Key? key,
+            Callback? onPressed,
+            Callback? onLongPress,
+            bool autofocus,
+            Clip clipBehavior,
+            Widget child,
+            ButtonStyle? style)?
+        elevatedButton,
+    TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        filledButton,
+    TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        filledTonalButton,
+    TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        outlinedButton,
+    TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        textButton,
+    TResult Function(
+            Key? key,
+            double? iconSize,
+            VisualDensity? visualDensity,
+            EdgeInsets? padding,
+            Alignment? alignment,
+            double? splashRadius,
+            Color? color,
+            Color? focusColor,
+            Color? hoverColor,
+            Color? highlightColor,
+            Color? splashColor,
+            Color? disabledColor,
+            Callback onPressed,
+            MouseCursor? mouseCursor,
+            bool autofocus,
+            String? tooltip,
+            bool? enableFeedback,
+            BoxConstraints? constraints,
+            bool? isSelected,
+            Widget? selectedIcon,
+            Widget icon)?
+        iconButton,
+    TResult Function(
+            Key? key,
+            PreferredSizeWidget? appBar,
+            Widget? body,
+            Widget? floatingActionButton,
+            FloatingActionButtonLocation? floatingActionButtonLocation,
+            List<Widget>? persistentFooterButtons,
+            Alignment persistentFooterAlignment,
+            Widget? drawer,
+            Widget? endDrawer,
+            Widget? bottomNavigationBar,
+            Widget? bottomSheet,
+            Color? backgroundColor,
+            bool? resizeToAvoidBottomInset,
+            bool primary,
+            bool extendBody,
+            bool extendBodyBehindAppBar,
+            Color? drawerScrimColor,
+            double? drawerEdgeDragWidth,
+            bool drawerEnableOpenDragGesture,
+            bool endDrawerEnableOpenDragGesture,
+            String? restorationId)?
+        scaffold,
+    TResult Function(Key? key, Widget? child, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, bool mini, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButton,
+    TResult Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButtonExtended,
+    TResult Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor)? text,
+    TResult Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior)? container,
+    TResult Function(Key? key, double? widthFactor, double? heightFactor, Widget child)? center,
+    TResult Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection)? icon,
+    TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? column,
+    TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? row,
+    TResult Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
+    required TResult orElse(),
+  }) {
+    if (row != null) {
+      return row(key, mainAxisAlignment, mainAxisSize, crossAxisAlignment,
+          textDirection, verticalDirection, textBaseline, children);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(Card value) card,
+    required TResult Function(ElevatedButton value) elevatedButton,
+    required TResult Function(FilledButton value) filledButton,
+    required TResult Function(FilledTonalButton value) filledTonalButton,
+    required TResult Function(OutlinedButton value) outlinedButton,
+    required TResult Function(TextButton value) textButton,
+    required TResult Function(IconButton value) iconButton,
+    required TResult Function(Scaffold value) scaffold,
+    required TResult Function(FloatingActionButton value) floatingActionButton,
+    required TResult Function(FloatingActionButtonExtended value)
+        floatingActionButtonExtended,
+    required TResult Function(Text value) text,
+    required TResult Function(Container value) container,
+    required TResult Function(Center value) center,
+    required TResult Function(Icon value) icon,
+    required TResult Function(Column value) column,
+    required TResult Function(Row value) row,
+    required TResult Function(SizedBox value) sizedBox,
+  }) {
+    return row(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(Card value)? card,
+    TResult? Function(ElevatedButton value)? elevatedButton,
+    TResult? Function(FilledButton value)? filledButton,
+    TResult? Function(FilledTonalButton value)? filledTonalButton,
+    TResult? Function(OutlinedButton value)? outlinedButton,
+    TResult? Function(TextButton value)? textButton,
+    TResult? Function(IconButton value)? iconButton,
+    TResult? Function(Scaffold value)? scaffold,
+    TResult? Function(FloatingActionButton value)? floatingActionButton,
+    TResult? Function(FloatingActionButtonExtended value)?
+        floatingActionButtonExtended,
+    TResult? Function(Text value)? text,
+    TResult? Function(Container value)? container,
+    TResult? Function(Center value)? center,
+    TResult? Function(Icon value)? icon,
+    TResult? Function(Column value)? column,
+    TResult? Function(Row value)? row,
+    TResult? Function(SizedBox value)? sizedBox,
+  }) {
+    return row?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(Card value)? card,
+    TResult Function(ElevatedButton value)? elevatedButton,
+    TResult Function(FilledButton value)? filledButton,
+    TResult Function(FilledTonalButton value)? filledTonalButton,
+    TResult Function(OutlinedButton value)? outlinedButton,
+    TResult Function(TextButton value)? textButton,
+    TResult Function(IconButton value)? iconButton,
+    TResult Function(Scaffold value)? scaffold,
+    TResult Function(FloatingActionButton value)? floatingActionButton,
+    TResult Function(FloatingActionButtonExtended value)?
+        floatingActionButtonExtended,
+    TResult Function(Text value)? text,
+    TResult Function(Container value)? container,
+    TResult Function(Center value)? center,
+    TResult Function(Icon value)? icon,
+    TResult Function(Column value)? column,
+    TResult Function(Row value)? row,
+    TResult Function(SizedBox value)? sizedBox,
+    required TResult orElse(),
+  }) {
+    if (row != null) {
+      return row(this);
+    }
+    return orElse();
+  }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$RowToJson(
+      this,
+    );
+  }
+}
+
+abstract class Row implements Widget {
+  const factory Row(
+      {final Key? key,
+      final MainAxisAlignment mainAxisAlignment,
+      final MainAxisSize mainAxisSize,
+      final CrossAxisAlignment crossAxisAlignment,
+      final TextDirection? textDirection,
+      final VerticalDirection verticalDirection,
+      final TextBaseline? textBaseline,
+      final List<Widget> children}) = _$Row;
+
+  factory Row.fromJson(Map<String, dynamic> json) = _$Row.fromJson;
+
+  @override
+  Key? get key;
+  MainAxisAlignment get mainAxisAlignment;
+  MainAxisSize get mainAxisSize;
+  CrossAxisAlignment get crossAxisAlignment;
+  TextDirection? get textDirection;
+  VerticalDirection get verticalDirection;
+  TextBaseline? get textBaseline;
+  List<Widget> get children;
+  @override
+  @JsonKey(ignore: true)
+  _$$RowCopyWith<_$Row> get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$SizedBoxCopyWith<$Res> implements $WidgetCopyWith<$Res> {
+  factory _$$SizedBoxCopyWith(
+          _$SizedBox value, $Res Function(_$SizedBox) then) =
+      __$$SizedBoxCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({Key? key, double? width, double? height, Widget? child});
+
+  @override
+  $KeyCopyWith<$Res>? get key;
+  $WidgetCopyWith<$Res>? get child;
+}
+
+/// @nodoc
+class __$$SizedBoxCopyWithImpl<$Res>
+    extends _$WidgetCopyWithImpl<$Res, _$SizedBox>
+    implements _$$SizedBoxCopyWith<$Res> {
+  __$$SizedBoxCopyWithImpl(_$SizedBox _value, $Res Function(_$SizedBox) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? key = freezed,
+    Object? width = freezed,
+    Object? height = freezed,
+    Object? child = freezed,
+  }) {
+    return _then(_$SizedBox(
+      key: freezed == key
+          ? _value.key
+          : key // ignore: cast_nullable_to_non_nullable
+              as Key?,
+      width: freezed == width
+          ? _value.width
+          : width // ignore: cast_nullable_to_non_nullable
+              as double?,
+      height: freezed == height
+          ? _value.height
+          : height // ignore: cast_nullable_to_non_nullable
+              as double?,
+      child: freezed == child
+          ? _value.child
+          : child // ignore: cast_nullable_to_non_nullable
+              as Widget?,
+    ));
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $WidgetCopyWith<$Res>? get child {
+    if (_value.child == null) {
+      return null;
+    }
+
+    return $WidgetCopyWith<$Res>(_value.child!, (value) {
+      return _then(_value.copyWith(child: value));
+    });
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$SizedBox implements SizedBox {
+  const _$SizedBox(
+      {this.key, this.width, this.height, this.child, final String? $type})
+      : $type = $type ?? 'sizedBox';
+
+  factory _$SizedBox.fromJson(Map<String, dynamic> json) =>
+      _$$SizedBoxFromJson(json);
+
+  @override
+  final Key? key;
+  @override
+  final double? width;
+  @override
+  final double? height;
+  @override
+  final Widget? child;
+
+  @JsonKey(name: 'runtimeType')
+  final String $type;
+
+  @override
+  String toString() {
+    return 'Widget.sizedBox(key: $key, width: $width, height: $height, child: $child)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$SizedBox &&
+            (identical(other.key, key) || other.key == key) &&
+            (identical(other.width, width) || other.width == width) &&
+            (identical(other.height, height) || other.height == height) &&
+            (identical(other.child, child) || other.child == child));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(runtimeType, key, width, height, child);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$SizedBoxCopyWith<_$SizedBox> get copyWith =>
+      __$$SizedBoxCopyWithImpl<_$SizedBox>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(
+            Key? key,
+            Color? color,
+            Color? shadowColor,
+            Color? surfaceTintColor,
+            double? elevation,
+            ShapeBorder? shape,
+            bool borderOnForeground,
+            EdgeInsets? margin,
+            Clip? clipBehavior,
+            Widget? child,
+            bool semanticContainer)
+        card,
+    required TResult Function(
+            Key? key,
+            Callback? onPressed,
+            Callback? onLongPress,
+            bool autofocus,
+            Clip clipBehavior,
+            Widget child,
+            ButtonStyle? style)
+        elevatedButton,
+    required TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)
+        filledButton,
+    required TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)
+        filledTonalButton,
+    required TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)
+        outlinedButton,
+    required TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)
+        textButton,
+    required TResult Function(
+            Key? key,
+            double? iconSize,
+            VisualDensity? visualDensity,
+            EdgeInsets? padding,
+            Alignment? alignment,
+            double? splashRadius,
+            Color? color,
+            Color? focusColor,
+            Color? hoverColor,
+            Color? highlightColor,
+            Color? splashColor,
+            Color? disabledColor,
+            Callback onPressed,
+            MouseCursor? mouseCursor,
+            bool autofocus,
+            String? tooltip,
+            bool? enableFeedback,
+            BoxConstraints? constraints,
+            bool? isSelected,
+            Widget? selectedIcon,
+            Widget icon)
+        iconButton,
+    required TResult Function(
+            Key? key,
+            PreferredSizeWidget? appBar,
+            Widget? body,
+            Widget? floatingActionButton,
+            FloatingActionButtonLocation? floatingActionButtonLocation,
+            List<Widget>? persistentFooterButtons,
+            Alignment persistentFooterAlignment,
+            Widget? drawer,
+            Widget? endDrawer,
+            Widget? bottomNavigationBar,
+            Widget? bottomSheet,
+            Color? backgroundColor,
+            bool? resizeToAvoidBottomInset,
+            bool primary,
+            bool extendBody,
+            bool extendBodyBehindAppBar,
+            Color? drawerScrimColor,
+            double? drawerEdgeDragWidth,
+            bool drawerEnableOpenDragGesture,
+            bool endDrawerEnableOpenDragGesture,
+            String? restorationId)
+        scaffold,
+    required TResult Function(Key? key, Widget? child, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, bool mini, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback) floatingActionButton,
+    required TResult Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback) floatingActionButtonExtended,
+    required TResult Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor) text,
+    required TResult Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior) container,
+    required TResult Function(Key? key, double? widthFactor, double? heightFactor, Widget child) center,
+    required TResult Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection) icon,
+    required TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children) column,
+    required TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children) row,
+    required TResult Function(Key? key, double? width, double? height, Widget? child) sizedBox,
+  }) {
+    return sizedBox(key, width, height, child);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(
+            Key? key,
+            Color? color,
+            Color? shadowColor,
+            Color? surfaceTintColor,
+            double? elevation,
+            ShapeBorder? shape,
+            bool borderOnForeground,
+            EdgeInsets? margin,
+            Clip? clipBehavior,
+            Widget? child,
+            bool semanticContainer)?
+        card,
+    TResult? Function(
+            Key? key,
+            Callback? onPressed,
+            Callback? onLongPress,
+            bool autofocus,
+            Clip clipBehavior,
+            Widget child,
+            ButtonStyle? style)?
+        elevatedButton,
+    TResult? Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        filledButton,
+    TResult? Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        filledTonalButton,
+    TResult? Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        outlinedButton,
+    TResult? Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        textButton,
+    TResult? Function(
+            Key? key,
+            double? iconSize,
+            VisualDensity? visualDensity,
+            EdgeInsets? padding,
+            Alignment? alignment,
+            double? splashRadius,
+            Color? color,
+            Color? focusColor,
+            Color? hoverColor,
+            Color? highlightColor,
+            Color? splashColor,
+            Color? disabledColor,
+            Callback onPressed,
+            MouseCursor? mouseCursor,
+            bool autofocus,
+            String? tooltip,
+            bool? enableFeedback,
+            BoxConstraints? constraints,
+            bool? isSelected,
+            Widget? selectedIcon,
+            Widget icon)?
+        iconButton,
+    TResult? Function(
+            Key? key,
+            PreferredSizeWidget? appBar,
+            Widget? body,
+            Widget? floatingActionButton,
+            FloatingActionButtonLocation? floatingActionButtonLocation,
+            List<Widget>? persistentFooterButtons,
+            Alignment persistentFooterAlignment,
+            Widget? drawer,
+            Widget? endDrawer,
+            Widget? bottomNavigationBar,
+            Widget? bottomSheet,
+            Color? backgroundColor,
+            bool? resizeToAvoidBottomInset,
+            bool primary,
+            bool extendBody,
+            bool extendBodyBehindAppBar,
+            Color? drawerScrimColor,
+            double? drawerEdgeDragWidth,
+            bool drawerEnableOpenDragGesture,
+            bool endDrawerEnableOpenDragGesture,
+            String? restorationId)?
+        scaffold,
+    TResult? Function(Key? key, Widget? child, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, bool mini, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButton,
+    TResult? Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButtonExtended,
+    TResult? Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor)? text,
+    TResult? Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior)? container,
+    TResult? Function(Key? key, double? widthFactor, double? heightFactor, Widget child)? center,
+    TResult? Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection)? icon,
+    TResult? Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? column,
+    TResult? Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? row,
+    TResult? Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
+  }) {
+    return sizedBox?.call(key, width, height, child);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(
+            Key? key,
+            Color? color,
+            Color? shadowColor,
+            Color? surfaceTintColor,
+            double? elevation,
+            ShapeBorder? shape,
+            bool borderOnForeground,
+            EdgeInsets? margin,
+            Clip? clipBehavior,
+            Widget? child,
+            bool semanticContainer)?
+        card,
+    TResult Function(
+            Key? key,
+            Callback? onPressed,
+            Callback? onLongPress,
+            bool autofocus,
+            Clip clipBehavior,
+            Widget child,
+            ButtonStyle? style)?
+        elevatedButton,
+    TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        filledButton,
+    TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        filledTonalButton,
+    TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        outlinedButton,
+    TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        textButton,
+    TResult Function(
+            Key? key,
+            double? iconSize,
+            VisualDensity? visualDensity,
+            EdgeInsets? padding,
+            Alignment? alignment,
+            double? splashRadius,
+            Color? color,
+            Color? focusColor,
+            Color? hoverColor,
+            Color? highlightColor,
+            Color? splashColor,
+            Color? disabledColor,
+            Callback onPressed,
+            MouseCursor? mouseCursor,
+            bool autofocus,
+            String? tooltip,
+            bool? enableFeedback,
+            BoxConstraints? constraints,
+            bool? isSelected,
+            Widget? selectedIcon,
+            Widget icon)?
+        iconButton,
+    TResult Function(
+            Key? key,
+            PreferredSizeWidget? appBar,
+            Widget? body,
+            Widget? floatingActionButton,
+            FloatingActionButtonLocation? floatingActionButtonLocation,
+            List<Widget>? persistentFooterButtons,
+            Alignment persistentFooterAlignment,
+            Widget? drawer,
+            Widget? endDrawer,
+            Widget? bottomNavigationBar,
+            Widget? bottomSheet,
+            Color? backgroundColor,
+            bool? resizeToAvoidBottomInset,
+            bool primary,
+            bool extendBody,
+            bool extendBodyBehindAppBar,
+            Color? drawerScrimColor,
+            double? drawerEdgeDragWidth,
+            bool drawerEnableOpenDragGesture,
+            bool endDrawerEnableOpenDragGesture,
+            String? restorationId)?
+        scaffold,
+    TResult Function(Key? key, Widget? child, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, bool mini, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButton,
+    TResult Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButtonExtended,
+    TResult Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor)? text,
+    TResult Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior)? container,
+    TResult Function(Key? key, double? widthFactor, double? heightFactor, Widget child)? center,
+    TResult Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection)? icon,
+    TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? column,
+    TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? row,
+    TResult Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
+    required TResult orElse(),
+  }) {
+    if (sizedBox != null) {
+      return sizedBox(key, width, height, child);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(Card value) card,
+    required TResult Function(ElevatedButton value) elevatedButton,
+    required TResult Function(FilledButton value) filledButton,
+    required TResult Function(FilledTonalButton value) filledTonalButton,
+    required TResult Function(OutlinedButton value) outlinedButton,
+    required TResult Function(TextButton value) textButton,
+    required TResult Function(IconButton value) iconButton,
+    required TResult Function(Scaffold value) scaffold,
+    required TResult Function(FloatingActionButton value) floatingActionButton,
+    required TResult Function(FloatingActionButtonExtended value)
+        floatingActionButtonExtended,
+    required TResult Function(Text value) text,
+    required TResult Function(Container value) container,
+    required TResult Function(Center value) center,
+    required TResult Function(Icon value) icon,
+    required TResult Function(Column value) column,
+    required TResult Function(Row value) row,
+    required TResult Function(SizedBox value) sizedBox,
+  }) {
+    return sizedBox(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(Card value)? card,
+    TResult? Function(ElevatedButton value)? elevatedButton,
+    TResult? Function(FilledButton value)? filledButton,
+    TResult? Function(FilledTonalButton value)? filledTonalButton,
+    TResult? Function(OutlinedButton value)? outlinedButton,
+    TResult? Function(TextButton value)? textButton,
+    TResult? Function(IconButton value)? iconButton,
+    TResult? Function(Scaffold value)? scaffold,
+    TResult? Function(FloatingActionButton value)? floatingActionButton,
+    TResult? Function(FloatingActionButtonExtended value)?
+        floatingActionButtonExtended,
+    TResult? Function(Text value)? text,
+    TResult? Function(Container value)? container,
+    TResult? Function(Center value)? center,
+    TResult? Function(Icon value)? icon,
+    TResult? Function(Column value)? column,
+    TResult? Function(Row value)? row,
+    TResult? Function(SizedBox value)? sizedBox,
+  }) {
+    return sizedBox?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(Card value)? card,
+    TResult Function(ElevatedButton value)? elevatedButton,
+    TResult Function(FilledButton value)? filledButton,
+    TResult Function(FilledTonalButton value)? filledTonalButton,
+    TResult Function(OutlinedButton value)? outlinedButton,
+    TResult Function(TextButton value)? textButton,
+    TResult Function(IconButton value)? iconButton,
+    TResult Function(Scaffold value)? scaffold,
+    TResult Function(FloatingActionButton value)? floatingActionButton,
+    TResult Function(FloatingActionButtonExtended value)?
+        floatingActionButtonExtended,
+    TResult Function(Text value)? text,
+    TResult Function(Container value)? container,
+    TResult Function(Center value)? center,
+    TResult Function(Icon value)? icon,
+    TResult Function(Column value)? column,
+    TResult Function(Row value)? row,
+    TResult Function(SizedBox value)? sizedBox,
+    required TResult orElse(),
+  }) {
+    if (sizedBox != null) {
+      return sizedBox(this);
+    }
+    return orElse();
+  }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$SizedBoxToJson(
+      this,
+    );
+  }
+}
+
+abstract class SizedBox implements Widget {
+  const factory SizedBox(
+      {final Key? key,
+      final double? width,
+      final double? height,
+      final Widget? child}) = _$SizedBox;
+
+  factory SizedBox.fromJson(Map<String, dynamic> json) = _$SizedBox.fromJson;
+
+  @override
+  Key? get key;
+  double? get width;
+  double? get height;
+  Widget? get child;
+  @override
+  @JsonKey(ignore: true)
+  _$$SizedBoxCopyWith<_$SizedBox> get copyWith =>
+      throw _privateConstructorUsedError;
 }
