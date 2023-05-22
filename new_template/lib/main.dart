@@ -125,6 +125,108 @@ const EXAMPLE = r'''
                     },
                     "autofocus": true,
                     "runtimeType": "iconButton"
+                },
+                {
+                    "height": 10,
+                    "runtimeType": "sizedBox"
+                },
+                {
+                    "runtimeType": "circularProgressIndicator"
+                },
+                {
+                    "height": 10,
+                    "runtimeType": "sizedBox"
+                },
+                {
+                    "runtimeType": "linearProgressIndicator"
+                },
+                {
+                    "height": 10,
+                    "runtimeType": "sizedBox"
+                },
+                {
+                    "onPressed": {
+                        "snackBar": {
+                            "shape": {
+                                "borderRadius": {
+                                    "radius": {
+                                        "radius": 4,
+                                        "runtimeType": "circular"
+                                    },
+                                    "runtimeType": "all"
+                                },
+                                "runtimeType": "roundedRectangle"
+                            },
+                            "action": {
+                                "label": "close",
+                                "onPressed": {
+                                    "reason": "dismiss",
+                                    "runtimeType": "hideCurrentSnackBar"
+                                }
+                            },
+                            "content": {
+                                "data": "This is a snackBar",
+                                "runtimeType": "text"
+                            },
+                            "duration": 4000000,
+                            "dismissDirection": "down",
+                            "clipBehavior": "hardEdge"
+                        },
+                        "runtimeType": "showSnackBar"
+                    },
+                    "child": {
+                        "data": "showSnackBar",
+                        "runtimeType": "text"
+                    },
+                    "runtimeType": "textButton"
+                },
+                {
+                    "height": 10,
+                    "runtimeType": "sizedBox"
+                },
+                {
+                    "child": {
+                        "child": {
+                            "child": {
+                                "data": "Card",
+                                "runtimeType": "text"
+                            },
+                            "runtimeType": "center"
+                        },
+                        "width": 200,
+                        "height": 100,
+                        "runtimeType": "sizedBox"
+                    },
+                    "elevation": 3,
+                    "runtimeType": "card"
+                },
+                {
+                    "height": 10,
+                    "runtimeType": "sizedBox"
+                },
+                {
+                    "thickness": 2,
+                    "runtimeType": "divider"
+                },
+                {
+                    "data": "...Note...",
+                    "runtimeType": "text"
+                },
+                {
+                    "data": "Segmented Buttons",
+                    "runtimeType": "text"
+                },
+                {
+                    "data": "Badges",
+                    "runtimeType": "text"
+                },
+                {
+                    "data": "Bottom Sheet",
+                    "runtimeType": "text"
+                },
+                {
+                    "data": "Dialog",
+                    "runtimeType": "text"
                 }
             ],
             "runtimeType": "column"

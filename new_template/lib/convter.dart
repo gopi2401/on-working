@@ -1475,6 +1475,7 @@ class _FlutterWidgetState extends material.State<FlutterWidget> {
     final widgets.ButtonStyle? buttonStyle,
   ) {
     if (buttonStyle == null) return null;
+    return null;
   }
 
   material.Shadow? $shadow(
@@ -2306,6 +2307,12 @@ class _FlutterWidgetState extends material.State<FlutterWidget> {
           material.TextDirection.values,
         ),
       ),
+      sizedBox: (value) => material.SizedBox(
+        key: $key(value.key),
+        width: value.width,
+        height: value.height,
+        child: $widget(context, value.child),
+      ),
       column: (value) => material.Column(
         key: $key(value.key),
         children: $widgets(context, value.children)!,
@@ -2362,11 +2369,31 @@ class _FlutterWidgetState extends material.State<FlutterWidget> {
           material.TextBaseline.values,
         ),
       ),
-      sizedBox: (value) => material.SizedBox(
+      circularProgressIndicator: (value) => material.CircularProgressIndicator(
         key: $key(value.key),
-        width: value.width,
+        value: value.value,
+        backgroundColor: $color(context, value.backgroundColor),
+        color: $color(context, value.color),
+        strokeWidth: value.strokeWidth,
+        semanticsLabel: value.semanticsLabel,
+        semanticsValue: value.semanticsValue,
+      ),
+      linearProgressIndicator: (value) => material.LinearProgressIndicator(
+        key: $key(value.key),
+        value: value.value,
+        backgroundColor: $color(context, value.backgroundColor),
+        color: $color(context, value.color),
+        minHeight: value.minHeight,
+        semanticsLabel: value.semanticsLabel,
+        semanticsValue: value.semanticsValue,
+      ),
+      divider: (value) => material.Divider(
+        key: $key(value.key),
         height: value.height,
-        child: $widget(context, value.child),
+        thickness: value.thickness,
+        indent: value.indent,
+        endIndent: value.endIndent,
+        color: $color(context, value.color),
       ),
     );
     if (this.widget.wrappingBuilder != null) {

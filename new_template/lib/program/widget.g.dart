@@ -686,6 +686,27 @@ Json? _$JsonConverterToJson<Json, Value>(
 ) =>
     value == null ? null : toJson(value);
 
+_$SizedBox _$$SizedBoxFromJson(Map<String, dynamic> json) => _$SizedBox(
+      key: json['key'] == null
+          ? null
+          : Key.fromJson(json['key'] as Map<String, dynamic>),
+      width: (json['width'] as num?)?.toDouble(),
+      height: (json['height'] as num?)?.toDouble(),
+      child: json['child'] == null
+          ? null
+          : Widget.fromJson(json['child'] as Map<String, dynamic>),
+      $type: json['runtimeType'] as String?,
+    );
+
+Map<String, dynamic> _$$SizedBoxToJson(_$SizedBox instance) =>
+    <String, dynamic>{
+      'key': instance.key,
+      'width': instance.width,
+      'height': instance.height,
+      'child': instance.child,
+      'runtimeType': instance.$type,
+    };
+
 _$Center _$$CenterFromJson(Map<String, dynamic> json) => _$Center(
       key: json['key'] == null
           ? null
@@ -859,23 +880,90 @@ Map<String, dynamic> _$$RowToJson(_$Row instance) => <String, dynamic>{
       'runtimeType': instance.$type,
     };
 
-_$SizedBox _$$SizedBoxFromJson(Map<String, dynamic> json) => _$SizedBox(
+_$CircularProgressIndicator _$$CircularProgressIndicatorFromJson(
+        Map<String, dynamic> json) =>
+    _$CircularProgressIndicator(
       key: json['key'] == null
           ? null
           : Key.fromJson(json['key'] as Map<String, dynamic>),
-      width: (json['width'] as num?)?.toDouble(),
-      height: (json['height'] as num?)?.toDouble(),
-      child: json['child'] == null
+      value: (json['value'] as num?)?.toDouble(),
+      backgroundColor: json['backgroundColor'] == null
           ? null
-          : Widget.fromJson(json['child'] as Map<String, dynamic>),
+          : Color.fromJson(json['backgroundColor'] as Map<String, dynamic>),
+      color: json['color'] == null
+          ? null
+          : Color.fromJson(json['color'] as Map<String, dynamic>),
+      strokeWidth: (json['strokeWidth'] as num?)?.toDouble() ?? 4.0,
+      semanticsLabel: json['semanticsLabel'] as String?,
+      semanticsValue: json['semanticsValue'] as String?,
       $type: json['runtimeType'] as String?,
     );
 
-Map<String, dynamic> _$$SizedBoxToJson(_$SizedBox instance) =>
+Map<String, dynamic> _$$CircularProgressIndicatorToJson(
+        _$CircularProgressIndicator instance) =>
     <String, dynamic>{
       'key': instance.key,
-      'width': instance.width,
+      'value': instance.value,
+      'backgroundColor': instance.backgroundColor,
+      'color': instance.color,
+      'strokeWidth': instance.strokeWidth,
+      'semanticsLabel': instance.semanticsLabel,
+      'semanticsValue': instance.semanticsValue,
+      'runtimeType': instance.$type,
+    };
+
+_$LinearProgressIndicator _$$LinearProgressIndicatorFromJson(
+        Map<String, dynamic> json) =>
+    _$LinearProgressIndicator(
+      key: json['key'] == null
+          ? null
+          : Key.fromJson(json['key'] as Map<String, dynamic>),
+      value: (json['value'] as num?)?.toDouble(),
+      backgroundColor: json['backgroundColor'] == null
+          ? null
+          : Color.fromJson(json['backgroundColor'] as Map<String, dynamic>),
+      color: json['color'] == null
+          ? null
+          : Color.fromJson(json['color'] as Map<String, dynamic>),
+      minHeight: (json['minHeight'] as num?)?.toDouble(),
+      semanticsLabel: json['semanticsLabel'] as String?,
+      semanticsValue: json['semanticsValue'] as String?,
+      $type: json['runtimeType'] as String?,
+    );
+
+Map<String, dynamic> _$$LinearProgressIndicatorToJson(
+        _$LinearProgressIndicator instance) =>
+    <String, dynamic>{
+      'key': instance.key,
+      'value': instance.value,
+      'backgroundColor': instance.backgroundColor,
+      'color': instance.color,
+      'minHeight': instance.minHeight,
+      'semanticsLabel': instance.semanticsLabel,
+      'semanticsValue': instance.semanticsValue,
+      'runtimeType': instance.$type,
+    };
+
+_$Divider _$$DividerFromJson(Map<String, dynamic> json) => _$Divider(
+      key: json['key'] == null
+          ? null
+          : Key.fromJson(json['key'] as Map<String, dynamic>),
+      height: (json['height'] as num?)?.toDouble(),
+      thickness: (json['thickness'] as num?)?.toDouble(),
+      indent: (json['indent'] as num?)?.toDouble(),
+      endIndent: (json['endIndent'] as num?)?.toDouble(),
+      color: json['color'] == null
+          ? null
+          : Color.fromJson(json['color'] as Map<String, dynamic>),
+      $type: json['runtimeType'] as String?,
+    );
+
+Map<String, dynamic> _$$DividerToJson(_$Divider instance) => <String, dynamic>{
+      'key': instance.key,
       'height': instance.height,
-      'child': instance.child,
+      'thickness': instance.thickness,
+      'indent': instance.indent,
+      'endIndent': instance.endIndent,
+      'color': instance.color,
       'runtimeType': instance.$type,
     };

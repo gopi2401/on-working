@@ -103,3 +103,71 @@ const floatingActionButtonExtended = {
     },
     "runtimeType": "floatingActionButtonExtended"
 }
+
+
+const circularProgressIndicator = {
+    "runtimeType": "circularProgressIndicator"
+}
+
+const linearProgressIndicator = {
+    "runtimeType": "linearProgressIndicator"
+}
+
+const showSnackBar = {
+    "onPressed": {
+        "snackBar": {
+            "shape": {
+                "borderRadius": {
+                    "radius": {
+                        "radius": 4,
+                        "runtimeType": "circular"
+                    },
+                    "runtimeType": "all"
+                },
+                "runtimeType": "roundedRectangle"
+            },
+            "action": {
+                "label": "close",
+                "onPressed": {
+                    "reason": "dismiss",
+                    "runtimeType": "hideCurrentSnackBar"
+                }
+            },
+            "content": {
+                "data": "This is a snackBar",
+                "runtimeType": "text"
+            },
+            "duration": 4000000,
+            "dismissDirection": "down",
+            "clipBehavior": "hardEdge"
+        },
+        "runtimeType": "showSnackBar"
+    },
+    "child": {
+        "data": "showSnackBar",
+        "runtimeType": "text"
+    },
+    "runtimeType": "textButton"
+}
+
+const card = {
+    "child": {
+        "child": {
+            "child": {
+                "data": "Card",
+                "runtimeType": "text"
+            },
+            "runtimeType": "center"
+        },
+        "width": 200,
+        "height": 100,
+        "runtimeType": "sizedBox"
+    },
+    "elevation": 3,
+    "runtimeType": "card"
+}
+
+const divider = {
+    "thickness": 2,
+    "runtimeType": "divider"
+}

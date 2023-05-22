@@ -223,6 +223,13 @@ class Widget with _$Widget {
     @Default(Clip.none) Clip clipBehavior,
   }) = Container;
 
+  const factory Widget.sizedBox({
+    Key? key,
+    double? width,
+    double? height,
+    Widget? child,
+  }) = SizedBox;
+
   const factory Widget.center({
     Key? key,
     double? widthFactor,
@@ -266,11 +273,34 @@ class Widget with _$Widget {
     @Default([]) List<Widget> children,
   }) = Row;
 
-  const factory Widget.sizedBox({
+  const factory Widget.circularProgressIndicator({
     Key? key,
-    double? width,
+    double? value,
+    Color? backgroundColor,
+    Color? color,
+    @Default(4.0) double strokeWidth,
+    String? semanticsLabel,
+    String? semanticsValue,
+  }) = CircularProgressIndicator;
+
+  const factory Widget.linearProgressIndicator({
+    Key? key,
+    double? value,
+    Color? backgroundColor,
+    Color? color,
+    double? minHeight,
+    String? semanticsLabel,
+    String? semanticsValue,
+  }) = LinearProgressIndicator;
+
+  const factory Widget.divider({
+    Key? key,
     double? height,
-    Widget? child,
-  }) = SizedBox;
+    double? thickness,
+    double? indent,
+    double? endIndent,
+    Color? color,
+  }) = Divider;
+
   factory Widget.fromJson(Map<String, Object?> json) => _$WidgetFromJson(json);
 }

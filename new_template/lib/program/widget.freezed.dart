@@ -40,6 +40,8 @@ Widget _$WidgetFromJson(Map<String, dynamic> json) {
       return Text.fromJson(json);
     case 'container':
       return Container.fromJson(json);
+    case 'sizedBox':
+      return SizedBox.fromJson(json);
     case 'center':
       return Center.fromJson(json);
     case 'icon':
@@ -48,8 +50,12 @@ Widget _$WidgetFromJson(Map<String, dynamic> json) {
       return Column.fromJson(json);
     case 'row':
       return Row.fromJson(json);
-    case 'sizedBox':
-      return SizedBox.fromJson(json);
+    case 'circularProgressIndicator':
+      return CircularProgressIndicator.fromJson(json);
+    case 'linearProgressIndicator':
+      return LinearProgressIndicator.fromJson(json);
+    case 'divider':
+      return Divider.fromJson(json);
 
     default:
       throw CheckedFromJsonException(json, 'runtimeType', 'Widget',
@@ -142,11 +148,14 @@ mixin _$Widget {
     required TResult Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback) floatingActionButtonExtended,
     required TResult Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor) text,
     required TResult Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior) container,
+    required TResult Function(Key? key, double? width, double? height, Widget? child) sizedBox,
     required TResult Function(Key? key, double? widthFactor, double? heightFactor, Widget child) center,
     required TResult Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection) icon,
     required TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children) column,
     required TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children) row,
-    required TResult Function(Key? key, double? width, double? height, Widget? child) sizedBox,
+    required TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue) circularProgressIndicator,
+    required TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue) linearProgressIndicator,
+    required TResult Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color) divider,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -231,11 +240,14 @@ mixin _$Widget {
     TResult? Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButtonExtended,
     TResult? Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor)? text,
     TResult? Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior)? container,
+    TResult? Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
     TResult? Function(Key? key, double? widthFactor, double? heightFactor, Widget child)? center,
     TResult? Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection)? icon,
     TResult? Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? column,
     TResult? Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? row,
-    TResult? Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
+    TResult? Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue)? circularProgressIndicator,
+    TResult? Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue)? linearProgressIndicator,
+    TResult? Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color)? divider,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -320,11 +332,14 @@ mixin _$Widget {
     TResult Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButtonExtended,
     TResult Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor)? text,
     TResult Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior)? container,
+    TResult Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
     TResult Function(Key? key, double? widthFactor, double? heightFactor, Widget child)? center,
     TResult Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection)? icon,
     TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? column,
     TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? row,
-    TResult Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
+    TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue)? circularProgressIndicator,
+    TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue)? linearProgressIndicator,
+    TResult Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color)? divider,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -343,11 +358,16 @@ mixin _$Widget {
         floatingActionButtonExtended,
     required TResult Function(Text value) text,
     required TResult Function(Container value) container,
+    required TResult Function(SizedBox value) sizedBox,
     required TResult Function(Center value) center,
     required TResult Function(Icon value) icon,
     required TResult Function(Column value) column,
     required TResult Function(Row value) row,
-    required TResult Function(SizedBox value) sizedBox,
+    required TResult Function(CircularProgressIndicator value)
+        circularProgressIndicator,
+    required TResult Function(LinearProgressIndicator value)
+        linearProgressIndicator,
+    required TResult Function(Divider value) divider,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -365,11 +385,15 @@ mixin _$Widget {
         floatingActionButtonExtended,
     TResult? Function(Text value)? text,
     TResult? Function(Container value)? container,
+    TResult? Function(SizedBox value)? sizedBox,
     TResult? Function(Center value)? center,
     TResult? Function(Icon value)? icon,
     TResult? Function(Column value)? column,
     TResult? Function(Row value)? row,
-    TResult? Function(SizedBox value)? sizedBox,
+    TResult? Function(CircularProgressIndicator value)?
+        circularProgressIndicator,
+    TResult? Function(LinearProgressIndicator value)? linearProgressIndicator,
+    TResult? Function(Divider value)? divider,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -387,11 +411,15 @@ mixin _$Widget {
         floatingActionButtonExtended,
     TResult Function(Text value)? text,
     TResult Function(Container value)? container,
+    TResult Function(SizedBox value)? sizedBox,
     TResult Function(Center value)? center,
     TResult Function(Icon value)? icon,
     TResult Function(Column value)? column,
     TResult Function(Row value)? row,
-    TResult Function(SizedBox value)? sizedBox,
+    TResult Function(CircularProgressIndicator value)?
+        circularProgressIndicator,
+    TResult Function(LinearProgressIndicator value)? linearProgressIndicator,
+    TResult Function(Divider value)? divider,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -799,11 +827,14 @@ class _$Card implements Card {
     required TResult Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback) floatingActionButtonExtended,
     required TResult Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor) text,
     required TResult Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior) container,
+    required TResult Function(Key? key, double? width, double? height, Widget? child) sizedBox,
     required TResult Function(Key? key, double? widthFactor, double? heightFactor, Widget child) center,
     required TResult Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection) icon,
     required TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children) column,
     required TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children) row,
-    required TResult Function(Key? key, double? width, double? height, Widget? child) sizedBox,
+    required TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue) circularProgressIndicator,
+    required TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue) linearProgressIndicator,
+    required TResult Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color) divider,
   }) {
     return card(key, color, shadowColor, surfaceTintColor, elevation, shape,
         borderOnForeground, margin, clipBehavior, child, semanticContainer);
@@ -892,11 +923,14 @@ class _$Card implements Card {
     TResult? Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButtonExtended,
     TResult? Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor)? text,
     TResult? Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior)? container,
+    TResult? Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
     TResult? Function(Key? key, double? widthFactor, double? heightFactor, Widget child)? center,
     TResult? Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection)? icon,
     TResult? Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? column,
     TResult? Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? row,
-    TResult? Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
+    TResult? Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue)? circularProgressIndicator,
+    TResult? Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue)? linearProgressIndicator,
+    TResult? Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color)? divider,
   }) {
     return card?.call(
         key,
@@ -995,11 +1029,14 @@ class _$Card implements Card {
     TResult Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButtonExtended,
     TResult Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor)? text,
     TResult Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior)? container,
+    TResult Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
     TResult Function(Key? key, double? widthFactor, double? heightFactor, Widget child)? center,
     TResult Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection)? icon,
     TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? column,
     TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? row,
-    TResult Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
+    TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue)? circularProgressIndicator,
+    TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue)? linearProgressIndicator,
+    TResult Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color)? divider,
     required TResult orElse(),
   }) {
     if (card != null) {
@@ -1025,11 +1062,16 @@ class _$Card implements Card {
         floatingActionButtonExtended,
     required TResult Function(Text value) text,
     required TResult Function(Container value) container,
+    required TResult Function(SizedBox value) sizedBox,
     required TResult Function(Center value) center,
     required TResult Function(Icon value) icon,
     required TResult Function(Column value) column,
     required TResult Function(Row value) row,
-    required TResult Function(SizedBox value) sizedBox,
+    required TResult Function(CircularProgressIndicator value)
+        circularProgressIndicator,
+    required TResult Function(LinearProgressIndicator value)
+        linearProgressIndicator,
+    required TResult Function(Divider value) divider,
   }) {
     return card(this);
   }
@@ -1050,11 +1092,15 @@ class _$Card implements Card {
         floatingActionButtonExtended,
     TResult? Function(Text value)? text,
     TResult? Function(Container value)? container,
+    TResult? Function(SizedBox value)? sizedBox,
     TResult? Function(Center value)? center,
     TResult? Function(Icon value)? icon,
     TResult? Function(Column value)? column,
     TResult? Function(Row value)? row,
-    TResult? Function(SizedBox value)? sizedBox,
+    TResult? Function(CircularProgressIndicator value)?
+        circularProgressIndicator,
+    TResult? Function(LinearProgressIndicator value)? linearProgressIndicator,
+    TResult? Function(Divider value)? divider,
   }) {
     return card?.call(this);
   }
@@ -1075,11 +1121,15 @@ class _$Card implements Card {
         floatingActionButtonExtended,
     TResult Function(Text value)? text,
     TResult Function(Container value)? container,
+    TResult Function(SizedBox value)? sizedBox,
     TResult Function(Center value)? center,
     TResult Function(Icon value)? icon,
     TResult Function(Column value)? column,
     TResult Function(Row value)? row,
-    TResult Function(SizedBox value)? sizedBox,
+    TResult Function(CircularProgressIndicator value)?
+        circularProgressIndicator,
+    TResult Function(LinearProgressIndicator value)? linearProgressIndicator,
+    TResult Function(Divider value)? divider,
     required TResult orElse(),
   }) {
     if (card != null) {
@@ -1404,11 +1454,14 @@ class _$ElevatedButton implements ElevatedButton {
     required TResult Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback) floatingActionButtonExtended,
     required TResult Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor) text,
     required TResult Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior) container,
+    required TResult Function(Key? key, double? width, double? height, Widget? child) sizedBox,
     required TResult Function(Key? key, double? widthFactor, double? heightFactor, Widget child) center,
     required TResult Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection) icon,
     required TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children) column,
     required TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children) row,
-    required TResult Function(Key? key, double? width, double? height, Widget? child) sizedBox,
+    required TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue) circularProgressIndicator,
+    required TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue) linearProgressIndicator,
+    required TResult Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color) divider,
   }) {
     return elevatedButton(
         key, onPressed, onLongPress, autofocus, clipBehavior, child, style);
@@ -1497,11 +1550,14 @@ class _$ElevatedButton implements ElevatedButton {
     TResult? Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButtonExtended,
     TResult? Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor)? text,
     TResult? Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior)? container,
+    TResult? Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
     TResult? Function(Key? key, double? widthFactor, double? heightFactor, Widget child)? center,
     TResult? Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection)? icon,
     TResult? Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? column,
     TResult? Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? row,
-    TResult? Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
+    TResult? Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue)? circularProgressIndicator,
+    TResult? Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue)? linearProgressIndicator,
+    TResult? Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color)? divider,
   }) {
     return elevatedButton?.call(
         key, onPressed, onLongPress, autofocus, clipBehavior, child, style);
@@ -1590,11 +1646,14 @@ class _$ElevatedButton implements ElevatedButton {
     TResult Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButtonExtended,
     TResult Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor)? text,
     TResult Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior)? container,
+    TResult Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
     TResult Function(Key? key, double? widthFactor, double? heightFactor, Widget child)? center,
     TResult Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection)? icon,
     TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? column,
     TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? row,
-    TResult Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
+    TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue)? circularProgressIndicator,
+    TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue)? linearProgressIndicator,
+    TResult Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color)? divider,
     required TResult orElse(),
   }) {
     if (elevatedButton != null) {
@@ -1620,11 +1679,16 @@ class _$ElevatedButton implements ElevatedButton {
         floatingActionButtonExtended,
     required TResult Function(Text value) text,
     required TResult Function(Container value) container,
+    required TResult Function(SizedBox value) sizedBox,
     required TResult Function(Center value) center,
     required TResult Function(Icon value) icon,
     required TResult Function(Column value) column,
     required TResult Function(Row value) row,
-    required TResult Function(SizedBox value) sizedBox,
+    required TResult Function(CircularProgressIndicator value)
+        circularProgressIndicator,
+    required TResult Function(LinearProgressIndicator value)
+        linearProgressIndicator,
+    required TResult Function(Divider value) divider,
   }) {
     return elevatedButton(this);
   }
@@ -1645,11 +1709,15 @@ class _$ElevatedButton implements ElevatedButton {
         floatingActionButtonExtended,
     TResult? Function(Text value)? text,
     TResult? Function(Container value)? container,
+    TResult? Function(SizedBox value)? sizedBox,
     TResult? Function(Center value)? center,
     TResult? Function(Icon value)? icon,
     TResult? Function(Column value)? column,
     TResult? Function(Row value)? row,
-    TResult? Function(SizedBox value)? sizedBox,
+    TResult? Function(CircularProgressIndicator value)?
+        circularProgressIndicator,
+    TResult? Function(LinearProgressIndicator value)? linearProgressIndicator,
+    TResult? Function(Divider value)? divider,
   }) {
     return elevatedButton?.call(this);
   }
@@ -1670,11 +1738,15 @@ class _$ElevatedButton implements ElevatedButton {
         floatingActionButtonExtended,
     TResult Function(Text value)? text,
     TResult Function(Container value)? container,
+    TResult Function(SizedBox value)? sizedBox,
     TResult Function(Center value)? center,
     TResult Function(Icon value)? icon,
     TResult Function(Column value)? column,
     TResult Function(Row value)? row,
-    TResult Function(SizedBox value)? sizedBox,
+    TResult Function(CircularProgressIndicator value)?
+        circularProgressIndicator,
+    TResult Function(LinearProgressIndicator value)? linearProgressIndicator,
+    TResult Function(Divider value)? divider,
     required TResult orElse(),
   }) {
     if (elevatedButton != null) {
@@ -1969,11 +2041,14 @@ class _$FilledButton implements FilledButton {
     required TResult Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback) floatingActionButtonExtended,
     required TResult Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor) text,
     required TResult Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior) container,
+    required TResult Function(Key? key, double? width, double? height, Widget? child) sizedBox,
     required TResult Function(Key? key, double? widthFactor, double? heightFactor, Widget child) center,
     required TResult Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection) icon,
     required TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children) column,
     required TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children) row,
-    required TResult Function(Key? key, double? width, double? height, Widget? child) sizedBox,
+    required TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue) circularProgressIndicator,
+    required TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue) linearProgressIndicator,
+    required TResult Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color) divider,
   }) {
     return filledButton(
         key, onPressed, onLongPress, autofocus, clipBehavior, child);
@@ -2062,11 +2137,14 @@ class _$FilledButton implements FilledButton {
     TResult? Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButtonExtended,
     TResult? Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor)? text,
     TResult? Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior)? container,
+    TResult? Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
     TResult? Function(Key? key, double? widthFactor, double? heightFactor, Widget child)? center,
     TResult? Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection)? icon,
     TResult? Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? column,
     TResult? Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? row,
-    TResult? Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
+    TResult? Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue)? circularProgressIndicator,
+    TResult? Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue)? linearProgressIndicator,
+    TResult? Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color)? divider,
   }) {
     return filledButton?.call(
         key, onPressed, onLongPress, autofocus, clipBehavior, child);
@@ -2155,11 +2233,14 @@ class _$FilledButton implements FilledButton {
     TResult Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButtonExtended,
     TResult Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor)? text,
     TResult Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior)? container,
+    TResult Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
     TResult Function(Key? key, double? widthFactor, double? heightFactor, Widget child)? center,
     TResult Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection)? icon,
     TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? column,
     TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? row,
-    TResult Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
+    TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue)? circularProgressIndicator,
+    TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue)? linearProgressIndicator,
+    TResult Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color)? divider,
     required TResult orElse(),
   }) {
     if (filledButton != null) {
@@ -2185,11 +2266,16 @@ class _$FilledButton implements FilledButton {
         floatingActionButtonExtended,
     required TResult Function(Text value) text,
     required TResult Function(Container value) container,
+    required TResult Function(SizedBox value) sizedBox,
     required TResult Function(Center value) center,
     required TResult Function(Icon value) icon,
     required TResult Function(Column value) column,
     required TResult Function(Row value) row,
-    required TResult Function(SizedBox value) sizedBox,
+    required TResult Function(CircularProgressIndicator value)
+        circularProgressIndicator,
+    required TResult Function(LinearProgressIndicator value)
+        linearProgressIndicator,
+    required TResult Function(Divider value) divider,
   }) {
     return filledButton(this);
   }
@@ -2210,11 +2296,15 @@ class _$FilledButton implements FilledButton {
         floatingActionButtonExtended,
     TResult? Function(Text value)? text,
     TResult? Function(Container value)? container,
+    TResult? Function(SizedBox value)? sizedBox,
     TResult? Function(Center value)? center,
     TResult? Function(Icon value)? icon,
     TResult? Function(Column value)? column,
     TResult? Function(Row value)? row,
-    TResult? Function(SizedBox value)? sizedBox,
+    TResult? Function(CircularProgressIndicator value)?
+        circularProgressIndicator,
+    TResult? Function(LinearProgressIndicator value)? linearProgressIndicator,
+    TResult? Function(Divider value)? divider,
   }) {
     return filledButton?.call(this);
   }
@@ -2235,11 +2325,15 @@ class _$FilledButton implements FilledButton {
         floatingActionButtonExtended,
     TResult Function(Text value)? text,
     TResult Function(Container value)? container,
+    TResult Function(SizedBox value)? sizedBox,
     TResult Function(Center value)? center,
     TResult Function(Icon value)? icon,
     TResult Function(Column value)? column,
     TResult Function(Row value)? row,
-    TResult Function(SizedBox value)? sizedBox,
+    TResult Function(CircularProgressIndicator value)?
+        circularProgressIndicator,
+    TResult Function(LinearProgressIndicator value)? linearProgressIndicator,
+    TResult Function(Divider value)? divider,
     required TResult orElse(),
   }) {
     if (filledButton != null) {
@@ -2533,11 +2627,14 @@ class _$FilledTonalButton implements FilledTonalButton {
     required TResult Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback) floatingActionButtonExtended,
     required TResult Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor) text,
     required TResult Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior) container,
+    required TResult Function(Key? key, double? width, double? height, Widget? child) sizedBox,
     required TResult Function(Key? key, double? widthFactor, double? heightFactor, Widget child) center,
     required TResult Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection) icon,
     required TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children) column,
     required TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children) row,
-    required TResult Function(Key? key, double? width, double? height, Widget? child) sizedBox,
+    required TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue) circularProgressIndicator,
+    required TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue) linearProgressIndicator,
+    required TResult Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color) divider,
   }) {
     return filledTonalButton(
         key, onPressed, onLongPress, autofocus, clipBehavior, child);
@@ -2626,11 +2723,14 @@ class _$FilledTonalButton implements FilledTonalButton {
     TResult? Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButtonExtended,
     TResult? Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor)? text,
     TResult? Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior)? container,
+    TResult? Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
     TResult? Function(Key? key, double? widthFactor, double? heightFactor, Widget child)? center,
     TResult? Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection)? icon,
     TResult? Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? column,
     TResult? Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? row,
-    TResult? Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
+    TResult? Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue)? circularProgressIndicator,
+    TResult? Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue)? linearProgressIndicator,
+    TResult? Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color)? divider,
   }) {
     return filledTonalButton?.call(
         key, onPressed, onLongPress, autofocus, clipBehavior, child);
@@ -2719,11 +2819,14 @@ class _$FilledTonalButton implements FilledTonalButton {
     TResult Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButtonExtended,
     TResult Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor)? text,
     TResult Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior)? container,
+    TResult Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
     TResult Function(Key? key, double? widthFactor, double? heightFactor, Widget child)? center,
     TResult Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection)? icon,
     TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? column,
     TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? row,
-    TResult Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
+    TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue)? circularProgressIndicator,
+    TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue)? linearProgressIndicator,
+    TResult Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color)? divider,
     required TResult orElse(),
   }) {
     if (filledTonalButton != null) {
@@ -2749,11 +2852,16 @@ class _$FilledTonalButton implements FilledTonalButton {
         floatingActionButtonExtended,
     required TResult Function(Text value) text,
     required TResult Function(Container value) container,
+    required TResult Function(SizedBox value) sizedBox,
     required TResult Function(Center value) center,
     required TResult Function(Icon value) icon,
     required TResult Function(Column value) column,
     required TResult Function(Row value) row,
-    required TResult Function(SizedBox value) sizedBox,
+    required TResult Function(CircularProgressIndicator value)
+        circularProgressIndicator,
+    required TResult Function(LinearProgressIndicator value)
+        linearProgressIndicator,
+    required TResult Function(Divider value) divider,
   }) {
     return filledTonalButton(this);
   }
@@ -2774,11 +2882,15 @@ class _$FilledTonalButton implements FilledTonalButton {
         floatingActionButtonExtended,
     TResult? Function(Text value)? text,
     TResult? Function(Container value)? container,
+    TResult? Function(SizedBox value)? sizedBox,
     TResult? Function(Center value)? center,
     TResult? Function(Icon value)? icon,
     TResult? Function(Column value)? column,
     TResult? Function(Row value)? row,
-    TResult? Function(SizedBox value)? sizedBox,
+    TResult? Function(CircularProgressIndicator value)?
+        circularProgressIndicator,
+    TResult? Function(LinearProgressIndicator value)? linearProgressIndicator,
+    TResult? Function(Divider value)? divider,
   }) {
     return filledTonalButton?.call(this);
   }
@@ -2799,11 +2911,15 @@ class _$FilledTonalButton implements FilledTonalButton {
         floatingActionButtonExtended,
     TResult Function(Text value)? text,
     TResult Function(Container value)? container,
+    TResult Function(SizedBox value)? sizedBox,
     TResult Function(Center value)? center,
     TResult Function(Icon value)? icon,
     TResult Function(Column value)? column,
     TResult Function(Row value)? row,
-    TResult Function(SizedBox value)? sizedBox,
+    TResult Function(CircularProgressIndicator value)?
+        circularProgressIndicator,
+    TResult Function(LinearProgressIndicator value)? linearProgressIndicator,
+    TResult Function(Divider value)? divider,
     required TResult orElse(),
   }) {
     if (filledTonalButton != null) {
@@ -3097,11 +3213,14 @@ class _$OutlinedButton implements OutlinedButton {
     required TResult Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback) floatingActionButtonExtended,
     required TResult Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor) text,
     required TResult Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior) container,
+    required TResult Function(Key? key, double? width, double? height, Widget? child) sizedBox,
     required TResult Function(Key? key, double? widthFactor, double? heightFactor, Widget child) center,
     required TResult Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection) icon,
     required TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children) column,
     required TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children) row,
-    required TResult Function(Key? key, double? width, double? height, Widget? child) sizedBox,
+    required TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue) circularProgressIndicator,
+    required TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue) linearProgressIndicator,
+    required TResult Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color) divider,
   }) {
     return outlinedButton(
         key, onPressed, onLongPress, autofocus, clipBehavior, child);
@@ -3190,11 +3309,14 @@ class _$OutlinedButton implements OutlinedButton {
     TResult? Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButtonExtended,
     TResult? Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor)? text,
     TResult? Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior)? container,
+    TResult? Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
     TResult? Function(Key? key, double? widthFactor, double? heightFactor, Widget child)? center,
     TResult? Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection)? icon,
     TResult? Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? column,
     TResult? Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? row,
-    TResult? Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
+    TResult? Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue)? circularProgressIndicator,
+    TResult? Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue)? linearProgressIndicator,
+    TResult? Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color)? divider,
   }) {
     return outlinedButton?.call(
         key, onPressed, onLongPress, autofocus, clipBehavior, child);
@@ -3283,11 +3405,14 @@ class _$OutlinedButton implements OutlinedButton {
     TResult Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButtonExtended,
     TResult Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor)? text,
     TResult Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior)? container,
+    TResult Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
     TResult Function(Key? key, double? widthFactor, double? heightFactor, Widget child)? center,
     TResult Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection)? icon,
     TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? column,
     TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? row,
-    TResult Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
+    TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue)? circularProgressIndicator,
+    TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue)? linearProgressIndicator,
+    TResult Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color)? divider,
     required TResult orElse(),
   }) {
     if (outlinedButton != null) {
@@ -3313,11 +3438,16 @@ class _$OutlinedButton implements OutlinedButton {
         floatingActionButtonExtended,
     required TResult Function(Text value) text,
     required TResult Function(Container value) container,
+    required TResult Function(SizedBox value) sizedBox,
     required TResult Function(Center value) center,
     required TResult Function(Icon value) icon,
     required TResult Function(Column value) column,
     required TResult Function(Row value) row,
-    required TResult Function(SizedBox value) sizedBox,
+    required TResult Function(CircularProgressIndicator value)
+        circularProgressIndicator,
+    required TResult Function(LinearProgressIndicator value)
+        linearProgressIndicator,
+    required TResult Function(Divider value) divider,
   }) {
     return outlinedButton(this);
   }
@@ -3338,11 +3468,15 @@ class _$OutlinedButton implements OutlinedButton {
         floatingActionButtonExtended,
     TResult? Function(Text value)? text,
     TResult? Function(Container value)? container,
+    TResult? Function(SizedBox value)? sizedBox,
     TResult? Function(Center value)? center,
     TResult? Function(Icon value)? icon,
     TResult? Function(Column value)? column,
     TResult? Function(Row value)? row,
-    TResult? Function(SizedBox value)? sizedBox,
+    TResult? Function(CircularProgressIndicator value)?
+        circularProgressIndicator,
+    TResult? Function(LinearProgressIndicator value)? linearProgressIndicator,
+    TResult? Function(Divider value)? divider,
   }) {
     return outlinedButton?.call(this);
   }
@@ -3363,11 +3497,15 @@ class _$OutlinedButton implements OutlinedButton {
         floatingActionButtonExtended,
     TResult Function(Text value)? text,
     TResult Function(Container value)? container,
+    TResult Function(SizedBox value)? sizedBox,
     TResult Function(Center value)? center,
     TResult Function(Icon value)? icon,
     TResult Function(Column value)? column,
     TResult Function(Row value)? row,
-    TResult Function(SizedBox value)? sizedBox,
+    TResult Function(CircularProgressIndicator value)?
+        circularProgressIndicator,
+    TResult Function(LinearProgressIndicator value)? linearProgressIndicator,
+    TResult Function(Divider value)? divider,
     required TResult orElse(),
   }) {
     if (outlinedButton != null) {
@@ -3660,11 +3798,14 @@ class _$TextButton implements TextButton {
     required TResult Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback) floatingActionButtonExtended,
     required TResult Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor) text,
     required TResult Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior) container,
+    required TResult Function(Key? key, double? width, double? height, Widget? child) sizedBox,
     required TResult Function(Key? key, double? widthFactor, double? heightFactor, Widget child) center,
     required TResult Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection) icon,
     required TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children) column,
     required TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children) row,
-    required TResult Function(Key? key, double? width, double? height, Widget? child) sizedBox,
+    required TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue) circularProgressIndicator,
+    required TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue) linearProgressIndicator,
+    required TResult Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color) divider,
   }) {
     return textButton(
         key, onPressed, onLongPress, autofocus, clipBehavior, child);
@@ -3753,11 +3894,14 @@ class _$TextButton implements TextButton {
     TResult? Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButtonExtended,
     TResult? Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor)? text,
     TResult? Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior)? container,
+    TResult? Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
     TResult? Function(Key? key, double? widthFactor, double? heightFactor, Widget child)? center,
     TResult? Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection)? icon,
     TResult? Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? column,
     TResult? Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? row,
-    TResult? Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
+    TResult? Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue)? circularProgressIndicator,
+    TResult? Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue)? linearProgressIndicator,
+    TResult? Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color)? divider,
   }) {
     return textButton?.call(
         key, onPressed, onLongPress, autofocus, clipBehavior, child);
@@ -3846,11 +3990,14 @@ class _$TextButton implements TextButton {
     TResult Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButtonExtended,
     TResult Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor)? text,
     TResult Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior)? container,
+    TResult Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
     TResult Function(Key? key, double? widthFactor, double? heightFactor, Widget child)? center,
     TResult Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection)? icon,
     TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? column,
     TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? row,
-    TResult Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
+    TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue)? circularProgressIndicator,
+    TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue)? linearProgressIndicator,
+    TResult Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color)? divider,
     required TResult orElse(),
   }) {
     if (textButton != null) {
@@ -3876,11 +4023,16 @@ class _$TextButton implements TextButton {
         floatingActionButtonExtended,
     required TResult Function(Text value) text,
     required TResult Function(Container value) container,
+    required TResult Function(SizedBox value) sizedBox,
     required TResult Function(Center value) center,
     required TResult Function(Icon value) icon,
     required TResult Function(Column value) column,
     required TResult Function(Row value) row,
-    required TResult Function(SizedBox value) sizedBox,
+    required TResult Function(CircularProgressIndicator value)
+        circularProgressIndicator,
+    required TResult Function(LinearProgressIndicator value)
+        linearProgressIndicator,
+    required TResult Function(Divider value) divider,
   }) {
     return textButton(this);
   }
@@ -3901,11 +4053,15 @@ class _$TextButton implements TextButton {
         floatingActionButtonExtended,
     TResult? Function(Text value)? text,
     TResult? Function(Container value)? container,
+    TResult? Function(SizedBox value)? sizedBox,
     TResult? Function(Center value)? center,
     TResult? Function(Icon value)? icon,
     TResult? Function(Column value)? column,
     TResult? Function(Row value)? row,
-    TResult? Function(SizedBox value)? sizedBox,
+    TResult? Function(CircularProgressIndicator value)?
+        circularProgressIndicator,
+    TResult? Function(LinearProgressIndicator value)? linearProgressIndicator,
+    TResult? Function(Divider value)? divider,
   }) {
     return textButton?.call(this);
   }
@@ -3926,11 +4082,15 @@ class _$TextButton implements TextButton {
         floatingActionButtonExtended,
     TResult Function(Text value)? text,
     TResult Function(Container value)? container,
+    TResult Function(SizedBox value)? sizedBox,
     TResult Function(Center value)? center,
     TResult Function(Icon value)? icon,
     TResult Function(Column value)? column,
     TResult Function(Row value)? row,
-    TResult Function(SizedBox value)? sizedBox,
+    TResult Function(CircularProgressIndicator value)?
+        circularProgressIndicator,
+    TResult Function(LinearProgressIndicator value)? linearProgressIndicator,
+    TResult Function(Divider value)? divider,
     required TResult orElse(),
   }) {
     if (textButton != null) {
@@ -4545,11 +4705,14 @@ class _$IconButton implements IconButton {
     required TResult Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback) floatingActionButtonExtended,
     required TResult Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor) text,
     required TResult Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior) container,
+    required TResult Function(Key? key, double? width, double? height, Widget? child) sizedBox,
     required TResult Function(Key? key, double? widthFactor, double? heightFactor, Widget child) center,
     required TResult Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection) icon,
     required TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children) column,
     required TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children) row,
-    required TResult Function(Key? key, double? width, double? height, Widget? child) sizedBox,
+    required TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue) circularProgressIndicator,
+    required TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue) linearProgressIndicator,
+    required TResult Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color) divider,
   }) {
     return iconButton(
         key,
@@ -4658,11 +4821,14 @@ class _$IconButton implements IconButton {
     TResult? Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButtonExtended,
     TResult? Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor)? text,
     TResult? Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior)? container,
+    TResult? Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
     TResult? Function(Key? key, double? widthFactor, double? heightFactor, Widget child)? center,
     TResult? Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection)? icon,
     TResult? Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? column,
     TResult? Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? row,
-    TResult? Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
+    TResult? Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue)? circularProgressIndicator,
+    TResult? Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue)? linearProgressIndicator,
+    TResult? Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color)? divider,
   }) {
     return iconButton?.call(
         key,
@@ -4771,11 +4937,14 @@ class _$IconButton implements IconButton {
     TResult Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButtonExtended,
     TResult Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor)? text,
     TResult Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior)? container,
+    TResult Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
     TResult Function(Key? key, double? widthFactor, double? heightFactor, Widget child)? center,
     TResult Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection)? icon,
     TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? column,
     TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? row,
-    TResult Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
+    TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue)? circularProgressIndicator,
+    TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue)? linearProgressIndicator,
+    TResult Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color)? divider,
     required TResult orElse(),
   }) {
     if (iconButton != null) {
@@ -4821,11 +4990,16 @@ class _$IconButton implements IconButton {
         floatingActionButtonExtended,
     required TResult Function(Text value) text,
     required TResult Function(Container value) container,
+    required TResult Function(SizedBox value) sizedBox,
     required TResult Function(Center value) center,
     required TResult Function(Icon value) icon,
     required TResult Function(Column value) column,
     required TResult Function(Row value) row,
-    required TResult Function(SizedBox value) sizedBox,
+    required TResult Function(CircularProgressIndicator value)
+        circularProgressIndicator,
+    required TResult Function(LinearProgressIndicator value)
+        linearProgressIndicator,
+    required TResult Function(Divider value) divider,
   }) {
     return iconButton(this);
   }
@@ -4846,11 +5020,15 @@ class _$IconButton implements IconButton {
         floatingActionButtonExtended,
     TResult? Function(Text value)? text,
     TResult? Function(Container value)? container,
+    TResult? Function(SizedBox value)? sizedBox,
     TResult? Function(Center value)? center,
     TResult? Function(Icon value)? icon,
     TResult? Function(Column value)? column,
     TResult? Function(Row value)? row,
-    TResult? Function(SizedBox value)? sizedBox,
+    TResult? Function(CircularProgressIndicator value)?
+        circularProgressIndicator,
+    TResult? Function(LinearProgressIndicator value)? linearProgressIndicator,
+    TResult? Function(Divider value)? divider,
   }) {
     return iconButton?.call(this);
   }
@@ -4871,11 +5049,15 @@ class _$IconButton implements IconButton {
         floatingActionButtonExtended,
     TResult Function(Text value)? text,
     TResult Function(Container value)? container,
+    TResult Function(SizedBox value)? sizedBox,
     TResult Function(Center value)? center,
     TResult Function(Icon value)? icon,
     TResult Function(Column value)? column,
     TResult Function(Row value)? row,
-    TResult Function(SizedBox value)? sizedBox,
+    TResult Function(CircularProgressIndicator value)?
+        circularProgressIndicator,
+    TResult Function(LinearProgressIndicator value)? linearProgressIndicator,
+    TResult Function(Divider value)? divider,
     required TResult orElse(),
   }) {
     if (iconButton != null) {
@@ -5506,11 +5688,14 @@ class _$Scaffold implements Scaffold {
     required TResult Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback) floatingActionButtonExtended,
     required TResult Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor) text,
     required TResult Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior) container,
+    required TResult Function(Key? key, double? width, double? height, Widget? child) sizedBox,
     required TResult Function(Key? key, double? widthFactor, double? heightFactor, Widget child) center,
     required TResult Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection) icon,
     required TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children) column,
     required TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children) row,
-    required TResult Function(Key? key, double? width, double? height, Widget? child) sizedBox,
+    required TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue) circularProgressIndicator,
+    required TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue) linearProgressIndicator,
+    required TResult Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color) divider,
   }) {
     return scaffold(
         key,
@@ -5619,11 +5804,14 @@ class _$Scaffold implements Scaffold {
     TResult? Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButtonExtended,
     TResult? Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor)? text,
     TResult? Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior)? container,
+    TResult? Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
     TResult? Function(Key? key, double? widthFactor, double? heightFactor, Widget child)? center,
     TResult? Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection)? icon,
     TResult? Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? column,
     TResult? Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? row,
-    TResult? Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
+    TResult? Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue)? circularProgressIndicator,
+    TResult? Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue)? linearProgressIndicator,
+    TResult? Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color)? divider,
   }) {
     return scaffold?.call(
         key,
@@ -5732,11 +5920,14 @@ class _$Scaffold implements Scaffold {
     TResult Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButtonExtended,
     TResult Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor)? text,
     TResult Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior)? container,
+    TResult Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
     TResult Function(Key? key, double? widthFactor, double? heightFactor, Widget child)? center,
     TResult Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection)? icon,
     TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? column,
     TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? row,
-    TResult Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
+    TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue)? circularProgressIndicator,
+    TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue)? linearProgressIndicator,
+    TResult Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color)? divider,
     required TResult orElse(),
   }) {
     if (scaffold != null) {
@@ -5782,11 +5973,16 @@ class _$Scaffold implements Scaffold {
         floatingActionButtonExtended,
     required TResult Function(Text value) text,
     required TResult Function(Container value) container,
+    required TResult Function(SizedBox value) sizedBox,
     required TResult Function(Center value) center,
     required TResult Function(Icon value) icon,
     required TResult Function(Column value) column,
     required TResult Function(Row value) row,
-    required TResult Function(SizedBox value) sizedBox,
+    required TResult Function(CircularProgressIndicator value)
+        circularProgressIndicator,
+    required TResult Function(LinearProgressIndicator value)
+        linearProgressIndicator,
+    required TResult Function(Divider value) divider,
   }) {
     return scaffold(this);
   }
@@ -5807,11 +6003,15 @@ class _$Scaffold implements Scaffold {
         floatingActionButtonExtended,
     TResult? Function(Text value)? text,
     TResult? Function(Container value)? container,
+    TResult? Function(SizedBox value)? sizedBox,
     TResult? Function(Center value)? center,
     TResult? Function(Icon value)? icon,
     TResult? Function(Column value)? column,
     TResult? Function(Row value)? row,
-    TResult? Function(SizedBox value)? sizedBox,
+    TResult? Function(CircularProgressIndicator value)?
+        circularProgressIndicator,
+    TResult? Function(LinearProgressIndicator value)? linearProgressIndicator,
+    TResult? Function(Divider value)? divider,
   }) {
     return scaffold?.call(this);
   }
@@ -5832,11 +6032,15 @@ class _$Scaffold implements Scaffold {
         floatingActionButtonExtended,
     TResult Function(Text value)? text,
     TResult Function(Container value)? container,
+    TResult Function(SizedBox value)? sizedBox,
     TResult Function(Center value)? center,
     TResult Function(Icon value)? icon,
     TResult Function(Column value)? column,
     TResult Function(Row value)? row,
-    TResult Function(SizedBox value)? sizedBox,
+    TResult Function(CircularProgressIndicator value)?
+        circularProgressIndicator,
+    TResult Function(LinearProgressIndicator value)? linearProgressIndicator,
+    TResult Function(Divider value)? divider,
     required TResult orElse(),
   }) {
     if (scaffold != null) {
@@ -6440,11 +6644,14 @@ class _$FloatingActionButton implements FloatingActionButton {
     required TResult Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback) floatingActionButtonExtended,
     required TResult Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor) text,
     required TResult Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior) container,
+    required TResult Function(Key? key, double? width, double? height, Widget? child) sizedBox,
     required TResult Function(Key? key, double? widthFactor, double? heightFactor, Widget child) center,
     required TResult Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection) icon,
     required TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children) column,
     required TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children) row,
-    required TResult Function(Key? key, double? width, double? height, Widget? child) sizedBox,
+    required TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue) circularProgressIndicator,
+    required TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue) linearProgressIndicator,
+    required TResult Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color) divider,
   }) {
     return floatingActionButton(
         key,
@@ -6554,11 +6761,14 @@ class _$FloatingActionButton implements FloatingActionButton {
     TResult? Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButtonExtended,
     TResult? Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor)? text,
     TResult? Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior)? container,
+    TResult? Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
     TResult? Function(Key? key, double? widthFactor, double? heightFactor, Widget child)? center,
     TResult? Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection)? icon,
     TResult? Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? column,
     TResult? Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? row,
-    TResult? Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
+    TResult? Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue)? circularProgressIndicator,
+    TResult? Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue)? linearProgressIndicator,
+    TResult? Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color)? divider,
   }) {
     return floatingActionButton?.call(
         key,
@@ -6668,11 +6878,14 @@ class _$FloatingActionButton implements FloatingActionButton {
     TResult Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButtonExtended,
     TResult Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor)? text,
     TResult Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior)? container,
+    TResult Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
     TResult Function(Key? key, double? widthFactor, double? heightFactor, Widget child)? center,
     TResult Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection)? icon,
     TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? column,
     TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? row,
-    TResult Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
+    TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue)? circularProgressIndicator,
+    TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue)? linearProgressIndicator,
+    TResult Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color)? divider,
     required TResult orElse(),
   }) {
     if (floatingActionButton != null) {
@@ -6719,11 +6932,16 @@ class _$FloatingActionButton implements FloatingActionButton {
         floatingActionButtonExtended,
     required TResult Function(Text value) text,
     required TResult Function(Container value) container,
+    required TResult Function(SizedBox value) sizedBox,
     required TResult Function(Center value) center,
     required TResult Function(Icon value) icon,
     required TResult Function(Column value) column,
     required TResult Function(Row value) row,
-    required TResult Function(SizedBox value) sizedBox,
+    required TResult Function(CircularProgressIndicator value)
+        circularProgressIndicator,
+    required TResult Function(LinearProgressIndicator value)
+        linearProgressIndicator,
+    required TResult Function(Divider value) divider,
   }) {
     return floatingActionButton(this);
   }
@@ -6744,11 +6962,15 @@ class _$FloatingActionButton implements FloatingActionButton {
         floatingActionButtonExtended,
     TResult? Function(Text value)? text,
     TResult? Function(Container value)? container,
+    TResult? Function(SizedBox value)? sizedBox,
     TResult? Function(Center value)? center,
     TResult? Function(Icon value)? icon,
     TResult? Function(Column value)? column,
     TResult? Function(Row value)? row,
-    TResult? Function(SizedBox value)? sizedBox,
+    TResult? Function(CircularProgressIndicator value)?
+        circularProgressIndicator,
+    TResult? Function(LinearProgressIndicator value)? linearProgressIndicator,
+    TResult? Function(Divider value)? divider,
   }) {
     return floatingActionButton?.call(this);
   }
@@ -6769,11 +6991,15 @@ class _$FloatingActionButton implements FloatingActionButton {
         floatingActionButtonExtended,
     TResult Function(Text value)? text,
     TResult Function(Container value)? container,
+    TResult Function(SizedBox value)? sizedBox,
     TResult Function(Center value)? center,
     TResult Function(Icon value)? icon,
     TResult Function(Column value)? column,
     TResult Function(Row value)? row,
-    TResult Function(SizedBox value)? sizedBox,
+    TResult Function(CircularProgressIndicator value)?
+        circularProgressIndicator,
+    TResult Function(LinearProgressIndicator value)? linearProgressIndicator,
+    TResult Function(Divider value)? divider,
     required TResult orElse(),
   }) {
     if (floatingActionButton != null) {
@@ -7390,11 +7616,14 @@ class _$FloatingActionButtonExtended implements FloatingActionButtonExtended {
     required TResult Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback) floatingActionButtonExtended,
     required TResult Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor) text,
     required TResult Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior) container,
+    required TResult Function(Key? key, double? width, double? height, Widget? child) sizedBox,
     required TResult Function(Key? key, double? widthFactor, double? heightFactor, Widget child) center,
     required TResult Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection) icon,
     required TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children) column,
     required TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children) row,
-    required TResult Function(Key? key, double? width, double? height, Widget? child) sizedBox,
+    required TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue) circularProgressIndicator,
+    required TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue) linearProgressIndicator,
+    required TResult Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color) divider,
   }) {
     return floatingActionButtonExtended(
         key,
@@ -7504,11 +7733,14 @@ class _$FloatingActionButtonExtended implements FloatingActionButtonExtended {
     TResult? Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButtonExtended,
     TResult? Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor)? text,
     TResult? Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior)? container,
+    TResult? Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
     TResult? Function(Key? key, double? widthFactor, double? heightFactor, Widget child)? center,
     TResult? Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection)? icon,
     TResult? Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? column,
     TResult? Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? row,
-    TResult? Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
+    TResult? Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue)? circularProgressIndicator,
+    TResult? Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue)? linearProgressIndicator,
+    TResult? Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color)? divider,
   }) {
     return floatingActionButtonExtended?.call(
         key,
@@ -7618,11 +7850,14 @@ class _$FloatingActionButtonExtended implements FloatingActionButtonExtended {
     TResult Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButtonExtended,
     TResult Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor)? text,
     TResult Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior)? container,
+    TResult Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
     TResult Function(Key? key, double? widthFactor, double? heightFactor, Widget child)? center,
     TResult Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection)? icon,
     TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? column,
     TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? row,
-    TResult Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
+    TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue)? circularProgressIndicator,
+    TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue)? linearProgressIndicator,
+    TResult Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color)? divider,
     required TResult orElse(),
   }) {
     if (floatingActionButtonExtended != null) {
@@ -7669,11 +7904,16 @@ class _$FloatingActionButtonExtended implements FloatingActionButtonExtended {
         floatingActionButtonExtended,
     required TResult Function(Text value) text,
     required TResult Function(Container value) container,
+    required TResult Function(SizedBox value) sizedBox,
     required TResult Function(Center value) center,
     required TResult Function(Icon value) icon,
     required TResult Function(Column value) column,
     required TResult Function(Row value) row,
-    required TResult Function(SizedBox value) sizedBox,
+    required TResult Function(CircularProgressIndicator value)
+        circularProgressIndicator,
+    required TResult Function(LinearProgressIndicator value)
+        linearProgressIndicator,
+    required TResult Function(Divider value) divider,
   }) {
     return floatingActionButtonExtended(this);
   }
@@ -7694,11 +7934,15 @@ class _$FloatingActionButtonExtended implements FloatingActionButtonExtended {
         floatingActionButtonExtended,
     TResult? Function(Text value)? text,
     TResult? Function(Container value)? container,
+    TResult? Function(SizedBox value)? sizedBox,
     TResult? Function(Center value)? center,
     TResult? Function(Icon value)? icon,
     TResult? Function(Column value)? column,
     TResult? Function(Row value)? row,
-    TResult? Function(SizedBox value)? sizedBox,
+    TResult? Function(CircularProgressIndicator value)?
+        circularProgressIndicator,
+    TResult? Function(LinearProgressIndicator value)? linearProgressIndicator,
+    TResult? Function(Divider value)? divider,
   }) {
     return floatingActionButtonExtended?.call(this);
   }
@@ -7719,11 +7963,15 @@ class _$FloatingActionButtonExtended implements FloatingActionButtonExtended {
         floatingActionButtonExtended,
     TResult Function(Text value)? text,
     TResult Function(Container value)? container,
+    TResult Function(SizedBox value)? sizedBox,
     TResult Function(Center value)? center,
     TResult Function(Icon value)? icon,
     TResult Function(Column value)? column,
     TResult Function(Row value)? row,
-    TResult Function(SizedBox value)? sizedBox,
+    TResult Function(CircularProgressIndicator value)?
+        circularProgressIndicator,
+    TResult Function(LinearProgressIndicator value)? linearProgressIndicator,
+    TResult Function(Divider value)? divider,
     required TResult orElse(),
   }) {
     if (floatingActionButtonExtended != null) {
@@ -8184,11 +8432,14 @@ class _$Text implements Text {
     required TResult Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback) floatingActionButtonExtended,
     required TResult Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor) text,
     required TResult Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior) container,
+    required TResult Function(Key? key, double? width, double? height, Widget? child) sizedBox,
     required TResult Function(Key? key, double? widthFactor, double? heightFactor, Widget child) center,
     required TResult Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection) icon,
     required TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children) column,
     required TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children) row,
-    required TResult Function(Key? key, double? width, double? height, Widget? child) sizedBox,
+    required TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue) circularProgressIndicator,
+    required TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue) linearProgressIndicator,
+    required TResult Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color) divider,
   }) {
     return text(
         data,
@@ -8291,11 +8542,14 @@ class _$Text implements Text {
     TResult? Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButtonExtended,
     TResult? Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor)? text,
     TResult? Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior)? container,
+    TResult? Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
     TResult? Function(Key? key, double? widthFactor, double? heightFactor, Widget child)? center,
     TResult? Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection)? icon,
     TResult? Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? column,
     TResult? Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? row,
-    TResult? Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
+    TResult? Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue)? circularProgressIndicator,
+    TResult? Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue)? linearProgressIndicator,
+    TResult? Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color)? divider,
   }) {
     return text?.call(
         data,
@@ -8398,11 +8652,14 @@ class _$Text implements Text {
     TResult Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButtonExtended,
     TResult Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor)? text,
     TResult Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior)? container,
+    TResult Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
     TResult Function(Key? key, double? widthFactor, double? heightFactor, Widget child)? center,
     TResult Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection)? icon,
     TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? column,
     TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? row,
-    TResult Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
+    TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue)? circularProgressIndicator,
+    TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue)? linearProgressIndicator,
+    TResult Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color)? divider,
     required TResult orElse(),
   }) {
     if (text != null) {
@@ -8442,11 +8699,16 @@ class _$Text implements Text {
         floatingActionButtonExtended,
     required TResult Function(Text value) text,
     required TResult Function(Container value) container,
+    required TResult Function(SizedBox value) sizedBox,
     required TResult Function(Center value) center,
     required TResult Function(Icon value) icon,
     required TResult Function(Column value) column,
     required TResult Function(Row value) row,
-    required TResult Function(SizedBox value) sizedBox,
+    required TResult Function(CircularProgressIndicator value)
+        circularProgressIndicator,
+    required TResult Function(LinearProgressIndicator value)
+        linearProgressIndicator,
+    required TResult Function(Divider value) divider,
   }) {
     return text(this);
   }
@@ -8467,11 +8729,15 @@ class _$Text implements Text {
         floatingActionButtonExtended,
     TResult? Function(Text value)? text,
     TResult? Function(Container value)? container,
+    TResult? Function(SizedBox value)? sizedBox,
     TResult? Function(Center value)? center,
     TResult? Function(Icon value)? icon,
     TResult? Function(Column value)? column,
     TResult? Function(Row value)? row,
-    TResult? Function(SizedBox value)? sizedBox,
+    TResult? Function(CircularProgressIndicator value)?
+        circularProgressIndicator,
+    TResult? Function(LinearProgressIndicator value)? linearProgressIndicator,
+    TResult? Function(Divider value)? divider,
   }) {
     return text?.call(this);
   }
@@ -8492,11 +8758,15 @@ class _$Text implements Text {
         floatingActionButtonExtended,
     TResult Function(Text value)? text,
     TResult Function(Container value)? container,
+    TResult Function(SizedBox value)? sizedBox,
     TResult Function(Center value)? center,
     TResult Function(Icon value)? icon,
     TResult Function(Column value)? column,
     TResult Function(Row value)? row,
-    TResult Function(SizedBox value)? sizedBox,
+    TResult Function(CircularProgressIndicator value)?
+        circularProgressIndicator,
+    TResult Function(LinearProgressIndicator value)? linearProgressIndicator,
+    TResult Function(Divider value)? divider,
     required TResult orElse(),
   }) {
     if (text != null) {
@@ -8983,11 +9253,14 @@ class _$Container implements Container {
     required TResult Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback) floatingActionButtonExtended,
     required TResult Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor) text,
     required TResult Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior) container,
+    required TResult Function(Key? key, double? width, double? height, Widget? child) sizedBox,
     required TResult Function(Key? key, double? widthFactor, double? heightFactor, Widget child) center,
     required TResult Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection) icon,
     required TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children) column,
     required TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children) row,
-    required TResult Function(Key? key, double? width, double? height, Widget? child) sizedBox,
+    required TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue) circularProgressIndicator,
+    required TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue) linearProgressIndicator,
+    required TResult Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color) divider,
   }) {
     return container(
         key,
@@ -9089,11 +9362,14 @@ class _$Container implements Container {
     TResult? Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButtonExtended,
     TResult? Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor)? text,
     TResult? Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior)? container,
+    TResult? Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
     TResult? Function(Key? key, double? widthFactor, double? heightFactor, Widget child)? center,
     TResult? Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection)? icon,
     TResult? Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? column,
     TResult? Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? row,
-    TResult? Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
+    TResult? Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue)? circularProgressIndicator,
+    TResult? Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue)? linearProgressIndicator,
+    TResult? Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color)? divider,
   }) {
     return container?.call(
         key,
@@ -9195,11 +9471,14 @@ class _$Container implements Container {
     TResult Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButtonExtended,
     TResult Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor)? text,
     TResult Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior)? container,
+    TResult Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
     TResult Function(Key? key, double? widthFactor, double? heightFactor, Widget child)? center,
     TResult Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection)? icon,
     TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? column,
     TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? row,
-    TResult Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
+    TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue)? circularProgressIndicator,
+    TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue)? linearProgressIndicator,
+    TResult Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color)? divider,
     required TResult orElse(),
   }) {
     if (container != null) {
@@ -9238,11 +9517,16 @@ class _$Container implements Container {
         floatingActionButtonExtended,
     required TResult Function(Text value) text,
     required TResult Function(Container value) container,
+    required TResult Function(SizedBox value) sizedBox,
     required TResult Function(Center value) center,
     required TResult Function(Icon value) icon,
     required TResult Function(Column value) column,
     required TResult Function(Row value) row,
-    required TResult Function(SizedBox value) sizedBox,
+    required TResult Function(CircularProgressIndicator value)
+        circularProgressIndicator,
+    required TResult Function(LinearProgressIndicator value)
+        linearProgressIndicator,
+    required TResult Function(Divider value) divider,
   }) {
     return container(this);
   }
@@ -9263,11 +9547,15 @@ class _$Container implements Container {
         floatingActionButtonExtended,
     TResult? Function(Text value)? text,
     TResult? Function(Container value)? container,
+    TResult? Function(SizedBox value)? sizedBox,
     TResult? Function(Center value)? center,
     TResult? Function(Icon value)? icon,
     TResult? Function(Column value)? column,
     TResult? Function(Row value)? row,
-    TResult? Function(SizedBox value)? sizedBox,
+    TResult? Function(CircularProgressIndicator value)?
+        circularProgressIndicator,
+    TResult? Function(LinearProgressIndicator value)? linearProgressIndicator,
+    TResult? Function(Divider value)? divider,
   }) {
     return container?.call(this);
   }
@@ -9288,11 +9576,15 @@ class _$Container implements Container {
         floatingActionButtonExtended,
     TResult Function(Text value)? text,
     TResult Function(Container value)? container,
+    TResult Function(SizedBox value)? sizedBox,
     TResult Function(Center value)? center,
     TResult Function(Icon value)? icon,
     TResult Function(Column value)? column,
     TResult Function(Row value)? row,
-    TResult Function(SizedBox value)? sizedBox,
+    TResult Function(CircularProgressIndicator value)?
+        circularProgressIndicator,
+    TResult Function(LinearProgressIndicator value)? linearProgressIndicator,
+    TResult Function(Divider value)? divider,
     required TResult orElse(),
   }) {
     if (container != null) {
@@ -9347,6 +9639,525 @@ abstract class Container implements Widget {
   @override
   @JsonKey(ignore: true)
   _$$ContainerCopyWith<_$Container> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$SizedBoxCopyWith<$Res> implements $WidgetCopyWith<$Res> {
+  factory _$$SizedBoxCopyWith(
+          _$SizedBox value, $Res Function(_$SizedBox) then) =
+      __$$SizedBoxCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({Key? key, double? width, double? height, Widget? child});
+
+  @override
+  $KeyCopyWith<$Res>? get key;
+  $WidgetCopyWith<$Res>? get child;
+}
+
+/// @nodoc
+class __$$SizedBoxCopyWithImpl<$Res>
+    extends _$WidgetCopyWithImpl<$Res, _$SizedBox>
+    implements _$$SizedBoxCopyWith<$Res> {
+  __$$SizedBoxCopyWithImpl(_$SizedBox _value, $Res Function(_$SizedBox) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? key = freezed,
+    Object? width = freezed,
+    Object? height = freezed,
+    Object? child = freezed,
+  }) {
+    return _then(_$SizedBox(
+      key: freezed == key
+          ? _value.key
+          : key // ignore: cast_nullable_to_non_nullable
+              as Key?,
+      width: freezed == width
+          ? _value.width
+          : width // ignore: cast_nullable_to_non_nullable
+              as double?,
+      height: freezed == height
+          ? _value.height
+          : height // ignore: cast_nullable_to_non_nullable
+              as double?,
+      child: freezed == child
+          ? _value.child
+          : child // ignore: cast_nullable_to_non_nullable
+              as Widget?,
+    ));
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $WidgetCopyWith<$Res>? get child {
+    if (_value.child == null) {
+      return null;
+    }
+
+    return $WidgetCopyWith<$Res>(_value.child!, (value) {
+      return _then(_value.copyWith(child: value));
+    });
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$SizedBox implements SizedBox {
+  const _$SizedBox(
+      {this.key, this.width, this.height, this.child, final String? $type})
+      : $type = $type ?? 'sizedBox';
+
+  factory _$SizedBox.fromJson(Map<String, dynamic> json) =>
+      _$$SizedBoxFromJson(json);
+
+  @override
+  final Key? key;
+  @override
+  final double? width;
+  @override
+  final double? height;
+  @override
+  final Widget? child;
+
+  @JsonKey(name: 'runtimeType')
+  final String $type;
+
+  @override
+  String toString() {
+    return 'Widget.sizedBox(key: $key, width: $width, height: $height, child: $child)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$SizedBox &&
+            (identical(other.key, key) || other.key == key) &&
+            (identical(other.width, width) || other.width == width) &&
+            (identical(other.height, height) || other.height == height) &&
+            (identical(other.child, child) || other.child == child));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(runtimeType, key, width, height, child);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$SizedBoxCopyWith<_$SizedBox> get copyWith =>
+      __$$SizedBoxCopyWithImpl<_$SizedBox>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(
+            Key? key,
+            Color? color,
+            Color? shadowColor,
+            Color? surfaceTintColor,
+            double? elevation,
+            ShapeBorder? shape,
+            bool borderOnForeground,
+            EdgeInsets? margin,
+            Clip? clipBehavior,
+            Widget? child,
+            bool semanticContainer)
+        card,
+    required TResult Function(
+            Key? key,
+            Callback? onPressed,
+            Callback? onLongPress,
+            bool autofocus,
+            Clip clipBehavior,
+            Widget child,
+            ButtonStyle? style)
+        elevatedButton,
+    required TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)
+        filledButton,
+    required TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)
+        filledTonalButton,
+    required TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)
+        outlinedButton,
+    required TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)
+        textButton,
+    required TResult Function(
+            Key? key,
+            double? iconSize,
+            VisualDensity? visualDensity,
+            EdgeInsets? padding,
+            Alignment? alignment,
+            double? splashRadius,
+            Color? color,
+            Color? focusColor,
+            Color? hoverColor,
+            Color? highlightColor,
+            Color? splashColor,
+            Color? disabledColor,
+            Callback onPressed,
+            MouseCursor? mouseCursor,
+            bool autofocus,
+            String? tooltip,
+            bool? enableFeedback,
+            BoxConstraints? constraints,
+            bool? isSelected,
+            Widget? selectedIcon,
+            Widget icon)
+        iconButton,
+    required TResult Function(
+            Key? key,
+            PreferredSizeWidget? appBar,
+            Widget? body,
+            Widget? floatingActionButton,
+            FloatingActionButtonLocation? floatingActionButtonLocation,
+            List<Widget>? persistentFooterButtons,
+            Alignment persistentFooterAlignment,
+            Widget? drawer,
+            Widget? endDrawer,
+            Widget? bottomNavigationBar,
+            Widget? bottomSheet,
+            Color? backgroundColor,
+            bool? resizeToAvoidBottomInset,
+            bool primary,
+            bool extendBody,
+            bool extendBodyBehindAppBar,
+            Color? drawerScrimColor,
+            double? drawerEdgeDragWidth,
+            bool drawerEnableOpenDragGesture,
+            bool endDrawerEnableOpenDragGesture,
+            String? restorationId)
+        scaffold,
+    required TResult Function(Key? key, Widget? child, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, bool mini, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback) floatingActionButton,
+    required TResult Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback) floatingActionButtonExtended,
+    required TResult Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor) text,
+    required TResult Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior) container,
+    required TResult Function(Key? key, double? width, double? height, Widget? child) sizedBox,
+    required TResult Function(Key? key, double? widthFactor, double? heightFactor, Widget child) center,
+    required TResult Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection) icon,
+    required TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children) column,
+    required TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children) row,
+    required TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue) circularProgressIndicator,
+    required TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue) linearProgressIndicator,
+    required TResult Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color) divider,
+  }) {
+    return sizedBox(key, width, height, child);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(
+            Key? key,
+            Color? color,
+            Color? shadowColor,
+            Color? surfaceTintColor,
+            double? elevation,
+            ShapeBorder? shape,
+            bool borderOnForeground,
+            EdgeInsets? margin,
+            Clip? clipBehavior,
+            Widget? child,
+            bool semanticContainer)?
+        card,
+    TResult? Function(
+            Key? key,
+            Callback? onPressed,
+            Callback? onLongPress,
+            bool autofocus,
+            Clip clipBehavior,
+            Widget child,
+            ButtonStyle? style)?
+        elevatedButton,
+    TResult? Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        filledButton,
+    TResult? Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        filledTonalButton,
+    TResult? Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        outlinedButton,
+    TResult? Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        textButton,
+    TResult? Function(
+            Key? key,
+            double? iconSize,
+            VisualDensity? visualDensity,
+            EdgeInsets? padding,
+            Alignment? alignment,
+            double? splashRadius,
+            Color? color,
+            Color? focusColor,
+            Color? hoverColor,
+            Color? highlightColor,
+            Color? splashColor,
+            Color? disabledColor,
+            Callback onPressed,
+            MouseCursor? mouseCursor,
+            bool autofocus,
+            String? tooltip,
+            bool? enableFeedback,
+            BoxConstraints? constraints,
+            bool? isSelected,
+            Widget? selectedIcon,
+            Widget icon)?
+        iconButton,
+    TResult? Function(
+            Key? key,
+            PreferredSizeWidget? appBar,
+            Widget? body,
+            Widget? floatingActionButton,
+            FloatingActionButtonLocation? floatingActionButtonLocation,
+            List<Widget>? persistentFooterButtons,
+            Alignment persistentFooterAlignment,
+            Widget? drawer,
+            Widget? endDrawer,
+            Widget? bottomNavigationBar,
+            Widget? bottomSheet,
+            Color? backgroundColor,
+            bool? resizeToAvoidBottomInset,
+            bool primary,
+            bool extendBody,
+            bool extendBodyBehindAppBar,
+            Color? drawerScrimColor,
+            double? drawerEdgeDragWidth,
+            bool drawerEnableOpenDragGesture,
+            bool endDrawerEnableOpenDragGesture,
+            String? restorationId)?
+        scaffold,
+    TResult? Function(Key? key, Widget? child, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, bool mini, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButton,
+    TResult? Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButtonExtended,
+    TResult? Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor)? text,
+    TResult? Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior)? container,
+    TResult? Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
+    TResult? Function(Key? key, double? widthFactor, double? heightFactor, Widget child)? center,
+    TResult? Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection)? icon,
+    TResult? Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? column,
+    TResult? Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? row,
+    TResult? Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue)? circularProgressIndicator,
+    TResult? Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue)? linearProgressIndicator,
+    TResult? Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color)? divider,
+  }) {
+    return sizedBox?.call(key, width, height, child);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(
+            Key? key,
+            Color? color,
+            Color? shadowColor,
+            Color? surfaceTintColor,
+            double? elevation,
+            ShapeBorder? shape,
+            bool borderOnForeground,
+            EdgeInsets? margin,
+            Clip? clipBehavior,
+            Widget? child,
+            bool semanticContainer)?
+        card,
+    TResult Function(
+            Key? key,
+            Callback? onPressed,
+            Callback? onLongPress,
+            bool autofocus,
+            Clip clipBehavior,
+            Widget child,
+            ButtonStyle? style)?
+        elevatedButton,
+    TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        filledButton,
+    TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        filledTonalButton,
+    TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        outlinedButton,
+    TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        textButton,
+    TResult Function(
+            Key? key,
+            double? iconSize,
+            VisualDensity? visualDensity,
+            EdgeInsets? padding,
+            Alignment? alignment,
+            double? splashRadius,
+            Color? color,
+            Color? focusColor,
+            Color? hoverColor,
+            Color? highlightColor,
+            Color? splashColor,
+            Color? disabledColor,
+            Callback onPressed,
+            MouseCursor? mouseCursor,
+            bool autofocus,
+            String? tooltip,
+            bool? enableFeedback,
+            BoxConstraints? constraints,
+            bool? isSelected,
+            Widget? selectedIcon,
+            Widget icon)?
+        iconButton,
+    TResult Function(
+            Key? key,
+            PreferredSizeWidget? appBar,
+            Widget? body,
+            Widget? floatingActionButton,
+            FloatingActionButtonLocation? floatingActionButtonLocation,
+            List<Widget>? persistentFooterButtons,
+            Alignment persistentFooterAlignment,
+            Widget? drawer,
+            Widget? endDrawer,
+            Widget? bottomNavigationBar,
+            Widget? bottomSheet,
+            Color? backgroundColor,
+            bool? resizeToAvoidBottomInset,
+            bool primary,
+            bool extendBody,
+            bool extendBodyBehindAppBar,
+            Color? drawerScrimColor,
+            double? drawerEdgeDragWidth,
+            bool drawerEnableOpenDragGesture,
+            bool endDrawerEnableOpenDragGesture,
+            String? restorationId)?
+        scaffold,
+    TResult Function(Key? key, Widget? child, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, bool mini, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButton,
+    TResult Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButtonExtended,
+    TResult Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor)? text,
+    TResult Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior)? container,
+    TResult Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
+    TResult Function(Key? key, double? widthFactor, double? heightFactor, Widget child)? center,
+    TResult Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection)? icon,
+    TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? column,
+    TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? row,
+    TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue)? circularProgressIndicator,
+    TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue)? linearProgressIndicator,
+    TResult Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color)? divider,
+    required TResult orElse(),
+  }) {
+    if (sizedBox != null) {
+      return sizedBox(key, width, height, child);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(Card value) card,
+    required TResult Function(ElevatedButton value) elevatedButton,
+    required TResult Function(FilledButton value) filledButton,
+    required TResult Function(FilledTonalButton value) filledTonalButton,
+    required TResult Function(OutlinedButton value) outlinedButton,
+    required TResult Function(TextButton value) textButton,
+    required TResult Function(IconButton value) iconButton,
+    required TResult Function(Scaffold value) scaffold,
+    required TResult Function(FloatingActionButton value) floatingActionButton,
+    required TResult Function(FloatingActionButtonExtended value)
+        floatingActionButtonExtended,
+    required TResult Function(Text value) text,
+    required TResult Function(Container value) container,
+    required TResult Function(SizedBox value) sizedBox,
+    required TResult Function(Center value) center,
+    required TResult Function(Icon value) icon,
+    required TResult Function(Column value) column,
+    required TResult Function(Row value) row,
+    required TResult Function(CircularProgressIndicator value)
+        circularProgressIndicator,
+    required TResult Function(LinearProgressIndicator value)
+        linearProgressIndicator,
+    required TResult Function(Divider value) divider,
+  }) {
+    return sizedBox(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(Card value)? card,
+    TResult? Function(ElevatedButton value)? elevatedButton,
+    TResult? Function(FilledButton value)? filledButton,
+    TResult? Function(FilledTonalButton value)? filledTonalButton,
+    TResult? Function(OutlinedButton value)? outlinedButton,
+    TResult? Function(TextButton value)? textButton,
+    TResult? Function(IconButton value)? iconButton,
+    TResult? Function(Scaffold value)? scaffold,
+    TResult? Function(FloatingActionButton value)? floatingActionButton,
+    TResult? Function(FloatingActionButtonExtended value)?
+        floatingActionButtonExtended,
+    TResult? Function(Text value)? text,
+    TResult? Function(Container value)? container,
+    TResult? Function(SizedBox value)? sizedBox,
+    TResult? Function(Center value)? center,
+    TResult? Function(Icon value)? icon,
+    TResult? Function(Column value)? column,
+    TResult? Function(Row value)? row,
+    TResult? Function(CircularProgressIndicator value)?
+        circularProgressIndicator,
+    TResult? Function(LinearProgressIndicator value)? linearProgressIndicator,
+    TResult? Function(Divider value)? divider,
+  }) {
+    return sizedBox?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(Card value)? card,
+    TResult Function(ElevatedButton value)? elevatedButton,
+    TResult Function(FilledButton value)? filledButton,
+    TResult Function(FilledTonalButton value)? filledTonalButton,
+    TResult Function(OutlinedButton value)? outlinedButton,
+    TResult Function(TextButton value)? textButton,
+    TResult Function(IconButton value)? iconButton,
+    TResult Function(Scaffold value)? scaffold,
+    TResult Function(FloatingActionButton value)? floatingActionButton,
+    TResult Function(FloatingActionButtonExtended value)?
+        floatingActionButtonExtended,
+    TResult Function(Text value)? text,
+    TResult Function(Container value)? container,
+    TResult Function(SizedBox value)? sizedBox,
+    TResult Function(Center value)? center,
+    TResult Function(Icon value)? icon,
+    TResult Function(Column value)? column,
+    TResult Function(Row value)? row,
+    TResult Function(CircularProgressIndicator value)?
+        circularProgressIndicator,
+    TResult Function(LinearProgressIndicator value)? linearProgressIndicator,
+    TResult Function(Divider value)? divider,
+    required TResult orElse(),
+  }) {
+    if (sizedBox != null) {
+      return sizedBox(this);
+    }
+    return orElse();
+  }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$SizedBoxToJson(
+      this,
+    );
+  }
+}
+
+abstract class SizedBox implements Widget {
+  const factory SizedBox(
+      {final Key? key,
+      final double? width,
+      final double? height,
+      final Widget? child}) = _$SizedBox;
+
+  factory SizedBox.fromJson(Map<String, dynamic> json) = _$SizedBox.fromJson;
+
+  @override
+  Key? get key;
+  double? get width;
+  double? get height;
+  Widget? get child;
+  @override
+  @JsonKey(ignore: true)
+  _$$SizedBoxCopyWith<_$SizedBox> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -9545,11 +10356,14 @@ class _$Center implements Center {
     required TResult Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback) floatingActionButtonExtended,
     required TResult Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor) text,
     required TResult Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior) container,
+    required TResult Function(Key? key, double? width, double? height, Widget? child) sizedBox,
     required TResult Function(Key? key, double? widthFactor, double? heightFactor, Widget child) center,
     required TResult Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection) icon,
     required TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children) column,
     required TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children) row,
-    required TResult Function(Key? key, double? width, double? height, Widget? child) sizedBox,
+    required TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue) circularProgressIndicator,
+    required TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue) linearProgressIndicator,
+    required TResult Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color) divider,
   }) {
     return center(key, widthFactor, heightFactor, child);
   }
@@ -9637,11 +10451,14 @@ class _$Center implements Center {
     TResult? Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButtonExtended,
     TResult? Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor)? text,
     TResult? Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior)? container,
+    TResult? Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
     TResult? Function(Key? key, double? widthFactor, double? heightFactor, Widget child)? center,
     TResult? Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection)? icon,
     TResult? Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? column,
     TResult? Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? row,
-    TResult? Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
+    TResult? Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue)? circularProgressIndicator,
+    TResult? Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue)? linearProgressIndicator,
+    TResult? Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color)? divider,
   }) {
     return center?.call(key, widthFactor, heightFactor, child);
   }
@@ -9729,11 +10546,14 @@ class _$Center implements Center {
     TResult Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButtonExtended,
     TResult Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor)? text,
     TResult Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior)? container,
+    TResult Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
     TResult Function(Key? key, double? widthFactor, double? heightFactor, Widget child)? center,
     TResult Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection)? icon,
     TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? column,
     TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? row,
-    TResult Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
+    TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue)? circularProgressIndicator,
+    TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue)? linearProgressIndicator,
+    TResult Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color)? divider,
     required TResult orElse(),
   }) {
     if (center != null) {
@@ -9758,11 +10578,16 @@ class _$Center implements Center {
         floatingActionButtonExtended,
     required TResult Function(Text value) text,
     required TResult Function(Container value) container,
+    required TResult Function(SizedBox value) sizedBox,
     required TResult Function(Center value) center,
     required TResult Function(Icon value) icon,
     required TResult Function(Column value) column,
     required TResult Function(Row value) row,
-    required TResult Function(SizedBox value) sizedBox,
+    required TResult Function(CircularProgressIndicator value)
+        circularProgressIndicator,
+    required TResult Function(LinearProgressIndicator value)
+        linearProgressIndicator,
+    required TResult Function(Divider value) divider,
   }) {
     return center(this);
   }
@@ -9783,11 +10608,15 @@ class _$Center implements Center {
         floatingActionButtonExtended,
     TResult? Function(Text value)? text,
     TResult? Function(Container value)? container,
+    TResult? Function(SizedBox value)? sizedBox,
     TResult? Function(Center value)? center,
     TResult? Function(Icon value)? icon,
     TResult? Function(Column value)? column,
     TResult? Function(Row value)? row,
-    TResult? Function(SizedBox value)? sizedBox,
+    TResult? Function(CircularProgressIndicator value)?
+        circularProgressIndicator,
+    TResult? Function(LinearProgressIndicator value)? linearProgressIndicator,
+    TResult? Function(Divider value)? divider,
   }) {
     return center?.call(this);
   }
@@ -9808,11 +10637,15 @@ class _$Center implements Center {
         floatingActionButtonExtended,
     TResult Function(Text value)? text,
     TResult Function(Container value)? container,
+    TResult Function(SizedBox value)? sizedBox,
     TResult Function(Center value)? center,
     TResult Function(Icon value)? icon,
     TResult Function(Column value)? column,
     TResult Function(Row value)? row,
-    TResult Function(SizedBox value)? sizedBox,
+    TResult Function(CircularProgressIndicator value)?
+        circularProgressIndicator,
+    TResult Function(LinearProgressIndicator value)? linearProgressIndicator,
+    TResult Function(Divider value)? divider,
     required TResult orElse(),
   }) {
     if (center != null) {
@@ -10153,11 +10986,14 @@ class _$Icon implements Icon {
     required TResult Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback) floatingActionButtonExtended,
     required TResult Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor) text,
     required TResult Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior) container,
+    required TResult Function(Key? key, double? width, double? height, Widget? child) sizedBox,
     required TResult Function(Key? key, double? widthFactor, double? heightFactor, Widget child) center,
     required TResult Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection) icon,
     required TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children) column,
     required TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children) row,
-    required TResult Function(Key? key, double? width, double? height, Widget? child) sizedBox,
+    required TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue) circularProgressIndicator,
+    required TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue) linearProgressIndicator,
+    required TResult Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color) divider,
   }) {
     return icon(this.icon, key, size, fill, weight, grade, opticalSize, color,
         shadows, semanticLabel, textDirection);
@@ -10246,11 +11082,14 @@ class _$Icon implements Icon {
     TResult? Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButtonExtended,
     TResult? Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor)? text,
     TResult? Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior)? container,
+    TResult? Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
     TResult? Function(Key? key, double? widthFactor, double? heightFactor, Widget child)? center,
     TResult? Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection)? icon,
     TResult? Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? column,
     TResult? Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? row,
-    TResult? Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
+    TResult? Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue)? circularProgressIndicator,
+    TResult? Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue)? linearProgressIndicator,
+    TResult? Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color)? divider,
   }) {
     return icon?.call(this.icon, key, size, fill, weight, grade, opticalSize,
         color, shadows, semanticLabel, textDirection);
@@ -10339,11 +11178,14 @@ class _$Icon implements Icon {
     TResult Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButtonExtended,
     TResult Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor)? text,
     TResult Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior)? container,
+    TResult Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
     TResult Function(Key? key, double? widthFactor, double? heightFactor, Widget child)? center,
     TResult Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection)? icon,
     TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? column,
     TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? row,
-    TResult Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
+    TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue)? circularProgressIndicator,
+    TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue)? linearProgressIndicator,
+    TResult Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color)? divider,
     required TResult orElse(),
   }) {
     if (icon != null) {
@@ -10369,11 +11211,16 @@ class _$Icon implements Icon {
         floatingActionButtonExtended,
     required TResult Function(Text value) text,
     required TResult Function(Container value) container,
+    required TResult Function(SizedBox value) sizedBox,
     required TResult Function(Center value) center,
     required TResult Function(Icon value) icon,
     required TResult Function(Column value) column,
     required TResult Function(Row value) row,
-    required TResult Function(SizedBox value) sizedBox,
+    required TResult Function(CircularProgressIndicator value)
+        circularProgressIndicator,
+    required TResult Function(LinearProgressIndicator value)
+        linearProgressIndicator,
+    required TResult Function(Divider value) divider,
   }) {
     return icon(this);
   }
@@ -10394,11 +11241,15 @@ class _$Icon implements Icon {
         floatingActionButtonExtended,
     TResult? Function(Text value)? text,
     TResult? Function(Container value)? container,
+    TResult? Function(SizedBox value)? sizedBox,
     TResult? Function(Center value)? center,
     TResult? Function(Icon value)? icon,
     TResult? Function(Column value)? column,
     TResult? Function(Row value)? row,
-    TResult? Function(SizedBox value)? sizedBox,
+    TResult? Function(CircularProgressIndicator value)?
+        circularProgressIndicator,
+    TResult? Function(LinearProgressIndicator value)? linearProgressIndicator,
+    TResult? Function(Divider value)? divider,
   }) {
     return icon?.call(this);
   }
@@ -10419,11 +11270,15 @@ class _$Icon implements Icon {
         floatingActionButtonExtended,
     TResult Function(Text value)? text,
     TResult Function(Container value)? container,
+    TResult Function(SizedBox value)? sizedBox,
     TResult Function(Center value)? center,
     TResult Function(Icon value)? icon,
     TResult Function(Column value)? column,
     TResult Function(Row value)? row,
-    TResult Function(SizedBox value)? sizedBox,
+    TResult Function(CircularProgressIndicator value)?
+        circularProgressIndicator,
+    TResult Function(LinearProgressIndicator value)? linearProgressIndicator,
+    TResult Function(Divider value)? divider,
     required TResult orElse(),
   }) {
     if (icon != null) {
@@ -10724,11 +11579,14 @@ class _$Column implements Column {
     required TResult Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback) floatingActionButtonExtended,
     required TResult Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor) text,
     required TResult Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior) container,
+    required TResult Function(Key? key, double? width, double? height, Widget? child) sizedBox,
     required TResult Function(Key? key, double? widthFactor, double? heightFactor, Widget child) center,
     required TResult Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection) icon,
     required TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children) column,
     required TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children) row,
-    required TResult Function(Key? key, double? width, double? height, Widget? child) sizedBox,
+    required TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue) circularProgressIndicator,
+    required TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue) linearProgressIndicator,
+    required TResult Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color) divider,
   }) {
     return column(key, mainAxisAlignment, mainAxisSize, crossAxisAlignment,
         textDirection, verticalDirection, textBaseline, children);
@@ -10817,11 +11675,14 @@ class _$Column implements Column {
     TResult? Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButtonExtended,
     TResult? Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor)? text,
     TResult? Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior)? container,
+    TResult? Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
     TResult? Function(Key? key, double? widthFactor, double? heightFactor, Widget child)? center,
     TResult? Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection)? icon,
     TResult? Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? column,
     TResult? Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? row,
-    TResult? Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
+    TResult? Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue)? circularProgressIndicator,
+    TResult? Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue)? linearProgressIndicator,
+    TResult? Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color)? divider,
   }) {
     return column?.call(
         key,
@@ -10917,11 +11778,14 @@ class _$Column implements Column {
     TResult Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButtonExtended,
     TResult Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor)? text,
     TResult Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior)? container,
+    TResult Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
     TResult Function(Key? key, double? widthFactor, double? heightFactor, Widget child)? center,
     TResult Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection)? icon,
     TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? column,
     TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? row,
-    TResult Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
+    TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue)? circularProgressIndicator,
+    TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue)? linearProgressIndicator,
+    TResult Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color)? divider,
     required TResult orElse(),
   }) {
     if (column != null) {
@@ -10947,11 +11811,16 @@ class _$Column implements Column {
         floatingActionButtonExtended,
     required TResult Function(Text value) text,
     required TResult Function(Container value) container,
+    required TResult Function(SizedBox value) sizedBox,
     required TResult Function(Center value) center,
     required TResult Function(Icon value) icon,
     required TResult Function(Column value) column,
     required TResult Function(Row value) row,
-    required TResult Function(SizedBox value) sizedBox,
+    required TResult Function(CircularProgressIndicator value)
+        circularProgressIndicator,
+    required TResult Function(LinearProgressIndicator value)
+        linearProgressIndicator,
+    required TResult Function(Divider value) divider,
   }) {
     return column(this);
   }
@@ -10972,11 +11841,15 @@ class _$Column implements Column {
         floatingActionButtonExtended,
     TResult? Function(Text value)? text,
     TResult? Function(Container value)? container,
+    TResult? Function(SizedBox value)? sizedBox,
     TResult? Function(Center value)? center,
     TResult? Function(Icon value)? icon,
     TResult? Function(Column value)? column,
     TResult? Function(Row value)? row,
-    TResult? Function(SizedBox value)? sizedBox,
+    TResult? Function(CircularProgressIndicator value)?
+        circularProgressIndicator,
+    TResult? Function(LinearProgressIndicator value)? linearProgressIndicator,
+    TResult? Function(Divider value)? divider,
   }) {
     return column?.call(this);
   }
@@ -10997,11 +11870,15 @@ class _$Column implements Column {
         floatingActionButtonExtended,
     TResult Function(Text value)? text,
     TResult Function(Container value)? container,
+    TResult Function(SizedBox value)? sizedBox,
     TResult Function(Center value)? center,
     TResult Function(Icon value)? icon,
     TResult Function(Column value)? column,
     TResult Function(Row value)? row,
-    TResult Function(SizedBox value)? sizedBox,
+    TResult Function(CircularProgressIndicator value)?
+        circularProgressIndicator,
+    TResult Function(LinearProgressIndicator value)? linearProgressIndicator,
+    TResult Function(Divider value)? divider,
     required TResult orElse(),
   }) {
     if (column != null) {
@@ -11297,11 +12174,14 @@ class _$Row implements Row {
     required TResult Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback) floatingActionButtonExtended,
     required TResult Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor) text,
     required TResult Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior) container,
+    required TResult Function(Key? key, double? width, double? height, Widget? child) sizedBox,
     required TResult Function(Key? key, double? widthFactor, double? heightFactor, Widget child) center,
     required TResult Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection) icon,
     required TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children) column,
     required TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children) row,
-    required TResult Function(Key? key, double? width, double? height, Widget? child) sizedBox,
+    required TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue) circularProgressIndicator,
+    required TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue) linearProgressIndicator,
+    required TResult Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color) divider,
   }) {
     return row(key, mainAxisAlignment, mainAxisSize, crossAxisAlignment,
         textDirection, verticalDirection, textBaseline, children);
@@ -11390,11 +12270,14 @@ class _$Row implements Row {
     TResult? Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButtonExtended,
     TResult? Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor)? text,
     TResult? Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior)? container,
+    TResult? Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
     TResult? Function(Key? key, double? widthFactor, double? heightFactor, Widget child)? center,
     TResult? Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection)? icon,
     TResult? Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? column,
     TResult? Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? row,
-    TResult? Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
+    TResult? Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue)? circularProgressIndicator,
+    TResult? Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue)? linearProgressIndicator,
+    TResult? Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color)? divider,
   }) {
     return row?.call(key, mainAxisAlignment, mainAxisSize, crossAxisAlignment,
         textDirection, verticalDirection, textBaseline, children);
@@ -11483,11 +12366,14 @@ class _$Row implements Row {
     TResult Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButtonExtended,
     TResult Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor)? text,
     TResult Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior)? container,
+    TResult Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
     TResult Function(Key? key, double? widthFactor, double? heightFactor, Widget child)? center,
     TResult Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection)? icon,
     TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? column,
     TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? row,
-    TResult Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
+    TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue)? circularProgressIndicator,
+    TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue)? linearProgressIndicator,
+    TResult Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color)? divider,
     required TResult orElse(),
   }) {
     if (row != null) {
@@ -11513,11 +12399,16 @@ class _$Row implements Row {
         floatingActionButtonExtended,
     required TResult Function(Text value) text,
     required TResult Function(Container value) container,
+    required TResult Function(SizedBox value) sizedBox,
     required TResult Function(Center value) center,
     required TResult Function(Icon value) icon,
     required TResult Function(Column value) column,
     required TResult Function(Row value) row,
-    required TResult Function(SizedBox value) sizedBox,
+    required TResult Function(CircularProgressIndicator value)
+        circularProgressIndicator,
+    required TResult Function(LinearProgressIndicator value)
+        linearProgressIndicator,
+    required TResult Function(Divider value) divider,
   }) {
     return row(this);
   }
@@ -11538,11 +12429,15 @@ class _$Row implements Row {
         floatingActionButtonExtended,
     TResult? Function(Text value)? text,
     TResult? Function(Container value)? container,
+    TResult? Function(SizedBox value)? sizedBox,
     TResult? Function(Center value)? center,
     TResult? Function(Icon value)? icon,
     TResult? Function(Column value)? column,
     TResult? Function(Row value)? row,
-    TResult? Function(SizedBox value)? sizedBox,
+    TResult? Function(CircularProgressIndicator value)?
+        circularProgressIndicator,
+    TResult? Function(LinearProgressIndicator value)? linearProgressIndicator,
+    TResult? Function(Divider value)? divider,
   }) {
     return row?.call(this);
   }
@@ -11563,11 +12458,15 @@ class _$Row implements Row {
         floatingActionButtonExtended,
     TResult Function(Text value)? text,
     TResult Function(Container value)? container,
+    TResult Function(SizedBox value)? sizedBox,
     TResult Function(Center value)? center,
     TResult Function(Icon value)? icon,
     TResult Function(Column value)? column,
     TResult Function(Row value)? row,
-    TResult Function(SizedBox value)? sizedBox,
+    TResult Function(CircularProgressIndicator value)?
+        circularProgressIndicator,
+    TResult Function(LinearProgressIndicator value)? linearProgressIndicator,
+    TResult Function(Divider value)? divider,
     required TResult orElse(),
   }) {
     if (row != null) {
@@ -11612,114 +12511,175 @@ abstract class Row implements Widget {
 }
 
 /// @nodoc
-abstract class _$$SizedBoxCopyWith<$Res> implements $WidgetCopyWith<$Res> {
-  factory _$$SizedBoxCopyWith(
-          _$SizedBox value, $Res Function(_$SizedBox) then) =
-      __$$SizedBoxCopyWithImpl<$Res>;
+abstract class _$$CircularProgressIndicatorCopyWith<$Res>
+    implements $WidgetCopyWith<$Res> {
+  factory _$$CircularProgressIndicatorCopyWith(
+          _$CircularProgressIndicator value,
+          $Res Function(_$CircularProgressIndicator) then) =
+      __$$CircularProgressIndicatorCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({Key? key, double? width, double? height, Widget? child});
+  $Res call(
+      {Key? key,
+      double? value,
+      Color? backgroundColor,
+      Color? color,
+      double strokeWidth,
+      String? semanticsLabel,
+      String? semanticsValue});
 
   @override
   $KeyCopyWith<$Res>? get key;
-  $WidgetCopyWith<$Res>? get child;
+  $ColorCopyWith<$Res>? get backgroundColor;
+  $ColorCopyWith<$Res>? get color;
 }
 
 /// @nodoc
-class __$$SizedBoxCopyWithImpl<$Res>
-    extends _$WidgetCopyWithImpl<$Res, _$SizedBox>
-    implements _$$SizedBoxCopyWith<$Res> {
-  __$$SizedBoxCopyWithImpl(_$SizedBox _value, $Res Function(_$SizedBox) _then)
+class __$$CircularProgressIndicatorCopyWithImpl<$Res>
+    extends _$WidgetCopyWithImpl<$Res, _$CircularProgressIndicator>
+    implements _$$CircularProgressIndicatorCopyWith<$Res> {
+  __$$CircularProgressIndicatorCopyWithImpl(_$CircularProgressIndicator _value,
+      $Res Function(_$CircularProgressIndicator) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? key = freezed,
-    Object? width = freezed,
-    Object? height = freezed,
-    Object? child = freezed,
+    Object? value = freezed,
+    Object? backgroundColor = freezed,
+    Object? color = freezed,
+    Object? strokeWidth = null,
+    Object? semanticsLabel = freezed,
+    Object? semanticsValue = freezed,
   }) {
-    return _then(_$SizedBox(
+    return _then(_$CircularProgressIndicator(
       key: freezed == key
           ? _value.key
           : key // ignore: cast_nullable_to_non_nullable
               as Key?,
-      width: freezed == width
-          ? _value.width
-          : width // ignore: cast_nullable_to_non_nullable
+      value: freezed == value
+          ? _value.value
+          : value // ignore: cast_nullable_to_non_nullable
               as double?,
-      height: freezed == height
-          ? _value.height
-          : height // ignore: cast_nullable_to_non_nullable
-              as double?,
-      child: freezed == child
-          ? _value.child
-          : child // ignore: cast_nullable_to_non_nullable
-              as Widget?,
+      backgroundColor: freezed == backgroundColor
+          ? _value.backgroundColor
+          : backgroundColor // ignore: cast_nullable_to_non_nullable
+              as Color?,
+      color: freezed == color
+          ? _value.color
+          : color // ignore: cast_nullable_to_non_nullable
+              as Color?,
+      strokeWidth: null == strokeWidth
+          ? _value.strokeWidth
+          : strokeWidth // ignore: cast_nullable_to_non_nullable
+              as double,
+      semanticsLabel: freezed == semanticsLabel
+          ? _value.semanticsLabel
+          : semanticsLabel // ignore: cast_nullable_to_non_nullable
+              as String?,
+      semanticsValue: freezed == semanticsValue
+          ? _value.semanticsValue
+          : semanticsValue // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $WidgetCopyWith<$Res>? get child {
-    if (_value.child == null) {
+  $ColorCopyWith<$Res>? get backgroundColor {
+    if (_value.backgroundColor == null) {
       return null;
     }
 
-    return $WidgetCopyWith<$Res>(_value.child!, (value) {
-      return _then(_value.copyWith(child: value));
+    return $ColorCopyWith<$Res>(_value.backgroundColor!, (value) {
+      return _then(_value.copyWith(backgroundColor: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ColorCopyWith<$Res>? get color {
+    if (_value.color == null) {
+      return null;
+    }
+
+    return $ColorCopyWith<$Res>(_value.color!, (value) {
+      return _then(_value.copyWith(color: value));
     });
   }
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$SizedBox implements SizedBox {
-  const _$SizedBox(
-      {this.key, this.width, this.height, this.child, final String? $type})
-      : $type = $type ?? 'sizedBox';
+class _$CircularProgressIndicator implements CircularProgressIndicator {
+  const _$CircularProgressIndicator(
+      {this.key,
+      this.value,
+      this.backgroundColor,
+      this.color,
+      this.strokeWidth = 4.0,
+      this.semanticsLabel,
+      this.semanticsValue,
+      final String? $type})
+      : $type = $type ?? 'circularProgressIndicator';
 
-  factory _$SizedBox.fromJson(Map<String, dynamic> json) =>
-      _$$SizedBoxFromJson(json);
+  factory _$CircularProgressIndicator.fromJson(Map<String, dynamic> json) =>
+      _$$CircularProgressIndicatorFromJson(json);
 
   @override
   final Key? key;
   @override
-  final double? width;
+  final double? value;
   @override
-  final double? height;
+  final Color? backgroundColor;
   @override
-  final Widget? child;
+  final Color? color;
+  @override
+  @JsonKey()
+  final double strokeWidth;
+  @override
+  final String? semanticsLabel;
+  @override
+  final String? semanticsValue;
 
   @JsonKey(name: 'runtimeType')
   final String $type;
 
   @override
   String toString() {
-    return 'Widget.sizedBox(key: $key, width: $width, height: $height, child: $child)';
+    return 'Widget.circularProgressIndicator(key: $key, value: $value, backgroundColor: $backgroundColor, color: $color, strokeWidth: $strokeWidth, semanticsLabel: $semanticsLabel, semanticsValue: $semanticsValue)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$SizedBox &&
+            other is _$CircularProgressIndicator &&
             (identical(other.key, key) || other.key == key) &&
-            (identical(other.width, width) || other.width == width) &&
-            (identical(other.height, height) || other.height == height) &&
-            (identical(other.child, child) || other.child == child));
+            (identical(other.value, value) || other.value == value) &&
+            (identical(other.backgroundColor, backgroundColor) ||
+                other.backgroundColor == backgroundColor) &&
+            (identical(other.color, color) || other.color == color) &&
+            (identical(other.strokeWidth, strokeWidth) ||
+                other.strokeWidth == strokeWidth) &&
+            (identical(other.semanticsLabel, semanticsLabel) ||
+                other.semanticsLabel == semanticsLabel) &&
+            (identical(other.semanticsValue, semanticsValue) ||
+                other.semanticsValue == semanticsValue));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, key, width, height, child);
+  int get hashCode => Object.hash(runtimeType, key, value, backgroundColor,
+      color, strokeWidth, semanticsLabel, semanticsValue);
 
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$SizedBoxCopyWith<_$SizedBox> get copyWith =>
-      __$$SizedBoxCopyWithImpl<_$SizedBox>(this, _$identity);
+  _$$CircularProgressIndicatorCopyWith<_$CircularProgressIndicator>
+      get copyWith => __$$CircularProgressIndicatorCopyWithImpl<
+          _$CircularProgressIndicator>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -11804,13 +12764,17 @@ class _$SizedBox implements SizedBox {
     required TResult Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback) floatingActionButtonExtended,
     required TResult Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor) text,
     required TResult Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior) container,
+    required TResult Function(Key? key, double? width, double? height, Widget? child) sizedBox,
     required TResult Function(Key? key, double? widthFactor, double? heightFactor, Widget child) center,
     required TResult Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection) icon,
     required TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children) column,
     required TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children) row,
-    required TResult Function(Key? key, double? width, double? height, Widget? child) sizedBox,
+    required TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue) circularProgressIndicator,
+    required TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue) linearProgressIndicator,
+    required TResult Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color) divider,
   }) {
-    return sizedBox(key, width, height, child);
+    return circularProgressIndicator(key, value, backgroundColor, color,
+        strokeWidth, semanticsLabel, semanticsValue);
   }
 
   @override
@@ -11896,13 +12860,17 @@ class _$SizedBox implements SizedBox {
     TResult? Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButtonExtended,
     TResult? Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor)? text,
     TResult? Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior)? container,
+    TResult? Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
     TResult? Function(Key? key, double? widthFactor, double? heightFactor, Widget child)? center,
     TResult? Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection)? icon,
     TResult? Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? column,
     TResult? Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? row,
-    TResult? Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
+    TResult? Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue)? circularProgressIndicator,
+    TResult? Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue)? linearProgressIndicator,
+    TResult? Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color)? divider,
   }) {
-    return sizedBox?.call(key, width, height, child);
+    return circularProgressIndicator?.call(key, value, backgroundColor, color,
+        strokeWidth, semanticsLabel, semanticsValue);
   }
 
   @override
@@ -11988,15 +12956,19 @@ class _$SizedBox implements SizedBox {
     TResult Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButtonExtended,
     TResult Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor)? text,
     TResult Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior)? container,
+    TResult Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
     TResult Function(Key? key, double? widthFactor, double? heightFactor, Widget child)? center,
     TResult Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection)? icon,
     TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? column,
     TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? row,
-    TResult Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
+    TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue)? circularProgressIndicator,
+    TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue)? linearProgressIndicator,
+    TResult Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color)? divider,
     required TResult orElse(),
   }) {
-    if (sizedBox != null) {
-      return sizedBox(key, width, height, child);
+    if (circularProgressIndicator != null) {
+      return circularProgressIndicator(key, value, backgroundColor, color,
+          strokeWidth, semanticsLabel, semanticsValue);
     }
     return orElse();
   }
@@ -12017,13 +12989,18 @@ class _$SizedBox implements SizedBox {
         floatingActionButtonExtended,
     required TResult Function(Text value) text,
     required TResult Function(Container value) container,
+    required TResult Function(SizedBox value) sizedBox,
     required TResult Function(Center value) center,
     required TResult Function(Icon value) icon,
     required TResult Function(Column value) column,
     required TResult Function(Row value) row,
-    required TResult Function(SizedBox value) sizedBox,
+    required TResult Function(CircularProgressIndicator value)
+        circularProgressIndicator,
+    required TResult Function(LinearProgressIndicator value)
+        linearProgressIndicator,
+    required TResult Function(Divider value) divider,
   }) {
-    return sizedBox(this);
+    return circularProgressIndicator(this);
   }
 
   @override
@@ -12042,13 +13019,17 @@ class _$SizedBox implements SizedBox {
         floatingActionButtonExtended,
     TResult? Function(Text value)? text,
     TResult? Function(Container value)? container,
+    TResult? Function(SizedBox value)? sizedBox,
     TResult? Function(Center value)? center,
     TResult? Function(Icon value)? icon,
     TResult? Function(Column value)? column,
     TResult? Function(Row value)? row,
-    TResult? Function(SizedBox value)? sizedBox,
+    TResult? Function(CircularProgressIndicator value)?
+        circularProgressIndicator,
+    TResult? Function(LinearProgressIndicator value)? linearProgressIndicator,
+    TResult? Function(Divider value)? divider,
   }) {
-    return sizedBox?.call(this);
+    return circularProgressIndicator?.call(this);
   }
 
   @override
@@ -12067,43 +13048,1195 @@ class _$SizedBox implements SizedBox {
         floatingActionButtonExtended,
     TResult Function(Text value)? text,
     TResult Function(Container value)? container,
+    TResult Function(SizedBox value)? sizedBox,
     TResult Function(Center value)? center,
     TResult Function(Icon value)? icon,
     TResult Function(Column value)? column,
     TResult Function(Row value)? row,
-    TResult Function(SizedBox value)? sizedBox,
+    TResult Function(CircularProgressIndicator value)?
+        circularProgressIndicator,
+    TResult Function(LinearProgressIndicator value)? linearProgressIndicator,
+    TResult Function(Divider value)? divider,
     required TResult orElse(),
   }) {
-    if (sizedBox != null) {
-      return sizedBox(this);
+    if (circularProgressIndicator != null) {
+      return circularProgressIndicator(this);
     }
     return orElse();
   }
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$SizedBoxToJson(
+    return _$$CircularProgressIndicatorToJson(
       this,
     );
   }
 }
 
-abstract class SizedBox implements Widget {
-  const factory SizedBox(
+abstract class CircularProgressIndicator implements Widget {
+  const factory CircularProgressIndicator(
       {final Key? key,
-      final double? width,
-      final double? height,
-      final Widget? child}) = _$SizedBox;
+      final double? value,
+      final Color? backgroundColor,
+      final Color? color,
+      final double strokeWidth,
+      final String? semanticsLabel,
+      final String? semanticsValue}) = _$CircularProgressIndicator;
 
-  factory SizedBox.fromJson(Map<String, dynamic> json) = _$SizedBox.fromJson;
+  factory CircularProgressIndicator.fromJson(Map<String, dynamic> json) =
+      _$CircularProgressIndicator.fromJson;
 
   @override
   Key? get key;
-  double? get width;
-  double? get height;
-  Widget? get child;
+  double? get value;
+  Color? get backgroundColor;
+  Color? get color;
+  double get strokeWidth;
+  String? get semanticsLabel;
+  String? get semanticsValue;
   @override
   @JsonKey(ignore: true)
-  _$$SizedBoxCopyWith<_$SizedBox> get copyWith =>
+  _$$CircularProgressIndicatorCopyWith<_$CircularProgressIndicator>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$LinearProgressIndicatorCopyWith<$Res>
+    implements $WidgetCopyWith<$Res> {
+  factory _$$LinearProgressIndicatorCopyWith(_$LinearProgressIndicator value,
+          $Res Function(_$LinearProgressIndicator) then) =
+      __$$LinearProgressIndicatorCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {Key? key,
+      double? value,
+      Color? backgroundColor,
+      Color? color,
+      double? minHeight,
+      String? semanticsLabel,
+      String? semanticsValue});
+
+  @override
+  $KeyCopyWith<$Res>? get key;
+  $ColorCopyWith<$Res>? get backgroundColor;
+  $ColorCopyWith<$Res>? get color;
+}
+
+/// @nodoc
+class __$$LinearProgressIndicatorCopyWithImpl<$Res>
+    extends _$WidgetCopyWithImpl<$Res, _$LinearProgressIndicator>
+    implements _$$LinearProgressIndicatorCopyWith<$Res> {
+  __$$LinearProgressIndicatorCopyWithImpl(_$LinearProgressIndicator _value,
+      $Res Function(_$LinearProgressIndicator) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? key = freezed,
+    Object? value = freezed,
+    Object? backgroundColor = freezed,
+    Object? color = freezed,
+    Object? minHeight = freezed,
+    Object? semanticsLabel = freezed,
+    Object? semanticsValue = freezed,
+  }) {
+    return _then(_$LinearProgressIndicator(
+      key: freezed == key
+          ? _value.key
+          : key // ignore: cast_nullable_to_non_nullable
+              as Key?,
+      value: freezed == value
+          ? _value.value
+          : value // ignore: cast_nullable_to_non_nullable
+              as double?,
+      backgroundColor: freezed == backgroundColor
+          ? _value.backgroundColor
+          : backgroundColor // ignore: cast_nullable_to_non_nullable
+              as Color?,
+      color: freezed == color
+          ? _value.color
+          : color // ignore: cast_nullable_to_non_nullable
+              as Color?,
+      minHeight: freezed == minHeight
+          ? _value.minHeight
+          : minHeight // ignore: cast_nullable_to_non_nullable
+              as double?,
+      semanticsLabel: freezed == semanticsLabel
+          ? _value.semanticsLabel
+          : semanticsLabel // ignore: cast_nullable_to_non_nullable
+              as String?,
+      semanticsValue: freezed == semanticsValue
+          ? _value.semanticsValue
+          : semanticsValue // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ColorCopyWith<$Res>? get backgroundColor {
+    if (_value.backgroundColor == null) {
+      return null;
+    }
+
+    return $ColorCopyWith<$Res>(_value.backgroundColor!, (value) {
+      return _then(_value.copyWith(backgroundColor: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ColorCopyWith<$Res>? get color {
+    if (_value.color == null) {
+      return null;
+    }
+
+    return $ColorCopyWith<$Res>(_value.color!, (value) {
+      return _then(_value.copyWith(color: value));
+    });
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$LinearProgressIndicator implements LinearProgressIndicator {
+  const _$LinearProgressIndicator(
+      {this.key,
+      this.value,
+      this.backgroundColor,
+      this.color,
+      this.minHeight,
+      this.semanticsLabel,
+      this.semanticsValue,
+      final String? $type})
+      : $type = $type ?? 'linearProgressIndicator';
+
+  factory _$LinearProgressIndicator.fromJson(Map<String, dynamic> json) =>
+      _$$LinearProgressIndicatorFromJson(json);
+
+  @override
+  final Key? key;
+  @override
+  final double? value;
+  @override
+  final Color? backgroundColor;
+  @override
+  final Color? color;
+  @override
+  final double? minHeight;
+  @override
+  final String? semanticsLabel;
+  @override
+  final String? semanticsValue;
+
+  @JsonKey(name: 'runtimeType')
+  final String $type;
+
+  @override
+  String toString() {
+    return 'Widget.linearProgressIndicator(key: $key, value: $value, backgroundColor: $backgroundColor, color: $color, minHeight: $minHeight, semanticsLabel: $semanticsLabel, semanticsValue: $semanticsValue)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$LinearProgressIndicator &&
+            (identical(other.key, key) || other.key == key) &&
+            (identical(other.value, value) || other.value == value) &&
+            (identical(other.backgroundColor, backgroundColor) ||
+                other.backgroundColor == backgroundColor) &&
+            (identical(other.color, color) || other.color == color) &&
+            (identical(other.minHeight, minHeight) ||
+                other.minHeight == minHeight) &&
+            (identical(other.semanticsLabel, semanticsLabel) ||
+                other.semanticsLabel == semanticsLabel) &&
+            (identical(other.semanticsValue, semanticsValue) ||
+                other.semanticsValue == semanticsValue));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(runtimeType, key, value, backgroundColor,
+      color, minHeight, semanticsLabel, semanticsValue);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$LinearProgressIndicatorCopyWith<_$LinearProgressIndicator> get copyWith =>
+      __$$LinearProgressIndicatorCopyWithImpl<_$LinearProgressIndicator>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(
+            Key? key,
+            Color? color,
+            Color? shadowColor,
+            Color? surfaceTintColor,
+            double? elevation,
+            ShapeBorder? shape,
+            bool borderOnForeground,
+            EdgeInsets? margin,
+            Clip? clipBehavior,
+            Widget? child,
+            bool semanticContainer)
+        card,
+    required TResult Function(
+            Key? key,
+            Callback? onPressed,
+            Callback? onLongPress,
+            bool autofocus,
+            Clip clipBehavior,
+            Widget child,
+            ButtonStyle? style)
+        elevatedButton,
+    required TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)
+        filledButton,
+    required TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)
+        filledTonalButton,
+    required TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)
+        outlinedButton,
+    required TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)
+        textButton,
+    required TResult Function(
+            Key? key,
+            double? iconSize,
+            VisualDensity? visualDensity,
+            EdgeInsets? padding,
+            Alignment? alignment,
+            double? splashRadius,
+            Color? color,
+            Color? focusColor,
+            Color? hoverColor,
+            Color? highlightColor,
+            Color? splashColor,
+            Color? disabledColor,
+            Callback onPressed,
+            MouseCursor? mouseCursor,
+            bool autofocus,
+            String? tooltip,
+            bool? enableFeedback,
+            BoxConstraints? constraints,
+            bool? isSelected,
+            Widget? selectedIcon,
+            Widget icon)
+        iconButton,
+    required TResult Function(
+            Key? key,
+            PreferredSizeWidget? appBar,
+            Widget? body,
+            Widget? floatingActionButton,
+            FloatingActionButtonLocation? floatingActionButtonLocation,
+            List<Widget>? persistentFooterButtons,
+            Alignment persistentFooterAlignment,
+            Widget? drawer,
+            Widget? endDrawer,
+            Widget? bottomNavigationBar,
+            Widget? bottomSheet,
+            Color? backgroundColor,
+            bool? resizeToAvoidBottomInset,
+            bool primary,
+            bool extendBody,
+            bool extendBodyBehindAppBar,
+            Color? drawerScrimColor,
+            double? drawerEdgeDragWidth,
+            bool drawerEnableOpenDragGesture,
+            bool endDrawerEnableOpenDragGesture,
+            String? restorationId)
+        scaffold,
+    required TResult Function(Key? key, Widget? child, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, bool mini, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback) floatingActionButton,
+    required TResult Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback) floatingActionButtonExtended,
+    required TResult Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor) text,
+    required TResult Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior) container,
+    required TResult Function(Key? key, double? width, double? height, Widget? child) sizedBox,
+    required TResult Function(Key? key, double? widthFactor, double? heightFactor, Widget child) center,
+    required TResult Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection) icon,
+    required TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children) column,
+    required TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children) row,
+    required TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue) circularProgressIndicator,
+    required TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue) linearProgressIndicator,
+    required TResult Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color) divider,
+  }) {
+    return linearProgressIndicator(key, value, backgroundColor, color,
+        minHeight, semanticsLabel, semanticsValue);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(
+            Key? key,
+            Color? color,
+            Color? shadowColor,
+            Color? surfaceTintColor,
+            double? elevation,
+            ShapeBorder? shape,
+            bool borderOnForeground,
+            EdgeInsets? margin,
+            Clip? clipBehavior,
+            Widget? child,
+            bool semanticContainer)?
+        card,
+    TResult? Function(
+            Key? key,
+            Callback? onPressed,
+            Callback? onLongPress,
+            bool autofocus,
+            Clip clipBehavior,
+            Widget child,
+            ButtonStyle? style)?
+        elevatedButton,
+    TResult? Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        filledButton,
+    TResult? Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        filledTonalButton,
+    TResult? Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        outlinedButton,
+    TResult? Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        textButton,
+    TResult? Function(
+            Key? key,
+            double? iconSize,
+            VisualDensity? visualDensity,
+            EdgeInsets? padding,
+            Alignment? alignment,
+            double? splashRadius,
+            Color? color,
+            Color? focusColor,
+            Color? hoverColor,
+            Color? highlightColor,
+            Color? splashColor,
+            Color? disabledColor,
+            Callback onPressed,
+            MouseCursor? mouseCursor,
+            bool autofocus,
+            String? tooltip,
+            bool? enableFeedback,
+            BoxConstraints? constraints,
+            bool? isSelected,
+            Widget? selectedIcon,
+            Widget icon)?
+        iconButton,
+    TResult? Function(
+            Key? key,
+            PreferredSizeWidget? appBar,
+            Widget? body,
+            Widget? floatingActionButton,
+            FloatingActionButtonLocation? floatingActionButtonLocation,
+            List<Widget>? persistentFooterButtons,
+            Alignment persistentFooterAlignment,
+            Widget? drawer,
+            Widget? endDrawer,
+            Widget? bottomNavigationBar,
+            Widget? bottomSheet,
+            Color? backgroundColor,
+            bool? resizeToAvoidBottomInset,
+            bool primary,
+            bool extendBody,
+            bool extendBodyBehindAppBar,
+            Color? drawerScrimColor,
+            double? drawerEdgeDragWidth,
+            bool drawerEnableOpenDragGesture,
+            bool endDrawerEnableOpenDragGesture,
+            String? restorationId)?
+        scaffold,
+    TResult? Function(Key? key, Widget? child, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, bool mini, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButton,
+    TResult? Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButtonExtended,
+    TResult? Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor)? text,
+    TResult? Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior)? container,
+    TResult? Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
+    TResult? Function(Key? key, double? widthFactor, double? heightFactor, Widget child)? center,
+    TResult? Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection)? icon,
+    TResult? Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? column,
+    TResult? Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? row,
+    TResult? Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue)? circularProgressIndicator,
+    TResult? Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue)? linearProgressIndicator,
+    TResult? Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color)? divider,
+  }) {
+    return linearProgressIndicator?.call(key, value, backgroundColor, color,
+        minHeight, semanticsLabel, semanticsValue);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(
+            Key? key,
+            Color? color,
+            Color? shadowColor,
+            Color? surfaceTintColor,
+            double? elevation,
+            ShapeBorder? shape,
+            bool borderOnForeground,
+            EdgeInsets? margin,
+            Clip? clipBehavior,
+            Widget? child,
+            bool semanticContainer)?
+        card,
+    TResult Function(
+            Key? key,
+            Callback? onPressed,
+            Callback? onLongPress,
+            bool autofocus,
+            Clip clipBehavior,
+            Widget child,
+            ButtonStyle? style)?
+        elevatedButton,
+    TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        filledButton,
+    TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        filledTonalButton,
+    TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        outlinedButton,
+    TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        textButton,
+    TResult Function(
+            Key? key,
+            double? iconSize,
+            VisualDensity? visualDensity,
+            EdgeInsets? padding,
+            Alignment? alignment,
+            double? splashRadius,
+            Color? color,
+            Color? focusColor,
+            Color? hoverColor,
+            Color? highlightColor,
+            Color? splashColor,
+            Color? disabledColor,
+            Callback onPressed,
+            MouseCursor? mouseCursor,
+            bool autofocus,
+            String? tooltip,
+            bool? enableFeedback,
+            BoxConstraints? constraints,
+            bool? isSelected,
+            Widget? selectedIcon,
+            Widget icon)?
+        iconButton,
+    TResult Function(
+            Key? key,
+            PreferredSizeWidget? appBar,
+            Widget? body,
+            Widget? floatingActionButton,
+            FloatingActionButtonLocation? floatingActionButtonLocation,
+            List<Widget>? persistentFooterButtons,
+            Alignment persistentFooterAlignment,
+            Widget? drawer,
+            Widget? endDrawer,
+            Widget? bottomNavigationBar,
+            Widget? bottomSheet,
+            Color? backgroundColor,
+            bool? resizeToAvoidBottomInset,
+            bool primary,
+            bool extendBody,
+            bool extendBodyBehindAppBar,
+            Color? drawerScrimColor,
+            double? drawerEdgeDragWidth,
+            bool drawerEnableOpenDragGesture,
+            bool endDrawerEnableOpenDragGesture,
+            String? restorationId)?
+        scaffold,
+    TResult Function(Key? key, Widget? child, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, bool mini, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButton,
+    TResult Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButtonExtended,
+    TResult Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor)? text,
+    TResult Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior)? container,
+    TResult Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
+    TResult Function(Key? key, double? widthFactor, double? heightFactor, Widget child)? center,
+    TResult Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection)? icon,
+    TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? column,
+    TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? row,
+    TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue)? circularProgressIndicator,
+    TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue)? linearProgressIndicator,
+    TResult Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color)? divider,
+    required TResult orElse(),
+  }) {
+    if (linearProgressIndicator != null) {
+      return linearProgressIndicator(key, value, backgroundColor, color,
+          minHeight, semanticsLabel, semanticsValue);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(Card value) card,
+    required TResult Function(ElevatedButton value) elevatedButton,
+    required TResult Function(FilledButton value) filledButton,
+    required TResult Function(FilledTonalButton value) filledTonalButton,
+    required TResult Function(OutlinedButton value) outlinedButton,
+    required TResult Function(TextButton value) textButton,
+    required TResult Function(IconButton value) iconButton,
+    required TResult Function(Scaffold value) scaffold,
+    required TResult Function(FloatingActionButton value) floatingActionButton,
+    required TResult Function(FloatingActionButtonExtended value)
+        floatingActionButtonExtended,
+    required TResult Function(Text value) text,
+    required TResult Function(Container value) container,
+    required TResult Function(SizedBox value) sizedBox,
+    required TResult Function(Center value) center,
+    required TResult Function(Icon value) icon,
+    required TResult Function(Column value) column,
+    required TResult Function(Row value) row,
+    required TResult Function(CircularProgressIndicator value)
+        circularProgressIndicator,
+    required TResult Function(LinearProgressIndicator value)
+        linearProgressIndicator,
+    required TResult Function(Divider value) divider,
+  }) {
+    return linearProgressIndicator(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(Card value)? card,
+    TResult? Function(ElevatedButton value)? elevatedButton,
+    TResult? Function(FilledButton value)? filledButton,
+    TResult? Function(FilledTonalButton value)? filledTonalButton,
+    TResult? Function(OutlinedButton value)? outlinedButton,
+    TResult? Function(TextButton value)? textButton,
+    TResult? Function(IconButton value)? iconButton,
+    TResult? Function(Scaffold value)? scaffold,
+    TResult? Function(FloatingActionButton value)? floatingActionButton,
+    TResult? Function(FloatingActionButtonExtended value)?
+        floatingActionButtonExtended,
+    TResult? Function(Text value)? text,
+    TResult? Function(Container value)? container,
+    TResult? Function(SizedBox value)? sizedBox,
+    TResult? Function(Center value)? center,
+    TResult? Function(Icon value)? icon,
+    TResult? Function(Column value)? column,
+    TResult? Function(Row value)? row,
+    TResult? Function(CircularProgressIndicator value)?
+        circularProgressIndicator,
+    TResult? Function(LinearProgressIndicator value)? linearProgressIndicator,
+    TResult? Function(Divider value)? divider,
+  }) {
+    return linearProgressIndicator?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(Card value)? card,
+    TResult Function(ElevatedButton value)? elevatedButton,
+    TResult Function(FilledButton value)? filledButton,
+    TResult Function(FilledTonalButton value)? filledTonalButton,
+    TResult Function(OutlinedButton value)? outlinedButton,
+    TResult Function(TextButton value)? textButton,
+    TResult Function(IconButton value)? iconButton,
+    TResult Function(Scaffold value)? scaffold,
+    TResult Function(FloatingActionButton value)? floatingActionButton,
+    TResult Function(FloatingActionButtonExtended value)?
+        floatingActionButtonExtended,
+    TResult Function(Text value)? text,
+    TResult Function(Container value)? container,
+    TResult Function(SizedBox value)? sizedBox,
+    TResult Function(Center value)? center,
+    TResult Function(Icon value)? icon,
+    TResult Function(Column value)? column,
+    TResult Function(Row value)? row,
+    TResult Function(CircularProgressIndicator value)?
+        circularProgressIndicator,
+    TResult Function(LinearProgressIndicator value)? linearProgressIndicator,
+    TResult Function(Divider value)? divider,
+    required TResult orElse(),
+  }) {
+    if (linearProgressIndicator != null) {
+      return linearProgressIndicator(this);
+    }
+    return orElse();
+  }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$LinearProgressIndicatorToJson(
+      this,
+    );
+  }
+}
+
+abstract class LinearProgressIndicator implements Widget {
+  const factory LinearProgressIndicator(
+      {final Key? key,
+      final double? value,
+      final Color? backgroundColor,
+      final Color? color,
+      final double? minHeight,
+      final String? semanticsLabel,
+      final String? semanticsValue}) = _$LinearProgressIndicator;
+
+  factory LinearProgressIndicator.fromJson(Map<String, dynamic> json) =
+      _$LinearProgressIndicator.fromJson;
+
+  @override
+  Key? get key;
+  double? get value;
+  Color? get backgroundColor;
+  Color? get color;
+  double? get minHeight;
+  String? get semanticsLabel;
+  String? get semanticsValue;
+  @override
+  @JsonKey(ignore: true)
+  _$$LinearProgressIndicatorCopyWith<_$LinearProgressIndicator> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$DividerCopyWith<$Res> implements $WidgetCopyWith<$Res> {
+  factory _$$DividerCopyWith(_$Divider value, $Res Function(_$Divider) then) =
+      __$$DividerCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {Key? key,
+      double? height,
+      double? thickness,
+      double? indent,
+      double? endIndent,
+      Color? color});
+
+  @override
+  $KeyCopyWith<$Res>? get key;
+  $ColorCopyWith<$Res>? get color;
+}
+
+/// @nodoc
+class __$$DividerCopyWithImpl<$Res>
+    extends _$WidgetCopyWithImpl<$Res, _$Divider>
+    implements _$$DividerCopyWith<$Res> {
+  __$$DividerCopyWithImpl(_$Divider _value, $Res Function(_$Divider) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? key = freezed,
+    Object? height = freezed,
+    Object? thickness = freezed,
+    Object? indent = freezed,
+    Object? endIndent = freezed,
+    Object? color = freezed,
+  }) {
+    return _then(_$Divider(
+      key: freezed == key
+          ? _value.key
+          : key // ignore: cast_nullable_to_non_nullable
+              as Key?,
+      height: freezed == height
+          ? _value.height
+          : height // ignore: cast_nullable_to_non_nullable
+              as double?,
+      thickness: freezed == thickness
+          ? _value.thickness
+          : thickness // ignore: cast_nullable_to_non_nullable
+              as double?,
+      indent: freezed == indent
+          ? _value.indent
+          : indent // ignore: cast_nullable_to_non_nullable
+              as double?,
+      endIndent: freezed == endIndent
+          ? _value.endIndent
+          : endIndent // ignore: cast_nullable_to_non_nullable
+              as double?,
+      color: freezed == color
+          ? _value.color
+          : color // ignore: cast_nullable_to_non_nullable
+              as Color?,
+    ));
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ColorCopyWith<$Res>? get color {
+    if (_value.color == null) {
+      return null;
+    }
+
+    return $ColorCopyWith<$Res>(_value.color!, (value) {
+      return _then(_value.copyWith(color: value));
+    });
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$Divider implements Divider {
+  const _$Divider(
+      {this.key,
+      this.height,
+      this.thickness,
+      this.indent,
+      this.endIndent,
+      this.color,
+      final String? $type})
+      : $type = $type ?? 'divider';
+
+  factory _$Divider.fromJson(Map<String, dynamic> json) =>
+      _$$DividerFromJson(json);
+
+  @override
+  final Key? key;
+  @override
+  final double? height;
+  @override
+  final double? thickness;
+  @override
+  final double? indent;
+  @override
+  final double? endIndent;
+  @override
+  final Color? color;
+
+  @JsonKey(name: 'runtimeType')
+  final String $type;
+
+  @override
+  String toString() {
+    return 'Widget.divider(key: $key, height: $height, thickness: $thickness, indent: $indent, endIndent: $endIndent, color: $color)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$Divider &&
+            (identical(other.key, key) || other.key == key) &&
+            (identical(other.height, height) || other.height == height) &&
+            (identical(other.thickness, thickness) ||
+                other.thickness == thickness) &&
+            (identical(other.indent, indent) || other.indent == indent) &&
+            (identical(other.endIndent, endIndent) ||
+                other.endIndent == endIndent) &&
+            (identical(other.color, color) || other.color == color));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType, key, height, thickness, indent, endIndent, color);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$DividerCopyWith<_$Divider> get copyWith =>
+      __$$DividerCopyWithImpl<_$Divider>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(
+            Key? key,
+            Color? color,
+            Color? shadowColor,
+            Color? surfaceTintColor,
+            double? elevation,
+            ShapeBorder? shape,
+            bool borderOnForeground,
+            EdgeInsets? margin,
+            Clip? clipBehavior,
+            Widget? child,
+            bool semanticContainer)
+        card,
+    required TResult Function(
+            Key? key,
+            Callback? onPressed,
+            Callback? onLongPress,
+            bool autofocus,
+            Clip clipBehavior,
+            Widget child,
+            ButtonStyle? style)
+        elevatedButton,
+    required TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)
+        filledButton,
+    required TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)
+        filledTonalButton,
+    required TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)
+        outlinedButton,
+    required TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)
+        textButton,
+    required TResult Function(
+            Key? key,
+            double? iconSize,
+            VisualDensity? visualDensity,
+            EdgeInsets? padding,
+            Alignment? alignment,
+            double? splashRadius,
+            Color? color,
+            Color? focusColor,
+            Color? hoverColor,
+            Color? highlightColor,
+            Color? splashColor,
+            Color? disabledColor,
+            Callback onPressed,
+            MouseCursor? mouseCursor,
+            bool autofocus,
+            String? tooltip,
+            bool? enableFeedback,
+            BoxConstraints? constraints,
+            bool? isSelected,
+            Widget? selectedIcon,
+            Widget icon)
+        iconButton,
+    required TResult Function(
+            Key? key,
+            PreferredSizeWidget? appBar,
+            Widget? body,
+            Widget? floatingActionButton,
+            FloatingActionButtonLocation? floatingActionButtonLocation,
+            List<Widget>? persistentFooterButtons,
+            Alignment persistentFooterAlignment,
+            Widget? drawer,
+            Widget? endDrawer,
+            Widget? bottomNavigationBar,
+            Widget? bottomSheet,
+            Color? backgroundColor,
+            bool? resizeToAvoidBottomInset,
+            bool primary,
+            bool extendBody,
+            bool extendBodyBehindAppBar,
+            Color? drawerScrimColor,
+            double? drawerEdgeDragWidth,
+            bool drawerEnableOpenDragGesture,
+            bool endDrawerEnableOpenDragGesture,
+            String? restorationId)
+        scaffold,
+    required TResult Function(Key? key, Widget? child, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, bool mini, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback) floatingActionButton,
+    required TResult Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback) floatingActionButtonExtended,
+    required TResult Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor) text,
+    required TResult Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior) container,
+    required TResult Function(Key? key, double? width, double? height, Widget? child) sizedBox,
+    required TResult Function(Key? key, double? widthFactor, double? heightFactor, Widget child) center,
+    required TResult Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection) icon,
+    required TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children) column,
+    required TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children) row,
+    required TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue) circularProgressIndicator,
+    required TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue) linearProgressIndicator,
+    required TResult Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color) divider,
+  }) {
+    return divider(key, height, thickness, indent, endIndent, color);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(
+            Key? key,
+            Color? color,
+            Color? shadowColor,
+            Color? surfaceTintColor,
+            double? elevation,
+            ShapeBorder? shape,
+            bool borderOnForeground,
+            EdgeInsets? margin,
+            Clip? clipBehavior,
+            Widget? child,
+            bool semanticContainer)?
+        card,
+    TResult? Function(
+            Key? key,
+            Callback? onPressed,
+            Callback? onLongPress,
+            bool autofocus,
+            Clip clipBehavior,
+            Widget child,
+            ButtonStyle? style)?
+        elevatedButton,
+    TResult? Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        filledButton,
+    TResult? Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        filledTonalButton,
+    TResult? Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        outlinedButton,
+    TResult? Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        textButton,
+    TResult? Function(
+            Key? key,
+            double? iconSize,
+            VisualDensity? visualDensity,
+            EdgeInsets? padding,
+            Alignment? alignment,
+            double? splashRadius,
+            Color? color,
+            Color? focusColor,
+            Color? hoverColor,
+            Color? highlightColor,
+            Color? splashColor,
+            Color? disabledColor,
+            Callback onPressed,
+            MouseCursor? mouseCursor,
+            bool autofocus,
+            String? tooltip,
+            bool? enableFeedback,
+            BoxConstraints? constraints,
+            bool? isSelected,
+            Widget? selectedIcon,
+            Widget icon)?
+        iconButton,
+    TResult? Function(
+            Key? key,
+            PreferredSizeWidget? appBar,
+            Widget? body,
+            Widget? floatingActionButton,
+            FloatingActionButtonLocation? floatingActionButtonLocation,
+            List<Widget>? persistentFooterButtons,
+            Alignment persistentFooterAlignment,
+            Widget? drawer,
+            Widget? endDrawer,
+            Widget? bottomNavigationBar,
+            Widget? bottomSheet,
+            Color? backgroundColor,
+            bool? resizeToAvoidBottomInset,
+            bool primary,
+            bool extendBody,
+            bool extendBodyBehindAppBar,
+            Color? drawerScrimColor,
+            double? drawerEdgeDragWidth,
+            bool drawerEnableOpenDragGesture,
+            bool endDrawerEnableOpenDragGesture,
+            String? restorationId)?
+        scaffold,
+    TResult? Function(Key? key, Widget? child, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, bool mini, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButton,
+    TResult? Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButtonExtended,
+    TResult? Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor)? text,
+    TResult? Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior)? container,
+    TResult? Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
+    TResult? Function(Key? key, double? widthFactor, double? heightFactor, Widget child)? center,
+    TResult? Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection)? icon,
+    TResult? Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? column,
+    TResult? Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? row,
+    TResult? Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue)? circularProgressIndicator,
+    TResult? Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue)? linearProgressIndicator,
+    TResult? Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color)? divider,
+  }) {
+    return divider?.call(key, height, thickness, indent, endIndent, color);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(
+            Key? key,
+            Color? color,
+            Color? shadowColor,
+            Color? surfaceTintColor,
+            double? elevation,
+            ShapeBorder? shape,
+            bool borderOnForeground,
+            EdgeInsets? margin,
+            Clip? clipBehavior,
+            Widget? child,
+            bool semanticContainer)?
+        card,
+    TResult Function(
+            Key? key,
+            Callback? onPressed,
+            Callback? onLongPress,
+            bool autofocus,
+            Clip clipBehavior,
+            Widget child,
+            ButtonStyle? style)?
+        elevatedButton,
+    TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        filledButton,
+    TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        filledTonalButton,
+    TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        outlinedButton,
+    TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        textButton,
+    TResult Function(
+            Key? key,
+            double? iconSize,
+            VisualDensity? visualDensity,
+            EdgeInsets? padding,
+            Alignment? alignment,
+            double? splashRadius,
+            Color? color,
+            Color? focusColor,
+            Color? hoverColor,
+            Color? highlightColor,
+            Color? splashColor,
+            Color? disabledColor,
+            Callback onPressed,
+            MouseCursor? mouseCursor,
+            bool autofocus,
+            String? tooltip,
+            bool? enableFeedback,
+            BoxConstraints? constraints,
+            bool? isSelected,
+            Widget? selectedIcon,
+            Widget icon)?
+        iconButton,
+    TResult Function(
+            Key? key,
+            PreferredSizeWidget? appBar,
+            Widget? body,
+            Widget? floatingActionButton,
+            FloatingActionButtonLocation? floatingActionButtonLocation,
+            List<Widget>? persistentFooterButtons,
+            Alignment persistentFooterAlignment,
+            Widget? drawer,
+            Widget? endDrawer,
+            Widget? bottomNavigationBar,
+            Widget? bottomSheet,
+            Color? backgroundColor,
+            bool? resizeToAvoidBottomInset,
+            bool primary,
+            bool extendBody,
+            bool extendBodyBehindAppBar,
+            Color? drawerScrimColor,
+            double? drawerEdgeDragWidth,
+            bool drawerEnableOpenDragGesture,
+            bool endDrawerEnableOpenDragGesture,
+            String? restorationId)?
+        scaffold,
+    TResult Function(Key? key, Widget? child, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, bool mini, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButton,
+    TResult Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButtonExtended,
+    TResult Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor)? text,
+    TResult Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior)? container,
+    TResult Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
+    TResult Function(Key? key, double? widthFactor, double? heightFactor, Widget child)? center,
+    TResult Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection)? icon,
+    TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? column,
+    TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? row,
+    TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue)? circularProgressIndicator,
+    TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue)? linearProgressIndicator,
+    TResult Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color)? divider,
+    required TResult orElse(),
+  }) {
+    if (divider != null) {
+      return divider(key, height, thickness, indent, endIndent, color);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(Card value) card,
+    required TResult Function(ElevatedButton value) elevatedButton,
+    required TResult Function(FilledButton value) filledButton,
+    required TResult Function(FilledTonalButton value) filledTonalButton,
+    required TResult Function(OutlinedButton value) outlinedButton,
+    required TResult Function(TextButton value) textButton,
+    required TResult Function(IconButton value) iconButton,
+    required TResult Function(Scaffold value) scaffold,
+    required TResult Function(FloatingActionButton value) floatingActionButton,
+    required TResult Function(FloatingActionButtonExtended value)
+        floatingActionButtonExtended,
+    required TResult Function(Text value) text,
+    required TResult Function(Container value) container,
+    required TResult Function(SizedBox value) sizedBox,
+    required TResult Function(Center value) center,
+    required TResult Function(Icon value) icon,
+    required TResult Function(Column value) column,
+    required TResult Function(Row value) row,
+    required TResult Function(CircularProgressIndicator value)
+        circularProgressIndicator,
+    required TResult Function(LinearProgressIndicator value)
+        linearProgressIndicator,
+    required TResult Function(Divider value) divider,
+  }) {
+    return divider(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(Card value)? card,
+    TResult? Function(ElevatedButton value)? elevatedButton,
+    TResult? Function(FilledButton value)? filledButton,
+    TResult? Function(FilledTonalButton value)? filledTonalButton,
+    TResult? Function(OutlinedButton value)? outlinedButton,
+    TResult? Function(TextButton value)? textButton,
+    TResult? Function(IconButton value)? iconButton,
+    TResult? Function(Scaffold value)? scaffold,
+    TResult? Function(FloatingActionButton value)? floatingActionButton,
+    TResult? Function(FloatingActionButtonExtended value)?
+        floatingActionButtonExtended,
+    TResult? Function(Text value)? text,
+    TResult? Function(Container value)? container,
+    TResult? Function(SizedBox value)? sizedBox,
+    TResult? Function(Center value)? center,
+    TResult? Function(Icon value)? icon,
+    TResult? Function(Column value)? column,
+    TResult? Function(Row value)? row,
+    TResult? Function(CircularProgressIndicator value)?
+        circularProgressIndicator,
+    TResult? Function(LinearProgressIndicator value)? linearProgressIndicator,
+    TResult? Function(Divider value)? divider,
+  }) {
+    return divider?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(Card value)? card,
+    TResult Function(ElevatedButton value)? elevatedButton,
+    TResult Function(FilledButton value)? filledButton,
+    TResult Function(FilledTonalButton value)? filledTonalButton,
+    TResult Function(OutlinedButton value)? outlinedButton,
+    TResult Function(TextButton value)? textButton,
+    TResult Function(IconButton value)? iconButton,
+    TResult Function(Scaffold value)? scaffold,
+    TResult Function(FloatingActionButton value)? floatingActionButton,
+    TResult Function(FloatingActionButtonExtended value)?
+        floatingActionButtonExtended,
+    TResult Function(Text value)? text,
+    TResult Function(Container value)? container,
+    TResult Function(SizedBox value)? sizedBox,
+    TResult Function(Center value)? center,
+    TResult Function(Icon value)? icon,
+    TResult Function(Column value)? column,
+    TResult Function(Row value)? row,
+    TResult Function(CircularProgressIndicator value)?
+        circularProgressIndicator,
+    TResult Function(LinearProgressIndicator value)? linearProgressIndicator,
+    TResult Function(Divider value)? divider,
+    required TResult orElse(),
+  }) {
+    if (divider != null) {
+      return divider(this);
+    }
+    return orElse();
+  }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$DividerToJson(
+      this,
+    );
+  }
+}
+
+abstract class Divider implements Widget {
+  const factory Divider(
+      {final Key? key,
+      final double? height,
+      final double? thickness,
+      final double? indent,
+      final double? endIndent,
+      final Color? color}) = _$Divider;
+
+  factory Divider.fromJson(Map<String, dynamic> json) = _$Divider.fromJson;
+
+  @override
+  Key? get key;
+  double? get height;
+  double? get thickness;
+  double? get indent;
+  double? get endIndent;
+  Color? get color;
+  @override
+  @JsonKey(ignore: true)
+  _$$DividerCopyWith<_$Divider> get copyWith =>
       throw _privateConstructorUsedError;
 }
