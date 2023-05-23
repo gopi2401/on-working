@@ -45,3 +45,5 @@ export 'program/floating_action_button_location.dart';
 export 'program/box_constraints.dart';
 export 'program/icon_data.dart';
 export 'program/visual_density.dart';
+export 'program/navigation_rail_destination.dart';
+export 'program/icon_theme_data.dart';

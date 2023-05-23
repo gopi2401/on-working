@@ -56,6 +56,16 @@ Widget _$WidgetFromJson(Map<String, dynamic> json) {
       return LinearProgressIndicator.fromJson(json);
     case 'divider':
       return Divider.fromJson(json);
+    case 'navigationRail':
+      return NavigationRail.fromJson(json);
+    case 'navigationBar':
+      return NavigationBar.fromJson(json);
+    case 'defaultTabController':
+      return DefaultTabController.fromJson(json);
+    case 'tab':
+      return Tab.fromJson(json);
+    case 'tabBarView':
+      return TabBarView.fromJson(json);
 
     default:
       throw CheckedFromJsonException(json, 'runtimeType', 'Widget',
@@ -156,6 +166,11 @@ mixin _$Widget {
     required TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue) circularProgressIndicator,
     required TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue) linearProgressIndicator,
     required TResult Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color) divider,
+    required TResult Function(Key? key, Color? backgroundColor, bool extended, Widget? leading, Widget? trailing, List<NavigationRailDestination> destinations, int? selectedIndex, IntSelectionCallback? onDestinationSelected, double? elevation, double? groupAlignment, NavigationRailLabelType? labelType, TextStyle? unselectedLabelTextStyle, TextStyle? selectedLabelTextStyle, IconThemeData? unselectedIconTheme, IconThemeData? selectedIconTheme, double? minWidth, double? minExtendedWidth, bool? useIndicator, Color? indicatorColor, ShapeBorder? indicatorShape) navigationRail,
+    required TResult Function(Key? key, Duration? animationDuration, int selectedIndex, List<Widget> destinations, IntSelectionCallback? onDestinationSelected, Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, Color? indicatorColor, ShapeBorder? indicatorShape, double? height, NavigationDestinationLabelBehavior? labelBehavior) navigationBar,
+    required TResult Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration) defaultTabController,
+    required TResult Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child) tab,
+    required TResult Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior) tabBarView,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -248,6 +263,11 @@ mixin _$Widget {
     TResult? Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue)? circularProgressIndicator,
     TResult? Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue)? linearProgressIndicator,
     TResult? Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color)? divider,
+    TResult? Function(Key? key, Color? backgroundColor, bool extended, Widget? leading, Widget? trailing, List<NavigationRailDestination> destinations, int? selectedIndex, IntSelectionCallback? onDestinationSelected, double? elevation, double? groupAlignment, NavigationRailLabelType? labelType, TextStyle? unselectedLabelTextStyle, TextStyle? selectedLabelTextStyle, IconThemeData? unselectedIconTheme, IconThemeData? selectedIconTheme, double? minWidth, double? minExtendedWidth, bool? useIndicator, Color? indicatorColor, ShapeBorder? indicatorShape)? navigationRail,
+    TResult? Function(Key? key, Duration? animationDuration, int selectedIndex, List<Widget> destinations, IntSelectionCallback? onDestinationSelected, Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, Color? indicatorColor, ShapeBorder? indicatorShape, double? height, NavigationDestinationLabelBehavior? labelBehavior)? navigationBar,
+    TResult? Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration)? defaultTabController,
+    TResult? Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child)? tab,
+    TResult? Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior)? tabBarView,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -340,6 +360,11 @@ mixin _$Widget {
     TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue)? circularProgressIndicator,
     TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue)? linearProgressIndicator,
     TResult Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color)? divider,
+    TResult Function(Key? key, Color? backgroundColor, bool extended, Widget? leading, Widget? trailing, List<NavigationRailDestination> destinations, int? selectedIndex, IntSelectionCallback? onDestinationSelected, double? elevation, double? groupAlignment, NavigationRailLabelType? labelType, TextStyle? unselectedLabelTextStyle, TextStyle? selectedLabelTextStyle, IconThemeData? unselectedIconTheme, IconThemeData? selectedIconTheme, double? minWidth, double? minExtendedWidth, bool? useIndicator, Color? indicatorColor, ShapeBorder? indicatorShape)? navigationRail,
+    TResult Function(Key? key, Duration? animationDuration, int selectedIndex, List<Widget> destinations, IntSelectionCallback? onDestinationSelected, Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, Color? indicatorColor, ShapeBorder? indicatorShape, double? height, NavigationDestinationLabelBehavior? labelBehavior)? navigationBar,
+    TResult Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration)? defaultTabController,
+    TResult Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child)? tab,
+    TResult Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior)? tabBarView,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -368,6 +393,11 @@ mixin _$Widget {
     required TResult Function(LinearProgressIndicator value)
         linearProgressIndicator,
     required TResult Function(Divider value) divider,
+    required TResult Function(NavigationRail value) navigationRail,
+    required TResult Function(NavigationBar value) navigationBar,
+    required TResult Function(DefaultTabController value) defaultTabController,
+    required TResult Function(Tab value) tab,
+    required TResult Function(TabBarView value) tabBarView,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -394,6 +424,11 @@ mixin _$Widget {
         circularProgressIndicator,
     TResult? Function(LinearProgressIndicator value)? linearProgressIndicator,
     TResult? Function(Divider value)? divider,
+    TResult? Function(NavigationRail value)? navigationRail,
+    TResult? Function(NavigationBar value)? navigationBar,
+    TResult? Function(DefaultTabController value)? defaultTabController,
+    TResult? Function(Tab value)? tab,
+    TResult? Function(TabBarView value)? tabBarView,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -420,6 +455,11 @@ mixin _$Widget {
         circularProgressIndicator,
     TResult Function(LinearProgressIndicator value)? linearProgressIndicator,
     TResult Function(Divider value)? divider,
+    TResult Function(NavigationRail value)? navigationRail,
+    TResult Function(NavigationBar value)? navigationBar,
+    TResult Function(DefaultTabController value)? defaultTabController,
+    TResult Function(Tab value)? tab,
+    TResult Function(TabBarView value)? tabBarView,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -835,6 +875,11 @@ class _$Card implements Card {
     required TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue) circularProgressIndicator,
     required TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue) linearProgressIndicator,
     required TResult Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color) divider,
+    required TResult Function(Key? key, Color? backgroundColor, bool extended, Widget? leading, Widget? trailing, List<NavigationRailDestination> destinations, int? selectedIndex, IntSelectionCallback? onDestinationSelected, double? elevation, double? groupAlignment, NavigationRailLabelType? labelType, TextStyle? unselectedLabelTextStyle, TextStyle? selectedLabelTextStyle, IconThemeData? unselectedIconTheme, IconThemeData? selectedIconTheme, double? minWidth, double? minExtendedWidth, bool? useIndicator, Color? indicatorColor, ShapeBorder? indicatorShape) navigationRail,
+    required TResult Function(Key? key, Duration? animationDuration, int selectedIndex, List<Widget> destinations, IntSelectionCallback? onDestinationSelected, Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, Color? indicatorColor, ShapeBorder? indicatorShape, double? height, NavigationDestinationLabelBehavior? labelBehavior) navigationBar,
+    required TResult Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration) defaultTabController,
+    required TResult Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child) tab,
+    required TResult Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior) tabBarView,
   }) {
     return card(key, color, shadowColor, surfaceTintColor, elevation, shape,
         borderOnForeground, margin, clipBehavior, child, semanticContainer);
@@ -931,6 +976,11 @@ class _$Card implements Card {
     TResult? Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue)? circularProgressIndicator,
     TResult? Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue)? linearProgressIndicator,
     TResult? Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color)? divider,
+    TResult? Function(Key? key, Color? backgroundColor, bool extended, Widget? leading, Widget? trailing, List<NavigationRailDestination> destinations, int? selectedIndex, IntSelectionCallback? onDestinationSelected, double? elevation, double? groupAlignment, NavigationRailLabelType? labelType, TextStyle? unselectedLabelTextStyle, TextStyle? selectedLabelTextStyle, IconThemeData? unselectedIconTheme, IconThemeData? selectedIconTheme, double? minWidth, double? minExtendedWidth, bool? useIndicator, Color? indicatorColor, ShapeBorder? indicatorShape)? navigationRail,
+    TResult? Function(Key? key, Duration? animationDuration, int selectedIndex, List<Widget> destinations, IntSelectionCallback? onDestinationSelected, Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, Color? indicatorColor, ShapeBorder? indicatorShape, double? height, NavigationDestinationLabelBehavior? labelBehavior)? navigationBar,
+    TResult? Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration)? defaultTabController,
+    TResult? Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child)? tab,
+    TResult? Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior)? tabBarView,
   }) {
     return card?.call(
         key,
@@ -1037,6 +1087,11 @@ class _$Card implements Card {
     TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue)? circularProgressIndicator,
     TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue)? linearProgressIndicator,
     TResult Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color)? divider,
+    TResult Function(Key? key, Color? backgroundColor, bool extended, Widget? leading, Widget? trailing, List<NavigationRailDestination> destinations, int? selectedIndex, IntSelectionCallback? onDestinationSelected, double? elevation, double? groupAlignment, NavigationRailLabelType? labelType, TextStyle? unselectedLabelTextStyle, TextStyle? selectedLabelTextStyle, IconThemeData? unselectedIconTheme, IconThemeData? selectedIconTheme, double? minWidth, double? minExtendedWidth, bool? useIndicator, Color? indicatorColor, ShapeBorder? indicatorShape)? navigationRail,
+    TResult Function(Key? key, Duration? animationDuration, int selectedIndex, List<Widget> destinations, IntSelectionCallback? onDestinationSelected, Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, Color? indicatorColor, ShapeBorder? indicatorShape, double? height, NavigationDestinationLabelBehavior? labelBehavior)? navigationBar,
+    TResult Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration)? defaultTabController,
+    TResult Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child)? tab,
+    TResult Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior)? tabBarView,
     required TResult orElse(),
   }) {
     if (card != null) {
@@ -1072,6 +1127,11 @@ class _$Card implements Card {
     required TResult Function(LinearProgressIndicator value)
         linearProgressIndicator,
     required TResult Function(Divider value) divider,
+    required TResult Function(NavigationRail value) navigationRail,
+    required TResult Function(NavigationBar value) navigationBar,
+    required TResult Function(DefaultTabController value) defaultTabController,
+    required TResult Function(Tab value) tab,
+    required TResult Function(TabBarView value) tabBarView,
   }) {
     return card(this);
   }
@@ -1101,6 +1161,11 @@ class _$Card implements Card {
         circularProgressIndicator,
     TResult? Function(LinearProgressIndicator value)? linearProgressIndicator,
     TResult? Function(Divider value)? divider,
+    TResult? Function(NavigationRail value)? navigationRail,
+    TResult? Function(NavigationBar value)? navigationBar,
+    TResult? Function(DefaultTabController value)? defaultTabController,
+    TResult? Function(Tab value)? tab,
+    TResult? Function(TabBarView value)? tabBarView,
   }) {
     return card?.call(this);
   }
@@ -1130,6 +1195,11 @@ class _$Card implements Card {
         circularProgressIndicator,
     TResult Function(LinearProgressIndicator value)? linearProgressIndicator,
     TResult Function(Divider value)? divider,
+    TResult Function(NavigationRail value)? navigationRail,
+    TResult Function(NavigationBar value)? navigationBar,
+    TResult Function(DefaultTabController value)? defaultTabController,
+    TResult Function(Tab value)? tab,
+    TResult Function(TabBarView value)? tabBarView,
     required TResult orElse(),
   }) {
     if (card != null) {
@@ -1462,6 +1532,11 @@ class _$ElevatedButton implements ElevatedButton {
     required TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue) circularProgressIndicator,
     required TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue) linearProgressIndicator,
     required TResult Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color) divider,
+    required TResult Function(Key? key, Color? backgroundColor, bool extended, Widget? leading, Widget? trailing, List<NavigationRailDestination> destinations, int? selectedIndex, IntSelectionCallback? onDestinationSelected, double? elevation, double? groupAlignment, NavigationRailLabelType? labelType, TextStyle? unselectedLabelTextStyle, TextStyle? selectedLabelTextStyle, IconThemeData? unselectedIconTheme, IconThemeData? selectedIconTheme, double? minWidth, double? minExtendedWidth, bool? useIndicator, Color? indicatorColor, ShapeBorder? indicatorShape) navigationRail,
+    required TResult Function(Key? key, Duration? animationDuration, int selectedIndex, List<Widget> destinations, IntSelectionCallback? onDestinationSelected, Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, Color? indicatorColor, ShapeBorder? indicatorShape, double? height, NavigationDestinationLabelBehavior? labelBehavior) navigationBar,
+    required TResult Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration) defaultTabController,
+    required TResult Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child) tab,
+    required TResult Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior) tabBarView,
   }) {
     return elevatedButton(
         key, onPressed, onLongPress, autofocus, clipBehavior, child, style);
@@ -1558,6 +1633,11 @@ class _$ElevatedButton implements ElevatedButton {
     TResult? Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue)? circularProgressIndicator,
     TResult? Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue)? linearProgressIndicator,
     TResult? Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color)? divider,
+    TResult? Function(Key? key, Color? backgroundColor, bool extended, Widget? leading, Widget? trailing, List<NavigationRailDestination> destinations, int? selectedIndex, IntSelectionCallback? onDestinationSelected, double? elevation, double? groupAlignment, NavigationRailLabelType? labelType, TextStyle? unselectedLabelTextStyle, TextStyle? selectedLabelTextStyle, IconThemeData? unselectedIconTheme, IconThemeData? selectedIconTheme, double? minWidth, double? minExtendedWidth, bool? useIndicator, Color? indicatorColor, ShapeBorder? indicatorShape)? navigationRail,
+    TResult? Function(Key? key, Duration? animationDuration, int selectedIndex, List<Widget> destinations, IntSelectionCallback? onDestinationSelected, Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, Color? indicatorColor, ShapeBorder? indicatorShape, double? height, NavigationDestinationLabelBehavior? labelBehavior)? navigationBar,
+    TResult? Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration)? defaultTabController,
+    TResult? Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child)? tab,
+    TResult? Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior)? tabBarView,
   }) {
     return elevatedButton?.call(
         key, onPressed, onLongPress, autofocus, clipBehavior, child, style);
@@ -1654,6 +1734,11 @@ class _$ElevatedButton implements ElevatedButton {
     TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue)? circularProgressIndicator,
     TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue)? linearProgressIndicator,
     TResult Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color)? divider,
+    TResult Function(Key? key, Color? backgroundColor, bool extended, Widget? leading, Widget? trailing, List<NavigationRailDestination> destinations, int? selectedIndex, IntSelectionCallback? onDestinationSelected, double? elevation, double? groupAlignment, NavigationRailLabelType? labelType, TextStyle? unselectedLabelTextStyle, TextStyle? selectedLabelTextStyle, IconThemeData? unselectedIconTheme, IconThemeData? selectedIconTheme, double? minWidth, double? minExtendedWidth, bool? useIndicator, Color? indicatorColor, ShapeBorder? indicatorShape)? navigationRail,
+    TResult Function(Key? key, Duration? animationDuration, int selectedIndex, List<Widget> destinations, IntSelectionCallback? onDestinationSelected, Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, Color? indicatorColor, ShapeBorder? indicatorShape, double? height, NavigationDestinationLabelBehavior? labelBehavior)? navigationBar,
+    TResult Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration)? defaultTabController,
+    TResult Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child)? tab,
+    TResult Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior)? tabBarView,
     required TResult orElse(),
   }) {
     if (elevatedButton != null) {
@@ -1689,6 +1774,11 @@ class _$ElevatedButton implements ElevatedButton {
     required TResult Function(LinearProgressIndicator value)
         linearProgressIndicator,
     required TResult Function(Divider value) divider,
+    required TResult Function(NavigationRail value) navigationRail,
+    required TResult Function(NavigationBar value) navigationBar,
+    required TResult Function(DefaultTabController value) defaultTabController,
+    required TResult Function(Tab value) tab,
+    required TResult Function(TabBarView value) tabBarView,
   }) {
     return elevatedButton(this);
   }
@@ -1718,6 +1808,11 @@ class _$ElevatedButton implements ElevatedButton {
         circularProgressIndicator,
     TResult? Function(LinearProgressIndicator value)? linearProgressIndicator,
     TResult? Function(Divider value)? divider,
+    TResult? Function(NavigationRail value)? navigationRail,
+    TResult? Function(NavigationBar value)? navigationBar,
+    TResult? Function(DefaultTabController value)? defaultTabController,
+    TResult? Function(Tab value)? tab,
+    TResult? Function(TabBarView value)? tabBarView,
   }) {
     return elevatedButton?.call(this);
   }
@@ -1747,6 +1842,11 @@ class _$ElevatedButton implements ElevatedButton {
         circularProgressIndicator,
     TResult Function(LinearProgressIndicator value)? linearProgressIndicator,
     TResult Function(Divider value)? divider,
+    TResult Function(NavigationRail value)? navigationRail,
+    TResult Function(NavigationBar value)? navigationBar,
+    TResult Function(DefaultTabController value)? defaultTabController,
+    TResult Function(Tab value)? tab,
+    TResult Function(TabBarView value)? tabBarView,
     required TResult orElse(),
   }) {
     if (elevatedButton != null) {
@@ -2049,6 +2149,11 @@ class _$FilledButton implements FilledButton {
     required TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue) circularProgressIndicator,
     required TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue) linearProgressIndicator,
     required TResult Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color) divider,
+    required TResult Function(Key? key, Color? backgroundColor, bool extended, Widget? leading, Widget? trailing, List<NavigationRailDestination> destinations, int? selectedIndex, IntSelectionCallback? onDestinationSelected, double? elevation, double? groupAlignment, NavigationRailLabelType? labelType, TextStyle? unselectedLabelTextStyle, TextStyle? selectedLabelTextStyle, IconThemeData? unselectedIconTheme, IconThemeData? selectedIconTheme, double? minWidth, double? minExtendedWidth, bool? useIndicator, Color? indicatorColor, ShapeBorder? indicatorShape) navigationRail,
+    required TResult Function(Key? key, Duration? animationDuration, int selectedIndex, List<Widget> destinations, IntSelectionCallback? onDestinationSelected, Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, Color? indicatorColor, ShapeBorder? indicatorShape, double? height, NavigationDestinationLabelBehavior? labelBehavior) navigationBar,
+    required TResult Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration) defaultTabController,
+    required TResult Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child) tab,
+    required TResult Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior) tabBarView,
   }) {
     return filledButton(
         key, onPressed, onLongPress, autofocus, clipBehavior, child);
@@ -2145,6 +2250,11 @@ class _$FilledButton implements FilledButton {
     TResult? Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue)? circularProgressIndicator,
     TResult? Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue)? linearProgressIndicator,
     TResult? Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color)? divider,
+    TResult? Function(Key? key, Color? backgroundColor, bool extended, Widget? leading, Widget? trailing, List<NavigationRailDestination> destinations, int? selectedIndex, IntSelectionCallback? onDestinationSelected, double? elevation, double? groupAlignment, NavigationRailLabelType? labelType, TextStyle? unselectedLabelTextStyle, TextStyle? selectedLabelTextStyle, IconThemeData? unselectedIconTheme, IconThemeData? selectedIconTheme, double? minWidth, double? minExtendedWidth, bool? useIndicator, Color? indicatorColor, ShapeBorder? indicatorShape)? navigationRail,
+    TResult? Function(Key? key, Duration? animationDuration, int selectedIndex, List<Widget> destinations, IntSelectionCallback? onDestinationSelected, Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, Color? indicatorColor, ShapeBorder? indicatorShape, double? height, NavigationDestinationLabelBehavior? labelBehavior)? navigationBar,
+    TResult? Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration)? defaultTabController,
+    TResult? Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child)? tab,
+    TResult? Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior)? tabBarView,
   }) {
     return filledButton?.call(
         key, onPressed, onLongPress, autofocus, clipBehavior, child);
@@ -2241,6 +2351,11 @@ class _$FilledButton implements FilledButton {
     TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue)? circularProgressIndicator,
     TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue)? linearProgressIndicator,
     TResult Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color)? divider,
+    TResult Function(Key? key, Color? backgroundColor, bool extended, Widget? leading, Widget? trailing, List<NavigationRailDestination> destinations, int? selectedIndex, IntSelectionCallback? onDestinationSelected, double? elevation, double? groupAlignment, NavigationRailLabelType? labelType, TextStyle? unselectedLabelTextStyle, TextStyle? selectedLabelTextStyle, IconThemeData? unselectedIconTheme, IconThemeData? selectedIconTheme, double? minWidth, double? minExtendedWidth, bool? useIndicator, Color? indicatorColor, ShapeBorder? indicatorShape)? navigationRail,
+    TResult Function(Key? key, Duration? animationDuration, int selectedIndex, List<Widget> destinations, IntSelectionCallback? onDestinationSelected, Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, Color? indicatorColor, ShapeBorder? indicatorShape, double? height, NavigationDestinationLabelBehavior? labelBehavior)? navigationBar,
+    TResult Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration)? defaultTabController,
+    TResult Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child)? tab,
+    TResult Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior)? tabBarView,
     required TResult orElse(),
   }) {
     if (filledButton != null) {
@@ -2276,6 +2391,11 @@ class _$FilledButton implements FilledButton {
     required TResult Function(LinearProgressIndicator value)
         linearProgressIndicator,
     required TResult Function(Divider value) divider,
+    required TResult Function(NavigationRail value) navigationRail,
+    required TResult Function(NavigationBar value) navigationBar,
+    required TResult Function(DefaultTabController value) defaultTabController,
+    required TResult Function(Tab value) tab,
+    required TResult Function(TabBarView value) tabBarView,
   }) {
     return filledButton(this);
   }
@@ -2305,6 +2425,11 @@ class _$FilledButton implements FilledButton {
         circularProgressIndicator,
     TResult? Function(LinearProgressIndicator value)? linearProgressIndicator,
     TResult? Function(Divider value)? divider,
+    TResult? Function(NavigationRail value)? navigationRail,
+    TResult? Function(NavigationBar value)? navigationBar,
+    TResult? Function(DefaultTabController value)? defaultTabController,
+    TResult? Function(Tab value)? tab,
+    TResult? Function(TabBarView value)? tabBarView,
   }) {
     return filledButton?.call(this);
   }
@@ -2334,6 +2459,11 @@ class _$FilledButton implements FilledButton {
         circularProgressIndicator,
     TResult Function(LinearProgressIndicator value)? linearProgressIndicator,
     TResult Function(Divider value)? divider,
+    TResult Function(NavigationRail value)? navigationRail,
+    TResult Function(NavigationBar value)? navigationBar,
+    TResult Function(DefaultTabController value)? defaultTabController,
+    TResult Function(Tab value)? tab,
+    TResult Function(TabBarView value)? tabBarView,
     required TResult orElse(),
   }) {
     if (filledButton != null) {
@@ -2635,6 +2765,11 @@ class _$FilledTonalButton implements FilledTonalButton {
     required TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue) circularProgressIndicator,
     required TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue) linearProgressIndicator,
     required TResult Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color) divider,
+    required TResult Function(Key? key, Color? backgroundColor, bool extended, Widget? leading, Widget? trailing, List<NavigationRailDestination> destinations, int? selectedIndex, IntSelectionCallback? onDestinationSelected, double? elevation, double? groupAlignment, NavigationRailLabelType? labelType, TextStyle? unselectedLabelTextStyle, TextStyle? selectedLabelTextStyle, IconThemeData? unselectedIconTheme, IconThemeData? selectedIconTheme, double? minWidth, double? minExtendedWidth, bool? useIndicator, Color? indicatorColor, ShapeBorder? indicatorShape) navigationRail,
+    required TResult Function(Key? key, Duration? animationDuration, int selectedIndex, List<Widget> destinations, IntSelectionCallback? onDestinationSelected, Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, Color? indicatorColor, ShapeBorder? indicatorShape, double? height, NavigationDestinationLabelBehavior? labelBehavior) navigationBar,
+    required TResult Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration) defaultTabController,
+    required TResult Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child) tab,
+    required TResult Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior) tabBarView,
   }) {
     return filledTonalButton(
         key, onPressed, onLongPress, autofocus, clipBehavior, child);
@@ -2731,6 +2866,11 @@ class _$FilledTonalButton implements FilledTonalButton {
     TResult? Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue)? circularProgressIndicator,
     TResult? Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue)? linearProgressIndicator,
     TResult? Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color)? divider,
+    TResult? Function(Key? key, Color? backgroundColor, bool extended, Widget? leading, Widget? trailing, List<NavigationRailDestination> destinations, int? selectedIndex, IntSelectionCallback? onDestinationSelected, double? elevation, double? groupAlignment, NavigationRailLabelType? labelType, TextStyle? unselectedLabelTextStyle, TextStyle? selectedLabelTextStyle, IconThemeData? unselectedIconTheme, IconThemeData? selectedIconTheme, double? minWidth, double? minExtendedWidth, bool? useIndicator, Color? indicatorColor, ShapeBorder? indicatorShape)? navigationRail,
+    TResult? Function(Key? key, Duration? animationDuration, int selectedIndex, List<Widget> destinations, IntSelectionCallback? onDestinationSelected, Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, Color? indicatorColor, ShapeBorder? indicatorShape, double? height, NavigationDestinationLabelBehavior? labelBehavior)? navigationBar,
+    TResult? Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration)? defaultTabController,
+    TResult? Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child)? tab,
+    TResult? Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior)? tabBarView,
   }) {
     return filledTonalButton?.call(
         key, onPressed, onLongPress, autofocus, clipBehavior, child);
@@ -2827,6 +2967,11 @@ class _$FilledTonalButton implements FilledTonalButton {
     TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue)? circularProgressIndicator,
     TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue)? linearProgressIndicator,
     TResult Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color)? divider,
+    TResult Function(Key? key, Color? backgroundColor, bool extended, Widget? leading, Widget? trailing, List<NavigationRailDestination> destinations, int? selectedIndex, IntSelectionCallback? onDestinationSelected, double? elevation, double? groupAlignment, NavigationRailLabelType? labelType, TextStyle? unselectedLabelTextStyle, TextStyle? selectedLabelTextStyle, IconThemeData? unselectedIconTheme, IconThemeData? selectedIconTheme, double? minWidth, double? minExtendedWidth, bool? useIndicator, Color? indicatorColor, ShapeBorder? indicatorShape)? navigationRail,
+    TResult Function(Key? key, Duration? animationDuration, int selectedIndex, List<Widget> destinations, IntSelectionCallback? onDestinationSelected, Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, Color? indicatorColor, ShapeBorder? indicatorShape, double? height, NavigationDestinationLabelBehavior? labelBehavior)? navigationBar,
+    TResult Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration)? defaultTabController,
+    TResult Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child)? tab,
+    TResult Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior)? tabBarView,
     required TResult orElse(),
   }) {
     if (filledTonalButton != null) {
@@ -2862,6 +3007,11 @@ class _$FilledTonalButton implements FilledTonalButton {
     required TResult Function(LinearProgressIndicator value)
         linearProgressIndicator,
     required TResult Function(Divider value) divider,
+    required TResult Function(NavigationRail value) navigationRail,
+    required TResult Function(NavigationBar value) navigationBar,
+    required TResult Function(DefaultTabController value) defaultTabController,
+    required TResult Function(Tab value) tab,
+    required TResult Function(TabBarView value) tabBarView,
   }) {
     return filledTonalButton(this);
   }
@@ -2891,6 +3041,11 @@ class _$FilledTonalButton implements FilledTonalButton {
         circularProgressIndicator,
     TResult? Function(LinearProgressIndicator value)? linearProgressIndicator,
     TResult? Function(Divider value)? divider,
+    TResult? Function(NavigationRail value)? navigationRail,
+    TResult? Function(NavigationBar value)? navigationBar,
+    TResult? Function(DefaultTabController value)? defaultTabController,
+    TResult? Function(Tab value)? tab,
+    TResult? Function(TabBarView value)? tabBarView,
   }) {
     return filledTonalButton?.call(this);
   }
@@ -2920,6 +3075,11 @@ class _$FilledTonalButton implements FilledTonalButton {
         circularProgressIndicator,
     TResult Function(LinearProgressIndicator value)? linearProgressIndicator,
     TResult Function(Divider value)? divider,
+    TResult Function(NavigationRail value)? navigationRail,
+    TResult Function(NavigationBar value)? navigationBar,
+    TResult Function(DefaultTabController value)? defaultTabController,
+    TResult Function(Tab value)? tab,
+    TResult Function(TabBarView value)? tabBarView,
     required TResult orElse(),
   }) {
     if (filledTonalButton != null) {
@@ -3221,6 +3381,11 @@ class _$OutlinedButton implements OutlinedButton {
     required TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue) circularProgressIndicator,
     required TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue) linearProgressIndicator,
     required TResult Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color) divider,
+    required TResult Function(Key? key, Color? backgroundColor, bool extended, Widget? leading, Widget? trailing, List<NavigationRailDestination> destinations, int? selectedIndex, IntSelectionCallback? onDestinationSelected, double? elevation, double? groupAlignment, NavigationRailLabelType? labelType, TextStyle? unselectedLabelTextStyle, TextStyle? selectedLabelTextStyle, IconThemeData? unselectedIconTheme, IconThemeData? selectedIconTheme, double? minWidth, double? minExtendedWidth, bool? useIndicator, Color? indicatorColor, ShapeBorder? indicatorShape) navigationRail,
+    required TResult Function(Key? key, Duration? animationDuration, int selectedIndex, List<Widget> destinations, IntSelectionCallback? onDestinationSelected, Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, Color? indicatorColor, ShapeBorder? indicatorShape, double? height, NavigationDestinationLabelBehavior? labelBehavior) navigationBar,
+    required TResult Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration) defaultTabController,
+    required TResult Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child) tab,
+    required TResult Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior) tabBarView,
   }) {
     return outlinedButton(
         key, onPressed, onLongPress, autofocus, clipBehavior, child);
@@ -3317,6 +3482,11 @@ class _$OutlinedButton implements OutlinedButton {
     TResult? Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue)? circularProgressIndicator,
     TResult? Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue)? linearProgressIndicator,
     TResult? Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color)? divider,
+    TResult? Function(Key? key, Color? backgroundColor, bool extended, Widget? leading, Widget? trailing, List<NavigationRailDestination> destinations, int? selectedIndex, IntSelectionCallback? onDestinationSelected, double? elevation, double? groupAlignment, NavigationRailLabelType? labelType, TextStyle? unselectedLabelTextStyle, TextStyle? selectedLabelTextStyle, IconThemeData? unselectedIconTheme, IconThemeData? selectedIconTheme, double? minWidth, double? minExtendedWidth, bool? useIndicator, Color? indicatorColor, ShapeBorder? indicatorShape)? navigationRail,
+    TResult? Function(Key? key, Duration? animationDuration, int selectedIndex, List<Widget> destinations, IntSelectionCallback? onDestinationSelected, Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, Color? indicatorColor, ShapeBorder? indicatorShape, double? height, NavigationDestinationLabelBehavior? labelBehavior)? navigationBar,
+    TResult? Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration)? defaultTabController,
+    TResult? Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child)? tab,
+    TResult? Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior)? tabBarView,
   }) {
     return outlinedButton?.call(
         key, onPressed, onLongPress, autofocus, clipBehavior, child);
@@ -3413,6 +3583,11 @@ class _$OutlinedButton implements OutlinedButton {
     TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue)? circularProgressIndicator,
     TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue)? linearProgressIndicator,
     TResult Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color)? divider,
+    TResult Function(Key? key, Color? backgroundColor, bool extended, Widget? leading, Widget? trailing, List<NavigationRailDestination> destinations, int? selectedIndex, IntSelectionCallback? onDestinationSelected, double? elevation, double? groupAlignment, NavigationRailLabelType? labelType, TextStyle? unselectedLabelTextStyle, TextStyle? selectedLabelTextStyle, IconThemeData? unselectedIconTheme, IconThemeData? selectedIconTheme, double? minWidth, double? minExtendedWidth, bool? useIndicator, Color? indicatorColor, ShapeBorder? indicatorShape)? navigationRail,
+    TResult Function(Key? key, Duration? animationDuration, int selectedIndex, List<Widget> destinations, IntSelectionCallback? onDestinationSelected, Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, Color? indicatorColor, ShapeBorder? indicatorShape, double? height, NavigationDestinationLabelBehavior? labelBehavior)? navigationBar,
+    TResult Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration)? defaultTabController,
+    TResult Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child)? tab,
+    TResult Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior)? tabBarView,
     required TResult orElse(),
   }) {
     if (outlinedButton != null) {
@@ -3448,6 +3623,11 @@ class _$OutlinedButton implements OutlinedButton {
     required TResult Function(LinearProgressIndicator value)
         linearProgressIndicator,
     required TResult Function(Divider value) divider,
+    required TResult Function(NavigationRail value) navigationRail,
+    required TResult Function(NavigationBar value) navigationBar,
+    required TResult Function(DefaultTabController value) defaultTabController,
+    required TResult Function(Tab value) tab,
+    required TResult Function(TabBarView value) tabBarView,
   }) {
     return outlinedButton(this);
   }
@@ -3477,6 +3657,11 @@ class _$OutlinedButton implements OutlinedButton {
         circularProgressIndicator,
     TResult? Function(LinearProgressIndicator value)? linearProgressIndicator,
     TResult? Function(Divider value)? divider,
+    TResult? Function(NavigationRail value)? navigationRail,
+    TResult? Function(NavigationBar value)? navigationBar,
+    TResult? Function(DefaultTabController value)? defaultTabController,
+    TResult? Function(Tab value)? tab,
+    TResult? Function(TabBarView value)? tabBarView,
   }) {
     return outlinedButton?.call(this);
   }
@@ -3506,6 +3691,11 @@ class _$OutlinedButton implements OutlinedButton {
         circularProgressIndicator,
     TResult Function(LinearProgressIndicator value)? linearProgressIndicator,
     TResult Function(Divider value)? divider,
+    TResult Function(NavigationRail value)? navigationRail,
+    TResult Function(NavigationBar value)? navigationBar,
+    TResult Function(DefaultTabController value)? defaultTabController,
+    TResult Function(Tab value)? tab,
+    TResult Function(TabBarView value)? tabBarView,
     required TResult orElse(),
   }) {
     if (outlinedButton != null) {
@@ -3806,6 +3996,11 @@ class _$TextButton implements TextButton {
     required TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue) circularProgressIndicator,
     required TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue) linearProgressIndicator,
     required TResult Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color) divider,
+    required TResult Function(Key? key, Color? backgroundColor, bool extended, Widget? leading, Widget? trailing, List<NavigationRailDestination> destinations, int? selectedIndex, IntSelectionCallback? onDestinationSelected, double? elevation, double? groupAlignment, NavigationRailLabelType? labelType, TextStyle? unselectedLabelTextStyle, TextStyle? selectedLabelTextStyle, IconThemeData? unselectedIconTheme, IconThemeData? selectedIconTheme, double? minWidth, double? minExtendedWidth, bool? useIndicator, Color? indicatorColor, ShapeBorder? indicatorShape) navigationRail,
+    required TResult Function(Key? key, Duration? animationDuration, int selectedIndex, List<Widget> destinations, IntSelectionCallback? onDestinationSelected, Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, Color? indicatorColor, ShapeBorder? indicatorShape, double? height, NavigationDestinationLabelBehavior? labelBehavior) navigationBar,
+    required TResult Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration) defaultTabController,
+    required TResult Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child) tab,
+    required TResult Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior) tabBarView,
   }) {
     return textButton(
         key, onPressed, onLongPress, autofocus, clipBehavior, child);
@@ -3902,6 +4097,11 @@ class _$TextButton implements TextButton {
     TResult? Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue)? circularProgressIndicator,
     TResult? Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue)? linearProgressIndicator,
     TResult? Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color)? divider,
+    TResult? Function(Key? key, Color? backgroundColor, bool extended, Widget? leading, Widget? trailing, List<NavigationRailDestination> destinations, int? selectedIndex, IntSelectionCallback? onDestinationSelected, double? elevation, double? groupAlignment, NavigationRailLabelType? labelType, TextStyle? unselectedLabelTextStyle, TextStyle? selectedLabelTextStyle, IconThemeData? unselectedIconTheme, IconThemeData? selectedIconTheme, double? minWidth, double? minExtendedWidth, bool? useIndicator, Color? indicatorColor, ShapeBorder? indicatorShape)? navigationRail,
+    TResult? Function(Key? key, Duration? animationDuration, int selectedIndex, List<Widget> destinations, IntSelectionCallback? onDestinationSelected, Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, Color? indicatorColor, ShapeBorder? indicatorShape, double? height, NavigationDestinationLabelBehavior? labelBehavior)? navigationBar,
+    TResult? Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration)? defaultTabController,
+    TResult? Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child)? tab,
+    TResult? Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior)? tabBarView,
   }) {
     return textButton?.call(
         key, onPressed, onLongPress, autofocus, clipBehavior, child);
@@ -3998,6 +4198,11 @@ class _$TextButton implements TextButton {
     TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue)? circularProgressIndicator,
     TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue)? linearProgressIndicator,
     TResult Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color)? divider,
+    TResult Function(Key? key, Color? backgroundColor, bool extended, Widget? leading, Widget? trailing, List<NavigationRailDestination> destinations, int? selectedIndex, IntSelectionCallback? onDestinationSelected, double? elevation, double? groupAlignment, NavigationRailLabelType? labelType, TextStyle? unselectedLabelTextStyle, TextStyle? selectedLabelTextStyle, IconThemeData? unselectedIconTheme, IconThemeData? selectedIconTheme, double? minWidth, double? minExtendedWidth, bool? useIndicator, Color? indicatorColor, ShapeBorder? indicatorShape)? navigationRail,
+    TResult Function(Key? key, Duration? animationDuration, int selectedIndex, List<Widget> destinations, IntSelectionCallback? onDestinationSelected, Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, Color? indicatorColor, ShapeBorder? indicatorShape, double? height, NavigationDestinationLabelBehavior? labelBehavior)? navigationBar,
+    TResult Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration)? defaultTabController,
+    TResult Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child)? tab,
+    TResult Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior)? tabBarView,
     required TResult orElse(),
   }) {
     if (textButton != null) {
@@ -4033,6 +4238,11 @@ class _$TextButton implements TextButton {
     required TResult Function(LinearProgressIndicator value)
         linearProgressIndicator,
     required TResult Function(Divider value) divider,
+    required TResult Function(NavigationRail value) navigationRail,
+    required TResult Function(NavigationBar value) navigationBar,
+    required TResult Function(DefaultTabController value) defaultTabController,
+    required TResult Function(Tab value) tab,
+    required TResult Function(TabBarView value) tabBarView,
   }) {
     return textButton(this);
   }
@@ -4062,6 +4272,11 @@ class _$TextButton implements TextButton {
         circularProgressIndicator,
     TResult? Function(LinearProgressIndicator value)? linearProgressIndicator,
     TResult? Function(Divider value)? divider,
+    TResult? Function(NavigationRail value)? navigationRail,
+    TResult? Function(NavigationBar value)? navigationBar,
+    TResult? Function(DefaultTabController value)? defaultTabController,
+    TResult? Function(Tab value)? tab,
+    TResult? Function(TabBarView value)? tabBarView,
   }) {
     return textButton?.call(this);
   }
@@ -4091,6 +4306,11 @@ class _$TextButton implements TextButton {
         circularProgressIndicator,
     TResult Function(LinearProgressIndicator value)? linearProgressIndicator,
     TResult Function(Divider value)? divider,
+    TResult Function(NavigationRail value)? navigationRail,
+    TResult Function(NavigationBar value)? navigationBar,
+    TResult Function(DefaultTabController value)? defaultTabController,
+    TResult Function(Tab value)? tab,
+    TResult Function(TabBarView value)? tabBarView,
     required TResult orElse(),
   }) {
     if (textButton != null) {
@@ -4713,6 +4933,11 @@ class _$IconButton implements IconButton {
     required TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue) circularProgressIndicator,
     required TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue) linearProgressIndicator,
     required TResult Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color) divider,
+    required TResult Function(Key? key, Color? backgroundColor, bool extended, Widget? leading, Widget? trailing, List<NavigationRailDestination> destinations, int? selectedIndex, IntSelectionCallback? onDestinationSelected, double? elevation, double? groupAlignment, NavigationRailLabelType? labelType, TextStyle? unselectedLabelTextStyle, TextStyle? selectedLabelTextStyle, IconThemeData? unselectedIconTheme, IconThemeData? selectedIconTheme, double? minWidth, double? minExtendedWidth, bool? useIndicator, Color? indicatorColor, ShapeBorder? indicatorShape) navigationRail,
+    required TResult Function(Key? key, Duration? animationDuration, int selectedIndex, List<Widget> destinations, IntSelectionCallback? onDestinationSelected, Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, Color? indicatorColor, ShapeBorder? indicatorShape, double? height, NavigationDestinationLabelBehavior? labelBehavior) navigationBar,
+    required TResult Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration) defaultTabController,
+    required TResult Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child) tab,
+    required TResult Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior) tabBarView,
   }) {
     return iconButton(
         key,
@@ -4829,6 +5054,11 @@ class _$IconButton implements IconButton {
     TResult? Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue)? circularProgressIndicator,
     TResult? Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue)? linearProgressIndicator,
     TResult? Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color)? divider,
+    TResult? Function(Key? key, Color? backgroundColor, bool extended, Widget? leading, Widget? trailing, List<NavigationRailDestination> destinations, int? selectedIndex, IntSelectionCallback? onDestinationSelected, double? elevation, double? groupAlignment, NavigationRailLabelType? labelType, TextStyle? unselectedLabelTextStyle, TextStyle? selectedLabelTextStyle, IconThemeData? unselectedIconTheme, IconThemeData? selectedIconTheme, double? minWidth, double? minExtendedWidth, bool? useIndicator, Color? indicatorColor, ShapeBorder? indicatorShape)? navigationRail,
+    TResult? Function(Key? key, Duration? animationDuration, int selectedIndex, List<Widget> destinations, IntSelectionCallback? onDestinationSelected, Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, Color? indicatorColor, ShapeBorder? indicatorShape, double? height, NavigationDestinationLabelBehavior? labelBehavior)? navigationBar,
+    TResult? Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration)? defaultTabController,
+    TResult? Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child)? tab,
+    TResult? Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior)? tabBarView,
   }) {
     return iconButton?.call(
         key,
@@ -4945,6 +5175,11 @@ class _$IconButton implements IconButton {
     TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue)? circularProgressIndicator,
     TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue)? linearProgressIndicator,
     TResult Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color)? divider,
+    TResult Function(Key? key, Color? backgroundColor, bool extended, Widget? leading, Widget? trailing, List<NavigationRailDestination> destinations, int? selectedIndex, IntSelectionCallback? onDestinationSelected, double? elevation, double? groupAlignment, NavigationRailLabelType? labelType, TextStyle? unselectedLabelTextStyle, TextStyle? selectedLabelTextStyle, IconThemeData? unselectedIconTheme, IconThemeData? selectedIconTheme, double? minWidth, double? minExtendedWidth, bool? useIndicator, Color? indicatorColor, ShapeBorder? indicatorShape)? navigationRail,
+    TResult Function(Key? key, Duration? animationDuration, int selectedIndex, List<Widget> destinations, IntSelectionCallback? onDestinationSelected, Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, Color? indicatorColor, ShapeBorder? indicatorShape, double? height, NavigationDestinationLabelBehavior? labelBehavior)? navigationBar,
+    TResult Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration)? defaultTabController,
+    TResult Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child)? tab,
+    TResult Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior)? tabBarView,
     required TResult orElse(),
   }) {
     if (iconButton != null) {
@@ -5000,6 +5235,11 @@ class _$IconButton implements IconButton {
     required TResult Function(LinearProgressIndicator value)
         linearProgressIndicator,
     required TResult Function(Divider value) divider,
+    required TResult Function(NavigationRail value) navigationRail,
+    required TResult Function(NavigationBar value) navigationBar,
+    required TResult Function(DefaultTabController value) defaultTabController,
+    required TResult Function(Tab value) tab,
+    required TResult Function(TabBarView value) tabBarView,
   }) {
     return iconButton(this);
   }
@@ -5029,6 +5269,11 @@ class _$IconButton implements IconButton {
         circularProgressIndicator,
     TResult? Function(LinearProgressIndicator value)? linearProgressIndicator,
     TResult? Function(Divider value)? divider,
+    TResult? Function(NavigationRail value)? navigationRail,
+    TResult? Function(NavigationBar value)? navigationBar,
+    TResult? Function(DefaultTabController value)? defaultTabController,
+    TResult? Function(Tab value)? tab,
+    TResult? Function(TabBarView value)? tabBarView,
   }) {
     return iconButton?.call(this);
   }
@@ -5058,6 +5303,11 @@ class _$IconButton implements IconButton {
         circularProgressIndicator,
     TResult Function(LinearProgressIndicator value)? linearProgressIndicator,
     TResult Function(Divider value)? divider,
+    TResult Function(NavigationRail value)? navigationRail,
+    TResult Function(NavigationBar value)? navigationBar,
+    TResult Function(DefaultTabController value)? defaultTabController,
+    TResult Function(Tab value)? tab,
+    TResult Function(TabBarView value)? tabBarView,
     required TResult orElse(),
   }) {
     if (iconButton != null) {
@@ -5696,6 +5946,11 @@ class _$Scaffold implements Scaffold {
     required TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue) circularProgressIndicator,
     required TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue) linearProgressIndicator,
     required TResult Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color) divider,
+    required TResult Function(Key? key, Color? backgroundColor, bool extended, Widget? leading, Widget? trailing, List<NavigationRailDestination> destinations, int? selectedIndex, IntSelectionCallback? onDestinationSelected, double? elevation, double? groupAlignment, NavigationRailLabelType? labelType, TextStyle? unselectedLabelTextStyle, TextStyle? selectedLabelTextStyle, IconThemeData? unselectedIconTheme, IconThemeData? selectedIconTheme, double? minWidth, double? minExtendedWidth, bool? useIndicator, Color? indicatorColor, ShapeBorder? indicatorShape) navigationRail,
+    required TResult Function(Key? key, Duration? animationDuration, int selectedIndex, List<Widget> destinations, IntSelectionCallback? onDestinationSelected, Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, Color? indicatorColor, ShapeBorder? indicatorShape, double? height, NavigationDestinationLabelBehavior? labelBehavior) navigationBar,
+    required TResult Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration) defaultTabController,
+    required TResult Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child) tab,
+    required TResult Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior) tabBarView,
   }) {
     return scaffold(
         key,
@@ -5812,6 +6067,11 @@ class _$Scaffold implements Scaffold {
     TResult? Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue)? circularProgressIndicator,
     TResult? Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue)? linearProgressIndicator,
     TResult? Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color)? divider,
+    TResult? Function(Key? key, Color? backgroundColor, bool extended, Widget? leading, Widget? trailing, List<NavigationRailDestination> destinations, int? selectedIndex, IntSelectionCallback? onDestinationSelected, double? elevation, double? groupAlignment, NavigationRailLabelType? labelType, TextStyle? unselectedLabelTextStyle, TextStyle? selectedLabelTextStyle, IconThemeData? unselectedIconTheme, IconThemeData? selectedIconTheme, double? minWidth, double? minExtendedWidth, bool? useIndicator, Color? indicatorColor, ShapeBorder? indicatorShape)? navigationRail,
+    TResult? Function(Key? key, Duration? animationDuration, int selectedIndex, List<Widget> destinations, IntSelectionCallback? onDestinationSelected, Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, Color? indicatorColor, ShapeBorder? indicatorShape, double? height, NavigationDestinationLabelBehavior? labelBehavior)? navigationBar,
+    TResult? Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration)? defaultTabController,
+    TResult? Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child)? tab,
+    TResult? Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior)? tabBarView,
   }) {
     return scaffold?.call(
         key,
@@ -5928,6 +6188,11 @@ class _$Scaffold implements Scaffold {
     TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue)? circularProgressIndicator,
     TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue)? linearProgressIndicator,
     TResult Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color)? divider,
+    TResult Function(Key? key, Color? backgroundColor, bool extended, Widget? leading, Widget? trailing, List<NavigationRailDestination> destinations, int? selectedIndex, IntSelectionCallback? onDestinationSelected, double? elevation, double? groupAlignment, NavigationRailLabelType? labelType, TextStyle? unselectedLabelTextStyle, TextStyle? selectedLabelTextStyle, IconThemeData? unselectedIconTheme, IconThemeData? selectedIconTheme, double? minWidth, double? minExtendedWidth, bool? useIndicator, Color? indicatorColor, ShapeBorder? indicatorShape)? navigationRail,
+    TResult Function(Key? key, Duration? animationDuration, int selectedIndex, List<Widget> destinations, IntSelectionCallback? onDestinationSelected, Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, Color? indicatorColor, ShapeBorder? indicatorShape, double? height, NavigationDestinationLabelBehavior? labelBehavior)? navigationBar,
+    TResult Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration)? defaultTabController,
+    TResult Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child)? tab,
+    TResult Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior)? tabBarView,
     required TResult orElse(),
   }) {
     if (scaffold != null) {
@@ -5983,6 +6248,11 @@ class _$Scaffold implements Scaffold {
     required TResult Function(LinearProgressIndicator value)
         linearProgressIndicator,
     required TResult Function(Divider value) divider,
+    required TResult Function(NavigationRail value) navigationRail,
+    required TResult Function(NavigationBar value) navigationBar,
+    required TResult Function(DefaultTabController value) defaultTabController,
+    required TResult Function(Tab value) tab,
+    required TResult Function(TabBarView value) tabBarView,
   }) {
     return scaffold(this);
   }
@@ -6012,6 +6282,11 @@ class _$Scaffold implements Scaffold {
         circularProgressIndicator,
     TResult? Function(LinearProgressIndicator value)? linearProgressIndicator,
     TResult? Function(Divider value)? divider,
+    TResult? Function(NavigationRail value)? navigationRail,
+    TResult? Function(NavigationBar value)? navigationBar,
+    TResult? Function(DefaultTabController value)? defaultTabController,
+    TResult? Function(Tab value)? tab,
+    TResult? Function(TabBarView value)? tabBarView,
   }) {
     return scaffold?.call(this);
   }
@@ -6041,6 +6316,11 @@ class _$Scaffold implements Scaffold {
         circularProgressIndicator,
     TResult Function(LinearProgressIndicator value)? linearProgressIndicator,
     TResult Function(Divider value)? divider,
+    TResult Function(NavigationRail value)? navigationRail,
+    TResult Function(NavigationBar value)? navigationBar,
+    TResult Function(DefaultTabController value)? defaultTabController,
+    TResult Function(Tab value)? tab,
+    TResult Function(TabBarView value)? tabBarView,
     required TResult orElse(),
   }) {
     if (scaffold != null) {
@@ -6652,6 +6932,11 @@ class _$FloatingActionButton implements FloatingActionButton {
     required TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue) circularProgressIndicator,
     required TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue) linearProgressIndicator,
     required TResult Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color) divider,
+    required TResult Function(Key? key, Color? backgroundColor, bool extended, Widget? leading, Widget? trailing, List<NavigationRailDestination> destinations, int? selectedIndex, IntSelectionCallback? onDestinationSelected, double? elevation, double? groupAlignment, NavigationRailLabelType? labelType, TextStyle? unselectedLabelTextStyle, TextStyle? selectedLabelTextStyle, IconThemeData? unselectedIconTheme, IconThemeData? selectedIconTheme, double? minWidth, double? minExtendedWidth, bool? useIndicator, Color? indicatorColor, ShapeBorder? indicatorShape) navigationRail,
+    required TResult Function(Key? key, Duration? animationDuration, int selectedIndex, List<Widget> destinations, IntSelectionCallback? onDestinationSelected, Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, Color? indicatorColor, ShapeBorder? indicatorShape, double? height, NavigationDestinationLabelBehavior? labelBehavior) navigationBar,
+    required TResult Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration) defaultTabController,
+    required TResult Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child) tab,
+    required TResult Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior) tabBarView,
   }) {
     return floatingActionButton(
         key,
@@ -6769,6 +7054,11 @@ class _$FloatingActionButton implements FloatingActionButton {
     TResult? Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue)? circularProgressIndicator,
     TResult? Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue)? linearProgressIndicator,
     TResult? Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color)? divider,
+    TResult? Function(Key? key, Color? backgroundColor, bool extended, Widget? leading, Widget? trailing, List<NavigationRailDestination> destinations, int? selectedIndex, IntSelectionCallback? onDestinationSelected, double? elevation, double? groupAlignment, NavigationRailLabelType? labelType, TextStyle? unselectedLabelTextStyle, TextStyle? selectedLabelTextStyle, IconThemeData? unselectedIconTheme, IconThemeData? selectedIconTheme, double? minWidth, double? minExtendedWidth, bool? useIndicator, Color? indicatorColor, ShapeBorder? indicatorShape)? navigationRail,
+    TResult? Function(Key? key, Duration? animationDuration, int selectedIndex, List<Widget> destinations, IntSelectionCallback? onDestinationSelected, Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, Color? indicatorColor, ShapeBorder? indicatorShape, double? height, NavigationDestinationLabelBehavior? labelBehavior)? navigationBar,
+    TResult? Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration)? defaultTabController,
+    TResult? Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child)? tab,
+    TResult? Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior)? tabBarView,
   }) {
     return floatingActionButton?.call(
         key,
@@ -6886,6 +7176,11 @@ class _$FloatingActionButton implements FloatingActionButton {
     TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue)? circularProgressIndicator,
     TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue)? linearProgressIndicator,
     TResult Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color)? divider,
+    TResult Function(Key? key, Color? backgroundColor, bool extended, Widget? leading, Widget? trailing, List<NavigationRailDestination> destinations, int? selectedIndex, IntSelectionCallback? onDestinationSelected, double? elevation, double? groupAlignment, NavigationRailLabelType? labelType, TextStyle? unselectedLabelTextStyle, TextStyle? selectedLabelTextStyle, IconThemeData? unselectedIconTheme, IconThemeData? selectedIconTheme, double? minWidth, double? minExtendedWidth, bool? useIndicator, Color? indicatorColor, ShapeBorder? indicatorShape)? navigationRail,
+    TResult Function(Key? key, Duration? animationDuration, int selectedIndex, List<Widget> destinations, IntSelectionCallback? onDestinationSelected, Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, Color? indicatorColor, ShapeBorder? indicatorShape, double? height, NavigationDestinationLabelBehavior? labelBehavior)? navigationBar,
+    TResult Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration)? defaultTabController,
+    TResult Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child)? tab,
+    TResult Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior)? tabBarView,
     required TResult orElse(),
   }) {
     if (floatingActionButton != null) {
@@ -6942,6 +7237,11 @@ class _$FloatingActionButton implements FloatingActionButton {
     required TResult Function(LinearProgressIndicator value)
         linearProgressIndicator,
     required TResult Function(Divider value) divider,
+    required TResult Function(NavigationRail value) navigationRail,
+    required TResult Function(NavigationBar value) navigationBar,
+    required TResult Function(DefaultTabController value) defaultTabController,
+    required TResult Function(Tab value) tab,
+    required TResult Function(TabBarView value) tabBarView,
   }) {
     return floatingActionButton(this);
   }
@@ -6971,6 +7271,11 @@ class _$FloatingActionButton implements FloatingActionButton {
         circularProgressIndicator,
     TResult? Function(LinearProgressIndicator value)? linearProgressIndicator,
     TResult? Function(Divider value)? divider,
+    TResult? Function(NavigationRail value)? navigationRail,
+    TResult? Function(NavigationBar value)? navigationBar,
+    TResult? Function(DefaultTabController value)? defaultTabController,
+    TResult? Function(Tab value)? tab,
+    TResult? Function(TabBarView value)? tabBarView,
   }) {
     return floatingActionButton?.call(this);
   }
@@ -7000,6 +7305,11 @@ class _$FloatingActionButton implements FloatingActionButton {
         circularProgressIndicator,
     TResult Function(LinearProgressIndicator value)? linearProgressIndicator,
     TResult Function(Divider value)? divider,
+    TResult Function(NavigationRail value)? navigationRail,
+    TResult Function(NavigationBar value)? navigationBar,
+    TResult Function(DefaultTabController value)? defaultTabController,
+    TResult Function(Tab value)? tab,
+    TResult Function(TabBarView value)? tabBarView,
     required TResult orElse(),
   }) {
     if (floatingActionButton != null) {
@@ -7624,6 +7934,11 @@ class _$FloatingActionButtonExtended implements FloatingActionButtonExtended {
     required TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue) circularProgressIndicator,
     required TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue) linearProgressIndicator,
     required TResult Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color) divider,
+    required TResult Function(Key? key, Color? backgroundColor, bool extended, Widget? leading, Widget? trailing, List<NavigationRailDestination> destinations, int? selectedIndex, IntSelectionCallback? onDestinationSelected, double? elevation, double? groupAlignment, NavigationRailLabelType? labelType, TextStyle? unselectedLabelTextStyle, TextStyle? selectedLabelTextStyle, IconThemeData? unselectedIconTheme, IconThemeData? selectedIconTheme, double? minWidth, double? minExtendedWidth, bool? useIndicator, Color? indicatorColor, ShapeBorder? indicatorShape) navigationRail,
+    required TResult Function(Key? key, Duration? animationDuration, int selectedIndex, List<Widget> destinations, IntSelectionCallback? onDestinationSelected, Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, Color? indicatorColor, ShapeBorder? indicatorShape, double? height, NavigationDestinationLabelBehavior? labelBehavior) navigationBar,
+    required TResult Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration) defaultTabController,
+    required TResult Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child) tab,
+    required TResult Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior) tabBarView,
   }) {
     return floatingActionButtonExtended(
         key,
@@ -7741,6 +8056,11 @@ class _$FloatingActionButtonExtended implements FloatingActionButtonExtended {
     TResult? Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue)? circularProgressIndicator,
     TResult? Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue)? linearProgressIndicator,
     TResult? Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color)? divider,
+    TResult? Function(Key? key, Color? backgroundColor, bool extended, Widget? leading, Widget? trailing, List<NavigationRailDestination> destinations, int? selectedIndex, IntSelectionCallback? onDestinationSelected, double? elevation, double? groupAlignment, NavigationRailLabelType? labelType, TextStyle? unselectedLabelTextStyle, TextStyle? selectedLabelTextStyle, IconThemeData? unselectedIconTheme, IconThemeData? selectedIconTheme, double? minWidth, double? minExtendedWidth, bool? useIndicator, Color? indicatorColor, ShapeBorder? indicatorShape)? navigationRail,
+    TResult? Function(Key? key, Duration? animationDuration, int selectedIndex, List<Widget> destinations, IntSelectionCallback? onDestinationSelected, Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, Color? indicatorColor, ShapeBorder? indicatorShape, double? height, NavigationDestinationLabelBehavior? labelBehavior)? navigationBar,
+    TResult? Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration)? defaultTabController,
+    TResult? Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child)? tab,
+    TResult? Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior)? tabBarView,
   }) {
     return floatingActionButtonExtended?.call(
         key,
@@ -7858,6 +8178,11 @@ class _$FloatingActionButtonExtended implements FloatingActionButtonExtended {
     TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue)? circularProgressIndicator,
     TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue)? linearProgressIndicator,
     TResult Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color)? divider,
+    TResult Function(Key? key, Color? backgroundColor, bool extended, Widget? leading, Widget? trailing, List<NavigationRailDestination> destinations, int? selectedIndex, IntSelectionCallback? onDestinationSelected, double? elevation, double? groupAlignment, NavigationRailLabelType? labelType, TextStyle? unselectedLabelTextStyle, TextStyle? selectedLabelTextStyle, IconThemeData? unselectedIconTheme, IconThemeData? selectedIconTheme, double? minWidth, double? minExtendedWidth, bool? useIndicator, Color? indicatorColor, ShapeBorder? indicatorShape)? navigationRail,
+    TResult Function(Key? key, Duration? animationDuration, int selectedIndex, List<Widget> destinations, IntSelectionCallback? onDestinationSelected, Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, Color? indicatorColor, ShapeBorder? indicatorShape, double? height, NavigationDestinationLabelBehavior? labelBehavior)? navigationBar,
+    TResult Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration)? defaultTabController,
+    TResult Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child)? tab,
+    TResult Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior)? tabBarView,
     required TResult orElse(),
   }) {
     if (floatingActionButtonExtended != null) {
@@ -7914,6 +8239,11 @@ class _$FloatingActionButtonExtended implements FloatingActionButtonExtended {
     required TResult Function(LinearProgressIndicator value)
         linearProgressIndicator,
     required TResult Function(Divider value) divider,
+    required TResult Function(NavigationRail value) navigationRail,
+    required TResult Function(NavigationBar value) navigationBar,
+    required TResult Function(DefaultTabController value) defaultTabController,
+    required TResult Function(Tab value) tab,
+    required TResult Function(TabBarView value) tabBarView,
   }) {
     return floatingActionButtonExtended(this);
   }
@@ -7943,6 +8273,11 @@ class _$FloatingActionButtonExtended implements FloatingActionButtonExtended {
         circularProgressIndicator,
     TResult? Function(LinearProgressIndicator value)? linearProgressIndicator,
     TResult? Function(Divider value)? divider,
+    TResult? Function(NavigationRail value)? navigationRail,
+    TResult? Function(NavigationBar value)? navigationBar,
+    TResult? Function(DefaultTabController value)? defaultTabController,
+    TResult? Function(Tab value)? tab,
+    TResult? Function(TabBarView value)? tabBarView,
   }) {
     return floatingActionButtonExtended?.call(this);
   }
@@ -7972,6 +8307,11 @@ class _$FloatingActionButtonExtended implements FloatingActionButtonExtended {
         circularProgressIndicator,
     TResult Function(LinearProgressIndicator value)? linearProgressIndicator,
     TResult Function(Divider value)? divider,
+    TResult Function(NavigationRail value)? navigationRail,
+    TResult Function(NavigationBar value)? navigationBar,
+    TResult Function(DefaultTabController value)? defaultTabController,
+    TResult Function(Tab value)? tab,
+    TResult Function(TabBarView value)? tabBarView,
     required TResult orElse(),
   }) {
     if (floatingActionButtonExtended != null) {
@@ -8440,6 +8780,11 @@ class _$Text implements Text {
     required TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue) circularProgressIndicator,
     required TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue) linearProgressIndicator,
     required TResult Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color) divider,
+    required TResult Function(Key? key, Color? backgroundColor, bool extended, Widget? leading, Widget? trailing, List<NavigationRailDestination> destinations, int? selectedIndex, IntSelectionCallback? onDestinationSelected, double? elevation, double? groupAlignment, NavigationRailLabelType? labelType, TextStyle? unselectedLabelTextStyle, TextStyle? selectedLabelTextStyle, IconThemeData? unselectedIconTheme, IconThemeData? selectedIconTheme, double? minWidth, double? minExtendedWidth, bool? useIndicator, Color? indicatorColor, ShapeBorder? indicatorShape) navigationRail,
+    required TResult Function(Key? key, Duration? animationDuration, int selectedIndex, List<Widget> destinations, IntSelectionCallback? onDestinationSelected, Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, Color? indicatorColor, ShapeBorder? indicatorShape, double? height, NavigationDestinationLabelBehavior? labelBehavior) navigationBar,
+    required TResult Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration) defaultTabController,
+    required TResult Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child) tab,
+    required TResult Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior) tabBarView,
   }) {
     return text(
         data,
@@ -8550,6 +8895,11 @@ class _$Text implements Text {
     TResult? Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue)? circularProgressIndicator,
     TResult? Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue)? linearProgressIndicator,
     TResult? Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color)? divider,
+    TResult? Function(Key? key, Color? backgroundColor, bool extended, Widget? leading, Widget? trailing, List<NavigationRailDestination> destinations, int? selectedIndex, IntSelectionCallback? onDestinationSelected, double? elevation, double? groupAlignment, NavigationRailLabelType? labelType, TextStyle? unselectedLabelTextStyle, TextStyle? selectedLabelTextStyle, IconThemeData? unselectedIconTheme, IconThemeData? selectedIconTheme, double? minWidth, double? minExtendedWidth, bool? useIndicator, Color? indicatorColor, ShapeBorder? indicatorShape)? navigationRail,
+    TResult? Function(Key? key, Duration? animationDuration, int selectedIndex, List<Widget> destinations, IntSelectionCallback? onDestinationSelected, Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, Color? indicatorColor, ShapeBorder? indicatorShape, double? height, NavigationDestinationLabelBehavior? labelBehavior)? navigationBar,
+    TResult? Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration)? defaultTabController,
+    TResult? Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child)? tab,
+    TResult? Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior)? tabBarView,
   }) {
     return text?.call(
         data,
@@ -8660,6 +9010,11 @@ class _$Text implements Text {
     TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue)? circularProgressIndicator,
     TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue)? linearProgressIndicator,
     TResult Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color)? divider,
+    TResult Function(Key? key, Color? backgroundColor, bool extended, Widget? leading, Widget? trailing, List<NavigationRailDestination> destinations, int? selectedIndex, IntSelectionCallback? onDestinationSelected, double? elevation, double? groupAlignment, NavigationRailLabelType? labelType, TextStyle? unselectedLabelTextStyle, TextStyle? selectedLabelTextStyle, IconThemeData? unselectedIconTheme, IconThemeData? selectedIconTheme, double? minWidth, double? minExtendedWidth, bool? useIndicator, Color? indicatorColor, ShapeBorder? indicatorShape)? navigationRail,
+    TResult Function(Key? key, Duration? animationDuration, int selectedIndex, List<Widget> destinations, IntSelectionCallback? onDestinationSelected, Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, Color? indicatorColor, ShapeBorder? indicatorShape, double? height, NavigationDestinationLabelBehavior? labelBehavior)? navigationBar,
+    TResult Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration)? defaultTabController,
+    TResult Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child)? tab,
+    TResult Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior)? tabBarView,
     required TResult orElse(),
   }) {
     if (text != null) {
@@ -8709,6 +9064,11 @@ class _$Text implements Text {
     required TResult Function(LinearProgressIndicator value)
         linearProgressIndicator,
     required TResult Function(Divider value) divider,
+    required TResult Function(NavigationRail value) navigationRail,
+    required TResult Function(NavigationBar value) navigationBar,
+    required TResult Function(DefaultTabController value) defaultTabController,
+    required TResult Function(Tab value) tab,
+    required TResult Function(TabBarView value) tabBarView,
   }) {
     return text(this);
   }
@@ -8738,6 +9098,11 @@ class _$Text implements Text {
         circularProgressIndicator,
     TResult? Function(LinearProgressIndicator value)? linearProgressIndicator,
     TResult? Function(Divider value)? divider,
+    TResult? Function(NavigationRail value)? navigationRail,
+    TResult? Function(NavigationBar value)? navigationBar,
+    TResult? Function(DefaultTabController value)? defaultTabController,
+    TResult? Function(Tab value)? tab,
+    TResult? Function(TabBarView value)? tabBarView,
   }) {
     return text?.call(this);
   }
@@ -8767,6 +9132,11 @@ class _$Text implements Text {
         circularProgressIndicator,
     TResult Function(LinearProgressIndicator value)? linearProgressIndicator,
     TResult Function(Divider value)? divider,
+    TResult Function(NavigationRail value)? navigationRail,
+    TResult Function(NavigationBar value)? navigationBar,
+    TResult Function(DefaultTabController value)? defaultTabController,
+    TResult Function(Tab value)? tab,
+    TResult Function(TabBarView value)? tabBarView,
     required TResult orElse(),
   }) {
     if (text != null) {
@@ -9261,6 +9631,11 @@ class _$Container implements Container {
     required TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue) circularProgressIndicator,
     required TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue) linearProgressIndicator,
     required TResult Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color) divider,
+    required TResult Function(Key? key, Color? backgroundColor, bool extended, Widget? leading, Widget? trailing, List<NavigationRailDestination> destinations, int? selectedIndex, IntSelectionCallback? onDestinationSelected, double? elevation, double? groupAlignment, NavigationRailLabelType? labelType, TextStyle? unselectedLabelTextStyle, TextStyle? selectedLabelTextStyle, IconThemeData? unselectedIconTheme, IconThemeData? selectedIconTheme, double? minWidth, double? minExtendedWidth, bool? useIndicator, Color? indicatorColor, ShapeBorder? indicatorShape) navigationRail,
+    required TResult Function(Key? key, Duration? animationDuration, int selectedIndex, List<Widget> destinations, IntSelectionCallback? onDestinationSelected, Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, Color? indicatorColor, ShapeBorder? indicatorShape, double? height, NavigationDestinationLabelBehavior? labelBehavior) navigationBar,
+    required TResult Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration) defaultTabController,
+    required TResult Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child) tab,
+    required TResult Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior) tabBarView,
   }) {
     return container(
         key,
@@ -9370,6 +9745,11 @@ class _$Container implements Container {
     TResult? Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue)? circularProgressIndicator,
     TResult? Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue)? linearProgressIndicator,
     TResult? Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color)? divider,
+    TResult? Function(Key? key, Color? backgroundColor, bool extended, Widget? leading, Widget? trailing, List<NavigationRailDestination> destinations, int? selectedIndex, IntSelectionCallback? onDestinationSelected, double? elevation, double? groupAlignment, NavigationRailLabelType? labelType, TextStyle? unselectedLabelTextStyle, TextStyle? selectedLabelTextStyle, IconThemeData? unselectedIconTheme, IconThemeData? selectedIconTheme, double? minWidth, double? minExtendedWidth, bool? useIndicator, Color? indicatorColor, ShapeBorder? indicatorShape)? navigationRail,
+    TResult? Function(Key? key, Duration? animationDuration, int selectedIndex, List<Widget> destinations, IntSelectionCallback? onDestinationSelected, Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, Color? indicatorColor, ShapeBorder? indicatorShape, double? height, NavigationDestinationLabelBehavior? labelBehavior)? navigationBar,
+    TResult? Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration)? defaultTabController,
+    TResult? Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child)? tab,
+    TResult? Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior)? tabBarView,
   }) {
     return container?.call(
         key,
@@ -9479,6 +9859,11 @@ class _$Container implements Container {
     TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue)? circularProgressIndicator,
     TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue)? linearProgressIndicator,
     TResult Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color)? divider,
+    TResult Function(Key? key, Color? backgroundColor, bool extended, Widget? leading, Widget? trailing, List<NavigationRailDestination> destinations, int? selectedIndex, IntSelectionCallback? onDestinationSelected, double? elevation, double? groupAlignment, NavigationRailLabelType? labelType, TextStyle? unselectedLabelTextStyle, TextStyle? selectedLabelTextStyle, IconThemeData? unselectedIconTheme, IconThemeData? selectedIconTheme, double? minWidth, double? minExtendedWidth, bool? useIndicator, Color? indicatorColor, ShapeBorder? indicatorShape)? navigationRail,
+    TResult Function(Key? key, Duration? animationDuration, int selectedIndex, List<Widget> destinations, IntSelectionCallback? onDestinationSelected, Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, Color? indicatorColor, ShapeBorder? indicatorShape, double? height, NavigationDestinationLabelBehavior? labelBehavior)? navigationBar,
+    TResult Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration)? defaultTabController,
+    TResult Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child)? tab,
+    TResult Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior)? tabBarView,
     required TResult orElse(),
   }) {
     if (container != null) {
@@ -9527,6 +9912,11 @@ class _$Container implements Container {
     required TResult Function(LinearProgressIndicator value)
         linearProgressIndicator,
     required TResult Function(Divider value) divider,
+    required TResult Function(NavigationRail value) navigationRail,
+    required TResult Function(NavigationBar value) navigationBar,
+    required TResult Function(DefaultTabController value) defaultTabController,
+    required TResult Function(Tab value) tab,
+    required TResult Function(TabBarView value) tabBarView,
   }) {
     return container(this);
   }
@@ -9556,6 +9946,11 @@ class _$Container implements Container {
         circularProgressIndicator,
     TResult? Function(LinearProgressIndicator value)? linearProgressIndicator,
     TResult? Function(Divider value)? divider,
+    TResult? Function(NavigationRail value)? navigationRail,
+    TResult? Function(NavigationBar value)? navigationBar,
+    TResult? Function(DefaultTabController value)? defaultTabController,
+    TResult? Function(Tab value)? tab,
+    TResult? Function(TabBarView value)? tabBarView,
   }) {
     return container?.call(this);
   }
@@ -9585,6 +9980,11 @@ class _$Container implements Container {
         circularProgressIndicator,
     TResult Function(LinearProgressIndicator value)? linearProgressIndicator,
     TResult Function(Divider value)? divider,
+    TResult Function(NavigationRail value)? navigationRail,
+    TResult Function(NavigationBar value)? navigationBar,
+    TResult Function(DefaultTabController value)? defaultTabController,
+    TResult Function(Tab value)? tab,
+    TResult Function(TabBarView value)? tabBarView,
     required TResult orElse(),
   }) {
     if (container != null) {
@@ -9843,6 +10243,11 @@ class _$SizedBox implements SizedBox {
     required TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue) circularProgressIndicator,
     required TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue) linearProgressIndicator,
     required TResult Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color) divider,
+    required TResult Function(Key? key, Color? backgroundColor, bool extended, Widget? leading, Widget? trailing, List<NavigationRailDestination> destinations, int? selectedIndex, IntSelectionCallback? onDestinationSelected, double? elevation, double? groupAlignment, NavigationRailLabelType? labelType, TextStyle? unselectedLabelTextStyle, TextStyle? selectedLabelTextStyle, IconThemeData? unselectedIconTheme, IconThemeData? selectedIconTheme, double? minWidth, double? minExtendedWidth, bool? useIndicator, Color? indicatorColor, ShapeBorder? indicatorShape) navigationRail,
+    required TResult Function(Key? key, Duration? animationDuration, int selectedIndex, List<Widget> destinations, IntSelectionCallback? onDestinationSelected, Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, Color? indicatorColor, ShapeBorder? indicatorShape, double? height, NavigationDestinationLabelBehavior? labelBehavior) navigationBar,
+    required TResult Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration) defaultTabController,
+    required TResult Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child) tab,
+    required TResult Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior) tabBarView,
   }) {
     return sizedBox(key, width, height, child);
   }
@@ -9938,6 +10343,11 @@ class _$SizedBox implements SizedBox {
     TResult? Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue)? circularProgressIndicator,
     TResult? Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue)? linearProgressIndicator,
     TResult? Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color)? divider,
+    TResult? Function(Key? key, Color? backgroundColor, bool extended, Widget? leading, Widget? trailing, List<NavigationRailDestination> destinations, int? selectedIndex, IntSelectionCallback? onDestinationSelected, double? elevation, double? groupAlignment, NavigationRailLabelType? labelType, TextStyle? unselectedLabelTextStyle, TextStyle? selectedLabelTextStyle, IconThemeData? unselectedIconTheme, IconThemeData? selectedIconTheme, double? minWidth, double? minExtendedWidth, bool? useIndicator, Color? indicatorColor, ShapeBorder? indicatorShape)? navigationRail,
+    TResult? Function(Key? key, Duration? animationDuration, int selectedIndex, List<Widget> destinations, IntSelectionCallback? onDestinationSelected, Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, Color? indicatorColor, ShapeBorder? indicatorShape, double? height, NavigationDestinationLabelBehavior? labelBehavior)? navigationBar,
+    TResult? Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration)? defaultTabController,
+    TResult? Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child)? tab,
+    TResult? Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior)? tabBarView,
   }) {
     return sizedBox?.call(key, width, height, child);
   }
@@ -10033,6 +10443,11 @@ class _$SizedBox implements SizedBox {
     TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue)? circularProgressIndicator,
     TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue)? linearProgressIndicator,
     TResult Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color)? divider,
+    TResult Function(Key? key, Color? backgroundColor, bool extended, Widget? leading, Widget? trailing, List<NavigationRailDestination> destinations, int? selectedIndex, IntSelectionCallback? onDestinationSelected, double? elevation, double? groupAlignment, NavigationRailLabelType? labelType, TextStyle? unselectedLabelTextStyle, TextStyle? selectedLabelTextStyle, IconThemeData? unselectedIconTheme, IconThemeData? selectedIconTheme, double? minWidth, double? minExtendedWidth, bool? useIndicator, Color? indicatorColor, ShapeBorder? indicatorShape)? navigationRail,
+    TResult Function(Key? key, Duration? animationDuration, int selectedIndex, List<Widget> destinations, IntSelectionCallback? onDestinationSelected, Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, Color? indicatorColor, ShapeBorder? indicatorShape, double? height, NavigationDestinationLabelBehavior? labelBehavior)? navigationBar,
+    TResult Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration)? defaultTabController,
+    TResult Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child)? tab,
+    TResult Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior)? tabBarView,
     required TResult orElse(),
   }) {
     if (sizedBox != null) {
@@ -10067,6 +10482,11 @@ class _$SizedBox implements SizedBox {
     required TResult Function(LinearProgressIndicator value)
         linearProgressIndicator,
     required TResult Function(Divider value) divider,
+    required TResult Function(NavigationRail value) navigationRail,
+    required TResult Function(NavigationBar value) navigationBar,
+    required TResult Function(DefaultTabController value) defaultTabController,
+    required TResult Function(Tab value) tab,
+    required TResult Function(TabBarView value) tabBarView,
   }) {
     return sizedBox(this);
   }
@@ -10096,6 +10516,11 @@ class _$SizedBox implements SizedBox {
         circularProgressIndicator,
     TResult? Function(LinearProgressIndicator value)? linearProgressIndicator,
     TResult? Function(Divider value)? divider,
+    TResult? Function(NavigationRail value)? navigationRail,
+    TResult? Function(NavigationBar value)? navigationBar,
+    TResult? Function(DefaultTabController value)? defaultTabController,
+    TResult? Function(Tab value)? tab,
+    TResult? Function(TabBarView value)? tabBarView,
   }) {
     return sizedBox?.call(this);
   }
@@ -10125,6 +10550,11 @@ class _$SizedBox implements SizedBox {
         circularProgressIndicator,
     TResult Function(LinearProgressIndicator value)? linearProgressIndicator,
     TResult Function(Divider value)? divider,
+    TResult Function(NavigationRail value)? navigationRail,
+    TResult Function(NavigationBar value)? navigationBar,
+    TResult Function(DefaultTabController value)? defaultTabController,
+    TResult Function(Tab value)? tab,
+    TResult Function(TabBarView value)? tabBarView,
     required TResult orElse(),
   }) {
     if (sizedBox != null) {
@@ -10364,6 +10794,11 @@ class _$Center implements Center {
     required TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue) circularProgressIndicator,
     required TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue) linearProgressIndicator,
     required TResult Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color) divider,
+    required TResult Function(Key? key, Color? backgroundColor, bool extended, Widget? leading, Widget? trailing, List<NavigationRailDestination> destinations, int? selectedIndex, IntSelectionCallback? onDestinationSelected, double? elevation, double? groupAlignment, NavigationRailLabelType? labelType, TextStyle? unselectedLabelTextStyle, TextStyle? selectedLabelTextStyle, IconThemeData? unselectedIconTheme, IconThemeData? selectedIconTheme, double? minWidth, double? minExtendedWidth, bool? useIndicator, Color? indicatorColor, ShapeBorder? indicatorShape) navigationRail,
+    required TResult Function(Key? key, Duration? animationDuration, int selectedIndex, List<Widget> destinations, IntSelectionCallback? onDestinationSelected, Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, Color? indicatorColor, ShapeBorder? indicatorShape, double? height, NavigationDestinationLabelBehavior? labelBehavior) navigationBar,
+    required TResult Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration) defaultTabController,
+    required TResult Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child) tab,
+    required TResult Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior) tabBarView,
   }) {
     return center(key, widthFactor, heightFactor, child);
   }
@@ -10459,6 +10894,11 @@ class _$Center implements Center {
     TResult? Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue)? circularProgressIndicator,
     TResult? Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue)? linearProgressIndicator,
     TResult? Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color)? divider,
+    TResult? Function(Key? key, Color? backgroundColor, bool extended, Widget? leading, Widget? trailing, List<NavigationRailDestination> destinations, int? selectedIndex, IntSelectionCallback? onDestinationSelected, double? elevation, double? groupAlignment, NavigationRailLabelType? labelType, TextStyle? unselectedLabelTextStyle, TextStyle? selectedLabelTextStyle, IconThemeData? unselectedIconTheme, IconThemeData? selectedIconTheme, double? minWidth, double? minExtendedWidth, bool? useIndicator, Color? indicatorColor, ShapeBorder? indicatorShape)? navigationRail,
+    TResult? Function(Key? key, Duration? animationDuration, int selectedIndex, List<Widget> destinations, IntSelectionCallback? onDestinationSelected, Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, Color? indicatorColor, ShapeBorder? indicatorShape, double? height, NavigationDestinationLabelBehavior? labelBehavior)? navigationBar,
+    TResult? Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration)? defaultTabController,
+    TResult? Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child)? tab,
+    TResult? Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior)? tabBarView,
   }) {
     return center?.call(key, widthFactor, heightFactor, child);
   }
@@ -10554,6 +10994,11 @@ class _$Center implements Center {
     TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue)? circularProgressIndicator,
     TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue)? linearProgressIndicator,
     TResult Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color)? divider,
+    TResult Function(Key? key, Color? backgroundColor, bool extended, Widget? leading, Widget? trailing, List<NavigationRailDestination> destinations, int? selectedIndex, IntSelectionCallback? onDestinationSelected, double? elevation, double? groupAlignment, NavigationRailLabelType? labelType, TextStyle? unselectedLabelTextStyle, TextStyle? selectedLabelTextStyle, IconThemeData? unselectedIconTheme, IconThemeData? selectedIconTheme, double? minWidth, double? minExtendedWidth, bool? useIndicator, Color? indicatorColor, ShapeBorder? indicatorShape)? navigationRail,
+    TResult Function(Key? key, Duration? animationDuration, int selectedIndex, List<Widget> destinations, IntSelectionCallback? onDestinationSelected, Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, Color? indicatorColor, ShapeBorder? indicatorShape, double? height, NavigationDestinationLabelBehavior? labelBehavior)? navigationBar,
+    TResult Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration)? defaultTabController,
+    TResult Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child)? tab,
+    TResult Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior)? tabBarView,
     required TResult orElse(),
   }) {
     if (center != null) {
@@ -10588,6 +11033,11 @@ class _$Center implements Center {
     required TResult Function(LinearProgressIndicator value)
         linearProgressIndicator,
     required TResult Function(Divider value) divider,
+    required TResult Function(NavigationRail value) navigationRail,
+    required TResult Function(NavigationBar value) navigationBar,
+    required TResult Function(DefaultTabController value) defaultTabController,
+    required TResult Function(Tab value) tab,
+    required TResult Function(TabBarView value) tabBarView,
   }) {
     return center(this);
   }
@@ -10617,6 +11067,11 @@ class _$Center implements Center {
         circularProgressIndicator,
     TResult? Function(LinearProgressIndicator value)? linearProgressIndicator,
     TResult? Function(Divider value)? divider,
+    TResult? Function(NavigationRail value)? navigationRail,
+    TResult? Function(NavigationBar value)? navigationBar,
+    TResult? Function(DefaultTabController value)? defaultTabController,
+    TResult? Function(Tab value)? tab,
+    TResult? Function(TabBarView value)? tabBarView,
   }) {
     return center?.call(this);
   }
@@ -10646,6 +11101,11 @@ class _$Center implements Center {
         circularProgressIndicator,
     TResult Function(LinearProgressIndicator value)? linearProgressIndicator,
     TResult Function(Divider value)? divider,
+    TResult Function(NavigationRail value)? navigationRail,
+    TResult Function(NavigationBar value)? navigationBar,
+    TResult Function(DefaultTabController value)? defaultTabController,
+    TResult Function(Tab value)? tab,
+    TResult Function(TabBarView value)? tabBarView,
     required TResult orElse(),
   }) {
     if (center != null) {
@@ -10994,6 +11454,11 @@ class _$Icon implements Icon {
     required TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue) circularProgressIndicator,
     required TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue) linearProgressIndicator,
     required TResult Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color) divider,
+    required TResult Function(Key? key, Color? backgroundColor, bool extended, Widget? leading, Widget? trailing, List<NavigationRailDestination> destinations, int? selectedIndex, IntSelectionCallback? onDestinationSelected, double? elevation, double? groupAlignment, NavigationRailLabelType? labelType, TextStyle? unselectedLabelTextStyle, TextStyle? selectedLabelTextStyle, IconThemeData? unselectedIconTheme, IconThemeData? selectedIconTheme, double? minWidth, double? minExtendedWidth, bool? useIndicator, Color? indicatorColor, ShapeBorder? indicatorShape) navigationRail,
+    required TResult Function(Key? key, Duration? animationDuration, int selectedIndex, List<Widget> destinations, IntSelectionCallback? onDestinationSelected, Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, Color? indicatorColor, ShapeBorder? indicatorShape, double? height, NavigationDestinationLabelBehavior? labelBehavior) navigationBar,
+    required TResult Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration) defaultTabController,
+    required TResult Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child) tab,
+    required TResult Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior) tabBarView,
   }) {
     return icon(this.icon, key, size, fill, weight, grade, opticalSize, color,
         shadows, semanticLabel, textDirection);
@@ -11090,6 +11555,11 @@ class _$Icon implements Icon {
     TResult? Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue)? circularProgressIndicator,
     TResult? Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue)? linearProgressIndicator,
     TResult? Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color)? divider,
+    TResult? Function(Key? key, Color? backgroundColor, bool extended, Widget? leading, Widget? trailing, List<NavigationRailDestination> destinations, int? selectedIndex, IntSelectionCallback? onDestinationSelected, double? elevation, double? groupAlignment, NavigationRailLabelType? labelType, TextStyle? unselectedLabelTextStyle, TextStyle? selectedLabelTextStyle, IconThemeData? unselectedIconTheme, IconThemeData? selectedIconTheme, double? minWidth, double? minExtendedWidth, bool? useIndicator, Color? indicatorColor, ShapeBorder? indicatorShape)? navigationRail,
+    TResult? Function(Key? key, Duration? animationDuration, int selectedIndex, List<Widget> destinations, IntSelectionCallback? onDestinationSelected, Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, Color? indicatorColor, ShapeBorder? indicatorShape, double? height, NavigationDestinationLabelBehavior? labelBehavior)? navigationBar,
+    TResult? Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration)? defaultTabController,
+    TResult? Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child)? tab,
+    TResult? Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior)? tabBarView,
   }) {
     return icon?.call(this.icon, key, size, fill, weight, grade, opticalSize,
         color, shadows, semanticLabel, textDirection);
@@ -11186,6 +11656,11 @@ class _$Icon implements Icon {
     TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue)? circularProgressIndicator,
     TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue)? linearProgressIndicator,
     TResult Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color)? divider,
+    TResult Function(Key? key, Color? backgroundColor, bool extended, Widget? leading, Widget? trailing, List<NavigationRailDestination> destinations, int? selectedIndex, IntSelectionCallback? onDestinationSelected, double? elevation, double? groupAlignment, NavigationRailLabelType? labelType, TextStyle? unselectedLabelTextStyle, TextStyle? selectedLabelTextStyle, IconThemeData? unselectedIconTheme, IconThemeData? selectedIconTheme, double? minWidth, double? minExtendedWidth, bool? useIndicator, Color? indicatorColor, ShapeBorder? indicatorShape)? navigationRail,
+    TResult Function(Key? key, Duration? animationDuration, int selectedIndex, List<Widget> destinations, IntSelectionCallback? onDestinationSelected, Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, Color? indicatorColor, ShapeBorder? indicatorShape, double? height, NavigationDestinationLabelBehavior? labelBehavior)? navigationBar,
+    TResult Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration)? defaultTabController,
+    TResult Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child)? tab,
+    TResult Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior)? tabBarView,
     required TResult orElse(),
   }) {
     if (icon != null) {
@@ -11221,6 +11696,11 @@ class _$Icon implements Icon {
     required TResult Function(LinearProgressIndicator value)
         linearProgressIndicator,
     required TResult Function(Divider value) divider,
+    required TResult Function(NavigationRail value) navigationRail,
+    required TResult Function(NavigationBar value) navigationBar,
+    required TResult Function(DefaultTabController value) defaultTabController,
+    required TResult Function(Tab value) tab,
+    required TResult Function(TabBarView value) tabBarView,
   }) {
     return icon(this);
   }
@@ -11250,6 +11730,11 @@ class _$Icon implements Icon {
         circularProgressIndicator,
     TResult? Function(LinearProgressIndicator value)? linearProgressIndicator,
     TResult? Function(Divider value)? divider,
+    TResult? Function(NavigationRail value)? navigationRail,
+    TResult? Function(NavigationBar value)? navigationBar,
+    TResult? Function(DefaultTabController value)? defaultTabController,
+    TResult? Function(Tab value)? tab,
+    TResult? Function(TabBarView value)? tabBarView,
   }) {
     return icon?.call(this);
   }
@@ -11279,6 +11764,11 @@ class _$Icon implements Icon {
         circularProgressIndicator,
     TResult Function(LinearProgressIndicator value)? linearProgressIndicator,
     TResult Function(Divider value)? divider,
+    TResult Function(NavigationRail value)? navigationRail,
+    TResult Function(NavigationBar value)? navigationBar,
+    TResult Function(DefaultTabController value)? defaultTabController,
+    TResult Function(Tab value)? tab,
+    TResult Function(TabBarView value)? tabBarView,
     required TResult orElse(),
   }) {
     if (icon != null) {
@@ -11587,6 +12077,11 @@ class _$Column implements Column {
     required TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue) circularProgressIndicator,
     required TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue) linearProgressIndicator,
     required TResult Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color) divider,
+    required TResult Function(Key? key, Color? backgroundColor, bool extended, Widget? leading, Widget? trailing, List<NavigationRailDestination> destinations, int? selectedIndex, IntSelectionCallback? onDestinationSelected, double? elevation, double? groupAlignment, NavigationRailLabelType? labelType, TextStyle? unselectedLabelTextStyle, TextStyle? selectedLabelTextStyle, IconThemeData? unselectedIconTheme, IconThemeData? selectedIconTheme, double? minWidth, double? minExtendedWidth, bool? useIndicator, Color? indicatorColor, ShapeBorder? indicatorShape) navigationRail,
+    required TResult Function(Key? key, Duration? animationDuration, int selectedIndex, List<Widget> destinations, IntSelectionCallback? onDestinationSelected, Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, Color? indicatorColor, ShapeBorder? indicatorShape, double? height, NavigationDestinationLabelBehavior? labelBehavior) navigationBar,
+    required TResult Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration) defaultTabController,
+    required TResult Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child) tab,
+    required TResult Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior) tabBarView,
   }) {
     return column(key, mainAxisAlignment, mainAxisSize, crossAxisAlignment,
         textDirection, verticalDirection, textBaseline, children);
@@ -11683,6 +12178,11 @@ class _$Column implements Column {
     TResult? Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue)? circularProgressIndicator,
     TResult? Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue)? linearProgressIndicator,
     TResult? Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color)? divider,
+    TResult? Function(Key? key, Color? backgroundColor, bool extended, Widget? leading, Widget? trailing, List<NavigationRailDestination> destinations, int? selectedIndex, IntSelectionCallback? onDestinationSelected, double? elevation, double? groupAlignment, NavigationRailLabelType? labelType, TextStyle? unselectedLabelTextStyle, TextStyle? selectedLabelTextStyle, IconThemeData? unselectedIconTheme, IconThemeData? selectedIconTheme, double? minWidth, double? minExtendedWidth, bool? useIndicator, Color? indicatorColor, ShapeBorder? indicatorShape)? navigationRail,
+    TResult? Function(Key? key, Duration? animationDuration, int selectedIndex, List<Widget> destinations, IntSelectionCallback? onDestinationSelected, Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, Color? indicatorColor, ShapeBorder? indicatorShape, double? height, NavigationDestinationLabelBehavior? labelBehavior)? navigationBar,
+    TResult? Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration)? defaultTabController,
+    TResult? Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child)? tab,
+    TResult? Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior)? tabBarView,
   }) {
     return column?.call(
         key,
@@ -11786,6 +12286,11 @@ class _$Column implements Column {
     TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue)? circularProgressIndicator,
     TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue)? linearProgressIndicator,
     TResult Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color)? divider,
+    TResult Function(Key? key, Color? backgroundColor, bool extended, Widget? leading, Widget? trailing, List<NavigationRailDestination> destinations, int? selectedIndex, IntSelectionCallback? onDestinationSelected, double? elevation, double? groupAlignment, NavigationRailLabelType? labelType, TextStyle? unselectedLabelTextStyle, TextStyle? selectedLabelTextStyle, IconThemeData? unselectedIconTheme, IconThemeData? selectedIconTheme, double? minWidth, double? minExtendedWidth, bool? useIndicator, Color? indicatorColor, ShapeBorder? indicatorShape)? navigationRail,
+    TResult Function(Key? key, Duration? animationDuration, int selectedIndex, List<Widget> destinations, IntSelectionCallback? onDestinationSelected, Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, Color? indicatorColor, ShapeBorder? indicatorShape, double? height, NavigationDestinationLabelBehavior? labelBehavior)? navigationBar,
+    TResult Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration)? defaultTabController,
+    TResult Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child)? tab,
+    TResult Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior)? tabBarView,
     required TResult orElse(),
   }) {
     if (column != null) {
@@ -11821,6 +12326,11 @@ class _$Column implements Column {
     required TResult Function(LinearProgressIndicator value)
         linearProgressIndicator,
     required TResult Function(Divider value) divider,
+    required TResult Function(NavigationRail value) navigationRail,
+    required TResult Function(NavigationBar value) navigationBar,
+    required TResult Function(DefaultTabController value) defaultTabController,
+    required TResult Function(Tab value) tab,
+    required TResult Function(TabBarView value) tabBarView,
   }) {
     return column(this);
   }
@@ -11850,6 +12360,11 @@ class _$Column implements Column {
         circularProgressIndicator,
     TResult? Function(LinearProgressIndicator value)? linearProgressIndicator,
     TResult? Function(Divider value)? divider,
+    TResult? Function(NavigationRail value)? navigationRail,
+    TResult? Function(NavigationBar value)? navigationBar,
+    TResult? Function(DefaultTabController value)? defaultTabController,
+    TResult? Function(Tab value)? tab,
+    TResult? Function(TabBarView value)? tabBarView,
   }) {
     return column?.call(this);
   }
@@ -11879,6 +12394,11 @@ class _$Column implements Column {
         circularProgressIndicator,
     TResult Function(LinearProgressIndicator value)? linearProgressIndicator,
     TResult Function(Divider value)? divider,
+    TResult Function(NavigationRail value)? navigationRail,
+    TResult Function(NavigationBar value)? navigationBar,
+    TResult Function(DefaultTabController value)? defaultTabController,
+    TResult Function(Tab value)? tab,
+    TResult Function(TabBarView value)? tabBarView,
     required TResult orElse(),
   }) {
     if (column != null) {
@@ -12182,6 +12702,11 @@ class _$Row implements Row {
     required TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue) circularProgressIndicator,
     required TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue) linearProgressIndicator,
     required TResult Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color) divider,
+    required TResult Function(Key? key, Color? backgroundColor, bool extended, Widget? leading, Widget? trailing, List<NavigationRailDestination> destinations, int? selectedIndex, IntSelectionCallback? onDestinationSelected, double? elevation, double? groupAlignment, NavigationRailLabelType? labelType, TextStyle? unselectedLabelTextStyle, TextStyle? selectedLabelTextStyle, IconThemeData? unselectedIconTheme, IconThemeData? selectedIconTheme, double? minWidth, double? minExtendedWidth, bool? useIndicator, Color? indicatorColor, ShapeBorder? indicatorShape) navigationRail,
+    required TResult Function(Key? key, Duration? animationDuration, int selectedIndex, List<Widget> destinations, IntSelectionCallback? onDestinationSelected, Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, Color? indicatorColor, ShapeBorder? indicatorShape, double? height, NavigationDestinationLabelBehavior? labelBehavior) navigationBar,
+    required TResult Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration) defaultTabController,
+    required TResult Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child) tab,
+    required TResult Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior) tabBarView,
   }) {
     return row(key, mainAxisAlignment, mainAxisSize, crossAxisAlignment,
         textDirection, verticalDirection, textBaseline, children);
@@ -12278,6 +12803,11 @@ class _$Row implements Row {
     TResult? Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue)? circularProgressIndicator,
     TResult? Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue)? linearProgressIndicator,
     TResult? Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color)? divider,
+    TResult? Function(Key? key, Color? backgroundColor, bool extended, Widget? leading, Widget? trailing, List<NavigationRailDestination> destinations, int? selectedIndex, IntSelectionCallback? onDestinationSelected, double? elevation, double? groupAlignment, NavigationRailLabelType? labelType, TextStyle? unselectedLabelTextStyle, TextStyle? selectedLabelTextStyle, IconThemeData? unselectedIconTheme, IconThemeData? selectedIconTheme, double? minWidth, double? minExtendedWidth, bool? useIndicator, Color? indicatorColor, ShapeBorder? indicatorShape)? navigationRail,
+    TResult? Function(Key? key, Duration? animationDuration, int selectedIndex, List<Widget> destinations, IntSelectionCallback? onDestinationSelected, Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, Color? indicatorColor, ShapeBorder? indicatorShape, double? height, NavigationDestinationLabelBehavior? labelBehavior)? navigationBar,
+    TResult? Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration)? defaultTabController,
+    TResult? Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child)? tab,
+    TResult? Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior)? tabBarView,
   }) {
     return row?.call(key, mainAxisAlignment, mainAxisSize, crossAxisAlignment,
         textDirection, verticalDirection, textBaseline, children);
@@ -12374,6 +12904,11 @@ class _$Row implements Row {
     TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue)? circularProgressIndicator,
     TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue)? linearProgressIndicator,
     TResult Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color)? divider,
+    TResult Function(Key? key, Color? backgroundColor, bool extended, Widget? leading, Widget? trailing, List<NavigationRailDestination> destinations, int? selectedIndex, IntSelectionCallback? onDestinationSelected, double? elevation, double? groupAlignment, NavigationRailLabelType? labelType, TextStyle? unselectedLabelTextStyle, TextStyle? selectedLabelTextStyle, IconThemeData? unselectedIconTheme, IconThemeData? selectedIconTheme, double? minWidth, double? minExtendedWidth, bool? useIndicator, Color? indicatorColor, ShapeBorder? indicatorShape)? navigationRail,
+    TResult Function(Key? key, Duration? animationDuration, int selectedIndex, List<Widget> destinations, IntSelectionCallback? onDestinationSelected, Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, Color? indicatorColor, ShapeBorder? indicatorShape, double? height, NavigationDestinationLabelBehavior? labelBehavior)? navigationBar,
+    TResult Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration)? defaultTabController,
+    TResult Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child)? tab,
+    TResult Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior)? tabBarView,
     required TResult orElse(),
   }) {
     if (row != null) {
@@ -12409,6 +12944,11 @@ class _$Row implements Row {
     required TResult Function(LinearProgressIndicator value)
         linearProgressIndicator,
     required TResult Function(Divider value) divider,
+    required TResult Function(NavigationRail value) navigationRail,
+    required TResult Function(NavigationBar value) navigationBar,
+    required TResult Function(DefaultTabController value) defaultTabController,
+    required TResult Function(Tab value) tab,
+    required TResult Function(TabBarView value) tabBarView,
   }) {
     return row(this);
   }
@@ -12438,6 +12978,11 @@ class _$Row implements Row {
         circularProgressIndicator,
     TResult? Function(LinearProgressIndicator value)? linearProgressIndicator,
     TResult? Function(Divider value)? divider,
+    TResult? Function(NavigationRail value)? navigationRail,
+    TResult? Function(NavigationBar value)? navigationBar,
+    TResult? Function(DefaultTabController value)? defaultTabController,
+    TResult? Function(Tab value)? tab,
+    TResult? Function(TabBarView value)? tabBarView,
   }) {
     return row?.call(this);
   }
@@ -12467,6 +13012,11 @@ class _$Row implements Row {
         circularProgressIndicator,
     TResult Function(LinearProgressIndicator value)? linearProgressIndicator,
     TResult Function(Divider value)? divider,
+    TResult Function(NavigationRail value)? navigationRail,
+    TResult Function(NavigationBar value)? navigationBar,
+    TResult Function(DefaultTabController value)? defaultTabController,
+    TResult Function(Tab value)? tab,
+    TResult Function(TabBarView value)? tabBarView,
     required TResult orElse(),
   }) {
     if (row != null) {
@@ -12772,6 +13322,11 @@ class _$CircularProgressIndicator implements CircularProgressIndicator {
     required TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue) circularProgressIndicator,
     required TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue) linearProgressIndicator,
     required TResult Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color) divider,
+    required TResult Function(Key? key, Color? backgroundColor, bool extended, Widget? leading, Widget? trailing, List<NavigationRailDestination> destinations, int? selectedIndex, IntSelectionCallback? onDestinationSelected, double? elevation, double? groupAlignment, NavigationRailLabelType? labelType, TextStyle? unselectedLabelTextStyle, TextStyle? selectedLabelTextStyle, IconThemeData? unselectedIconTheme, IconThemeData? selectedIconTheme, double? minWidth, double? minExtendedWidth, bool? useIndicator, Color? indicatorColor, ShapeBorder? indicatorShape) navigationRail,
+    required TResult Function(Key? key, Duration? animationDuration, int selectedIndex, List<Widget> destinations, IntSelectionCallback? onDestinationSelected, Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, Color? indicatorColor, ShapeBorder? indicatorShape, double? height, NavigationDestinationLabelBehavior? labelBehavior) navigationBar,
+    required TResult Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration) defaultTabController,
+    required TResult Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child) tab,
+    required TResult Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior) tabBarView,
   }) {
     return circularProgressIndicator(key, value, backgroundColor, color,
         strokeWidth, semanticsLabel, semanticsValue);
@@ -12868,6 +13423,11 @@ class _$CircularProgressIndicator implements CircularProgressIndicator {
     TResult? Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue)? circularProgressIndicator,
     TResult? Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue)? linearProgressIndicator,
     TResult? Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color)? divider,
+    TResult? Function(Key? key, Color? backgroundColor, bool extended, Widget? leading, Widget? trailing, List<NavigationRailDestination> destinations, int? selectedIndex, IntSelectionCallback? onDestinationSelected, double? elevation, double? groupAlignment, NavigationRailLabelType? labelType, TextStyle? unselectedLabelTextStyle, TextStyle? selectedLabelTextStyle, IconThemeData? unselectedIconTheme, IconThemeData? selectedIconTheme, double? minWidth, double? minExtendedWidth, bool? useIndicator, Color? indicatorColor, ShapeBorder? indicatorShape)? navigationRail,
+    TResult? Function(Key? key, Duration? animationDuration, int selectedIndex, List<Widget> destinations, IntSelectionCallback? onDestinationSelected, Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, Color? indicatorColor, ShapeBorder? indicatorShape, double? height, NavigationDestinationLabelBehavior? labelBehavior)? navigationBar,
+    TResult? Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration)? defaultTabController,
+    TResult? Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child)? tab,
+    TResult? Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior)? tabBarView,
   }) {
     return circularProgressIndicator?.call(key, value, backgroundColor, color,
         strokeWidth, semanticsLabel, semanticsValue);
@@ -12964,6 +13524,11 @@ class _$CircularProgressIndicator implements CircularProgressIndicator {
     TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue)? circularProgressIndicator,
     TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue)? linearProgressIndicator,
     TResult Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color)? divider,
+    TResult Function(Key? key, Color? backgroundColor, bool extended, Widget? leading, Widget? trailing, List<NavigationRailDestination> destinations, int? selectedIndex, IntSelectionCallback? onDestinationSelected, double? elevation, double? groupAlignment, NavigationRailLabelType? labelType, TextStyle? unselectedLabelTextStyle, TextStyle? selectedLabelTextStyle, IconThemeData? unselectedIconTheme, IconThemeData? selectedIconTheme, double? minWidth, double? minExtendedWidth, bool? useIndicator, Color? indicatorColor, ShapeBorder? indicatorShape)? navigationRail,
+    TResult Function(Key? key, Duration? animationDuration, int selectedIndex, List<Widget> destinations, IntSelectionCallback? onDestinationSelected, Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, Color? indicatorColor, ShapeBorder? indicatorShape, double? height, NavigationDestinationLabelBehavior? labelBehavior)? navigationBar,
+    TResult Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration)? defaultTabController,
+    TResult Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child)? tab,
+    TResult Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior)? tabBarView,
     required TResult orElse(),
   }) {
     if (circularProgressIndicator != null) {
@@ -12999,6 +13564,11 @@ class _$CircularProgressIndicator implements CircularProgressIndicator {
     required TResult Function(LinearProgressIndicator value)
         linearProgressIndicator,
     required TResult Function(Divider value) divider,
+    required TResult Function(NavigationRail value) navigationRail,
+    required TResult Function(NavigationBar value) navigationBar,
+    required TResult Function(DefaultTabController value) defaultTabController,
+    required TResult Function(Tab value) tab,
+    required TResult Function(TabBarView value) tabBarView,
   }) {
     return circularProgressIndicator(this);
   }
@@ -13028,6 +13598,11 @@ class _$CircularProgressIndicator implements CircularProgressIndicator {
         circularProgressIndicator,
     TResult? Function(LinearProgressIndicator value)? linearProgressIndicator,
     TResult? Function(Divider value)? divider,
+    TResult? Function(NavigationRail value)? navigationRail,
+    TResult? Function(NavigationBar value)? navigationBar,
+    TResult? Function(DefaultTabController value)? defaultTabController,
+    TResult? Function(Tab value)? tab,
+    TResult? Function(TabBarView value)? tabBarView,
   }) {
     return circularProgressIndicator?.call(this);
   }
@@ -13057,6 +13632,11 @@ class _$CircularProgressIndicator implements CircularProgressIndicator {
         circularProgressIndicator,
     TResult Function(LinearProgressIndicator value)? linearProgressIndicator,
     TResult Function(Divider value)? divider,
+    TResult Function(NavigationRail value)? navigationRail,
+    TResult Function(NavigationBar value)? navigationBar,
+    TResult Function(DefaultTabController value)? defaultTabController,
+    TResult Function(Tab value)? tab,
+    TResult Function(TabBarView value)? tabBarView,
     required TResult orElse(),
   }) {
     if (circularProgressIndicator != null) {
@@ -13360,6 +13940,11 @@ class _$LinearProgressIndicator implements LinearProgressIndicator {
     required TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue) circularProgressIndicator,
     required TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue) linearProgressIndicator,
     required TResult Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color) divider,
+    required TResult Function(Key? key, Color? backgroundColor, bool extended, Widget? leading, Widget? trailing, List<NavigationRailDestination> destinations, int? selectedIndex, IntSelectionCallback? onDestinationSelected, double? elevation, double? groupAlignment, NavigationRailLabelType? labelType, TextStyle? unselectedLabelTextStyle, TextStyle? selectedLabelTextStyle, IconThemeData? unselectedIconTheme, IconThemeData? selectedIconTheme, double? minWidth, double? minExtendedWidth, bool? useIndicator, Color? indicatorColor, ShapeBorder? indicatorShape) navigationRail,
+    required TResult Function(Key? key, Duration? animationDuration, int selectedIndex, List<Widget> destinations, IntSelectionCallback? onDestinationSelected, Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, Color? indicatorColor, ShapeBorder? indicatorShape, double? height, NavigationDestinationLabelBehavior? labelBehavior) navigationBar,
+    required TResult Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration) defaultTabController,
+    required TResult Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child) tab,
+    required TResult Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior) tabBarView,
   }) {
     return linearProgressIndicator(key, value, backgroundColor, color,
         minHeight, semanticsLabel, semanticsValue);
@@ -13456,6 +14041,11 @@ class _$LinearProgressIndicator implements LinearProgressIndicator {
     TResult? Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue)? circularProgressIndicator,
     TResult? Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue)? linearProgressIndicator,
     TResult? Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color)? divider,
+    TResult? Function(Key? key, Color? backgroundColor, bool extended, Widget? leading, Widget? trailing, List<NavigationRailDestination> destinations, int? selectedIndex, IntSelectionCallback? onDestinationSelected, double? elevation, double? groupAlignment, NavigationRailLabelType? labelType, TextStyle? unselectedLabelTextStyle, TextStyle? selectedLabelTextStyle, IconThemeData? unselectedIconTheme, IconThemeData? selectedIconTheme, double? minWidth, double? minExtendedWidth, bool? useIndicator, Color? indicatorColor, ShapeBorder? indicatorShape)? navigationRail,
+    TResult? Function(Key? key, Duration? animationDuration, int selectedIndex, List<Widget> destinations, IntSelectionCallback? onDestinationSelected, Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, Color? indicatorColor, ShapeBorder? indicatorShape, double? height, NavigationDestinationLabelBehavior? labelBehavior)? navigationBar,
+    TResult? Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration)? defaultTabController,
+    TResult? Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child)? tab,
+    TResult? Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior)? tabBarView,
   }) {
     return linearProgressIndicator?.call(key, value, backgroundColor, color,
         minHeight, semanticsLabel, semanticsValue);
@@ -13552,6 +14142,11 @@ class _$LinearProgressIndicator implements LinearProgressIndicator {
     TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue)? circularProgressIndicator,
     TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue)? linearProgressIndicator,
     TResult Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color)? divider,
+    TResult Function(Key? key, Color? backgroundColor, bool extended, Widget? leading, Widget? trailing, List<NavigationRailDestination> destinations, int? selectedIndex, IntSelectionCallback? onDestinationSelected, double? elevation, double? groupAlignment, NavigationRailLabelType? labelType, TextStyle? unselectedLabelTextStyle, TextStyle? selectedLabelTextStyle, IconThemeData? unselectedIconTheme, IconThemeData? selectedIconTheme, double? minWidth, double? minExtendedWidth, bool? useIndicator, Color? indicatorColor, ShapeBorder? indicatorShape)? navigationRail,
+    TResult Function(Key? key, Duration? animationDuration, int selectedIndex, List<Widget> destinations, IntSelectionCallback? onDestinationSelected, Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, Color? indicatorColor, ShapeBorder? indicatorShape, double? height, NavigationDestinationLabelBehavior? labelBehavior)? navigationBar,
+    TResult Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration)? defaultTabController,
+    TResult Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child)? tab,
+    TResult Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior)? tabBarView,
     required TResult orElse(),
   }) {
     if (linearProgressIndicator != null) {
@@ -13587,6 +14182,11 @@ class _$LinearProgressIndicator implements LinearProgressIndicator {
     required TResult Function(LinearProgressIndicator value)
         linearProgressIndicator,
     required TResult Function(Divider value) divider,
+    required TResult Function(NavigationRail value) navigationRail,
+    required TResult Function(NavigationBar value) navigationBar,
+    required TResult Function(DefaultTabController value) defaultTabController,
+    required TResult Function(Tab value) tab,
+    required TResult Function(TabBarView value) tabBarView,
   }) {
     return linearProgressIndicator(this);
   }
@@ -13616,6 +14216,11 @@ class _$LinearProgressIndicator implements LinearProgressIndicator {
         circularProgressIndicator,
     TResult? Function(LinearProgressIndicator value)? linearProgressIndicator,
     TResult? Function(Divider value)? divider,
+    TResult? Function(NavigationRail value)? navigationRail,
+    TResult? Function(NavigationBar value)? navigationBar,
+    TResult? Function(DefaultTabController value)? defaultTabController,
+    TResult? Function(Tab value)? tab,
+    TResult? Function(TabBarView value)? tabBarView,
   }) {
     return linearProgressIndicator?.call(this);
   }
@@ -13645,6 +14250,11 @@ class _$LinearProgressIndicator implements LinearProgressIndicator {
         circularProgressIndicator,
     TResult Function(LinearProgressIndicator value)? linearProgressIndicator,
     TResult Function(Divider value)? divider,
+    TResult Function(NavigationRail value)? navigationRail,
+    TResult Function(NavigationBar value)? navigationBar,
+    TResult Function(DefaultTabController value)? defaultTabController,
+    TResult Function(Tab value)? tab,
+    TResult Function(TabBarView value)? tabBarView,
     required TResult orElse(),
   }) {
     if (linearProgressIndicator != null) {
@@ -13919,6 +14529,11 @@ class _$Divider implements Divider {
     required TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue) circularProgressIndicator,
     required TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue) linearProgressIndicator,
     required TResult Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color) divider,
+    required TResult Function(Key? key, Color? backgroundColor, bool extended, Widget? leading, Widget? trailing, List<NavigationRailDestination> destinations, int? selectedIndex, IntSelectionCallback? onDestinationSelected, double? elevation, double? groupAlignment, NavigationRailLabelType? labelType, TextStyle? unselectedLabelTextStyle, TextStyle? selectedLabelTextStyle, IconThemeData? unselectedIconTheme, IconThemeData? selectedIconTheme, double? minWidth, double? minExtendedWidth, bool? useIndicator, Color? indicatorColor, ShapeBorder? indicatorShape) navigationRail,
+    required TResult Function(Key? key, Duration? animationDuration, int selectedIndex, List<Widget> destinations, IntSelectionCallback? onDestinationSelected, Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, Color? indicatorColor, ShapeBorder? indicatorShape, double? height, NavigationDestinationLabelBehavior? labelBehavior) navigationBar,
+    required TResult Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration) defaultTabController,
+    required TResult Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child) tab,
+    required TResult Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior) tabBarView,
   }) {
     return divider(key, height, thickness, indent, endIndent, color);
   }
@@ -14014,6 +14629,11 @@ class _$Divider implements Divider {
     TResult? Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue)? circularProgressIndicator,
     TResult? Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue)? linearProgressIndicator,
     TResult? Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color)? divider,
+    TResult? Function(Key? key, Color? backgroundColor, bool extended, Widget? leading, Widget? trailing, List<NavigationRailDestination> destinations, int? selectedIndex, IntSelectionCallback? onDestinationSelected, double? elevation, double? groupAlignment, NavigationRailLabelType? labelType, TextStyle? unselectedLabelTextStyle, TextStyle? selectedLabelTextStyle, IconThemeData? unselectedIconTheme, IconThemeData? selectedIconTheme, double? minWidth, double? minExtendedWidth, bool? useIndicator, Color? indicatorColor, ShapeBorder? indicatorShape)? navigationRail,
+    TResult? Function(Key? key, Duration? animationDuration, int selectedIndex, List<Widget> destinations, IntSelectionCallback? onDestinationSelected, Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, Color? indicatorColor, ShapeBorder? indicatorShape, double? height, NavigationDestinationLabelBehavior? labelBehavior)? navigationBar,
+    TResult? Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration)? defaultTabController,
+    TResult? Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child)? tab,
+    TResult? Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior)? tabBarView,
   }) {
     return divider?.call(key, height, thickness, indent, endIndent, color);
   }
@@ -14109,6 +14729,11 @@ class _$Divider implements Divider {
     TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue)? circularProgressIndicator,
     TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue)? linearProgressIndicator,
     TResult Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color)? divider,
+    TResult Function(Key? key, Color? backgroundColor, bool extended, Widget? leading, Widget? trailing, List<NavigationRailDestination> destinations, int? selectedIndex, IntSelectionCallback? onDestinationSelected, double? elevation, double? groupAlignment, NavigationRailLabelType? labelType, TextStyle? unselectedLabelTextStyle, TextStyle? selectedLabelTextStyle, IconThemeData? unselectedIconTheme, IconThemeData? selectedIconTheme, double? minWidth, double? minExtendedWidth, bool? useIndicator, Color? indicatorColor, ShapeBorder? indicatorShape)? navigationRail,
+    TResult Function(Key? key, Duration? animationDuration, int selectedIndex, List<Widget> destinations, IntSelectionCallback? onDestinationSelected, Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, Color? indicatorColor, ShapeBorder? indicatorShape, double? height, NavigationDestinationLabelBehavior? labelBehavior)? navigationBar,
+    TResult Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration)? defaultTabController,
+    TResult Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child)? tab,
+    TResult Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior)? tabBarView,
     required TResult orElse(),
   }) {
     if (divider != null) {
@@ -14143,6 +14768,11 @@ class _$Divider implements Divider {
     required TResult Function(LinearProgressIndicator value)
         linearProgressIndicator,
     required TResult Function(Divider value) divider,
+    required TResult Function(NavigationRail value) navigationRail,
+    required TResult Function(NavigationBar value) navigationBar,
+    required TResult Function(DefaultTabController value) defaultTabController,
+    required TResult Function(Tab value) tab,
+    required TResult Function(TabBarView value) tabBarView,
   }) {
     return divider(this);
   }
@@ -14172,6 +14802,11 @@ class _$Divider implements Divider {
         circularProgressIndicator,
     TResult? Function(LinearProgressIndicator value)? linearProgressIndicator,
     TResult? Function(Divider value)? divider,
+    TResult? Function(NavigationRail value)? navigationRail,
+    TResult? Function(NavigationBar value)? navigationBar,
+    TResult? Function(DefaultTabController value)? defaultTabController,
+    TResult? Function(Tab value)? tab,
+    TResult? Function(TabBarView value)? tabBarView,
   }) {
     return divider?.call(this);
   }
@@ -14201,6 +14836,11 @@ class _$Divider implements Divider {
         circularProgressIndicator,
     TResult Function(LinearProgressIndicator value)? linearProgressIndicator,
     TResult Function(Divider value)? divider,
+    TResult Function(NavigationRail value)? navigationRail,
+    TResult Function(NavigationBar value)? navigationBar,
+    TResult Function(DefaultTabController value)? defaultTabController,
+    TResult Function(Tab value)? tab,
+    TResult Function(TabBarView value)? tabBarView,
     required TResult orElse(),
   }) {
     if (divider != null) {
@@ -14238,5 +14878,3546 @@ abstract class Divider implements Widget {
   @override
   @JsonKey(ignore: true)
   _$$DividerCopyWith<_$Divider> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$NavigationRailCopyWith<$Res>
+    implements $WidgetCopyWith<$Res> {
+  factory _$$NavigationRailCopyWith(
+          _$NavigationRail value, $Res Function(_$NavigationRail) then) =
+      __$$NavigationRailCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {Key? key,
+      Color? backgroundColor,
+      bool extended,
+      Widget? leading,
+      Widget? trailing,
+      List<NavigationRailDestination> destinations,
+      int? selectedIndex,
+      IntSelectionCallback? onDestinationSelected,
+      double? elevation,
+      double? groupAlignment,
+      NavigationRailLabelType? labelType,
+      TextStyle? unselectedLabelTextStyle,
+      TextStyle? selectedLabelTextStyle,
+      IconThemeData? unselectedIconTheme,
+      IconThemeData? selectedIconTheme,
+      double? minWidth,
+      double? minExtendedWidth,
+      bool? useIndicator,
+      Color? indicatorColor,
+      ShapeBorder? indicatorShape});
+
+  @override
+  $KeyCopyWith<$Res>? get key;
+  $ColorCopyWith<$Res>? get backgroundColor;
+  $WidgetCopyWith<$Res>? get leading;
+  $WidgetCopyWith<$Res>? get trailing;
+  $TextStyleCopyWith<$Res>? get unselectedLabelTextStyle;
+  $TextStyleCopyWith<$Res>? get selectedLabelTextStyle;
+  $IconThemeDataCopyWith<$Res>? get unselectedIconTheme;
+  $IconThemeDataCopyWith<$Res>? get selectedIconTheme;
+  $ColorCopyWith<$Res>? get indicatorColor;
+  $ShapeBorderCopyWith<$Res>? get indicatorShape;
+}
+
+/// @nodoc
+class __$$NavigationRailCopyWithImpl<$Res>
+    extends _$WidgetCopyWithImpl<$Res, _$NavigationRail>
+    implements _$$NavigationRailCopyWith<$Res> {
+  __$$NavigationRailCopyWithImpl(
+      _$NavigationRail _value, $Res Function(_$NavigationRail) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? key = freezed,
+    Object? backgroundColor = freezed,
+    Object? extended = null,
+    Object? leading = freezed,
+    Object? trailing = freezed,
+    Object? destinations = null,
+    Object? selectedIndex = freezed,
+    Object? onDestinationSelected = freezed,
+    Object? elevation = freezed,
+    Object? groupAlignment = freezed,
+    Object? labelType = freezed,
+    Object? unselectedLabelTextStyle = freezed,
+    Object? selectedLabelTextStyle = freezed,
+    Object? unselectedIconTheme = freezed,
+    Object? selectedIconTheme = freezed,
+    Object? minWidth = freezed,
+    Object? minExtendedWidth = freezed,
+    Object? useIndicator = freezed,
+    Object? indicatorColor = freezed,
+    Object? indicatorShape = freezed,
+  }) {
+    return _then(_$NavigationRail(
+      key: freezed == key
+          ? _value.key
+          : key // ignore: cast_nullable_to_non_nullable
+              as Key?,
+      backgroundColor: freezed == backgroundColor
+          ? _value.backgroundColor
+          : backgroundColor // ignore: cast_nullable_to_non_nullable
+              as Color?,
+      extended: null == extended
+          ? _value.extended
+          : extended // ignore: cast_nullable_to_non_nullable
+              as bool,
+      leading: freezed == leading
+          ? _value.leading
+          : leading // ignore: cast_nullable_to_non_nullable
+              as Widget?,
+      trailing: freezed == trailing
+          ? _value.trailing
+          : trailing // ignore: cast_nullable_to_non_nullable
+              as Widget?,
+      destinations: null == destinations
+          ? _value._destinations
+          : destinations // ignore: cast_nullable_to_non_nullable
+              as List<NavigationRailDestination>,
+      selectedIndex: freezed == selectedIndex
+          ? _value.selectedIndex
+          : selectedIndex // ignore: cast_nullable_to_non_nullable
+              as int?,
+      onDestinationSelected: freezed == onDestinationSelected
+          ? _value.onDestinationSelected
+          : onDestinationSelected // ignore: cast_nullable_to_non_nullable
+              as IntSelectionCallback?,
+      elevation: freezed == elevation
+          ? _value.elevation
+          : elevation // ignore: cast_nullable_to_non_nullable
+              as double?,
+      groupAlignment: freezed == groupAlignment
+          ? _value.groupAlignment
+          : groupAlignment // ignore: cast_nullable_to_non_nullable
+              as double?,
+      labelType: freezed == labelType
+          ? _value.labelType
+          : labelType // ignore: cast_nullable_to_non_nullable
+              as NavigationRailLabelType?,
+      unselectedLabelTextStyle: freezed == unselectedLabelTextStyle
+          ? _value.unselectedLabelTextStyle
+          : unselectedLabelTextStyle // ignore: cast_nullable_to_non_nullable
+              as TextStyle?,
+      selectedLabelTextStyle: freezed == selectedLabelTextStyle
+          ? _value.selectedLabelTextStyle
+          : selectedLabelTextStyle // ignore: cast_nullable_to_non_nullable
+              as TextStyle?,
+      unselectedIconTheme: freezed == unselectedIconTheme
+          ? _value.unselectedIconTheme
+          : unselectedIconTheme // ignore: cast_nullable_to_non_nullable
+              as IconThemeData?,
+      selectedIconTheme: freezed == selectedIconTheme
+          ? _value.selectedIconTheme
+          : selectedIconTheme // ignore: cast_nullable_to_non_nullable
+              as IconThemeData?,
+      minWidth: freezed == minWidth
+          ? _value.minWidth
+          : minWidth // ignore: cast_nullable_to_non_nullable
+              as double?,
+      minExtendedWidth: freezed == minExtendedWidth
+          ? _value.minExtendedWidth
+          : minExtendedWidth // ignore: cast_nullable_to_non_nullable
+              as double?,
+      useIndicator: freezed == useIndicator
+          ? _value.useIndicator
+          : useIndicator // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      indicatorColor: freezed == indicatorColor
+          ? _value.indicatorColor
+          : indicatorColor // ignore: cast_nullable_to_non_nullable
+              as Color?,
+      indicatorShape: freezed == indicatorShape
+          ? _value.indicatorShape
+          : indicatorShape // ignore: cast_nullable_to_non_nullable
+              as ShapeBorder?,
+    ));
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ColorCopyWith<$Res>? get backgroundColor {
+    if (_value.backgroundColor == null) {
+      return null;
+    }
+
+    return $ColorCopyWith<$Res>(_value.backgroundColor!, (value) {
+      return _then(_value.copyWith(backgroundColor: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $WidgetCopyWith<$Res>? get leading {
+    if (_value.leading == null) {
+      return null;
+    }
+
+    return $WidgetCopyWith<$Res>(_value.leading!, (value) {
+      return _then(_value.copyWith(leading: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $WidgetCopyWith<$Res>? get trailing {
+    if (_value.trailing == null) {
+      return null;
+    }
+
+    return $WidgetCopyWith<$Res>(_value.trailing!, (value) {
+      return _then(_value.copyWith(trailing: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $TextStyleCopyWith<$Res>? get unselectedLabelTextStyle {
+    if (_value.unselectedLabelTextStyle == null) {
+      return null;
+    }
+
+    return $TextStyleCopyWith<$Res>(_value.unselectedLabelTextStyle!, (value) {
+      return _then(_value.copyWith(unselectedLabelTextStyle: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $TextStyleCopyWith<$Res>? get selectedLabelTextStyle {
+    if (_value.selectedLabelTextStyle == null) {
+      return null;
+    }
+
+    return $TextStyleCopyWith<$Res>(_value.selectedLabelTextStyle!, (value) {
+      return _then(_value.copyWith(selectedLabelTextStyle: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $IconThemeDataCopyWith<$Res>? get unselectedIconTheme {
+    if (_value.unselectedIconTheme == null) {
+      return null;
+    }
+
+    return $IconThemeDataCopyWith<$Res>(_value.unselectedIconTheme!, (value) {
+      return _then(_value.copyWith(unselectedIconTheme: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $IconThemeDataCopyWith<$Res>? get selectedIconTheme {
+    if (_value.selectedIconTheme == null) {
+      return null;
+    }
+
+    return $IconThemeDataCopyWith<$Res>(_value.selectedIconTheme!, (value) {
+      return _then(_value.copyWith(selectedIconTheme: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ColorCopyWith<$Res>? get indicatorColor {
+    if (_value.indicatorColor == null) {
+      return null;
+    }
+
+    return $ColorCopyWith<$Res>(_value.indicatorColor!, (value) {
+      return _then(_value.copyWith(indicatorColor: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ShapeBorderCopyWith<$Res>? get indicatorShape {
+    if (_value.indicatorShape == null) {
+      return null;
+    }
+
+    return $ShapeBorderCopyWith<$Res>(_value.indicatorShape!, (value) {
+      return _then(_value.copyWith(indicatorShape: value));
+    });
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$NavigationRail implements NavigationRail {
+  const _$NavigationRail(
+      {this.key,
+      this.backgroundColor,
+      this.extended = false,
+      this.leading,
+      this.trailing,
+      required final List<NavigationRailDestination> destinations,
+      required this.selectedIndex,
+      this.onDestinationSelected,
+      this.elevation,
+      this.groupAlignment,
+      this.labelType,
+      this.unselectedLabelTextStyle,
+      this.selectedLabelTextStyle,
+      this.unselectedIconTheme,
+      this.selectedIconTheme,
+      this.minWidth,
+      this.minExtendedWidth,
+      this.useIndicator,
+      this.indicatorColor,
+      this.indicatorShape,
+      final String? $type})
+      : _destinations = destinations,
+        $type = $type ?? 'navigationRail';
+
+  factory _$NavigationRail.fromJson(Map<String, dynamic> json) =>
+      _$$NavigationRailFromJson(json);
+
+  @override
+  final Key? key;
+  @override
+  final Color? backgroundColor;
+  @override
+  @JsonKey()
+  final bool extended;
+  @override
+  final Widget? leading;
+  @override
+  final Widget? trailing;
+  final List<NavigationRailDestination> _destinations;
+  @override
+  List<NavigationRailDestination> get destinations {
+    if (_destinations is EqualUnmodifiableListView) return _destinations;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_destinations);
+  }
+
+  @override
+  final int? selectedIndex;
+  @override
+  final IntSelectionCallback? onDestinationSelected;
+  @override
+  final double? elevation;
+  @override
+  final double? groupAlignment;
+  @override
+  final NavigationRailLabelType? labelType;
+  @override
+  final TextStyle? unselectedLabelTextStyle;
+  @override
+  final TextStyle? selectedLabelTextStyle;
+  @override
+  final IconThemeData? unselectedIconTheme;
+  @override
+  final IconThemeData? selectedIconTheme;
+  @override
+  final double? minWidth;
+  @override
+  final double? minExtendedWidth;
+  @override
+  final bool? useIndicator;
+  @override
+  final Color? indicatorColor;
+  @override
+  final ShapeBorder? indicatorShape;
+
+  @JsonKey(name: 'runtimeType')
+  final String $type;
+
+  @override
+  String toString() {
+    return 'Widget.navigationRail(key: $key, backgroundColor: $backgroundColor, extended: $extended, leading: $leading, trailing: $trailing, destinations: $destinations, selectedIndex: $selectedIndex, onDestinationSelected: $onDestinationSelected, elevation: $elevation, groupAlignment: $groupAlignment, labelType: $labelType, unselectedLabelTextStyle: $unselectedLabelTextStyle, selectedLabelTextStyle: $selectedLabelTextStyle, unselectedIconTheme: $unselectedIconTheme, selectedIconTheme: $selectedIconTheme, minWidth: $minWidth, minExtendedWidth: $minExtendedWidth, useIndicator: $useIndicator, indicatorColor: $indicatorColor, indicatorShape: $indicatorShape)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$NavigationRail &&
+            (identical(other.key, key) || other.key == key) &&
+            (identical(other.backgroundColor, backgroundColor) ||
+                other.backgroundColor == backgroundColor) &&
+            (identical(other.extended, extended) ||
+                other.extended == extended) &&
+            (identical(other.leading, leading) || other.leading == leading) &&
+            (identical(other.trailing, trailing) ||
+                other.trailing == trailing) &&
+            const DeepCollectionEquality()
+                .equals(other._destinations, _destinations) &&
+            (identical(other.selectedIndex, selectedIndex) ||
+                other.selectedIndex == selectedIndex) &&
+            const DeepCollectionEquality()
+                .equals(other.onDestinationSelected, onDestinationSelected) &&
+            (identical(other.elevation, elevation) ||
+                other.elevation == elevation) &&
+            (identical(other.groupAlignment, groupAlignment) ||
+                other.groupAlignment == groupAlignment) &&
+            (identical(other.labelType, labelType) ||
+                other.labelType == labelType) &&
+            (identical(
+                    other.unselectedLabelTextStyle, unselectedLabelTextStyle) ||
+                other.unselectedLabelTextStyle == unselectedLabelTextStyle) &&
+            (identical(other.selectedLabelTextStyle, selectedLabelTextStyle) ||
+                other.selectedLabelTextStyle == selectedLabelTextStyle) &&
+            (identical(other.unselectedIconTheme, unselectedIconTheme) ||
+                other.unselectedIconTheme == unselectedIconTheme) &&
+            (identical(other.selectedIconTheme, selectedIconTheme) ||
+                other.selectedIconTheme == selectedIconTheme) &&
+            (identical(other.minWidth, minWidth) ||
+                other.minWidth == minWidth) &&
+            (identical(other.minExtendedWidth, minExtendedWidth) ||
+                other.minExtendedWidth == minExtendedWidth) &&
+            (identical(other.useIndicator, useIndicator) ||
+                other.useIndicator == useIndicator) &&
+            (identical(other.indicatorColor, indicatorColor) ||
+                other.indicatorColor == indicatorColor) &&
+            (identical(other.indicatorShape, indicatorShape) ||
+                other.indicatorShape == indicatorShape));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hashAll([
+        runtimeType,
+        key,
+        backgroundColor,
+        extended,
+        leading,
+        trailing,
+        const DeepCollectionEquality().hash(_destinations),
+        selectedIndex,
+        const DeepCollectionEquality().hash(onDestinationSelected),
+        elevation,
+        groupAlignment,
+        labelType,
+        unselectedLabelTextStyle,
+        selectedLabelTextStyle,
+        unselectedIconTheme,
+        selectedIconTheme,
+        minWidth,
+        minExtendedWidth,
+        useIndicator,
+        indicatorColor,
+        indicatorShape
+      ]);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$NavigationRailCopyWith<_$NavigationRail> get copyWith =>
+      __$$NavigationRailCopyWithImpl<_$NavigationRail>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(
+            Key? key,
+            Color? color,
+            Color? shadowColor,
+            Color? surfaceTintColor,
+            double? elevation,
+            ShapeBorder? shape,
+            bool borderOnForeground,
+            EdgeInsets? margin,
+            Clip? clipBehavior,
+            Widget? child,
+            bool semanticContainer)
+        card,
+    required TResult Function(
+            Key? key,
+            Callback? onPressed,
+            Callback? onLongPress,
+            bool autofocus,
+            Clip clipBehavior,
+            Widget child,
+            ButtonStyle? style)
+        elevatedButton,
+    required TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)
+        filledButton,
+    required TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)
+        filledTonalButton,
+    required TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)
+        outlinedButton,
+    required TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)
+        textButton,
+    required TResult Function(
+            Key? key,
+            double? iconSize,
+            VisualDensity? visualDensity,
+            EdgeInsets? padding,
+            Alignment? alignment,
+            double? splashRadius,
+            Color? color,
+            Color? focusColor,
+            Color? hoverColor,
+            Color? highlightColor,
+            Color? splashColor,
+            Color? disabledColor,
+            Callback onPressed,
+            MouseCursor? mouseCursor,
+            bool autofocus,
+            String? tooltip,
+            bool? enableFeedback,
+            BoxConstraints? constraints,
+            bool? isSelected,
+            Widget? selectedIcon,
+            Widget icon)
+        iconButton,
+    required TResult Function(
+            Key? key,
+            PreferredSizeWidget? appBar,
+            Widget? body,
+            Widget? floatingActionButton,
+            FloatingActionButtonLocation? floatingActionButtonLocation,
+            List<Widget>? persistentFooterButtons,
+            Alignment persistentFooterAlignment,
+            Widget? drawer,
+            Widget? endDrawer,
+            Widget? bottomNavigationBar,
+            Widget? bottomSheet,
+            Color? backgroundColor,
+            bool? resizeToAvoidBottomInset,
+            bool primary,
+            bool extendBody,
+            bool extendBodyBehindAppBar,
+            Color? drawerScrimColor,
+            double? drawerEdgeDragWidth,
+            bool drawerEnableOpenDragGesture,
+            bool endDrawerEnableOpenDragGesture,
+            String? restorationId)
+        scaffold,
+    required TResult Function(Key? key, Widget? child, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, bool mini, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback) floatingActionButton,
+    required TResult Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback) floatingActionButtonExtended,
+    required TResult Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor) text,
+    required TResult Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior) container,
+    required TResult Function(Key? key, double? width, double? height, Widget? child) sizedBox,
+    required TResult Function(Key? key, double? widthFactor, double? heightFactor, Widget child) center,
+    required TResult Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection) icon,
+    required TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children) column,
+    required TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children) row,
+    required TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue) circularProgressIndicator,
+    required TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue) linearProgressIndicator,
+    required TResult Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color) divider,
+    required TResult Function(Key? key, Color? backgroundColor, bool extended, Widget? leading, Widget? trailing, List<NavigationRailDestination> destinations, int? selectedIndex, IntSelectionCallback? onDestinationSelected, double? elevation, double? groupAlignment, NavigationRailLabelType? labelType, TextStyle? unselectedLabelTextStyle, TextStyle? selectedLabelTextStyle, IconThemeData? unselectedIconTheme, IconThemeData? selectedIconTheme, double? minWidth, double? minExtendedWidth, bool? useIndicator, Color? indicatorColor, ShapeBorder? indicatorShape) navigationRail,
+    required TResult Function(Key? key, Duration? animationDuration, int selectedIndex, List<Widget> destinations, IntSelectionCallback? onDestinationSelected, Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, Color? indicatorColor, ShapeBorder? indicatorShape, double? height, NavigationDestinationLabelBehavior? labelBehavior) navigationBar,
+    required TResult Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration) defaultTabController,
+    required TResult Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child) tab,
+    required TResult Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior) tabBarView,
+  }) {
+    return navigationRail(
+        key,
+        backgroundColor,
+        extended,
+        leading,
+        trailing,
+        destinations,
+        selectedIndex,
+        onDestinationSelected,
+        elevation,
+        groupAlignment,
+        labelType,
+        unselectedLabelTextStyle,
+        selectedLabelTextStyle,
+        unselectedIconTheme,
+        selectedIconTheme,
+        minWidth,
+        minExtendedWidth,
+        useIndicator,
+        indicatorColor,
+        indicatorShape);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(
+            Key? key,
+            Color? color,
+            Color? shadowColor,
+            Color? surfaceTintColor,
+            double? elevation,
+            ShapeBorder? shape,
+            bool borderOnForeground,
+            EdgeInsets? margin,
+            Clip? clipBehavior,
+            Widget? child,
+            bool semanticContainer)?
+        card,
+    TResult? Function(
+            Key? key,
+            Callback? onPressed,
+            Callback? onLongPress,
+            bool autofocus,
+            Clip clipBehavior,
+            Widget child,
+            ButtonStyle? style)?
+        elevatedButton,
+    TResult? Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        filledButton,
+    TResult? Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        filledTonalButton,
+    TResult? Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        outlinedButton,
+    TResult? Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        textButton,
+    TResult? Function(
+            Key? key,
+            double? iconSize,
+            VisualDensity? visualDensity,
+            EdgeInsets? padding,
+            Alignment? alignment,
+            double? splashRadius,
+            Color? color,
+            Color? focusColor,
+            Color? hoverColor,
+            Color? highlightColor,
+            Color? splashColor,
+            Color? disabledColor,
+            Callback onPressed,
+            MouseCursor? mouseCursor,
+            bool autofocus,
+            String? tooltip,
+            bool? enableFeedback,
+            BoxConstraints? constraints,
+            bool? isSelected,
+            Widget? selectedIcon,
+            Widget icon)?
+        iconButton,
+    TResult? Function(
+            Key? key,
+            PreferredSizeWidget? appBar,
+            Widget? body,
+            Widget? floatingActionButton,
+            FloatingActionButtonLocation? floatingActionButtonLocation,
+            List<Widget>? persistentFooterButtons,
+            Alignment persistentFooterAlignment,
+            Widget? drawer,
+            Widget? endDrawer,
+            Widget? bottomNavigationBar,
+            Widget? bottomSheet,
+            Color? backgroundColor,
+            bool? resizeToAvoidBottomInset,
+            bool primary,
+            bool extendBody,
+            bool extendBodyBehindAppBar,
+            Color? drawerScrimColor,
+            double? drawerEdgeDragWidth,
+            bool drawerEnableOpenDragGesture,
+            bool endDrawerEnableOpenDragGesture,
+            String? restorationId)?
+        scaffold,
+    TResult? Function(Key? key, Widget? child, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, bool mini, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButton,
+    TResult? Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButtonExtended,
+    TResult? Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor)? text,
+    TResult? Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior)? container,
+    TResult? Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
+    TResult? Function(Key? key, double? widthFactor, double? heightFactor, Widget child)? center,
+    TResult? Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection)? icon,
+    TResult? Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? column,
+    TResult? Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? row,
+    TResult? Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue)? circularProgressIndicator,
+    TResult? Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue)? linearProgressIndicator,
+    TResult? Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color)? divider,
+    TResult? Function(Key? key, Color? backgroundColor, bool extended, Widget? leading, Widget? trailing, List<NavigationRailDestination> destinations, int? selectedIndex, IntSelectionCallback? onDestinationSelected, double? elevation, double? groupAlignment, NavigationRailLabelType? labelType, TextStyle? unselectedLabelTextStyle, TextStyle? selectedLabelTextStyle, IconThemeData? unselectedIconTheme, IconThemeData? selectedIconTheme, double? minWidth, double? minExtendedWidth, bool? useIndicator, Color? indicatorColor, ShapeBorder? indicatorShape)? navigationRail,
+    TResult? Function(Key? key, Duration? animationDuration, int selectedIndex, List<Widget> destinations, IntSelectionCallback? onDestinationSelected, Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, Color? indicatorColor, ShapeBorder? indicatorShape, double? height, NavigationDestinationLabelBehavior? labelBehavior)? navigationBar,
+    TResult? Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration)? defaultTabController,
+    TResult? Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child)? tab,
+    TResult? Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior)? tabBarView,
+  }) {
+    return navigationRail?.call(
+        key,
+        backgroundColor,
+        extended,
+        leading,
+        trailing,
+        destinations,
+        selectedIndex,
+        onDestinationSelected,
+        elevation,
+        groupAlignment,
+        labelType,
+        unselectedLabelTextStyle,
+        selectedLabelTextStyle,
+        unselectedIconTheme,
+        selectedIconTheme,
+        minWidth,
+        minExtendedWidth,
+        useIndicator,
+        indicatorColor,
+        indicatorShape);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(
+            Key? key,
+            Color? color,
+            Color? shadowColor,
+            Color? surfaceTintColor,
+            double? elevation,
+            ShapeBorder? shape,
+            bool borderOnForeground,
+            EdgeInsets? margin,
+            Clip? clipBehavior,
+            Widget? child,
+            bool semanticContainer)?
+        card,
+    TResult Function(
+            Key? key,
+            Callback? onPressed,
+            Callback? onLongPress,
+            bool autofocus,
+            Clip clipBehavior,
+            Widget child,
+            ButtonStyle? style)?
+        elevatedButton,
+    TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        filledButton,
+    TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        filledTonalButton,
+    TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        outlinedButton,
+    TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        textButton,
+    TResult Function(
+            Key? key,
+            double? iconSize,
+            VisualDensity? visualDensity,
+            EdgeInsets? padding,
+            Alignment? alignment,
+            double? splashRadius,
+            Color? color,
+            Color? focusColor,
+            Color? hoverColor,
+            Color? highlightColor,
+            Color? splashColor,
+            Color? disabledColor,
+            Callback onPressed,
+            MouseCursor? mouseCursor,
+            bool autofocus,
+            String? tooltip,
+            bool? enableFeedback,
+            BoxConstraints? constraints,
+            bool? isSelected,
+            Widget? selectedIcon,
+            Widget icon)?
+        iconButton,
+    TResult Function(
+            Key? key,
+            PreferredSizeWidget? appBar,
+            Widget? body,
+            Widget? floatingActionButton,
+            FloatingActionButtonLocation? floatingActionButtonLocation,
+            List<Widget>? persistentFooterButtons,
+            Alignment persistentFooterAlignment,
+            Widget? drawer,
+            Widget? endDrawer,
+            Widget? bottomNavigationBar,
+            Widget? bottomSheet,
+            Color? backgroundColor,
+            bool? resizeToAvoidBottomInset,
+            bool primary,
+            bool extendBody,
+            bool extendBodyBehindAppBar,
+            Color? drawerScrimColor,
+            double? drawerEdgeDragWidth,
+            bool drawerEnableOpenDragGesture,
+            bool endDrawerEnableOpenDragGesture,
+            String? restorationId)?
+        scaffold,
+    TResult Function(Key? key, Widget? child, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, bool mini, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButton,
+    TResult Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButtonExtended,
+    TResult Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor)? text,
+    TResult Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior)? container,
+    TResult Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
+    TResult Function(Key? key, double? widthFactor, double? heightFactor, Widget child)? center,
+    TResult Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection)? icon,
+    TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? column,
+    TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? row,
+    TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue)? circularProgressIndicator,
+    TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue)? linearProgressIndicator,
+    TResult Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color)? divider,
+    TResult Function(Key? key, Color? backgroundColor, bool extended, Widget? leading, Widget? trailing, List<NavigationRailDestination> destinations, int? selectedIndex, IntSelectionCallback? onDestinationSelected, double? elevation, double? groupAlignment, NavigationRailLabelType? labelType, TextStyle? unselectedLabelTextStyle, TextStyle? selectedLabelTextStyle, IconThemeData? unselectedIconTheme, IconThemeData? selectedIconTheme, double? minWidth, double? minExtendedWidth, bool? useIndicator, Color? indicatorColor, ShapeBorder? indicatorShape)? navigationRail,
+    TResult Function(Key? key, Duration? animationDuration, int selectedIndex, List<Widget> destinations, IntSelectionCallback? onDestinationSelected, Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, Color? indicatorColor, ShapeBorder? indicatorShape, double? height, NavigationDestinationLabelBehavior? labelBehavior)? navigationBar,
+    TResult Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration)? defaultTabController,
+    TResult Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child)? tab,
+    TResult Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior)? tabBarView,
+    required TResult orElse(),
+  }) {
+    if (navigationRail != null) {
+      return navigationRail(
+          key,
+          backgroundColor,
+          extended,
+          leading,
+          trailing,
+          destinations,
+          selectedIndex,
+          onDestinationSelected,
+          elevation,
+          groupAlignment,
+          labelType,
+          unselectedLabelTextStyle,
+          selectedLabelTextStyle,
+          unselectedIconTheme,
+          selectedIconTheme,
+          minWidth,
+          minExtendedWidth,
+          useIndicator,
+          indicatorColor,
+          indicatorShape);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(Card value) card,
+    required TResult Function(ElevatedButton value) elevatedButton,
+    required TResult Function(FilledButton value) filledButton,
+    required TResult Function(FilledTonalButton value) filledTonalButton,
+    required TResult Function(OutlinedButton value) outlinedButton,
+    required TResult Function(TextButton value) textButton,
+    required TResult Function(IconButton value) iconButton,
+    required TResult Function(Scaffold value) scaffold,
+    required TResult Function(FloatingActionButton value) floatingActionButton,
+    required TResult Function(FloatingActionButtonExtended value)
+        floatingActionButtonExtended,
+    required TResult Function(Text value) text,
+    required TResult Function(Container value) container,
+    required TResult Function(SizedBox value) sizedBox,
+    required TResult Function(Center value) center,
+    required TResult Function(Icon value) icon,
+    required TResult Function(Column value) column,
+    required TResult Function(Row value) row,
+    required TResult Function(CircularProgressIndicator value)
+        circularProgressIndicator,
+    required TResult Function(LinearProgressIndicator value)
+        linearProgressIndicator,
+    required TResult Function(Divider value) divider,
+    required TResult Function(NavigationRail value) navigationRail,
+    required TResult Function(NavigationBar value) navigationBar,
+    required TResult Function(DefaultTabController value) defaultTabController,
+    required TResult Function(Tab value) tab,
+    required TResult Function(TabBarView value) tabBarView,
+  }) {
+    return navigationRail(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(Card value)? card,
+    TResult? Function(ElevatedButton value)? elevatedButton,
+    TResult? Function(FilledButton value)? filledButton,
+    TResult? Function(FilledTonalButton value)? filledTonalButton,
+    TResult? Function(OutlinedButton value)? outlinedButton,
+    TResult? Function(TextButton value)? textButton,
+    TResult? Function(IconButton value)? iconButton,
+    TResult? Function(Scaffold value)? scaffold,
+    TResult? Function(FloatingActionButton value)? floatingActionButton,
+    TResult? Function(FloatingActionButtonExtended value)?
+        floatingActionButtonExtended,
+    TResult? Function(Text value)? text,
+    TResult? Function(Container value)? container,
+    TResult? Function(SizedBox value)? sizedBox,
+    TResult? Function(Center value)? center,
+    TResult? Function(Icon value)? icon,
+    TResult? Function(Column value)? column,
+    TResult? Function(Row value)? row,
+    TResult? Function(CircularProgressIndicator value)?
+        circularProgressIndicator,
+    TResult? Function(LinearProgressIndicator value)? linearProgressIndicator,
+    TResult? Function(Divider value)? divider,
+    TResult? Function(NavigationRail value)? navigationRail,
+    TResult? Function(NavigationBar value)? navigationBar,
+    TResult? Function(DefaultTabController value)? defaultTabController,
+    TResult? Function(Tab value)? tab,
+    TResult? Function(TabBarView value)? tabBarView,
+  }) {
+    return navigationRail?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(Card value)? card,
+    TResult Function(ElevatedButton value)? elevatedButton,
+    TResult Function(FilledButton value)? filledButton,
+    TResult Function(FilledTonalButton value)? filledTonalButton,
+    TResult Function(OutlinedButton value)? outlinedButton,
+    TResult Function(TextButton value)? textButton,
+    TResult Function(IconButton value)? iconButton,
+    TResult Function(Scaffold value)? scaffold,
+    TResult Function(FloatingActionButton value)? floatingActionButton,
+    TResult Function(FloatingActionButtonExtended value)?
+        floatingActionButtonExtended,
+    TResult Function(Text value)? text,
+    TResult Function(Container value)? container,
+    TResult Function(SizedBox value)? sizedBox,
+    TResult Function(Center value)? center,
+    TResult Function(Icon value)? icon,
+    TResult Function(Column value)? column,
+    TResult Function(Row value)? row,
+    TResult Function(CircularProgressIndicator value)?
+        circularProgressIndicator,
+    TResult Function(LinearProgressIndicator value)? linearProgressIndicator,
+    TResult Function(Divider value)? divider,
+    TResult Function(NavigationRail value)? navigationRail,
+    TResult Function(NavigationBar value)? navigationBar,
+    TResult Function(DefaultTabController value)? defaultTabController,
+    TResult Function(Tab value)? tab,
+    TResult Function(TabBarView value)? tabBarView,
+    required TResult orElse(),
+  }) {
+    if (navigationRail != null) {
+      return navigationRail(this);
+    }
+    return orElse();
+  }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$NavigationRailToJson(
+      this,
+    );
+  }
+}
+
+abstract class NavigationRail implements Widget {
+  const factory NavigationRail(
+      {final Key? key,
+      final Color? backgroundColor,
+      final bool extended,
+      final Widget? leading,
+      final Widget? trailing,
+      required final List<NavigationRailDestination> destinations,
+      required final int? selectedIndex,
+      final IntSelectionCallback? onDestinationSelected,
+      final double? elevation,
+      final double? groupAlignment,
+      final NavigationRailLabelType? labelType,
+      final TextStyle? unselectedLabelTextStyle,
+      final TextStyle? selectedLabelTextStyle,
+      final IconThemeData? unselectedIconTheme,
+      final IconThemeData? selectedIconTheme,
+      final double? minWidth,
+      final double? minExtendedWidth,
+      final bool? useIndicator,
+      final Color? indicatorColor,
+      final ShapeBorder? indicatorShape}) = _$NavigationRail;
+
+  factory NavigationRail.fromJson(Map<String, dynamic> json) =
+      _$NavigationRail.fromJson;
+
+  @override
+  Key? get key;
+  Color? get backgroundColor;
+  bool get extended;
+  Widget? get leading;
+  Widget? get trailing;
+  List<NavigationRailDestination> get destinations;
+  int? get selectedIndex;
+  IntSelectionCallback? get onDestinationSelected;
+  double? get elevation;
+  double? get groupAlignment;
+  NavigationRailLabelType? get labelType;
+  TextStyle? get unselectedLabelTextStyle;
+  TextStyle? get selectedLabelTextStyle;
+  IconThemeData? get unselectedIconTheme;
+  IconThemeData? get selectedIconTheme;
+  double? get minWidth;
+  double? get minExtendedWidth;
+  bool? get useIndicator;
+  Color? get indicatorColor;
+  ShapeBorder? get indicatorShape;
+  @override
+  @JsonKey(ignore: true)
+  _$$NavigationRailCopyWith<_$NavigationRail> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$NavigationBarCopyWith<$Res> implements $WidgetCopyWith<$Res> {
+  factory _$$NavigationBarCopyWith(
+          _$NavigationBar value, $Res Function(_$NavigationBar) then) =
+      __$$NavigationBarCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {Key? key,
+      Duration? animationDuration,
+      int selectedIndex,
+      List<Widget> destinations,
+      IntSelectionCallback? onDestinationSelected,
+      Color? backgroundColor,
+      double? elevation,
+      Color? shadowColor,
+      Color? surfaceTintColor,
+      Color? indicatorColor,
+      ShapeBorder? indicatorShape,
+      double? height,
+      NavigationDestinationLabelBehavior? labelBehavior});
+
+  @override
+  $KeyCopyWith<$Res>? get key;
+  $ColorCopyWith<$Res>? get backgroundColor;
+  $ColorCopyWith<$Res>? get shadowColor;
+  $ColorCopyWith<$Res>? get surfaceTintColor;
+  $ColorCopyWith<$Res>? get indicatorColor;
+  $ShapeBorderCopyWith<$Res>? get indicatorShape;
+}
+
+/// @nodoc
+class __$$NavigationBarCopyWithImpl<$Res>
+    extends _$WidgetCopyWithImpl<$Res, _$NavigationBar>
+    implements _$$NavigationBarCopyWith<$Res> {
+  __$$NavigationBarCopyWithImpl(
+      _$NavigationBar _value, $Res Function(_$NavigationBar) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? key = freezed,
+    Object? animationDuration = freezed,
+    Object? selectedIndex = null,
+    Object? destinations = null,
+    Object? onDestinationSelected = freezed,
+    Object? backgroundColor = freezed,
+    Object? elevation = freezed,
+    Object? shadowColor = freezed,
+    Object? surfaceTintColor = freezed,
+    Object? indicatorColor = freezed,
+    Object? indicatorShape = freezed,
+    Object? height = freezed,
+    Object? labelBehavior = freezed,
+  }) {
+    return _then(_$NavigationBar(
+      key: freezed == key
+          ? _value.key
+          : key // ignore: cast_nullable_to_non_nullable
+              as Key?,
+      animationDuration: freezed == animationDuration
+          ? _value.animationDuration
+          : animationDuration // ignore: cast_nullable_to_non_nullable
+              as Duration?,
+      selectedIndex: null == selectedIndex
+          ? _value.selectedIndex
+          : selectedIndex // ignore: cast_nullable_to_non_nullable
+              as int,
+      destinations: null == destinations
+          ? _value._destinations
+          : destinations // ignore: cast_nullable_to_non_nullable
+              as List<Widget>,
+      onDestinationSelected: freezed == onDestinationSelected
+          ? _value.onDestinationSelected
+          : onDestinationSelected // ignore: cast_nullable_to_non_nullable
+              as IntSelectionCallback?,
+      backgroundColor: freezed == backgroundColor
+          ? _value.backgroundColor
+          : backgroundColor // ignore: cast_nullable_to_non_nullable
+              as Color?,
+      elevation: freezed == elevation
+          ? _value.elevation
+          : elevation // ignore: cast_nullable_to_non_nullable
+              as double?,
+      shadowColor: freezed == shadowColor
+          ? _value.shadowColor
+          : shadowColor // ignore: cast_nullable_to_non_nullable
+              as Color?,
+      surfaceTintColor: freezed == surfaceTintColor
+          ? _value.surfaceTintColor
+          : surfaceTintColor // ignore: cast_nullable_to_non_nullable
+              as Color?,
+      indicatorColor: freezed == indicatorColor
+          ? _value.indicatorColor
+          : indicatorColor // ignore: cast_nullable_to_non_nullable
+              as Color?,
+      indicatorShape: freezed == indicatorShape
+          ? _value.indicatorShape
+          : indicatorShape // ignore: cast_nullable_to_non_nullable
+              as ShapeBorder?,
+      height: freezed == height
+          ? _value.height
+          : height // ignore: cast_nullable_to_non_nullable
+              as double?,
+      labelBehavior: freezed == labelBehavior
+          ? _value.labelBehavior
+          : labelBehavior // ignore: cast_nullable_to_non_nullable
+              as NavigationDestinationLabelBehavior?,
+    ));
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ColorCopyWith<$Res>? get backgroundColor {
+    if (_value.backgroundColor == null) {
+      return null;
+    }
+
+    return $ColorCopyWith<$Res>(_value.backgroundColor!, (value) {
+      return _then(_value.copyWith(backgroundColor: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ColorCopyWith<$Res>? get shadowColor {
+    if (_value.shadowColor == null) {
+      return null;
+    }
+
+    return $ColorCopyWith<$Res>(_value.shadowColor!, (value) {
+      return _then(_value.copyWith(shadowColor: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ColorCopyWith<$Res>? get surfaceTintColor {
+    if (_value.surfaceTintColor == null) {
+      return null;
+    }
+
+    return $ColorCopyWith<$Res>(_value.surfaceTintColor!, (value) {
+      return _then(_value.copyWith(surfaceTintColor: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ColorCopyWith<$Res>? get indicatorColor {
+    if (_value.indicatorColor == null) {
+      return null;
+    }
+
+    return $ColorCopyWith<$Res>(_value.indicatorColor!, (value) {
+      return _then(_value.copyWith(indicatorColor: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ShapeBorderCopyWith<$Res>? get indicatorShape {
+    if (_value.indicatorShape == null) {
+      return null;
+    }
+
+    return $ShapeBorderCopyWith<$Res>(_value.indicatorShape!, (value) {
+      return _then(_value.copyWith(indicatorShape: value));
+    });
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$NavigationBar implements NavigationBar {
+  const _$NavigationBar(
+      {this.key,
+      this.animationDuration,
+      this.selectedIndex = 0,
+      required final List<Widget> destinations,
+      this.onDestinationSelected,
+      this.backgroundColor,
+      this.elevation,
+      this.shadowColor,
+      this.surfaceTintColor,
+      this.indicatorColor,
+      this.indicatorShape,
+      this.height,
+      this.labelBehavior,
+      final String? $type})
+      : _destinations = destinations,
+        $type = $type ?? 'navigationBar';
+
+  factory _$NavigationBar.fromJson(Map<String, dynamic> json) =>
+      _$$NavigationBarFromJson(json);
+
+  @override
+  final Key? key;
+  @override
+  final Duration? animationDuration;
+  @override
+  @JsonKey()
+  final int selectedIndex;
+  final List<Widget> _destinations;
+  @override
+  List<Widget> get destinations {
+    if (_destinations is EqualUnmodifiableListView) return _destinations;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_destinations);
+  }
+
+  @override
+  final IntSelectionCallback? onDestinationSelected;
+  @override
+  final Color? backgroundColor;
+  @override
+  final double? elevation;
+  @override
+  final Color? shadowColor;
+  @override
+  final Color? surfaceTintColor;
+  @override
+  final Color? indicatorColor;
+  @override
+  final ShapeBorder? indicatorShape;
+  @override
+  final double? height;
+  @override
+  final NavigationDestinationLabelBehavior? labelBehavior;
+
+  @JsonKey(name: 'runtimeType')
+  final String $type;
+
+  @override
+  String toString() {
+    return 'Widget.navigationBar(key: $key, animationDuration: $animationDuration, selectedIndex: $selectedIndex, destinations: $destinations, onDestinationSelected: $onDestinationSelected, backgroundColor: $backgroundColor, elevation: $elevation, shadowColor: $shadowColor, surfaceTintColor: $surfaceTintColor, indicatorColor: $indicatorColor, indicatorShape: $indicatorShape, height: $height, labelBehavior: $labelBehavior)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$NavigationBar &&
+            (identical(other.key, key) || other.key == key) &&
+            (identical(other.animationDuration, animationDuration) ||
+                other.animationDuration == animationDuration) &&
+            (identical(other.selectedIndex, selectedIndex) ||
+                other.selectedIndex == selectedIndex) &&
+            const DeepCollectionEquality()
+                .equals(other._destinations, _destinations) &&
+            const DeepCollectionEquality()
+                .equals(other.onDestinationSelected, onDestinationSelected) &&
+            (identical(other.backgroundColor, backgroundColor) ||
+                other.backgroundColor == backgroundColor) &&
+            (identical(other.elevation, elevation) ||
+                other.elevation == elevation) &&
+            (identical(other.shadowColor, shadowColor) ||
+                other.shadowColor == shadowColor) &&
+            (identical(other.surfaceTintColor, surfaceTintColor) ||
+                other.surfaceTintColor == surfaceTintColor) &&
+            (identical(other.indicatorColor, indicatorColor) ||
+                other.indicatorColor == indicatorColor) &&
+            (identical(other.indicatorShape, indicatorShape) ||
+                other.indicatorShape == indicatorShape) &&
+            (identical(other.height, height) || other.height == height) &&
+            (identical(other.labelBehavior, labelBehavior) ||
+                other.labelBehavior == labelBehavior));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      key,
+      animationDuration,
+      selectedIndex,
+      const DeepCollectionEquality().hash(_destinations),
+      const DeepCollectionEquality().hash(onDestinationSelected),
+      backgroundColor,
+      elevation,
+      shadowColor,
+      surfaceTintColor,
+      indicatorColor,
+      indicatorShape,
+      height,
+      labelBehavior);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$NavigationBarCopyWith<_$NavigationBar> get copyWith =>
+      __$$NavigationBarCopyWithImpl<_$NavigationBar>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(
+            Key? key,
+            Color? color,
+            Color? shadowColor,
+            Color? surfaceTintColor,
+            double? elevation,
+            ShapeBorder? shape,
+            bool borderOnForeground,
+            EdgeInsets? margin,
+            Clip? clipBehavior,
+            Widget? child,
+            bool semanticContainer)
+        card,
+    required TResult Function(
+            Key? key,
+            Callback? onPressed,
+            Callback? onLongPress,
+            bool autofocus,
+            Clip clipBehavior,
+            Widget child,
+            ButtonStyle? style)
+        elevatedButton,
+    required TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)
+        filledButton,
+    required TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)
+        filledTonalButton,
+    required TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)
+        outlinedButton,
+    required TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)
+        textButton,
+    required TResult Function(
+            Key? key,
+            double? iconSize,
+            VisualDensity? visualDensity,
+            EdgeInsets? padding,
+            Alignment? alignment,
+            double? splashRadius,
+            Color? color,
+            Color? focusColor,
+            Color? hoverColor,
+            Color? highlightColor,
+            Color? splashColor,
+            Color? disabledColor,
+            Callback onPressed,
+            MouseCursor? mouseCursor,
+            bool autofocus,
+            String? tooltip,
+            bool? enableFeedback,
+            BoxConstraints? constraints,
+            bool? isSelected,
+            Widget? selectedIcon,
+            Widget icon)
+        iconButton,
+    required TResult Function(
+            Key? key,
+            PreferredSizeWidget? appBar,
+            Widget? body,
+            Widget? floatingActionButton,
+            FloatingActionButtonLocation? floatingActionButtonLocation,
+            List<Widget>? persistentFooterButtons,
+            Alignment persistentFooterAlignment,
+            Widget? drawer,
+            Widget? endDrawer,
+            Widget? bottomNavigationBar,
+            Widget? bottomSheet,
+            Color? backgroundColor,
+            bool? resizeToAvoidBottomInset,
+            bool primary,
+            bool extendBody,
+            bool extendBodyBehindAppBar,
+            Color? drawerScrimColor,
+            double? drawerEdgeDragWidth,
+            bool drawerEnableOpenDragGesture,
+            bool endDrawerEnableOpenDragGesture,
+            String? restorationId)
+        scaffold,
+    required TResult Function(Key? key, Widget? child, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, bool mini, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback) floatingActionButton,
+    required TResult Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback) floatingActionButtonExtended,
+    required TResult Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor) text,
+    required TResult Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior) container,
+    required TResult Function(Key? key, double? width, double? height, Widget? child) sizedBox,
+    required TResult Function(Key? key, double? widthFactor, double? heightFactor, Widget child) center,
+    required TResult Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection) icon,
+    required TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children) column,
+    required TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children) row,
+    required TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue) circularProgressIndicator,
+    required TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue) linearProgressIndicator,
+    required TResult Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color) divider,
+    required TResult Function(Key? key, Color? backgroundColor, bool extended, Widget? leading, Widget? trailing, List<NavigationRailDestination> destinations, int? selectedIndex, IntSelectionCallback? onDestinationSelected, double? elevation, double? groupAlignment, NavigationRailLabelType? labelType, TextStyle? unselectedLabelTextStyle, TextStyle? selectedLabelTextStyle, IconThemeData? unselectedIconTheme, IconThemeData? selectedIconTheme, double? minWidth, double? minExtendedWidth, bool? useIndicator, Color? indicatorColor, ShapeBorder? indicatorShape) navigationRail,
+    required TResult Function(Key? key, Duration? animationDuration, int selectedIndex, List<Widget> destinations, IntSelectionCallback? onDestinationSelected, Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, Color? indicatorColor, ShapeBorder? indicatorShape, double? height, NavigationDestinationLabelBehavior? labelBehavior) navigationBar,
+    required TResult Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration) defaultTabController,
+    required TResult Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child) tab,
+    required TResult Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior) tabBarView,
+  }) {
+    return navigationBar(
+        key,
+        animationDuration,
+        selectedIndex,
+        destinations,
+        onDestinationSelected,
+        backgroundColor,
+        elevation,
+        shadowColor,
+        surfaceTintColor,
+        indicatorColor,
+        indicatorShape,
+        height,
+        labelBehavior);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(
+            Key? key,
+            Color? color,
+            Color? shadowColor,
+            Color? surfaceTintColor,
+            double? elevation,
+            ShapeBorder? shape,
+            bool borderOnForeground,
+            EdgeInsets? margin,
+            Clip? clipBehavior,
+            Widget? child,
+            bool semanticContainer)?
+        card,
+    TResult? Function(
+            Key? key,
+            Callback? onPressed,
+            Callback? onLongPress,
+            bool autofocus,
+            Clip clipBehavior,
+            Widget child,
+            ButtonStyle? style)?
+        elevatedButton,
+    TResult? Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        filledButton,
+    TResult? Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        filledTonalButton,
+    TResult? Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        outlinedButton,
+    TResult? Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        textButton,
+    TResult? Function(
+            Key? key,
+            double? iconSize,
+            VisualDensity? visualDensity,
+            EdgeInsets? padding,
+            Alignment? alignment,
+            double? splashRadius,
+            Color? color,
+            Color? focusColor,
+            Color? hoverColor,
+            Color? highlightColor,
+            Color? splashColor,
+            Color? disabledColor,
+            Callback onPressed,
+            MouseCursor? mouseCursor,
+            bool autofocus,
+            String? tooltip,
+            bool? enableFeedback,
+            BoxConstraints? constraints,
+            bool? isSelected,
+            Widget? selectedIcon,
+            Widget icon)?
+        iconButton,
+    TResult? Function(
+            Key? key,
+            PreferredSizeWidget? appBar,
+            Widget? body,
+            Widget? floatingActionButton,
+            FloatingActionButtonLocation? floatingActionButtonLocation,
+            List<Widget>? persistentFooterButtons,
+            Alignment persistentFooterAlignment,
+            Widget? drawer,
+            Widget? endDrawer,
+            Widget? bottomNavigationBar,
+            Widget? bottomSheet,
+            Color? backgroundColor,
+            bool? resizeToAvoidBottomInset,
+            bool primary,
+            bool extendBody,
+            bool extendBodyBehindAppBar,
+            Color? drawerScrimColor,
+            double? drawerEdgeDragWidth,
+            bool drawerEnableOpenDragGesture,
+            bool endDrawerEnableOpenDragGesture,
+            String? restorationId)?
+        scaffold,
+    TResult? Function(Key? key, Widget? child, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, bool mini, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButton,
+    TResult? Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButtonExtended,
+    TResult? Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor)? text,
+    TResult? Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior)? container,
+    TResult? Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
+    TResult? Function(Key? key, double? widthFactor, double? heightFactor, Widget child)? center,
+    TResult? Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection)? icon,
+    TResult? Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? column,
+    TResult? Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? row,
+    TResult? Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue)? circularProgressIndicator,
+    TResult? Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue)? linearProgressIndicator,
+    TResult? Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color)? divider,
+    TResult? Function(Key? key, Color? backgroundColor, bool extended, Widget? leading, Widget? trailing, List<NavigationRailDestination> destinations, int? selectedIndex, IntSelectionCallback? onDestinationSelected, double? elevation, double? groupAlignment, NavigationRailLabelType? labelType, TextStyle? unselectedLabelTextStyle, TextStyle? selectedLabelTextStyle, IconThemeData? unselectedIconTheme, IconThemeData? selectedIconTheme, double? minWidth, double? minExtendedWidth, bool? useIndicator, Color? indicatorColor, ShapeBorder? indicatorShape)? navigationRail,
+    TResult? Function(Key? key, Duration? animationDuration, int selectedIndex, List<Widget> destinations, IntSelectionCallback? onDestinationSelected, Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, Color? indicatorColor, ShapeBorder? indicatorShape, double? height, NavigationDestinationLabelBehavior? labelBehavior)? navigationBar,
+    TResult? Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration)? defaultTabController,
+    TResult? Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child)? tab,
+    TResult? Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior)? tabBarView,
+  }) {
+    return navigationBar?.call(
+        key,
+        animationDuration,
+        selectedIndex,
+        destinations,
+        onDestinationSelected,
+        backgroundColor,
+        elevation,
+        shadowColor,
+        surfaceTintColor,
+        indicatorColor,
+        indicatorShape,
+        height,
+        labelBehavior);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(
+            Key? key,
+            Color? color,
+            Color? shadowColor,
+            Color? surfaceTintColor,
+            double? elevation,
+            ShapeBorder? shape,
+            bool borderOnForeground,
+            EdgeInsets? margin,
+            Clip? clipBehavior,
+            Widget? child,
+            bool semanticContainer)?
+        card,
+    TResult Function(
+            Key? key,
+            Callback? onPressed,
+            Callback? onLongPress,
+            bool autofocus,
+            Clip clipBehavior,
+            Widget child,
+            ButtonStyle? style)?
+        elevatedButton,
+    TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        filledButton,
+    TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        filledTonalButton,
+    TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        outlinedButton,
+    TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        textButton,
+    TResult Function(
+            Key? key,
+            double? iconSize,
+            VisualDensity? visualDensity,
+            EdgeInsets? padding,
+            Alignment? alignment,
+            double? splashRadius,
+            Color? color,
+            Color? focusColor,
+            Color? hoverColor,
+            Color? highlightColor,
+            Color? splashColor,
+            Color? disabledColor,
+            Callback onPressed,
+            MouseCursor? mouseCursor,
+            bool autofocus,
+            String? tooltip,
+            bool? enableFeedback,
+            BoxConstraints? constraints,
+            bool? isSelected,
+            Widget? selectedIcon,
+            Widget icon)?
+        iconButton,
+    TResult Function(
+            Key? key,
+            PreferredSizeWidget? appBar,
+            Widget? body,
+            Widget? floatingActionButton,
+            FloatingActionButtonLocation? floatingActionButtonLocation,
+            List<Widget>? persistentFooterButtons,
+            Alignment persistentFooterAlignment,
+            Widget? drawer,
+            Widget? endDrawer,
+            Widget? bottomNavigationBar,
+            Widget? bottomSheet,
+            Color? backgroundColor,
+            bool? resizeToAvoidBottomInset,
+            bool primary,
+            bool extendBody,
+            bool extendBodyBehindAppBar,
+            Color? drawerScrimColor,
+            double? drawerEdgeDragWidth,
+            bool drawerEnableOpenDragGesture,
+            bool endDrawerEnableOpenDragGesture,
+            String? restorationId)?
+        scaffold,
+    TResult Function(Key? key, Widget? child, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, bool mini, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButton,
+    TResult Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButtonExtended,
+    TResult Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor)? text,
+    TResult Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior)? container,
+    TResult Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
+    TResult Function(Key? key, double? widthFactor, double? heightFactor, Widget child)? center,
+    TResult Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection)? icon,
+    TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? column,
+    TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? row,
+    TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue)? circularProgressIndicator,
+    TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue)? linearProgressIndicator,
+    TResult Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color)? divider,
+    TResult Function(Key? key, Color? backgroundColor, bool extended, Widget? leading, Widget? trailing, List<NavigationRailDestination> destinations, int? selectedIndex, IntSelectionCallback? onDestinationSelected, double? elevation, double? groupAlignment, NavigationRailLabelType? labelType, TextStyle? unselectedLabelTextStyle, TextStyle? selectedLabelTextStyle, IconThemeData? unselectedIconTheme, IconThemeData? selectedIconTheme, double? minWidth, double? minExtendedWidth, bool? useIndicator, Color? indicatorColor, ShapeBorder? indicatorShape)? navigationRail,
+    TResult Function(Key? key, Duration? animationDuration, int selectedIndex, List<Widget> destinations, IntSelectionCallback? onDestinationSelected, Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, Color? indicatorColor, ShapeBorder? indicatorShape, double? height, NavigationDestinationLabelBehavior? labelBehavior)? navigationBar,
+    TResult Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration)? defaultTabController,
+    TResult Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child)? tab,
+    TResult Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior)? tabBarView,
+    required TResult orElse(),
+  }) {
+    if (navigationBar != null) {
+      return navigationBar(
+          key,
+          animationDuration,
+          selectedIndex,
+          destinations,
+          onDestinationSelected,
+          backgroundColor,
+          elevation,
+          shadowColor,
+          surfaceTintColor,
+          indicatorColor,
+          indicatorShape,
+          height,
+          labelBehavior);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(Card value) card,
+    required TResult Function(ElevatedButton value) elevatedButton,
+    required TResult Function(FilledButton value) filledButton,
+    required TResult Function(FilledTonalButton value) filledTonalButton,
+    required TResult Function(OutlinedButton value) outlinedButton,
+    required TResult Function(TextButton value) textButton,
+    required TResult Function(IconButton value) iconButton,
+    required TResult Function(Scaffold value) scaffold,
+    required TResult Function(FloatingActionButton value) floatingActionButton,
+    required TResult Function(FloatingActionButtonExtended value)
+        floatingActionButtonExtended,
+    required TResult Function(Text value) text,
+    required TResult Function(Container value) container,
+    required TResult Function(SizedBox value) sizedBox,
+    required TResult Function(Center value) center,
+    required TResult Function(Icon value) icon,
+    required TResult Function(Column value) column,
+    required TResult Function(Row value) row,
+    required TResult Function(CircularProgressIndicator value)
+        circularProgressIndicator,
+    required TResult Function(LinearProgressIndicator value)
+        linearProgressIndicator,
+    required TResult Function(Divider value) divider,
+    required TResult Function(NavigationRail value) navigationRail,
+    required TResult Function(NavigationBar value) navigationBar,
+    required TResult Function(DefaultTabController value) defaultTabController,
+    required TResult Function(Tab value) tab,
+    required TResult Function(TabBarView value) tabBarView,
+  }) {
+    return navigationBar(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(Card value)? card,
+    TResult? Function(ElevatedButton value)? elevatedButton,
+    TResult? Function(FilledButton value)? filledButton,
+    TResult? Function(FilledTonalButton value)? filledTonalButton,
+    TResult? Function(OutlinedButton value)? outlinedButton,
+    TResult? Function(TextButton value)? textButton,
+    TResult? Function(IconButton value)? iconButton,
+    TResult? Function(Scaffold value)? scaffold,
+    TResult? Function(FloatingActionButton value)? floatingActionButton,
+    TResult? Function(FloatingActionButtonExtended value)?
+        floatingActionButtonExtended,
+    TResult? Function(Text value)? text,
+    TResult? Function(Container value)? container,
+    TResult? Function(SizedBox value)? sizedBox,
+    TResult? Function(Center value)? center,
+    TResult? Function(Icon value)? icon,
+    TResult? Function(Column value)? column,
+    TResult? Function(Row value)? row,
+    TResult? Function(CircularProgressIndicator value)?
+        circularProgressIndicator,
+    TResult? Function(LinearProgressIndicator value)? linearProgressIndicator,
+    TResult? Function(Divider value)? divider,
+    TResult? Function(NavigationRail value)? navigationRail,
+    TResult? Function(NavigationBar value)? navigationBar,
+    TResult? Function(DefaultTabController value)? defaultTabController,
+    TResult? Function(Tab value)? tab,
+    TResult? Function(TabBarView value)? tabBarView,
+  }) {
+    return navigationBar?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(Card value)? card,
+    TResult Function(ElevatedButton value)? elevatedButton,
+    TResult Function(FilledButton value)? filledButton,
+    TResult Function(FilledTonalButton value)? filledTonalButton,
+    TResult Function(OutlinedButton value)? outlinedButton,
+    TResult Function(TextButton value)? textButton,
+    TResult Function(IconButton value)? iconButton,
+    TResult Function(Scaffold value)? scaffold,
+    TResult Function(FloatingActionButton value)? floatingActionButton,
+    TResult Function(FloatingActionButtonExtended value)?
+        floatingActionButtonExtended,
+    TResult Function(Text value)? text,
+    TResult Function(Container value)? container,
+    TResult Function(SizedBox value)? sizedBox,
+    TResult Function(Center value)? center,
+    TResult Function(Icon value)? icon,
+    TResult Function(Column value)? column,
+    TResult Function(Row value)? row,
+    TResult Function(CircularProgressIndicator value)?
+        circularProgressIndicator,
+    TResult Function(LinearProgressIndicator value)? linearProgressIndicator,
+    TResult Function(Divider value)? divider,
+    TResult Function(NavigationRail value)? navigationRail,
+    TResult Function(NavigationBar value)? navigationBar,
+    TResult Function(DefaultTabController value)? defaultTabController,
+    TResult Function(Tab value)? tab,
+    TResult Function(TabBarView value)? tabBarView,
+    required TResult orElse(),
+  }) {
+    if (navigationBar != null) {
+      return navigationBar(this);
+    }
+    return orElse();
+  }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$NavigationBarToJson(
+      this,
+    );
+  }
+}
+
+abstract class NavigationBar implements Widget {
+  const factory NavigationBar(
+          {final Key? key,
+          final Duration? animationDuration,
+          final int selectedIndex,
+          required final List<Widget> destinations,
+          final IntSelectionCallback? onDestinationSelected,
+          final Color? backgroundColor,
+          final double? elevation,
+          final Color? shadowColor,
+          final Color? surfaceTintColor,
+          final Color? indicatorColor,
+          final ShapeBorder? indicatorShape,
+          final double? height,
+          final NavigationDestinationLabelBehavior? labelBehavior}) =
+      _$NavigationBar;
+
+  factory NavigationBar.fromJson(Map<String, dynamic> json) =
+      _$NavigationBar.fromJson;
+
+  @override
+  Key? get key;
+  Duration? get animationDuration;
+  int get selectedIndex;
+  List<Widget> get destinations;
+  IntSelectionCallback? get onDestinationSelected;
+  Color? get backgroundColor;
+  double? get elevation;
+  Color? get shadowColor;
+  Color? get surfaceTintColor;
+  Color? get indicatorColor;
+  ShapeBorder? get indicatorShape;
+  double? get height;
+  NavigationDestinationLabelBehavior? get labelBehavior;
+  @override
+  @JsonKey(ignore: true)
+  _$$NavigationBarCopyWith<_$NavigationBar> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$DefaultTabControllerCopyWith<$Res>
+    implements $WidgetCopyWith<$Res> {
+  factory _$$DefaultTabControllerCopyWith(_$DefaultTabController value,
+          $Res Function(_$DefaultTabController) then) =
+      __$$DefaultTabControllerCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {Key? key,
+      int length,
+      int initialIndex,
+      Widget child,
+      Duration? animationDuration});
+
+  @override
+  $KeyCopyWith<$Res>? get key;
+  $WidgetCopyWith<$Res> get child;
+}
+
+/// @nodoc
+class __$$DefaultTabControllerCopyWithImpl<$Res>
+    extends _$WidgetCopyWithImpl<$Res, _$DefaultTabController>
+    implements _$$DefaultTabControllerCopyWith<$Res> {
+  __$$DefaultTabControllerCopyWithImpl(_$DefaultTabController _value,
+      $Res Function(_$DefaultTabController) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? key = freezed,
+    Object? length = null,
+    Object? initialIndex = null,
+    Object? child = null,
+    Object? animationDuration = freezed,
+  }) {
+    return _then(_$DefaultTabController(
+      key: freezed == key
+          ? _value.key
+          : key // ignore: cast_nullable_to_non_nullable
+              as Key?,
+      length: null == length
+          ? _value.length
+          : length // ignore: cast_nullable_to_non_nullable
+              as int,
+      initialIndex: null == initialIndex
+          ? _value.initialIndex
+          : initialIndex // ignore: cast_nullable_to_non_nullable
+              as int,
+      child: null == child
+          ? _value.child
+          : child // ignore: cast_nullable_to_non_nullable
+              as Widget,
+      animationDuration: freezed == animationDuration
+          ? _value.animationDuration
+          : animationDuration // ignore: cast_nullable_to_non_nullable
+              as Duration?,
+    ));
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $WidgetCopyWith<$Res> get child {
+    return $WidgetCopyWith<$Res>(_value.child, (value) {
+      return _then(_value.copyWith(child: value));
+    });
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$DefaultTabController implements DefaultTabController {
+  const _$DefaultTabController(
+      {this.key,
+      required this.length,
+      this.initialIndex = 0,
+      required this.child,
+      this.animationDuration,
+      final String? $type})
+      : $type = $type ?? 'defaultTabController';
+
+  factory _$DefaultTabController.fromJson(Map<String, dynamic> json) =>
+      _$$DefaultTabControllerFromJson(json);
+
+  @override
+  final Key? key;
+  @override
+  final int length;
+  @override
+  @JsonKey()
+  final int initialIndex;
+  @override
+  final Widget child;
+  @override
+  final Duration? animationDuration;
+
+  @JsonKey(name: 'runtimeType')
+  final String $type;
+
+  @override
+  String toString() {
+    return 'Widget.defaultTabController(key: $key, length: $length, initialIndex: $initialIndex, child: $child, animationDuration: $animationDuration)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$DefaultTabController &&
+            (identical(other.key, key) || other.key == key) &&
+            (identical(other.length, length) || other.length == length) &&
+            (identical(other.initialIndex, initialIndex) ||
+                other.initialIndex == initialIndex) &&
+            (identical(other.child, child) || other.child == child) &&
+            (identical(other.animationDuration, animationDuration) ||
+                other.animationDuration == animationDuration));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType, key, length, initialIndex, child, animationDuration);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$DefaultTabControllerCopyWith<_$DefaultTabController> get copyWith =>
+      __$$DefaultTabControllerCopyWithImpl<_$DefaultTabController>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(
+            Key? key,
+            Color? color,
+            Color? shadowColor,
+            Color? surfaceTintColor,
+            double? elevation,
+            ShapeBorder? shape,
+            bool borderOnForeground,
+            EdgeInsets? margin,
+            Clip? clipBehavior,
+            Widget? child,
+            bool semanticContainer)
+        card,
+    required TResult Function(
+            Key? key,
+            Callback? onPressed,
+            Callback? onLongPress,
+            bool autofocus,
+            Clip clipBehavior,
+            Widget child,
+            ButtonStyle? style)
+        elevatedButton,
+    required TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)
+        filledButton,
+    required TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)
+        filledTonalButton,
+    required TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)
+        outlinedButton,
+    required TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)
+        textButton,
+    required TResult Function(
+            Key? key,
+            double? iconSize,
+            VisualDensity? visualDensity,
+            EdgeInsets? padding,
+            Alignment? alignment,
+            double? splashRadius,
+            Color? color,
+            Color? focusColor,
+            Color? hoverColor,
+            Color? highlightColor,
+            Color? splashColor,
+            Color? disabledColor,
+            Callback onPressed,
+            MouseCursor? mouseCursor,
+            bool autofocus,
+            String? tooltip,
+            bool? enableFeedback,
+            BoxConstraints? constraints,
+            bool? isSelected,
+            Widget? selectedIcon,
+            Widget icon)
+        iconButton,
+    required TResult Function(
+            Key? key,
+            PreferredSizeWidget? appBar,
+            Widget? body,
+            Widget? floatingActionButton,
+            FloatingActionButtonLocation? floatingActionButtonLocation,
+            List<Widget>? persistentFooterButtons,
+            Alignment persistentFooterAlignment,
+            Widget? drawer,
+            Widget? endDrawer,
+            Widget? bottomNavigationBar,
+            Widget? bottomSheet,
+            Color? backgroundColor,
+            bool? resizeToAvoidBottomInset,
+            bool primary,
+            bool extendBody,
+            bool extendBodyBehindAppBar,
+            Color? drawerScrimColor,
+            double? drawerEdgeDragWidth,
+            bool drawerEnableOpenDragGesture,
+            bool endDrawerEnableOpenDragGesture,
+            String? restorationId)
+        scaffold,
+    required TResult Function(Key? key, Widget? child, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, bool mini, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback) floatingActionButton,
+    required TResult Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback) floatingActionButtonExtended,
+    required TResult Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor) text,
+    required TResult Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior) container,
+    required TResult Function(Key? key, double? width, double? height, Widget? child) sizedBox,
+    required TResult Function(Key? key, double? widthFactor, double? heightFactor, Widget child) center,
+    required TResult Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection) icon,
+    required TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children) column,
+    required TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children) row,
+    required TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue) circularProgressIndicator,
+    required TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue) linearProgressIndicator,
+    required TResult Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color) divider,
+    required TResult Function(Key? key, Color? backgroundColor, bool extended, Widget? leading, Widget? trailing, List<NavigationRailDestination> destinations, int? selectedIndex, IntSelectionCallback? onDestinationSelected, double? elevation, double? groupAlignment, NavigationRailLabelType? labelType, TextStyle? unselectedLabelTextStyle, TextStyle? selectedLabelTextStyle, IconThemeData? unselectedIconTheme, IconThemeData? selectedIconTheme, double? minWidth, double? minExtendedWidth, bool? useIndicator, Color? indicatorColor, ShapeBorder? indicatorShape) navigationRail,
+    required TResult Function(Key? key, Duration? animationDuration, int selectedIndex, List<Widget> destinations, IntSelectionCallback? onDestinationSelected, Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, Color? indicatorColor, ShapeBorder? indicatorShape, double? height, NavigationDestinationLabelBehavior? labelBehavior) navigationBar,
+    required TResult Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration) defaultTabController,
+    required TResult Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child) tab,
+    required TResult Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior) tabBarView,
+  }) {
+    return defaultTabController(
+        key, length, initialIndex, child, animationDuration);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(
+            Key? key,
+            Color? color,
+            Color? shadowColor,
+            Color? surfaceTintColor,
+            double? elevation,
+            ShapeBorder? shape,
+            bool borderOnForeground,
+            EdgeInsets? margin,
+            Clip? clipBehavior,
+            Widget? child,
+            bool semanticContainer)?
+        card,
+    TResult? Function(
+            Key? key,
+            Callback? onPressed,
+            Callback? onLongPress,
+            bool autofocus,
+            Clip clipBehavior,
+            Widget child,
+            ButtonStyle? style)?
+        elevatedButton,
+    TResult? Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        filledButton,
+    TResult? Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        filledTonalButton,
+    TResult? Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        outlinedButton,
+    TResult? Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        textButton,
+    TResult? Function(
+            Key? key,
+            double? iconSize,
+            VisualDensity? visualDensity,
+            EdgeInsets? padding,
+            Alignment? alignment,
+            double? splashRadius,
+            Color? color,
+            Color? focusColor,
+            Color? hoverColor,
+            Color? highlightColor,
+            Color? splashColor,
+            Color? disabledColor,
+            Callback onPressed,
+            MouseCursor? mouseCursor,
+            bool autofocus,
+            String? tooltip,
+            bool? enableFeedback,
+            BoxConstraints? constraints,
+            bool? isSelected,
+            Widget? selectedIcon,
+            Widget icon)?
+        iconButton,
+    TResult? Function(
+            Key? key,
+            PreferredSizeWidget? appBar,
+            Widget? body,
+            Widget? floatingActionButton,
+            FloatingActionButtonLocation? floatingActionButtonLocation,
+            List<Widget>? persistentFooterButtons,
+            Alignment persistentFooterAlignment,
+            Widget? drawer,
+            Widget? endDrawer,
+            Widget? bottomNavigationBar,
+            Widget? bottomSheet,
+            Color? backgroundColor,
+            bool? resizeToAvoidBottomInset,
+            bool primary,
+            bool extendBody,
+            bool extendBodyBehindAppBar,
+            Color? drawerScrimColor,
+            double? drawerEdgeDragWidth,
+            bool drawerEnableOpenDragGesture,
+            bool endDrawerEnableOpenDragGesture,
+            String? restorationId)?
+        scaffold,
+    TResult? Function(Key? key, Widget? child, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, bool mini, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButton,
+    TResult? Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButtonExtended,
+    TResult? Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor)? text,
+    TResult? Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior)? container,
+    TResult? Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
+    TResult? Function(Key? key, double? widthFactor, double? heightFactor, Widget child)? center,
+    TResult? Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection)? icon,
+    TResult? Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? column,
+    TResult? Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? row,
+    TResult? Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue)? circularProgressIndicator,
+    TResult? Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue)? linearProgressIndicator,
+    TResult? Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color)? divider,
+    TResult? Function(Key? key, Color? backgroundColor, bool extended, Widget? leading, Widget? trailing, List<NavigationRailDestination> destinations, int? selectedIndex, IntSelectionCallback? onDestinationSelected, double? elevation, double? groupAlignment, NavigationRailLabelType? labelType, TextStyle? unselectedLabelTextStyle, TextStyle? selectedLabelTextStyle, IconThemeData? unselectedIconTheme, IconThemeData? selectedIconTheme, double? minWidth, double? minExtendedWidth, bool? useIndicator, Color? indicatorColor, ShapeBorder? indicatorShape)? navigationRail,
+    TResult? Function(Key? key, Duration? animationDuration, int selectedIndex, List<Widget> destinations, IntSelectionCallback? onDestinationSelected, Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, Color? indicatorColor, ShapeBorder? indicatorShape, double? height, NavigationDestinationLabelBehavior? labelBehavior)? navigationBar,
+    TResult? Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration)? defaultTabController,
+    TResult? Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child)? tab,
+    TResult? Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior)? tabBarView,
+  }) {
+    return defaultTabController?.call(
+        key, length, initialIndex, child, animationDuration);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(
+            Key? key,
+            Color? color,
+            Color? shadowColor,
+            Color? surfaceTintColor,
+            double? elevation,
+            ShapeBorder? shape,
+            bool borderOnForeground,
+            EdgeInsets? margin,
+            Clip? clipBehavior,
+            Widget? child,
+            bool semanticContainer)?
+        card,
+    TResult Function(
+            Key? key,
+            Callback? onPressed,
+            Callback? onLongPress,
+            bool autofocus,
+            Clip clipBehavior,
+            Widget child,
+            ButtonStyle? style)?
+        elevatedButton,
+    TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        filledButton,
+    TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        filledTonalButton,
+    TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        outlinedButton,
+    TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        textButton,
+    TResult Function(
+            Key? key,
+            double? iconSize,
+            VisualDensity? visualDensity,
+            EdgeInsets? padding,
+            Alignment? alignment,
+            double? splashRadius,
+            Color? color,
+            Color? focusColor,
+            Color? hoverColor,
+            Color? highlightColor,
+            Color? splashColor,
+            Color? disabledColor,
+            Callback onPressed,
+            MouseCursor? mouseCursor,
+            bool autofocus,
+            String? tooltip,
+            bool? enableFeedback,
+            BoxConstraints? constraints,
+            bool? isSelected,
+            Widget? selectedIcon,
+            Widget icon)?
+        iconButton,
+    TResult Function(
+            Key? key,
+            PreferredSizeWidget? appBar,
+            Widget? body,
+            Widget? floatingActionButton,
+            FloatingActionButtonLocation? floatingActionButtonLocation,
+            List<Widget>? persistentFooterButtons,
+            Alignment persistentFooterAlignment,
+            Widget? drawer,
+            Widget? endDrawer,
+            Widget? bottomNavigationBar,
+            Widget? bottomSheet,
+            Color? backgroundColor,
+            bool? resizeToAvoidBottomInset,
+            bool primary,
+            bool extendBody,
+            bool extendBodyBehindAppBar,
+            Color? drawerScrimColor,
+            double? drawerEdgeDragWidth,
+            bool drawerEnableOpenDragGesture,
+            bool endDrawerEnableOpenDragGesture,
+            String? restorationId)?
+        scaffold,
+    TResult Function(Key? key, Widget? child, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, bool mini, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButton,
+    TResult Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButtonExtended,
+    TResult Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor)? text,
+    TResult Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior)? container,
+    TResult Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
+    TResult Function(Key? key, double? widthFactor, double? heightFactor, Widget child)? center,
+    TResult Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection)? icon,
+    TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? column,
+    TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? row,
+    TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue)? circularProgressIndicator,
+    TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue)? linearProgressIndicator,
+    TResult Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color)? divider,
+    TResult Function(Key? key, Color? backgroundColor, bool extended, Widget? leading, Widget? trailing, List<NavigationRailDestination> destinations, int? selectedIndex, IntSelectionCallback? onDestinationSelected, double? elevation, double? groupAlignment, NavigationRailLabelType? labelType, TextStyle? unselectedLabelTextStyle, TextStyle? selectedLabelTextStyle, IconThemeData? unselectedIconTheme, IconThemeData? selectedIconTheme, double? minWidth, double? minExtendedWidth, bool? useIndicator, Color? indicatorColor, ShapeBorder? indicatorShape)? navigationRail,
+    TResult Function(Key? key, Duration? animationDuration, int selectedIndex, List<Widget> destinations, IntSelectionCallback? onDestinationSelected, Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, Color? indicatorColor, ShapeBorder? indicatorShape, double? height, NavigationDestinationLabelBehavior? labelBehavior)? navigationBar,
+    TResult Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration)? defaultTabController,
+    TResult Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child)? tab,
+    TResult Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior)? tabBarView,
+    required TResult orElse(),
+  }) {
+    if (defaultTabController != null) {
+      return defaultTabController(
+          key, length, initialIndex, child, animationDuration);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(Card value) card,
+    required TResult Function(ElevatedButton value) elevatedButton,
+    required TResult Function(FilledButton value) filledButton,
+    required TResult Function(FilledTonalButton value) filledTonalButton,
+    required TResult Function(OutlinedButton value) outlinedButton,
+    required TResult Function(TextButton value) textButton,
+    required TResult Function(IconButton value) iconButton,
+    required TResult Function(Scaffold value) scaffold,
+    required TResult Function(FloatingActionButton value) floatingActionButton,
+    required TResult Function(FloatingActionButtonExtended value)
+        floatingActionButtonExtended,
+    required TResult Function(Text value) text,
+    required TResult Function(Container value) container,
+    required TResult Function(SizedBox value) sizedBox,
+    required TResult Function(Center value) center,
+    required TResult Function(Icon value) icon,
+    required TResult Function(Column value) column,
+    required TResult Function(Row value) row,
+    required TResult Function(CircularProgressIndicator value)
+        circularProgressIndicator,
+    required TResult Function(LinearProgressIndicator value)
+        linearProgressIndicator,
+    required TResult Function(Divider value) divider,
+    required TResult Function(NavigationRail value) navigationRail,
+    required TResult Function(NavigationBar value) navigationBar,
+    required TResult Function(DefaultTabController value) defaultTabController,
+    required TResult Function(Tab value) tab,
+    required TResult Function(TabBarView value) tabBarView,
+  }) {
+    return defaultTabController(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(Card value)? card,
+    TResult? Function(ElevatedButton value)? elevatedButton,
+    TResult? Function(FilledButton value)? filledButton,
+    TResult? Function(FilledTonalButton value)? filledTonalButton,
+    TResult? Function(OutlinedButton value)? outlinedButton,
+    TResult? Function(TextButton value)? textButton,
+    TResult? Function(IconButton value)? iconButton,
+    TResult? Function(Scaffold value)? scaffold,
+    TResult? Function(FloatingActionButton value)? floatingActionButton,
+    TResult? Function(FloatingActionButtonExtended value)?
+        floatingActionButtonExtended,
+    TResult? Function(Text value)? text,
+    TResult? Function(Container value)? container,
+    TResult? Function(SizedBox value)? sizedBox,
+    TResult? Function(Center value)? center,
+    TResult? Function(Icon value)? icon,
+    TResult? Function(Column value)? column,
+    TResult? Function(Row value)? row,
+    TResult? Function(CircularProgressIndicator value)?
+        circularProgressIndicator,
+    TResult? Function(LinearProgressIndicator value)? linearProgressIndicator,
+    TResult? Function(Divider value)? divider,
+    TResult? Function(NavigationRail value)? navigationRail,
+    TResult? Function(NavigationBar value)? navigationBar,
+    TResult? Function(DefaultTabController value)? defaultTabController,
+    TResult? Function(Tab value)? tab,
+    TResult? Function(TabBarView value)? tabBarView,
+  }) {
+    return defaultTabController?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(Card value)? card,
+    TResult Function(ElevatedButton value)? elevatedButton,
+    TResult Function(FilledButton value)? filledButton,
+    TResult Function(FilledTonalButton value)? filledTonalButton,
+    TResult Function(OutlinedButton value)? outlinedButton,
+    TResult Function(TextButton value)? textButton,
+    TResult Function(IconButton value)? iconButton,
+    TResult Function(Scaffold value)? scaffold,
+    TResult Function(FloatingActionButton value)? floatingActionButton,
+    TResult Function(FloatingActionButtonExtended value)?
+        floatingActionButtonExtended,
+    TResult Function(Text value)? text,
+    TResult Function(Container value)? container,
+    TResult Function(SizedBox value)? sizedBox,
+    TResult Function(Center value)? center,
+    TResult Function(Icon value)? icon,
+    TResult Function(Column value)? column,
+    TResult Function(Row value)? row,
+    TResult Function(CircularProgressIndicator value)?
+        circularProgressIndicator,
+    TResult Function(LinearProgressIndicator value)? linearProgressIndicator,
+    TResult Function(Divider value)? divider,
+    TResult Function(NavigationRail value)? navigationRail,
+    TResult Function(NavigationBar value)? navigationBar,
+    TResult Function(DefaultTabController value)? defaultTabController,
+    TResult Function(Tab value)? tab,
+    TResult Function(TabBarView value)? tabBarView,
+    required TResult orElse(),
+  }) {
+    if (defaultTabController != null) {
+      return defaultTabController(this);
+    }
+    return orElse();
+  }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$DefaultTabControllerToJson(
+      this,
+    );
+  }
+}
+
+abstract class DefaultTabController implements Widget {
+  const factory DefaultTabController(
+      {final Key? key,
+      required final int length,
+      final int initialIndex,
+      required final Widget child,
+      final Duration? animationDuration}) = _$DefaultTabController;
+
+  factory DefaultTabController.fromJson(Map<String, dynamic> json) =
+      _$DefaultTabController.fromJson;
+
+  @override
+  Key? get key;
+  int get length;
+  int get initialIndex;
+  Widget get child;
+  Duration? get animationDuration;
+  @override
+  @JsonKey(ignore: true)
+  _$$DefaultTabControllerCopyWith<_$DefaultTabController> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$TabCopyWith<$Res> implements $WidgetCopyWith<$Res> {
+  factory _$$TabCopyWith(_$Tab value, $Res Function(_$Tab) then) =
+      __$$TabCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {Key? key,
+      String? text,
+      Widget? icon,
+      EdgeInsets iconMargin,
+      double? height,
+      Widget? child});
+
+  @override
+  $KeyCopyWith<$Res>? get key;
+  $WidgetCopyWith<$Res>? get icon;
+  $EdgeInsetsCopyWith<$Res> get iconMargin;
+  $WidgetCopyWith<$Res>? get child;
+}
+
+/// @nodoc
+class __$$TabCopyWithImpl<$Res> extends _$WidgetCopyWithImpl<$Res, _$Tab>
+    implements _$$TabCopyWith<$Res> {
+  __$$TabCopyWithImpl(_$Tab _value, $Res Function(_$Tab) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? key = freezed,
+    Object? text = freezed,
+    Object? icon = freezed,
+    Object? iconMargin = null,
+    Object? height = freezed,
+    Object? child = freezed,
+  }) {
+    return _then(_$Tab(
+      key: freezed == key
+          ? _value.key
+          : key // ignore: cast_nullable_to_non_nullable
+              as Key?,
+      text: freezed == text
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as String?,
+      icon: freezed == icon
+          ? _value.icon
+          : icon // ignore: cast_nullable_to_non_nullable
+              as Widget?,
+      iconMargin: null == iconMargin
+          ? _value.iconMargin
+          : iconMargin // ignore: cast_nullable_to_non_nullable
+              as EdgeInsets,
+      height: freezed == height
+          ? _value.height
+          : height // ignore: cast_nullable_to_non_nullable
+              as double?,
+      child: freezed == child
+          ? _value.child
+          : child // ignore: cast_nullable_to_non_nullable
+              as Widget?,
+    ));
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $WidgetCopyWith<$Res>? get icon {
+    if (_value.icon == null) {
+      return null;
+    }
+
+    return $WidgetCopyWith<$Res>(_value.icon!, (value) {
+      return _then(_value.copyWith(icon: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $EdgeInsetsCopyWith<$Res> get iconMargin {
+    return $EdgeInsetsCopyWith<$Res>(_value.iconMargin, (value) {
+      return _then(_value.copyWith(iconMargin: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $WidgetCopyWith<$Res>? get child {
+    if (_value.child == null) {
+      return null;
+    }
+
+    return $WidgetCopyWith<$Res>(_value.child!, (value) {
+      return _then(_value.copyWith(child: value));
+    });
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$Tab implements Tab {
+  const _$Tab(
+      {this.key,
+      this.text,
+      this.icon,
+      this.iconMargin = const EdgeInsets.only(bottom: 10.0),
+      this.height,
+      this.child,
+      final String? $type})
+      : $type = $type ?? 'tab';
+
+  factory _$Tab.fromJson(Map<String, dynamic> json) => _$$TabFromJson(json);
+
+  @override
+  final Key? key;
+  @override
+  final String? text;
+  @override
+  final Widget? icon;
+  @override
+  @JsonKey()
+  final EdgeInsets iconMargin;
+  @override
+  final double? height;
+  @override
+  final Widget? child;
+
+  @JsonKey(name: 'runtimeType')
+  final String $type;
+
+  @override
+  String toString() {
+    return 'Widget.tab(key: $key, text: $text, icon: $icon, iconMargin: $iconMargin, height: $height, child: $child)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$Tab &&
+            (identical(other.key, key) || other.key == key) &&
+            (identical(other.text, text) || other.text == text) &&
+            (identical(other.icon, icon) || other.icon == icon) &&
+            (identical(other.iconMargin, iconMargin) ||
+                other.iconMargin == iconMargin) &&
+            (identical(other.height, height) || other.height == height) &&
+            (identical(other.child, child) || other.child == child));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, key, text, icon, iconMargin, height, child);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$TabCopyWith<_$Tab> get copyWith =>
+      __$$TabCopyWithImpl<_$Tab>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(
+            Key? key,
+            Color? color,
+            Color? shadowColor,
+            Color? surfaceTintColor,
+            double? elevation,
+            ShapeBorder? shape,
+            bool borderOnForeground,
+            EdgeInsets? margin,
+            Clip? clipBehavior,
+            Widget? child,
+            bool semanticContainer)
+        card,
+    required TResult Function(
+            Key? key,
+            Callback? onPressed,
+            Callback? onLongPress,
+            bool autofocus,
+            Clip clipBehavior,
+            Widget child,
+            ButtonStyle? style)
+        elevatedButton,
+    required TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)
+        filledButton,
+    required TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)
+        filledTonalButton,
+    required TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)
+        outlinedButton,
+    required TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)
+        textButton,
+    required TResult Function(
+            Key? key,
+            double? iconSize,
+            VisualDensity? visualDensity,
+            EdgeInsets? padding,
+            Alignment? alignment,
+            double? splashRadius,
+            Color? color,
+            Color? focusColor,
+            Color? hoverColor,
+            Color? highlightColor,
+            Color? splashColor,
+            Color? disabledColor,
+            Callback onPressed,
+            MouseCursor? mouseCursor,
+            bool autofocus,
+            String? tooltip,
+            bool? enableFeedback,
+            BoxConstraints? constraints,
+            bool? isSelected,
+            Widget? selectedIcon,
+            Widget icon)
+        iconButton,
+    required TResult Function(
+            Key? key,
+            PreferredSizeWidget? appBar,
+            Widget? body,
+            Widget? floatingActionButton,
+            FloatingActionButtonLocation? floatingActionButtonLocation,
+            List<Widget>? persistentFooterButtons,
+            Alignment persistentFooterAlignment,
+            Widget? drawer,
+            Widget? endDrawer,
+            Widget? bottomNavigationBar,
+            Widget? bottomSheet,
+            Color? backgroundColor,
+            bool? resizeToAvoidBottomInset,
+            bool primary,
+            bool extendBody,
+            bool extendBodyBehindAppBar,
+            Color? drawerScrimColor,
+            double? drawerEdgeDragWidth,
+            bool drawerEnableOpenDragGesture,
+            bool endDrawerEnableOpenDragGesture,
+            String? restorationId)
+        scaffold,
+    required TResult Function(Key? key, Widget? child, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, bool mini, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback) floatingActionButton,
+    required TResult Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback) floatingActionButtonExtended,
+    required TResult Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor) text,
+    required TResult Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior) container,
+    required TResult Function(Key? key, double? width, double? height, Widget? child) sizedBox,
+    required TResult Function(Key? key, double? widthFactor, double? heightFactor, Widget child) center,
+    required TResult Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection) icon,
+    required TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children) column,
+    required TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children) row,
+    required TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue) circularProgressIndicator,
+    required TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue) linearProgressIndicator,
+    required TResult Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color) divider,
+    required TResult Function(Key? key, Color? backgroundColor, bool extended, Widget? leading, Widget? trailing, List<NavigationRailDestination> destinations, int? selectedIndex, IntSelectionCallback? onDestinationSelected, double? elevation, double? groupAlignment, NavigationRailLabelType? labelType, TextStyle? unselectedLabelTextStyle, TextStyle? selectedLabelTextStyle, IconThemeData? unselectedIconTheme, IconThemeData? selectedIconTheme, double? minWidth, double? minExtendedWidth, bool? useIndicator, Color? indicatorColor, ShapeBorder? indicatorShape) navigationRail,
+    required TResult Function(Key? key, Duration? animationDuration, int selectedIndex, List<Widget> destinations, IntSelectionCallback? onDestinationSelected, Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, Color? indicatorColor, ShapeBorder? indicatorShape, double? height, NavigationDestinationLabelBehavior? labelBehavior) navigationBar,
+    required TResult Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration) defaultTabController,
+    required TResult Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child) tab,
+    required TResult Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior) tabBarView,
+  }) {
+    return tab(key, this.text, this.icon, iconMargin, height, child);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(
+            Key? key,
+            Color? color,
+            Color? shadowColor,
+            Color? surfaceTintColor,
+            double? elevation,
+            ShapeBorder? shape,
+            bool borderOnForeground,
+            EdgeInsets? margin,
+            Clip? clipBehavior,
+            Widget? child,
+            bool semanticContainer)?
+        card,
+    TResult? Function(
+            Key? key,
+            Callback? onPressed,
+            Callback? onLongPress,
+            bool autofocus,
+            Clip clipBehavior,
+            Widget child,
+            ButtonStyle? style)?
+        elevatedButton,
+    TResult? Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        filledButton,
+    TResult? Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        filledTonalButton,
+    TResult? Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        outlinedButton,
+    TResult? Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        textButton,
+    TResult? Function(
+            Key? key,
+            double? iconSize,
+            VisualDensity? visualDensity,
+            EdgeInsets? padding,
+            Alignment? alignment,
+            double? splashRadius,
+            Color? color,
+            Color? focusColor,
+            Color? hoverColor,
+            Color? highlightColor,
+            Color? splashColor,
+            Color? disabledColor,
+            Callback onPressed,
+            MouseCursor? mouseCursor,
+            bool autofocus,
+            String? tooltip,
+            bool? enableFeedback,
+            BoxConstraints? constraints,
+            bool? isSelected,
+            Widget? selectedIcon,
+            Widget icon)?
+        iconButton,
+    TResult? Function(
+            Key? key,
+            PreferredSizeWidget? appBar,
+            Widget? body,
+            Widget? floatingActionButton,
+            FloatingActionButtonLocation? floatingActionButtonLocation,
+            List<Widget>? persistentFooterButtons,
+            Alignment persistentFooterAlignment,
+            Widget? drawer,
+            Widget? endDrawer,
+            Widget? bottomNavigationBar,
+            Widget? bottomSheet,
+            Color? backgroundColor,
+            bool? resizeToAvoidBottomInset,
+            bool primary,
+            bool extendBody,
+            bool extendBodyBehindAppBar,
+            Color? drawerScrimColor,
+            double? drawerEdgeDragWidth,
+            bool drawerEnableOpenDragGesture,
+            bool endDrawerEnableOpenDragGesture,
+            String? restorationId)?
+        scaffold,
+    TResult? Function(Key? key, Widget? child, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, bool mini, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButton,
+    TResult? Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButtonExtended,
+    TResult? Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor)? text,
+    TResult? Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior)? container,
+    TResult? Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
+    TResult? Function(Key? key, double? widthFactor, double? heightFactor, Widget child)? center,
+    TResult? Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection)? icon,
+    TResult? Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? column,
+    TResult? Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? row,
+    TResult? Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue)? circularProgressIndicator,
+    TResult? Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue)? linearProgressIndicator,
+    TResult? Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color)? divider,
+    TResult? Function(Key? key, Color? backgroundColor, bool extended, Widget? leading, Widget? trailing, List<NavigationRailDestination> destinations, int? selectedIndex, IntSelectionCallback? onDestinationSelected, double? elevation, double? groupAlignment, NavigationRailLabelType? labelType, TextStyle? unselectedLabelTextStyle, TextStyle? selectedLabelTextStyle, IconThemeData? unselectedIconTheme, IconThemeData? selectedIconTheme, double? minWidth, double? minExtendedWidth, bool? useIndicator, Color? indicatorColor, ShapeBorder? indicatorShape)? navigationRail,
+    TResult? Function(Key? key, Duration? animationDuration, int selectedIndex, List<Widget> destinations, IntSelectionCallback? onDestinationSelected, Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, Color? indicatorColor, ShapeBorder? indicatorShape, double? height, NavigationDestinationLabelBehavior? labelBehavior)? navigationBar,
+    TResult? Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration)? defaultTabController,
+    TResult? Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child)? tab,
+    TResult? Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior)? tabBarView,
+  }) {
+    return tab?.call(key, this.text, this.icon, iconMargin, height, child);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(
+            Key? key,
+            Color? color,
+            Color? shadowColor,
+            Color? surfaceTintColor,
+            double? elevation,
+            ShapeBorder? shape,
+            bool borderOnForeground,
+            EdgeInsets? margin,
+            Clip? clipBehavior,
+            Widget? child,
+            bool semanticContainer)?
+        card,
+    TResult Function(
+            Key? key,
+            Callback? onPressed,
+            Callback? onLongPress,
+            bool autofocus,
+            Clip clipBehavior,
+            Widget child,
+            ButtonStyle? style)?
+        elevatedButton,
+    TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        filledButton,
+    TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        filledTonalButton,
+    TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        outlinedButton,
+    TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        textButton,
+    TResult Function(
+            Key? key,
+            double? iconSize,
+            VisualDensity? visualDensity,
+            EdgeInsets? padding,
+            Alignment? alignment,
+            double? splashRadius,
+            Color? color,
+            Color? focusColor,
+            Color? hoverColor,
+            Color? highlightColor,
+            Color? splashColor,
+            Color? disabledColor,
+            Callback onPressed,
+            MouseCursor? mouseCursor,
+            bool autofocus,
+            String? tooltip,
+            bool? enableFeedback,
+            BoxConstraints? constraints,
+            bool? isSelected,
+            Widget? selectedIcon,
+            Widget icon)?
+        iconButton,
+    TResult Function(
+            Key? key,
+            PreferredSizeWidget? appBar,
+            Widget? body,
+            Widget? floatingActionButton,
+            FloatingActionButtonLocation? floatingActionButtonLocation,
+            List<Widget>? persistentFooterButtons,
+            Alignment persistentFooterAlignment,
+            Widget? drawer,
+            Widget? endDrawer,
+            Widget? bottomNavigationBar,
+            Widget? bottomSheet,
+            Color? backgroundColor,
+            bool? resizeToAvoidBottomInset,
+            bool primary,
+            bool extendBody,
+            bool extendBodyBehindAppBar,
+            Color? drawerScrimColor,
+            double? drawerEdgeDragWidth,
+            bool drawerEnableOpenDragGesture,
+            bool endDrawerEnableOpenDragGesture,
+            String? restorationId)?
+        scaffold,
+    TResult Function(Key? key, Widget? child, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, bool mini, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButton,
+    TResult Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButtonExtended,
+    TResult Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor)? text,
+    TResult Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior)? container,
+    TResult Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
+    TResult Function(Key? key, double? widthFactor, double? heightFactor, Widget child)? center,
+    TResult Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection)? icon,
+    TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? column,
+    TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? row,
+    TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue)? circularProgressIndicator,
+    TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue)? linearProgressIndicator,
+    TResult Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color)? divider,
+    TResult Function(Key? key, Color? backgroundColor, bool extended, Widget? leading, Widget? trailing, List<NavigationRailDestination> destinations, int? selectedIndex, IntSelectionCallback? onDestinationSelected, double? elevation, double? groupAlignment, NavigationRailLabelType? labelType, TextStyle? unselectedLabelTextStyle, TextStyle? selectedLabelTextStyle, IconThemeData? unselectedIconTheme, IconThemeData? selectedIconTheme, double? minWidth, double? minExtendedWidth, bool? useIndicator, Color? indicatorColor, ShapeBorder? indicatorShape)? navigationRail,
+    TResult Function(Key? key, Duration? animationDuration, int selectedIndex, List<Widget> destinations, IntSelectionCallback? onDestinationSelected, Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, Color? indicatorColor, ShapeBorder? indicatorShape, double? height, NavigationDestinationLabelBehavior? labelBehavior)? navigationBar,
+    TResult Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration)? defaultTabController,
+    TResult Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child)? tab,
+    TResult Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior)? tabBarView,
+    required TResult orElse(),
+  }) {
+    if (tab != null) {
+      return tab(key, this.text, this.icon, iconMargin, height, child);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(Card value) card,
+    required TResult Function(ElevatedButton value) elevatedButton,
+    required TResult Function(FilledButton value) filledButton,
+    required TResult Function(FilledTonalButton value) filledTonalButton,
+    required TResult Function(OutlinedButton value) outlinedButton,
+    required TResult Function(TextButton value) textButton,
+    required TResult Function(IconButton value) iconButton,
+    required TResult Function(Scaffold value) scaffold,
+    required TResult Function(FloatingActionButton value) floatingActionButton,
+    required TResult Function(FloatingActionButtonExtended value)
+        floatingActionButtonExtended,
+    required TResult Function(Text value) text,
+    required TResult Function(Container value) container,
+    required TResult Function(SizedBox value) sizedBox,
+    required TResult Function(Center value) center,
+    required TResult Function(Icon value) icon,
+    required TResult Function(Column value) column,
+    required TResult Function(Row value) row,
+    required TResult Function(CircularProgressIndicator value)
+        circularProgressIndicator,
+    required TResult Function(LinearProgressIndicator value)
+        linearProgressIndicator,
+    required TResult Function(Divider value) divider,
+    required TResult Function(NavigationRail value) navigationRail,
+    required TResult Function(NavigationBar value) navigationBar,
+    required TResult Function(DefaultTabController value) defaultTabController,
+    required TResult Function(Tab value) tab,
+    required TResult Function(TabBarView value) tabBarView,
+  }) {
+    return tab(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(Card value)? card,
+    TResult? Function(ElevatedButton value)? elevatedButton,
+    TResult? Function(FilledButton value)? filledButton,
+    TResult? Function(FilledTonalButton value)? filledTonalButton,
+    TResult? Function(OutlinedButton value)? outlinedButton,
+    TResult? Function(TextButton value)? textButton,
+    TResult? Function(IconButton value)? iconButton,
+    TResult? Function(Scaffold value)? scaffold,
+    TResult? Function(FloatingActionButton value)? floatingActionButton,
+    TResult? Function(FloatingActionButtonExtended value)?
+        floatingActionButtonExtended,
+    TResult? Function(Text value)? text,
+    TResult? Function(Container value)? container,
+    TResult? Function(SizedBox value)? sizedBox,
+    TResult? Function(Center value)? center,
+    TResult? Function(Icon value)? icon,
+    TResult? Function(Column value)? column,
+    TResult? Function(Row value)? row,
+    TResult? Function(CircularProgressIndicator value)?
+        circularProgressIndicator,
+    TResult? Function(LinearProgressIndicator value)? linearProgressIndicator,
+    TResult? Function(Divider value)? divider,
+    TResult? Function(NavigationRail value)? navigationRail,
+    TResult? Function(NavigationBar value)? navigationBar,
+    TResult? Function(DefaultTabController value)? defaultTabController,
+    TResult? Function(Tab value)? tab,
+    TResult? Function(TabBarView value)? tabBarView,
+  }) {
+    return tab?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(Card value)? card,
+    TResult Function(ElevatedButton value)? elevatedButton,
+    TResult Function(FilledButton value)? filledButton,
+    TResult Function(FilledTonalButton value)? filledTonalButton,
+    TResult Function(OutlinedButton value)? outlinedButton,
+    TResult Function(TextButton value)? textButton,
+    TResult Function(IconButton value)? iconButton,
+    TResult Function(Scaffold value)? scaffold,
+    TResult Function(FloatingActionButton value)? floatingActionButton,
+    TResult Function(FloatingActionButtonExtended value)?
+        floatingActionButtonExtended,
+    TResult Function(Text value)? text,
+    TResult Function(Container value)? container,
+    TResult Function(SizedBox value)? sizedBox,
+    TResult Function(Center value)? center,
+    TResult Function(Icon value)? icon,
+    TResult Function(Column value)? column,
+    TResult Function(Row value)? row,
+    TResult Function(CircularProgressIndicator value)?
+        circularProgressIndicator,
+    TResult Function(LinearProgressIndicator value)? linearProgressIndicator,
+    TResult Function(Divider value)? divider,
+    TResult Function(NavigationRail value)? navigationRail,
+    TResult Function(NavigationBar value)? navigationBar,
+    TResult Function(DefaultTabController value)? defaultTabController,
+    TResult Function(Tab value)? tab,
+    TResult Function(TabBarView value)? tabBarView,
+    required TResult orElse(),
+  }) {
+    if (tab != null) {
+      return tab(this);
+    }
+    return orElse();
+  }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$TabToJson(
+      this,
+    );
+  }
+}
+
+abstract class Tab implements Widget {
+  const factory Tab(
+      {final Key? key,
+      final String? text,
+      final Widget? icon,
+      final EdgeInsets iconMargin,
+      final double? height,
+      final Widget? child}) = _$Tab;
+
+  factory Tab.fromJson(Map<String, dynamic> json) = _$Tab.fromJson;
+
+  @override
+  Key? get key;
+  String? get text;
+  Widget? get icon;
+  EdgeInsets get iconMargin;
+  double? get height;
+  Widget? get child;
+  @override
+  @JsonKey(ignore: true)
+  _$$TabCopyWith<_$Tab> get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$TabBarViewCopyWith<$Res> implements $WidgetCopyWith<$Res> {
+  factory _$$TabBarViewCopyWith(
+          _$TabBarView value, $Res Function(_$TabBarView) then) =
+      __$$TabBarViewCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {Key? key,
+      List<Widget> children,
+      ScrollPhysics? physics,
+      DragStartBehavior dragStartBehavior,
+      double viewportFraction,
+      Clip clipBehavior});
+
+  @override
+  $KeyCopyWith<$Res>? get key;
+  $ScrollPhysicsCopyWith<$Res>? get physics;
+}
+
+/// @nodoc
+class __$$TabBarViewCopyWithImpl<$Res>
+    extends _$WidgetCopyWithImpl<$Res, _$TabBarView>
+    implements _$$TabBarViewCopyWith<$Res> {
+  __$$TabBarViewCopyWithImpl(
+      _$TabBarView _value, $Res Function(_$TabBarView) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? key = freezed,
+    Object? children = null,
+    Object? physics = freezed,
+    Object? dragStartBehavior = null,
+    Object? viewportFraction = null,
+    Object? clipBehavior = null,
+  }) {
+    return _then(_$TabBarView(
+      key: freezed == key
+          ? _value.key
+          : key // ignore: cast_nullable_to_non_nullable
+              as Key?,
+      children: null == children
+          ? _value._children
+          : children // ignore: cast_nullable_to_non_nullable
+              as List<Widget>,
+      physics: freezed == physics
+          ? _value.physics
+          : physics // ignore: cast_nullable_to_non_nullable
+              as ScrollPhysics?,
+      dragStartBehavior: null == dragStartBehavior
+          ? _value.dragStartBehavior
+          : dragStartBehavior // ignore: cast_nullable_to_non_nullable
+              as DragStartBehavior,
+      viewportFraction: null == viewportFraction
+          ? _value.viewportFraction
+          : viewportFraction // ignore: cast_nullable_to_non_nullable
+              as double,
+      clipBehavior: null == clipBehavior
+          ? _value.clipBehavior
+          : clipBehavior // ignore: cast_nullable_to_non_nullable
+              as Clip,
+    ));
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ScrollPhysicsCopyWith<$Res>? get physics {
+    if (_value.physics == null) {
+      return null;
+    }
+
+    return $ScrollPhysicsCopyWith<$Res>(_value.physics!, (value) {
+      return _then(_value.copyWith(physics: value));
+    });
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$TabBarView implements TabBarView {
+  const _$TabBarView(
+      {this.key,
+      required final List<Widget> children,
+      this.physics,
+      this.dragStartBehavior = DragStartBehavior.start,
+      this.viewportFraction = 1.0,
+      this.clipBehavior = Clip.hardEdge,
+      final String? $type})
+      : _children = children,
+        $type = $type ?? 'tabBarView';
+
+  factory _$TabBarView.fromJson(Map<String, dynamic> json) =>
+      _$$TabBarViewFromJson(json);
+
+  @override
+  final Key? key;
+  final List<Widget> _children;
+  @override
+  List<Widget> get children {
+    if (_children is EqualUnmodifiableListView) return _children;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_children);
+  }
+
+  @override
+  final ScrollPhysics? physics;
+  @override
+  @JsonKey()
+  final DragStartBehavior dragStartBehavior;
+  @override
+  @JsonKey()
+  final double viewportFraction;
+  @override
+  @JsonKey()
+  final Clip clipBehavior;
+
+  @JsonKey(name: 'runtimeType')
+  final String $type;
+
+  @override
+  String toString() {
+    return 'Widget.tabBarView(key: $key, children: $children, physics: $physics, dragStartBehavior: $dragStartBehavior, viewportFraction: $viewportFraction, clipBehavior: $clipBehavior)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$TabBarView &&
+            (identical(other.key, key) || other.key == key) &&
+            const DeepCollectionEquality().equals(other._children, _children) &&
+            (identical(other.physics, physics) || other.physics == physics) &&
+            (identical(other.dragStartBehavior, dragStartBehavior) ||
+                other.dragStartBehavior == dragStartBehavior) &&
+            (identical(other.viewportFraction, viewportFraction) ||
+                other.viewportFraction == viewportFraction) &&
+            (identical(other.clipBehavior, clipBehavior) ||
+                other.clipBehavior == clipBehavior));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      key,
+      const DeepCollectionEquality().hash(_children),
+      physics,
+      dragStartBehavior,
+      viewportFraction,
+      clipBehavior);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$TabBarViewCopyWith<_$TabBarView> get copyWith =>
+      __$$TabBarViewCopyWithImpl<_$TabBarView>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(
+            Key? key,
+            Color? color,
+            Color? shadowColor,
+            Color? surfaceTintColor,
+            double? elevation,
+            ShapeBorder? shape,
+            bool borderOnForeground,
+            EdgeInsets? margin,
+            Clip? clipBehavior,
+            Widget? child,
+            bool semanticContainer)
+        card,
+    required TResult Function(
+            Key? key,
+            Callback? onPressed,
+            Callback? onLongPress,
+            bool autofocus,
+            Clip clipBehavior,
+            Widget child,
+            ButtonStyle? style)
+        elevatedButton,
+    required TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)
+        filledButton,
+    required TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)
+        filledTonalButton,
+    required TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)
+        outlinedButton,
+    required TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)
+        textButton,
+    required TResult Function(
+            Key? key,
+            double? iconSize,
+            VisualDensity? visualDensity,
+            EdgeInsets? padding,
+            Alignment? alignment,
+            double? splashRadius,
+            Color? color,
+            Color? focusColor,
+            Color? hoverColor,
+            Color? highlightColor,
+            Color? splashColor,
+            Color? disabledColor,
+            Callback onPressed,
+            MouseCursor? mouseCursor,
+            bool autofocus,
+            String? tooltip,
+            bool? enableFeedback,
+            BoxConstraints? constraints,
+            bool? isSelected,
+            Widget? selectedIcon,
+            Widget icon)
+        iconButton,
+    required TResult Function(
+            Key? key,
+            PreferredSizeWidget? appBar,
+            Widget? body,
+            Widget? floatingActionButton,
+            FloatingActionButtonLocation? floatingActionButtonLocation,
+            List<Widget>? persistentFooterButtons,
+            Alignment persistentFooterAlignment,
+            Widget? drawer,
+            Widget? endDrawer,
+            Widget? bottomNavigationBar,
+            Widget? bottomSheet,
+            Color? backgroundColor,
+            bool? resizeToAvoidBottomInset,
+            bool primary,
+            bool extendBody,
+            bool extendBodyBehindAppBar,
+            Color? drawerScrimColor,
+            double? drawerEdgeDragWidth,
+            bool drawerEnableOpenDragGesture,
+            bool endDrawerEnableOpenDragGesture,
+            String? restorationId)
+        scaffold,
+    required TResult Function(Key? key, Widget? child, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, bool mini, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback) floatingActionButton,
+    required TResult Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback) floatingActionButtonExtended,
+    required TResult Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor) text,
+    required TResult Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior) container,
+    required TResult Function(Key? key, double? width, double? height, Widget? child) sizedBox,
+    required TResult Function(Key? key, double? widthFactor, double? heightFactor, Widget child) center,
+    required TResult Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection) icon,
+    required TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children) column,
+    required TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children) row,
+    required TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue) circularProgressIndicator,
+    required TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue) linearProgressIndicator,
+    required TResult Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color) divider,
+    required TResult Function(Key? key, Color? backgroundColor, bool extended, Widget? leading, Widget? trailing, List<NavigationRailDestination> destinations, int? selectedIndex, IntSelectionCallback? onDestinationSelected, double? elevation, double? groupAlignment, NavigationRailLabelType? labelType, TextStyle? unselectedLabelTextStyle, TextStyle? selectedLabelTextStyle, IconThemeData? unselectedIconTheme, IconThemeData? selectedIconTheme, double? minWidth, double? minExtendedWidth, bool? useIndicator, Color? indicatorColor, ShapeBorder? indicatorShape) navigationRail,
+    required TResult Function(Key? key, Duration? animationDuration, int selectedIndex, List<Widget> destinations, IntSelectionCallback? onDestinationSelected, Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, Color? indicatorColor, ShapeBorder? indicatorShape, double? height, NavigationDestinationLabelBehavior? labelBehavior) navigationBar,
+    required TResult Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration) defaultTabController,
+    required TResult Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child) tab,
+    required TResult Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior) tabBarView,
+  }) {
+    return tabBarView(key, children, physics, dragStartBehavior,
+        viewportFraction, clipBehavior);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(
+            Key? key,
+            Color? color,
+            Color? shadowColor,
+            Color? surfaceTintColor,
+            double? elevation,
+            ShapeBorder? shape,
+            bool borderOnForeground,
+            EdgeInsets? margin,
+            Clip? clipBehavior,
+            Widget? child,
+            bool semanticContainer)?
+        card,
+    TResult? Function(
+            Key? key,
+            Callback? onPressed,
+            Callback? onLongPress,
+            bool autofocus,
+            Clip clipBehavior,
+            Widget child,
+            ButtonStyle? style)?
+        elevatedButton,
+    TResult? Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        filledButton,
+    TResult? Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        filledTonalButton,
+    TResult? Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        outlinedButton,
+    TResult? Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        textButton,
+    TResult? Function(
+            Key? key,
+            double? iconSize,
+            VisualDensity? visualDensity,
+            EdgeInsets? padding,
+            Alignment? alignment,
+            double? splashRadius,
+            Color? color,
+            Color? focusColor,
+            Color? hoverColor,
+            Color? highlightColor,
+            Color? splashColor,
+            Color? disabledColor,
+            Callback onPressed,
+            MouseCursor? mouseCursor,
+            bool autofocus,
+            String? tooltip,
+            bool? enableFeedback,
+            BoxConstraints? constraints,
+            bool? isSelected,
+            Widget? selectedIcon,
+            Widget icon)?
+        iconButton,
+    TResult? Function(
+            Key? key,
+            PreferredSizeWidget? appBar,
+            Widget? body,
+            Widget? floatingActionButton,
+            FloatingActionButtonLocation? floatingActionButtonLocation,
+            List<Widget>? persistentFooterButtons,
+            Alignment persistentFooterAlignment,
+            Widget? drawer,
+            Widget? endDrawer,
+            Widget? bottomNavigationBar,
+            Widget? bottomSheet,
+            Color? backgroundColor,
+            bool? resizeToAvoidBottomInset,
+            bool primary,
+            bool extendBody,
+            bool extendBodyBehindAppBar,
+            Color? drawerScrimColor,
+            double? drawerEdgeDragWidth,
+            bool drawerEnableOpenDragGesture,
+            bool endDrawerEnableOpenDragGesture,
+            String? restorationId)?
+        scaffold,
+    TResult? Function(Key? key, Widget? child, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, bool mini, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButton,
+    TResult? Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButtonExtended,
+    TResult? Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor)? text,
+    TResult? Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior)? container,
+    TResult? Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
+    TResult? Function(Key? key, double? widthFactor, double? heightFactor, Widget child)? center,
+    TResult? Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection)? icon,
+    TResult? Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? column,
+    TResult? Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? row,
+    TResult? Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue)? circularProgressIndicator,
+    TResult? Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue)? linearProgressIndicator,
+    TResult? Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color)? divider,
+    TResult? Function(Key? key, Color? backgroundColor, bool extended, Widget? leading, Widget? trailing, List<NavigationRailDestination> destinations, int? selectedIndex, IntSelectionCallback? onDestinationSelected, double? elevation, double? groupAlignment, NavigationRailLabelType? labelType, TextStyle? unselectedLabelTextStyle, TextStyle? selectedLabelTextStyle, IconThemeData? unselectedIconTheme, IconThemeData? selectedIconTheme, double? minWidth, double? minExtendedWidth, bool? useIndicator, Color? indicatorColor, ShapeBorder? indicatorShape)? navigationRail,
+    TResult? Function(Key? key, Duration? animationDuration, int selectedIndex, List<Widget> destinations, IntSelectionCallback? onDestinationSelected, Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, Color? indicatorColor, ShapeBorder? indicatorShape, double? height, NavigationDestinationLabelBehavior? labelBehavior)? navigationBar,
+    TResult? Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration)? defaultTabController,
+    TResult? Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child)? tab,
+    TResult? Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior)? tabBarView,
+  }) {
+    return tabBarView?.call(key, children, physics, dragStartBehavior,
+        viewportFraction, clipBehavior);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(
+            Key? key,
+            Color? color,
+            Color? shadowColor,
+            Color? surfaceTintColor,
+            double? elevation,
+            ShapeBorder? shape,
+            bool borderOnForeground,
+            EdgeInsets? margin,
+            Clip? clipBehavior,
+            Widget? child,
+            bool semanticContainer)?
+        card,
+    TResult Function(
+            Key? key,
+            Callback? onPressed,
+            Callback? onLongPress,
+            bool autofocus,
+            Clip clipBehavior,
+            Widget child,
+            ButtonStyle? style)?
+        elevatedButton,
+    TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        filledButton,
+    TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        filledTonalButton,
+    TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        outlinedButton,
+    TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        textButton,
+    TResult Function(
+            Key? key,
+            double? iconSize,
+            VisualDensity? visualDensity,
+            EdgeInsets? padding,
+            Alignment? alignment,
+            double? splashRadius,
+            Color? color,
+            Color? focusColor,
+            Color? hoverColor,
+            Color? highlightColor,
+            Color? splashColor,
+            Color? disabledColor,
+            Callback onPressed,
+            MouseCursor? mouseCursor,
+            bool autofocus,
+            String? tooltip,
+            bool? enableFeedback,
+            BoxConstraints? constraints,
+            bool? isSelected,
+            Widget? selectedIcon,
+            Widget icon)?
+        iconButton,
+    TResult Function(
+            Key? key,
+            PreferredSizeWidget? appBar,
+            Widget? body,
+            Widget? floatingActionButton,
+            FloatingActionButtonLocation? floatingActionButtonLocation,
+            List<Widget>? persistentFooterButtons,
+            Alignment persistentFooterAlignment,
+            Widget? drawer,
+            Widget? endDrawer,
+            Widget? bottomNavigationBar,
+            Widget? bottomSheet,
+            Color? backgroundColor,
+            bool? resizeToAvoidBottomInset,
+            bool primary,
+            bool extendBody,
+            bool extendBodyBehindAppBar,
+            Color? drawerScrimColor,
+            double? drawerEdgeDragWidth,
+            bool drawerEnableOpenDragGesture,
+            bool endDrawerEnableOpenDragGesture,
+            String? restorationId)?
+        scaffold,
+    TResult Function(Key? key, Widget? child, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, bool mini, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButton,
+    TResult Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButtonExtended,
+    TResult Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor)? text,
+    TResult Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior)? container,
+    TResult Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
+    TResult Function(Key? key, double? widthFactor, double? heightFactor, Widget child)? center,
+    TResult Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection)? icon,
+    TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? column,
+    TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? row,
+    TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue)? circularProgressIndicator,
+    TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue)? linearProgressIndicator,
+    TResult Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color)? divider,
+    TResult Function(Key? key, Color? backgroundColor, bool extended, Widget? leading, Widget? trailing, List<NavigationRailDestination> destinations, int? selectedIndex, IntSelectionCallback? onDestinationSelected, double? elevation, double? groupAlignment, NavigationRailLabelType? labelType, TextStyle? unselectedLabelTextStyle, TextStyle? selectedLabelTextStyle, IconThemeData? unselectedIconTheme, IconThemeData? selectedIconTheme, double? minWidth, double? minExtendedWidth, bool? useIndicator, Color? indicatorColor, ShapeBorder? indicatorShape)? navigationRail,
+    TResult Function(Key? key, Duration? animationDuration, int selectedIndex, List<Widget> destinations, IntSelectionCallback? onDestinationSelected, Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, Color? indicatorColor, ShapeBorder? indicatorShape, double? height, NavigationDestinationLabelBehavior? labelBehavior)? navigationBar,
+    TResult Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration)? defaultTabController,
+    TResult Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child)? tab,
+    TResult Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior)? tabBarView,
+    required TResult orElse(),
+  }) {
+    if (tabBarView != null) {
+      return tabBarView(key, children, physics, dragStartBehavior,
+          viewportFraction, clipBehavior);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(Card value) card,
+    required TResult Function(ElevatedButton value) elevatedButton,
+    required TResult Function(FilledButton value) filledButton,
+    required TResult Function(FilledTonalButton value) filledTonalButton,
+    required TResult Function(OutlinedButton value) outlinedButton,
+    required TResult Function(TextButton value) textButton,
+    required TResult Function(IconButton value) iconButton,
+    required TResult Function(Scaffold value) scaffold,
+    required TResult Function(FloatingActionButton value) floatingActionButton,
+    required TResult Function(FloatingActionButtonExtended value)
+        floatingActionButtonExtended,
+    required TResult Function(Text value) text,
+    required TResult Function(Container value) container,
+    required TResult Function(SizedBox value) sizedBox,
+    required TResult Function(Center value) center,
+    required TResult Function(Icon value) icon,
+    required TResult Function(Column value) column,
+    required TResult Function(Row value) row,
+    required TResult Function(CircularProgressIndicator value)
+        circularProgressIndicator,
+    required TResult Function(LinearProgressIndicator value)
+        linearProgressIndicator,
+    required TResult Function(Divider value) divider,
+    required TResult Function(NavigationRail value) navigationRail,
+    required TResult Function(NavigationBar value) navigationBar,
+    required TResult Function(DefaultTabController value) defaultTabController,
+    required TResult Function(Tab value) tab,
+    required TResult Function(TabBarView value) tabBarView,
+  }) {
+    return tabBarView(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(Card value)? card,
+    TResult? Function(ElevatedButton value)? elevatedButton,
+    TResult? Function(FilledButton value)? filledButton,
+    TResult? Function(FilledTonalButton value)? filledTonalButton,
+    TResult? Function(OutlinedButton value)? outlinedButton,
+    TResult? Function(TextButton value)? textButton,
+    TResult? Function(IconButton value)? iconButton,
+    TResult? Function(Scaffold value)? scaffold,
+    TResult? Function(FloatingActionButton value)? floatingActionButton,
+    TResult? Function(FloatingActionButtonExtended value)?
+        floatingActionButtonExtended,
+    TResult? Function(Text value)? text,
+    TResult? Function(Container value)? container,
+    TResult? Function(SizedBox value)? sizedBox,
+    TResult? Function(Center value)? center,
+    TResult? Function(Icon value)? icon,
+    TResult? Function(Column value)? column,
+    TResult? Function(Row value)? row,
+    TResult? Function(CircularProgressIndicator value)?
+        circularProgressIndicator,
+    TResult? Function(LinearProgressIndicator value)? linearProgressIndicator,
+    TResult? Function(Divider value)? divider,
+    TResult? Function(NavigationRail value)? navigationRail,
+    TResult? Function(NavigationBar value)? navigationBar,
+    TResult? Function(DefaultTabController value)? defaultTabController,
+    TResult? Function(Tab value)? tab,
+    TResult? Function(TabBarView value)? tabBarView,
+  }) {
+    return tabBarView?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(Card value)? card,
+    TResult Function(ElevatedButton value)? elevatedButton,
+    TResult Function(FilledButton value)? filledButton,
+    TResult Function(FilledTonalButton value)? filledTonalButton,
+    TResult Function(OutlinedButton value)? outlinedButton,
+    TResult Function(TextButton value)? textButton,
+    TResult Function(IconButton value)? iconButton,
+    TResult Function(Scaffold value)? scaffold,
+    TResult Function(FloatingActionButton value)? floatingActionButton,
+    TResult Function(FloatingActionButtonExtended value)?
+        floatingActionButtonExtended,
+    TResult Function(Text value)? text,
+    TResult Function(Container value)? container,
+    TResult Function(SizedBox value)? sizedBox,
+    TResult Function(Center value)? center,
+    TResult Function(Icon value)? icon,
+    TResult Function(Column value)? column,
+    TResult Function(Row value)? row,
+    TResult Function(CircularProgressIndicator value)?
+        circularProgressIndicator,
+    TResult Function(LinearProgressIndicator value)? linearProgressIndicator,
+    TResult Function(Divider value)? divider,
+    TResult Function(NavigationRail value)? navigationRail,
+    TResult Function(NavigationBar value)? navigationBar,
+    TResult Function(DefaultTabController value)? defaultTabController,
+    TResult Function(Tab value)? tab,
+    TResult Function(TabBarView value)? tabBarView,
+    required TResult orElse(),
+  }) {
+    if (tabBarView != null) {
+      return tabBarView(this);
+    }
+    return orElse();
+  }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$TabBarViewToJson(
+      this,
+    );
+  }
+}
+
+abstract class TabBarView implements Widget {
+  const factory TabBarView(
+      {final Key? key,
+      required final List<Widget> children,
+      final ScrollPhysics? physics,
+      final DragStartBehavior dragStartBehavior,
+      final double viewportFraction,
+      final Clip clipBehavior}) = _$TabBarView;
+
+  factory TabBarView.fromJson(Map<String, dynamic> json) =
+      _$TabBarView.fromJson;
+
+  @override
+  Key? get key;
+  List<Widget> get children;
+  ScrollPhysics? get physics;
+  DragStartBehavior get dragStartBehavior;
+  double get viewportFraction;
+  Clip get clipBehavior;
+  @override
+  @JsonKey(ignore: true)
+  _$$TabBarViewCopyWith<_$TabBarView> get copyWith =>
       throw _privateConstructorUsedError;
 }

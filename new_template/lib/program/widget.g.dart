@@ -967,3 +967,245 @@ Map<String, dynamic> _$$DividerToJson(_$Divider instance) => <String, dynamic>{
       'color': instance.color,
       'runtimeType': instance.$type,
     };
+
+_$NavigationRail _$$NavigationRailFromJson(Map<String, dynamic> json) =>
+    _$NavigationRail(
+      key: json['key'] == null
+          ? null
+          : Key.fromJson(json['key'] as Map<String, dynamic>),
+      backgroundColor: json['backgroundColor'] == null
+          ? null
+          : Color.fromJson(json['backgroundColor'] as Map<String, dynamic>),
+      extended: json['extended'] as bool? ?? false,
+      leading: json['leading'] == null
+          ? null
+          : Widget.fromJson(json['leading'] as Map<String, dynamic>),
+      trailing: json['trailing'] == null
+          ? null
+          : Widget.fromJson(json['trailing'] as Map<String, dynamic>),
+      destinations: (json['destinations'] as List<dynamic>)
+          .map((e) =>
+              NavigationRailDestination.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      selectedIndex: json['selectedIndex'] as int?,
+      onDestinationSelected: json['onDestinationSelected'] == null
+          ? null
+          : IntSelectionCallback.fromJson(
+              json['onDestinationSelected'] as Map<String, dynamic>),
+      elevation: (json['elevation'] as num?)?.toDouble(),
+      groupAlignment: (json['groupAlignment'] as num?)?.toDouble(),
+      labelType: $enumDecodeNullable(
+          _$NavigationRailLabelTypeEnumMap, json['labelType']),
+      unselectedLabelTextStyle: json['unselectedLabelTextStyle'] == null
+          ? null
+          : TextStyle.fromJson(
+              json['unselectedLabelTextStyle'] as Map<String, dynamic>),
+      selectedLabelTextStyle: json['selectedLabelTextStyle'] == null
+          ? null
+          : TextStyle.fromJson(
+              json['selectedLabelTextStyle'] as Map<String, dynamic>),
+      unselectedIconTheme: json['unselectedIconTheme'] == null
+          ? null
+          : IconThemeData.fromJson(
+              json['unselectedIconTheme'] as Map<String, dynamic>),
+      selectedIconTheme: json['selectedIconTheme'] == null
+          ? null
+          : IconThemeData.fromJson(
+              json['selectedIconTheme'] as Map<String, dynamic>),
+      minWidth: (json['minWidth'] as num?)?.toDouble(),
+      minExtendedWidth: (json['minExtendedWidth'] as num?)?.toDouble(),
+      useIndicator: json['useIndicator'] as bool?,
+      indicatorColor: json['indicatorColor'] == null
+          ? null
+          : Color.fromJson(json['indicatorColor'] as Map<String, dynamic>),
+      indicatorShape: json['indicatorShape'] == null
+          ? null
+          : ShapeBorder.fromJson(
+              json['indicatorShape'] as Map<String, dynamic>),
+      $type: json['runtimeType'] as String?,
+    );
+
+Map<String, dynamic> _$$NavigationRailToJson(_$NavigationRail instance) =>
+    <String, dynamic>{
+      'key': instance.key,
+      'backgroundColor': instance.backgroundColor,
+      'extended': instance.extended,
+      'leading': instance.leading,
+      'trailing': instance.trailing,
+      'destinations': instance.destinations,
+      'selectedIndex': instance.selectedIndex,
+      'onDestinationSelected': instance.onDestinationSelected,
+      'elevation': instance.elevation,
+      'groupAlignment': instance.groupAlignment,
+      'labelType': _$NavigationRailLabelTypeEnumMap[instance.labelType],
+      'unselectedLabelTextStyle': instance.unselectedLabelTextStyle,
+      'selectedLabelTextStyle': instance.selectedLabelTextStyle,
+      'unselectedIconTheme': instance.unselectedIconTheme,
+      'selectedIconTheme': instance.selectedIconTheme,
+      'minWidth': instance.minWidth,
+      'minExtendedWidth': instance.minExtendedWidth,
+      'useIndicator': instance.useIndicator,
+      'indicatorColor': instance.indicatorColor,
+      'indicatorShape': instance.indicatorShape,
+      'runtimeType': instance.$type,
+    };
+
+const _$NavigationRailLabelTypeEnumMap = {
+  NavigationRailLabelType.none: 'none',
+  NavigationRailLabelType.selected: 'selected',
+  NavigationRailLabelType.all: 'all',
+};
+
+_$NavigationBar _$$NavigationBarFromJson(Map<String, dynamic> json) =>
+    _$NavigationBar(
+      key: json['key'] == null
+          ? null
+          : Key.fromJson(json['key'] as Map<String, dynamic>),
+      animationDuration: json['animationDuration'] == null
+          ? null
+          : Duration(microseconds: json['animationDuration'] as int),
+      selectedIndex: json['selectedIndex'] as int? ?? 0,
+      destinations: (json['destinations'] as List<dynamic>)
+          .map((e) => Widget.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      onDestinationSelected: json['onDestinationSelected'] == null
+          ? null
+          : IntSelectionCallback.fromJson(
+              json['onDestinationSelected'] as Map<String, dynamic>),
+      backgroundColor: json['backgroundColor'] == null
+          ? null
+          : Color.fromJson(json['backgroundColor'] as Map<String, dynamic>),
+      elevation: (json['elevation'] as num?)?.toDouble(),
+      shadowColor: json['shadowColor'] == null
+          ? null
+          : Color.fromJson(json['shadowColor'] as Map<String, dynamic>),
+      surfaceTintColor: json['surfaceTintColor'] == null
+          ? null
+          : Color.fromJson(json['surfaceTintColor'] as Map<String, dynamic>),
+      indicatorColor: json['indicatorColor'] == null
+          ? null
+          : Color.fromJson(json['indicatorColor'] as Map<String, dynamic>),
+      indicatorShape: json['indicatorShape'] == null
+          ? null
+          : ShapeBorder.fromJson(
+              json['indicatorShape'] as Map<String, dynamic>),
+      height: (json['height'] as num?)?.toDouble(),
+      labelBehavior: $enumDecodeNullable(
+          _$NavigationDestinationLabelBehaviorEnumMap, json['labelBehavior']),
+      $type: json['runtimeType'] as String?,
+    );
+
+Map<String, dynamic> _$$NavigationBarToJson(_$NavigationBar instance) =>
+    <String, dynamic>{
+      'key': instance.key,
+      'animationDuration': instance.animationDuration?.inMicroseconds,
+      'selectedIndex': instance.selectedIndex,
+      'destinations': instance.destinations,
+      'onDestinationSelected': instance.onDestinationSelected,
+      'backgroundColor': instance.backgroundColor,
+      'elevation': instance.elevation,
+      'shadowColor': instance.shadowColor,
+      'surfaceTintColor': instance.surfaceTintColor,
+      'indicatorColor': instance.indicatorColor,
+      'indicatorShape': instance.indicatorShape,
+      'height': instance.height,
+      'labelBehavior':
+          _$NavigationDestinationLabelBehaviorEnumMap[instance.labelBehavior],
+      'runtimeType': instance.$type,
+    };
+
+const _$NavigationDestinationLabelBehaviorEnumMap = {
+  NavigationDestinationLabelBehavior.alwaysShow: 'alwaysShow',
+  NavigationDestinationLabelBehavior.alwaysHide: 'alwaysHide',
+  NavigationDestinationLabelBehavior.onlyShowSelected: 'onlyShowSelected',
+};
+
+_$DefaultTabController _$$DefaultTabControllerFromJson(
+        Map<String, dynamic> json) =>
+    _$DefaultTabController(
+      key: json['key'] == null
+          ? null
+          : Key.fromJson(json['key'] as Map<String, dynamic>),
+      length: json['length'] as int,
+      initialIndex: json['initialIndex'] as int? ?? 0,
+      child: Widget.fromJson(json['child'] as Map<String, dynamic>),
+      animationDuration: json['animationDuration'] == null
+          ? null
+          : Duration(microseconds: json['animationDuration'] as int),
+      $type: json['runtimeType'] as String?,
+    );
+
+Map<String, dynamic> _$$DefaultTabControllerToJson(
+        _$DefaultTabController instance) =>
+    <String, dynamic>{
+      'key': instance.key,
+      'length': instance.length,
+      'initialIndex': instance.initialIndex,
+      'child': instance.child,
+      'animationDuration': instance.animationDuration?.inMicroseconds,
+      'runtimeType': instance.$type,
+    };
+
+_$Tab _$$TabFromJson(Map<String, dynamic> json) => _$Tab(
+      key: json['key'] == null
+          ? null
+          : Key.fromJson(json['key'] as Map<String, dynamic>),
+      text: json['text'] as String?,
+      icon: json['icon'] == null
+          ? null
+          : Widget.fromJson(json['icon'] as Map<String, dynamic>),
+      iconMargin: json['iconMargin'] == null
+          ? const EdgeInsets.only(bottom: 10.0)
+          : EdgeInsets.fromJson(json['iconMargin'] as Map<String, dynamic>),
+      height: (json['height'] as num?)?.toDouble(),
+      child: json['child'] == null
+          ? null
+          : Widget.fromJson(json['child'] as Map<String, dynamic>),
+      $type: json['runtimeType'] as String?,
+    );
+
+Map<String, dynamic> _$$TabToJson(_$Tab instance) => <String, dynamic>{
+      'key': instance.key,
+      'text': instance.text,
+      'icon': instance.icon,
+      'iconMargin': instance.iconMargin,
+      'height': instance.height,
+      'child': instance.child,
+      'runtimeType': instance.$type,
+    };
+
+_$TabBarView _$$TabBarViewFromJson(Map<String, dynamic> json) => _$TabBarView(
+      key: json['key'] == null
+          ? null
+          : Key.fromJson(json['key'] as Map<String, dynamic>),
+      children: (json['children'] as List<dynamic>)
+          .map((e) => Widget.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      physics: json['physics'] == null
+          ? null
+          : ScrollPhysics.fromJson(json['physics'] as Map<String, dynamic>),
+      dragStartBehavior: $enumDecodeNullable(
+              _$DragStartBehaviorEnumMap, json['dragStartBehavior']) ??
+          DragStartBehavior.start,
+      viewportFraction: (json['viewportFraction'] as num?)?.toDouble() ?? 1.0,
+      clipBehavior: $enumDecodeNullable(_$ClipEnumMap, json['clipBehavior']) ??
+          Clip.hardEdge,
+      $type: json['runtimeType'] as String?,
+    );
+
+Map<String, dynamic> _$$TabBarViewToJson(_$TabBarView instance) =>
+    <String, dynamic>{
+      'key': instance.key,
+      'children': instance.children,
+      'physics': instance.physics,
+      'dragStartBehavior':
+          _$DragStartBehaviorEnumMap[instance.dragStartBehavior]!,
+      'viewportFraction': instance.viewportFraction,
+      'clipBehavior': _$ClipEnumMap[instance.clipBehavior]!,
+      'runtimeType': instance.$type,
+    };
+
+const _$DragStartBehaviorEnumMap = {
+  DragStartBehavior.down: 'down',
+  DragStartBehavior.start: 'start',
+};

@@ -171,3 +171,83 @@ const divider = {
     "thickness": 2,
     "runtimeType": "divider"
 }
+
+const navigationRail = {
+    "groupAlignment": 0.0,
+    "labelType": "selected",
+    "leading": {
+        "child": {
+            "icon": {
+                "codePoint": 57415,
+                "fontFamily": "MaterialIcons",
+                "matchTextDirection": false
+            },
+            "runtimeType": "icon"
+        },
+        "onPressed": {
+            "runtimeType": "empty"
+        },
+        "runtimeType": "floatingActionButton"
+    },
+    "elevation": 4,
+    "selectedIndex": 1,
+    "destinations": [
+        {
+            "icon": {
+                "icon": {
+                    "codePoint": 57415,
+                    "fontFamily": "MaterialIcons",
+                    "matchTextDirection": false
+                },
+                "runtimeType": "icon"
+            },
+            "label": {
+                "data": "Filled Button",
+                "runtimeType": "text"
+            }
+        },
+        {
+            "icon": {
+                "icon": {
+                    "codePoint": 57415,
+                    "fontFamily": "MaterialIcons",
+                    "matchTextDirection": false
+                },
+                "runtimeType": "icon"
+            },
+            "label": {
+                "data": "New",
+                "runtimeType": "text"
+            }
+        },
+        {
+            "icon": {
+                "icon": {
+                    "codePoint": 57415,
+                    "fontFamily": "MaterialIcons",
+                    "matchTextDirection": false
+                },
+                "runtimeType": "icon"
+            },
+            "label": {
+                "data": "Filled Button",
+                "runtimeType": "text"
+            }
+        },
+        {
+            "icon": {
+                "icon": {
+                    "codePoint": 57415,
+                    "fontFamily": "MaterialIcons",
+                    "matchTextDirection": false
+                },
+                "runtimeType": "icon"
+            },
+            "label": {
+                "data": "Filled Button",
+                "runtimeType": "text"
+            }
+        }
+    ],
+    "runtimeType": "navigationRail"
+}

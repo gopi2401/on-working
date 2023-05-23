@@ -2038,6 +2038,43 @@ class _FlutterWidgetState extends material.State<FlutterWidget> {
     );
   }
 
+  material.IconThemeData? $iconThemeData(
+    final material.BuildContext context,
+    final widgets.IconThemeData? iconThemeData,
+  ) {
+    if (iconThemeData == null) return null;
+    return material.IconThemeData(
+      size: iconThemeData.size,
+      fill: iconThemeData.fill,
+      weight: iconThemeData.weight,
+      grade: iconThemeData.grade,
+      opticalSize: iconThemeData.opticalSize,
+      color: $color(context, iconThemeData.color),
+      opacity: iconThemeData.opacity,
+      shadows: iconThemeData.shadows
+          ?.map((shadow) => $shadow(context, shadow)!)
+          .toList(),
+    );
+  }
+
+  material.NavigationRailDestination? $navigationRailDestination(
+    final material.BuildContext context,
+    final widgets.NavigationRailDestination? navigationRailDestination,
+  ) {
+    if (navigationRailDestination == null) return null;
+    return material.NavigationRailDestination(
+      icon: $widget(context, navigationRailDestination.icon)!,
+      selectedIcon: $widget(context, navigationRailDestination.selectedIcon),
+      indicatorColor: $color(context, navigationRailDestination.indicatorColor),
+      indicatorShape: $shapeBorder(
+        context,
+        navigationRailDestination.indicatorShape,
+      ),
+      label: $widget(context, navigationRailDestination.label)!,
+      padding: $edgeInsets(navigationRailDestination.padding),
+    );
+  }
+
   List<material.Widget>? $widgets(
     final material.BuildContext context,
     final List<widgets.Widget>? widgets,
@@ -2394,6 +2431,75 @@ class _FlutterWidgetState extends material.State<FlutterWidget> {
         indent: value.indent,
         endIndent: value.endIndent,
         color: $color(context, value.color),
+      ),
+      navigationBar: (value) => material.NavigationBar(
+        key: $key(value.key),
+        animationDuration: value.animationDuration,
+        selectedIndex: value.selectedIndex,
+        destinations: $widgets(context, value.destinations)!,
+        onDestinationSelected:
+            $intSelection(context, value.onDestinationSelected),
+        backgroundColor: $color(context, value.backgroundColor),
+        elevation: value.elevation,
+        shadowColor: $color(context, value.shadowColor),
+        surfaceTintColor: $color(context, value.surfaceTintColor),
+        indicatorColor: $color(context, value.indicatorColor),
+        indicatorShape: $shapeBorder(context, value.indicatorShape),
+        height: value.height,
+        labelBehavior: $enum(value.labelBehavior,
+            material.NavigationDestinationLabelBehavior.values),
+      ),
+      navigationRail: (value) => material.NavigationRail(
+        key: $key(value.key),
+        backgroundColor: $color(context, value.backgroundColor),
+        extended: value.extended,
+        leading: $widget(context, value.leading),
+        trailing: $widget(context, value.trailing),
+        selectedIndex: value.selectedIndex,
+        onDestinationSelected:
+            $intSelection(context, value.onDestinationSelected),
+        elevation: value.elevation,
+        groupAlignment: value.groupAlignment,
+        labelType:
+            $enum(value.labelType, material.NavigationRailLabelType.values),
+        unselectedLabelTextStyle:
+            $textStyle(context, value.unselectedLabelTextStyle),
+        selectedLabelTextStyle:
+            $textStyle(context, value.selectedLabelTextStyle),
+        unselectedIconTheme: $iconThemeData(context, value.unselectedIconTheme),
+        selectedIconTheme: $iconThemeData(context, value.selectedIconTheme),
+        minWidth: value.minWidth,
+        minExtendedWidth: value.minExtendedWidth,
+        useIndicator: value.useIndicator,
+        indicatorColor: $color(context, value.indicatorColor),
+        indicatorShape: $shapeBorder(context, value.indicatorShape),
+        destinations: value.destinations
+            .map((e) => $navigationRailDestination(context, e)!)
+            .toList(),
+      ),
+      defaultTabController: (value) => material.DefaultTabController(
+        key: $key(value.key),
+        length: value.length,
+        initialIndex: value.initialIndex,
+        child: $widget(context, value.child)!,
+        animationDuration: value.animationDuration,
+      ),
+      tab: (value) => material.Tab(
+        key: $key(value.key),
+        text: value.text,
+        icon: $widget(context, value.icon),
+        iconMargin: $edgeInsets(value.iconMargin)!,
+        height: value.height,
+        child: $widget(context, value.child),
+      ),
+      tabBarView: (value) => material.TabBarView(
+        key: $key(value.key),
+        children: $widgets(context, value.children)!,
+        physics: $scrollPhysics(value.physics),
+        dragStartBehavior:
+            $enum(value.dragStartBehavior, gestures.DragStartBehavior.values)!,
+        viewportFraction: value.viewportFraction,
+        clipBehavior: $enum(value.clipBehavior, material.Clip.values)!,
       ),
     );
     if (this.widget.wrappingBuilder != null) {

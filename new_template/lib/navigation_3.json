@@ -1,0 +1,68 @@
+    {
+        "body": {
+            "child": {
+                "mainAxisAlignment": "center",
+                "mainAxisSize": "max",
+                "crossAxisAlignment": "center",
+                "verticalDirection": "down",
+                "children": [
+                    {
+                        "child": {
+                            "child": {
+                                "appBar": {
+                                    "tabs": [
+                                        {
+                                            "text": "Video",
+                                            "icon": {
+                                                "icon": {
+                                                    "codePoint": 57415,
+                                                    "fontFamily": "MaterialIcons",
+                                                    "matchTextDirection": false
+                                                },
+                                                "runtimeType": "icon"
+                                            },
+                                            "runtimeType": "tab"
+                                        },
+                                        {
+                                            "text": "Photos",
+                                            "icon": {
+                                                "icon": {
+                                                    "codePoint": 57415,
+                                                    "fontFamily": "MaterialIcons",
+                                                    "matchTextDirection": false
+                                                },
+                                                "runtimeType": "icon"
+                                            },
+                                            "runtimeType": "tab"
+                                        },
+                                        {
+                                            "text": "Audio",
+                                            "icon": {
+                                                "icon": {
+                                                    "codePoint": 57415,
+                                                    "fontFamily": "MaterialIcons",
+                                                    "matchTextDirection": false
+                                                },
+                                                "runtimeType": "icon"
+                                            },
+                                            "runtimeType": "tab"
+                                        }
+                                    ],
+                                    "runtimeType": "tabBar"
+                                },
+                                "runtimeType": "scaffold"
+                            },
+                            "length": 3,
+                            "runtimeType": "defaultTabController"
+                        },
+                        "width": 420,
+                        "height": 100,
+                        "runtimeType": "sizedBox"
+                    }
+                ],
+                "runtimeType": "column"
+            },
+            "runtimeType": "center"
+        },
+        "runtimeType": "scaffold"
+    }

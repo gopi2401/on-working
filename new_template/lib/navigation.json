@@ -1,0 +1,87 @@
+{
+    "appBar": {
+        "leadingWidth": 120,
+        "leading": {
+            "children": [
+                {
+                    "onPressed": {
+                        "runtimeType": "empty"
+                    },
+                    "icon": {
+                        "icon": {
+                            "codePoint": 57415,
+                            "fontFamily": "MaterialIcons",
+                            "matchTextDirection": false
+                        },
+                        "runtimeType": "icon"
+                    },
+                    "runtimeType": "iconButton"
+                },
+                {
+                    "onPressed": {
+                        "runtimeType": "empty"
+                    },
+                    "icon": {
+                        "icon": {
+                            "codePoint": 57415,
+                            "fontFamily": "MaterialIcons",
+                            "matchTextDirection": false
+                        },
+                        "runtimeType": "icon"
+                    },
+                    "runtimeType": "iconButton"
+                },
+                {
+                    "onPressed": {
+                        "runtimeType": "empty"
+                    },
+                    "icon": {
+                        "icon": {
+                            "codePoint": 57415,
+                            "fontFamily": "MaterialIcons",
+                            "matchTextDirection": false
+                        },
+                        "runtimeType": "icon"
+                    },
+                    "runtimeType": "iconButton"
+                }
+            ],
+            "runtimeType": "row"
+        },
+        "actions": [
+            {
+                "onPressed": {
+                    "runtimeType": "empty"
+                },
+                "icon": {
+                    "icon": {
+                        "codePoint": 57415,
+                        "fontFamily": "MaterialIcons",
+                        "matchTextDirection": false
+                    },
+                    "runtimeType": "icon"
+                },
+                "runtimeType": "iconButton"
+            }
+        ],
+        "automaticallyImplyLeading": true,
+        "primary": true,
+        "excludeHeaderSemantics": false,
+        "toolbarOpacity": 1.0,
+        "bottomOpacity": 1.0,
+        "forceMaterialTransparency": false,
+        "runtimeType": "appBar"
+    },
+    "body": {
+        "child": {
+            "mainAxisAlignment": "center",
+            "mainAxisSize": "max",
+            "crossAxisAlignment": "center",
+            "verticalDirection": "down",
+            "children": [],
+            "runtimeType": "column"
+        },
+        "runtimeType": "center"
+    },
+    "runtimeType": "scaffold"
+}

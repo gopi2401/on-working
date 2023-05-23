@@ -1,0 +1,82 @@
+{
+    "body": {
+        "child": {
+            "mainAxisAlignment": "center",
+            "mainAxisSize": "max",
+            "crossAxisAlignment": "center",
+            "verticalDirection": "down",
+            "children": [],
+            "runtimeType": "column"
+        },
+        "runtimeType": "center"
+    },
+    "bottomNavigationBar": {
+        "destinations": [
+            {
+                "child": {
+                    "onPressed": {
+                        "runtimeType": "empty"
+                    },
+                    "icon": {
+                        "icon": {
+                            "codePoint": 57415,
+                            "fontFamily": "MaterialIcons",
+                            "matchTextDirection": false
+                        },
+                        "runtimeType": "icon"
+                    },
+                    "runtimeType": "iconButton"
+                },
+                "padding": {
+                    "horizontal": 60,
+                    "runtimeType": "symmetric"
+                },
+                "runtimeType": "container"
+            },
+            {
+                "child": {
+                    "onPressed": {
+                        "runtimeType": "empty"
+                    },
+                    "icon": {
+                        "icon": {
+                            "codePoint": 57415,
+                            "fontFamily": "MaterialIcons",
+                            "matchTextDirection": false
+                        },
+                        "runtimeType": "icon"
+                    },
+                    "runtimeType": "iconButton"
+                },
+                "padding": {
+                    "horizontal": 60,
+                    "runtimeType": "symmetric"
+                },
+                "runtimeType": "container"
+            },
+            {
+                "child": {
+                    "onPressed": {
+                        "runtimeType": "empty"
+                    },
+                    "icon": {
+                        "icon": {
+                            "codePoint": 57415,
+                            "fontFamily": "MaterialIcons",
+                            "matchTextDirection": false
+                        },
+                        "runtimeType": "icon"
+                    },
+                    "runtimeType": "iconButton"
+                },
+                "padding": {
+                    "horizontal": 60,
+                    "runtimeType": "symmetric"
+                },
+                "runtimeType": "container"
+            }
+        ],
+        "runtimeType": "navigationBar"
+    },
+    "runtimeType": "scaffold"
+}

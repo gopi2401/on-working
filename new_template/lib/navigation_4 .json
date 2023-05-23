@@ -1,0 +1,40 @@
+    {
+        "body": {
+            "child": {
+                "mainAxisAlignment": "center",
+                "mainAxisSize": "max",
+                "crossAxisAlignment": "center",
+                "verticalDirection": "down",
+                "children": [
+                    {
+                        "child": {
+                            "appBar": {
+                                "leading": {
+                                    "onPressed": {
+                                        "runtimeType": "empty"
+                                    },
+                                    "icon": {
+                                        "icon": {
+                                            "codePoint": 57415,
+                                            "fontFamily": "MaterialIcons",
+                                            "matchTextDirection": false
+                                        },
+                                        "runtimeType": "icon"
+                                    },
+                                    "runtimeType": "iconButton"
+                                },
+                                "runtimeType": "appBar"
+                            },
+                            "runtimeType": "scaffold"
+                        },
+                        "width": 420,
+                        "height": 100,
+                        "runtimeType": "sizedBox"
+                    }
+                ],
+                "runtimeType": "column"
+            },
+            "runtimeType": "center"
+        },
+        "runtimeType": "scaffold"
+    }

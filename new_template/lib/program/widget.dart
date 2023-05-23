@@ -6,8 +6,11 @@ import 'package:vector_math/vector_math.dart';
 import 'color.dart';
 import 'edge_insets.dart';
 import 'enums.dart';
+import 'icon_theme_data.dart';
 import 'key.dart';
+import 'navigation_rail_destination.dart';
 import 'new/buttonStyle.dart';
+import 'scroll_physics.dart';
 import 'shape_border.dart';
 import 'callback.dart';
 import 'locale.dart';
@@ -301,6 +304,71 @@ class Widget with _$Widget {
     double? endIndent,
     Color? color,
   }) = Divider;
+
+  const factory Widget.navigationRail({
+    Key? key,
+    Color? backgroundColor,
+    @Default(false) bool extended,
+    Widget? leading,
+    Widget? trailing,
+    required List<NavigationRailDestination> destinations,
+    required int? selectedIndex,
+    IntSelectionCallback? onDestinationSelected,
+    double? elevation,
+    double? groupAlignment,
+    NavigationRailLabelType? labelType,
+    TextStyle? unselectedLabelTextStyle,
+    TextStyle? selectedLabelTextStyle,
+    IconThemeData? unselectedIconTheme,
+    IconThemeData? selectedIconTheme,
+    double? minWidth,
+    double? minExtendedWidth,
+    bool? useIndicator,
+    Color? indicatorColor,
+    ShapeBorder? indicatorShape,
+  }) = NavigationRail;
+
+  const factory Widget.navigationBar({
+    Key? key,
+    Duration? animationDuration,
+    @Default(0) int selectedIndex,
+    required List<Widget> destinations,
+    IntSelectionCallback? onDestinationSelected,
+    Color? backgroundColor,
+    double? elevation,
+    Color? shadowColor,
+    Color? surfaceTintColor,
+    Color? indicatorColor,
+    ShapeBorder? indicatorShape,
+    double? height,
+    NavigationDestinationLabelBehavior? labelBehavior,
+  }) = NavigationBar;
+
+  const factory Widget.defaultTabController({
+    Key? key,
+    required int length,
+    @Default(0) int initialIndex,
+    required Widget child,
+    Duration? animationDuration,
+  }) = DefaultTabController;
+
+  const factory Widget.tab({
+    Key? key,
+    String? text,
+    Widget? icon,
+    @Default(EdgeInsets.only(bottom: 10.0)) EdgeInsets iconMargin,
+    double? height,
+    Widget? child,
+  }) = Tab;
+
+  const factory Widget.tabBarView({
+    Key? key,
+    required List<Widget> children,
+    ScrollPhysics? physics,
+    @Default(DragStartBehavior.start) DragStartBehavior dragStartBehavior,
+    @Default(1.0) double viewportFraction,
+    @Default(Clip.hardEdge) Clip clipBehavior,
+  }) = TabBarView;
 
   factory Widget.fromJson(Map<String, Object?> json) => _$WidgetFromJson(json);
 }
