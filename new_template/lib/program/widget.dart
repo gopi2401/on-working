@@ -3,17 +3,27 @@ library widget;
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:vector_math/vector_math.dart';
 
+import 'border_radius.dart';
+import 'border_side.dart';
 import 'color.dart';
+import 'dropdown_menu_item.dart';
 import 'edge_insets.dart';
 import 'enums.dart';
+import 'form_data.dart';
 import 'icon_theme_data.dart';
+import 'image_provider.dart';
+import 'input_decoration.dart';
 import 'key.dart';
+import 'material_state_property.dart';
 import 'navigation_rail_destination.dart';
 import 'new/buttonStyle.dart';
+import 'offset.dart';
+import 'popup_menu_entry.dart';
 import 'scroll_physics.dart';
 import 'shape_border.dart';
 import 'callback.dart';
 import 'locale.dart';
+import 'sliver.dart';
 import 'text_style.dart';
 import 'strut_style.dart';
 import 'text_height_behavior.dart';
@@ -370,5 +380,290 @@ class Widget with _$Widget {
     @Default(Clip.hardEdge) Clip clipBehavior,
   }) = TabBarView;
 
+  const factory Widget.customScrollView({
+    Key? key,
+    @Default(Axis.vertical) Axis scrollDirection,
+    @Default(false) bool reverse,
+    bool? primary,
+    ScrollPhysics? physics,
+    @Default(false) bool shrinkWrap,
+    Key? center,
+    @Default(0.0) double anchor,
+    double? cacheExtent,
+    @Default([]) List<Sliver> slivers,
+    int? semanticChildCount,
+    @Default(ScrollViewKeyboardDismissBehavior.manual)
+    ScrollViewKeyboardDismissBehavior keyboardDismissBehavior,
+    String? restorationId,
+    @Default(Clip.hardEdge) Clip clipBehavior,
+  }) = CustomScrollView;
+
+  const factory Widget.checkbox({
+    Key? key,
+    required bool? value,
+    @Default(false) bool tristate,
+    FormBoolField? field,
+    MouseCursor? mouseCursor,
+    Color? activeColor,
+    MaterialStateProperty? fillColor,
+    Color? checkColor,
+    Color? focusColor,
+    Color? hoverColor,
+    MaterialStateProperty? overlayColor,
+    double? splashRadius,
+    MaterialTapTargetSize? materialTapTargetSize,
+    VisualDensity? visualDensity,
+    @Default(false) bool autofocus,
+    ShapeBorder? shape,
+    BorderSide? side,
+    @Default(false) bool isError,
+  }) = Checkbox;
+  const factory Widget.dropdownButtonFormField({
+    Key? key,
+    FormStringField? field,
+    required List<DropdownMenuItem> items,
+    String? value,
+    Widget? hint,
+    Widget? disabledHint,
+    Callback? onTap,
+    @Default(8) int elevation,
+    TextStyle? style,
+    Widget? icon,
+    Color? iconDisabledColor,
+    Color? iconEnabledColor,
+    @Default(24.0) double iconSize,
+    @Default(true) bool isDense,
+    @Default(false) bool isExpanded,
+    double? itemHeight,
+    Color? focusColor,
+    @Default(false) bool autofocus,
+    Color? dropdownColor,
+    InputDecoration? decoration,
+    Map<String, String>? validatorMessages,
+    AutovalidateMode? autovalidateMode,
+    double? menuMaxHeight,
+    bool? enableFeedback,
+    @Default(Alignment.centerLeft) Alignment alignment,
+    BorderRadius? borderRadius,
+  }) = DropdownButtonFormField;
+
+  const factory Widget.popupMenuButton({
+    Key? key,
+    required List<PopupMenuEntry> items,
+    String? initialValue,
+    Callback? onOpened,
+    FormStringField? field,
+    Callback? onCanceled,
+    String? tooltip,
+    double? elevation,
+    Color? shadowColor,
+    Color? surfaceTintColor,
+    @Default(EdgeInsets.all(8.0)) EdgeInsets padding,
+    Widget? child,
+    double? splashRadius,
+    Widget? icon,
+    double? iconSize,
+    @Default(Offset.zero) Offset offset,
+    @Default(true) bool enabled,
+    ShapeBorder? shape,
+    Color? color,
+    bool? enableFeedback,
+    BoxConstraints? constraints,
+    PopupMenuPosition? position,
+    @Default(Clip.none) Clip clipBehavior,
+  }) = PopupMenuButton;
+
+//     New    ====>
+
+  const factory Widget.navigationDestination({
+    Key? key,
+    required Widget icon,
+    Widget? selectedIcon,
+    required String label,
+    String? tooltip,
+  }) = NavigationDestination;
+
+  const factory Widget.actionChip({
+    Key? key,
+    Widget? avatar, // any
+    required Widget label,
+    TextStyle? labelStyle,
+    EdgeInsets? labelPadding,
+    Callback? onPressed,
+    double? pressElevation,
+    String? tooltip,
+    BorderSide? side,
+    ShapeBorder? shape,
+    @Default(Clip.none) Clip clipBehavior,
+    // Widget? focusNode, // any
+    @Default(false) bool autofocus,
+    Color? backgroundColor,
+    Color? disabledColor,
+    EdgeInsets? padding,
+    VisualDensity? visualDensity,
+    MaterialTapTargetSize? materialTapTargetSize,
+    double? elevation,
+    Color? shadowColor,
+    Color? surfaceTintColor,
+    IconThemeData? iconTheme,
+  }) = ActionChip;
+
+  const factory Widget.filterChip(
+      {Key? key,
+      Widget? avatar, // any
+      required Widget label,
+      TextStyle? labelStyle,
+      EdgeInsets? labelPadding,
+      @Default(false) bool selected,
+      required BoolSelectionCallback onSelected, //any  ValueChanged<bool>?
+      double? pressElevation,
+      Color? disabledColor,
+      Color? selectedColor,
+      String? tooltip,
+      BorderSide? side,
+      ShapeBorder? shape,
+      @Default(Clip.none) Clip clipBehavior,
+      // Widget? focusNode, // any
+      @Default(false) bool autofocus,
+      Color? backgroundColor,
+      EdgeInsets? padding,
+      VisualDensity? visualDensity,
+      MaterialTapTargetSize? materialTapTargetSize,
+      double? elevation,
+      Color? shadowColor,
+      Color? surfaceTintColor,
+      IconThemeData? iconTheme,
+      Color? selectedShadowColor,
+      bool? showCheckmark,
+      Color? checkmarkColor,
+      @Default(ShapeBorder.circle()) ShapeBorder avatarBorder //any
+      }) = FilterChip;
+
+  const factory Widget.inputChip(
+      {Key? key,
+      Widget? avatar, // any
+      required Widget label,
+      TextStyle? labelStyle,
+      EdgeInsets? labelPadding,
+      @Default(false) bool selected,
+      @Default(true) bool isEnabled,
+      BoolSelectionCallback? onSelected, //any  ValueChanged<bool>?
+      Widget? deleteIcon,
+      Callback? onDeleted,
+      Color? deleteIconColor,
+      String? deleteButtonTooltipMessage,
+      Callback? onPressed,
+      double? pressElevation,
+      Color? disabledColor,
+      Color? selectedColor,
+      String? tooltip,
+      BorderSide? side,
+      ShapeBorder? shape,
+      @Default(Clip.none) Clip clipBehavior,
+      // Widget? focusNode, // any
+      @Default(false) bool autofocus,
+      Color? backgroundColor,
+      EdgeInsets? padding,
+      VisualDensity? visualDensity,
+      MaterialTapTargetSize? materialTapTargetSize,
+      double? elevation,
+      Color? shadowColor,
+      Color? surfaceTintColor,
+      IconThemeData? iconTheme,
+      Color? selectedShadowColor,
+      bool? showCheckmark,
+      Color? checkmarkColor,
+      @Default(ShapeBorder.circle()) ShapeBorder avatarBorder //any
+      }) = InputChip;
+
+  // const factory Widget.menuAnchor({
+  //   Key? key,
+  //   controller,
+  //   childFocusNode,
+  //   style,
+  //   alignmentOffset = Offset.zero,
+  //   @Default(Clip.hardEdge) Clip clipBehavior,
+  //   anchorTapClosesMenu = false,
+  //   onOpen,
+  //   onClose,
+  //   crossAxisUnconstrained = true,
+  //   required menuChildren,
+  //   builder,
+  //   child,
+  // }) = MenuAnchor;
+
+  // const factory Widget.slider({
+  //   Key? key,
+  //   required double value,
+  //   double? secondaryTrackValue,
+  //   required IntSelectionCallback onChanged, //ValueChanged<double>?
+  //   IntSelectionCallback? onChangeStart, //ValueChanged<double>?
+  //   IntSelectionCallback? onChangeEnd, //ValueChanged<double>?
+  //   @Default(0.0) double min,
+  //   @Default(1.0) double max,
+  //   int? divisions,
+  //   String? label,
+  //   Color? activeColor,
+  //   Color? inactiveColor,
+  //   Color? secondaryActiveColor,
+  //   Color? thumbColor,
+  //   MaterialStateProperty? overlayColor,
+  //   MouseCursor? mouseCursor,
+  //   semanticFormatterCallback, //SemanticFormatterCallback?
+  //   focusNode, // FocusNode?
+  //   @Default(false) bool autofocus,
+  //   SliderInteraction? allowedInteraction,
+  // }) = Slider;
+
+  // const factory Widget.materialSwitch({
+  //   // Key? key,
+  //   // required bool value,
+  //   // required onChanged,
+  //   // FormBoolField? field,
+  //   // Color? activeColor,
+  //   // Color? activeTrackColor,
+  //   // Color? inactiveThumbColor,
+  //   // Color? inactiveTrackColor,
+  //   // ImageProvider? activeThumbImage,
+  //   // ImageProvider? inactiveThumbImage,
+  //   // MaterialStateProperty? thumbColor,
+  //   // MaterialStateProperty? trackColor,
+  //   // MaterialTapTargetSize? materialTapTargetSize,
+  //   // @Default(DragStartBehavior.start) DragStartBehavior dragStartBehavior,
+  //   // MouseCursor? mouseCursor,
+  //   // Color? focusColor,
+  //   // Color? hoverColor,
+  //   // MaterialStateProperty? overlayColor,
+  //   // double? splashRadius,
+  //   // BoolSelectionCallback? onFocusChange,
+  //   // @Default(false) bool autofocus,
+  //   Key? key,
+  //   required bool value,
+  //   required BoolSelectionCallback onChanged,
+  //   Color? activeColor,
+  //   Color? activeTrackColor,
+  //   Color? inactiveThumbColor,
+  //   Color? inactiveTrackColor,
+  //   ImageProvider? activeThumbImage,
+  //   // ImageErrorListener? onActiveThumbImageError,
+  //   ImageProvider? inactiveThumbImage,
+  //   //ImageErrorListener onInactiveThumbImageError,
+  //   MaterialTapTargetSize? materialTapTargetSize,
+  //   MaterialStateProperty? thumbColor,
+  //   MaterialStateProperty? trackColor,
+  //   MaterialStateProperty? trackOutlineColor,
+  //   MaterialStateProperty? trackOutlineWidth,
+  //   MaterialStateProperty? thumbIcon,
+  //   @Default(DragStartBehavior.start) DragStartBehavior dragStartBehavior,
+  //   MouseCursor? mouseCursor,
+  //   Color? focusColor,
+  //   Color? hoverColor,
+  //   MaterialStateProperty? overlayColor,
+  //   double? splashRadius,
+  //   //FocusNode? focusNode,
+  //   BoolSelectionCallback? onFocusChange,
+  //   @Default(false) bool autofocus,
+  //   bool? applyCupertinoTheme,
+  // }) = Switch;
   factory Widget.fromJson(Map<String, Object?> json) => _$WidgetFromJson(json);
 }

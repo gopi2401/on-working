@@ -66,6 +66,22 @@ Widget _$WidgetFromJson(Map<String, dynamic> json) {
       return Tab.fromJson(json);
     case 'tabBarView':
       return TabBarView.fromJson(json);
+    case 'customScrollView':
+      return CustomScrollView.fromJson(json);
+    case 'checkbox':
+      return Checkbox.fromJson(json);
+    case 'dropdownButtonFormField':
+      return DropdownButtonFormField.fromJson(json);
+    case 'popupMenuButton':
+      return PopupMenuButton.fromJson(json);
+    case 'navigationDestination':
+      return NavigationDestination.fromJson(json);
+    case 'actionChip':
+      return ActionChip.fromJson(json);
+    case 'filterChip':
+      return FilterChip.fromJson(json);
+    case 'inputChip':
+      return InputChip.fromJson(json);
 
     default:
       throw CheckedFromJsonException(json, 'runtimeType', 'Widget',
@@ -171,6 +187,14 @@ mixin _$Widget {
     required TResult Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration) defaultTabController,
     required TResult Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child) tab,
     required TResult Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior) tabBarView,
+    required TResult Function(Key? key, Axis scrollDirection, bool reverse, bool? primary, ScrollPhysics? physics, bool shrinkWrap, Key? center, double anchor, double? cacheExtent, List<Sliver> slivers, int? semanticChildCount, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior, String? restorationId, Clip clipBehavior) customScrollView,
+    required TResult Function(Key? key, bool? value, bool tristate, FormBoolField? field, MouseCursor? mouseCursor, Color? activeColor, MaterialStateProperty? fillColor, Color? checkColor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, MaterialTapTargetSize? materialTapTargetSize, VisualDensity? visualDensity, bool autofocus, ShapeBorder? shape, BorderSide? side, bool isError) checkbox,
+    required TResult Function(Key? key, FormStringField? field, List<DropdownMenuItem> items, String? value, Widget? hint, Widget? disabledHint, Callback? onTap, int elevation, TextStyle? style, Widget? icon, Color? iconDisabledColor, Color? iconEnabledColor, double iconSize, bool isDense, bool isExpanded, double? itemHeight, Color? focusColor, bool autofocus, Color? dropdownColor, InputDecoration? decoration, Map<String, String>? validatorMessages, AutovalidateMode? autovalidateMode, double? menuMaxHeight, bool? enableFeedback, Alignment alignment, BorderRadius? borderRadius) dropdownButtonFormField,
+    required TResult Function(Key? key, List<PopupMenuEntry> items, String? initialValue, Callback? onOpened, FormStringField? field, Callback? onCanceled, String? tooltip, double? elevation, Color? shadowColor, Color? surfaceTintColor, EdgeInsets padding, Widget? child, double? splashRadius, Widget? icon, double? iconSize, Offset offset, bool enabled, ShapeBorder? shape, Color? color, bool? enableFeedback, BoxConstraints? constraints, PopupMenuPosition? position, Clip clipBehavior) popupMenuButton,
+    required TResult Function(Key? key, Widget icon, Widget? selectedIcon, String label, String? tooltip) navigationDestination,
+    required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme) actionChip,
+    required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) filterChip,
+    required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) inputChip,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -268,6 +292,14 @@ mixin _$Widget {
     TResult? Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration)? defaultTabController,
     TResult? Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child)? tab,
     TResult? Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior)? tabBarView,
+    TResult? Function(Key? key, Axis scrollDirection, bool reverse, bool? primary, ScrollPhysics? physics, bool shrinkWrap, Key? center, double anchor, double? cacheExtent, List<Sliver> slivers, int? semanticChildCount, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior, String? restorationId, Clip clipBehavior)? customScrollView,
+    TResult? Function(Key? key, bool? value, bool tristate, FormBoolField? field, MouseCursor? mouseCursor, Color? activeColor, MaterialStateProperty? fillColor, Color? checkColor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, MaterialTapTargetSize? materialTapTargetSize, VisualDensity? visualDensity, bool autofocus, ShapeBorder? shape, BorderSide? side, bool isError)? checkbox,
+    TResult? Function(Key? key, FormStringField? field, List<DropdownMenuItem> items, String? value, Widget? hint, Widget? disabledHint, Callback? onTap, int elevation, TextStyle? style, Widget? icon, Color? iconDisabledColor, Color? iconEnabledColor, double iconSize, bool isDense, bool isExpanded, double? itemHeight, Color? focusColor, bool autofocus, Color? dropdownColor, InputDecoration? decoration, Map<String, String>? validatorMessages, AutovalidateMode? autovalidateMode, double? menuMaxHeight, bool? enableFeedback, Alignment alignment, BorderRadius? borderRadius)? dropdownButtonFormField,
+    TResult? Function(Key? key, List<PopupMenuEntry> items, String? initialValue, Callback? onOpened, FormStringField? field, Callback? onCanceled, String? tooltip, double? elevation, Color? shadowColor, Color? surfaceTintColor, EdgeInsets padding, Widget? child, double? splashRadius, Widget? icon, double? iconSize, Offset offset, bool enabled, ShapeBorder? shape, Color? color, bool? enableFeedback, BoxConstraints? constraints, PopupMenuPosition? position, Clip clipBehavior)? popupMenuButton,
+    TResult? Function(Key? key, Widget icon, Widget? selectedIcon, String label, String? tooltip)? navigationDestination,
+    TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
+    TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
+    TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -365,6 +397,14 @@ mixin _$Widget {
     TResult Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration)? defaultTabController,
     TResult Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child)? tab,
     TResult Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior)? tabBarView,
+    TResult Function(Key? key, Axis scrollDirection, bool reverse, bool? primary, ScrollPhysics? physics, bool shrinkWrap, Key? center, double anchor, double? cacheExtent, List<Sliver> slivers, int? semanticChildCount, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior, String? restorationId, Clip clipBehavior)? customScrollView,
+    TResult Function(Key? key, bool? value, bool tristate, FormBoolField? field, MouseCursor? mouseCursor, Color? activeColor, MaterialStateProperty? fillColor, Color? checkColor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, MaterialTapTargetSize? materialTapTargetSize, VisualDensity? visualDensity, bool autofocus, ShapeBorder? shape, BorderSide? side, bool isError)? checkbox,
+    TResult Function(Key? key, FormStringField? field, List<DropdownMenuItem> items, String? value, Widget? hint, Widget? disabledHint, Callback? onTap, int elevation, TextStyle? style, Widget? icon, Color? iconDisabledColor, Color? iconEnabledColor, double iconSize, bool isDense, bool isExpanded, double? itemHeight, Color? focusColor, bool autofocus, Color? dropdownColor, InputDecoration? decoration, Map<String, String>? validatorMessages, AutovalidateMode? autovalidateMode, double? menuMaxHeight, bool? enableFeedback, Alignment alignment, BorderRadius? borderRadius)? dropdownButtonFormField,
+    TResult Function(Key? key, List<PopupMenuEntry> items, String? initialValue, Callback? onOpened, FormStringField? field, Callback? onCanceled, String? tooltip, double? elevation, Color? shadowColor, Color? surfaceTintColor, EdgeInsets padding, Widget? child, double? splashRadius, Widget? icon, double? iconSize, Offset offset, bool enabled, ShapeBorder? shape, Color? color, bool? enableFeedback, BoxConstraints? constraints, PopupMenuPosition? position, Clip clipBehavior)? popupMenuButton,
+    TResult Function(Key? key, Widget icon, Widget? selectedIcon, String label, String? tooltip)? navigationDestination,
+    TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
+    TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
+    TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -398,6 +438,16 @@ mixin _$Widget {
     required TResult Function(DefaultTabController value) defaultTabController,
     required TResult Function(Tab value) tab,
     required TResult Function(TabBarView value) tabBarView,
+    required TResult Function(CustomScrollView value) customScrollView,
+    required TResult Function(Checkbox value) checkbox,
+    required TResult Function(DropdownButtonFormField value)
+        dropdownButtonFormField,
+    required TResult Function(PopupMenuButton value) popupMenuButton,
+    required TResult Function(NavigationDestination value)
+        navigationDestination,
+    required TResult Function(ActionChip value) actionChip,
+    required TResult Function(FilterChip value) filterChip,
+    required TResult Function(InputChip value) inputChip,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -429,6 +479,14 @@ mixin _$Widget {
     TResult? Function(DefaultTabController value)? defaultTabController,
     TResult? Function(Tab value)? tab,
     TResult? Function(TabBarView value)? tabBarView,
+    TResult? Function(CustomScrollView value)? customScrollView,
+    TResult? Function(Checkbox value)? checkbox,
+    TResult? Function(DropdownButtonFormField value)? dropdownButtonFormField,
+    TResult? Function(PopupMenuButton value)? popupMenuButton,
+    TResult? Function(NavigationDestination value)? navigationDestination,
+    TResult? Function(ActionChip value)? actionChip,
+    TResult? Function(FilterChip value)? filterChip,
+    TResult? Function(InputChip value)? inputChip,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -460,6 +518,14 @@ mixin _$Widget {
     TResult Function(DefaultTabController value)? defaultTabController,
     TResult Function(Tab value)? tab,
     TResult Function(TabBarView value)? tabBarView,
+    TResult Function(CustomScrollView value)? customScrollView,
+    TResult Function(Checkbox value)? checkbox,
+    TResult Function(DropdownButtonFormField value)? dropdownButtonFormField,
+    TResult Function(PopupMenuButton value)? popupMenuButton,
+    TResult Function(NavigationDestination value)? navigationDestination,
+    TResult Function(ActionChip value)? actionChip,
+    TResult Function(FilterChip value)? filterChip,
+    TResult Function(InputChip value)? inputChip,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -880,6 +946,14 @@ class _$Card implements Card {
     required TResult Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration) defaultTabController,
     required TResult Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child) tab,
     required TResult Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior) tabBarView,
+    required TResult Function(Key? key, Axis scrollDirection, bool reverse, bool? primary, ScrollPhysics? physics, bool shrinkWrap, Key? center, double anchor, double? cacheExtent, List<Sliver> slivers, int? semanticChildCount, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior, String? restorationId, Clip clipBehavior) customScrollView,
+    required TResult Function(Key? key, bool? value, bool tristate, FormBoolField? field, MouseCursor? mouseCursor, Color? activeColor, MaterialStateProperty? fillColor, Color? checkColor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, MaterialTapTargetSize? materialTapTargetSize, VisualDensity? visualDensity, bool autofocus, ShapeBorder? shape, BorderSide? side, bool isError) checkbox,
+    required TResult Function(Key? key, FormStringField? field, List<DropdownMenuItem> items, String? value, Widget? hint, Widget? disabledHint, Callback? onTap, int elevation, TextStyle? style, Widget? icon, Color? iconDisabledColor, Color? iconEnabledColor, double iconSize, bool isDense, bool isExpanded, double? itemHeight, Color? focusColor, bool autofocus, Color? dropdownColor, InputDecoration? decoration, Map<String, String>? validatorMessages, AutovalidateMode? autovalidateMode, double? menuMaxHeight, bool? enableFeedback, Alignment alignment, BorderRadius? borderRadius) dropdownButtonFormField,
+    required TResult Function(Key? key, List<PopupMenuEntry> items, String? initialValue, Callback? onOpened, FormStringField? field, Callback? onCanceled, String? tooltip, double? elevation, Color? shadowColor, Color? surfaceTintColor, EdgeInsets padding, Widget? child, double? splashRadius, Widget? icon, double? iconSize, Offset offset, bool enabled, ShapeBorder? shape, Color? color, bool? enableFeedback, BoxConstraints? constraints, PopupMenuPosition? position, Clip clipBehavior) popupMenuButton,
+    required TResult Function(Key? key, Widget icon, Widget? selectedIcon, String label, String? tooltip) navigationDestination,
+    required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme) actionChip,
+    required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) filterChip,
+    required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) inputChip,
   }) {
     return card(key, color, shadowColor, surfaceTintColor, elevation, shape,
         borderOnForeground, margin, clipBehavior, child, semanticContainer);
@@ -981,6 +1055,14 @@ class _$Card implements Card {
     TResult? Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration)? defaultTabController,
     TResult? Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child)? tab,
     TResult? Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior)? tabBarView,
+    TResult? Function(Key? key, Axis scrollDirection, bool reverse, bool? primary, ScrollPhysics? physics, bool shrinkWrap, Key? center, double anchor, double? cacheExtent, List<Sliver> slivers, int? semanticChildCount, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior, String? restorationId, Clip clipBehavior)? customScrollView,
+    TResult? Function(Key? key, bool? value, bool tristate, FormBoolField? field, MouseCursor? mouseCursor, Color? activeColor, MaterialStateProperty? fillColor, Color? checkColor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, MaterialTapTargetSize? materialTapTargetSize, VisualDensity? visualDensity, bool autofocus, ShapeBorder? shape, BorderSide? side, bool isError)? checkbox,
+    TResult? Function(Key? key, FormStringField? field, List<DropdownMenuItem> items, String? value, Widget? hint, Widget? disabledHint, Callback? onTap, int elevation, TextStyle? style, Widget? icon, Color? iconDisabledColor, Color? iconEnabledColor, double iconSize, bool isDense, bool isExpanded, double? itemHeight, Color? focusColor, bool autofocus, Color? dropdownColor, InputDecoration? decoration, Map<String, String>? validatorMessages, AutovalidateMode? autovalidateMode, double? menuMaxHeight, bool? enableFeedback, Alignment alignment, BorderRadius? borderRadius)? dropdownButtonFormField,
+    TResult? Function(Key? key, List<PopupMenuEntry> items, String? initialValue, Callback? onOpened, FormStringField? field, Callback? onCanceled, String? tooltip, double? elevation, Color? shadowColor, Color? surfaceTintColor, EdgeInsets padding, Widget? child, double? splashRadius, Widget? icon, double? iconSize, Offset offset, bool enabled, ShapeBorder? shape, Color? color, bool? enableFeedback, BoxConstraints? constraints, PopupMenuPosition? position, Clip clipBehavior)? popupMenuButton,
+    TResult? Function(Key? key, Widget icon, Widget? selectedIcon, String label, String? tooltip)? navigationDestination,
+    TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
+    TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
+    TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
   }) {
     return card?.call(
         key,
@@ -1092,6 +1174,14 @@ class _$Card implements Card {
     TResult Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration)? defaultTabController,
     TResult Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child)? tab,
     TResult Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior)? tabBarView,
+    TResult Function(Key? key, Axis scrollDirection, bool reverse, bool? primary, ScrollPhysics? physics, bool shrinkWrap, Key? center, double anchor, double? cacheExtent, List<Sliver> slivers, int? semanticChildCount, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior, String? restorationId, Clip clipBehavior)? customScrollView,
+    TResult Function(Key? key, bool? value, bool tristate, FormBoolField? field, MouseCursor? mouseCursor, Color? activeColor, MaterialStateProperty? fillColor, Color? checkColor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, MaterialTapTargetSize? materialTapTargetSize, VisualDensity? visualDensity, bool autofocus, ShapeBorder? shape, BorderSide? side, bool isError)? checkbox,
+    TResult Function(Key? key, FormStringField? field, List<DropdownMenuItem> items, String? value, Widget? hint, Widget? disabledHint, Callback? onTap, int elevation, TextStyle? style, Widget? icon, Color? iconDisabledColor, Color? iconEnabledColor, double iconSize, bool isDense, bool isExpanded, double? itemHeight, Color? focusColor, bool autofocus, Color? dropdownColor, InputDecoration? decoration, Map<String, String>? validatorMessages, AutovalidateMode? autovalidateMode, double? menuMaxHeight, bool? enableFeedback, Alignment alignment, BorderRadius? borderRadius)? dropdownButtonFormField,
+    TResult Function(Key? key, List<PopupMenuEntry> items, String? initialValue, Callback? onOpened, FormStringField? field, Callback? onCanceled, String? tooltip, double? elevation, Color? shadowColor, Color? surfaceTintColor, EdgeInsets padding, Widget? child, double? splashRadius, Widget? icon, double? iconSize, Offset offset, bool enabled, ShapeBorder? shape, Color? color, bool? enableFeedback, BoxConstraints? constraints, PopupMenuPosition? position, Clip clipBehavior)? popupMenuButton,
+    TResult Function(Key? key, Widget icon, Widget? selectedIcon, String label, String? tooltip)? navigationDestination,
+    TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
+    TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
+    TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
     required TResult orElse(),
   }) {
     if (card != null) {
@@ -1132,6 +1222,16 @@ class _$Card implements Card {
     required TResult Function(DefaultTabController value) defaultTabController,
     required TResult Function(Tab value) tab,
     required TResult Function(TabBarView value) tabBarView,
+    required TResult Function(CustomScrollView value) customScrollView,
+    required TResult Function(Checkbox value) checkbox,
+    required TResult Function(DropdownButtonFormField value)
+        dropdownButtonFormField,
+    required TResult Function(PopupMenuButton value) popupMenuButton,
+    required TResult Function(NavigationDestination value)
+        navigationDestination,
+    required TResult Function(ActionChip value) actionChip,
+    required TResult Function(FilterChip value) filterChip,
+    required TResult Function(InputChip value) inputChip,
   }) {
     return card(this);
   }
@@ -1166,6 +1266,14 @@ class _$Card implements Card {
     TResult? Function(DefaultTabController value)? defaultTabController,
     TResult? Function(Tab value)? tab,
     TResult? Function(TabBarView value)? tabBarView,
+    TResult? Function(CustomScrollView value)? customScrollView,
+    TResult? Function(Checkbox value)? checkbox,
+    TResult? Function(DropdownButtonFormField value)? dropdownButtonFormField,
+    TResult? Function(PopupMenuButton value)? popupMenuButton,
+    TResult? Function(NavigationDestination value)? navigationDestination,
+    TResult? Function(ActionChip value)? actionChip,
+    TResult? Function(FilterChip value)? filterChip,
+    TResult? Function(InputChip value)? inputChip,
   }) {
     return card?.call(this);
   }
@@ -1200,6 +1308,14 @@ class _$Card implements Card {
     TResult Function(DefaultTabController value)? defaultTabController,
     TResult Function(Tab value)? tab,
     TResult Function(TabBarView value)? tabBarView,
+    TResult Function(CustomScrollView value)? customScrollView,
+    TResult Function(Checkbox value)? checkbox,
+    TResult Function(DropdownButtonFormField value)? dropdownButtonFormField,
+    TResult Function(PopupMenuButton value)? popupMenuButton,
+    TResult Function(NavigationDestination value)? navigationDestination,
+    TResult Function(ActionChip value)? actionChip,
+    TResult Function(FilterChip value)? filterChip,
+    TResult Function(InputChip value)? inputChip,
     required TResult orElse(),
   }) {
     if (card != null) {
@@ -1537,6 +1653,14 @@ class _$ElevatedButton implements ElevatedButton {
     required TResult Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration) defaultTabController,
     required TResult Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child) tab,
     required TResult Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior) tabBarView,
+    required TResult Function(Key? key, Axis scrollDirection, bool reverse, bool? primary, ScrollPhysics? physics, bool shrinkWrap, Key? center, double anchor, double? cacheExtent, List<Sliver> slivers, int? semanticChildCount, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior, String? restorationId, Clip clipBehavior) customScrollView,
+    required TResult Function(Key? key, bool? value, bool tristate, FormBoolField? field, MouseCursor? mouseCursor, Color? activeColor, MaterialStateProperty? fillColor, Color? checkColor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, MaterialTapTargetSize? materialTapTargetSize, VisualDensity? visualDensity, bool autofocus, ShapeBorder? shape, BorderSide? side, bool isError) checkbox,
+    required TResult Function(Key? key, FormStringField? field, List<DropdownMenuItem> items, String? value, Widget? hint, Widget? disabledHint, Callback? onTap, int elevation, TextStyle? style, Widget? icon, Color? iconDisabledColor, Color? iconEnabledColor, double iconSize, bool isDense, bool isExpanded, double? itemHeight, Color? focusColor, bool autofocus, Color? dropdownColor, InputDecoration? decoration, Map<String, String>? validatorMessages, AutovalidateMode? autovalidateMode, double? menuMaxHeight, bool? enableFeedback, Alignment alignment, BorderRadius? borderRadius) dropdownButtonFormField,
+    required TResult Function(Key? key, List<PopupMenuEntry> items, String? initialValue, Callback? onOpened, FormStringField? field, Callback? onCanceled, String? tooltip, double? elevation, Color? shadowColor, Color? surfaceTintColor, EdgeInsets padding, Widget? child, double? splashRadius, Widget? icon, double? iconSize, Offset offset, bool enabled, ShapeBorder? shape, Color? color, bool? enableFeedback, BoxConstraints? constraints, PopupMenuPosition? position, Clip clipBehavior) popupMenuButton,
+    required TResult Function(Key? key, Widget icon, Widget? selectedIcon, String label, String? tooltip) navigationDestination,
+    required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme) actionChip,
+    required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) filterChip,
+    required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) inputChip,
   }) {
     return elevatedButton(
         key, onPressed, onLongPress, autofocus, clipBehavior, child, style);
@@ -1638,6 +1762,14 @@ class _$ElevatedButton implements ElevatedButton {
     TResult? Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration)? defaultTabController,
     TResult? Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child)? tab,
     TResult? Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior)? tabBarView,
+    TResult? Function(Key? key, Axis scrollDirection, bool reverse, bool? primary, ScrollPhysics? physics, bool shrinkWrap, Key? center, double anchor, double? cacheExtent, List<Sliver> slivers, int? semanticChildCount, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior, String? restorationId, Clip clipBehavior)? customScrollView,
+    TResult? Function(Key? key, bool? value, bool tristate, FormBoolField? field, MouseCursor? mouseCursor, Color? activeColor, MaterialStateProperty? fillColor, Color? checkColor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, MaterialTapTargetSize? materialTapTargetSize, VisualDensity? visualDensity, bool autofocus, ShapeBorder? shape, BorderSide? side, bool isError)? checkbox,
+    TResult? Function(Key? key, FormStringField? field, List<DropdownMenuItem> items, String? value, Widget? hint, Widget? disabledHint, Callback? onTap, int elevation, TextStyle? style, Widget? icon, Color? iconDisabledColor, Color? iconEnabledColor, double iconSize, bool isDense, bool isExpanded, double? itemHeight, Color? focusColor, bool autofocus, Color? dropdownColor, InputDecoration? decoration, Map<String, String>? validatorMessages, AutovalidateMode? autovalidateMode, double? menuMaxHeight, bool? enableFeedback, Alignment alignment, BorderRadius? borderRadius)? dropdownButtonFormField,
+    TResult? Function(Key? key, List<PopupMenuEntry> items, String? initialValue, Callback? onOpened, FormStringField? field, Callback? onCanceled, String? tooltip, double? elevation, Color? shadowColor, Color? surfaceTintColor, EdgeInsets padding, Widget? child, double? splashRadius, Widget? icon, double? iconSize, Offset offset, bool enabled, ShapeBorder? shape, Color? color, bool? enableFeedback, BoxConstraints? constraints, PopupMenuPosition? position, Clip clipBehavior)? popupMenuButton,
+    TResult? Function(Key? key, Widget icon, Widget? selectedIcon, String label, String? tooltip)? navigationDestination,
+    TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
+    TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
+    TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
   }) {
     return elevatedButton?.call(
         key, onPressed, onLongPress, autofocus, clipBehavior, child, style);
@@ -1739,6 +1871,14 @@ class _$ElevatedButton implements ElevatedButton {
     TResult Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration)? defaultTabController,
     TResult Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child)? tab,
     TResult Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior)? tabBarView,
+    TResult Function(Key? key, Axis scrollDirection, bool reverse, bool? primary, ScrollPhysics? physics, bool shrinkWrap, Key? center, double anchor, double? cacheExtent, List<Sliver> slivers, int? semanticChildCount, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior, String? restorationId, Clip clipBehavior)? customScrollView,
+    TResult Function(Key? key, bool? value, bool tristate, FormBoolField? field, MouseCursor? mouseCursor, Color? activeColor, MaterialStateProperty? fillColor, Color? checkColor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, MaterialTapTargetSize? materialTapTargetSize, VisualDensity? visualDensity, bool autofocus, ShapeBorder? shape, BorderSide? side, bool isError)? checkbox,
+    TResult Function(Key? key, FormStringField? field, List<DropdownMenuItem> items, String? value, Widget? hint, Widget? disabledHint, Callback? onTap, int elevation, TextStyle? style, Widget? icon, Color? iconDisabledColor, Color? iconEnabledColor, double iconSize, bool isDense, bool isExpanded, double? itemHeight, Color? focusColor, bool autofocus, Color? dropdownColor, InputDecoration? decoration, Map<String, String>? validatorMessages, AutovalidateMode? autovalidateMode, double? menuMaxHeight, bool? enableFeedback, Alignment alignment, BorderRadius? borderRadius)? dropdownButtonFormField,
+    TResult Function(Key? key, List<PopupMenuEntry> items, String? initialValue, Callback? onOpened, FormStringField? field, Callback? onCanceled, String? tooltip, double? elevation, Color? shadowColor, Color? surfaceTintColor, EdgeInsets padding, Widget? child, double? splashRadius, Widget? icon, double? iconSize, Offset offset, bool enabled, ShapeBorder? shape, Color? color, bool? enableFeedback, BoxConstraints? constraints, PopupMenuPosition? position, Clip clipBehavior)? popupMenuButton,
+    TResult Function(Key? key, Widget icon, Widget? selectedIcon, String label, String? tooltip)? navigationDestination,
+    TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
+    TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
+    TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
     required TResult orElse(),
   }) {
     if (elevatedButton != null) {
@@ -1779,6 +1919,16 @@ class _$ElevatedButton implements ElevatedButton {
     required TResult Function(DefaultTabController value) defaultTabController,
     required TResult Function(Tab value) tab,
     required TResult Function(TabBarView value) tabBarView,
+    required TResult Function(CustomScrollView value) customScrollView,
+    required TResult Function(Checkbox value) checkbox,
+    required TResult Function(DropdownButtonFormField value)
+        dropdownButtonFormField,
+    required TResult Function(PopupMenuButton value) popupMenuButton,
+    required TResult Function(NavigationDestination value)
+        navigationDestination,
+    required TResult Function(ActionChip value) actionChip,
+    required TResult Function(FilterChip value) filterChip,
+    required TResult Function(InputChip value) inputChip,
   }) {
     return elevatedButton(this);
   }
@@ -1813,6 +1963,14 @@ class _$ElevatedButton implements ElevatedButton {
     TResult? Function(DefaultTabController value)? defaultTabController,
     TResult? Function(Tab value)? tab,
     TResult? Function(TabBarView value)? tabBarView,
+    TResult? Function(CustomScrollView value)? customScrollView,
+    TResult? Function(Checkbox value)? checkbox,
+    TResult? Function(DropdownButtonFormField value)? dropdownButtonFormField,
+    TResult? Function(PopupMenuButton value)? popupMenuButton,
+    TResult? Function(NavigationDestination value)? navigationDestination,
+    TResult? Function(ActionChip value)? actionChip,
+    TResult? Function(FilterChip value)? filterChip,
+    TResult? Function(InputChip value)? inputChip,
   }) {
     return elevatedButton?.call(this);
   }
@@ -1847,6 +2005,14 @@ class _$ElevatedButton implements ElevatedButton {
     TResult Function(DefaultTabController value)? defaultTabController,
     TResult Function(Tab value)? tab,
     TResult Function(TabBarView value)? tabBarView,
+    TResult Function(CustomScrollView value)? customScrollView,
+    TResult Function(Checkbox value)? checkbox,
+    TResult Function(DropdownButtonFormField value)? dropdownButtonFormField,
+    TResult Function(PopupMenuButton value)? popupMenuButton,
+    TResult Function(NavigationDestination value)? navigationDestination,
+    TResult Function(ActionChip value)? actionChip,
+    TResult Function(FilterChip value)? filterChip,
+    TResult Function(InputChip value)? inputChip,
     required TResult orElse(),
   }) {
     if (elevatedButton != null) {
@@ -2154,6 +2320,14 @@ class _$FilledButton implements FilledButton {
     required TResult Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration) defaultTabController,
     required TResult Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child) tab,
     required TResult Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior) tabBarView,
+    required TResult Function(Key? key, Axis scrollDirection, bool reverse, bool? primary, ScrollPhysics? physics, bool shrinkWrap, Key? center, double anchor, double? cacheExtent, List<Sliver> slivers, int? semanticChildCount, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior, String? restorationId, Clip clipBehavior) customScrollView,
+    required TResult Function(Key? key, bool? value, bool tristate, FormBoolField? field, MouseCursor? mouseCursor, Color? activeColor, MaterialStateProperty? fillColor, Color? checkColor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, MaterialTapTargetSize? materialTapTargetSize, VisualDensity? visualDensity, bool autofocus, ShapeBorder? shape, BorderSide? side, bool isError) checkbox,
+    required TResult Function(Key? key, FormStringField? field, List<DropdownMenuItem> items, String? value, Widget? hint, Widget? disabledHint, Callback? onTap, int elevation, TextStyle? style, Widget? icon, Color? iconDisabledColor, Color? iconEnabledColor, double iconSize, bool isDense, bool isExpanded, double? itemHeight, Color? focusColor, bool autofocus, Color? dropdownColor, InputDecoration? decoration, Map<String, String>? validatorMessages, AutovalidateMode? autovalidateMode, double? menuMaxHeight, bool? enableFeedback, Alignment alignment, BorderRadius? borderRadius) dropdownButtonFormField,
+    required TResult Function(Key? key, List<PopupMenuEntry> items, String? initialValue, Callback? onOpened, FormStringField? field, Callback? onCanceled, String? tooltip, double? elevation, Color? shadowColor, Color? surfaceTintColor, EdgeInsets padding, Widget? child, double? splashRadius, Widget? icon, double? iconSize, Offset offset, bool enabled, ShapeBorder? shape, Color? color, bool? enableFeedback, BoxConstraints? constraints, PopupMenuPosition? position, Clip clipBehavior) popupMenuButton,
+    required TResult Function(Key? key, Widget icon, Widget? selectedIcon, String label, String? tooltip) navigationDestination,
+    required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme) actionChip,
+    required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) filterChip,
+    required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) inputChip,
   }) {
     return filledButton(
         key, onPressed, onLongPress, autofocus, clipBehavior, child);
@@ -2255,6 +2429,14 @@ class _$FilledButton implements FilledButton {
     TResult? Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration)? defaultTabController,
     TResult? Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child)? tab,
     TResult? Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior)? tabBarView,
+    TResult? Function(Key? key, Axis scrollDirection, bool reverse, bool? primary, ScrollPhysics? physics, bool shrinkWrap, Key? center, double anchor, double? cacheExtent, List<Sliver> slivers, int? semanticChildCount, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior, String? restorationId, Clip clipBehavior)? customScrollView,
+    TResult? Function(Key? key, bool? value, bool tristate, FormBoolField? field, MouseCursor? mouseCursor, Color? activeColor, MaterialStateProperty? fillColor, Color? checkColor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, MaterialTapTargetSize? materialTapTargetSize, VisualDensity? visualDensity, bool autofocus, ShapeBorder? shape, BorderSide? side, bool isError)? checkbox,
+    TResult? Function(Key? key, FormStringField? field, List<DropdownMenuItem> items, String? value, Widget? hint, Widget? disabledHint, Callback? onTap, int elevation, TextStyle? style, Widget? icon, Color? iconDisabledColor, Color? iconEnabledColor, double iconSize, bool isDense, bool isExpanded, double? itemHeight, Color? focusColor, bool autofocus, Color? dropdownColor, InputDecoration? decoration, Map<String, String>? validatorMessages, AutovalidateMode? autovalidateMode, double? menuMaxHeight, bool? enableFeedback, Alignment alignment, BorderRadius? borderRadius)? dropdownButtonFormField,
+    TResult? Function(Key? key, List<PopupMenuEntry> items, String? initialValue, Callback? onOpened, FormStringField? field, Callback? onCanceled, String? tooltip, double? elevation, Color? shadowColor, Color? surfaceTintColor, EdgeInsets padding, Widget? child, double? splashRadius, Widget? icon, double? iconSize, Offset offset, bool enabled, ShapeBorder? shape, Color? color, bool? enableFeedback, BoxConstraints? constraints, PopupMenuPosition? position, Clip clipBehavior)? popupMenuButton,
+    TResult? Function(Key? key, Widget icon, Widget? selectedIcon, String label, String? tooltip)? navigationDestination,
+    TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
+    TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
+    TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
   }) {
     return filledButton?.call(
         key, onPressed, onLongPress, autofocus, clipBehavior, child);
@@ -2356,6 +2538,14 @@ class _$FilledButton implements FilledButton {
     TResult Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration)? defaultTabController,
     TResult Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child)? tab,
     TResult Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior)? tabBarView,
+    TResult Function(Key? key, Axis scrollDirection, bool reverse, bool? primary, ScrollPhysics? physics, bool shrinkWrap, Key? center, double anchor, double? cacheExtent, List<Sliver> slivers, int? semanticChildCount, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior, String? restorationId, Clip clipBehavior)? customScrollView,
+    TResult Function(Key? key, bool? value, bool tristate, FormBoolField? field, MouseCursor? mouseCursor, Color? activeColor, MaterialStateProperty? fillColor, Color? checkColor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, MaterialTapTargetSize? materialTapTargetSize, VisualDensity? visualDensity, bool autofocus, ShapeBorder? shape, BorderSide? side, bool isError)? checkbox,
+    TResult Function(Key? key, FormStringField? field, List<DropdownMenuItem> items, String? value, Widget? hint, Widget? disabledHint, Callback? onTap, int elevation, TextStyle? style, Widget? icon, Color? iconDisabledColor, Color? iconEnabledColor, double iconSize, bool isDense, bool isExpanded, double? itemHeight, Color? focusColor, bool autofocus, Color? dropdownColor, InputDecoration? decoration, Map<String, String>? validatorMessages, AutovalidateMode? autovalidateMode, double? menuMaxHeight, bool? enableFeedback, Alignment alignment, BorderRadius? borderRadius)? dropdownButtonFormField,
+    TResult Function(Key? key, List<PopupMenuEntry> items, String? initialValue, Callback? onOpened, FormStringField? field, Callback? onCanceled, String? tooltip, double? elevation, Color? shadowColor, Color? surfaceTintColor, EdgeInsets padding, Widget? child, double? splashRadius, Widget? icon, double? iconSize, Offset offset, bool enabled, ShapeBorder? shape, Color? color, bool? enableFeedback, BoxConstraints? constraints, PopupMenuPosition? position, Clip clipBehavior)? popupMenuButton,
+    TResult Function(Key? key, Widget icon, Widget? selectedIcon, String label, String? tooltip)? navigationDestination,
+    TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
+    TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
+    TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
     required TResult orElse(),
   }) {
     if (filledButton != null) {
@@ -2396,6 +2586,16 @@ class _$FilledButton implements FilledButton {
     required TResult Function(DefaultTabController value) defaultTabController,
     required TResult Function(Tab value) tab,
     required TResult Function(TabBarView value) tabBarView,
+    required TResult Function(CustomScrollView value) customScrollView,
+    required TResult Function(Checkbox value) checkbox,
+    required TResult Function(DropdownButtonFormField value)
+        dropdownButtonFormField,
+    required TResult Function(PopupMenuButton value) popupMenuButton,
+    required TResult Function(NavigationDestination value)
+        navigationDestination,
+    required TResult Function(ActionChip value) actionChip,
+    required TResult Function(FilterChip value) filterChip,
+    required TResult Function(InputChip value) inputChip,
   }) {
     return filledButton(this);
   }
@@ -2430,6 +2630,14 @@ class _$FilledButton implements FilledButton {
     TResult? Function(DefaultTabController value)? defaultTabController,
     TResult? Function(Tab value)? tab,
     TResult? Function(TabBarView value)? tabBarView,
+    TResult? Function(CustomScrollView value)? customScrollView,
+    TResult? Function(Checkbox value)? checkbox,
+    TResult? Function(DropdownButtonFormField value)? dropdownButtonFormField,
+    TResult? Function(PopupMenuButton value)? popupMenuButton,
+    TResult? Function(NavigationDestination value)? navigationDestination,
+    TResult? Function(ActionChip value)? actionChip,
+    TResult? Function(FilterChip value)? filterChip,
+    TResult? Function(InputChip value)? inputChip,
   }) {
     return filledButton?.call(this);
   }
@@ -2464,6 +2672,14 @@ class _$FilledButton implements FilledButton {
     TResult Function(DefaultTabController value)? defaultTabController,
     TResult Function(Tab value)? tab,
     TResult Function(TabBarView value)? tabBarView,
+    TResult Function(CustomScrollView value)? customScrollView,
+    TResult Function(Checkbox value)? checkbox,
+    TResult Function(DropdownButtonFormField value)? dropdownButtonFormField,
+    TResult Function(PopupMenuButton value)? popupMenuButton,
+    TResult Function(NavigationDestination value)? navigationDestination,
+    TResult Function(ActionChip value)? actionChip,
+    TResult Function(FilterChip value)? filterChip,
+    TResult Function(InputChip value)? inputChip,
     required TResult orElse(),
   }) {
     if (filledButton != null) {
@@ -2770,6 +2986,14 @@ class _$FilledTonalButton implements FilledTonalButton {
     required TResult Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration) defaultTabController,
     required TResult Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child) tab,
     required TResult Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior) tabBarView,
+    required TResult Function(Key? key, Axis scrollDirection, bool reverse, bool? primary, ScrollPhysics? physics, bool shrinkWrap, Key? center, double anchor, double? cacheExtent, List<Sliver> slivers, int? semanticChildCount, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior, String? restorationId, Clip clipBehavior) customScrollView,
+    required TResult Function(Key? key, bool? value, bool tristate, FormBoolField? field, MouseCursor? mouseCursor, Color? activeColor, MaterialStateProperty? fillColor, Color? checkColor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, MaterialTapTargetSize? materialTapTargetSize, VisualDensity? visualDensity, bool autofocus, ShapeBorder? shape, BorderSide? side, bool isError) checkbox,
+    required TResult Function(Key? key, FormStringField? field, List<DropdownMenuItem> items, String? value, Widget? hint, Widget? disabledHint, Callback? onTap, int elevation, TextStyle? style, Widget? icon, Color? iconDisabledColor, Color? iconEnabledColor, double iconSize, bool isDense, bool isExpanded, double? itemHeight, Color? focusColor, bool autofocus, Color? dropdownColor, InputDecoration? decoration, Map<String, String>? validatorMessages, AutovalidateMode? autovalidateMode, double? menuMaxHeight, bool? enableFeedback, Alignment alignment, BorderRadius? borderRadius) dropdownButtonFormField,
+    required TResult Function(Key? key, List<PopupMenuEntry> items, String? initialValue, Callback? onOpened, FormStringField? field, Callback? onCanceled, String? tooltip, double? elevation, Color? shadowColor, Color? surfaceTintColor, EdgeInsets padding, Widget? child, double? splashRadius, Widget? icon, double? iconSize, Offset offset, bool enabled, ShapeBorder? shape, Color? color, bool? enableFeedback, BoxConstraints? constraints, PopupMenuPosition? position, Clip clipBehavior) popupMenuButton,
+    required TResult Function(Key? key, Widget icon, Widget? selectedIcon, String label, String? tooltip) navigationDestination,
+    required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme) actionChip,
+    required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) filterChip,
+    required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) inputChip,
   }) {
     return filledTonalButton(
         key, onPressed, onLongPress, autofocus, clipBehavior, child);
@@ -2871,6 +3095,14 @@ class _$FilledTonalButton implements FilledTonalButton {
     TResult? Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration)? defaultTabController,
     TResult? Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child)? tab,
     TResult? Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior)? tabBarView,
+    TResult? Function(Key? key, Axis scrollDirection, bool reverse, bool? primary, ScrollPhysics? physics, bool shrinkWrap, Key? center, double anchor, double? cacheExtent, List<Sliver> slivers, int? semanticChildCount, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior, String? restorationId, Clip clipBehavior)? customScrollView,
+    TResult? Function(Key? key, bool? value, bool tristate, FormBoolField? field, MouseCursor? mouseCursor, Color? activeColor, MaterialStateProperty? fillColor, Color? checkColor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, MaterialTapTargetSize? materialTapTargetSize, VisualDensity? visualDensity, bool autofocus, ShapeBorder? shape, BorderSide? side, bool isError)? checkbox,
+    TResult? Function(Key? key, FormStringField? field, List<DropdownMenuItem> items, String? value, Widget? hint, Widget? disabledHint, Callback? onTap, int elevation, TextStyle? style, Widget? icon, Color? iconDisabledColor, Color? iconEnabledColor, double iconSize, bool isDense, bool isExpanded, double? itemHeight, Color? focusColor, bool autofocus, Color? dropdownColor, InputDecoration? decoration, Map<String, String>? validatorMessages, AutovalidateMode? autovalidateMode, double? menuMaxHeight, bool? enableFeedback, Alignment alignment, BorderRadius? borderRadius)? dropdownButtonFormField,
+    TResult? Function(Key? key, List<PopupMenuEntry> items, String? initialValue, Callback? onOpened, FormStringField? field, Callback? onCanceled, String? tooltip, double? elevation, Color? shadowColor, Color? surfaceTintColor, EdgeInsets padding, Widget? child, double? splashRadius, Widget? icon, double? iconSize, Offset offset, bool enabled, ShapeBorder? shape, Color? color, bool? enableFeedback, BoxConstraints? constraints, PopupMenuPosition? position, Clip clipBehavior)? popupMenuButton,
+    TResult? Function(Key? key, Widget icon, Widget? selectedIcon, String label, String? tooltip)? navigationDestination,
+    TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
+    TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
+    TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
   }) {
     return filledTonalButton?.call(
         key, onPressed, onLongPress, autofocus, clipBehavior, child);
@@ -2972,6 +3204,14 @@ class _$FilledTonalButton implements FilledTonalButton {
     TResult Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration)? defaultTabController,
     TResult Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child)? tab,
     TResult Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior)? tabBarView,
+    TResult Function(Key? key, Axis scrollDirection, bool reverse, bool? primary, ScrollPhysics? physics, bool shrinkWrap, Key? center, double anchor, double? cacheExtent, List<Sliver> slivers, int? semanticChildCount, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior, String? restorationId, Clip clipBehavior)? customScrollView,
+    TResult Function(Key? key, bool? value, bool tristate, FormBoolField? field, MouseCursor? mouseCursor, Color? activeColor, MaterialStateProperty? fillColor, Color? checkColor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, MaterialTapTargetSize? materialTapTargetSize, VisualDensity? visualDensity, bool autofocus, ShapeBorder? shape, BorderSide? side, bool isError)? checkbox,
+    TResult Function(Key? key, FormStringField? field, List<DropdownMenuItem> items, String? value, Widget? hint, Widget? disabledHint, Callback? onTap, int elevation, TextStyle? style, Widget? icon, Color? iconDisabledColor, Color? iconEnabledColor, double iconSize, bool isDense, bool isExpanded, double? itemHeight, Color? focusColor, bool autofocus, Color? dropdownColor, InputDecoration? decoration, Map<String, String>? validatorMessages, AutovalidateMode? autovalidateMode, double? menuMaxHeight, bool? enableFeedback, Alignment alignment, BorderRadius? borderRadius)? dropdownButtonFormField,
+    TResult Function(Key? key, List<PopupMenuEntry> items, String? initialValue, Callback? onOpened, FormStringField? field, Callback? onCanceled, String? tooltip, double? elevation, Color? shadowColor, Color? surfaceTintColor, EdgeInsets padding, Widget? child, double? splashRadius, Widget? icon, double? iconSize, Offset offset, bool enabled, ShapeBorder? shape, Color? color, bool? enableFeedback, BoxConstraints? constraints, PopupMenuPosition? position, Clip clipBehavior)? popupMenuButton,
+    TResult Function(Key? key, Widget icon, Widget? selectedIcon, String label, String? tooltip)? navigationDestination,
+    TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
+    TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
+    TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
     required TResult orElse(),
   }) {
     if (filledTonalButton != null) {
@@ -3012,6 +3252,16 @@ class _$FilledTonalButton implements FilledTonalButton {
     required TResult Function(DefaultTabController value) defaultTabController,
     required TResult Function(Tab value) tab,
     required TResult Function(TabBarView value) tabBarView,
+    required TResult Function(CustomScrollView value) customScrollView,
+    required TResult Function(Checkbox value) checkbox,
+    required TResult Function(DropdownButtonFormField value)
+        dropdownButtonFormField,
+    required TResult Function(PopupMenuButton value) popupMenuButton,
+    required TResult Function(NavigationDestination value)
+        navigationDestination,
+    required TResult Function(ActionChip value) actionChip,
+    required TResult Function(FilterChip value) filterChip,
+    required TResult Function(InputChip value) inputChip,
   }) {
     return filledTonalButton(this);
   }
@@ -3046,6 +3296,14 @@ class _$FilledTonalButton implements FilledTonalButton {
     TResult? Function(DefaultTabController value)? defaultTabController,
     TResult? Function(Tab value)? tab,
     TResult? Function(TabBarView value)? tabBarView,
+    TResult? Function(CustomScrollView value)? customScrollView,
+    TResult? Function(Checkbox value)? checkbox,
+    TResult? Function(DropdownButtonFormField value)? dropdownButtonFormField,
+    TResult? Function(PopupMenuButton value)? popupMenuButton,
+    TResult? Function(NavigationDestination value)? navigationDestination,
+    TResult? Function(ActionChip value)? actionChip,
+    TResult? Function(FilterChip value)? filterChip,
+    TResult? Function(InputChip value)? inputChip,
   }) {
     return filledTonalButton?.call(this);
   }
@@ -3080,6 +3338,14 @@ class _$FilledTonalButton implements FilledTonalButton {
     TResult Function(DefaultTabController value)? defaultTabController,
     TResult Function(Tab value)? tab,
     TResult Function(TabBarView value)? tabBarView,
+    TResult Function(CustomScrollView value)? customScrollView,
+    TResult Function(Checkbox value)? checkbox,
+    TResult Function(DropdownButtonFormField value)? dropdownButtonFormField,
+    TResult Function(PopupMenuButton value)? popupMenuButton,
+    TResult Function(NavigationDestination value)? navigationDestination,
+    TResult Function(ActionChip value)? actionChip,
+    TResult Function(FilterChip value)? filterChip,
+    TResult Function(InputChip value)? inputChip,
     required TResult orElse(),
   }) {
     if (filledTonalButton != null) {
@@ -3386,6 +3652,14 @@ class _$OutlinedButton implements OutlinedButton {
     required TResult Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration) defaultTabController,
     required TResult Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child) tab,
     required TResult Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior) tabBarView,
+    required TResult Function(Key? key, Axis scrollDirection, bool reverse, bool? primary, ScrollPhysics? physics, bool shrinkWrap, Key? center, double anchor, double? cacheExtent, List<Sliver> slivers, int? semanticChildCount, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior, String? restorationId, Clip clipBehavior) customScrollView,
+    required TResult Function(Key? key, bool? value, bool tristate, FormBoolField? field, MouseCursor? mouseCursor, Color? activeColor, MaterialStateProperty? fillColor, Color? checkColor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, MaterialTapTargetSize? materialTapTargetSize, VisualDensity? visualDensity, bool autofocus, ShapeBorder? shape, BorderSide? side, bool isError) checkbox,
+    required TResult Function(Key? key, FormStringField? field, List<DropdownMenuItem> items, String? value, Widget? hint, Widget? disabledHint, Callback? onTap, int elevation, TextStyle? style, Widget? icon, Color? iconDisabledColor, Color? iconEnabledColor, double iconSize, bool isDense, bool isExpanded, double? itemHeight, Color? focusColor, bool autofocus, Color? dropdownColor, InputDecoration? decoration, Map<String, String>? validatorMessages, AutovalidateMode? autovalidateMode, double? menuMaxHeight, bool? enableFeedback, Alignment alignment, BorderRadius? borderRadius) dropdownButtonFormField,
+    required TResult Function(Key? key, List<PopupMenuEntry> items, String? initialValue, Callback? onOpened, FormStringField? field, Callback? onCanceled, String? tooltip, double? elevation, Color? shadowColor, Color? surfaceTintColor, EdgeInsets padding, Widget? child, double? splashRadius, Widget? icon, double? iconSize, Offset offset, bool enabled, ShapeBorder? shape, Color? color, bool? enableFeedback, BoxConstraints? constraints, PopupMenuPosition? position, Clip clipBehavior) popupMenuButton,
+    required TResult Function(Key? key, Widget icon, Widget? selectedIcon, String label, String? tooltip) navigationDestination,
+    required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme) actionChip,
+    required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) filterChip,
+    required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) inputChip,
   }) {
     return outlinedButton(
         key, onPressed, onLongPress, autofocus, clipBehavior, child);
@@ -3487,6 +3761,14 @@ class _$OutlinedButton implements OutlinedButton {
     TResult? Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration)? defaultTabController,
     TResult? Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child)? tab,
     TResult? Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior)? tabBarView,
+    TResult? Function(Key? key, Axis scrollDirection, bool reverse, bool? primary, ScrollPhysics? physics, bool shrinkWrap, Key? center, double anchor, double? cacheExtent, List<Sliver> slivers, int? semanticChildCount, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior, String? restorationId, Clip clipBehavior)? customScrollView,
+    TResult? Function(Key? key, bool? value, bool tristate, FormBoolField? field, MouseCursor? mouseCursor, Color? activeColor, MaterialStateProperty? fillColor, Color? checkColor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, MaterialTapTargetSize? materialTapTargetSize, VisualDensity? visualDensity, bool autofocus, ShapeBorder? shape, BorderSide? side, bool isError)? checkbox,
+    TResult? Function(Key? key, FormStringField? field, List<DropdownMenuItem> items, String? value, Widget? hint, Widget? disabledHint, Callback? onTap, int elevation, TextStyle? style, Widget? icon, Color? iconDisabledColor, Color? iconEnabledColor, double iconSize, bool isDense, bool isExpanded, double? itemHeight, Color? focusColor, bool autofocus, Color? dropdownColor, InputDecoration? decoration, Map<String, String>? validatorMessages, AutovalidateMode? autovalidateMode, double? menuMaxHeight, bool? enableFeedback, Alignment alignment, BorderRadius? borderRadius)? dropdownButtonFormField,
+    TResult? Function(Key? key, List<PopupMenuEntry> items, String? initialValue, Callback? onOpened, FormStringField? field, Callback? onCanceled, String? tooltip, double? elevation, Color? shadowColor, Color? surfaceTintColor, EdgeInsets padding, Widget? child, double? splashRadius, Widget? icon, double? iconSize, Offset offset, bool enabled, ShapeBorder? shape, Color? color, bool? enableFeedback, BoxConstraints? constraints, PopupMenuPosition? position, Clip clipBehavior)? popupMenuButton,
+    TResult? Function(Key? key, Widget icon, Widget? selectedIcon, String label, String? tooltip)? navigationDestination,
+    TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
+    TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
+    TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
   }) {
     return outlinedButton?.call(
         key, onPressed, onLongPress, autofocus, clipBehavior, child);
@@ -3588,6 +3870,14 @@ class _$OutlinedButton implements OutlinedButton {
     TResult Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration)? defaultTabController,
     TResult Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child)? tab,
     TResult Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior)? tabBarView,
+    TResult Function(Key? key, Axis scrollDirection, bool reverse, bool? primary, ScrollPhysics? physics, bool shrinkWrap, Key? center, double anchor, double? cacheExtent, List<Sliver> slivers, int? semanticChildCount, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior, String? restorationId, Clip clipBehavior)? customScrollView,
+    TResult Function(Key? key, bool? value, bool tristate, FormBoolField? field, MouseCursor? mouseCursor, Color? activeColor, MaterialStateProperty? fillColor, Color? checkColor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, MaterialTapTargetSize? materialTapTargetSize, VisualDensity? visualDensity, bool autofocus, ShapeBorder? shape, BorderSide? side, bool isError)? checkbox,
+    TResult Function(Key? key, FormStringField? field, List<DropdownMenuItem> items, String? value, Widget? hint, Widget? disabledHint, Callback? onTap, int elevation, TextStyle? style, Widget? icon, Color? iconDisabledColor, Color? iconEnabledColor, double iconSize, bool isDense, bool isExpanded, double? itemHeight, Color? focusColor, bool autofocus, Color? dropdownColor, InputDecoration? decoration, Map<String, String>? validatorMessages, AutovalidateMode? autovalidateMode, double? menuMaxHeight, bool? enableFeedback, Alignment alignment, BorderRadius? borderRadius)? dropdownButtonFormField,
+    TResult Function(Key? key, List<PopupMenuEntry> items, String? initialValue, Callback? onOpened, FormStringField? field, Callback? onCanceled, String? tooltip, double? elevation, Color? shadowColor, Color? surfaceTintColor, EdgeInsets padding, Widget? child, double? splashRadius, Widget? icon, double? iconSize, Offset offset, bool enabled, ShapeBorder? shape, Color? color, bool? enableFeedback, BoxConstraints? constraints, PopupMenuPosition? position, Clip clipBehavior)? popupMenuButton,
+    TResult Function(Key? key, Widget icon, Widget? selectedIcon, String label, String? tooltip)? navigationDestination,
+    TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
+    TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
+    TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
     required TResult orElse(),
   }) {
     if (outlinedButton != null) {
@@ -3628,6 +3918,16 @@ class _$OutlinedButton implements OutlinedButton {
     required TResult Function(DefaultTabController value) defaultTabController,
     required TResult Function(Tab value) tab,
     required TResult Function(TabBarView value) tabBarView,
+    required TResult Function(CustomScrollView value) customScrollView,
+    required TResult Function(Checkbox value) checkbox,
+    required TResult Function(DropdownButtonFormField value)
+        dropdownButtonFormField,
+    required TResult Function(PopupMenuButton value) popupMenuButton,
+    required TResult Function(NavigationDestination value)
+        navigationDestination,
+    required TResult Function(ActionChip value) actionChip,
+    required TResult Function(FilterChip value) filterChip,
+    required TResult Function(InputChip value) inputChip,
   }) {
     return outlinedButton(this);
   }
@@ -3662,6 +3962,14 @@ class _$OutlinedButton implements OutlinedButton {
     TResult? Function(DefaultTabController value)? defaultTabController,
     TResult? Function(Tab value)? tab,
     TResult? Function(TabBarView value)? tabBarView,
+    TResult? Function(CustomScrollView value)? customScrollView,
+    TResult? Function(Checkbox value)? checkbox,
+    TResult? Function(DropdownButtonFormField value)? dropdownButtonFormField,
+    TResult? Function(PopupMenuButton value)? popupMenuButton,
+    TResult? Function(NavigationDestination value)? navigationDestination,
+    TResult? Function(ActionChip value)? actionChip,
+    TResult? Function(FilterChip value)? filterChip,
+    TResult? Function(InputChip value)? inputChip,
   }) {
     return outlinedButton?.call(this);
   }
@@ -3696,6 +4004,14 @@ class _$OutlinedButton implements OutlinedButton {
     TResult Function(DefaultTabController value)? defaultTabController,
     TResult Function(Tab value)? tab,
     TResult Function(TabBarView value)? tabBarView,
+    TResult Function(CustomScrollView value)? customScrollView,
+    TResult Function(Checkbox value)? checkbox,
+    TResult Function(DropdownButtonFormField value)? dropdownButtonFormField,
+    TResult Function(PopupMenuButton value)? popupMenuButton,
+    TResult Function(NavigationDestination value)? navigationDestination,
+    TResult Function(ActionChip value)? actionChip,
+    TResult Function(FilterChip value)? filterChip,
+    TResult Function(InputChip value)? inputChip,
     required TResult orElse(),
   }) {
     if (outlinedButton != null) {
@@ -4001,6 +4317,14 @@ class _$TextButton implements TextButton {
     required TResult Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration) defaultTabController,
     required TResult Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child) tab,
     required TResult Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior) tabBarView,
+    required TResult Function(Key? key, Axis scrollDirection, bool reverse, bool? primary, ScrollPhysics? physics, bool shrinkWrap, Key? center, double anchor, double? cacheExtent, List<Sliver> slivers, int? semanticChildCount, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior, String? restorationId, Clip clipBehavior) customScrollView,
+    required TResult Function(Key? key, bool? value, bool tristate, FormBoolField? field, MouseCursor? mouseCursor, Color? activeColor, MaterialStateProperty? fillColor, Color? checkColor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, MaterialTapTargetSize? materialTapTargetSize, VisualDensity? visualDensity, bool autofocus, ShapeBorder? shape, BorderSide? side, bool isError) checkbox,
+    required TResult Function(Key? key, FormStringField? field, List<DropdownMenuItem> items, String? value, Widget? hint, Widget? disabledHint, Callback? onTap, int elevation, TextStyle? style, Widget? icon, Color? iconDisabledColor, Color? iconEnabledColor, double iconSize, bool isDense, bool isExpanded, double? itemHeight, Color? focusColor, bool autofocus, Color? dropdownColor, InputDecoration? decoration, Map<String, String>? validatorMessages, AutovalidateMode? autovalidateMode, double? menuMaxHeight, bool? enableFeedback, Alignment alignment, BorderRadius? borderRadius) dropdownButtonFormField,
+    required TResult Function(Key? key, List<PopupMenuEntry> items, String? initialValue, Callback? onOpened, FormStringField? field, Callback? onCanceled, String? tooltip, double? elevation, Color? shadowColor, Color? surfaceTintColor, EdgeInsets padding, Widget? child, double? splashRadius, Widget? icon, double? iconSize, Offset offset, bool enabled, ShapeBorder? shape, Color? color, bool? enableFeedback, BoxConstraints? constraints, PopupMenuPosition? position, Clip clipBehavior) popupMenuButton,
+    required TResult Function(Key? key, Widget icon, Widget? selectedIcon, String label, String? tooltip) navigationDestination,
+    required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme) actionChip,
+    required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) filterChip,
+    required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) inputChip,
   }) {
     return textButton(
         key, onPressed, onLongPress, autofocus, clipBehavior, child);
@@ -4102,6 +4426,14 @@ class _$TextButton implements TextButton {
     TResult? Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration)? defaultTabController,
     TResult? Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child)? tab,
     TResult? Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior)? tabBarView,
+    TResult? Function(Key? key, Axis scrollDirection, bool reverse, bool? primary, ScrollPhysics? physics, bool shrinkWrap, Key? center, double anchor, double? cacheExtent, List<Sliver> slivers, int? semanticChildCount, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior, String? restorationId, Clip clipBehavior)? customScrollView,
+    TResult? Function(Key? key, bool? value, bool tristate, FormBoolField? field, MouseCursor? mouseCursor, Color? activeColor, MaterialStateProperty? fillColor, Color? checkColor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, MaterialTapTargetSize? materialTapTargetSize, VisualDensity? visualDensity, bool autofocus, ShapeBorder? shape, BorderSide? side, bool isError)? checkbox,
+    TResult? Function(Key? key, FormStringField? field, List<DropdownMenuItem> items, String? value, Widget? hint, Widget? disabledHint, Callback? onTap, int elevation, TextStyle? style, Widget? icon, Color? iconDisabledColor, Color? iconEnabledColor, double iconSize, bool isDense, bool isExpanded, double? itemHeight, Color? focusColor, bool autofocus, Color? dropdownColor, InputDecoration? decoration, Map<String, String>? validatorMessages, AutovalidateMode? autovalidateMode, double? menuMaxHeight, bool? enableFeedback, Alignment alignment, BorderRadius? borderRadius)? dropdownButtonFormField,
+    TResult? Function(Key? key, List<PopupMenuEntry> items, String? initialValue, Callback? onOpened, FormStringField? field, Callback? onCanceled, String? tooltip, double? elevation, Color? shadowColor, Color? surfaceTintColor, EdgeInsets padding, Widget? child, double? splashRadius, Widget? icon, double? iconSize, Offset offset, bool enabled, ShapeBorder? shape, Color? color, bool? enableFeedback, BoxConstraints? constraints, PopupMenuPosition? position, Clip clipBehavior)? popupMenuButton,
+    TResult? Function(Key? key, Widget icon, Widget? selectedIcon, String label, String? tooltip)? navigationDestination,
+    TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
+    TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
+    TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
   }) {
     return textButton?.call(
         key, onPressed, onLongPress, autofocus, clipBehavior, child);
@@ -4203,6 +4535,14 @@ class _$TextButton implements TextButton {
     TResult Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration)? defaultTabController,
     TResult Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child)? tab,
     TResult Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior)? tabBarView,
+    TResult Function(Key? key, Axis scrollDirection, bool reverse, bool? primary, ScrollPhysics? physics, bool shrinkWrap, Key? center, double anchor, double? cacheExtent, List<Sliver> slivers, int? semanticChildCount, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior, String? restorationId, Clip clipBehavior)? customScrollView,
+    TResult Function(Key? key, bool? value, bool tristate, FormBoolField? field, MouseCursor? mouseCursor, Color? activeColor, MaterialStateProperty? fillColor, Color? checkColor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, MaterialTapTargetSize? materialTapTargetSize, VisualDensity? visualDensity, bool autofocus, ShapeBorder? shape, BorderSide? side, bool isError)? checkbox,
+    TResult Function(Key? key, FormStringField? field, List<DropdownMenuItem> items, String? value, Widget? hint, Widget? disabledHint, Callback? onTap, int elevation, TextStyle? style, Widget? icon, Color? iconDisabledColor, Color? iconEnabledColor, double iconSize, bool isDense, bool isExpanded, double? itemHeight, Color? focusColor, bool autofocus, Color? dropdownColor, InputDecoration? decoration, Map<String, String>? validatorMessages, AutovalidateMode? autovalidateMode, double? menuMaxHeight, bool? enableFeedback, Alignment alignment, BorderRadius? borderRadius)? dropdownButtonFormField,
+    TResult Function(Key? key, List<PopupMenuEntry> items, String? initialValue, Callback? onOpened, FormStringField? field, Callback? onCanceled, String? tooltip, double? elevation, Color? shadowColor, Color? surfaceTintColor, EdgeInsets padding, Widget? child, double? splashRadius, Widget? icon, double? iconSize, Offset offset, bool enabled, ShapeBorder? shape, Color? color, bool? enableFeedback, BoxConstraints? constraints, PopupMenuPosition? position, Clip clipBehavior)? popupMenuButton,
+    TResult Function(Key? key, Widget icon, Widget? selectedIcon, String label, String? tooltip)? navigationDestination,
+    TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
+    TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
+    TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
     required TResult orElse(),
   }) {
     if (textButton != null) {
@@ -4243,6 +4583,16 @@ class _$TextButton implements TextButton {
     required TResult Function(DefaultTabController value) defaultTabController,
     required TResult Function(Tab value) tab,
     required TResult Function(TabBarView value) tabBarView,
+    required TResult Function(CustomScrollView value) customScrollView,
+    required TResult Function(Checkbox value) checkbox,
+    required TResult Function(DropdownButtonFormField value)
+        dropdownButtonFormField,
+    required TResult Function(PopupMenuButton value) popupMenuButton,
+    required TResult Function(NavigationDestination value)
+        navigationDestination,
+    required TResult Function(ActionChip value) actionChip,
+    required TResult Function(FilterChip value) filterChip,
+    required TResult Function(InputChip value) inputChip,
   }) {
     return textButton(this);
   }
@@ -4277,6 +4627,14 @@ class _$TextButton implements TextButton {
     TResult? Function(DefaultTabController value)? defaultTabController,
     TResult? Function(Tab value)? tab,
     TResult? Function(TabBarView value)? tabBarView,
+    TResult? Function(CustomScrollView value)? customScrollView,
+    TResult? Function(Checkbox value)? checkbox,
+    TResult? Function(DropdownButtonFormField value)? dropdownButtonFormField,
+    TResult? Function(PopupMenuButton value)? popupMenuButton,
+    TResult? Function(NavigationDestination value)? navigationDestination,
+    TResult? Function(ActionChip value)? actionChip,
+    TResult? Function(FilterChip value)? filterChip,
+    TResult? Function(InputChip value)? inputChip,
   }) {
     return textButton?.call(this);
   }
@@ -4311,6 +4669,14 @@ class _$TextButton implements TextButton {
     TResult Function(DefaultTabController value)? defaultTabController,
     TResult Function(Tab value)? tab,
     TResult Function(TabBarView value)? tabBarView,
+    TResult Function(CustomScrollView value)? customScrollView,
+    TResult Function(Checkbox value)? checkbox,
+    TResult Function(DropdownButtonFormField value)? dropdownButtonFormField,
+    TResult Function(PopupMenuButton value)? popupMenuButton,
+    TResult Function(NavigationDestination value)? navigationDestination,
+    TResult Function(ActionChip value)? actionChip,
+    TResult Function(FilterChip value)? filterChip,
+    TResult Function(InputChip value)? inputChip,
     required TResult orElse(),
   }) {
     if (textButton != null) {
@@ -4938,6 +5304,14 @@ class _$IconButton implements IconButton {
     required TResult Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration) defaultTabController,
     required TResult Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child) tab,
     required TResult Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior) tabBarView,
+    required TResult Function(Key? key, Axis scrollDirection, bool reverse, bool? primary, ScrollPhysics? physics, bool shrinkWrap, Key? center, double anchor, double? cacheExtent, List<Sliver> slivers, int? semanticChildCount, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior, String? restorationId, Clip clipBehavior) customScrollView,
+    required TResult Function(Key? key, bool? value, bool tristate, FormBoolField? field, MouseCursor? mouseCursor, Color? activeColor, MaterialStateProperty? fillColor, Color? checkColor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, MaterialTapTargetSize? materialTapTargetSize, VisualDensity? visualDensity, bool autofocus, ShapeBorder? shape, BorderSide? side, bool isError) checkbox,
+    required TResult Function(Key? key, FormStringField? field, List<DropdownMenuItem> items, String? value, Widget? hint, Widget? disabledHint, Callback? onTap, int elevation, TextStyle? style, Widget? icon, Color? iconDisabledColor, Color? iconEnabledColor, double iconSize, bool isDense, bool isExpanded, double? itemHeight, Color? focusColor, bool autofocus, Color? dropdownColor, InputDecoration? decoration, Map<String, String>? validatorMessages, AutovalidateMode? autovalidateMode, double? menuMaxHeight, bool? enableFeedback, Alignment alignment, BorderRadius? borderRadius) dropdownButtonFormField,
+    required TResult Function(Key? key, List<PopupMenuEntry> items, String? initialValue, Callback? onOpened, FormStringField? field, Callback? onCanceled, String? tooltip, double? elevation, Color? shadowColor, Color? surfaceTintColor, EdgeInsets padding, Widget? child, double? splashRadius, Widget? icon, double? iconSize, Offset offset, bool enabled, ShapeBorder? shape, Color? color, bool? enableFeedback, BoxConstraints? constraints, PopupMenuPosition? position, Clip clipBehavior) popupMenuButton,
+    required TResult Function(Key? key, Widget icon, Widget? selectedIcon, String label, String? tooltip) navigationDestination,
+    required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme) actionChip,
+    required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) filterChip,
+    required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) inputChip,
   }) {
     return iconButton(
         key,
@@ -5059,6 +5433,14 @@ class _$IconButton implements IconButton {
     TResult? Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration)? defaultTabController,
     TResult? Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child)? tab,
     TResult? Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior)? tabBarView,
+    TResult? Function(Key? key, Axis scrollDirection, bool reverse, bool? primary, ScrollPhysics? physics, bool shrinkWrap, Key? center, double anchor, double? cacheExtent, List<Sliver> slivers, int? semanticChildCount, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior, String? restorationId, Clip clipBehavior)? customScrollView,
+    TResult? Function(Key? key, bool? value, bool tristate, FormBoolField? field, MouseCursor? mouseCursor, Color? activeColor, MaterialStateProperty? fillColor, Color? checkColor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, MaterialTapTargetSize? materialTapTargetSize, VisualDensity? visualDensity, bool autofocus, ShapeBorder? shape, BorderSide? side, bool isError)? checkbox,
+    TResult? Function(Key? key, FormStringField? field, List<DropdownMenuItem> items, String? value, Widget? hint, Widget? disabledHint, Callback? onTap, int elevation, TextStyle? style, Widget? icon, Color? iconDisabledColor, Color? iconEnabledColor, double iconSize, bool isDense, bool isExpanded, double? itemHeight, Color? focusColor, bool autofocus, Color? dropdownColor, InputDecoration? decoration, Map<String, String>? validatorMessages, AutovalidateMode? autovalidateMode, double? menuMaxHeight, bool? enableFeedback, Alignment alignment, BorderRadius? borderRadius)? dropdownButtonFormField,
+    TResult? Function(Key? key, List<PopupMenuEntry> items, String? initialValue, Callback? onOpened, FormStringField? field, Callback? onCanceled, String? tooltip, double? elevation, Color? shadowColor, Color? surfaceTintColor, EdgeInsets padding, Widget? child, double? splashRadius, Widget? icon, double? iconSize, Offset offset, bool enabled, ShapeBorder? shape, Color? color, bool? enableFeedback, BoxConstraints? constraints, PopupMenuPosition? position, Clip clipBehavior)? popupMenuButton,
+    TResult? Function(Key? key, Widget icon, Widget? selectedIcon, String label, String? tooltip)? navigationDestination,
+    TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
+    TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
+    TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
   }) {
     return iconButton?.call(
         key,
@@ -5180,6 +5562,14 @@ class _$IconButton implements IconButton {
     TResult Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration)? defaultTabController,
     TResult Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child)? tab,
     TResult Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior)? tabBarView,
+    TResult Function(Key? key, Axis scrollDirection, bool reverse, bool? primary, ScrollPhysics? physics, bool shrinkWrap, Key? center, double anchor, double? cacheExtent, List<Sliver> slivers, int? semanticChildCount, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior, String? restorationId, Clip clipBehavior)? customScrollView,
+    TResult Function(Key? key, bool? value, bool tristate, FormBoolField? field, MouseCursor? mouseCursor, Color? activeColor, MaterialStateProperty? fillColor, Color? checkColor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, MaterialTapTargetSize? materialTapTargetSize, VisualDensity? visualDensity, bool autofocus, ShapeBorder? shape, BorderSide? side, bool isError)? checkbox,
+    TResult Function(Key? key, FormStringField? field, List<DropdownMenuItem> items, String? value, Widget? hint, Widget? disabledHint, Callback? onTap, int elevation, TextStyle? style, Widget? icon, Color? iconDisabledColor, Color? iconEnabledColor, double iconSize, bool isDense, bool isExpanded, double? itemHeight, Color? focusColor, bool autofocus, Color? dropdownColor, InputDecoration? decoration, Map<String, String>? validatorMessages, AutovalidateMode? autovalidateMode, double? menuMaxHeight, bool? enableFeedback, Alignment alignment, BorderRadius? borderRadius)? dropdownButtonFormField,
+    TResult Function(Key? key, List<PopupMenuEntry> items, String? initialValue, Callback? onOpened, FormStringField? field, Callback? onCanceled, String? tooltip, double? elevation, Color? shadowColor, Color? surfaceTintColor, EdgeInsets padding, Widget? child, double? splashRadius, Widget? icon, double? iconSize, Offset offset, bool enabled, ShapeBorder? shape, Color? color, bool? enableFeedback, BoxConstraints? constraints, PopupMenuPosition? position, Clip clipBehavior)? popupMenuButton,
+    TResult Function(Key? key, Widget icon, Widget? selectedIcon, String label, String? tooltip)? navigationDestination,
+    TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
+    TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
+    TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
     required TResult orElse(),
   }) {
     if (iconButton != null) {
@@ -5240,6 +5630,16 @@ class _$IconButton implements IconButton {
     required TResult Function(DefaultTabController value) defaultTabController,
     required TResult Function(Tab value) tab,
     required TResult Function(TabBarView value) tabBarView,
+    required TResult Function(CustomScrollView value) customScrollView,
+    required TResult Function(Checkbox value) checkbox,
+    required TResult Function(DropdownButtonFormField value)
+        dropdownButtonFormField,
+    required TResult Function(PopupMenuButton value) popupMenuButton,
+    required TResult Function(NavigationDestination value)
+        navigationDestination,
+    required TResult Function(ActionChip value) actionChip,
+    required TResult Function(FilterChip value) filterChip,
+    required TResult Function(InputChip value) inputChip,
   }) {
     return iconButton(this);
   }
@@ -5274,6 +5674,14 @@ class _$IconButton implements IconButton {
     TResult? Function(DefaultTabController value)? defaultTabController,
     TResult? Function(Tab value)? tab,
     TResult? Function(TabBarView value)? tabBarView,
+    TResult? Function(CustomScrollView value)? customScrollView,
+    TResult? Function(Checkbox value)? checkbox,
+    TResult? Function(DropdownButtonFormField value)? dropdownButtonFormField,
+    TResult? Function(PopupMenuButton value)? popupMenuButton,
+    TResult? Function(NavigationDestination value)? navigationDestination,
+    TResult? Function(ActionChip value)? actionChip,
+    TResult? Function(FilterChip value)? filterChip,
+    TResult? Function(InputChip value)? inputChip,
   }) {
     return iconButton?.call(this);
   }
@@ -5308,6 +5716,14 @@ class _$IconButton implements IconButton {
     TResult Function(DefaultTabController value)? defaultTabController,
     TResult Function(Tab value)? tab,
     TResult Function(TabBarView value)? tabBarView,
+    TResult Function(CustomScrollView value)? customScrollView,
+    TResult Function(Checkbox value)? checkbox,
+    TResult Function(DropdownButtonFormField value)? dropdownButtonFormField,
+    TResult Function(PopupMenuButton value)? popupMenuButton,
+    TResult Function(NavigationDestination value)? navigationDestination,
+    TResult Function(ActionChip value)? actionChip,
+    TResult Function(FilterChip value)? filterChip,
+    TResult Function(InputChip value)? inputChip,
     required TResult orElse(),
   }) {
     if (iconButton != null) {
@@ -5951,6 +6367,14 @@ class _$Scaffold implements Scaffold {
     required TResult Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration) defaultTabController,
     required TResult Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child) tab,
     required TResult Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior) tabBarView,
+    required TResult Function(Key? key, Axis scrollDirection, bool reverse, bool? primary, ScrollPhysics? physics, bool shrinkWrap, Key? center, double anchor, double? cacheExtent, List<Sliver> slivers, int? semanticChildCount, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior, String? restorationId, Clip clipBehavior) customScrollView,
+    required TResult Function(Key? key, bool? value, bool tristate, FormBoolField? field, MouseCursor? mouseCursor, Color? activeColor, MaterialStateProperty? fillColor, Color? checkColor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, MaterialTapTargetSize? materialTapTargetSize, VisualDensity? visualDensity, bool autofocus, ShapeBorder? shape, BorderSide? side, bool isError) checkbox,
+    required TResult Function(Key? key, FormStringField? field, List<DropdownMenuItem> items, String? value, Widget? hint, Widget? disabledHint, Callback? onTap, int elevation, TextStyle? style, Widget? icon, Color? iconDisabledColor, Color? iconEnabledColor, double iconSize, bool isDense, bool isExpanded, double? itemHeight, Color? focusColor, bool autofocus, Color? dropdownColor, InputDecoration? decoration, Map<String, String>? validatorMessages, AutovalidateMode? autovalidateMode, double? menuMaxHeight, bool? enableFeedback, Alignment alignment, BorderRadius? borderRadius) dropdownButtonFormField,
+    required TResult Function(Key? key, List<PopupMenuEntry> items, String? initialValue, Callback? onOpened, FormStringField? field, Callback? onCanceled, String? tooltip, double? elevation, Color? shadowColor, Color? surfaceTintColor, EdgeInsets padding, Widget? child, double? splashRadius, Widget? icon, double? iconSize, Offset offset, bool enabled, ShapeBorder? shape, Color? color, bool? enableFeedback, BoxConstraints? constraints, PopupMenuPosition? position, Clip clipBehavior) popupMenuButton,
+    required TResult Function(Key? key, Widget icon, Widget? selectedIcon, String label, String? tooltip) navigationDestination,
+    required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme) actionChip,
+    required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) filterChip,
+    required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) inputChip,
   }) {
     return scaffold(
         key,
@@ -6072,6 +6496,14 @@ class _$Scaffold implements Scaffold {
     TResult? Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration)? defaultTabController,
     TResult? Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child)? tab,
     TResult? Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior)? tabBarView,
+    TResult? Function(Key? key, Axis scrollDirection, bool reverse, bool? primary, ScrollPhysics? physics, bool shrinkWrap, Key? center, double anchor, double? cacheExtent, List<Sliver> slivers, int? semanticChildCount, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior, String? restorationId, Clip clipBehavior)? customScrollView,
+    TResult? Function(Key? key, bool? value, bool tristate, FormBoolField? field, MouseCursor? mouseCursor, Color? activeColor, MaterialStateProperty? fillColor, Color? checkColor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, MaterialTapTargetSize? materialTapTargetSize, VisualDensity? visualDensity, bool autofocus, ShapeBorder? shape, BorderSide? side, bool isError)? checkbox,
+    TResult? Function(Key? key, FormStringField? field, List<DropdownMenuItem> items, String? value, Widget? hint, Widget? disabledHint, Callback? onTap, int elevation, TextStyle? style, Widget? icon, Color? iconDisabledColor, Color? iconEnabledColor, double iconSize, bool isDense, bool isExpanded, double? itemHeight, Color? focusColor, bool autofocus, Color? dropdownColor, InputDecoration? decoration, Map<String, String>? validatorMessages, AutovalidateMode? autovalidateMode, double? menuMaxHeight, bool? enableFeedback, Alignment alignment, BorderRadius? borderRadius)? dropdownButtonFormField,
+    TResult? Function(Key? key, List<PopupMenuEntry> items, String? initialValue, Callback? onOpened, FormStringField? field, Callback? onCanceled, String? tooltip, double? elevation, Color? shadowColor, Color? surfaceTintColor, EdgeInsets padding, Widget? child, double? splashRadius, Widget? icon, double? iconSize, Offset offset, bool enabled, ShapeBorder? shape, Color? color, bool? enableFeedback, BoxConstraints? constraints, PopupMenuPosition? position, Clip clipBehavior)? popupMenuButton,
+    TResult? Function(Key? key, Widget icon, Widget? selectedIcon, String label, String? tooltip)? navigationDestination,
+    TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
+    TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
+    TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
   }) {
     return scaffold?.call(
         key,
@@ -6193,6 +6625,14 @@ class _$Scaffold implements Scaffold {
     TResult Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration)? defaultTabController,
     TResult Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child)? tab,
     TResult Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior)? tabBarView,
+    TResult Function(Key? key, Axis scrollDirection, bool reverse, bool? primary, ScrollPhysics? physics, bool shrinkWrap, Key? center, double anchor, double? cacheExtent, List<Sliver> slivers, int? semanticChildCount, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior, String? restorationId, Clip clipBehavior)? customScrollView,
+    TResult Function(Key? key, bool? value, bool tristate, FormBoolField? field, MouseCursor? mouseCursor, Color? activeColor, MaterialStateProperty? fillColor, Color? checkColor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, MaterialTapTargetSize? materialTapTargetSize, VisualDensity? visualDensity, bool autofocus, ShapeBorder? shape, BorderSide? side, bool isError)? checkbox,
+    TResult Function(Key? key, FormStringField? field, List<DropdownMenuItem> items, String? value, Widget? hint, Widget? disabledHint, Callback? onTap, int elevation, TextStyle? style, Widget? icon, Color? iconDisabledColor, Color? iconEnabledColor, double iconSize, bool isDense, bool isExpanded, double? itemHeight, Color? focusColor, bool autofocus, Color? dropdownColor, InputDecoration? decoration, Map<String, String>? validatorMessages, AutovalidateMode? autovalidateMode, double? menuMaxHeight, bool? enableFeedback, Alignment alignment, BorderRadius? borderRadius)? dropdownButtonFormField,
+    TResult Function(Key? key, List<PopupMenuEntry> items, String? initialValue, Callback? onOpened, FormStringField? field, Callback? onCanceled, String? tooltip, double? elevation, Color? shadowColor, Color? surfaceTintColor, EdgeInsets padding, Widget? child, double? splashRadius, Widget? icon, double? iconSize, Offset offset, bool enabled, ShapeBorder? shape, Color? color, bool? enableFeedback, BoxConstraints? constraints, PopupMenuPosition? position, Clip clipBehavior)? popupMenuButton,
+    TResult Function(Key? key, Widget icon, Widget? selectedIcon, String label, String? tooltip)? navigationDestination,
+    TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
+    TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
+    TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
     required TResult orElse(),
   }) {
     if (scaffold != null) {
@@ -6253,6 +6693,16 @@ class _$Scaffold implements Scaffold {
     required TResult Function(DefaultTabController value) defaultTabController,
     required TResult Function(Tab value) tab,
     required TResult Function(TabBarView value) tabBarView,
+    required TResult Function(CustomScrollView value) customScrollView,
+    required TResult Function(Checkbox value) checkbox,
+    required TResult Function(DropdownButtonFormField value)
+        dropdownButtonFormField,
+    required TResult Function(PopupMenuButton value) popupMenuButton,
+    required TResult Function(NavigationDestination value)
+        navigationDestination,
+    required TResult Function(ActionChip value) actionChip,
+    required TResult Function(FilterChip value) filterChip,
+    required TResult Function(InputChip value) inputChip,
   }) {
     return scaffold(this);
   }
@@ -6287,6 +6737,14 @@ class _$Scaffold implements Scaffold {
     TResult? Function(DefaultTabController value)? defaultTabController,
     TResult? Function(Tab value)? tab,
     TResult? Function(TabBarView value)? tabBarView,
+    TResult? Function(CustomScrollView value)? customScrollView,
+    TResult? Function(Checkbox value)? checkbox,
+    TResult? Function(DropdownButtonFormField value)? dropdownButtonFormField,
+    TResult? Function(PopupMenuButton value)? popupMenuButton,
+    TResult? Function(NavigationDestination value)? navigationDestination,
+    TResult? Function(ActionChip value)? actionChip,
+    TResult? Function(FilterChip value)? filterChip,
+    TResult? Function(InputChip value)? inputChip,
   }) {
     return scaffold?.call(this);
   }
@@ -6321,6 +6779,14 @@ class _$Scaffold implements Scaffold {
     TResult Function(DefaultTabController value)? defaultTabController,
     TResult Function(Tab value)? tab,
     TResult Function(TabBarView value)? tabBarView,
+    TResult Function(CustomScrollView value)? customScrollView,
+    TResult Function(Checkbox value)? checkbox,
+    TResult Function(DropdownButtonFormField value)? dropdownButtonFormField,
+    TResult Function(PopupMenuButton value)? popupMenuButton,
+    TResult Function(NavigationDestination value)? navigationDestination,
+    TResult Function(ActionChip value)? actionChip,
+    TResult Function(FilterChip value)? filterChip,
+    TResult Function(InputChip value)? inputChip,
     required TResult orElse(),
   }) {
     if (scaffold != null) {
@@ -6937,6 +7403,14 @@ class _$FloatingActionButton implements FloatingActionButton {
     required TResult Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration) defaultTabController,
     required TResult Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child) tab,
     required TResult Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior) tabBarView,
+    required TResult Function(Key? key, Axis scrollDirection, bool reverse, bool? primary, ScrollPhysics? physics, bool shrinkWrap, Key? center, double anchor, double? cacheExtent, List<Sliver> slivers, int? semanticChildCount, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior, String? restorationId, Clip clipBehavior) customScrollView,
+    required TResult Function(Key? key, bool? value, bool tristate, FormBoolField? field, MouseCursor? mouseCursor, Color? activeColor, MaterialStateProperty? fillColor, Color? checkColor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, MaterialTapTargetSize? materialTapTargetSize, VisualDensity? visualDensity, bool autofocus, ShapeBorder? shape, BorderSide? side, bool isError) checkbox,
+    required TResult Function(Key? key, FormStringField? field, List<DropdownMenuItem> items, String? value, Widget? hint, Widget? disabledHint, Callback? onTap, int elevation, TextStyle? style, Widget? icon, Color? iconDisabledColor, Color? iconEnabledColor, double iconSize, bool isDense, bool isExpanded, double? itemHeight, Color? focusColor, bool autofocus, Color? dropdownColor, InputDecoration? decoration, Map<String, String>? validatorMessages, AutovalidateMode? autovalidateMode, double? menuMaxHeight, bool? enableFeedback, Alignment alignment, BorderRadius? borderRadius) dropdownButtonFormField,
+    required TResult Function(Key? key, List<PopupMenuEntry> items, String? initialValue, Callback? onOpened, FormStringField? field, Callback? onCanceled, String? tooltip, double? elevation, Color? shadowColor, Color? surfaceTintColor, EdgeInsets padding, Widget? child, double? splashRadius, Widget? icon, double? iconSize, Offset offset, bool enabled, ShapeBorder? shape, Color? color, bool? enableFeedback, BoxConstraints? constraints, PopupMenuPosition? position, Clip clipBehavior) popupMenuButton,
+    required TResult Function(Key? key, Widget icon, Widget? selectedIcon, String label, String? tooltip) navigationDestination,
+    required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme) actionChip,
+    required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) filterChip,
+    required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) inputChip,
   }) {
     return floatingActionButton(
         key,
@@ -7059,6 +7533,14 @@ class _$FloatingActionButton implements FloatingActionButton {
     TResult? Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration)? defaultTabController,
     TResult? Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child)? tab,
     TResult? Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior)? tabBarView,
+    TResult? Function(Key? key, Axis scrollDirection, bool reverse, bool? primary, ScrollPhysics? physics, bool shrinkWrap, Key? center, double anchor, double? cacheExtent, List<Sliver> slivers, int? semanticChildCount, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior, String? restorationId, Clip clipBehavior)? customScrollView,
+    TResult? Function(Key? key, bool? value, bool tristate, FormBoolField? field, MouseCursor? mouseCursor, Color? activeColor, MaterialStateProperty? fillColor, Color? checkColor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, MaterialTapTargetSize? materialTapTargetSize, VisualDensity? visualDensity, bool autofocus, ShapeBorder? shape, BorderSide? side, bool isError)? checkbox,
+    TResult? Function(Key? key, FormStringField? field, List<DropdownMenuItem> items, String? value, Widget? hint, Widget? disabledHint, Callback? onTap, int elevation, TextStyle? style, Widget? icon, Color? iconDisabledColor, Color? iconEnabledColor, double iconSize, bool isDense, bool isExpanded, double? itemHeight, Color? focusColor, bool autofocus, Color? dropdownColor, InputDecoration? decoration, Map<String, String>? validatorMessages, AutovalidateMode? autovalidateMode, double? menuMaxHeight, bool? enableFeedback, Alignment alignment, BorderRadius? borderRadius)? dropdownButtonFormField,
+    TResult? Function(Key? key, List<PopupMenuEntry> items, String? initialValue, Callback? onOpened, FormStringField? field, Callback? onCanceled, String? tooltip, double? elevation, Color? shadowColor, Color? surfaceTintColor, EdgeInsets padding, Widget? child, double? splashRadius, Widget? icon, double? iconSize, Offset offset, bool enabled, ShapeBorder? shape, Color? color, bool? enableFeedback, BoxConstraints? constraints, PopupMenuPosition? position, Clip clipBehavior)? popupMenuButton,
+    TResult? Function(Key? key, Widget icon, Widget? selectedIcon, String label, String? tooltip)? navigationDestination,
+    TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
+    TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
+    TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
   }) {
     return floatingActionButton?.call(
         key,
@@ -7181,6 +7663,14 @@ class _$FloatingActionButton implements FloatingActionButton {
     TResult Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration)? defaultTabController,
     TResult Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child)? tab,
     TResult Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior)? tabBarView,
+    TResult Function(Key? key, Axis scrollDirection, bool reverse, bool? primary, ScrollPhysics? physics, bool shrinkWrap, Key? center, double anchor, double? cacheExtent, List<Sliver> slivers, int? semanticChildCount, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior, String? restorationId, Clip clipBehavior)? customScrollView,
+    TResult Function(Key? key, bool? value, bool tristate, FormBoolField? field, MouseCursor? mouseCursor, Color? activeColor, MaterialStateProperty? fillColor, Color? checkColor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, MaterialTapTargetSize? materialTapTargetSize, VisualDensity? visualDensity, bool autofocus, ShapeBorder? shape, BorderSide? side, bool isError)? checkbox,
+    TResult Function(Key? key, FormStringField? field, List<DropdownMenuItem> items, String? value, Widget? hint, Widget? disabledHint, Callback? onTap, int elevation, TextStyle? style, Widget? icon, Color? iconDisabledColor, Color? iconEnabledColor, double iconSize, bool isDense, bool isExpanded, double? itemHeight, Color? focusColor, bool autofocus, Color? dropdownColor, InputDecoration? decoration, Map<String, String>? validatorMessages, AutovalidateMode? autovalidateMode, double? menuMaxHeight, bool? enableFeedback, Alignment alignment, BorderRadius? borderRadius)? dropdownButtonFormField,
+    TResult Function(Key? key, List<PopupMenuEntry> items, String? initialValue, Callback? onOpened, FormStringField? field, Callback? onCanceled, String? tooltip, double? elevation, Color? shadowColor, Color? surfaceTintColor, EdgeInsets padding, Widget? child, double? splashRadius, Widget? icon, double? iconSize, Offset offset, bool enabled, ShapeBorder? shape, Color? color, bool? enableFeedback, BoxConstraints? constraints, PopupMenuPosition? position, Clip clipBehavior)? popupMenuButton,
+    TResult Function(Key? key, Widget icon, Widget? selectedIcon, String label, String? tooltip)? navigationDestination,
+    TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
+    TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
+    TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
     required TResult orElse(),
   }) {
     if (floatingActionButton != null) {
@@ -7242,6 +7732,16 @@ class _$FloatingActionButton implements FloatingActionButton {
     required TResult Function(DefaultTabController value) defaultTabController,
     required TResult Function(Tab value) tab,
     required TResult Function(TabBarView value) tabBarView,
+    required TResult Function(CustomScrollView value) customScrollView,
+    required TResult Function(Checkbox value) checkbox,
+    required TResult Function(DropdownButtonFormField value)
+        dropdownButtonFormField,
+    required TResult Function(PopupMenuButton value) popupMenuButton,
+    required TResult Function(NavigationDestination value)
+        navigationDestination,
+    required TResult Function(ActionChip value) actionChip,
+    required TResult Function(FilterChip value) filterChip,
+    required TResult Function(InputChip value) inputChip,
   }) {
     return floatingActionButton(this);
   }
@@ -7276,6 +7776,14 @@ class _$FloatingActionButton implements FloatingActionButton {
     TResult? Function(DefaultTabController value)? defaultTabController,
     TResult? Function(Tab value)? tab,
     TResult? Function(TabBarView value)? tabBarView,
+    TResult? Function(CustomScrollView value)? customScrollView,
+    TResult? Function(Checkbox value)? checkbox,
+    TResult? Function(DropdownButtonFormField value)? dropdownButtonFormField,
+    TResult? Function(PopupMenuButton value)? popupMenuButton,
+    TResult? Function(NavigationDestination value)? navigationDestination,
+    TResult? Function(ActionChip value)? actionChip,
+    TResult? Function(FilterChip value)? filterChip,
+    TResult? Function(InputChip value)? inputChip,
   }) {
     return floatingActionButton?.call(this);
   }
@@ -7310,6 +7818,14 @@ class _$FloatingActionButton implements FloatingActionButton {
     TResult Function(DefaultTabController value)? defaultTabController,
     TResult Function(Tab value)? tab,
     TResult Function(TabBarView value)? tabBarView,
+    TResult Function(CustomScrollView value)? customScrollView,
+    TResult Function(Checkbox value)? checkbox,
+    TResult Function(DropdownButtonFormField value)? dropdownButtonFormField,
+    TResult Function(PopupMenuButton value)? popupMenuButton,
+    TResult Function(NavigationDestination value)? navigationDestination,
+    TResult Function(ActionChip value)? actionChip,
+    TResult Function(FilterChip value)? filterChip,
+    TResult Function(InputChip value)? inputChip,
     required TResult orElse(),
   }) {
     if (floatingActionButton != null) {
@@ -7939,6 +8455,14 @@ class _$FloatingActionButtonExtended implements FloatingActionButtonExtended {
     required TResult Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration) defaultTabController,
     required TResult Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child) tab,
     required TResult Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior) tabBarView,
+    required TResult Function(Key? key, Axis scrollDirection, bool reverse, bool? primary, ScrollPhysics? physics, bool shrinkWrap, Key? center, double anchor, double? cacheExtent, List<Sliver> slivers, int? semanticChildCount, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior, String? restorationId, Clip clipBehavior) customScrollView,
+    required TResult Function(Key? key, bool? value, bool tristate, FormBoolField? field, MouseCursor? mouseCursor, Color? activeColor, MaterialStateProperty? fillColor, Color? checkColor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, MaterialTapTargetSize? materialTapTargetSize, VisualDensity? visualDensity, bool autofocus, ShapeBorder? shape, BorderSide? side, bool isError) checkbox,
+    required TResult Function(Key? key, FormStringField? field, List<DropdownMenuItem> items, String? value, Widget? hint, Widget? disabledHint, Callback? onTap, int elevation, TextStyle? style, Widget? icon, Color? iconDisabledColor, Color? iconEnabledColor, double iconSize, bool isDense, bool isExpanded, double? itemHeight, Color? focusColor, bool autofocus, Color? dropdownColor, InputDecoration? decoration, Map<String, String>? validatorMessages, AutovalidateMode? autovalidateMode, double? menuMaxHeight, bool? enableFeedback, Alignment alignment, BorderRadius? borderRadius) dropdownButtonFormField,
+    required TResult Function(Key? key, List<PopupMenuEntry> items, String? initialValue, Callback? onOpened, FormStringField? field, Callback? onCanceled, String? tooltip, double? elevation, Color? shadowColor, Color? surfaceTintColor, EdgeInsets padding, Widget? child, double? splashRadius, Widget? icon, double? iconSize, Offset offset, bool enabled, ShapeBorder? shape, Color? color, bool? enableFeedback, BoxConstraints? constraints, PopupMenuPosition? position, Clip clipBehavior) popupMenuButton,
+    required TResult Function(Key? key, Widget icon, Widget? selectedIcon, String label, String? tooltip) navigationDestination,
+    required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme) actionChip,
+    required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) filterChip,
+    required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) inputChip,
   }) {
     return floatingActionButtonExtended(
         key,
@@ -8061,6 +8585,14 @@ class _$FloatingActionButtonExtended implements FloatingActionButtonExtended {
     TResult? Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration)? defaultTabController,
     TResult? Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child)? tab,
     TResult? Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior)? tabBarView,
+    TResult? Function(Key? key, Axis scrollDirection, bool reverse, bool? primary, ScrollPhysics? physics, bool shrinkWrap, Key? center, double anchor, double? cacheExtent, List<Sliver> slivers, int? semanticChildCount, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior, String? restorationId, Clip clipBehavior)? customScrollView,
+    TResult? Function(Key? key, bool? value, bool tristate, FormBoolField? field, MouseCursor? mouseCursor, Color? activeColor, MaterialStateProperty? fillColor, Color? checkColor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, MaterialTapTargetSize? materialTapTargetSize, VisualDensity? visualDensity, bool autofocus, ShapeBorder? shape, BorderSide? side, bool isError)? checkbox,
+    TResult? Function(Key? key, FormStringField? field, List<DropdownMenuItem> items, String? value, Widget? hint, Widget? disabledHint, Callback? onTap, int elevation, TextStyle? style, Widget? icon, Color? iconDisabledColor, Color? iconEnabledColor, double iconSize, bool isDense, bool isExpanded, double? itemHeight, Color? focusColor, bool autofocus, Color? dropdownColor, InputDecoration? decoration, Map<String, String>? validatorMessages, AutovalidateMode? autovalidateMode, double? menuMaxHeight, bool? enableFeedback, Alignment alignment, BorderRadius? borderRadius)? dropdownButtonFormField,
+    TResult? Function(Key? key, List<PopupMenuEntry> items, String? initialValue, Callback? onOpened, FormStringField? field, Callback? onCanceled, String? tooltip, double? elevation, Color? shadowColor, Color? surfaceTintColor, EdgeInsets padding, Widget? child, double? splashRadius, Widget? icon, double? iconSize, Offset offset, bool enabled, ShapeBorder? shape, Color? color, bool? enableFeedback, BoxConstraints? constraints, PopupMenuPosition? position, Clip clipBehavior)? popupMenuButton,
+    TResult? Function(Key? key, Widget icon, Widget? selectedIcon, String label, String? tooltip)? navigationDestination,
+    TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
+    TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
+    TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
   }) {
     return floatingActionButtonExtended?.call(
         key,
@@ -8183,6 +8715,14 @@ class _$FloatingActionButtonExtended implements FloatingActionButtonExtended {
     TResult Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration)? defaultTabController,
     TResult Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child)? tab,
     TResult Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior)? tabBarView,
+    TResult Function(Key? key, Axis scrollDirection, bool reverse, bool? primary, ScrollPhysics? physics, bool shrinkWrap, Key? center, double anchor, double? cacheExtent, List<Sliver> slivers, int? semanticChildCount, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior, String? restorationId, Clip clipBehavior)? customScrollView,
+    TResult Function(Key? key, bool? value, bool tristate, FormBoolField? field, MouseCursor? mouseCursor, Color? activeColor, MaterialStateProperty? fillColor, Color? checkColor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, MaterialTapTargetSize? materialTapTargetSize, VisualDensity? visualDensity, bool autofocus, ShapeBorder? shape, BorderSide? side, bool isError)? checkbox,
+    TResult Function(Key? key, FormStringField? field, List<DropdownMenuItem> items, String? value, Widget? hint, Widget? disabledHint, Callback? onTap, int elevation, TextStyle? style, Widget? icon, Color? iconDisabledColor, Color? iconEnabledColor, double iconSize, bool isDense, bool isExpanded, double? itemHeight, Color? focusColor, bool autofocus, Color? dropdownColor, InputDecoration? decoration, Map<String, String>? validatorMessages, AutovalidateMode? autovalidateMode, double? menuMaxHeight, bool? enableFeedback, Alignment alignment, BorderRadius? borderRadius)? dropdownButtonFormField,
+    TResult Function(Key? key, List<PopupMenuEntry> items, String? initialValue, Callback? onOpened, FormStringField? field, Callback? onCanceled, String? tooltip, double? elevation, Color? shadowColor, Color? surfaceTintColor, EdgeInsets padding, Widget? child, double? splashRadius, Widget? icon, double? iconSize, Offset offset, bool enabled, ShapeBorder? shape, Color? color, bool? enableFeedback, BoxConstraints? constraints, PopupMenuPosition? position, Clip clipBehavior)? popupMenuButton,
+    TResult Function(Key? key, Widget icon, Widget? selectedIcon, String label, String? tooltip)? navigationDestination,
+    TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
+    TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
+    TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
     required TResult orElse(),
   }) {
     if (floatingActionButtonExtended != null) {
@@ -8244,6 +8784,16 @@ class _$FloatingActionButtonExtended implements FloatingActionButtonExtended {
     required TResult Function(DefaultTabController value) defaultTabController,
     required TResult Function(Tab value) tab,
     required TResult Function(TabBarView value) tabBarView,
+    required TResult Function(CustomScrollView value) customScrollView,
+    required TResult Function(Checkbox value) checkbox,
+    required TResult Function(DropdownButtonFormField value)
+        dropdownButtonFormField,
+    required TResult Function(PopupMenuButton value) popupMenuButton,
+    required TResult Function(NavigationDestination value)
+        navigationDestination,
+    required TResult Function(ActionChip value) actionChip,
+    required TResult Function(FilterChip value) filterChip,
+    required TResult Function(InputChip value) inputChip,
   }) {
     return floatingActionButtonExtended(this);
   }
@@ -8278,6 +8828,14 @@ class _$FloatingActionButtonExtended implements FloatingActionButtonExtended {
     TResult? Function(DefaultTabController value)? defaultTabController,
     TResult? Function(Tab value)? tab,
     TResult? Function(TabBarView value)? tabBarView,
+    TResult? Function(CustomScrollView value)? customScrollView,
+    TResult? Function(Checkbox value)? checkbox,
+    TResult? Function(DropdownButtonFormField value)? dropdownButtonFormField,
+    TResult? Function(PopupMenuButton value)? popupMenuButton,
+    TResult? Function(NavigationDestination value)? navigationDestination,
+    TResult? Function(ActionChip value)? actionChip,
+    TResult? Function(FilterChip value)? filterChip,
+    TResult? Function(InputChip value)? inputChip,
   }) {
     return floatingActionButtonExtended?.call(this);
   }
@@ -8312,6 +8870,14 @@ class _$FloatingActionButtonExtended implements FloatingActionButtonExtended {
     TResult Function(DefaultTabController value)? defaultTabController,
     TResult Function(Tab value)? tab,
     TResult Function(TabBarView value)? tabBarView,
+    TResult Function(CustomScrollView value)? customScrollView,
+    TResult Function(Checkbox value)? checkbox,
+    TResult Function(DropdownButtonFormField value)? dropdownButtonFormField,
+    TResult Function(PopupMenuButton value)? popupMenuButton,
+    TResult Function(NavigationDestination value)? navigationDestination,
+    TResult Function(ActionChip value)? actionChip,
+    TResult Function(FilterChip value)? filterChip,
+    TResult Function(InputChip value)? inputChip,
     required TResult orElse(),
   }) {
     if (floatingActionButtonExtended != null) {
@@ -8785,6 +9351,14 @@ class _$Text implements Text {
     required TResult Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration) defaultTabController,
     required TResult Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child) tab,
     required TResult Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior) tabBarView,
+    required TResult Function(Key? key, Axis scrollDirection, bool reverse, bool? primary, ScrollPhysics? physics, bool shrinkWrap, Key? center, double anchor, double? cacheExtent, List<Sliver> slivers, int? semanticChildCount, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior, String? restorationId, Clip clipBehavior) customScrollView,
+    required TResult Function(Key? key, bool? value, bool tristate, FormBoolField? field, MouseCursor? mouseCursor, Color? activeColor, MaterialStateProperty? fillColor, Color? checkColor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, MaterialTapTargetSize? materialTapTargetSize, VisualDensity? visualDensity, bool autofocus, ShapeBorder? shape, BorderSide? side, bool isError) checkbox,
+    required TResult Function(Key? key, FormStringField? field, List<DropdownMenuItem> items, String? value, Widget? hint, Widget? disabledHint, Callback? onTap, int elevation, TextStyle? style, Widget? icon, Color? iconDisabledColor, Color? iconEnabledColor, double iconSize, bool isDense, bool isExpanded, double? itemHeight, Color? focusColor, bool autofocus, Color? dropdownColor, InputDecoration? decoration, Map<String, String>? validatorMessages, AutovalidateMode? autovalidateMode, double? menuMaxHeight, bool? enableFeedback, Alignment alignment, BorderRadius? borderRadius) dropdownButtonFormField,
+    required TResult Function(Key? key, List<PopupMenuEntry> items, String? initialValue, Callback? onOpened, FormStringField? field, Callback? onCanceled, String? tooltip, double? elevation, Color? shadowColor, Color? surfaceTintColor, EdgeInsets padding, Widget? child, double? splashRadius, Widget? icon, double? iconSize, Offset offset, bool enabled, ShapeBorder? shape, Color? color, bool? enableFeedback, BoxConstraints? constraints, PopupMenuPosition? position, Clip clipBehavior) popupMenuButton,
+    required TResult Function(Key? key, Widget icon, Widget? selectedIcon, String label, String? tooltip) navigationDestination,
+    required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme) actionChip,
+    required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) filterChip,
+    required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) inputChip,
   }) {
     return text(
         data,
@@ -8900,6 +9474,14 @@ class _$Text implements Text {
     TResult? Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration)? defaultTabController,
     TResult? Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child)? tab,
     TResult? Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior)? tabBarView,
+    TResult? Function(Key? key, Axis scrollDirection, bool reverse, bool? primary, ScrollPhysics? physics, bool shrinkWrap, Key? center, double anchor, double? cacheExtent, List<Sliver> slivers, int? semanticChildCount, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior, String? restorationId, Clip clipBehavior)? customScrollView,
+    TResult? Function(Key? key, bool? value, bool tristate, FormBoolField? field, MouseCursor? mouseCursor, Color? activeColor, MaterialStateProperty? fillColor, Color? checkColor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, MaterialTapTargetSize? materialTapTargetSize, VisualDensity? visualDensity, bool autofocus, ShapeBorder? shape, BorderSide? side, bool isError)? checkbox,
+    TResult? Function(Key? key, FormStringField? field, List<DropdownMenuItem> items, String? value, Widget? hint, Widget? disabledHint, Callback? onTap, int elevation, TextStyle? style, Widget? icon, Color? iconDisabledColor, Color? iconEnabledColor, double iconSize, bool isDense, bool isExpanded, double? itemHeight, Color? focusColor, bool autofocus, Color? dropdownColor, InputDecoration? decoration, Map<String, String>? validatorMessages, AutovalidateMode? autovalidateMode, double? menuMaxHeight, bool? enableFeedback, Alignment alignment, BorderRadius? borderRadius)? dropdownButtonFormField,
+    TResult? Function(Key? key, List<PopupMenuEntry> items, String? initialValue, Callback? onOpened, FormStringField? field, Callback? onCanceled, String? tooltip, double? elevation, Color? shadowColor, Color? surfaceTintColor, EdgeInsets padding, Widget? child, double? splashRadius, Widget? icon, double? iconSize, Offset offset, bool enabled, ShapeBorder? shape, Color? color, bool? enableFeedback, BoxConstraints? constraints, PopupMenuPosition? position, Clip clipBehavior)? popupMenuButton,
+    TResult? Function(Key? key, Widget icon, Widget? selectedIcon, String label, String? tooltip)? navigationDestination,
+    TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
+    TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
+    TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
   }) {
     return text?.call(
         data,
@@ -9015,6 +9597,14 @@ class _$Text implements Text {
     TResult Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration)? defaultTabController,
     TResult Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child)? tab,
     TResult Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior)? tabBarView,
+    TResult Function(Key? key, Axis scrollDirection, bool reverse, bool? primary, ScrollPhysics? physics, bool shrinkWrap, Key? center, double anchor, double? cacheExtent, List<Sliver> slivers, int? semanticChildCount, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior, String? restorationId, Clip clipBehavior)? customScrollView,
+    TResult Function(Key? key, bool? value, bool tristate, FormBoolField? field, MouseCursor? mouseCursor, Color? activeColor, MaterialStateProperty? fillColor, Color? checkColor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, MaterialTapTargetSize? materialTapTargetSize, VisualDensity? visualDensity, bool autofocus, ShapeBorder? shape, BorderSide? side, bool isError)? checkbox,
+    TResult Function(Key? key, FormStringField? field, List<DropdownMenuItem> items, String? value, Widget? hint, Widget? disabledHint, Callback? onTap, int elevation, TextStyle? style, Widget? icon, Color? iconDisabledColor, Color? iconEnabledColor, double iconSize, bool isDense, bool isExpanded, double? itemHeight, Color? focusColor, bool autofocus, Color? dropdownColor, InputDecoration? decoration, Map<String, String>? validatorMessages, AutovalidateMode? autovalidateMode, double? menuMaxHeight, bool? enableFeedback, Alignment alignment, BorderRadius? borderRadius)? dropdownButtonFormField,
+    TResult Function(Key? key, List<PopupMenuEntry> items, String? initialValue, Callback? onOpened, FormStringField? field, Callback? onCanceled, String? tooltip, double? elevation, Color? shadowColor, Color? surfaceTintColor, EdgeInsets padding, Widget? child, double? splashRadius, Widget? icon, double? iconSize, Offset offset, bool enabled, ShapeBorder? shape, Color? color, bool? enableFeedback, BoxConstraints? constraints, PopupMenuPosition? position, Clip clipBehavior)? popupMenuButton,
+    TResult Function(Key? key, Widget icon, Widget? selectedIcon, String label, String? tooltip)? navigationDestination,
+    TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
+    TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
+    TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
     required TResult orElse(),
   }) {
     if (text != null) {
@@ -9069,6 +9659,16 @@ class _$Text implements Text {
     required TResult Function(DefaultTabController value) defaultTabController,
     required TResult Function(Tab value) tab,
     required TResult Function(TabBarView value) tabBarView,
+    required TResult Function(CustomScrollView value) customScrollView,
+    required TResult Function(Checkbox value) checkbox,
+    required TResult Function(DropdownButtonFormField value)
+        dropdownButtonFormField,
+    required TResult Function(PopupMenuButton value) popupMenuButton,
+    required TResult Function(NavigationDestination value)
+        navigationDestination,
+    required TResult Function(ActionChip value) actionChip,
+    required TResult Function(FilterChip value) filterChip,
+    required TResult Function(InputChip value) inputChip,
   }) {
     return text(this);
   }
@@ -9103,6 +9703,14 @@ class _$Text implements Text {
     TResult? Function(DefaultTabController value)? defaultTabController,
     TResult? Function(Tab value)? tab,
     TResult? Function(TabBarView value)? tabBarView,
+    TResult? Function(CustomScrollView value)? customScrollView,
+    TResult? Function(Checkbox value)? checkbox,
+    TResult? Function(DropdownButtonFormField value)? dropdownButtonFormField,
+    TResult? Function(PopupMenuButton value)? popupMenuButton,
+    TResult? Function(NavigationDestination value)? navigationDestination,
+    TResult? Function(ActionChip value)? actionChip,
+    TResult? Function(FilterChip value)? filterChip,
+    TResult? Function(InputChip value)? inputChip,
   }) {
     return text?.call(this);
   }
@@ -9137,6 +9745,14 @@ class _$Text implements Text {
     TResult Function(DefaultTabController value)? defaultTabController,
     TResult Function(Tab value)? tab,
     TResult Function(TabBarView value)? tabBarView,
+    TResult Function(CustomScrollView value)? customScrollView,
+    TResult Function(Checkbox value)? checkbox,
+    TResult Function(DropdownButtonFormField value)? dropdownButtonFormField,
+    TResult Function(PopupMenuButton value)? popupMenuButton,
+    TResult Function(NavigationDestination value)? navigationDestination,
+    TResult Function(ActionChip value)? actionChip,
+    TResult Function(FilterChip value)? filterChip,
+    TResult Function(InputChip value)? inputChip,
     required TResult orElse(),
   }) {
     if (text != null) {
@@ -9636,6 +10252,14 @@ class _$Container implements Container {
     required TResult Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration) defaultTabController,
     required TResult Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child) tab,
     required TResult Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior) tabBarView,
+    required TResult Function(Key? key, Axis scrollDirection, bool reverse, bool? primary, ScrollPhysics? physics, bool shrinkWrap, Key? center, double anchor, double? cacheExtent, List<Sliver> slivers, int? semanticChildCount, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior, String? restorationId, Clip clipBehavior) customScrollView,
+    required TResult Function(Key? key, bool? value, bool tristate, FormBoolField? field, MouseCursor? mouseCursor, Color? activeColor, MaterialStateProperty? fillColor, Color? checkColor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, MaterialTapTargetSize? materialTapTargetSize, VisualDensity? visualDensity, bool autofocus, ShapeBorder? shape, BorderSide? side, bool isError) checkbox,
+    required TResult Function(Key? key, FormStringField? field, List<DropdownMenuItem> items, String? value, Widget? hint, Widget? disabledHint, Callback? onTap, int elevation, TextStyle? style, Widget? icon, Color? iconDisabledColor, Color? iconEnabledColor, double iconSize, bool isDense, bool isExpanded, double? itemHeight, Color? focusColor, bool autofocus, Color? dropdownColor, InputDecoration? decoration, Map<String, String>? validatorMessages, AutovalidateMode? autovalidateMode, double? menuMaxHeight, bool? enableFeedback, Alignment alignment, BorderRadius? borderRadius) dropdownButtonFormField,
+    required TResult Function(Key? key, List<PopupMenuEntry> items, String? initialValue, Callback? onOpened, FormStringField? field, Callback? onCanceled, String? tooltip, double? elevation, Color? shadowColor, Color? surfaceTintColor, EdgeInsets padding, Widget? child, double? splashRadius, Widget? icon, double? iconSize, Offset offset, bool enabled, ShapeBorder? shape, Color? color, bool? enableFeedback, BoxConstraints? constraints, PopupMenuPosition? position, Clip clipBehavior) popupMenuButton,
+    required TResult Function(Key? key, Widget icon, Widget? selectedIcon, String label, String? tooltip) navigationDestination,
+    required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme) actionChip,
+    required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) filterChip,
+    required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) inputChip,
   }) {
     return container(
         key,
@@ -9750,6 +10374,14 @@ class _$Container implements Container {
     TResult? Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration)? defaultTabController,
     TResult? Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child)? tab,
     TResult? Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior)? tabBarView,
+    TResult? Function(Key? key, Axis scrollDirection, bool reverse, bool? primary, ScrollPhysics? physics, bool shrinkWrap, Key? center, double anchor, double? cacheExtent, List<Sliver> slivers, int? semanticChildCount, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior, String? restorationId, Clip clipBehavior)? customScrollView,
+    TResult? Function(Key? key, bool? value, bool tristate, FormBoolField? field, MouseCursor? mouseCursor, Color? activeColor, MaterialStateProperty? fillColor, Color? checkColor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, MaterialTapTargetSize? materialTapTargetSize, VisualDensity? visualDensity, bool autofocus, ShapeBorder? shape, BorderSide? side, bool isError)? checkbox,
+    TResult? Function(Key? key, FormStringField? field, List<DropdownMenuItem> items, String? value, Widget? hint, Widget? disabledHint, Callback? onTap, int elevation, TextStyle? style, Widget? icon, Color? iconDisabledColor, Color? iconEnabledColor, double iconSize, bool isDense, bool isExpanded, double? itemHeight, Color? focusColor, bool autofocus, Color? dropdownColor, InputDecoration? decoration, Map<String, String>? validatorMessages, AutovalidateMode? autovalidateMode, double? menuMaxHeight, bool? enableFeedback, Alignment alignment, BorderRadius? borderRadius)? dropdownButtonFormField,
+    TResult? Function(Key? key, List<PopupMenuEntry> items, String? initialValue, Callback? onOpened, FormStringField? field, Callback? onCanceled, String? tooltip, double? elevation, Color? shadowColor, Color? surfaceTintColor, EdgeInsets padding, Widget? child, double? splashRadius, Widget? icon, double? iconSize, Offset offset, bool enabled, ShapeBorder? shape, Color? color, bool? enableFeedback, BoxConstraints? constraints, PopupMenuPosition? position, Clip clipBehavior)? popupMenuButton,
+    TResult? Function(Key? key, Widget icon, Widget? selectedIcon, String label, String? tooltip)? navigationDestination,
+    TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
+    TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
+    TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
   }) {
     return container?.call(
         key,
@@ -9864,6 +10496,14 @@ class _$Container implements Container {
     TResult Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration)? defaultTabController,
     TResult Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child)? tab,
     TResult Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior)? tabBarView,
+    TResult Function(Key? key, Axis scrollDirection, bool reverse, bool? primary, ScrollPhysics? physics, bool shrinkWrap, Key? center, double anchor, double? cacheExtent, List<Sliver> slivers, int? semanticChildCount, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior, String? restorationId, Clip clipBehavior)? customScrollView,
+    TResult Function(Key? key, bool? value, bool tristate, FormBoolField? field, MouseCursor? mouseCursor, Color? activeColor, MaterialStateProperty? fillColor, Color? checkColor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, MaterialTapTargetSize? materialTapTargetSize, VisualDensity? visualDensity, bool autofocus, ShapeBorder? shape, BorderSide? side, bool isError)? checkbox,
+    TResult Function(Key? key, FormStringField? field, List<DropdownMenuItem> items, String? value, Widget? hint, Widget? disabledHint, Callback? onTap, int elevation, TextStyle? style, Widget? icon, Color? iconDisabledColor, Color? iconEnabledColor, double iconSize, bool isDense, bool isExpanded, double? itemHeight, Color? focusColor, bool autofocus, Color? dropdownColor, InputDecoration? decoration, Map<String, String>? validatorMessages, AutovalidateMode? autovalidateMode, double? menuMaxHeight, bool? enableFeedback, Alignment alignment, BorderRadius? borderRadius)? dropdownButtonFormField,
+    TResult Function(Key? key, List<PopupMenuEntry> items, String? initialValue, Callback? onOpened, FormStringField? field, Callback? onCanceled, String? tooltip, double? elevation, Color? shadowColor, Color? surfaceTintColor, EdgeInsets padding, Widget? child, double? splashRadius, Widget? icon, double? iconSize, Offset offset, bool enabled, ShapeBorder? shape, Color? color, bool? enableFeedback, BoxConstraints? constraints, PopupMenuPosition? position, Clip clipBehavior)? popupMenuButton,
+    TResult Function(Key? key, Widget icon, Widget? selectedIcon, String label, String? tooltip)? navigationDestination,
+    TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
+    TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
+    TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
     required TResult orElse(),
   }) {
     if (container != null) {
@@ -9917,6 +10557,16 @@ class _$Container implements Container {
     required TResult Function(DefaultTabController value) defaultTabController,
     required TResult Function(Tab value) tab,
     required TResult Function(TabBarView value) tabBarView,
+    required TResult Function(CustomScrollView value) customScrollView,
+    required TResult Function(Checkbox value) checkbox,
+    required TResult Function(DropdownButtonFormField value)
+        dropdownButtonFormField,
+    required TResult Function(PopupMenuButton value) popupMenuButton,
+    required TResult Function(NavigationDestination value)
+        navigationDestination,
+    required TResult Function(ActionChip value) actionChip,
+    required TResult Function(FilterChip value) filterChip,
+    required TResult Function(InputChip value) inputChip,
   }) {
     return container(this);
   }
@@ -9951,6 +10601,14 @@ class _$Container implements Container {
     TResult? Function(DefaultTabController value)? defaultTabController,
     TResult? Function(Tab value)? tab,
     TResult? Function(TabBarView value)? tabBarView,
+    TResult? Function(CustomScrollView value)? customScrollView,
+    TResult? Function(Checkbox value)? checkbox,
+    TResult? Function(DropdownButtonFormField value)? dropdownButtonFormField,
+    TResult? Function(PopupMenuButton value)? popupMenuButton,
+    TResult? Function(NavigationDestination value)? navigationDestination,
+    TResult? Function(ActionChip value)? actionChip,
+    TResult? Function(FilterChip value)? filterChip,
+    TResult? Function(InputChip value)? inputChip,
   }) {
     return container?.call(this);
   }
@@ -9985,6 +10643,14 @@ class _$Container implements Container {
     TResult Function(DefaultTabController value)? defaultTabController,
     TResult Function(Tab value)? tab,
     TResult Function(TabBarView value)? tabBarView,
+    TResult Function(CustomScrollView value)? customScrollView,
+    TResult Function(Checkbox value)? checkbox,
+    TResult Function(DropdownButtonFormField value)? dropdownButtonFormField,
+    TResult Function(PopupMenuButton value)? popupMenuButton,
+    TResult Function(NavigationDestination value)? navigationDestination,
+    TResult Function(ActionChip value)? actionChip,
+    TResult Function(FilterChip value)? filterChip,
+    TResult Function(InputChip value)? inputChip,
     required TResult orElse(),
   }) {
     if (container != null) {
@@ -10248,6 +10914,14 @@ class _$SizedBox implements SizedBox {
     required TResult Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration) defaultTabController,
     required TResult Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child) tab,
     required TResult Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior) tabBarView,
+    required TResult Function(Key? key, Axis scrollDirection, bool reverse, bool? primary, ScrollPhysics? physics, bool shrinkWrap, Key? center, double anchor, double? cacheExtent, List<Sliver> slivers, int? semanticChildCount, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior, String? restorationId, Clip clipBehavior) customScrollView,
+    required TResult Function(Key? key, bool? value, bool tristate, FormBoolField? field, MouseCursor? mouseCursor, Color? activeColor, MaterialStateProperty? fillColor, Color? checkColor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, MaterialTapTargetSize? materialTapTargetSize, VisualDensity? visualDensity, bool autofocus, ShapeBorder? shape, BorderSide? side, bool isError) checkbox,
+    required TResult Function(Key? key, FormStringField? field, List<DropdownMenuItem> items, String? value, Widget? hint, Widget? disabledHint, Callback? onTap, int elevation, TextStyle? style, Widget? icon, Color? iconDisabledColor, Color? iconEnabledColor, double iconSize, bool isDense, bool isExpanded, double? itemHeight, Color? focusColor, bool autofocus, Color? dropdownColor, InputDecoration? decoration, Map<String, String>? validatorMessages, AutovalidateMode? autovalidateMode, double? menuMaxHeight, bool? enableFeedback, Alignment alignment, BorderRadius? borderRadius) dropdownButtonFormField,
+    required TResult Function(Key? key, List<PopupMenuEntry> items, String? initialValue, Callback? onOpened, FormStringField? field, Callback? onCanceled, String? tooltip, double? elevation, Color? shadowColor, Color? surfaceTintColor, EdgeInsets padding, Widget? child, double? splashRadius, Widget? icon, double? iconSize, Offset offset, bool enabled, ShapeBorder? shape, Color? color, bool? enableFeedback, BoxConstraints? constraints, PopupMenuPosition? position, Clip clipBehavior) popupMenuButton,
+    required TResult Function(Key? key, Widget icon, Widget? selectedIcon, String label, String? tooltip) navigationDestination,
+    required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme) actionChip,
+    required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) filterChip,
+    required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) inputChip,
   }) {
     return sizedBox(key, width, height, child);
   }
@@ -10348,6 +11022,14 @@ class _$SizedBox implements SizedBox {
     TResult? Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration)? defaultTabController,
     TResult? Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child)? tab,
     TResult? Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior)? tabBarView,
+    TResult? Function(Key? key, Axis scrollDirection, bool reverse, bool? primary, ScrollPhysics? physics, bool shrinkWrap, Key? center, double anchor, double? cacheExtent, List<Sliver> slivers, int? semanticChildCount, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior, String? restorationId, Clip clipBehavior)? customScrollView,
+    TResult? Function(Key? key, bool? value, bool tristate, FormBoolField? field, MouseCursor? mouseCursor, Color? activeColor, MaterialStateProperty? fillColor, Color? checkColor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, MaterialTapTargetSize? materialTapTargetSize, VisualDensity? visualDensity, bool autofocus, ShapeBorder? shape, BorderSide? side, bool isError)? checkbox,
+    TResult? Function(Key? key, FormStringField? field, List<DropdownMenuItem> items, String? value, Widget? hint, Widget? disabledHint, Callback? onTap, int elevation, TextStyle? style, Widget? icon, Color? iconDisabledColor, Color? iconEnabledColor, double iconSize, bool isDense, bool isExpanded, double? itemHeight, Color? focusColor, bool autofocus, Color? dropdownColor, InputDecoration? decoration, Map<String, String>? validatorMessages, AutovalidateMode? autovalidateMode, double? menuMaxHeight, bool? enableFeedback, Alignment alignment, BorderRadius? borderRadius)? dropdownButtonFormField,
+    TResult? Function(Key? key, List<PopupMenuEntry> items, String? initialValue, Callback? onOpened, FormStringField? field, Callback? onCanceled, String? tooltip, double? elevation, Color? shadowColor, Color? surfaceTintColor, EdgeInsets padding, Widget? child, double? splashRadius, Widget? icon, double? iconSize, Offset offset, bool enabled, ShapeBorder? shape, Color? color, bool? enableFeedback, BoxConstraints? constraints, PopupMenuPosition? position, Clip clipBehavior)? popupMenuButton,
+    TResult? Function(Key? key, Widget icon, Widget? selectedIcon, String label, String? tooltip)? navigationDestination,
+    TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
+    TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
+    TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
   }) {
     return sizedBox?.call(key, width, height, child);
   }
@@ -10448,6 +11130,14 @@ class _$SizedBox implements SizedBox {
     TResult Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration)? defaultTabController,
     TResult Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child)? tab,
     TResult Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior)? tabBarView,
+    TResult Function(Key? key, Axis scrollDirection, bool reverse, bool? primary, ScrollPhysics? physics, bool shrinkWrap, Key? center, double anchor, double? cacheExtent, List<Sliver> slivers, int? semanticChildCount, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior, String? restorationId, Clip clipBehavior)? customScrollView,
+    TResult Function(Key? key, bool? value, bool tristate, FormBoolField? field, MouseCursor? mouseCursor, Color? activeColor, MaterialStateProperty? fillColor, Color? checkColor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, MaterialTapTargetSize? materialTapTargetSize, VisualDensity? visualDensity, bool autofocus, ShapeBorder? shape, BorderSide? side, bool isError)? checkbox,
+    TResult Function(Key? key, FormStringField? field, List<DropdownMenuItem> items, String? value, Widget? hint, Widget? disabledHint, Callback? onTap, int elevation, TextStyle? style, Widget? icon, Color? iconDisabledColor, Color? iconEnabledColor, double iconSize, bool isDense, bool isExpanded, double? itemHeight, Color? focusColor, bool autofocus, Color? dropdownColor, InputDecoration? decoration, Map<String, String>? validatorMessages, AutovalidateMode? autovalidateMode, double? menuMaxHeight, bool? enableFeedback, Alignment alignment, BorderRadius? borderRadius)? dropdownButtonFormField,
+    TResult Function(Key? key, List<PopupMenuEntry> items, String? initialValue, Callback? onOpened, FormStringField? field, Callback? onCanceled, String? tooltip, double? elevation, Color? shadowColor, Color? surfaceTintColor, EdgeInsets padding, Widget? child, double? splashRadius, Widget? icon, double? iconSize, Offset offset, bool enabled, ShapeBorder? shape, Color? color, bool? enableFeedback, BoxConstraints? constraints, PopupMenuPosition? position, Clip clipBehavior)? popupMenuButton,
+    TResult Function(Key? key, Widget icon, Widget? selectedIcon, String label, String? tooltip)? navigationDestination,
+    TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
+    TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
+    TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
     required TResult orElse(),
   }) {
     if (sizedBox != null) {
@@ -10487,6 +11177,16 @@ class _$SizedBox implements SizedBox {
     required TResult Function(DefaultTabController value) defaultTabController,
     required TResult Function(Tab value) tab,
     required TResult Function(TabBarView value) tabBarView,
+    required TResult Function(CustomScrollView value) customScrollView,
+    required TResult Function(Checkbox value) checkbox,
+    required TResult Function(DropdownButtonFormField value)
+        dropdownButtonFormField,
+    required TResult Function(PopupMenuButton value) popupMenuButton,
+    required TResult Function(NavigationDestination value)
+        navigationDestination,
+    required TResult Function(ActionChip value) actionChip,
+    required TResult Function(FilterChip value) filterChip,
+    required TResult Function(InputChip value) inputChip,
   }) {
     return sizedBox(this);
   }
@@ -10521,6 +11221,14 @@ class _$SizedBox implements SizedBox {
     TResult? Function(DefaultTabController value)? defaultTabController,
     TResult? Function(Tab value)? tab,
     TResult? Function(TabBarView value)? tabBarView,
+    TResult? Function(CustomScrollView value)? customScrollView,
+    TResult? Function(Checkbox value)? checkbox,
+    TResult? Function(DropdownButtonFormField value)? dropdownButtonFormField,
+    TResult? Function(PopupMenuButton value)? popupMenuButton,
+    TResult? Function(NavigationDestination value)? navigationDestination,
+    TResult? Function(ActionChip value)? actionChip,
+    TResult? Function(FilterChip value)? filterChip,
+    TResult? Function(InputChip value)? inputChip,
   }) {
     return sizedBox?.call(this);
   }
@@ -10555,6 +11263,14 @@ class _$SizedBox implements SizedBox {
     TResult Function(DefaultTabController value)? defaultTabController,
     TResult Function(Tab value)? tab,
     TResult Function(TabBarView value)? tabBarView,
+    TResult Function(CustomScrollView value)? customScrollView,
+    TResult Function(Checkbox value)? checkbox,
+    TResult Function(DropdownButtonFormField value)? dropdownButtonFormField,
+    TResult Function(PopupMenuButton value)? popupMenuButton,
+    TResult Function(NavigationDestination value)? navigationDestination,
+    TResult Function(ActionChip value)? actionChip,
+    TResult Function(FilterChip value)? filterChip,
+    TResult Function(InputChip value)? inputChip,
     required TResult orElse(),
   }) {
     if (sizedBox != null) {
@@ -10799,6 +11515,14 @@ class _$Center implements Center {
     required TResult Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration) defaultTabController,
     required TResult Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child) tab,
     required TResult Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior) tabBarView,
+    required TResult Function(Key? key, Axis scrollDirection, bool reverse, bool? primary, ScrollPhysics? physics, bool shrinkWrap, Key? center, double anchor, double? cacheExtent, List<Sliver> slivers, int? semanticChildCount, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior, String? restorationId, Clip clipBehavior) customScrollView,
+    required TResult Function(Key? key, bool? value, bool tristate, FormBoolField? field, MouseCursor? mouseCursor, Color? activeColor, MaterialStateProperty? fillColor, Color? checkColor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, MaterialTapTargetSize? materialTapTargetSize, VisualDensity? visualDensity, bool autofocus, ShapeBorder? shape, BorderSide? side, bool isError) checkbox,
+    required TResult Function(Key? key, FormStringField? field, List<DropdownMenuItem> items, String? value, Widget? hint, Widget? disabledHint, Callback? onTap, int elevation, TextStyle? style, Widget? icon, Color? iconDisabledColor, Color? iconEnabledColor, double iconSize, bool isDense, bool isExpanded, double? itemHeight, Color? focusColor, bool autofocus, Color? dropdownColor, InputDecoration? decoration, Map<String, String>? validatorMessages, AutovalidateMode? autovalidateMode, double? menuMaxHeight, bool? enableFeedback, Alignment alignment, BorderRadius? borderRadius) dropdownButtonFormField,
+    required TResult Function(Key? key, List<PopupMenuEntry> items, String? initialValue, Callback? onOpened, FormStringField? field, Callback? onCanceled, String? tooltip, double? elevation, Color? shadowColor, Color? surfaceTintColor, EdgeInsets padding, Widget? child, double? splashRadius, Widget? icon, double? iconSize, Offset offset, bool enabled, ShapeBorder? shape, Color? color, bool? enableFeedback, BoxConstraints? constraints, PopupMenuPosition? position, Clip clipBehavior) popupMenuButton,
+    required TResult Function(Key? key, Widget icon, Widget? selectedIcon, String label, String? tooltip) navigationDestination,
+    required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme) actionChip,
+    required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) filterChip,
+    required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) inputChip,
   }) {
     return center(key, widthFactor, heightFactor, child);
   }
@@ -10899,6 +11623,14 @@ class _$Center implements Center {
     TResult? Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration)? defaultTabController,
     TResult? Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child)? tab,
     TResult? Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior)? tabBarView,
+    TResult? Function(Key? key, Axis scrollDirection, bool reverse, bool? primary, ScrollPhysics? physics, bool shrinkWrap, Key? center, double anchor, double? cacheExtent, List<Sliver> slivers, int? semanticChildCount, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior, String? restorationId, Clip clipBehavior)? customScrollView,
+    TResult? Function(Key? key, bool? value, bool tristate, FormBoolField? field, MouseCursor? mouseCursor, Color? activeColor, MaterialStateProperty? fillColor, Color? checkColor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, MaterialTapTargetSize? materialTapTargetSize, VisualDensity? visualDensity, bool autofocus, ShapeBorder? shape, BorderSide? side, bool isError)? checkbox,
+    TResult? Function(Key? key, FormStringField? field, List<DropdownMenuItem> items, String? value, Widget? hint, Widget? disabledHint, Callback? onTap, int elevation, TextStyle? style, Widget? icon, Color? iconDisabledColor, Color? iconEnabledColor, double iconSize, bool isDense, bool isExpanded, double? itemHeight, Color? focusColor, bool autofocus, Color? dropdownColor, InputDecoration? decoration, Map<String, String>? validatorMessages, AutovalidateMode? autovalidateMode, double? menuMaxHeight, bool? enableFeedback, Alignment alignment, BorderRadius? borderRadius)? dropdownButtonFormField,
+    TResult? Function(Key? key, List<PopupMenuEntry> items, String? initialValue, Callback? onOpened, FormStringField? field, Callback? onCanceled, String? tooltip, double? elevation, Color? shadowColor, Color? surfaceTintColor, EdgeInsets padding, Widget? child, double? splashRadius, Widget? icon, double? iconSize, Offset offset, bool enabled, ShapeBorder? shape, Color? color, bool? enableFeedback, BoxConstraints? constraints, PopupMenuPosition? position, Clip clipBehavior)? popupMenuButton,
+    TResult? Function(Key? key, Widget icon, Widget? selectedIcon, String label, String? tooltip)? navigationDestination,
+    TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
+    TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
+    TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
   }) {
     return center?.call(key, widthFactor, heightFactor, child);
   }
@@ -10999,6 +11731,14 @@ class _$Center implements Center {
     TResult Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration)? defaultTabController,
     TResult Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child)? tab,
     TResult Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior)? tabBarView,
+    TResult Function(Key? key, Axis scrollDirection, bool reverse, bool? primary, ScrollPhysics? physics, bool shrinkWrap, Key? center, double anchor, double? cacheExtent, List<Sliver> slivers, int? semanticChildCount, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior, String? restorationId, Clip clipBehavior)? customScrollView,
+    TResult Function(Key? key, bool? value, bool tristate, FormBoolField? field, MouseCursor? mouseCursor, Color? activeColor, MaterialStateProperty? fillColor, Color? checkColor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, MaterialTapTargetSize? materialTapTargetSize, VisualDensity? visualDensity, bool autofocus, ShapeBorder? shape, BorderSide? side, bool isError)? checkbox,
+    TResult Function(Key? key, FormStringField? field, List<DropdownMenuItem> items, String? value, Widget? hint, Widget? disabledHint, Callback? onTap, int elevation, TextStyle? style, Widget? icon, Color? iconDisabledColor, Color? iconEnabledColor, double iconSize, bool isDense, bool isExpanded, double? itemHeight, Color? focusColor, bool autofocus, Color? dropdownColor, InputDecoration? decoration, Map<String, String>? validatorMessages, AutovalidateMode? autovalidateMode, double? menuMaxHeight, bool? enableFeedback, Alignment alignment, BorderRadius? borderRadius)? dropdownButtonFormField,
+    TResult Function(Key? key, List<PopupMenuEntry> items, String? initialValue, Callback? onOpened, FormStringField? field, Callback? onCanceled, String? tooltip, double? elevation, Color? shadowColor, Color? surfaceTintColor, EdgeInsets padding, Widget? child, double? splashRadius, Widget? icon, double? iconSize, Offset offset, bool enabled, ShapeBorder? shape, Color? color, bool? enableFeedback, BoxConstraints? constraints, PopupMenuPosition? position, Clip clipBehavior)? popupMenuButton,
+    TResult Function(Key? key, Widget icon, Widget? selectedIcon, String label, String? tooltip)? navigationDestination,
+    TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
+    TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
+    TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
     required TResult orElse(),
   }) {
     if (center != null) {
@@ -11038,6 +11778,16 @@ class _$Center implements Center {
     required TResult Function(DefaultTabController value) defaultTabController,
     required TResult Function(Tab value) tab,
     required TResult Function(TabBarView value) tabBarView,
+    required TResult Function(CustomScrollView value) customScrollView,
+    required TResult Function(Checkbox value) checkbox,
+    required TResult Function(DropdownButtonFormField value)
+        dropdownButtonFormField,
+    required TResult Function(PopupMenuButton value) popupMenuButton,
+    required TResult Function(NavigationDestination value)
+        navigationDestination,
+    required TResult Function(ActionChip value) actionChip,
+    required TResult Function(FilterChip value) filterChip,
+    required TResult Function(InputChip value) inputChip,
   }) {
     return center(this);
   }
@@ -11072,6 +11822,14 @@ class _$Center implements Center {
     TResult? Function(DefaultTabController value)? defaultTabController,
     TResult? Function(Tab value)? tab,
     TResult? Function(TabBarView value)? tabBarView,
+    TResult? Function(CustomScrollView value)? customScrollView,
+    TResult? Function(Checkbox value)? checkbox,
+    TResult? Function(DropdownButtonFormField value)? dropdownButtonFormField,
+    TResult? Function(PopupMenuButton value)? popupMenuButton,
+    TResult? Function(NavigationDestination value)? navigationDestination,
+    TResult? Function(ActionChip value)? actionChip,
+    TResult? Function(FilterChip value)? filterChip,
+    TResult? Function(InputChip value)? inputChip,
   }) {
     return center?.call(this);
   }
@@ -11106,6 +11864,14 @@ class _$Center implements Center {
     TResult Function(DefaultTabController value)? defaultTabController,
     TResult Function(Tab value)? tab,
     TResult Function(TabBarView value)? tabBarView,
+    TResult Function(CustomScrollView value)? customScrollView,
+    TResult Function(Checkbox value)? checkbox,
+    TResult Function(DropdownButtonFormField value)? dropdownButtonFormField,
+    TResult Function(PopupMenuButton value)? popupMenuButton,
+    TResult Function(NavigationDestination value)? navigationDestination,
+    TResult Function(ActionChip value)? actionChip,
+    TResult Function(FilterChip value)? filterChip,
+    TResult Function(InputChip value)? inputChip,
     required TResult orElse(),
   }) {
     if (center != null) {
@@ -11459,6 +12225,14 @@ class _$Icon implements Icon {
     required TResult Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration) defaultTabController,
     required TResult Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child) tab,
     required TResult Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior) tabBarView,
+    required TResult Function(Key? key, Axis scrollDirection, bool reverse, bool? primary, ScrollPhysics? physics, bool shrinkWrap, Key? center, double anchor, double? cacheExtent, List<Sliver> slivers, int? semanticChildCount, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior, String? restorationId, Clip clipBehavior) customScrollView,
+    required TResult Function(Key? key, bool? value, bool tristate, FormBoolField? field, MouseCursor? mouseCursor, Color? activeColor, MaterialStateProperty? fillColor, Color? checkColor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, MaterialTapTargetSize? materialTapTargetSize, VisualDensity? visualDensity, bool autofocus, ShapeBorder? shape, BorderSide? side, bool isError) checkbox,
+    required TResult Function(Key? key, FormStringField? field, List<DropdownMenuItem> items, String? value, Widget? hint, Widget? disabledHint, Callback? onTap, int elevation, TextStyle? style, Widget? icon, Color? iconDisabledColor, Color? iconEnabledColor, double iconSize, bool isDense, bool isExpanded, double? itemHeight, Color? focusColor, bool autofocus, Color? dropdownColor, InputDecoration? decoration, Map<String, String>? validatorMessages, AutovalidateMode? autovalidateMode, double? menuMaxHeight, bool? enableFeedback, Alignment alignment, BorderRadius? borderRadius) dropdownButtonFormField,
+    required TResult Function(Key? key, List<PopupMenuEntry> items, String? initialValue, Callback? onOpened, FormStringField? field, Callback? onCanceled, String? tooltip, double? elevation, Color? shadowColor, Color? surfaceTintColor, EdgeInsets padding, Widget? child, double? splashRadius, Widget? icon, double? iconSize, Offset offset, bool enabled, ShapeBorder? shape, Color? color, bool? enableFeedback, BoxConstraints? constraints, PopupMenuPosition? position, Clip clipBehavior) popupMenuButton,
+    required TResult Function(Key? key, Widget icon, Widget? selectedIcon, String label, String? tooltip) navigationDestination,
+    required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme) actionChip,
+    required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) filterChip,
+    required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) inputChip,
   }) {
     return icon(this.icon, key, size, fill, weight, grade, opticalSize, color,
         shadows, semanticLabel, textDirection);
@@ -11560,6 +12334,14 @@ class _$Icon implements Icon {
     TResult? Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration)? defaultTabController,
     TResult? Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child)? tab,
     TResult? Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior)? tabBarView,
+    TResult? Function(Key? key, Axis scrollDirection, bool reverse, bool? primary, ScrollPhysics? physics, bool shrinkWrap, Key? center, double anchor, double? cacheExtent, List<Sliver> slivers, int? semanticChildCount, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior, String? restorationId, Clip clipBehavior)? customScrollView,
+    TResult? Function(Key? key, bool? value, bool tristate, FormBoolField? field, MouseCursor? mouseCursor, Color? activeColor, MaterialStateProperty? fillColor, Color? checkColor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, MaterialTapTargetSize? materialTapTargetSize, VisualDensity? visualDensity, bool autofocus, ShapeBorder? shape, BorderSide? side, bool isError)? checkbox,
+    TResult? Function(Key? key, FormStringField? field, List<DropdownMenuItem> items, String? value, Widget? hint, Widget? disabledHint, Callback? onTap, int elevation, TextStyle? style, Widget? icon, Color? iconDisabledColor, Color? iconEnabledColor, double iconSize, bool isDense, bool isExpanded, double? itemHeight, Color? focusColor, bool autofocus, Color? dropdownColor, InputDecoration? decoration, Map<String, String>? validatorMessages, AutovalidateMode? autovalidateMode, double? menuMaxHeight, bool? enableFeedback, Alignment alignment, BorderRadius? borderRadius)? dropdownButtonFormField,
+    TResult? Function(Key? key, List<PopupMenuEntry> items, String? initialValue, Callback? onOpened, FormStringField? field, Callback? onCanceled, String? tooltip, double? elevation, Color? shadowColor, Color? surfaceTintColor, EdgeInsets padding, Widget? child, double? splashRadius, Widget? icon, double? iconSize, Offset offset, bool enabled, ShapeBorder? shape, Color? color, bool? enableFeedback, BoxConstraints? constraints, PopupMenuPosition? position, Clip clipBehavior)? popupMenuButton,
+    TResult? Function(Key? key, Widget icon, Widget? selectedIcon, String label, String? tooltip)? navigationDestination,
+    TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
+    TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
+    TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
   }) {
     return icon?.call(this.icon, key, size, fill, weight, grade, opticalSize,
         color, shadows, semanticLabel, textDirection);
@@ -11661,6 +12443,14 @@ class _$Icon implements Icon {
     TResult Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration)? defaultTabController,
     TResult Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child)? tab,
     TResult Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior)? tabBarView,
+    TResult Function(Key? key, Axis scrollDirection, bool reverse, bool? primary, ScrollPhysics? physics, bool shrinkWrap, Key? center, double anchor, double? cacheExtent, List<Sliver> slivers, int? semanticChildCount, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior, String? restorationId, Clip clipBehavior)? customScrollView,
+    TResult Function(Key? key, bool? value, bool tristate, FormBoolField? field, MouseCursor? mouseCursor, Color? activeColor, MaterialStateProperty? fillColor, Color? checkColor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, MaterialTapTargetSize? materialTapTargetSize, VisualDensity? visualDensity, bool autofocus, ShapeBorder? shape, BorderSide? side, bool isError)? checkbox,
+    TResult Function(Key? key, FormStringField? field, List<DropdownMenuItem> items, String? value, Widget? hint, Widget? disabledHint, Callback? onTap, int elevation, TextStyle? style, Widget? icon, Color? iconDisabledColor, Color? iconEnabledColor, double iconSize, bool isDense, bool isExpanded, double? itemHeight, Color? focusColor, bool autofocus, Color? dropdownColor, InputDecoration? decoration, Map<String, String>? validatorMessages, AutovalidateMode? autovalidateMode, double? menuMaxHeight, bool? enableFeedback, Alignment alignment, BorderRadius? borderRadius)? dropdownButtonFormField,
+    TResult Function(Key? key, List<PopupMenuEntry> items, String? initialValue, Callback? onOpened, FormStringField? field, Callback? onCanceled, String? tooltip, double? elevation, Color? shadowColor, Color? surfaceTintColor, EdgeInsets padding, Widget? child, double? splashRadius, Widget? icon, double? iconSize, Offset offset, bool enabled, ShapeBorder? shape, Color? color, bool? enableFeedback, BoxConstraints? constraints, PopupMenuPosition? position, Clip clipBehavior)? popupMenuButton,
+    TResult Function(Key? key, Widget icon, Widget? selectedIcon, String label, String? tooltip)? navigationDestination,
+    TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
+    TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
+    TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
     required TResult orElse(),
   }) {
     if (icon != null) {
@@ -11701,6 +12491,16 @@ class _$Icon implements Icon {
     required TResult Function(DefaultTabController value) defaultTabController,
     required TResult Function(Tab value) tab,
     required TResult Function(TabBarView value) tabBarView,
+    required TResult Function(CustomScrollView value) customScrollView,
+    required TResult Function(Checkbox value) checkbox,
+    required TResult Function(DropdownButtonFormField value)
+        dropdownButtonFormField,
+    required TResult Function(PopupMenuButton value) popupMenuButton,
+    required TResult Function(NavigationDestination value)
+        navigationDestination,
+    required TResult Function(ActionChip value) actionChip,
+    required TResult Function(FilterChip value) filterChip,
+    required TResult Function(InputChip value) inputChip,
   }) {
     return icon(this);
   }
@@ -11735,6 +12535,14 @@ class _$Icon implements Icon {
     TResult? Function(DefaultTabController value)? defaultTabController,
     TResult? Function(Tab value)? tab,
     TResult? Function(TabBarView value)? tabBarView,
+    TResult? Function(CustomScrollView value)? customScrollView,
+    TResult? Function(Checkbox value)? checkbox,
+    TResult? Function(DropdownButtonFormField value)? dropdownButtonFormField,
+    TResult? Function(PopupMenuButton value)? popupMenuButton,
+    TResult? Function(NavigationDestination value)? navigationDestination,
+    TResult? Function(ActionChip value)? actionChip,
+    TResult? Function(FilterChip value)? filterChip,
+    TResult? Function(InputChip value)? inputChip,
   }) {
     return icon?.call(this);
   }
@@ -11769,6 +12577,14 @@ class _$Icon implements Icon {
     TResult Function(DefaultTabController value)? defaultTabController,
     TResult Function(Tab value)? tab,
     TResult Function(TabBarView value)? tabBarView,
+    TResult Function(CustomScrollView value)? customScrollView,
+    TResult Function(Checkbox value)? checkbox,
+    TResult Function(DropdownButtonFormField value)? dropdownButtonFormField,
+    TResult Function(PopupMenuButton value)? popupMenuButton,
+    TResult Function(NavigationDestination value)? navigationDestination,
+    TResult Function(ActionChip value)? actionChip,
+    TResult Function(FilterChip value)? filterChip,
+    TResult Function(InputChip value)? inputChip,
     required TResult orElse(),
   }) {
     if (icon != null) {
@@ -12082,6 +12898,14 @@ class _$Column implements Column {
     required TResult Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration) defaultTabController,
     required TResult Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child) tab,
     required TResult Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior) tabBarView,
+    required TResult Function(Key? key, Axis scrollDirection, bool reverse, bool? primary, ScrollPhysics? physics, bool shrinkWrap, Key? center, double anchor, double? cacheExtent, List<Sliver> slivers, int? semanticChildCount, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior, String? restorationId, Clip clipBehavior) customScrollView,
+    required TResult Function(Key? key, bool? value, bool tristate, FormBoolField? field, MouseCursor? mouseCursor, Color? activeColor, MaterialStateProperty? fillColor, Color? checkColor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, MaterialTapTargetSize? materialTapTargetSize, VisualDensity? visualDensity, bool autofocus, ShapeBorder? shape, BorderSide? side, bool isError) checkbox,
+    required TResult Function(Key? key, FormStringField? field, List<DropdownMenuItem> items, String? value, Widget? hint, Widget? disabledHint, Callback? onTap, int elevation, TextStyle? style, Widget? icon, Color? iconDisabledColor, Color? iconEnabledColor, double iconSize, bool isDense, bool isExpanded, double? itemHeight, Color? focusColor, bool autofocus, Color? dropdownColor, InputDecoration? decoration, Map<String, String>? validatorMessages, AutovalidateMode? autovalidateMode, double? menuMaxHeight, bool? enableFeedback, Alignment alignment, BorderRadius? borderRadius) dropdownButtonFormField,
+    required TResult Function(Key? key, List<PopupMenuEntry> items, String? initialValue, Callback? onOpened, FormStringField? field, Callback? onCanceled, String? tooltip, double? elevation, Color? shadowColor, Color? surfaceTintColor, EdgeInsets padding, Widget? child, double? splashRadius, Widget? icon, double? iconSize, Offset offset, bool enabled, ShapeBorder? shape, Color? color, bool? enableFeedback, BoxConstraints? constraints, PopupMenuPosition? position, Clip clipBehavior) popupMenuButton,
+    required TResult Function(Key? key, Widget icon, Widget? selectedIcon, String label, String? tooltip) navigationDestination,
+    required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme) actionChip,
+    required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) filterChip,
+    required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) inputChip,
   }) {
     return column(key, mainAxisAlignment, mainAxisSize, crossAxisAlignment,
         textDirection, verticalDirection, textBaseline, children);
@@ -12183,6 +13007,14 @@ class _$Column implements Column {
     TResult? Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration)? defaultTabController,
     TResult? Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child)? tab,
     TResult? Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior)? tabBarView,
+    TResult? Function(Key? key, Axis scrollDirection, bool reverse, bool? primary, ScrollPhysics? physics, bool shrinkWrap, Key? center, double anchor, double? cacheExtent, List<Sliver> slivers, int? semanticChildCount, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior, String? restorationId, Clip clipBehavior)? customScrollView,
+    TResult? Function(Key? key, bool? value, bool tristate, FormBoolField? field, MouseCursor? mouseCursor, Color? activeColor, MaterialStateProperty? fillColor, Color? checkColor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, MaterialTapTargetSize? materialTapTargetSize, VisualDensity? visualDensity, bool autofocus, ShapeBorder? shape, BorderSide? side, bool isError)? checkbox,
+    TResult? Function(Key? key, FormStringField? field, List<DropdownMenuItem> items, String? value, Widget? hint, Widget? disabledHint, Callback? onTap, int elevation, TextStyle? style, Widget? icon, Color? iconDisabledColor, Color? iconEnabledColor, double iconSize, bool isDense, bool isExpanded, double? itemHeight, Color? focusColor, bool autofocus, Color? dropdownColor, InputDecoration? decoration, Map<String, String>? validatorMessages, AutovalidateMode? autovalidateMode, double? menuMaxHeight, bool? enableFeedback, Alignment alignment, BorderRadius? borderRadius)? dropdownButtonFormField,
+    TResult? Function(Key? key, List<PopupMenuEntry> items, String? initialValue, Callback? onOpened, FormStringField? field, Callback? onCanceled, String? tooltip, double? elevation, Color? shadowColor, Color? surfaceTintColor, EdgeInsets padding, Widget? child, double? splashRadius, Widget? icon, double? iconSize, Offset offset, bool enabled, ShapeBorder? shape, Color? color, bool? enableFeedback, BoxConstraints? constraints, PopupMenuPosition? position, Clip clipBehavior)? popupMenuButton,
+    TResult? Function(Key? key, Widget icon, Widget? selectedIcon, String label, String? tooltip)? navigationDestination,
+    TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
+    TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
+    TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
   }) {
     return column?.call(
         key,
@@ -12291,6 +13123,14 @@ class _$Column implements Column {
     TResult Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration)? defaultTabController,
     TResult Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child)? tab,
     TResult Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior)? tabBarView,
+    TResult Function(Key? key, Axis scrollDirection, bool reverse, bool? primary, ScrollPhysics? physics, bool shrinkWrap, Key? center, double anchor, double? cacheExtent, List<Sliver> slivers, int? semanticChildCount, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior, String? restorationId, Clip clipBehavior)? customScrollView,
+    TResult Function(Key? key, bool? value, bool tristate, FormBoolField? field, MouseCursor? mouseCursor, Color? activeColor, MaterialStateProperty? fillColor, Color? checkColor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, MaterialTapTargetSize? materialTapTargetSize, VisualDensity? visualDensity, bool autofocus, ShapeBorder? shape, BorderSide? side, bool isError)? checkbox,
+    TResult Function(Key? key, FormStringField? field, List<DropdownMenuItem> items, String? value, Widget? hint, Widget? disabledHint, Callback? onTap, int elevation, TextStyle? style, Widget? icon, Color? iconDisabledColor, Color? iconEnabledColor, double iconSize, bool isDense, bool isExpanded, double? itemHeight, Color? focusColor, bool autofocus, Color? dropdownColor, InputDecoration? decoration, Map<String, String>? validatorMessages, AutovalidateMode? autovalidateMode, double? menuMaxHeight, bool? enableFeedback, Alignment alignment, BorderRadius? borderRadius)? dropdownButtonFormField,
+    TResult Function(Key? key, List<PopupMenuEntry> items, String? initialValue, Callback? onOpened, FormStringField? field, Callback? onCanceled, String? tooltip, double? elevation, Color? shadowColor, Color? surfaceTintColor, EdgeInsets padding, Widget? child, double? splashRadius, Widget? icon, double? iconSize, Offset offset, bool enabled, ShapeBorder? shape, Color? color, bool? enableFeedback, BoxConstraints? constraints, PopupMenuPosition? position, Clip clipBehavior)? popupMenuButton,
+    TResult Function(Key? key, Widget icon, Widget? selectedIcon, String label, String? tooltip)? navigationDestination,
+    TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
+    TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
+    TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
     required TResult orElse(),
   }) {
     if (column != null) {
@@ -12331,6 +13171,16 @@ class _$Column implements Column {
     required TResult Function(DefaultTabController value) defaultTabController,
     required TResult Function(Tab value) tab,
     required TResult Function(TabBarView value) tabBarView,
+    required TResult Function(CustomScrollView value) customScrollView,
+    required TResult Function(Checkbox value) checkbox,
+    required TResult Function(DropdownButtonFormField value)
+        dropdownButtonFormField,
+    required TResult Function(PopupMenuButton value) popupMenuButton,
+    required TResult Function(NavigationDestination value)
+        navigationDestination,
+    required TResult Function(ActionChip value) actionChip,
+    required TResult Function(FilterChip value) filterChip,
+    required TResult Function(InputChip value) inputChip,
   }) {
     return column(this);
   }
@@ -12365,6 +13215,14 @@ class _$Column implements Column {
     TResult? Function(DefaultTabController value)? defaultTabController,
     TResult? Function(Tab value)? tab,
     TResult? Function(TabBarView value)? tabBarView,
+    TResult? Function(CustomScrollView value)? customScrollView,
+    TResult? Function(Checkbox value)? checkbox,
+    TResult? Function(DropdownButtonFormField value)? dropdownButtonFormField,
+    TResult? Function(PopupMenuButton value)? popupMenuButton,
+    TResult? Function(NavigationDestination value)? navigationDestination,
+    TResult? Function(ActionChip value)? actionChip,
+    TResult? Function(FilterChip value)? filterChip,
+    TResult? Function(InputChip value)? inputChip,
   }) {
     return column?.call(this);
   }
@@ -12399,6 +13257,14 @@ class _$Column implements Column {
     TResult Function(DefaultTabController value)? defaultTabController,
     TResult Function(Tab value)? tab,
     TResult Function(TabBarView value)? tabBarView,
+    TResult Function(CustomScrollView value)? customScrollView,
+    TResult Function(Checkbox value)? checkbox,
+    TResult Function(DropdownButtonFormField value)? dropdownButtonFormField,
+    TResult Function(PopupMenuButton value)? popupMenuButton,
+    TResult Function(NavigationDestination value)? navigationDestination,
+    TResult Function(ActionChip value)? actionChip,
+    TResult Function(FilterChip value)? filterChip,
+    TResult Function(InputChip value)? inputChip,
     required TResult orElse(),
   }) {
     if (column != null) {
@@ -12707,6 +13573,14 @@ class _$Row implements Row {
     required TResult Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration) defaultTabController,
     required TResult Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child) tab,
     required TResult Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior) tabBarView,
+    required TResult Function(Key? key, Axis scrollDirection, bool reverse, bool? primary, ScrollPhysics? physics, bool shrinkWrap, Key? center, double anchor, double? cacheExtent, List<Sliver> slivers, int? semanticChildCount, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior, String? restorationId, Clip clipBehavior) customScrollView,
+    required TResult Function(Key? key, bool? value, bool tristate, FormBoolField? field, MouseCursor? mouseCursor, Color? activeColor, MaterialStateProperty? fillColor, Color? checkColor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, MaterialTapTargetSize? materialTapTargetSize, VisualDensity? visualDensity, bool autofocus, ShapeBorder? shape, BorderSide? side, bool isError) checkbox,
+    required TResult Function(Key? key, FormStringField? field, List<DropdownMenuItem> items, String? value, Widget? hint, Widget? disabledHint, Callback? onTap, int elevation, TextStyle? style, Widget? icon, Color? iconDisabledColor, Color? iconEnabledColor, double iconSize, bool isDense, bool isExpanded, double? itemHeight, Color? focusColor, bool autofocus, Color? dropdownColor, InputDecoration? decoration, Map<String, String>? validatorMessages, AutovalidateMode? autovalidateMode, double? menuMaxHeight, bool? enableFeedback, Alignment alignment, BorderRadius? borderRadius) dropdownButtonFormField,
+    required TResult Function(Key? key, List<PopupMenuEntry> items, String? initialValue, Callback? onOpened, FormStringField? field, Callback? onCanceled, String? tooltip, double? elevation, Color? shadowColor, Color? surfaceTintColor, EdgeInsets padding, Widget? child, double? splashRadius, Widget? icon, double? iconSize, Offset offset, bool enabled, ShapeBorder? shape, Color? color, bool? enableFeedback, BoxConstraints? constraints, PopupMenuPosition? position, Clip clipBehavior) popupMenuButton,
+    required TResult Function(Key? key, Widget icon, Widget? selectedIcon, String label, String? tooltip) navigationDestination,
+    required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme) actionChip,
+    required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) filterChip,
+    required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) inputChip,
   }) {
     return row(key, mainAxisAlignment, mainAxisSize, crossAxisAlignment,
         textDirection, verticalDirection, textBaseline, children);
@@ -12808,6 +13682,14 @@ class _$Row implements Row {
     TResult? Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration)? defaultTabController,
     TResult? Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child)? tab,
     TResult? Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior)? tabBarView,
+    TResult? Function(Key? key, Axis scrollDirection, bool reverse, bool? primary, ScrollPhysics? physics, bool shrinkWrap, Key? center, double anchor, double? cacheExtent, List<Sliver> slivers, int? semanticChildCount, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior, String? restorationId, Clip clipBehavior)? customScrollView,
+    TResult? Function(Key? key, bool? value, bool tristate, FormBoolField? field, MouseCursor? mouseCursor, Color? activeColor, MaterialStateProperty? fillColor, Color? checkColor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, MaterialTapTargetSize? materialTapTargetSize, VisualDensity? visualDensity, bool autofocus, ShapeBorder? shape, BorderSide? side, bool isError)? checkbox,
+    TResult? Function(Key? key, FormStringField? field, List<DropdownMenuItem> items, String? value, Widget? hint, Widget? disabledHint, Callback? onTap, int elevation, TextStyle? style, Widget? icon, Color? iconDisabledColor, Color? iconEnabledColor, double iconSize, bool isDense, bool isExpanded, double? itemHeight, Color? focusColor, bool autofocus, Color? dropdownColor, InputDecoration? decoration, Map<String, String>? validatorMessages, AutovalidateMode? autovalidateMode, double? menuMaxHeight, bool? enableFeedback, Alignment alignment, BorderRadius? borderRadius)? dropdownButtonFormField,
+    TResult? Function(Key? key, List<PopupMenuEntry> items, String? initialValue, Callback? onOpened, FormStringField? field, Callback? onCanceled, String? tooltip, double? elevation, Color? shadowColor, Color? surfaceTintColor, EdgeInsets padding, Widget? child, double? splashRadius, Widget? icon, double? iconSize, Offset offset, bool enabled, ShapeBorder? shape, Color? color, bool? enableFeedback, BoxConstraints? constraints, PopupMenuPosition? position, Clip clipBehavior)? popupMenuButton,
+    TResult? Function(Key? key, Widget icon, Widget? selectedIcon, String label, String? tooltip)? navigationDestination,
+    TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
+    TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
+    TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
   }) {
     return row?.call(key, mainAxisAlignment, mainAxisSize, crossAxisAlignment,
         textDirection, verticalDirection, textBaseline, children);
@@ -12909,6 +13791,14 @@ class _$Row implements Row {
     TResult Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration)? defaultTabController,
     TResult Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child)? tab,
     TResult Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior)? tabBarView,
+    TResult Function(Key? key, Axis scrollDirection, bool reverse, bool? primary, ScrollPhysics? physics, bool shrinkWrap, Key? center, double anchor, double? cacheExtent, List<Sliver> slivers, int? semanticChildCount, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior, String? restorationId, Clip clipBehavior)? customScrollView,
+    TResult Function(Key? key, bool? value, bool tristate, FormBoolField? field, MouseCursor? mouseCursor, Color? activeColor, MaterialStateProperty? fillColor, Color? checkColor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, MaterialTapTargetSize? materialTapTargetSize, VisualDensity? visualDensity, bool autofocus, ShapeBorder? shape, BorderSide? side, bool isError)? checkbox,
+    TResult Function(Key? key, FormStringField? field, List<DropdownMenuItem> items, String? value, Widget? hint, Widget? disabledHint, Callback? onTap, int elevation, TextStyle? style, Widget? icon, Color? iconDisabledColor, Color? iconEnabledColor, double iconSize, bool isDense, bool isExpanded, double? itemHeight, Color? focusColor, bool autofocus, Color? dropdownColor, InputDecoration? decoration, Map<String, String>? validatorMessages, AutovalidateMode? autovalidateMode, double? menuMaxHeight, bool? enableFeedback, Alignment alignment, BorderRadius? borderRadius)? dropdownButtonFormField,
+    TResult Function(Key? key, List<PopupMenuEntry> items, String? initialValue, Callback? onOpened, FormStringField? field, Callback? onCanceled, String? tooltip, double? elevation, Color? shadowColor, Color? surfaceTintColor, EdgeInsets padding, Widget? child, double? splashRadius, Widget? icon, double? iconSize, Offset offset, bool enabled, ShapeBorder? shape, Color? color, bool? enableFeedback, BoxConstraints? constraints, PopupMenuPosition? position, Clip clipBehavior)? popupMenuButton,
+    TResult Function(Key? key, Widget icon, Widget? selectedIcon, String label, String? tooltip)? navigationDestination,
+    TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
+    TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
+    TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
     required TResult orElse(),
   }) {
     if (row != null) {
@@ -12949,6 +13839,16 @@ class _$Row implements Row {
     required TResult Function(DefaultTabController value) defaultTabController,
     required TResult Function(Tab value) tab,
     required TResult Function(TabBarView value) tabBarView,
+    required TResult Function(CustomScrollView value) customScrollView,
+    required TResult Function(Checkbox value) checkbox,
+    required TResult Function(DropdownButtonFormField value)
+        dropdownButtonFormField,
+    required TResult Function(PopupMenuButton value) popupMenuButton,
+    required TResult Function(NavigationDestination value)
+        navigationDestination,
+    required TResult Function(ActionChip value) actionChip,
+    required TResult Function(FilterChip value) filterChip,
+    required TResult Function(InputChip value) inputChip,
   }) {
     return row(this);
   }
@@ -12983,6 +13883,14 @@ class _$Row implements Row {
     TResult? Function(DefaultTabController value)? defaultTabController,
     TResult? Function(Tab value)? tab,
     TResult? Function(TabBarView value)? tabBarView,
+    TResult? Function(CustomScrollView value)? customScrollView,
+    TResult? Function(Checkbox value)? checkbox,
+    TResult? Function(DropdownButtonFormField value)? dropdownButtonFormField,
+    TResult? Function(PopupMenuButton value)? popupMenuButton,
+    TResult? Function(NavigationDestination value)? navigationDestination,
+    TResult? Function(ActionChip value)? actionChip,
+    TResult? Function(FilterChip value)? filterChip,
+    TResult? Function(InputChip value)? inputChip,
   }) {
     return row?.call(this);
   }
@@ -13017,6 +13925,14 @@ class _$Row implements Row {
     TResult Function(DefaultTabController value)? defaultTabController,
     TResult Function(Tab value)? tab,
     TResult Function(TabBarView value)? tabBarView,
+    TResult Function(CustomScrollView value)? customScrollView,
+    TResult Function(Checkbox value)? checkbox,
+    TResult Function(DropdownButtonFormField value)? dropdownButtonFormField,
+    TResult Function(PopupMenuButton value)? popupMenuButton,
+    TResult Function(NavigationDestination value)? navigationDestination,
+    TResult Function(ActionChip value)? actionChip,
+    TResult Function(FilterChip value)? filterChip,
+    TResult Function(InputChip value)? inputChip,
     required TResult orElse(),
   }) {
     if (row != null) {
@@ -13327,6 +14243,14 @@ class _$CircularProgressIndicator implements CircularProgressIndicator {
     required TResult Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration) defaultTabController,
     required TResult Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child) tab,
     required TResult Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior) tabBarView,
+    required TResult Function(Key? key, Axis scrollDirection, bool reverse, bool? primary, ScrollPhysics? physics, bool shrinkWrap, Key? center, double anchor, double? cacheExtent, List<Sliver> slivers, int? semanticChildCount, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior, String? restorationId, Clip clipBehavior) customScrollView,
+    required TResult Function(Key? key, bool? value, bool tristate, FormBoolField? field, MouseCursor? mouseCursor, Color? activeColor, MaterialStateProperty? fillColor, Color? checkColor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, MaterialTapTargetSize? materialTapTargetSize, VisualDensity? visualDensity, bool autofocus, ShapeBorder? shape, BorderSide? side, bool isError) checkbox,
+    required TResult Function(Key? key, FormStringField? field, List<DropdownMenuItem> items, String? value, Widget? hint, Widget? disabledHint, Callback? onTap, int elevation, TextStyle? style, Widget? icon, Color? iconDisabledColor, Color? iconEnabledColor, double iconSize, bool isDense, bool isExpanded, double? itemHeight, Color? focusColor, bool autofocus, Color? dropdownColor, InputDecoration? decoration, Map<String, String>? validatorMessages, AutovalidateMode? autovalidateMode, double? menuMaxHeight, bool? enableFeedback, Alignment alignment, BorderRadius? borderRadius) dropdownButtonFormField,
+    required TResult Function(Key? key, List<PopupMenuEntry> items, String? initialValue, Callback? onOpened, FormStringField? field, Callback? onCanceled, String? tooltip, double? elevation, Color? shadowColor, Color? surfaceTintColor, EdgeInsets padding, Widget? child, double? splashRadius, Widget? icon, double? iconSize, Offset offset, bool enabled, ShapeBorder? shape, Color? color, bool? enableFeedback, BoxConstraints? constraints, PopupMenuPosition? position, Clip clipBehavior) popupMenuButton,
+    required TResult Function(Key? key, Widget icon, Widget? selectedIcon, String label, String? tooltip) navigationDestination,
+    required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme) actionChip,
+    required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) filterChip,
+    required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) inputChip,
   }) {
     return circularProgressIndicator(key, value, backgroundColor, color,
         strokeWidth, semanticsLabel, semanticsValue);
@@ -13428,6 +14352,14 @@ class _$CircularProgressIndicator implements CircularProgressIndicator {
     TResult? Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration)? defaultTabController,
     TResult? Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child)? tab,
     TResult? Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior)? tabBarView,
+    TResult? Function(Key? key, Axis scrollDirection, bool reverse, bool? primary, ScrollPhysics? physics, bool shrinkWrap, Key? center, double anchor, double? cacheExtent, List<Sliver> slivers, int? semanticChildCount, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior, String? restorationId, Clip clipBehavior)? customScrollView,
+    TResult? Function(Key? key, bool? value, bool tristate, FormBoolField? field, MouseCursor? mouseCursor, Color? activeColor, MaterialStateProperty? fillColor, Color? checkColor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, MaterialTapTargetSize? materialTapTargetSize, VisualDensity? visualDensity, bool autofocus, ShapeBorder? shape, BorderSide? side, bool isError)? checkbox,
+    TResult? Function(Key? key, FormStringField? field, List<DropdownMenuItem> items, String? value, Widget? hint, Widget? disabledHint, Callback? onTap, int elevation, TextStyle? style, Widget? icon, Color? iconDisabledColor, Color? iconEnabledColor, double iconSize, bool isDense, bool isExpanded, double? itemHeight, Color? focusColor, bool autofocus, Color? dropdownColor, InputDecoration? decoration, Map<String, String>? validatorMessages, AutovalidateMode? autovalidateMode, double? menuMaxHeight, bool? enableFeedback, Alignment alignment, BorderRadius? borderRadius)? dropdownButtonFormField,
+    TResult? Function(Key? key, List<PopupMenuEntry> items, String? initialValue, Callback? onOpened, FormStringField? field, Callback? onCanceled, String? tooltip, double? elevation, Color? shadowColor, Color? surfaceTintColor, EdgeInsets padding, Widget? child, double? splashRadius, Widget? icon, double? iconSize, Offset offset, bool enabled, ShapeBorder? shape, Color? color, bool? enableFeedback, BoxConstraints? constraints, PopupMenuPosition? position, Clip clipBehavior)? popupMenuButton,
+    TResult? Function(Key? key, Widget icon, Widget? selectedIcon, String label, String? tooltip)? navigationDestination,
+    TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
+    TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
+    TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
   }) {
     return circularProgressIndicator?.call(key, value, backgroundColor, color,
         strokeWidth, semanticsLabel, semanticsValue);
@@ -13529,6 +14461,14 @@ class _$CircularProgressIndicator implements CircularProgressIndicator {
     TResult Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration)? defaultTabController,
     TResult Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child)? tab,
     TResult Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior)? tabBarView,
+    TResult Function(Key? key, Axis scrollDirection, bool reverse, bool? primary, ScrollPhysics? physics, bool shrinkWrap, Key? center, double anchor, double? cacheExtent, List<Sliver> slivers, int? semanticChildCount, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior, String? restorationId, Clip clipBehavior)? customScrollView,
+    TResult Function(Key? key, bool? value, bool tristate, FormBoolField? field, MouseCursor? mouseCursor, Color? activeColor, MaterialStateProperty? fillColor, Color? checkColor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, MaterialTapTargetSize? materialTapTargetSize, VisualDensity? visualDensity, bool autofocus, ShapeBorder? shape, BorderSide? side, bool isError)? checkbox,
+    TResult Function(Key? key, FormStringField? field, List<DropdownMenuItem> items, String? value, Widget? hint, Widget? disabledHint, Callback? onTap, int elevation, TextStyle? style, Widget? icon, Color? iconDisabledColor, Color? iconEnabledColor, double iconSize, bool isDense, bool isExpanded, double? itemHeight, Color? focusColor, bool autofocus, Color? dropdownColor, InputDecoration? decoration, Map<String, String>? validatorMessages, AutovalidateMode? autovalidateMode, double? menuMaxHeight, bool? enableFeedback, Alignment alignment, BorderRadius? borderRadius)? dropdownButtonFormField,
+    TResult Function(Key? key, List<PopupMenuEntry> items, String? initialValue, Callback? onOpened, FormStringField? field, Callback? onCanceled, String? tooltip, double? elevation, Color? shadowColor, Color? surfaceTintColor, EdgeInsets padding, Widget? child, double? splashRadius, Widget? icon, double? iconSize, Offset offset, bool enabled, ShapeBorder? shape, Color? color, bool? enableFeedback, BoxConstraints? constraints, PopupMenuPosition? position, Clip clipBehavior)? popupMenuButton,
+    TResult Function(Key? key, Widget icon, Widget? selectedIcon, String label, String? tooltip)? navigationDestination,
+    TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
+    TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
+    TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
     required TResult orElse(),
   }) {
     if (circularProgressIndicator != null) {
@@ -13569,6 +14509,16 @@ class _$CircularProgressIndicator implements CircularProgressIndicator {
     required TResult Function(DefaultTabController value) defaultTabController,
     required TResult Function(Tab value) tab,
     required TResult Function(TabBarView value) tabBarView,
+    required TResult Function(CustomScrollView value) customScrollView,
+    required TResult Function(Checkbox value) checkbox,
+    required TResult Function(DropdownButtonFormField value)
+        dropdownButtonFormField,
+    required TResult Function(PopupMenuButton value) popupMenuButton,
+    required TResult Function(NavigationDestination value)
+        navigationDestination,
+    required TResult Function(ActionChip value) actionChip,
+    required TResult Function(FilterChip value) filterChip,
+    required TResult Function(InputChip value) inputChip,
   }) {
     return circularProgressIndicator(this);
   }
@@ -13603,6 +14553,14 @@ class _$CircularProgressIndicator implements CircularProgressIndicator {
     TResult? Function(DefaultTabController value)? defaultTabController,
     TResult? Function(Tab value)? tab,
     TResult? Function(TabBarView value)? tabBarView,
+    TResult? Function(CustomScrollView value)? customScrollView,
+    TResult? Function(Checkbox value)? checkbox,
+    TResult? Function(DropdownButtonFormField value)? dropdownButtonFormField,
+    TResult? Function(PopupMenuButton value)? popupMenuButton,
+    TResult? Function(NavigationDestination value)? navigationDestination,
+    TResult? Function(ActionChip value)? actionChip,
+    TResult? Function(FilterChip value)? filterChip,
+    TResult? Function(InputChip value)? inputChip,
   }) {
     return circularProgressIndicator?.call(this);
   }
@@ -13637,6 +14595,14 @@ class _$CircularProgressIndicator implements CircularProgressIndicator {
     TResult Function(DefaultTabController value)? defaultTabController,
     TResult Function(Tab value)? tab,
     TResult Function(TabBarView value)? tabBarView,
+    TResult Function(CustomScrollView value)? customScrollView,
+    TResult Function(Checkbox value)? checkbox,
+    TResult Function(DropdownButtonFormField value)? dropdownButtonFormField,
+    TResult Function(PopupMenuButton value)? popupMenuButton,
+    TResult Function(NavigationDestination value)? navigationDestination,
+    TResult Function(ActionChip value)? actionChip,
+    TResult Function(FilterChip value)? filterChip,
+    TResult Function(InputChip value)? inputChip,
     required TResult orElse(),
   }) {
     if (circularProgressIndicator != null) {
@@ -13945,6 +14911,14 @@ class _$LinearProgressIndicator implements LinearProgressIndicator {
     required TResult Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration) defaultTabController,
     required TResult Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child) tab,
     required TResult Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior) tabBarView,
+    required TResult Function(Key? key, Axis scrollDirection, bool reverse, bool? primary, ScrollPhysics? physics, bool shrinkWrap, Key? center, double anchor, double? cacheExtent, List<Sliver> slivers, int? semanticChildCount, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior, String? restorationId, Clip clipBehavior) customScrollView,
+    required TResult Function(Key? key, bool? value, bool tristate, FormBoolField? field, MouseCursor? mouseCursor, Color? activeColor, MaterialStateProperty? fillColor, Color? checkColor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, MaterialTapTargetSize? materialTapTargetSize, VisualDensity? visualDensity, bool autofocus, ShapeBorder? shape, BorderSide? side, bool isError) checkbox,
+    required TResult Function(Key? key, FormStringField? field, List<DropdownMenuItem> items, String? value, Widget? hint, Widget? disabledHint, Callback? onTap, int elevation, TextStyle? style, Widget? icon, Color? iconDisabledColor, Color? iconEnabledColor, double iconSize, bool isDense, bool isExpanded, double? itemHeight, Color? focusColor, bool autofocus, Color? dropdownColor, InputDecoration? decoration, Map<String, String>? validatorMessages, AutovalidateMode? autovalidateMode, double? menuMaxHeight, bool? enableFeedback, Alignment alignment, BorderRadius? borderRadius) dropdownButtonFormField,
+    required TResult Function(Key? key, List<PopupMenuEntry> items, String? initialValue, Callback? onOpened, FormStringField? field, Callback? onCanceled, String? tooltip, double? elevation, Color? shadowColor, Color? surfaceTintColor, EdgeInsets padding, Widget? child, double? splashRadius, Widget? icon, double? iconSize, Offset offset, bool enabled, ShapeBorder? shape, Color? color, bool? enableFeedback, BoxConstraints? constraints, PopupMenuPosition? position, Clip clipBehavior) popupMenuButton,
+    required TResult Function(Key? key, Widget icon, Widget? selectedIcon, String label, String? tooltip) navigationDestination,
+    required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme) actionChip,
+    required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) filterChip,
+    required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) inputChip,
   }) {
     return linearProgressIndicator(key, value, backgroundColor, color,
         minHeight, semanticsLabel, semanticsValue);
@@ -14046,6 +15020,14 @@ class _$LinearProgressIndicator implements LinearProgressIndicator {
     TResult? Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration)? defaultTabController,
     TResult? Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child)? tab,
     TResult? Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior)? tabBarView,
+    TResult? Function(Key? key, Axis scrollDirection, bool reverse, bool? primary, ScrollPhysics? physics, bool shrinkWrap, Key? center, double anchor, double? cacheExtent, List<Sliver> slivers, int? semanticChildCount, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior, String? restorationId, Clip clipBehavior)? customScrollView,
+    TResult? Function(Key? key, bool? value, bool tristate, FormBoolField? field, MouseCursor? mouseCursor, Color? activeColor, MaterialStateProperty? fillColor, Color? checkColor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, MaterialTapTargetSize? materialTapTargetSize, VisualDensity? visualDensity, bool autofocus, ShapeBorder? shape, BorderSide? side, bool isError)? checkbox,
+    TResult? Function(Key? key, FormStringField? field, List<DropdownMenuItem> items, String? value, Widget? hint, Widget? disabledHint, Callback? onTap, int elevation, TextStyle? style, Widget? icon, Color? iconDisabledColor, Color? iconEnabledColor, double iconSize, bool isDense, bool isExpanded, double? itemHeight, Color? focusColor, bool autofocus, Color? dropdownColor, InputDecoration? decoration, Map<String, String>? validatorMessages, AutovalidateMode? autovalidateMode, double? menuMaxHeight, bool? enableFeedback, Alignment alignment, BorderRadius? borderRadius)? dropdownButtonFormField,
+    TResult? Function(Key? key, List<PopupMenuEntry> items, String? initialValue, Callback? onOpened, FormStringField? field, Callback? onCanceled, String? tooltip, double? elevation, Color? shadowColor, Color? surfaceTintColor, EdgeInsets padding, Widget? child, double? splashRadius, Widget? icon, double? iconSize, Offset offset, bool enabled, ShapeBorder? shape, Color? color, bool? enableFeedback, BoxConstraints? constraints, PopupMenuPosition? position, Clip clipBehavior)? popupMenuButton,
+    TResult? Function(Key? key, Widget icon, Widget? selectedIcon, String label, String? tooltip)? navigationDestination,
+    TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
+    TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
+    TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
   }) {
     return linearProgressIndicator?.call(key, value, backgroundColor, color,
         minHeight, semanticsLabel, semanticsValue);
@@ -14147,6 +15129,14 @@ class _$LinearProgressIndicator implements LinearProgressIndicator {
     TResult Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration)? defaultTabController,
     TResult Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child)? tab,
     TResult Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior)? tabBarView,
+    TResult Function(Key? key, Axis scrollDirection, bool reverse, bool? primary, ScrollPhysics? physics, bool shrinkWrap, Key? center, double anchor, double? cacheExtent, List<Sliver> slivers, int? semanticChildCount, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior, String? restorationId, Clip clipBehavior)? customScrollView,
+    TResult Function(Key? key, bool? value, bool tristate, FormBoolField? field, MouseCursor? mouseCursor, Color? activeColor, MaterialStateProperty? fillColor, Color? checkColor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, MaterialTapTargetSize? materialTapTargetSize, VisualDensity? visualDensity, bool autofocus, ShapeBorder? shape, BorderSide? side, bool isError)? checkbox,
+    TResult Function(Key? key, FormStringField? field, List<DropdownMenuItem> items, String? value, Widget? hint, Widget? disabledHint, Callback? onTap, int elevation, TextStyle? style, Widget? icon, Color? iconDisabledColor, Color? iconEnabledColor, double iconSize, bool isDense, bool isExpanded, double? itemHeight, Color? focusColor, bool autofocus, Color? dropdownColor, InputDecoration? decoration, Map<String, String>? validatorMessages, AutovalidateMode? autovalidateMode, double? menuMaxHeight, bool? enableFeedback, Alignment alignment, BorderRadius? borderRadius)? dropdownButtonFormField,
+    TResult Function(Key? key, List<PopupMenuEntry> items, String? initialValue, Callback? onOpened, FormStringField? field, Callback? onCanceled, String? tooltip, double? elevation, Color? shadowColor, Color? surfaceTintColor, EdgeInsets padding, Widget? child, double? splashRadius, Widget? icon, double? iconSize, Offset offset, bool enabled, ShapeBorder? shape, Color? color, bool? enableFeedback, BoxConstraints? constraints, PopupMenuPosition? position, Clip clipBehavior)? popupMenuButton,
+    TResult Function(Key? key, Widget icon, Widget? selectedIcon, String label, String? tooltip)? navigationDestination,
+    TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
+    TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
+    TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
     required TResult orElse(),
   }) {
     if (linearProgressIndicator != null) {
@@ -14187,6 +15177,16 @@ class _$LinearProgressIndicator implements LinearProgressIndicator {
     required TResult Function(DefaultTabController value) defaultTabController,
     required TResult Function(Tab value) tab,
     required TResult Function(TabBarView value) tabBarView,
+    required TResult Function(CustomScrollView value) customScrollView,
+    required TResult Function(Checkbox value) checkbox,
+    required TResult Function(DropdownButtonFormField value)
+        dropdownButtonFormField,
+    required TResult Function(PopupMenuButton value) popupMenuButton,
+    required TResult Function(NavigationDestination value)
+        navigationDestination,
+    required TResult Function(ActionChip value) actionChip,
+    required TResult Function(FilterChip value) filterChip,
+    required TResult Function(InputChip value) inputChip,
   }) {
     return linearProgressIndicator(this);
   }
@@ -14221,6 +15221,14 @@ class _$LinearProgressIndicator implements LinearProgressIndicator {
     TResult? Function(DefaultTabController value)? defaultTabController,
     TResult? Function(Tab value)? tab,
     TResult? Function(TabBarView value)? tabBarView,
+    TResult? Function(CustomScrollView value)? customScrollView,
+    TResult? Function(Checkbox value)? checkbox,
+    TResult? Function(DropdownButtonFormField value)? dropdownButtonFormField,
+    TResult? Function(PopupMenuButton value)? popupMenuButton,
+    TResult? Function(NavigationDestination value)? navigationDestination,
+    TResult? Function(ActionChip value)? actionChip,
+    TResult? Function(FilterChip value)? filterChip,
+    TResult? Function(InputChip value)? inputChip,
   }) {
     return linearProgressIndicator?.call(this);
   }
@@ -14255,6 +15263,14 @@ class _$LinearProgressIndicator implements LinearProgressIndicator {
     TResult Function(DefaultTabController value)? defaultTabController,
     TResult Function(Tab value)? tab,
     TResult Function(TabBarView value)? tabBarView,
+    TResult Function(CustomScrollView value)? customScrollView,
+    TResult Function(Checkbox value)? checkbox,
+    TResult Function(DropdownButtonFormField value)? dropdownButtonFormField,
+    TResult Function(PopupMenuButton value)? popupMenuButton,
+    TResult Function(NavigationDestination value)? navigationDestination,
+    TResult Function(ActionChip value)? actionChip,
+    TResult Function(FilterChip value)? filterChip,
+    TResult Function(InputChip value)? inputChip,
     required TResult orElse(),
   }) {
     if (linearProgressIndicator != null) {
@@ -14534,6 +15550,14 @@ class _$Divider implements Divider {
     required TResult Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration) defaultTabController,
     required TResult Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child) tab,
     required TResult Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior) tabBarView,
+    required TResult Function(Key? key, Axis scrollDirection, bool reverse, bool? primary, ScrollPhysics? physics, bool shrinkWrap, Key? center, double anchor, double? cacheExtent, List<Sliver> slivers, int? semanticChildCount, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior, String? restorationId, Clip clipBehavior) customScrollView,
+    required TResult Function(Key? key, bool? value, bool tristate, FormBoolField? field, MouseCursor? mouseCursor, Color? activeColor, MaterialStateProperty? fillColor, Color? checkColor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, MaterialTapTargetSize? materialTapTargetSize, VisualDensity? visualDensity, bool autofocus, ShapeBorder? shape, BorderSide? side, bool isError) checkbox,
+    required TResult Function(Key? key, FormStringField? field, List<DropdownMenuItem> items, String? value, Widget? hint, Widget? disabledHint, Callback? onTap, int elevation, TextStyle? style, Widget? icon, Color? iconDisabledColor, Color? iconEnabledColor, double iconSize, bool isDense, bool isExpanded, double? itemHeight, Color? focusColor, bool autofocus, Color? dropdownColor, InputDecoration? decoration, Map<String, String>? validatorMessages, AutovalidateMode? autovalidateMode, double? menuMaxHeight, bool? enableFeedback, Alignment alignment, BorderRadius? borderRadius) dropdownButtonFormField,
+    required TResult Function(Key? key, List<PopupMenuEntry> items, String? initialValue, Callback? onOpened, FormStringField? field, Callback? onCanceled, String? tooltip, double? elevation, Color? shadowColor, Color? surfaceTintColor, EdgeInsets padding, Widget? child, double? splashRadius, Widget? icon, double? iconSize, Offset offset, bool enabled, ShapeBorder? shape, Color? color, bool? enableFeedback, BoxConstraints? constraints, PopupMenuPosition? position, Clip clipBehavior) popupMenuButton,
+    required TResult Function(Key? key, Widget icon, Widget? selectedIcon, String label, String? tooltip) navigationDestination,
+    required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme) actionChip,
+    required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) filterChip,
+    required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) inputChip,
   }) {
     return divider(key, height, thickness, indent, endIndent, color);
   }
@@ -14634,6 +15658,14 @@ class _$Divider implements Divider {
     TResult? Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration)? defaultTabController,
     TResult? Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child)? tab,
     TResult? Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior)? tabBarView,
+    TResult? Function(Key? key, Axis scrollDirection, bool reverse, bool? primary, ScrollPhysics? physics, bool shrinkWrap, Key? center, double anchor, double? cacheExtent, List<Sliver> slivers, int? semanticChildCount, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior, String? restorationId, Clip clipBehavior)? customScrollView,
+    TResult? Function(Key? key, bool? value, bool tristate, FormBoolField? field, MouseCursor? mouseCursor, Color? activeColor, MaterialStateProperty? fillColor, Color? checkColor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, MaterialTapTargetSize? materialTapTargetSize, VisualDensity? visualDensity, bool autofocus, ShapeBorder? shape, BorderSide? side, bool isError)? checkbox,
+    TResult? Function(Key? key, FormStringField? field, List<DropdownMenuItem> items, String? value, Widget? hint, Widget? disabledHint, Callback? onTap, int elevation, TextStyle? style, Widget? icon, Color? iconDisabledColor, Color? iconEnabledColor, double iconSize, bool isDense, bool isExpanded, double? itemHeight, Color? focusColor, bool autofocus, Color? dropdownColor, InputDecoration? decoration, Map<String, String>? validatorMessages, AutovalidateMode? autovalidateMode, double? menuMaxHeight, bool? enableFeedback, Alignment alignment, BorderRadius? borderRadius)? dropdownButtonFormField,
+    TResult? Function(Key? key, List<PopupMenuEntry> items, String? initialValue, Callback? onOpened, FormStringField? field, Callback? onCanceled, String? tooltip, double? elevation, Color? shadowColor, Color? surfaceTintColor, EdgeInsets padding, Widget? child, double? splashRadius, Widget? icon, double? iconSize, Offset offset, bool enabled, ShapeBorder? shape, Color? color, bool? enableFeedback, BoxConstraints? constraints, PopupMenuPosition? position, Clip clipBehavior)? popupMenuButton,
+    TResult? Function(Key? key, Widget icon, Widget? selectedIcon, String label, String? tooltip)? navigationDestination,
+    TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
+    TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
+    TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
   }) {
     return divider?.call(key, height, thickness, indent, endIndent, color);
   }
@@ -14734,6 +15766,14 @@ class _$Divider implements Divider {
     TResult Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration)? defaultTabController,
     TResult Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child)? tab,
     TResult Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior)? tabBarView,
+    TResult Function(Key? key, Axis scrollDirection, bool reverse, bool? primary, ScrollPhysics? physics, bool shrinkWrap, Key? center, double anchor, double? cacheExtent, List<Sliver> slivers, int? semanticChildCount, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior, String? restorationId, Clip clipBehavior)? customScrollView,
+    TResult Function(Key? key, bool? value, bool tristate, FormBoolField? field, MouseCursor? mouseCursor, Color? activeColor, MaterialStateProperty? fillColor, Color? checkColor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, MaterialTapTargetSize? materialTapTargetSize, VisualDensity? visualDensity, bool autofocus, ShapeBorder? shape, BorderSide? side, bool isError)? checkbox,
+    TResult Function(Key? key, FormStringField? field, List<DropdownMenuItem> items, String? value, Widget? hint, Widget? disabledHint, Callback? onTap, int elevation, TextStyle? style, Widget? icon, Color? iconDisabledColor, Color? iconEnabledColor, double iconSize, bool isDense, bool isExpanded, double? itemHeight, Color? focusColor, bool autofocus, Color? dropdownColor, InputDecoration? decoration, Map<String, String>? validatorMessages, AutovalidateMode? autovalidateMode, double? menuMaxHeight, bool? enableFeedback, Alignment alignment, BorderRadius? borderRadius)? dropdownButtonFormField,
+    TResult Function(Key? key, List<PopupMenuEntry> items, String? initialValue, Callback? onOpened, FormStringField? field, Callback? onCanceled, String? tooltip, double? elevation, Color? shadowColor, Color? surfaceTintColor, EdgeInsets padding, Widget? child, double? splashRadius, Widget? icon, double? iconSize, Offset offset, bool enabled, ShapeBorder? shape, Color? color, bool? enableFeedback, BoxConstraints? constraints, PopupMenuPosition? position, Clip clipBehavior)? popupMenuButton,
+    TResult Function(Key? key, Widget icon, Widget? selectedIcon, String label, String? tooltip)? navigationDestination,
+    TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
+    TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
+    TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
     required TResult orElse(),
   }) {
     if (divider != null) {
@@ -14773,6 +15813,16 @@ class _$Divider implements Divider {
     required TResult Function(DefaultTabController value) defaultTabController,
     required TResult Function(Tab value) tab,
     required TResult Function(TabBarView value) tabBarView,
+    required TResult Function(CustomScrollView value) customScrollView,
+    required TResult Function(Checkbox value) checkbox,
+    required TResult Function(DropdownButtonFormField value)
+        dropdownButtonFormField,
+    required TResult Function(PopupMenuButton value) popupMenuButton,
+    required TResult Function(NavigationDestination value)
+        navigationDestination,
+    required TResult Function(ActionChip value) actionChip,
+    required TResult Function(FilterChip value) filterChip,
+    required TResult Function(InputChip value) inputChip,
   }) {
     return divider(this);
   }
@@ -14807,6 +15857,14 @@ class _$Divider implements Divider {
     TResult? Function(DefaultTabController value)? defaultTabController,
     TResult? Function(Tab value)? tab,
     TResult? Function(TabBarView value)? tabBarView,
+    TResult? Function(CustomScrollView value)? customScrollView,
+    TResult? Function(Checkbox value)? checkbox,
+    TResult? Function(DropdownButtonFormField value)? dropdownButtonFormField,
+    TResult? Function(PopupMenuButton value)? popupMenuButton,
+    TResult? Function(NavigationDestination value)? navigationDestination,
+    TResult? Function(ActionChip value)? actionChip,
+    TResult? Function(FilterChip value)? filterChip,
+    TResult? Function(InputChip value)? inputChip,
   }) {
     return divider?.call(this);
   }
@@ -14841,6 +15899,14 @@ class _$Divider implements Divider {
     TResult Function(DefaultTabController value)? defaultTabController,
     TResult Function(Tab value)? tab,
     TResult Function(TabBarView value)? tabBarView,
+    TResult Function(CustomScrollView value)? customScrollView,
+    TResult Function(Checkbox value)? checkbox,
+    TResult Function(DropdownButtonFormField value)? dropdownButtonFormField,
+    TResult Function(PopupMenuButton value)? popupMenuButton,
+    TResult Function(NavigationDestination value)? navigationDestination,
+    TResult Function(ActionChip value)? actionChip,
+    TResult Function(FilterChip value)? filterChip,
+    TResult Function(InputChip value)? inputChip,
     required TResult orElse(),
   }) {
     if (divider != null) {
@@ -15410,6 +16476,14 @@ class _$NavigationRail implements NavigationRail {
     required TResult Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration) defaultTabController,
     required TResult Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child) tab,
     required TResult Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior) tabBarView,
+    required TResult Function(Key? key, Axis scrollDirection, bool reverse, bool? primary, ScrollPhysics? physics, bool shrinkWrap, Key? center, double anchor, double? cacheExtent, List<Sliver> slivers, int? semanticChildCount, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior, String? restorationId, Clip clipBehavior) customScrollView,
+    required TResult Function(Key? key, bool? value, bool tristate, FormBoolField? field, MouseCursor? mouseCursor, Color? activeColor, MaterialStateProperty? fillColor, Color? checkColor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, MaterialTapTargetSize? materialTapTargetSize, VisualDensity? visualDensity, bool autofocus, ShapeBorder? shape, BorderSide? side, bool isError) checkbox,
+    required TResult Function(Key? key, FormStringField? field, List<DropdownMenuItem> items, String? value, Widget? hint, Widget? disabledHint, Callback? onTap, int elevation, TextStyle? style, Widget? icon, Color? iconDisabledColor, Color? iconEnabledColor, double iconSize, bool isDense, bool isExpanded, double? itemHeight, Color? focusColor, bool autofocus, Color? dropdownColor, InputDecoration? decoration, Map<String, String>? validatorMessages, AutovalidateMode? autovalidateMode, double? menuMaxHeight, bool? enableFeedback, Alignment alignment, BorderRadius? borderRadius) dropdownButtonFormField,
+    required TResult Function(Key? key, List<PopupMenuEntry> items, String? initialValue, Callback? onOpened, FormStringField? field, Callback? onCanceled, String? tooltip, double? elevation, Color? shadowColor, Color? surfaceTintColor, EdgeInsets padding, Widget? child, double? splashRadius, Widget? icon, double? iconSize, Offset offset, bool enabled, ShapeBorder? shape, Color? color, bool? enableFeedback, BoxConstraints? constraints, PopupMenuPosition? position, Clip clipBehavior) popupMenuButton,
+    required TResult Function(Key? key, Widget icon, Widget? selectedIcon, String label, String? tooltip) navigationDestination,
+    required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme) actionChip,
+    required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) filterChip,
+    required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) inputChip,
   }) {
     return navigationRail(
         key,
@@ -15530,6 +16604,14 @@ class _$NavigationRail implements NavigationRail {
     TResult? Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration)? defaultTabController,
     TResult? Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child)? tab,
     TResult? Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior)? tabBarView,
+    TResult? Function(Key? key, Axis scrollDirection, bool reverse, bool? primary, ScrollPhysics? physics, bool shrinkWrap, Key? center, double anchor, double? cacheExtent, List<Sliver> slivers, int? semanticChildCount, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior, String? restorationId, Clip clipBehavior)? customScrollView,
+    TResult? Function(Key? key, bool? value, bool tristate, FormBoolField? field, MouseCursor? mouseCursor, Color? activeColor, MaterialStateProperty? fillColor, Color? checkColor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, MaterialTapTargetSize? materialTapTargetSize, VisualDensity? visualDensity, bool autofocus, ShapeBorder? shape, BorderSide? side, bool isError)? checkbox,
+    TResult? Function(Key? key, FormStringField? field, List<DropdownMenuItem> items, String? value, Widget? hint, Widget? disabledHint, Callback? onTap, int elevation, TextStyle? style, Widget? icon, Color? iconDisabledColor, Color? iconEnabledColor, double iconSize, bool isDense, bool isExpanded, double? itemHeight, Color? focusColor, bool autofocus, Color? dropdownColor, InputDecoration? decoration, Map<String, String>? validatorMessages, AutovalidateMode? autovalidateMode, double? menuMaxHeight, bool? enableFeedback, Alignment alignment, BorderRadius? borderRadius)? dropdownButtonFormField,
+    TResult? Function(Key? key, List<PopupMenuEntry> items, String? initialValue, Callback? onOpened, FormStringField? field, Callback? onCanceled, String? tooltip, double? elevation, Color? shadowColor, Color? surfaceTintColor, EdgeInsets padding, Widget? child, double? splashRadius, Widget? icon, double? iconSize, Offset offset, bool enabled, ShapeBorder? shape, Color? color, bool? enableFeedback, BoxConstraints? constraints, PopupMenuPosition? position, Clip clipBehavior)? popupMenuButton,
+    TResult? Function(Key? key, Widget icon, Widget? selectedIcon, String label, String? tooltip)? navigationDestination,
+    TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
+    TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
+    TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
   }) {
     return navigationRail?.call(
         key,
@@ -15650,6 +16732,14 @@ class _$NavigationRail implements NavigationRail {
     TResult Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration)? defaultTabController,
     TResult Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child)? tab,
     TResult Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior)? tabBarView,
+    TResult Function(Key? key, Axis scrollDirection, bool reverse, bool? primary, ScrollPhysics? physics, bool shrinkWrap, Key? center, double anchor, double? cacheExtent, List<Sliver> slivers, int? semanticChildCount, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior, String? restorationId, Clip clipBehavior)? customScrollView,
+    TResult Function(Key? key, bool? value, bool tristate, FormBoolField? field, MouseCursor? mouseCursor, Color? activeColor, MaterialStateProperty? fillColor, Color? checkColor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, MaterialTapTargetSize? materialTapTargetSize, VisualDensity? visualDensity, bool autofocus, ShapeBorder? shape, BorderSide? side, bool isError)? checkbox,
+    TResult Function(Key? key, FormStringField? field, List<DropdownMenuItem> items, String? value, Widget? hint, Widget? disabledHint, Callback? onTap, int elevation, TextStyle? style, Widget? icon, Color? iconDisabledColor, Color? iconEnabledColor, double iconSize, bool isDense, bool isExpanded, double? itemHeight, Color? focusColor, bool autofocus, Color? dropdownColor, InputDecoration? decoration, Map<String, String>? validatorMessages, AutovalidateMode? autovalidateMode, double? menuMaxHeight, bool? enableFeedback, Alignment alignment, BorderRadius? borderRadius)? dropdownButtonFormField,
+    TResult Function(Key? key, List<PopupMenuEntry> items, String? initialValue, Callback? onOpened, FormStringField? field, Callback? onCanceled, String? tooltip, double? elevation, Color? shadowColor, Color? surfaceTintColor, EdgeInsets padding, Widget? child, double? splashRadius, Widget? icon, double? iconSize, Offset offset, bool enabled, ShapeBorder? shape, Color? color, bool? enableFeedback, BoxConstraints? constraints, PopupMenuPosition? position, Clip clipBehavior)? popupMenuButton,
+    TResult Function(Key? key, Widget icon, Widget? selectedIcon, String label, String? tooltip)? navigationDestination,
+    TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
+    TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
+    TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
     required TResult orElse(),
   }) {
     if (navigationRail != null) {
@@ -15709,6 +16799,16 @@ class _$NavigationRail implements NavigationRail {
     required TResult Function(DefaultTabController value) defaultTabController,
     required TResult Function(Tab value) tab,
     required TResult Function(TabBarView value) tabBarView,
+    required TResult Function(CustomScrollView value) customScrollView,
+    required TResult Function(Checkbox value) checkbox,
+    required TResult Function(DropdownButtonFormField value)
+        dropdownButtonFormField,
+    required TResult Function(PopupMenuButton value) popupMenuButton,
+    required TResult Function(NavigationDestination value)
+        navigationDestination,
+    required TResult Function(ActionChip value) actionChip,
+    required TResult Function(FilterChip value) filterChip,
+    required TResult Function(InputChip value) inputChip,
   }) {
     return navigationRail(this);
   }
@@ -15743,6 +16843,14 @@ class _$NavigationRail implements NavigationRail {
     TResult? Function(DefaultTabController value)? defaultTabController,
     TResult? Function(Tab value)? tab,
     TResult? Function(TabBarView value)? tabBarView,
+    TResult? Function(CustomScrollView value)? customScrollView,
+    TResult? Function(Checkbox value)? checkbox,
+    TResult? Function(DropdownButtonFormField value)? dropdownButtonFormField,
+    TResult? Function(PopupMenuButton value)? popupMenuButton,
+    TResult? Function(NavigationDestination value)? navigationDestination,
+    TResult? Function(ActionChip value)? actionChip,
+    TResult? Function(FilterChip value)? filterChip,
+    TResult? Function(InputChip value)? inputChip,
   }) {
     return navigationRail?.call(this);
   }
@@ -15777,6 +16885,14 @@ class _$NavigationRail implements NavigationRail {
     TResult Function(DefaultTabController value)? defaultTabController,
     TResult Function(Tab value)? tab,
     TResult Function(TabBarView value)? tabBarView,
+    TResult Function(CustomScrollView value)? customScrollView,
+    TResult Function(Checkbox value)? checkbox,
+    TResult Function(DropdownButtonFormField value)? dropdownButtonFormField,
+    TResult Function(PopupMenuButton value)? popupMenuButton,
+    TResult Function(NavigationDestination value)? navigationDestination,
+    TResult Function(ActionChip value)? actionChip,
+    TResult Function(FilterChip value)? filterChip,
+    TResult Function(InputChip value)? inputChip,
     required TResult orElse(),
   }) {
     if (navigationRail != null) {
@@ -16236,6 +17352,14 @@ class _$NavigationBar implements NavigationBar {
     required TResult Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration) defaultTabController,
     required TResult Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child) tab,
     required TResult Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior) tabBarView,
+    required TResult Function(Key? key, Axis scrollDirection, bool reverse, bool? primary, ScrollPhysics? physics, bool shrinkWrap, Key? center, double anchor, double? cacheExtent, List<Sliver> slivers, int? semanticChildCount, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior, String? restorationId, Clip clipBehavior) customScrollView,
+    required TResult Function(Key? key, bool? value, bool tristate, FormBoolField? field, MouseCursor? mouseCursor, Color? activeColor, MaterialStateProperty? fillColor, Color? checkColor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, MaterialTapTargetSize? materialTapTargetSize, VisualDensity? visualDensity, bool autofocus, ShapeBorder? shape, BorderSide? side, bool isError) checkbox,
+    required TResult Function(Key? key, FormStringField? field, List<DropdownMenuItem> items, String? value, Widget? hint, Widget? disabledHint, Callback? onTap, int elevation, TextStyle? style, Widget? icon, Color? iconDisabledColor, Color? iconEnabledColor, double iconSize, bool isDense, bool isExpanded, double? itemHeight, Color? focusColor, bool autofocus, Color? dropdownColor, InputDecoration? decoration, Map<String, String>? validatorMessages, AutovalidateMode? autovalidateMode, double? menuMaxHeight, bool? enableFeedback, Alignment alignment, BorderRadius? borderRadius) dropdownButtonFormField,
+    required TResult Function(Key? key, List<PopupMenuEntry> items, String? initialValue, Callback? onOpened, FormStringField? field, Callback? onCanceled, String? tooltip, double? elevation, Color? shadowColor, Color? surfaceTintColor, EdgeInsets padding, Widget? child, double? splashRadius, Widget? icon, double? iconSize, Offset offset, bool enabled, ShapeBorder? shape, Color? color, bool? enableFeedback, BoxConstraints? constraints, PopupMenuPosition? position, Clip clipBehavior) popupMenuButton,
+    required TResult Function(Key? key, Widget icon, Widget? selectedIcon, String label, String? tooltip) navigationDestination,
+    required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme) actionChip,
+    required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) filterChip,
+    required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) inputChip,
   }) {
     return navigationBar(
         key,
@@ -16349,6 +17473,14 @@ class _$NavigationBar implements NavigationBar {
     TResult? Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration)? defaultTabController,
     TResult? Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child)? tab,
     TResult? Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior)? tabBarView,
+    TResult? Function(Key? key, Axis scrollDirection, bool reverse, bool? primary, ScrollPhysics? physics, bool shrinkWrap, Key? center, double anchor, double? cacheExtent, List<Sliver> slivers, int? semanticChildCount, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior, String? restorationId, Clip clipBehavior)? customScrollView,
+    TResult? Function(Key? key, bool? value, bool tristate, FormBoolField? field, MouseCursor? mouseCursor, Color? activeColor, MaterialStateProperty? fillColor, Color? checkColor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, MaterialTapTargetSize? materialTapTargetSize, VisualDensity? visualDensity, bool autofocus, ShapeBorder? shape, BorderSide? side, bool isError)? checkbox,
+    TResult? Function(Key? key, FormStringField? field, List<DropdownMenuItem> items, String? value, Widget? hint, Widget? disabledHint, Callback? onTap, int elevation, TextStyle? style, Widget? icon, Color? iconDisabledColor, Color? iconEnabledColor, double iconSize, bool isDense, bool isExpanded, double? itemHeight, Color? focusColor, bool autofocus, Color? dropdownColor, InputDecoration? decoration, Map<String, String>? validatorMessages, AutovalidateMode? autovalidateMode, double? menuMaxHeight, bool? enableFeedback, Alignment alignment, BorderRadius? borderRadius)? dropdownButtonFormField,
+    TResult? Function(Key? key, List<PopupMenuEntry> items, String? initialValue, Callback? onOpened, FormStringField? field, Callback? onCanceled, String? tooltip, double? elevation, Color? shadowColor, Color? surfaceTintColor, EdgeInsets padding, Widget? child, double? splashRadius, Widget? icon, double? iconSize, Offset offset, bool enabled, ShapeBorder? shape, Color? color, bool? enableFeedback, BoxConstraints? constraints, PopupMenuPosition? position, Clip clipBehavior)? popupMenuButton,
+    TResult? Function(Key? key, Widget icon, Widget? selectedIcon, String label, String? tooltip)? navigationDestination,
+    TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
+    TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
+    TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
   }) {
     return navigationBar?.call(
         key,
@@ -16462,6 +17594,14 @@ class _$NavigationBar implements NavigationBar {
     TResult Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration)? defaultTabController,
     TResult Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child)? tab,
     TResult Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior)? tabBarView,
+    TResult Function(Key? key, Axis scrollDirection, bool reverse, bool? primary, ScrollPhysics? physics, bool shrinkWrap, Key? center, double anchor, double? cacheExtent, List<Sliver> slivers, int? semanticChildCount, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior, String? restorationId, Clip clipBehavior)? customScrollView,
+    TResult Function(Key? key, bool? value, bool tristate, FormBoolField? field, MouseCursor? mouseCursor, Color? activeColor, MaterialStateProperty? fillColor, Color? checkColor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, MaterialTapTargetSize? materialTapTargetSize, VisualDensity? visualDensity, bool autofocus, ShapeBorder? shape, BorderSide? side, bool isError)? checkbox,
+    TResult Function(Key? key, FormStringField? field, List<DropdownMenuItem> items, String? value, Widget? hint, Widget? disabledHint, Callback? onTap, int elevation, TextStyle? style, Widget? icon, Color? iconDisabledColor, Color? iconEnabledColor, double iconSize, bool isDense, bool isExpanded, double? itemHeight, Color? focusColor, bool autofocus, Color? dropdownColor, InputDecoration? decoration, Map<String, String>? validatorMessages, AutovalidateMode? autovalidateMode, double? menuMaxHeight, bool? enableFeedback, Alignment alignment, BorderRadius? borderRadius)? dropdownButtonFormField,
+    TResult Function(Key? key, List<PopupMenuEntry> items, String? initialValue, Callback? onOpened, FormStringField? field, Callback? onCanceled, String? tooltip, double? elevation, Color? shadowColor, Color? surfaceTintColor, EdgeInsets padding, Widget? child, double? splashRadius, Widget? icon, double? iconSize, Offset offset, bool enabled, ShapeBorder? shape, Color? color, bool? enableFeedback, BoxConstraints? constraints, PopupMenuPosition? position, Clip clipBehavior)? popupMenuButton,
+    TResult Function(Key? key, Widget icon, Widget? selectedIcon, String label, String? tooltip)? navigationDestination,
+    TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
+    TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
+    TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
     required TResult orElse(),
   }) {
     if (navigationBar != null) {
@@ -16514,6 +17654,16 @@ class _$NavigationBar implements NavigationBar {
     required TResult Function(DefaultTabController value) defaultTabController,
     required TResult Function(Tab value) tab,
     required TResult Function(TabBarView value) tabBarView,
+    required TResult Function(CustomScrollView value) customScrollView,
+    required TResult Function(Checkbox value) checkbox,
+    required TResult Function(DropdownButtonFormField value)
+        dropdownButtonFormField,
+    required TResult Function(PopupMenuButton value) popupMenuButton,
+    required TResult Function(NavigationDestination value)
+        navigationDestination,
+    required TResult Function(ActionChip value) actionChip,
+    required TResult Function(FilterChip value) filterChip,
+    required TResult Function(InputChip value) inputChip,
   }) {
     return navigationBar(this);
   }
@@ -16548,6 +17698,14 @@ class _$NavigationBar implements NavigationBar {
     TResult? Function(DefaultTabController value)? defaultTabController,
     TResult? Function(Tab value)? tab,
     TResult? Function(TabBarView value)? tabBarView,
+    TResult? Function(CustomScrollView value)? customScrollView,
+    TResult? Function(Checkbox value)? checkbox,
+    TResult? Function(DropdownButtonFormField value)? dropdownButtonFormField,
+    TResult? Function(PopupMenuButton value)? popupMenuButton,
+    TResult? Function(NavigationDestination value)? navigationDestination,
+    TResult? Function(ActionChip value)? actionChip,
+    TResult? Function(FilterChip value)? filterChip,
+    TResult? Function(InputChip value)? inputChip,
   }) {
     return navigationBar?.call(this);
   }
@@ -16582,6 +17740,14 @@ class _$NavigationBar implements NavigationBar {
     TResult Function(DefaultTabController value)? defaultTabController,
     TResult Function(Tab value)? tab,
     TResult Function(TabBarView value)? tabBarView,
+    TResult Function(CustomScrollView value)? customScrollView,
+    TResult Function(Checkbox value)? checkbox,
+    TResult Function(DropdownButtonFormField value)? dropdownButtonFormField,
+    TResult Function(PopupMenuButton value)? popupMenuButton,
+    TResult Function(NavigationDestination value)? navigationDestination,
+    TResult Function(ActionChip value)? actionChip,
+    TResult Function(FilterChip value)? filterChip,
+    TResult Function(InputChip value)? inputChip,
     required TResult orElse(),
   }) {
     if (navigationBar != null) {
@@ -16865,6 +18031,14 @@ class _$DefaultTabController implements DefaultTabController {
     required TResult Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration) defaultTabController,
     required TResult Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child) tab,
     required TResult Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior) tabBarView,
+    required TResult Function(Key? key, Axis scrollDirection, bool reverse, bool? primary, ScrollPhysics? physics, bool shrinkWrap, Key? center, double anchor, double? cacheExtent, List<Sliver> slivers, int? semanticChildCount, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior, String? restorationId, Clip clipBehavior) customScrollView,
+    required TResult Function(Key? key, bool? value, bool tristate, FormBoolField? field, MouseCursor? mouseCursor, Color? activeColor, MaterialStateProperty? fillColor, Color? checkColor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, MaterialTapTargetSize? materialTapTargetSize, VisualDensity? visualDensity, bool autofocus, ShapeBorder? shape, BorderSide? side, bool isError) checkbox,
+    required TResult Function(Key? key, FormStringField? field, List<DropdownMenuItem> items, String? value, Widget? hint, Widget? disabledHint, Callback? onTap, int elevation, TextStyle? style, Widget? icon, Color? iconDisabledColor, Color? iconEnabledColor, double iconSize, bool isDense, bool isExpanded, double? itemHeight, Color? focusColor, bool autofocus, Color? dropdownColor, InputDecoration? decoration, Map<String, String>? validatorMessages, AutovalidateMode? autovalidateMode, double? menuMaxHeight, bool? enableFeedback, Alignment alignment, BorderRadius? borderRadius) dropdownButtonFormField,
+    required TResult Function(Key? key, List<PopupMenuEntry> items, String? initialValue, Callback? onOpened, FormStringField? field, Callback? onCanceled, String? tooltip, double? elevation, Color? shadowColor, Color? surfaceTintColor, EdgeInsets padding, Widget? child, double? splashRadius, Widget? icon, double? iconSize, Offset offset, bool enabled, ShapeBorder? shape, Color? color, bool? enableFeedback, BoxConstraints? constraints, PopupMenuPosition? position, Clip clipBehavior) popupMenuButton,
+    required TResult Function(Key? key, Widget icon, Widget? selectedIcon, String label, String? tooltip) navigationDestination,
+    required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme) actionChip,
+    required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) filterChip,
+    required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) inputChip,
   }) {
     return defaultTabController(
         key, length, initialIndex, child, animationDuration);
@@ -16966,6 +18140,14 @@ class _$DefaultTabController implements DefaultTabController {
     TResult? Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration)? defaultTabController,
     TResult? Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child)? tab,
     TResult? Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior)? tabBarView,
+    TResult? Function(Key? key, Axis scrollDirection, bool reverse, bool? primary, ScrollPhysics? physics, bool shrinkWrap, Key? center, double anchor, double? cacheExtent, List<Sliver> slivers, int? semanticChildCount, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior, String? restorationId, Clip clipBehavior)? customScrollView,
+    TResult? Function(Key? key, bool? value, bool tristate, FormBoolField? field, MouseCursor? mouseCursor, Color? activeColor, MaterialStateProperty? fillColor, Color? checkColor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, MaterialTapTargetSize? materialTapTargetSize, VisualDensity? visualDensity, bool autofocus, ShapeBorder? shape, BorderSide? side, bool isError)? checkbox,
+    TResult? Function(Key? key, FormStringField? field, List<DropdownMenuItem> items, String? value, Widget? hint, Widget? disabledHint, Callback? onTap, int elevation, TextStyle? style, Widget? icon, Color? iconDisabledColor, Color? iconEnabledColor, double iconSize, bool isDense, bool isExpanded, double? itemHeight, Color? focusColor, bool autofocus, Color? dropdownColor, InputDecoration? decoration, Map<String, String>? validatorMessages, AutovalidateMode? autovalidateMode, double? menuMaxHeight, bool? enableFeedback, Alignment alignment, BorderRadius? borderRadius)? dropdownButtonFormField,
+    TResult? Function(Key? key, List<PopupMenuEntry> items, String? initialValue, Callback? onOpened, FormStringField? field, Callback? onCanceled, String? tooltip, double? elevation, Color? shadowColor, Color? surfaceTintColor, EdgeInsets padding, Widget? child, double? splashRadius, Widget? icon, double? iconSize, Offset offset, bool enabled, ShapeBorder? shape, Color? color, bool? enableFeedback, BoxConstraints? constraints, PopupMenuPosition? position, Clip clipBehavior)? popupMenuButton,
+    TResult? Function(Key? key, Widget icon, Widget? selectedIcon, String label, String? tooltip)? navigationDestination,
+    TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
+    TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
+    TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
   }) {
     return defaultTabController?.call(
         key, length, initialIndex, child, animationDuration);
@@ -17067,6 +18249,14 @@ class _$DefaultTabController implements DefaultTabController {
     TResult Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration)? defaultTabController,
     TResult Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child)? tab,
     TResult Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior)? tabBarView,
+    TResult Function(Key? key, Axis scrollDirection, bool reverse, bool? primary, ScrollPhysics? physics, bool shrinkWrap, Key? center, double anchor, double? cacheExtent, List<Sliver> slivers, int? semanticChildCount, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior, String? restorationId, Clip clipBehavior)? customScrollView,
+    TResult Function(Key? key, bool? value, bool tristate, FormBoolField? field, MouseCursor? mouseCursor, Color? activeColor, MaterialStateProperty? fillColor, Color? checkColor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, MaterialTapTargetSize? materialTapTargetSize, VisualDensity? visualDensity, bool autofocus, ShapeBorder? shape, BorderSide? side, bool isError)? checkbox,
+    TResult Function(Key? key, FormStringField? field, List<DropdownMenuItem> items, String? value, Widget? hint, Widget? disabledHint, Callback? onTap, int elevation, TextStyle? style, Widget? icon, Color? iconDisabledColor, Color? iconEnabledColor, double iconSize, bool isDense, bool isExpanded, double? itemHeight, Color? focusColor, bool autofocus, Color? dropdownColor, InputDecoration? decoration, Map<String, String>? validatorMessages, AutovalidateMode? autovalidateMode, double? menuMaxHeight, bool? enableFeedback, Alignment alignment, BorderRadius? borderRadius)? dropdownButtonFormField,
+    TResult Function(Key? key, List<PopupMenuEntry> items, String? initialValue, Callback? onOpened, FormStringField? field, Callback? onCanceled, String? tooltip, double? elevation, Color? shadowColor, Color? surfaceTintColor, EdgeInsets padding, Widget? child, double? splashRadius, Widget? icon, double? iconSize, Offset offset, bool enabled, ShapeBorder? shape, Color? color, bool? enableFeedback, BoxConstraints? constraints, PopupMenuPosition? position, Clip clipBehavior)? popupMenuButton,
+    TResult Function(Key? key, Widget icon, Widget? selectedIcon, String label, String? tooltip)? navigationDestination,
+    TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
+    TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
+    TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
     required TResult orElse(),
   }) {
     if (defaultTabController != null) {
@@ -17107,6 +18297,16 @@ class _$DefaultTabController implements DefaultTabController {
     required TResult Function(DefaultTabController value) defaultTabController,
     required TResult Function(Tab value) tab,
     required TResult Function(TabBarView value) tabBarView,
+    required TResult Function(CustomScrollView value) customScrollView,
+    required TResult Function(Checkbox value) checkbox,
+    required TResult Function(DropdownButtonFormField value)
+        dropdownButtonFormField,
+    required TResult Function(PopupMenuButton value) popupMenuButton,
+    required TResult Function(NavigationDestination value)
+        navigationDestination,
+    required TResult Function(ActionChip value) actionChip,
+    required TResult Function(FilterChip value) filterChip,
+    required TResult Function(InputChip value) inputChip,
   }) {
     return defaultTabController(this);
   }
@@ -17141,6 +18341,14 @@ class _$DefaultTabController implements DefaultTabController {
     TResult? Function(DefaultTabController value)? defaultTabController,
     TResult? Function(Tab value)? tab,
     TResult? Function(TabBarView value)? tabBarView,
+    TResult? Function(CustomScrollView value)? customScrollView,
+    TResult? Function(Checkbox value)? checkbox,
+    TResult? Function(DropdownButtonFormField value)? dropdownButtonFormField,
+    TResult? Function(PopupMenuButton value)? popupMenuButton,
+    TResult? Function(NavigationDestination value)? navigationDestination,
+    TResult? Function(ActionChip value)? actionChip,
+    TResult? Function(FilterChip value)? filterChip,
+    TResult? Function(InputChip value)? inputChip,
   }) {
     return defaultTabController?.call(this);
   }
@@ -17175,6 +18383,14 @@ class _$DefaultTabController implements DefaultTabController {
     TResult Function(DefaultTabController value)? defaultTabController,
     TResult Function(Tab value)? tab,
     TResult Function(TabBarView value)? tabBarView,
+    TResult Function(CustomScrollView value)? customScrollView,
+    TResult Function(Checkbox value)? checkbox,
+    TResult Function(DropdownButtonFormField value)? dropdownButtonFormField,
+    TResult Function(PopupMenuButton value)? popupMenuButton,
+    TResult Function(NavigationDestination value)? navigationDestination,
+    TResult Function(ActionChip value)? actionChip,
+    TResult Function(FilterChip value)? filterChip,
+    TResult Function(InputChip value)? inputChip,
     required TResult orElse(),
   }) {
     if (defaultTabController != null) {
@@ -17470,6 +18686,14 @@ class _$Tab implements Tab {
     required TResult Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration) defaultTabController,
     required TResult Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child) tab,
     required TResult Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior) tabBarView,
+    required TResult Function(Key? key, Axis scrollDirection, bool reverse, bool? primary, ScrollPhysics? physics, bool shrinkWrap, Key? center, double anchor, double? cacheExtent, List<Sliver> slivers, int? semanticChildCount, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior, String? restorationId, Clip clipBehavior) customScrollView,
+    required TResult Function(Key? key, bool? value, bool tristate, FormBoolField? field, MouseCursor? mouseCursor, Color? activeColor, MaterialStateProperty? fillColor, Color? checkColor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, MaterialTapTargetSize? materialTapTargetSize, VisualDensity? visualDensity, bool autofocus, ShapeBorder? shape, BorderSide? side, bool isError) checkbox,
+    required TResult Function(Key? key, FormStringField? field, List<DropdownMenuItem> items, String? value, Widget? hint, Widget? disabledHint, Callback? onTap, int elevation, TextStyle? style, Widget? icon, Color? iconDisabledColor, Color? iconEnabledColor, double iconSize, bool isDense, bool isExpanded, double? itemHeight, Color? focusColor, bool autofocus, Color? dropdownColor, InputDecoration? decoration, Map<String, String>? validatorMessages, AutovalidateMode? autovalidateMode, double? menuMaxHeight, bool? enableFeedback, Alignment alignment, BorderRadius? borderRadius) dropdownButtonFormField,
+    required TResult Function(Key? key, List<PopupMenuEntry> items, String? initialValue, Callback? onOpened, FormStringField? field, Callback? onCanceled, String? tooltip, double? elevation, Color? shadowColor, Color? surfaceTintColor, EdgeInsets padding, Widget? child, double? splashRadius, Widget? icon, double? iconSize, Offset offset, bool enabled, ShapeBorder? shape, Color? color, bool? enableFeedback, BoxConstraints? constraints, PopupMenuPosition? position, Clip clipBehavior) popupMenuButton,
+    required TResult Function(Key? key, Widget icon, Widget? selectedIcon, String label, String? tooltip) navigationDestination,
+    required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme) actionChip,
+    required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) filterChip,
+    required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) inputChip,
   }) {
     return tab(key, this.text, this.icon, iconMargin, height, child);
   }
@@ -17570,6 +18794,14 @@ class _$Tab implements Tab {
     TResult? Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration)? defaultTabController,
     TResult? Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child)? tab,
     TResult? Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior)? tabBarView,
+    TResult? Function(Key? key, Axis scrollDirection, bool reverse, bool? primary, ScrollPhysics? physics, bool shrinkWrap, Key? center, double anchor, double? cacheExtent, List<Sliver> slivers, int? semanticChildCount, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior, String? restorationId, Clip clipBehavior)? customScrollView,
+    TResult? Function(Key? key, bool? value, bool tristate, FormBoolField? field, MouseCursor? mouseCursor, Color? activeColor, MaterialStateProperty? fillColor, Color? checkColor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, MaterialTapTargetSize? materialTapTargetSize, VisualDensity? visualDensity, bool autofocus, ShapeBorder? shape, BorderSide? side, bool isError)? checkbox,
+    TResult? Function(Key? key, FormStringField? field, List<DropdownMenuItem> items, String? value, Widget? hint, Widget? disabledHint, Callback? onTap, int elevation, TextStyle? style, Widget? icon, Color? iconDisabledColor, Color? iconEnabledColor, double iconSize, bool isDense, bool isExpanded, double? itemHeight, Color? focusColor, bool autofocus, Color? dropdownColor, InputDecoration? decoration, Map<String, String>? validatorMessages, AutovalidateMode? autovalidateMode, double? menuMaxHeight, bool? enableFeedback, Alignment alignment, BorderRadius? borderRadius)? dropdownButtonFormField,
+    TResult? Function(Key? key, List<PopupMenuEntry> items, String? initialValue, Callback? onOpened, FormStringField? field, Callback? onCanceled, String? tooltip, double? elevation, Color? shadowColor, Color? surfaceTintColor, EdgeInsets padding, Widget? child, double? splashRadius, Widget? icon, double? iconSize, Offset offset, bool enabled, ShapeBorder? shape, Color? color, bool? enableFeedback, BoxConstraints? constraints, PopupMenuPosition? position, Clip clipBehavior)? popupMenuButton,
+    TResult? Function(Key? key, Widget icon, Widget? selectedIcon, String label, String? tooltip)? navigationDestination,
+    TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
+    TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
+    TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
   }) {
     return tab?.call(key, this.text, this.icon, iconMargin, height, child);
   }
@@ -17670,6 +18902,14 @@ class _$Tab implements Tab {
     TResult Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration)? defaultTabController,
     TResult Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child)? tab,
     TResult Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior)? tabBarView,
+    TResult Function(Key? key, Axis scrollDirection, bool reverse, bool? primary, ScrollPhysics? physics, bool shrinkWrap, Key? center, double anchor, double? cacheExtent, List<Sliver> slivers, int? semanticChildCount, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior, String? restorationId, Clip clipBehavior)? customScrollView,
+    TResult Function(Key? key, bool? value, bool tristate, FormBoolField? field, MouseCursor? mouseCursor, Color? activeColor, MaterialStateProperty? fillColor, Color? checkColor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, MaterialTapTargetSize? materialTapTargetSize, VisualDensity? visualDensity, bool autofocus, ShapeBorder? shape, BorderSide? side, bool isError)? checkbox,
+    TResult Function(Key? key, FormStringField? field, List<DropdownMenuItem> items, String? value, Widget? hint, Widget? disabledHint, Callback? onTap, int elevation, TextStyle? style, Widget? icon, Color? iconDisabledColor, Color? iconEnabledColor, double iconSize, bool isDense, bool isExpanded, double? itemHeight, Color? focusColor, bool autofocus, Color? dropdownColor, InputDecoration? decoration, Map<String, String>? validatorMessages, AutovalidateMode? autovalidateMode, double? menuMaxHeight, bool? enableFeedback, Alignment alignment, BorderRadius? borderRadius)? dropdownButtonFormField,
+    TResult Function(Key? key, List<PopupMenuEntry> items, String? initialValue, Callback? onOpened, FormStringField? field, Callback? onCanceled, String? tooltip, double? elevation, Color? shadowColor, Color? surfaceTintColor, EdgeInsets padding, Widget? child, double? splashRadius, Widget? icon, double? iconSize, Offset offset, bool enabled, ShapeBorder? shape, Color? color, bool? enableFeedback, BoxConstraints? constraints, PopupMenuPosition? position, Clip clipBehavior)? popupMenuButton,
+    TResult Function(Key? key, Widget icon, Widget? selectedIcon, String label, String? tooltip)? navigationDestination,
+    TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
+    TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
+    TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
     required TResult orElse(),
   }) {
     if (tab != null) {
@@ -17709,6 +18949,16 @@ class _$Tab implements Tab {
     required TResult Function(DefaultTabController value) defaultTabController,
     required TResult Function(Tab value) tab,
     required TResult Function(TabBarView value) tabBarView,
+    required TResult Function(CustomScrollView value) customScrollView,
+    required TResult Function(Checkbox value) checkbox,
+    required TResult Function(DropdownButtonFormField value)
+        dropdownButtonFormField,
+    required TResult Function(PopupMenuButton value) popupMenuButton,
+    required TResult Function(NavigationDestination value)
+        navigationDestination,
+    required TResult Function(ActionChip value) actionChip,
+    required TResult Function(FilterChip value) filterChip,
+    required TResult Function(InputChip value) inputChip,
   }) {
     return tab(this);
   }
@@ -17743,6 +18993,14 @@ class _$Tab implements Tab {
     TResult? Function(DefaultTabController value)? defaultTabController,
     TResult? Function(Tab value)? tab,
     TResult? Function(TabBarView value)? tabBarView,
+    TResult? Function(CustomScrollView value)? customScrollView,
+    TResult? Function(Checkbox value)? checkbox,
+    TResult? Function(DropdownButtonFormField value)? dropdownButtonFormField,
+    TResult? Function(PopupMenuButton value)? popupMenuButton,
+    TResult? Function(NavigationDestination value)? navigationDestination,
+    TResult? Function(ActionChip value)? actionChip,
+    TResult? Function(FilterChip value)? filterChip,
+    TResult? Function(InputChip value)? inputChip,
   }) {
     return tab?.call(this);
   }
@@ -17777,6 +19035,14 @@ class _$Tab implements Tab {
     TResult Function(DefaultTabController value)? defaultTabController,
     TResult Function(Tab value)? tab,
     TResult Function(TabBarView value)? tabBarView,
+    TResult Function(CustomScrollView value)? customScrollView,
+    TResult Function(Checkbox value)? checkbox,
+    TResult Function(DropdownButtonFormField value)? dropdownButtonFormField,
+    TResult Function(PopupMenuButton value)? popupMenuButton,
+    TResult Function(NavigationDestination value)? navigationDestination,
+    TResult Function(ActionChip value)? actionChip,
+    TResult Function(FilterChip value)? filterChip,
+    TResult Function(InputChip value)? inputChip,
     required TResult orElse(),
   }) {
     if (tab != null) {
@@ -18071,6 +19337,14 @@ class _$TabBarView implements TabBarView {
     required TResult Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration) defaultTabController,
     required TResult Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child) tab,
     required TResult Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior) tabBarView,
+    required TResult Function(Key? key, Axis scrollDirection, bool reverse, bool? primary, ScrollPhysics? physics, bool shrinkWrap, Key? center, double anchor, double? cacheExtent, List<Sliver> slivers, int? semanticChildCount, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior, String? restorationId, Clip clipBehavior) customScrollView,
+    required TResult Function(Key? key, bool? value, bool tristate, FormBoolField? field, MouseCursor? mouseCursor, Color? activeColor, MaterialStateProperty? fillColor, Color? checkColor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, MaterialTapTargetSize? materialTapTargetSize, VisualDensity? visualDensity, bool autofocus, ShapeBorder? shape, BorderSide? side, bool isError) checkbox,
+    required TResult Function(Key? key, FormStringField? field, List<DropdownMenuItem> items, String? value, Widget? hint, Widget? disabledHint, Callback? onTap, int elevation, TextStyle? style, Widget? icon, Color? iconDisabledColor, Color? iconEnabledColor, double iconSize, bool isDense, bool isExpanded, double? itemHeight, Color? focusColor, bool autofocus, Color? dropdownColor, InputDecoration? decoration, Map<String, String>? validatorMessages, AutovalidateMode? autovalidateMode, double? menuMaxHeight, bool? enableFeedback, Alignment alignment, BorderRadius? borderRadius) dropdownButtonFormField,
+    required TResult Function(Key? key, List<PopupMenuEntry> items, String? initialValue, Callback? onOpened, FormStringField? field, Callback? onCanceled, String? tooltip, double? elevation, Color? shadowColor, Color? surfaceTintColor, EdgeInsets padding, Widget? child, double? splashRadius, Widget? icon, double? iconSize, Offset offset, bool enabled, ShapeBorder? shape, Color? color, bool? enableFeedback, BoxConstraints? constraints, PopupMenuPosition? position, Clip clipBehavior) popupMenuButton,
+    required TResult Function(Key? key, Widget icon, Widget? selectedIcon, String label, String? tooltip) navigationDestination,
+    required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme) actionChip,
+    required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) filterChip,
+    required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) inputChip,
   }) {
     return tabBarView(key, children, physics, dragStartBehavior,
         viewportFraction, clipBehavior);
@@ -18172,6 +19446,14 @@ class _$TabBarView implements TabBarView {
     TResult? Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration)? defaultTabController,
     TResult? Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child)? tab,
     TResult? Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior)? tabBarView,
+    TResult? Function(Key? key, Axis scrollDirection, bool reverse, bool? primary, ScrollPhysics? physics, bool shrinkWrap, Key? center, double anchor, double? cacheExtent, List<Sliver> slivers, int? semanticChildCount, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior, String? restorationId, Clip clipBehavior)? customScrollView,
+    TResult? Function(Key? key, bool? value, bool tristate, FormBoolField? field, MouseCursor? mouseCursor, Color? activeColor, MaterialStateProperty? fillColor, Color? checkColor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, MaterialTapTargetSize? materialTapTargetSize, VisualDensity? visualDensity, bool autofocus, ShapeBorder? shape, BorderSide? side, bool isError)? checkbox,
+    TResult? Function(Key? key, FormStringField? field, List<DropdownMenuItem> items, String? value, Widget? hint, Widget? disabledHint, Callback? onTap, int elevation, TextStyle? style, Widget? icon, Color? iconDisabledColor, Color? iconEnabledColor, double iconSize, bool isDense, bool isExpanded, double? itemHeight, Color? focusColor, bool autofocus, Color? dropdownColor, InputDecoration? decoration, Map<String, String>? validatorMessages, AutovalidateMode? autovalidateMode, double? menuMaxHeight, bool? enableFeedback, Alignment alignment, BorderRadius? borderRadius)? dropdownButtonFormField,
+    TResult? Function(Key? key, List<PopupMenuEntry> items, String? initialValue, Callback? onOpened, FormStringField? field, Callback? onCanceled, String? tooltip, double? elevation, Color? shadowColor, Color? surfaceTintColor, EdgeInsets padding, Widget? child, double? splashRadius, Widget? icon, double? iconSize, Offset offset, bool enabled, ShapeBorder? shape, Color? color, bool? enableFeedback, BoxConstraints? constraints, PopupMenuPosition? position, Clip clipBehavior)? popupMenuButton,
+    TResult? Function(Key? key, Widget icon, Widget? selectedIcon, String label, String? tooltip)? navigationDestination,
+    TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
+    TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
+    TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
   }) {
     return tabBarView?.call(key, children, physics, dragStartBehavior,
         viewportFraction, clipBehavior);
@@ -18273,6 +19555,14 @@ class _$TabBarView implements TabBarView {
     TResult Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration)? defaultTabController,
     TResult Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child)? tab,
     TResult Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior)? tabBarView,
+    TResult Function(Key? key, Axis scrollDirection, bool reverse, bool? primary, ScrollPhysics? physics, bool shrinkWrap, Key? center, double anchor, double? cacheExtent, List<Sliver> slivers, int? semanticChildCount, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior, String? restorationId, Clip clipBehavior)? customScrollView,
+    TResult Function(Key? key, bool? value, bool tristate, FormBoolField? field, MouseCursor? mouseCursor, Color? activeColor, MaterialStateProperty? fillColor, Color? checkColor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, MaterialTapTargetSize? materialTapTargetSize, VisualDensity? visualDensity, bool autofocus, ShapeBorder? shape, BorderSide? side, bool isError)? checkbox,
+    TResult Function(Key? key, FormStringField? field, List<DropdownMenuItem> items, String? value, Widget? hint, Widget? disabledHint, Callback? onTap, int elevation, TextStyle? style, Widget? icon, Color? iconDisabledColor, Color? iconEnabledColor, double iconSize, bool isDense, bool isExpanded, double? itemHeight, Color? focusColor, bool autofocus, Color? dropdownColor, InputDecoration? decoration, Map<String, String>? validatorMessages, AutovalidateMode? autovalidateMode, double? menuMaxHeight, bool? enableFeedback, Alignment alignment, BorderRadius? borderRadius)? dropdownButtonFormField,
+    TResult Function(Key? key, List<PopupMenuEntry> items, String? initialValue, Callback? onOpened, FormStringField? field, Callback? onCanceled, String? tooltip, double? elevation, Color? shadowColor, Color? surfaceTintColor, EdgeInsets padding, Widget? child, double? splashRadius, Widget? icon, double? iconSize, Offset offset, bool enabled, ShapeBorder? shape, Color? color, bool? enableFeedback, BoxConstraints? constraints, PopupMenuPosition? position, Clip clipBehavior)? popupMenuButton,
+    TResult Function(Key? key, Widget icon, Widget? selectedIcon, String label, String? tooltip)? navigationDestination,
+    TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
+    TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
+    TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
     required TResult orElse(),
   }) {
     if (tabBarView != null) {
@@ -18313,6 +19603,16 @@ class _$TabBarView implements TabBarView {
     required TResult Function(DefaultTabController value) defaultTabController,
     required TResult Function(Tab value) tab,
     required TResult Function(TabBarView value) tabBarView,
+    required TResult Function(CustomScrollView value) customScrollView,
+    required TResult Function(Checkbox value) checkbox,
+    required TResult Function(DropdownButtonFormField value)
+        dropdownButtonFormField,
+    required TResult Function(PopupMenuButton value) popupMenuButton,
+    required TResult Function(NavigationDestination value)
+        navigationDestination,
+    required TResult Function(ActionChip value) actionChip,
+    required TResult Function(FilterChip value) filterChip,
+    required TResult Function(InputChip value) inputChip,
   }) {
     return tabBarView(this);
   }
@@ -18347,6 +19647,14 @@ class _$TabBarView implements TabBarView {
     TResult? Function(DefaultTabController value)? defaultTabController,
     TResult? Function(Tab value)? tab,
     TResult? Function(TabBarView value)? tabBarView,
+    TResult? Function(CustomScrollView value)? customScrollView,
+    TResult? Function(Checkbox value)? checkbox,
+    TResult? Function(DropdownButtonFormField value)? dropdownButtonFormField,
+    TResult? Function(PopupMenuButton value)? popupMenuButton,
+    TResult? Function(NavigationDestination value)? navigationDestination,
+    TResult? Function(ActionChip value)? actionChip,
+    TResult? Function(FilterChip value)? filterChip,
+    TResult? Function(InputChip value)? inputChip,
   }) {
     return tabBarView?.call(this);
   }
@@ -18381,6 +19689,14 @@ class _$TabBarView implements TabBarView {
     TResult Function(DefaultTabController value)? defaultTabController,
     TResult Function(Tab value)? tab,
     TResult Function(TabBarView value)? tabBarView,
+    TResult Function(CustomScrollView value)? customScrollView,
+    TResult Function(Checkbox value)? checkbox,
+    TResult Function(DropdownButtonFormField value)? dropdownButtonFormField,
+    TResult Function(PopupMenuButton value)? popupMenuButton,
+    TResult Function(NavigationDestination value)? navigationDestination,
+    TResult Function(ActionChip value)? actionChip,
+    TResult Function(FilterChip value)? filterChip,
+    TResult Function(InputChip value)? inputChip,
     required TResult orElse(),
   }) {
     if (tabBarView != null) {
@@ -18419,5 +19735,8362 @@ abstract class TabBarView implements Widget {
   @override
   @JsonKey(ignore: true)
   _$$TabBarViewCopyWith<_$TabBarView> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$CustomScrollViewCopyWith<$Res>
+    implements $WidgetCopyWith<$Res> {
+  factory _$$CustomScrollViewCopyWith(
+          _$CustomScrollView value, $Res Function(_$CustomScrollView) then) =
+      __$$CustomScrollViewCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {Key? key,
+      Axis scrollDirection,
+      bool reverse,
+      bool? primary,
+      ScrollPhysics? physics,
+      bool shrinkWrap,
+      Key? center,
+      double anchor,
+      double? cacheExtent,
+      List<Sliver> slivers,
+      int? semanticChildCount,
+      ScrollViewKeyboardDismissBehavior keyboardDismissBehavior,
+      String? restorationId,
+      Clip clipBehavior});
+
+  @override
+  $KeyCopyWith<$Res>? get key;
+  $ScrollPhysicsCopyWith<$Res>? get physics;
+  $KeyCopyWith<$Res>? get center;
+}
+
+/// @nodoc
+class __$$CustomScrollViewCopyWithImpl<$Res>
+    extends _$WidgetCopyWithImpl<$Res, _$CustomScrollView>
+    implements _$$CustomScrollViewCopyWith<$Res> {
+  __$$CustomScrollViewCopyWithImpl(
+      _$CustomScrollView _value, $Res Function(_$CustomScrollView) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? key = freezed,
+    Object? scrollDirection = null,
+    Object? reverse = null,
+    Object? primary = freezed,
+    Object? physics = freezed,
+    Object? shrinkWrap = null,
+    Object? center = freezed,
+    Object? anchor = null,
+    Object? cacheExtent = freezed,
+    Object? slivers = null,
+    Object? semanticChildCount = freezed,
+    Object? keyboardDismissBehavior = null,
+    Object? restorationId = freezed,
+    Object? clipBehavior = null,
+  }) {
+    return _then(_$CustomScrollView(
+      key: freezed == key
+          ? _value.key
+          : key // ignore: cast_nullable_to_non_nullable
+              as Key?,
+      scrollDirection: null == scrollDirection
+          ? _value.scrollDirection
+          : scrollDirection // ignore: cast_nullable_to_non_nullable
+              as Axis,
+      reverse: null == reverse
+          ? _value.reverse
+          : reverse // ignore: cast_nullable_to_non_nullable
+              as bool,
+      primary: freezed == primary
+          ? _value.primary
+          : primary // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      physics: freezed == physics
+          ? _value.physics
+          : physics // ignore: cast_nullable_to_non_nullable
+              as ScrollPhysics?,
+      shrinkWrap: null == shrinkWrap
+          ? _value.shrinkWrap
+          : shrinkWrap // ignore: cast_nullable_to_non_nullable
+              as bool,
+      center: freezed == center
+          ? _value.center
+          : center // ignore: cast_nullable_to_non_nullable
+              as Key?,
+      anchor: null == anchor
+          ? _value.anchor
+          : anchor // ignore: cast_nullable_to_non_nullable
+              as double,
+      cacheExtent: freezed == cacheExtent
+          ? _value.cacheExtent
+          : cacheExtent // ignore: cast_nullable_to_non_nullable
+              as double?,
+      slivers: null == slivers
+          ? _value._slivers
+          : slivers // ignore: cast_nullable_to_non_nullable
+              as List<Sliver>,
+      semanticChildCount: freezed == semanticChildCount
+          ? _value.semanticChildCount
+          : semanticChildCount // ignore: cast_nullable_to_non_nullable
+              as int?,
+      keyboardDismissBehavior: null == keyboardDismissBehavior
+          ? _value.keyboardDismissBehavior
+          : keyboardDismissBehavior // ignore: cast_nullable_to_non_nullable
+              as ScrollViewKeyboardDismissBehavior,
+      restorationId: freezed == restorationId
+          ? _value.restorationId
+          : restorationId // ignore: cast_nullable_to_non_nullable
+              as String?,
+      clipBehavior: null == clipBehavior
+          ? _value.clipBehavior
+          : clipBehavior // ignore: cast_nullable_to_non_nullable
+              as Clip,
+    ));
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ScrollPhysicsCopyWith<$Res>? get physics {
+    if (_value.physics == null) {
+      return null;
+    }
+
+    return $ScrollPhysicsCopyWith<$Res>(_value.physics!, (value) {
+      return _then(_value.copyWith(physics: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $KeyCopyWith<$Res>? get center {
+    if (_value.center == null) {
+      return null;
+    }
+
+    return $KeyCopyWith<$Res>(_value.center!, (value) {
+      return _then(_value.copyWith(center: value));
+    });
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$CustomScrollView implements CustomScrollView {
+  const _$CustomScrollView(
+      {this.key,
+      this.scrollDirection = Axis.vertical,
+      this.reverse = false,
+      this.primary,
+      this.physics,
+      this.shrinkWrap = false,
+      this.center,
+      this.anchor = 0.0,
+      this.cacheExtent,
+      final List<Sliver> slivers = const [],
+      this.semanticChildCount,
+      this.keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual,
+      this.restorationId,
+      this.clipBehavior = Clip.hardEdge,
+      final String? $type})
+      : _slivers = slivers,
+        $type = $type ?? 'customScrollView';
+
+  factory _$CustomScrollView.fromJson(Map<String, dynamic> json) =>
+      _$$CustomScrollViewFromJson(json);
+
+  @override
+  final Key? key;
+  @override
+  @JsonKey()
+  final Axis scrollDirection;
+  @override
+  @JsonKey()
+  final bool reverse;
+  @override
+  final bool? primary;
+  @override
+  final ScrollPhysics? physics;
+  @override
+  @JsonKey()
+  final bool shrinkWrap;
+  @override
+  final Key? center;
+  @override
+  @JsonKey()
+  final double anchor;
+  @override
+  final double? cacheExtent;
+  final List<Sliver> _slivers;
+  @override
+  @JsonKey()
+  List<Sliver> get slivers {
+    if (_slivers is EqualUnmodifiableListView) return _slivers;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_slivers);
+  }
+
+  @override
+  final int? semanticChildCount;
+  @override
+  @JsonKey()
+  final ScrollViewKeyboardDismissBehavior keyboardDismissBehavior;
+  @override
+  final String? restorationId;
+  @override
+  @JsonKey()
+  final Clip clipBehavior;
+
+  @JsonKey(name: 'runtimeType')
+  final String $type;
+
+  @override
+  String toString() {
+    return 'Widget.customScrollView(key: $key, scrollDirection: $scrollDirection, reverse: $reverse, primary: $primary, physics: $physics, shrinkWrap: $shrinkWrap, center: $center, anchor: $anchor, cacheExtent: $cacheExtent, slivers: $slivers, semanticChildCount: $semanticChildCount, keyboardDismissBehavior: $keyboardDismissBehavior, restorationId: $restorationId, clipBehavior: $clipBehavior)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$CustomScrollView &&
+            (identical(other.key, key) || other.key == key) &&
+            (identical(other.scrollDirection, scrollDirection) ||
+                other.scrollDirection == scrollDirection) &&
+            (identical(other.reverse, reverse) || other.reverse == reverse) &&
+            (identical(other.primary, primary) || other.primary == primary) &&
+            (identical(other.physics, physics) || other.physics == physics) &&
+            (identical(other.shrinkWrap, shrinkWrap) ||
+                other.shrinkWrap == shrinkWrap) &&
+            (identical(other.center, center) || other.center == center) &&
+            (identical(other.anchor, anchor) || other.anchor == anchor) &&
+            (identical(other.cacheExtent, cacheExtent) ||
+                other.cacheExtent == cacheExtent) &&
+            const DeepCollectionEquality().equals(other._slivers, _slivers) &&
+            (identical(other.semanticChildCount, semanticChildCount) ||
+                other.semanticChildCount == semanticChildCount) &&
+            (identical(
+                    other.keyboardDismissBehavior, keyboardDismissBehavior) ||
+                other.keyboardDismissBehavior == keyboardDismissBehavior) &&
+            (identical(other.restorationId, restorationId) ||
+                other.restorationId == restorationId) &&
+            (identical(other.clipBehavior, clipBehavior) ||
+                other.clipBehavior == clipBehavior));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      key,
+      scrollDirection,
+      reverse,
+      primary,
+      physics,
+      shrinkWrap,
+      center,
+      anchor,
+      cacheExtent,
+      const DeepCollectionEquality().hash(_slivers),
+      semanticChildCount,
+      keyboardDismissBehavior,
+      restorationId,
+      clipBehavior);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$CustomScrollViewCopyWith<_$CustomScrollView> get copyWith =>
+      __$$CustomScrollViewCopyWithImpl<_$CustomScrollView>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(
+            Key? key,
+            Color? color,
+            Color? shadowColor,
+            Color? surfaceTintColor,
+            double? elevation,
+            ShapeBorder? shape,
+            bool borderOnForeground,
+            EdgeInsets? margin,
+            Clip? clipBehavior,
+            Widget? child,
+            bool semanticContainer)
+        card,
+    required TResult Function(
+            Key? key,
+            Callback? onPressed,
+            Callback? onLongPress,
+            bool autofocus,
+            Clip clipBehavior,
+            Widget child,
+            ButtonStyle? style)
+        elevatedButton,
+    required TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)
+        filledButton,
+    required TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)
+        filledTonalButton,
+    required TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)
+        outlinedButton,
+    required TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)
+        textButton,
+    required TResult Function(
+            Key? key,
+            double? iconSize,
+            VisualDensity? visualDensity,
+            EdgeInsets? padding,
+            Alignment? alignment,
+            double? splashRadius,
+            Color? color,
+            Color? focusColor,
+            Color? hoverColor,
+            Color? highlightColor,
+            Color? splashColor,
+            Color? disabledColor,
+            Callback onPressed,
+            MouseCursor? mouseCursor,
+            bool autofocus,
+            String? tooltip,
+            bool? enableFeedback,
+            BoxConstraints? constraints,
+            bool? isSelected,
+            Widget? selectedIcon,
+            Widget icon)
+        iconButton,
+    required TResult Function(
+            Key? key,
+            PreferredSizeWidget? appBar,
+            Widget? body,
+            Widget? floatingActionButton,
+            FloatingActionButtonLocation? floatingActionButtonLocation,
+            List<Widget>? persistentFooterButtons,
+            Alignment persistentFooterAlignment,
+            Widget? drawer,
+            Widget? endDrawer,
+            Widget? bottomNavigationBar,
+            Widget? bottomSheet,
+            Color? backgroundColor,
+            bool? resizeToAvoidBottomInset,
+            bool primary,
+            bool extendBody,
+            bool extendBodyBehindAppBar,
+            Color? drawerScrimColor,
+            double? drawerEdgeDragWidth,
+            bool drawerEnableOpenDragGesture,
+            bool endDrawerEnableOpenDragGesture,
+            String? restorationId)
+        scaffold,
+    required TResult Function(Key? key, Widget? child, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, bool mini, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback) floatingActionButton,
+    required TResult Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback) floatingActionButtonExtended,
+    required TResult Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor) text,
+    required TResult Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior) container,
+    required TResult Function(Key? key, double? width, double? height, Widget? child) sizedBox,
+    required TResult Function(Key? key, double? widthFactor, double? heightFactor, Widget child) center,
+    required TResult Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection) icon,
+    required TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children) column,
+    required TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children) row,
+    required TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue) circularProgressIndicator,
+    required TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue) linearProgressIndicator,
+    required TResult Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color) divider,
+    required TResult Function(Key? key, Color? backgroundColor, bool extended, Widget? leading, Widget? trailing, List<NavigationRailDestination> destinations, int? selectedIndex, IntSelectionCallback? onDestinationSelected, double? elevation, double? groupAlignment, NavigationRailLabelType? labelType, TextStyle? unselectedLabelTextStyle, TextStyle? selectedLabelTextStyle, IconThemeData? unselectedIconTheme, IconThemeData? selectedIconTheme, double? minWidth, double? minExtendedWidth, bool? useIndicator, Color? indicatorColor, ShapeBorder? indicatorShape) navigationRail,
+    required TResult Function(Key? key, Duration? animationDuration, int selectedIndex, List<Widget> destinations, IntSelectionCallback? onDestinationSelected, Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, Color? indicatorColor, ShapeBorder? indicatorShape, double? height, NavigationDestinationLabelBehavior? labelBehavior) navigationBar,
+    required TResult Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration) defaultTabController,
+    required TResult Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child) tab,
+    required TResult Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior) tabBarView,
+    required TResult Function(Key? key, Axis scrollDirection, bool reverse, bool? primary, ScrollPhysics? physics, bool shrinkWrap, Key? center, double anchor, double? cacheExtent, List<Sliver> slivers, int? semanticChildCount, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior, String? restorationId, Clip clipBehavior) customScrollView,
+    required TResult Function(Key? key, bool? value, bool tristate, FormBoolField? field, MouseCursor? mouseCursor, Color? activeColor, MaterialStateProperty? fillColor, Color? checkColor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, MaterialTapTargetSize? materialTapTargetSize, VisualDensity? visualDensity, bool autofocus, ShapeBorder? shape, BorderSide? side, bool isError) checkbox,
+    required TResult Function(Key? key, FormStringField? field, List<DropdownMenuItem> items, String? value, Widget? hint, Widget? disabledHint, Callback? onTap, int elevation, TextStyle? style, Widget? icon, Color? iconDisabledColor, Color? iconEnabledColor, double iconSize, bool isDense, bool isExpanded, double? itemHeight, Color? focusColor, bool autofocus, Color? dropdownColor, InputDecoration? decoration, Map<String, String>? validatorMessages, AutovalidateMode? autovalidateMode, double? menuMaxHeight, bool? enableFeedback, Alignment alignment, BorderRadius? borderRadius) dropdownButtonFormField,
+    required TResult Function(Key? key, List<PopupMenuEntry> items, String? initialValue, Callback? onOpened, FormStringField? field, Callback? onCanceled, String? tooltip, double? elevation, Color? shadowColor, Color? surfaceTintColor, EdgeInsets padding, Widget? child, double? splashRadius, Widget? icon, double? iconSize, Offset offset, bool enabled, ShapeBorder? shape, Color? color, bool? enableFeedback, BoxConstraints? constraints, PopupMenuPosition? position, Clip clipBehavior) popupMenuButton,
+    required TResult Function(Key? key, Widget icon, Widget? selectedIcon, String label, String? tooltip) navigationDestination,
+    required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme) actionChip,
+    required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) filterChip,
+    required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) inputChip,
+  }) {
+    return customScrollView(
+        key,
+        scrollDirection,
+        reverse,
+        primary,
+        physics,
+        shrinkWrap,
+        this.center,
+        anchor,
+        cacheExtent,
+        slivers,
+        semanticChildCount,
+        keyboardDismissBehavior,
+        restorationId,
+        clipBehavior);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(
+            Key? key,
+            Color? color,
+            Color? shadowColor,
+            Color? surfaceTintColor,
+            double? elevation,
+            ShapeBorder? shape,
+            bool borderOnForeground,
+            EdgeInsets? margin,
+            Clip? clipBehavior,
+            Widget? child,
+            bool semanticContainer)?
+        card,
+    TResult? Function(
+            Key? key,
+            Callback? onPressed,
+            Callback? onLongPress,
+            bool autofocus,
+            Clip clipBehavior,
+            Widget child,
+            ButtonStyle? style)?
+        elevatedButton,
+    TResult? Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        filledButton,
+    TResult? Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        filledTonalButton,
+    TResult? Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        outlinedButton,
+    TResult? Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        textButton,
+    TResult? Function(
+            Key? key,
+            double? iconSize,
+            VisualDensity? visualDensity,
+            EdgeInsets? padding,
+            Alignment? alignment,
+            double? splashRadius,
+            Color? color,
+            Color? focusColor,
+            Color? hoverColor,
+            Color? highlightColor,
+            Color? splashColor,
+            Color? disabledColor,
+            Callback onPressed,
+            MouseCursor? mouseCursor,
+            bool autofocus,
+            String? tooltip,
+            bool? enableFeedback,
+            BoxConstraints? constraints,
+            bool? isSelected,
+            Widget? selectedIcon,
+            Widget icon)?
+        iconButton,
+    TResult? Function(
+            Key? key,
+            PreferredSizeWidget? appBar,
+            Widget? body,
+            Widget? floatingActionButton,
+            FloatingActionButtonLocation? floatingActionButtonLocation,
+            List<Widget>? persistentFooterButtons,
+            Alignment persistentFooterAlignment,
+            Widget? drawer,
+            Widget? endDrawer,
+            Widget? bottomNavigationBar,
+            Widget? bottomSheet,
+            Color? backgroundColor,
+            bool? resizeToAvoidBottomInset,
+            bool primary,
+            bool extendBody,
+            bool extendBodyBehindAppBar,
+            Color? drawerScrimColor,
+            double? drawerEdgeDragWidth,
+            bool drawerEnableOpenDragGesture,
+            bool endDrawerEnableOpenDragGesture,
+            String? restorationId)?
+        scaffold,
+    TResult? Function(Key? key, Widget? child, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, bool mini, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButton,
+    TResult? Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButtonExtended,
+    TResult? Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor)? text,
+    TResult? Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior)? container,
+    TResult? Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
+    TResult? Function(Key? key, double? widthFactor, double? heightFactor, Widget child)? center,
+    TResult? Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection)? icon,
+    TResult? Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? column,
+    TResult? Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? row,
+    TResult? Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue)? circularProgressIndicator,
+    TResult? Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue)? linearProgressIndicator,
+    TResult? Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color)? divider,
+    TResult? Function(Key? key, Color? backgroundColor, bool extended, Widget? leading, Widget? trailing, List<NavigationRailDestination> destinations, int? selectedIndex, IntSelectionCallback? onDestinationSelected, double? elevation, double? groupAlignment, NavigationRailLabelType? labelType, TextStyle? unselectedLabelTextStyle, TextStyle? selectedLabelTextStyle, IconThemeData? unselectedIconTheme, IconThemeData? selectedIconTheme, double? minWidth, double? minExtendedWidth, bool? useIndicator, Color? indicatorColor, ShapeBorder? indicatorShape)? navigationRail,
+    TResult? Function(Key? key, Duration? animationDuration, int selectedIndex, List<Widget> destinations, IntSelectionCallback? onDestinationSelected, Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, Color? indicatorColor, ShapeBorder? indicatorShape, double? height, NavigationDestinationLabelBehavior? labelBehavior)? navigationBar,
+    TResult? Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration)? defaultTabController,
+    TResult? Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child)? tab,
+    TResult? Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior)? tabBarView,
+    TResult? Function(Key? key, Axis scrollDirection, bool reverse, bool? primary, ScrollPhysics? physics, bool shrinkWrap, Key? center, double anchor, double? cacheExtent, List<Sliver> slivers, int? semanticChildCount, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior, String? restorationId, Clip clipBehavior)? customScrollView,
+    TResult? Function(Key? key, bool? value, bool tristate, FormBoolField? field, MouseCursor? mouseCursor, Color? activeColor, MaterialStateProperty? fillColor, Color? checkColor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, MaterialTapTargetSize? materialTapTargetSize, VisualDensity? visualDensity, bool autofocus, ShapeBorder? shape, BorderSide? side, bool isError)? checkbox,
+    TResult? Function(Key? key, FormStringField? field, List<DropdownMenuItem> items, String? value, Widget? hint, Widget? disabledHint, Callback? onTap, int elevation, TextStyle? style, Widget? icon, Color? iconDisabledColor, Color? iconEnabledColor, double iconSize, bool isDense, bool isExpanded, double? itemHeight, Color? focusColor, bool autofocus, Color? dropdownColor, InputDecoration? decoration, Map<String, String>? validatorMessages, AutovalidateMode? autovalidateMode, double? menuMaxHeight, bool? enableFeedback, Alignment alignment, BorderRadius? borderRadius)? dropdownButtonFormField,
+    TResult? Function(Key? key, List<PopupMenuEntry> items, String? initialValue, Callback? onOpened, FormStringField? field, Callback? onCanceled, String? tooltip, double? elevation, Color? shadowColor, Color? surfaceTintColor, EdgeInsets padding, Widget? child, double? splashRadius, Widget? icon, double? iconSize, Offset offset, bool enabled, ShapeBorder? shape, Color? color, bool? enableFeedback, BoxConstraints? constraints, PopupMenuPosition? position, Clip clipBehavior)? popupMenuButton,
+    TResult? Function(Key? key, Widget icon, Widget? selectedIcon, String label, String? tooltip)? navigationDestination,
+    TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
+    TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
+    TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
+  }) {
+    return customScrollView?.call(
+        key,
+        scrollDirection,
+        reverse,
+        primary,
+        physics,
+        shrinkWrap,
+        this.center,
+        anchor,
+        cacheExtent,
+        slivers,
+        semanticChildCount,
+        keyboardDismissBehavior,
+        restorationId,
+        clipBehavior);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(
+            Key? key,
+            Color? color,
+            Color? shadowColor,
+            Color? surfaceTintColor,
+            double? elevation,
+            ShapeBorder? shape,
+            bool borderOnForeground,
+            EdgeInsets? margin,
+            Clip? clipBehavior,
+            Widget? child,
+            bool semanticContainer)?
+        card,
+    TResult Function(
+            Key? key,
+            Callback? onPressed,
+            Callback? onLongPress,
+            bool autofocus,
+            Clip clipBehavior,
+            Widget child,
+            ButtonStyle? style)?
+        elevatedButton,
+    TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        filledButton,
+    TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        filledTonalButton,
+    TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        outlinedButton,
+    TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        textButton,
+    TResult Function(
+            Key? key,
+            double? iconSize,
+            VisualDensity? visualDensity,
+            EdgeInsets? padding,
+            Alignment? alignment,
+            double? splashRadius,
+            Color? color,
+            Color? focusColor,
+            Color? hoverColor,
+            Color? highlightColor,
+            Color? splashColor,
+            Color? disabledColor,
+            Callback onPressed,
+            MouseCursor? mouseCursor,
+            bool autofocus,
+            String? tooltip,
+            bool? enableFeedback,
+            BoxConstraints? constraints,
+            bool? isSelected,
+            Widget? selectedIcon,
+            Widget icon)?
+        iconButton,
+    TResult Function(
+            Key? key,
+            PreferredSizeWidget? appBar,
+            Widget? body,
+            Widget? floatingActionButton,
+            FloatingActionButtonLocation? floatingActionButtonLocation,
+            List<Widget>? persistentFooterButtons,
+            Alignment persistentFooterAlignment,
+            Widget? drawer,
+            Widget? endDrawer,
+            Widget? bottomNavigationBar,
+            Widget? bottomSheet,
+            Color? backgroundColor,
+            bool? resizeToAvoidBottomInset,
+            bool primary,
+            bool extendBody,
+            bool extendBodyBehindAppBar,
+            Color? drawerScrimColor,
+            double? drawerEdgeDragWidth,
+            bool drawerEnableOpenDragGesture,
+            bool endDrawerEnableOpenDragGesture,
+            String? restorationId)?
+        scaffold,
+    TResult Function(Key? key, Widget? child, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, bool mini, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButton,
+    TResult Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButtonExtended,
+    TResult Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor)? text,
+    TResult Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior)? container,
+    TResult Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
+    TResult Function(Key? key, double? widthFactor, double? heightFactor, Widget child)? center,
+    TResult Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection)? icon,
+    TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? column,
+    TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? row,
+    TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue)? circularProgressIndicator,
+    TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue)? linearProgressIndicator,
+    TResult Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color)? divider,
+    TResult Function(Key? key, Color? backgroundColor, bool extended, Widget? leading, Widget? trailing, List<NavigationRailDestination> destinations, int? selectedIndex, IntSelectionCallback? onDestinationSelected, double? elevation, double? groupAlignment, NavigationRailLabelType? labelType, TextStyle? unselectedLabelTextStyle, TextStyle? selectedLabelTextStyle, IconThemeData? unselectedIconTheme, IconThemeData? selectedIconTheme, double? minWidth, double? minExtendedWidth, bool? useIndicator, Color? indicatorColor, ShapeBorder? indicatorShape)? navigationRail,
+    TResult Function(Key? key, Duration? animationDuration, int selectedIndex, List<Widget> destinations, IntSelectionCallback? onDestinationSelected, Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, Color? indicatorColor, ShapeBorder? indicatorShape, double? height, NavigationDestinationLabelBehavior? labelBehavior)? navigationBar,
+    TResult Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration)? defaultTabController,
+    TResult Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child)? tab,
+    TResult Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior)? tabBarView,
+    TResult Function(Key? key, Axis scrollDirection, bool reverse, bool? primary, ScrollPhysics? physics, bool shrinkWrap, Key? center, double anchor, double? cacheExtent, List<Sliver> slivers, int? semanticChildCount, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior, String? restorationId, Clip clipBehavior)? customScrollView,
+    TResult Function(Key? key, bool? value, bool tristate, FormBoolField? field, MouseCursor? mouseCursor, Color? activeColor, MaterialStateProperty? fillColor, Color? checkColor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, MaterialTapTargetSize? materialTapTargetSize, VisualDensity? visualDensity, bool autofocus, ShapeBorder? shape, BorderSide? side, bool isError)? checkbox,
+    TResult Function(Key? key, FormStringField? field, List<DropdownMenuItem> items, String? value, Widget? hint, Widget? disabledHint, Callback? onTap, int elevation, TextStyle? style, Widget? icon, Color? iconDisabledColor, Color? iconEnabledColor, double iconSize, bool isDense, bool isExpanded, double? itemHeight, Color? focusColor, bool autofocus, Color? dropdownColor, InputDecoration? decoration, Map<String, String>? validatorMessages, AutovalidateMode? autovalidateMode, double? menuMaxHeight, bool? enableFeedback, Alignment alignment, BorderRadius? borderRadius)? dropdownButtonFormField,
+    TResult Function(Key? key, List<PopupMenuEntry> items, String? initialValue, Callback? onOpened, FormStringField? field, Callback? onCanceled, String? tooltip, double? elevation, Color? shadowColor, Color? surfaceTintColor, EdgeInsets padding, Widget? child, double? splashRadius, Widget? icon, double? iconSize, Offset offset, bool enabled, ShapeBorder? shape, Color? color, bool? enableFeedback, BoxConstraints? constraints, PopupMenuPosition? position, Clip clipBehavior)? popupMenuButton,
+    TResult Function(Key? key, Widget icon, Widget? selectedIcon, String label, String? tooltip)? navigationDestination,
+    TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
+    TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
+    TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
+    required TResult orElse(),
+  }) {
+    if (customScrollView != null) {
+      return customScrollView(
+          key,
+          scrollDirection,
+          reverse,
+          primary,
+          physics,
+          shrinkWrap,
+          this.center,
+          anchor,
+          cacheExtent,
+          slivers,
+          semanticChildCount,
+          keyboardDismissBehavior,
+          restorationId,
+          clipBehavior);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(Card value) card,
+    required TResult Function(ElevatedButton value) elevatedButton,
+    required TResult Function(FilledButton value) filledButton,
+    required TResult Function(FilledTonalButton value) filledTonalButton,
+    required TResult Function(OutlinedButton value) outlinedButton,
+    required TResult Function(TextButton value) textButton,
+    required TResult Function(IconButton value) iconButton,
+    required TResult Function(Scaffold value) scaffold,
+    required TResult Function(FloatingActionButton value) floatingActionButton,
+    required TResult Function(FloatingActionButtonExtended value)
+        floatingActionButtonExtended,
+    required TResult Function(Text value) text,
+    required TResult Function(Container value) container,
+    required TResult Function(SizedBox value) sizedBox,
+    required TResult Function(Center value) center,
+    required TResult Function(Icon value) icon,
+    required TResult Function(Column value) column,
+    required TResult Function(Row value) row,
+    required TResult Function(CircularProgressIndicator value)
+        circularProgressIndicator,
+    required TResult Function(LinearProgressIndicator value)
+        linearProgressIndicator,
+    required TResult Function(Divider value) divider,
+    required TResult Function(NavigationRail value) navigationRail,
+    required TResult Function(NavigationBar value) navigationBar,
+    required TResult Function(DefaultTabController value) defaultTabController,
+    required TResult Function(Tab value) tab,
+    required TResult Function(TabBarView value) tabBarView,
+    required TResult Function(CustomScrollView value) customScrollView,
+    required TResult Function(Checkbox value) checkbox,
+    required TResult Function(DropdownButtonFormField value)
+        dropdownButtonFormField,
+    required TResult Function(PopupMenuButton value) popupMenuButton,
+    required TResult Function(NavigationDestination value)
+        navigationDestination,
+    required TResult Function(ActionChip value) actionChip,
+    required TResult Function(FilterChip value) filterChip,
+    required TResult Function(InputChip value) inputChip,
+  }) {
+    return customScrollView(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(Card value)? card,
+    TResult? Function(ElevatedButton value)? elevatedButton,
+    TResult? Function(FilledButton value)? filledButton,
+    TResult? Function(FilledTonalButton value)? filledTonalButton,
+    TResult? Function(OutlinedButton value)? outlinedButton,
+    TResult? Function(TextButton value)? textButton,
+    TResult? Function(IconButton value)? iconButton,
+    TResult? Function(Scaffold value)? scaffold,
+    TResult? Function(FloatingActionButton value)? floatingActionButton,
+    TResult? Function(FloatingActionButtonExtended value)?
+        floatingActionButtonExtended,
+    TResult? Function(Text value)? text,
+    TResult? Function(Container value)? container,
+    TResult? Function(SizedBox value)? sizedBox,
+    TResult? Function(Center value)? center,
+    TResult? Function(Icon value)? icon,
+    TResult? Function(Column value)? column,
+    TResult? Function(Row value)? row,
+    TResult? Function(CircularProgressIndicator value)?
+        circularProgressIndicator,
+    TResult? Function(LinearProgressIndicator value)? linearProgressIndicator,
+    TResult? Function(Divider value)? divider,
+    TResult? Function(NavigationRail value)? navigationRail,
+    TResult? Function(NavigationBar value)? navigationBar,
+    TResult? Function(DefaultTabController value)? defaultTabController,
+    TResult? Function(Tab value)? tab,
+    TResult? Function(TabBarView value)? tabBarView,
+    TResult? Function(CustomScrollView value)? customScrollView,
+    TResult? Function(Checkbox value)? checkbox,
+    TResult? Function(DropdownButtonFormField value)? dropdownButtonFormField,
+    TResult? Function(PopupMenuButton value)? popupMenuButton,
+    TResult? Function(NavigationDestination value)? navigationDestination,
+    TResult? Function(ActionChip value)? actionChip,
+    TResult? Function(FilterChip value)? filterChip,
+    TResult? Function(InputChip value)? inputChip,
+  }) {
+    return customScrollView?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(Card value)? card,
+    TResult Function(ElevatedButton value)? elevatedButton,
+    TResult Function(FilledButton value)? filledButton,
+    TResult Function(FilledTonalButton value)? filledTonalButton,
+    TResult Function(OutlinedButton value)? outlinedButton,
+    TResult Function(TextButton value)? textButton,
+    TResult Function(IconButton value)? iconButton,
+    TResult Function(Scaffold value)? scaffold,
+    TResult Function(FloatingActionButton value)? floatingActionButton,
+    TResult Function(FloatingActionButtonExtended value)?
+        floatingActionButtonExtended,
+    TResult Function(Text value)? text,
+    TResult Function(Container value)? container,
+    TResult Function(SizedBox value)? sizedBox,
+    TResult Function(Center value)? center,
+    TResult Function(Icon value)? icon,
+    TResult Function(Column value)? column,
+    TResult Function(Row value)? row,
+    TResult Function(CircularProgressIndicator value)?
+        circularProgressIndicator,
+    TResult Function(LinearProgressIndicator value)? linearProgressIndicator,
+    TResult Function(Divider value)? divider,
+    TResult Function(NavigationRail value)? navigationRail,
+    TResult Function(NavigationBar value)? navigationBar,
+    TResult Function(DefaultTabController value)? defaultTabController,
+    TResult Function(Tab value)? tab,
+    TResult Function(TabBarView value)? tabBarView,
+    TResult Function(CustomScrollView value)? customScrollView,
+    TResult Function(Checkbox value)? checkbox,
+    TResult Function(DropdownButtonFormField value)? dropdownButtonFormField,
+    TResult Function(PopupMenuButton value)? popupMenuButton,
+    TResult Function(NavigationDestination value)? navigationDestination,
+    TResult Function(ActionChip value)? actionChip,
+    TResult Function(FilterChip value)? filterChip,
+    TResult Function(InputChip value)? inputChip,
+    required TResult orElse(),
+  }) {
+    if (customScrollView != null) {
+      return customScrollView(this);
+    }
+    return orElse();
+  }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$CustomScrollViewToJson(
+      this,
+    );
+  }
+}
+
+abstract class CustomScrollView implements Widget {
+  const factory CustomScrollView(
+      {final Key? key,
+      final Axis scrollDirection,
+      final bool reverse,
+      final bool? primary,
+      final ScrollPhysics? physics,
+      final bool shrinkWrap,
+      final Key? center,
+      final double anchor,
+      final double? cacheExtent,
+      final List<Sliver> slivers,
+      final int? semanticChildCount,
+      final ScrollViewKeyboardDismissBehavior keyboardDismissBehavior,
+      final String? restorationId,
+      final Clip clipBehavior}) = _$CustomScrollView;
+
+  factory CustomScrollView.fromJson(Map<String, dynamic> json) =
+      _$CustomScrollView.fromJson;
+
+  @override
+  Key? get key;
+  Axis get scrollDirection;
+  bool get reverse;
+  bool? get primary;
+  ScrollPhysics? get physics;
+  bool get shrinkWrap;
+  Key? get center;
+  double get anchor;
+  double? get cacheExtent;
+  List<Sliver> get slivers;
+  int? get semanticChildCount;
+  ScrollViewKeyboardDismissBehavior get keyboardDismissBehavior;
+  String? get restorationId;
+  Clip get clipBehavior;
+  @override
+  @JsonKey(ignore: true)
+  _$$CustomScrollViewCopyWith<_$CustomScrollView> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$CheckboxCopyWith<$Res> implements $WidgetCopyWith<$Res> {
+  factory _$$CheckboxCopyWith(
+          _$Checkbox value, $Res Function(_$Checkbox) then) =
+      __$$CheckboxCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {Key? key,
+      bool? value,
+      bool tristate,
+      FormBoolField? field,
+      MouseCursor? mouseCursor,
+      Color? activeColor,
+      MaterialStateProperty? fillColor,
+      Color? checkColor,
+      Color? focusColor,
+      Color? hoverColor,
+      MaterialStateProperty? overlayColor,
+      double? splashRadius,
+      MaterialTapTargetSize? materialTapTargetSize,
+      VisualDensity? visualDensity,
+      bool autofocus,
+      ShapeBorder? shape,
+      BorderSide? side,
+      bool isError});
+
+  @override
+  $KeyCopyWith<$Res>? get key;
+  $MouseCursorCopyWith<$Res>? get mouseCursor;
+  $ColorCopyWith<$Res>? get activeColor;
+  $MaterialStatePropertyCopyWith<$Res>? get fillColor;
+  $ColorCopyWith<$Res>? get checkColor;
+  $ColorCopyWith<$Res>? get focusColor;
+  $ColorCopyWith<$Res>? get hoverColor;
+  $MaterialStatePropertyCopyWith<$Res>? get overlayColor;
+  $VisualDensityCopyWith<$Res>? get visualDensity;
+  $ShapeBorderCopyWith<$Res>? get shape;
+  $BorderSideCopyWith<$Res>? get side;
+}
+
+/// @nodoc
+class __$$CheckboxCopyWithImpl<$Res>
+    extends _$WidgetCopyWithImpl<$Res, _$Checkbox>
+    implements _$$CheckboxCopyWith<$Res> {
+  __$$CheckboxCopyWithImpl(_$Checkbox _value, $Res Function(_$Checkbox) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? key = freezed,
+    Object? value = freezed,
+    Object? tristate = null,
+    Object? field = freezed,
+    Object? mouseCursor = freezed,
+    Object? activeColor = freezed,
+    Object? fillColor = freezed,
+    Object? checkColor = freezed,
+    Object? focusColor = freezed,
+    Object? hoverColor = freezed,
+    Object? overlayColor = freezed,
+    Object? splashRadius = freezed,
+    Object? materialTapTargetSize = freezed,
+    Object? visualDensity = freezed,
+    Object? autofocus = null,
+    Object? shape = freezed,
+    Object? side = freezed,
+    Object? isError = null,
+  }) {
+    return _then(_$Checkbox(
+      key: freezed == key
+          ? _value.key
+          : key // ignore: cast_nullable_to_non_nullable
+              as Key?,
+      value: freezed == value
+          ? _value.value
+          : value // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      tristate: null == tristate
+          ? _value.tristate
+          : tristate // ignore: cast_nullable_to_non_nullable
+              as bool,
+      field: freezed == field
+          ? _value.field
+          : field // ignore: cast_nullable_to_non_nullable
+              as FormBoolField?,
+      mouseCursor: freezed == mouseCursor
+          ? _value.mouseCursor
+          : mouseCursor // ignore: cast_nullable_to_non_nullable
+              as MouseCursor?,
+      activeColor: freezed == activeColor
+          ? _value.activeColor
+          : activeColor // ignore: cast_nullable_to_non_nullable
+              as Color?,
+      fillColor: freezed == fillColor
+          ? _value.fillColor
+          : fillColor // ignore: cast_nullable_to_non_nullable
+              as MaterialStateProperty?,
+      checkColor: freezed == checkColor
+          ? _value.checkColor
+          : checkColor // ignore: cast_nullable_to_non_nullable
+              as Color?,
+      focusColor: freezed == focusColor
+          ? _value.focusColor
+          : focusColor // ignore: cast_nullable_to_non_nullable
+              as Color?,
+      hoverColor: freezed == hoverColor
+          ? _value.hoverColor
+          : hoverColor // ignore: cast_nullable_to_non_nullable
+              as Color?,
+      overlayColor: freezed == overlayColor
+          ? _value.overlayColor
+          : overlayColor // ignore: cast_nullable_to_non_nullable
+              as MaterialStateProperty?,
+      splashRadius: freezed == splashRadius
+          ? _value.splashRadius
+          : splashRadius // ignore: cast_nullable_to_non_nullable
+              as double?,
+      materialTapTargetSize: freezed == materialTapTargetSize
+          ? _value.materialTapTargetSize
+          : materialTapTargetSize // ignore: cast_nullable_to_non_nullable
+              as MaterialTapTargetSize?,
+      visualDensity: freezed == visualDensity
+          ? _value.visualDensity
+          : visualDensity // ignore: cast_nullable_to_non_nullable
+              as VisualDensity?,
+      autofocus: null == autofocus
+          ? _value.autofocus
+          : autofocus // ignore: cast_nullable_to_non_nullable
+              as bool,
+      shape: freezed == shape
+          ? _value.shape
+          : shape // ignore: cast_nullable_to_non_nullable
+              as ShapeBorder?,
+      side: freezed == side
+          ? _value.side
+          : side // ignore: cast_nullable_to_non_nullable
+              as BorderSide?,
+      isError: null == isError
+          ? _value.isError
+          : isError // ignore: cast_nullable_to_non_nullable
+              as bool,
+    ));
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $MouseCursorCopyWith<$Res>? get mouseCursor {
+    if (_value.mouseCursor == null) {
+      return null;
+    }
+
+    return $MouseCursorCopyWith<$Res>(_value.mouseCursor!, (value) {
+      return _then(_value.copyWith(mouseCursor: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ColorCopyWith<$Res>? get activeColor {
+    if (_value.activeColor == null) {
+      return null;
+    }
+
+    return $ColorCopyWith<$Res>(_value.activeColor!, (value) {
+      return _then(_value.copyWith(activeColor: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $MaterialStatePropertyCopyWith<$Res>? get fillColor {
+    if (_value.fillColor == null) {
+      return null;
+    }
+
+    return $MaterialStatePropertyCopyWith<$Res>(_value.fillColor!, (value) {
+      return _then(_value.copyWith(fillColor: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ColorCopyWith<$Res>? get checkColor {
+    if (_value.checkColor == null) {
+      return null;
+    }
+
+    return $ColorCopyWith<$Res>(_value.checkColor!, (value) {
+      return _then(_value.copyWith(checkColor: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ColorCopyWith<$Res>? get focusColor {
+    if (_value.focusColor == null) {
+      return null;
+    }
+
+    return $ColorCopyWith<$Res>(_value.focusColor!, (value) {
+      return _then(_value.copyWith(focusColor: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ColorCopyWith<$Res>? get hoverColor {
+    if (_value.hoverColor == null) {
+      return null;
+    }
+
+    return $ColorCopyWith<$Res>(_value.hoverColor!, (value) {
+      return _then(_value.copyWith(hoverColor: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $MaterialStatePropertyCopyWith<$Res>? get overlayColor {
+    if (_value.overlayColor == null) {
+      return null;
+    }
+
+    return $MaterialStatePropertyCopyWith<$Res>(_value.overlayColor!, (value) {
+      return _then(_value.copyWith(overlayColor: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $VisualDensityCopyWith<$Res>? get visualDensity {
+    if (_value.visualDensity == null) {
+      return null;
+    }
+
+    return $VisualDensityCopyWith<$Res>(_value.visualDensity!, (value) {
+      return _then(_value.copyWith(visualDensity: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ShapeBorderCopyWith<$Res>? get shape {
+    if (_value.shape == null) {
+      return null;
+    }
+
+    return $ShapeBorderCopyWith<$Res>(_value.shape!, (value) {
+      return _then(_value.copyWith(shape: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $BorderSideCopyWith<$Res>? get side {
+    if (_value.side == null) {
+      return null;
+    }
+
+    return $BorderSideCopyWith<$Res>(_value.side!, (value) {
+      return _then(_value.copyWith(side: value));
+    });
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$Checkbox implements Checkbox {
+  const _$Checkbox(
+      {this.key,
+      required this.value,
+      this.tristate = false,
+      this.field,
+      this.mouseCursor,
+      this.activeColor,
+      this.fillColor,
+      this.checkColor,
+      this.focusColor,
+      this.hoverColor,
+      this.overlayColor,
+      this.splashRadius,
+      this.materialTapTargetSize,
+      this.visualDensity,
+      this.autofocus = false,
+      this.shape,
+      this.side,
+      this.isError = false,
+      final String? $type})
+      : $type = $type ?? 'checkbox';
+
+  factory _$Checkbox.fromJson(Map<String, dynamic> json) =>
+      _$$CheckboxFromJson(json);
+
+  @override
+  final Key? key;
+  @override
+  final bool? value;
+  @override
+  @JsonKey()
+  final bool tristate;
+  @override
+  final FormBoolField? field;
+  @override
+  final MouseCursor? mouseCursor;
+  @override
+  final Color? activeColor;
+  @override
+  final MaterialStateProperty? fillColor;
+  @override
+  final Color? checkColor;
+  @override
+  final Color? focusColor;
+  @override
+  final Color? hoverColor;
+  @override
+  final MaterialStateProperty? overlayColor;
+  @override
+  final double? splashRadius;
+  @override
+  final MaterialTapTargetSize? materialTapTargetSize;
+  @override
+  final VisualDensity? visualDensity;
+  @override
+  @JsonKey()
+  final bool autofocus;
+  @override
+  final ShapeBorder? shape;
+  @override
+  final BorderSide? side;
+  @override
+  @JsonKey()
+  final bool isError;
+
+  @JsonKey(name: 'runtimeType')
+  final String $type;
+
+  @override
+  String toString() {
+    return 'Widget.checkbox(key: $key, value: $value, tristate: $tristate, field: $field, mouseCursor: $mouseCursor, activeColor: $activeColor, fillColor: $fillColor, checkColor: $checkColor, focusColor: $focusColor, hoverColor: $hoverColor, overlayColor: $overlayColor, splashRadius: $splashRadius, materialTapTargetSize: $materialTapTargetSize, visualDensity: $visualDensity, autofocus: $autofocus, shape: $shape, side: $side, isError: $isError)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$Checkbox &&
+            (identical(other.key, key) || other.key == key) &&
+            (identical(other.value, value) || other.value == value) &&
+            (identical(other.tristate, tristate) ||
+                other.tristate == tristate) &&
+            const DeepCollectionEquality().equals(other.field, field) &&
+            (identical(other.mouseCursor, mouseCursor) ||
+                other.mouseCursor == mouseCursor) &&
+            (identical(other.activeColor, activeColor) ||
+                other.activeColor == activeColor) &&
+            (identical(other.fillColor, fillColor) ||
+                other.fillColor == fillColor) &&
+            (identical(other.checkColor, checkColor) ||
+                other.checkColor == checkColor) &&
+            (identical(other.focusColor, focusColor) ||
+                other.focusColor == focusColor) &&
+            (identical(other.hoverColor, hoverColor) ||
+                other.hoverColor == hoverColor) &&
+            (identical(other.overlayColor, overlayColor) ||
+                other.overlayColor == overlayColor) &&
+            (identical(other.splashRadius, splashRadius) ||
+                other.splashRadius == splashRadius) &&
+            (identical(other.materialTapTargetSize, materialTapTargetSize) ||
+                other.materialTapTargetSize == materialTapTargetSize) &&
+            (identical(other.visualDensity, visualDensity) ||
+                other.visualDensity == visualDensity) &&
+            (identical(other.autofocus, autofocus) ||
+                other.autofocus == autofocus) &&
+            (identical(other.shape, shape) || other.shape == shape) &&
+            (identical(other.side, side) || other.side == side) &&
+            (identical(other.isError, isError) || other.isError == isError));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      key,
+      value,
+      tristate,
+      const DeepCollectionEquality().hash(field),
+      mouseCursor,
+      activeColor,
+      fillColor,
+      checkColor,
+      focusColor,
+      hoverColor,
+      overlayColor,
+      splashRadius,
+      materialTapTargetSize,
+      visualDensity,
+      autofocus,
+      shape,
+      side,
+      isError);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$CheckboxCopyWith<_$Checkbox> get copyWith =>
+      __$$CheckboxCopyWithImpl<_$Checkbox>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(
+            Key? key,
+            Color? color,
+            Color? shadowColor,
+            Color? surfaceTintColor,
+            double? elevation,
+            ShapeBorder? shape,
+            bool borderOnForeground,
+            EdgeInsets? margin,
+            Clip? clipBehavior,
+            Widget? child,
+            bool semanticContainer)
+        card,
+    required TResult Function(
+            Key? key,
+            Callback? onPressed,
+            Callback? onLongPress,
+            bool autofocus,
+            Clip clipBehavior,
+            Widget child,
+            ButtonStyle? style)
+        elevatedButton,
+    required TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)
+        filledButton,
+    required TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)
+        filledTonalButton,
+    required TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)
+        outlinedButton,
+    required TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)
+        textButton,
+    required TResult Function(
+            Key? key,
+            double? iconSize,
+            VisualDensity? visualDensity,
+            EdgeInsets? padding,
+            Alignment? alignment,
+            double? splashRadius,
+            Color? color,
+            Color? focusColor,
+            Color? hoverColor,
+            Color? highlightColor,
+            Color? splashColor,
+            Color? disabledColor,
+            Callback onPressed,
+            MouseCursor? mouseCursor,
+            bool autofocus,
+            String? tooltip,
+            bool? enableFeedback,
+            BoxConstraints? constraints,
+            bool? isSelected,
+            Widget? selectedIcon,
+            Widget icon)
+        iconButton,
+    required TResult Function(
+            Key? key,
+            PreferredSizeWidget? appBar,
+            Widget? body,
+            Widget? floatingActionButton,
+            FloatingActionButtonLocation? floatingActionButtonLocation,
+            List<Widget>? persistentFooterButtons,
+            Alignment persistentFooterAlignment,
+            Widget? drawer,
+            Widget? endDrawer,
+            Widget? bottomNavigationBar,
+            Widget? bottomSheet,
+            Color? backgroundColor,
+            bool? resizeToAvoidBottomInset,
+            bool primary,
+            bool extendBody,
+            bool extendBodyBehindAppBar,
+            Color? drawerScrimColor,
+            double? drawerEdgeDragWidth,
+            bool drawerEnableOpenDragGesture,
+            bool endDrawerEnableOpenDragGesture,
+            String? restorationId)
+        scaffold,
+    required TResult Function(Key? key, Widget? child, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, bool mini, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback) floatingActionButton,
+    required TResult Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback) floatingActionButtonExtended,
+    required TResult Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor) text,
+    required TResult Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior) container,
+    required TResult Function(Key? key, double? width, double? height, Widget? child) sizedBox,
+    required TResult Function(Key? key, double? widthFactor, double? heightFactor, Widget child) center,
+    required TResult Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection) icon,
+    required TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children) column,
+    required TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children) row,
+    required TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue) circularProgressIndicator,
+    required TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue) linearProgressIndicator,
+    required TResult Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color) divider,
+    required TResult Function(Key? key, Color? backgroundColor, bool extended, Widget? leading, Widget? trailing, List<NavigationRailDestination> destinations, int? selectedIndex, IntSelectionCallback? onDestinationSelected, double? elevation, double? groupAlignment, NavigationRailLabelType? labelType, TextStyle? unselectedLabelTextStyle, TextStyle? selectedLabelTextStyle, IconThemeData? unselectedIconTheme, IconThemeData? selectedIconTheme, double? minWidth, double? minExtendedWidth, bool? useIndicator, Color? indicatorColor, ShapeBorder? indicatorShape) navigationRail,
+    required TResult Function(Key? key, Duration? animationDuration, int selectedIndex, List<Widget> destinations, IntSelectionCallback? onDestinationSelected, Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, Color? indicatorColor, ShapeBorder? indicatorShape, double? height, NavigationDestinationLabelBehavior? labelBehavior) navigationBar,
+    required TResult Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration) defaultTabController,
+    required TResult Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child) tab,
+    required TResult Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior) tabBarView,
+    required TResult Function(Key? key, Axis scrollDirection, bool reverse, bool? primary, ScrollPhysics? physics, bool shrinkWrap, Key? center, double anchor, double? cacheExtent, List<Sliver> slivers, int? semanticChildCount, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior, String? restorationId, Clip clipBehavior) customScrollView,
+    required TResult Function(Key? key, bool? value, bool tristate, FormBoolField? field, MouseCursor? mouseCursor, Color? activeColor, MaterialStateProperty? fillColor, Color? checkColor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, MaterialTapTargetSize? materialTapTargetSize, VisualDensity? visualDensity, bool autofocus, ShapeBorder? shape, BorderSide? side, bool isError) checkbox,
+    required TResult Function(Key? key, FormStringField? field, List<DropdownMenuItem> items, String? value, Widget? hint, Widget? disabledHint, Callback? onTap, int elevation, TextStyle? style, Widget? icon, Color? iconDisabledColor, Color? iconEnabledColor, double iconSize, bool isDense, bool isExpanded, double? itemHeight, Color? focusColor, bool autofocus, Color? dropdownColor, InputDecoration? decoration, Map<String, String>? validatorMessages, AutovalidateMode? autovalidateMode, double? menuMaxHeight, bool? enableFeedback, Alignment alignment, BorderRadius? borderRadius) dropdownButtonFormField,
+    required TResult Function(Key? key, List<PopupMenuEntry> items, String? initialValue, Callback? onOpened, FormStringField? field, Callback? onCanceled, String? tooltip, double? elevation, Color? shadowColor, Color? surfaceTintColor, EdgeInsets padding, Widget? child, double? splashRadius, Widget? icon, double? iconSize, Offset offset, bool enabled, ShapeBorder? shape, Color? color, bool? enableFeedback, BoxConstraints? constraints, PopupMenuPosition? position, Clip clipBehavior) popupMenuButton,
+    required TResult Function(Key? key, Widget icon, Widget? selectedIcon, String label, String? tooltip) navigationDestination,
+    required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme) actionChip,
+    required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) filterChip,
+    required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) inputChip,
+  }) {
+    return checkbox(
+        key,
+        value,
+        tristate,
+        field,
+        mouseCursor,
+        activeColor,
+        fillColor,
+        checkColor,
+        focusColor,
+        hoverColor,
+        overlayColor,
+        splashRadius,
+        materialTapTargetSize,
+        visualDensity,
+        autofocus,
+        shape,
+        side,
+        isError);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(
+            Key? key,
+            Color? color,
+            Color? shadowColor,
+            Color? surfaceTintColor,
+            double? elevation,
+            ShapeBorder? shape,
+            bool borderOnForeground,
+            EdgeInsets? margin,
+            Clip? clipBehavior,
+            Widget? child,
+            bool semanticContainer)?
+        card,
+    TResult? Function(
+            Key? key,
+            Callback? onPressed,
+            Callback? onLongPress,
+            bool autofocus,
+            Clip clipBehavior,
+            Widget child,
+            ButtonStyle? style)?
+        elevatedButton,
+    TResult? Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        filledButton,
+    TResult? Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        filledTonalButton,
+    TResult? Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        outlinedButton,
+    TResult? Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        textButton,
+    TResult? Function(
+            Key? key,
+            double? iconSize,
+            VisualDensity? visualDensity,
+            EdgeInsets? padding,
+            Alignment? alignment,
+            double? splashRadius,
+            Color? color,
+            Color? focusColor,
+            Color? hoverColor,
+            Color? highlightColor,
+            Color? splashColor,
+            Color? disabledColor,
+            Callback onPressed,
+            MouseCursor? mouseCursor,
+            bool autofocus,
+            String? tooltip,
+            bool? enableFeedback,
+            BoxConstraints? constraints,
+            bool? isSelected,
+            Widget? selectedIcon,
+            Widget icon)?
+        iconButton,
+    TResult? Function(
+            Key? key,
+            PreferredSizeWidget? appBar,
+            Widget? body,
+            Widget? floatingActionButton,
+            FloatingActionButtonLocation? floatingActionButtonLocation,
+            List<Widget>? persistentFooterButtons,
+            Alignment persistentFooterAlignment,
+            Widget? drawer,
+            Widget? endDrawer,
+            Widget? bottomNavigationBar,
+            Widget? bottomSheet,
+            Color? backgroundColor,
+            bool? resizeToAvoidBottomInset,
+            bool primary,
+            bool extendBody,
+            bool extendBodyBehindAppBar,
+            Color? drawerScrimColor,
+            double? drawerEdgeDragWidth,
+            bool drawerEnableOpenDragGesture,
+            bool endDrawerEnableOpenDragGesture,
+            String? restorationId)?
+        scaffold,
+    TResult? Function(Key? key, Widget? child, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, bool mini, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButton,
+    TResult? Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButtonExtended,
+    TResult? Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor)? text,
+    TResult? Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior)? container,
+    TResult? Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
+    TResult? Function(Key? key, double? widthFactor, double? heightFactor, Widget child)? center,
+    TResult? Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection)? icon,
+    TResult? Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? column,
+    TResult? Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? row,
+    TResult? Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue)? circularProgressIndicator,
+    TResult? Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue)? linearProgressIndicator,
+    TResult? Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color)? divider,
+    TResult? Function(Key? key, Color? backgroundColor, bool extended, Widget? leading, Widget? trailing, List<NavigationRailDestination> destinations, int? selectedIndex, IntSelectionCallback? onDestinationSelected, double? elevation, double? groupAlignment, NavigationRailLabelType? labelType, TextStyle? unselectedLabelTextStyle, TextStyle? selectedLabelTextStyle, IconThemeData? unselectedIconTheme, IconThemeData? selectedIconTheme, double? minWidth, double? minExtendedWidth, bool? useIndicator, Color? indicatorColor, ShapeBorder? indicatorShape)? navigationRail,
+    TResult? Function(Key? key, Duration? animationDuration, int selectedIndex, List<Widget> destinations, IntSelectionCallback? onDestinationSelected, Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, Color? indicatorColor, ShapeBorder? indicatorShape, double? height, NavigationDestinationLabelBehavior? labelBehavior)? navigationBar,
+    TResult? Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration)? defaultTabController,
+    TResult? Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child)? tab,
+    TResult? Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior)? tabBarView,
+    TResult? Function(Key? key, Axis scrollDirection, bool reverse, bool? primary, ScrollPhysics? physics, bool shrinkWrap, Key? center, double anchor, double? cacheExtent, List<Sliver> slivers, int? semanticChildCount, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior, String? restorationId, Clip clipBehavior)? customScrollView,
+    TResult? Function(Key? key, bool? value, bool tristate, FormBoolField? field, MouseCursor? mouseCursor, Color? activeColor, MaterialStateProperty? fillColor, Color? checkColor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, MaterialTapTargetSize? materialTapTargetSize, VisualDensity? visualDensity, bool autofocus, ShapeBorder? shape, BorderSide? side, bool isError)? checkbox,
+    TResult? Function(Key? key, FormStringField? field, List<DropdownMenuItem> items, String? value, Widget? hint, Widget? disabledHint, Callback? onTap, int elevation, TextStyle? style, Widget? icon, Color? iconDisabledColor, Color? iconEnabledColor, double iconSize, bool isDense, bool isExpanded, double? itemHeight, Color? focusColor, bool autofocus, Color? dropdownColor, InputDecoration? decoration, Map<String, String>? validatorMessages, AutovalidateMode? autovalidateMode, double? menuMaxHeight, bool? enableFeedback, Alignment alignment, BorderRadius? borderRadius)? dropdownButtonFormField,
+    TResult? Function(Key? key, List<PopupMenuEntry> items, String? initialValue, Callback? onOpened, FormStringField? field, Callback? onCanceled, String? tooltip, double? elevation, Color? shadowColor, Color? surfaceTintColor, EdgeInsets padding, Widget? child, double? splashRadius, Widget? icon, double? iconSize, Offset offset, bool enabled, ShapeBorder? shape, Color? color, bool? enableFeedback, BoxConstraints? constraints, PopupMenuPosition? position, Clip clipBehavior)? popupMenuButton,
+    TResult? Function(Key? key, Widget icon, Widget? selectedIcon, String label, String? tooltip)? navigationDestination,
+    TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
+    TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
+    TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
+  }) {
+    return checkbox?.call(
+        key,
+        value,
+        tristate,
+        field,
+        mouseCursor,
+        activeColor,
+        fillColor,
+        checkColor,
+        focusColor,
+        hoverColor,
+        overlayColor,
+        splashRadius,
+        materialTapTargetSize,
+        visualDensity,
+        autofocus,
+        shape,
+        side,
+        isError);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(
+            Key? key,
+            Color? color,
+            Color? shadowColor,
+            Color? surfaceTintColor,
+            double? elevation,
+            ShapeBorder? shape,
+            bool borderOnForeground,
+            EdgeInsets? margin,
+            Clip? clipBehavior,
+            Widget? child,
+            bool semanticContainer)?
+        card,
+    TResult Function(
+            Key? key,
+            Callback? onPressed,
+            Callback? onLongPress,
+            bool autofocus,
+            Clip clipBehavior,
+            Widget child,
+            ButtonStyle? style)?
+        elevatedButton,
+    TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        filledButton,
+    TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        filledTonalButton,
+    TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        outlinedButton,
+    TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        textButton,
+    TResult Function(
+            Key? key,
+            double? iconSize,
+            VisualDensity? visualDensity,
+            EdgeInsets? padding,
+            Alignment? alignment,
+            double? splashRadius,
+            Color? color,
+            Color? focusColor,
+            Color? hoverColor,
+            Color? highlightColor,
+            Color? splashColor,
+            Color? disabledColor,
+            Callback onPressed,
+            MouseCursor? mouseCursor,
+            bool autofocus,
+            String? tooltip,
+            bool? enableFeedback,
+            BoxConstraints? constraints,
+            bool? isSelected,
+            Widget? selectedIcon,
+            Widget icon)?
+        iconButton,
+    TResult Function(
+            Key? key,
+            PreferredSizeWidget? appBar,
+            Widget? body,
+            Widget? floatingActionButton,
+            FloatingActionButtonLocation? floatingActionButtonLocation,
+            List<Widget>? persistentFooterButtons,
+            Alignment persistentFooterAlignment,
+            Widget? drawer,
+            Widget? endDrawer,
+            Widget? bottomNavigationBar,
+            Widget? bottomSheet,
+            Color? backgroundColor,
+            bool? resizeToAvoidBottomInset,
+            bool primary,
+            bool extendBody,
+            bool extendBodyBehindAppBar,
+            Color? drawerScrimColor,
+            double? drawerEdgeDragWidth,
+            bool drawerEnableOpenDragGesture,
+            bool endDrawerEnableOpenDragGesture,
+            String? restorationId)?
+        scaffold,
+    TResult Function(Key? key, Widget? child, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, bool mini, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButton,
+    TResult Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButtonExtended,
+    TResult Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor)? text,
+    TResult Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior)? container,
+    TResult Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
+    TResult Function(Key? key, double? widthFactor, double? heightFactor, Widget child)? center,
+    TResult Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection)? icon,
+    TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? column,
+    TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? row,
+    TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue)? circularProgressIndicator,
+    TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue)? linearProgressIndicator,
+    TResult Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color)? divider,
+    TResult Function(Key? key, Color? backgroundColor, bool extended, Widget? leading, Widget? trailing, List<NavigationRailDestination> destinations, int? selectedIndex, IntSelectionCallback? onDestinationSelected, double? elevation, double? groupAlignment, NavigationRailLabelType? labelType, TextStyle? unselectedLabelTextStyle, TextStyle? selectedLabelTextStyle, IconThemeData? unselectedIconTheme, IconThemeData? selectedIconTheme, double? minWidth, double? minExtendedWidth, bool? useIndicator, Color? indicatorColor, ShapeBorder? indicatorShape)? navigationRail,
+    TResult Function(Key? key, Duration? animationDuration, int selectedIndex, List<Widget> destinations, IntSelectionCallback? onDestinationSelected, Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, Color? indicatorColor, ShapeBorder? indicatorShape, double? height, NavigationDestinationLabelBehavior? labelBehavior)? navigationBar,
+    TResult Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration)? defaultTabController,
+    TResult Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child)? tab,
+    TResult Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior)? tabBarView,
+    TResult Function(Key? key, Axis scrollDirection, bool reverse, bool? primary, ScrollPhysics? physics, bool shrinkWrap, Key? center, double anchor, double? cacheExtent, List<Sliver> slivers, int? semanticChildCount, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior, String? restorationId, Clip clipBehavior)? customScrollView,
+    TResult Function(Key? key, bool? value, bool tristate, FormBoolField? field, MouseCursor? mouseCursor, Color? activeColor, MaterialStateProperty? fillColor, Color? checkColor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, MaterialTapTargetSize? materialTapTargetSize, VisualDensity? visualDensity, bool autofocus, ShapeBorder? shape, BorderSide? side, bool isError)? checkbox,
+    TResult Function(Key? key, FormStringField? field, List<DropdownMenuItem> items, String? value, Widget? hint, Widget? disabledHint, Callback? onTap, int elevation, TextStyle? style, Widget? icon, Color? iconDisabledColor, Color? iconEnabledColor, double iconSize, bool isDense, bool isExpanded, double? itemHeight, Color? focusColor, bool autofocus, Color? dropdownColor, InputDecoration? decoration, Map<String, String>? validatorMessages, AutovalidateMode? autovalidateMode, double? menuMaxHeight, bool? enableFeedback, Alignment alignment, BorderRadius? borderRadius)? dropdownButtonFormField,
+    TResult Function(Key? key, List<PopupMenuEntry> items, String? initialValue, Callback? onOpened, FormStringField? field, Callback? onCanceled, String? tooltip, double? elevation, Color? shadowColor, Color? surfaceTintColor, EdgeInsets padding, Widget? child, double? splashRadius, Widget? icon, double? iconSize, Offset offset, bool enabled, ShapeBorder? shape, Color? color, bool? enableFeedback, BoxConstraints? constraints, PopupMenuPosition? position, Clip clipBehavior)? popupMenuButton,
+    TResult Function(Key? key, Widget icon, Widget? selectedIcon, String label, String? tooltip)? navigationDestination,
+    TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
+    TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
+    TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
+    required TResult orElse(),
+  }) {
+    if (checkbox != null) {
+      return checkbox(
+          key,
+          value,
+          tristate,
+          field,
+          mouseCursor,
+          activeColor,
+          fillColor,
+          checkColor,
+          focusColor,
+          hoverColor,
+          overlayColor,
+          splashRadius,
+          materialTapTargetSize,
+          visualDensity,
+          autofocus,
+          shape,
+          side,
+          isError);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(Card value) card,
+    required TResult Function(ElevatedButton value) elevatedButton,
+    required TResult Function(FilledButton value) filledButton,
+    required TResult Function(FilledTonalButton value) filledTonalButton,
+    required TResult Function(OutlinedButton value) outlinedButton,
+    required TResult Function(TextButton value) textButton,
+    required TResult Function(IconButton value) iconButton,
+    required TResult Function(Scaffold value) scaffold,
+    required TResult Function(FloatingActionButton value) floatingActionButton,
+    required TResult Function(FloatingActionButtonExtended value)
+        floatingActionButtonExtended,
+    required TResult Function(Text value) text,
+    required TResult Function(Container value) container,
+    required TResult Function(SizedBox value) sizedBox,
+    required TResult Function(Center value) center,
+    required TResult Function(Icon value) icon,
+    required TResult Function(Column value) column,
+    required TResult Function(Row value) row,
+    required TResult Function(CircularProgressIndicator value)
+        circularProgressIndicator,
+    required TResult Function(LinearProgressIndicator value)
+        linearProgressIndicator,
+    required TResult Function(Divider value) divider,
+    required TResult Function(NavigationRail value) navigationRail,
+    required TResult Function(NavigationBar value) navigationBar,
+    required TResult Function(DefaultTabController value) defaultTabController,
+    required TResult Function(Tab value) tab,
+    required TResult Function(TabBarView value) tabBarView,
+    required TResult Function(CustomScrollView value) customScrollView,
+    required TResult Function(Checkbox value) checkbox,
+    required TResult Function(DropdownButtonFormField value)
+        dropdownButtonFormField,
+    required TResult Function(PopupMenuButton value) popupMenuButton,
+    required TResult Function(NavigationDestination value)
+        navigationDestination,
+    required TResult Function(ActionChip value) actionChip,
+    required TResult Function(FilterChip value) filterChip,
+    required TResult Function(InputChip value) inputChip,
+  }) {
+    return checkbox(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(Card value)? card,
+    TResult? Function(ElevatedButton value)? elevatedButton,
+    TResult? Function(FilledButton value)? filledButton,
+    TResult? Function(FilledTonalButton value)? filledTonalButton,
+    TResult? Function(OutlinedButton value)? outlinedButton,
+    TResult? Function(TextButton value)? textButton,
+    TResult? Function(IconButton value)? iconButton,
+    TResult? Function(Scaffold value)? scaffold,
+    TResult? Function(FloatingActionButton value)? floatingActionButton,
+    TResult? Function(FloatingActionButtonExtended value)?
+        floatingActionButtonExtended,
+    TResult? Function(Text value)? text,
+    TResult? Function(Container value)? container,
+    TResult? Function(SizedBox value)? sizedBox,
+    TResult? Function(Center value)? center,
+    TResult? Function(Icon value)? icon,
+    TResult? Function(Column value)? column,
+    TResult? Function(Row value)? row,
+    TResult? Function(CircularProgressIndicator value)?
+        circularProgressIndicator,
+    TResult? Function(LinearProgressIndicator value)? linearProgressIndicator,
+    TResult? Function(Divider value)? divider,
+    TResult? Function(NavigationRail value)? navigationRail,
+    TResult? Function(NavigationBar value)? navigationBar,
+    TResult? Function(DefaultTabController value)? defaultTabController,
+    TResult? Function(Tab value)? tab,
+    TResult? Function(TabBarView value)? tabBarView,
+    TResult? Function(CustomScrollView value)? customScrollView,
+    TResult? Function(Checkbox value)? checkbox,
+    TResult? Function(DropdownButtonFormField value)? dropdownButtonFormField,
+    TResult? Function(PopupMenuButton value)? popupMenuButton,
+    TResult? Function(NavigationDestination value)? navigationDestination,
+    TResult? Function(ActionChip value)? actionChip,
+    TResult? Function(FilterChip value)? filterChip,
+    TResult? Function(InputChip value)? inputChip,
+  }) {
+    return checkbox?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(Card value)? card,
+    TResult Function(ElevatedButton value)? elevatedButton,
+    TResult Function(FilledButton value)? filledButton,
+    TResult Function(FilledTonalButton value)? filledTonalButton,
+    TResult Function(OutlinedButton value)? outlinedButton,
+    TResult Function(TextButton value)? textButton,
+    TResult Function(IconButton value)? iconButton,
+    TResult Function(Scaffold value)? scaffold,
+    TResult Function(FloatingActionButton value)? floatingActionButton,
+    TResult Function(FloatingActionButtonExtended value)?
+        floatingActionButtonExtended,
+    TResult Function(Text value)? text,
+    TResult Function(Container value)? container,
+    TResult Function(SizedBox value)? sizedBox,
+    TResult Function(Center value)? center,
+    TResult Function(Icon value)? icon,
+    TResult Function(Column value)? column,
+    TResult Function(Row value)? row,
+    TResult Function(CircularProgressIndicator value)?
+        circularProgressIndicator,
+    TResult Function(LinearProgressIndicator value)? linearProgressIndicator,
+    TResult Function(Divider value)? divider,
+    TResult Function(NavigationRail value)? navigationRail,
+    TResult Function(NavigationBar value)? navigationBar,
+    TResult Function(DefaultTabController value)? defaultTabController,
+    TResult Function(Tab value)? tab,
+    TResult Function(TabBarView value)? tabBarView,
+    TResult Function(CustomScrollView value)? customScrollView,
+    TResult Function(Checkbox value)? checkbox,
+    TResult Function(DropdownButtonFormField value)? dropdownButtonFormField,
+    TResult Function(PopupMenuButton value)? popupMenuButton,
+    TResult Function(NavigationDestination value)? navigationDestination,
+    TResult Function(ActionChip value)? actionChip,
+    TResult Function(FilterChip value)? filterChip,
+    TResult Function(InputChip value)? inputChip,
+    required TResult orElse(),
+  }) {
+    if (checkbox != null) {
+      return checkbox(this);
+    }
+    return orElse();
+  }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$CheckboxToJson(
+      this,
+    );
+  }
+}
+
+abstract class Checkbox implements Widget {
+  const factory Checkbox(
+      {final Key? key,
+      required final bool? value,
+      final bool tristate,
+      final FormBoolField? field,
+      final MouseCursor? mouseCursor,
+      final Color? activeColor,
+      final MaterialStateProperty? fillColor,
+      final Color? checkColor,
+      final Color? focusColor,
+      final Color? hoverColor,
+      final MaterialStateProperty? overlayColor,
+      final double? splashRadius,
+      final MaterialTapTargetSize? materialTapTargetSize,
+      final VisualDensity? visualDensity,
+      final bool autofocus,
+      final ShapeBorder? shape,
+      final BorderSide? side,
+      final bool isError}) = _$Checkbox;
+
+  factory Checkbox.fromJson(Map<String, dynamic> json) = _$Checkbox.fromJson;
+
+  @override
+  Key? get key;
+  bool? get value;
+  bool get tristate;
+  FormBoolField? get field;
+  MouseCursor? get mouseCursor;
+  Color? get activeColor;
+  MaterialStateProperty? get fillColor;
+  Color? get checkColor;
+  Color? get focusColor;
+  Color? get hoverColor;
+  MaterialStateProperty? get overlayColor;
+  double? get splashRadius;
+  MaterialTapTargetSize? get materialTapTargetSize;
+  VisualDensity? get visualDensity;
+  bool get autofocus;
+  ShapeBorder? get shape;
+  BorderSide? get side;
+  bool get isError;
+  @override
+  @JsonKey(ignore: true)
+  _$$CheckboxCopyWith<_$Checkbox> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$DropdownButtonFormFieldCopyWith<$Res>
+    implements $WidgetCopyWith<$Res> {
+  factory _$$DropdownButtonFormFieldCopyWith(_$DropdownButtonFormField value,
+          $Res Function(_$DropdownButtonFormField) then) =
+      __$$DropdownButtonFormFieldCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {Key? key,
+      FormStringField? field,
+      List<DropdownMenuItem> items,
+      String? value,
+      Widget? hint,
+      Widget? disabledHint,
+      Callback? onTap,
+      int elevation,
+      TextStyle? style,
+      Widget? icon,
+      Color? iconDisabledColor,
+      Color? iconEnabledColor,
+      double iconSize,
+      bool isDense,
+      bool isExpanded,
+      double? itemHeight,
+      Color? focusColor,
+      bool autofocus,
+      Color? dropdownColor,
+      InputDecoration? decoration,
+      Map<String, String>? validatorMessages,
+      AutovalidateMode? autovalidateMode,
+      double? menuMaxHeight,
+      bool? enableFeedback,
+      Alignment alignment,
+      BorderRadius? borderRadius});
+
+  @override
+  $KeyCopyWith<$Res>? get key;
+  $WidgetCopyWith<$Res>? get hint;
+  $WidgetCopyWith<$Res>? get disabledHint;
+  $CallbackCopyWith<$Res>? get onTap;
+  $TextStyleCopyWith<$Res>? get style;
+  $WidgetCopyWith<$Res>? get icon;
+  $ColorCopyWith<$Res>? get iconDisabledColor;
+  $ColorCopyWith<$Res>? get iconEnabledColor;
+  $ColorCopyWith<$Res>? get focusColor;
+  $ColorCopyWith<$Res>? get dropdownColor;
+  $InputDecorationCopyWith<$Res>? get decoration;
+  $AlignmentCopyWith<$Res> get alignment;
+  $BorderRadiusCopyWith<$Res>? get borderRadius;
+}
+
+/// @nodoc
+class __$$DropdownButtonFormFieldCopyWithImpl<$Res>
+    extends _$WidgetCopyWithImpl<$Res, _$DropdownButtonFormField>
+    implements _$$DropdownButtonFormFieldCopyWith<$Res> {
+  __$$DropdownButtonFormFieldCopyWithImpl(_$DropdownButtonFormField _value,
+      $Res Function(_$DropdownButtonFormField) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? key = freezed,
+    Object? field = freezed,
+    Object? items = null,
+    Object? value = freezed,
+    Object? hint = freezed,
+    Object? disabledHint = freezed,
+    Object? onTap = freezed,
+    Object? elevation = null,
+    Object? style = freezed,
+    Object? icon = freezed,
+    Object? iconDisabledColor = freezed,
+    Object? iconEnabledColor = freezed,
+    Object? iconSize = null,
+    Object? isDense = null,
+    Object? isExpanded = null,
+    Object? itemHeight = freezed,
+    Object? focusColor = freezed,
+    Object? autofocus = null,
+    Object? dropdownColor = freezed,
+    Object? decoration = freezed,
+    Object? validatorMessages = freezed,
+    Object? autovalidateMode = freezed,
+    Object? menuMaxHeight = freezed,
+    Object? enableFeedback = freezed,
+    Object? alignment = null,
+    Object? borderRadius = freezed,
+  }) {
+    return _then(_$DropdownButtonFormField(
+      key: freezed == key
+          ? _value.key
+          : key // ignore: cast_nullable_to_non_nullable
+              as Key?,
+      field: freezed == field
+          ? _value.field
+          : field // ignore: cast_nullable_to_non_nullable
+              as FormStringField?,
+      items: null == items
+          ? _value._items
+          : items // ignore: cast_nullable_to_non_nullable
+              as List<DropdownMenuItem>,
+      value: freezed == value
+          ? _value.value
+          : value // ignore: cast_nullable_to_non_nullable
+              as String?,
+      hint: freezed == hint
+          ? _value.hint
+          : hint // ignore: cast_nullable_to_non_nullable
+              as Widget?,
+      disabledHint: freezed == disabledHint
+          ? _value.disabledHint
+          : disabledHint // ignore: cast_nullable_to_non_nullable
+              as Widget?,
+      onTap: freezed == onTap
+          ? _value.onTap
+          : onTap // ignore: cast_nullable_to_non_nullable
+              as Callback?,
+      elevation: null == elevation
+          ? _value.elevation
+          : elevation // ignore: cast_nullable_to_non_nullable
+              as int,
+      style: freezed == style
+          ? _value.style
+          : style // ignore: cast_nullable_to_non_nullable
+              as TextStyle?,
+      icon: freezed == icon
+          ? _value.icon
+          : icon // ignore: cast_nullable_to_non_nullable
+              as Widget?,
+      iconDisabledColor: freezed == iconDisabledColor
+          ? _value.iconDisabledColor
+          : iconDisabledColor // ignore: cast_nullable_to_non_nullable
+              as Color?,
+      iconEnabledColor: freezed == iconEnabledColor
+          ? _value.iconEnabledColor
+          : iconEnabledColor // ignore: cast_nullable_to_non_nullable
+              as Color?,
+      iconSize: null == iconSize
+          ? _value.iconSize
+          : iconSize // ignore: cast_nullable_to_non_nullable
+              as double,
+      isDense: null == isDense
+          ? _value.isDense
+          : isDense // ignore: cast_nullable_to_non_nullable
+              as bool,
+      isExpanded: null == isExpanded
+          ? _value.isExpanded
+          : isExpanded // ignore: cast_nullable_to_non_nullable
+              as bool,
+      itemHeight: freezed == itemHeight
+          ? _value.itemHeight
+          : itemHeight // ignore: cast_nullable_to_non_nullable
+              as double?,
+      focusColor: freezed == focusColor
+          ? _value.focusColor
+          : focusColor // ignore: cast_nullable_to_non_nullable
+              as Color?,
+      autofocus: null == autofocus
+          ? _value.autofocus
+          : autofocus // ignore: cast_nullable_to_non_nullable
+              as bool,
+      dropdownColor: freezed == dropdownColor
+          ? _value.dropdownColor
+          : dropdownColor // ignore: cast_nullable_to_non_nullable
+              as Color?,
+      decoration: freezed == decoration
+          ? _value.decoration
+          : decoration // ignore: cast_nullable_to_non_nullable
+              as InputDecoration?,
+      validatorMessages: freezed == validatorMessages
+          ? _value._validatorMessages
+          : validatorMessages // ignore: cast_nullable_to_non_nullable
+              as Map<String, String>?,
+      autovalidateMode: freezed == autovalidateMode
+          ? _value.autovalidateMode
+          : autovalidateMode // ignore: cast_nullable_to_non_nullable
+              as AutovalidateMode?,
+      menuMaxHeight: freezed == menuMaxHeight
+          ? _value.menuMaxHeight
+          : menuMaxHeight // ignore: cast_nullable_to_non_nullable
+              as double?,
+      enableFeedback: freezed == enableFeedback
+          ? _value.enableFeedback
+          : enableFeedback // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      alignment: null == alignment
+          ? _value.alignment
+          : alignment // ignore: cast_nullable_to_non_nullable
+              as Alignment,
+      borderRadius: freezed == borderRadius
+          ? _value.borderRadius
+          : borderRadius // ignore: cast_nullable_to_non_nullable
+              as BorderRadius?,
+    ));
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $WidgetCopyWith<$Res>? get hint {
+    if (_value.hint == null) {
+      return null;
+    }
+
+    return $WidgetCopyWith<$Res>(_value.hint!, (value) {
+      return _then(_value.copyWith(hint: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $WidgetCopyWith<$Res>? get disabledHint {
+    if (_value.disabledHint == null) {
+      return null;
+    }
+
+    return $WidgetCopyWith<$Res>(_value.disabledHint!, (value) {
+      return _then(_value.copyWith(disabledHint: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $CallbackCopyWith<$Res>? get onTap {
+    if (_value.onTap == null) {
+      return null;
+    }
+
+    return $CallbackCopyWith<$Res>(_value.onTap!, (value) {
+      return _then(_value.copyWith(onTap: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $TextStyleCopyWith<$Res>? get style {
+    if (_value.style == null) {
+      return null;
+    }
+
+    return $TextStyleCopyWith<$Res>(_value.style!, (value) {
+      return _then(_value.copyWith(style: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $WidgetCopyWith<$Res>? get icon {
+    if (_value.icon == null) {
+      return null;
+    }
+
+    return $WidgetCopyWith<$Res>(_value.icon!, (value) {
+      return _then(_value.copyWith(icon: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ColorCopyWith<$Res>? get iconDisabledColor {
+    if (_value.iconDisabledColor == null) {
+      return null;
+    }
+
+    return $ColorCopyWith<$Res>(_value.iconDisabledColor!, (value) {
+      return _then(_value.copyWith(iconDisabledColor: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ColorCopyWith<$Res>? get iconEnabledColor {
+    if (_value.iconEnabledColor == null) {
+      return null;
+    }
+
+    return $ColorCopyWith<$Res>(_value.iconEnabledColor!, (value) {
+      return _then(_value.copyWith(iconEnabledColor: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ColorCopyWith<$Res>? get focusColor {
+    if (_value.focusColor == null) {
+      return null;
+    }
+
+    return $ColorCopyWith<$Res>(_value.focusColor!, (value) {
+      return _then(_value.copyWith(focusColor: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ColorCopyWith<$Res>? get dropdownColor {
+    if (_value.dropdownColor == null) {
+      return null;
+    }
+
+    return $ColorCopyWith<$Res>(_value.dropdownColor!, (value) {
+      return _then(_value.copyWith(dropdownColor: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $InputDecorationCopyWith<$Res>? get decoration {
+    if (_value.decoration == null) {
+      return null;
+    }
+
+    return $InputDecorationCopyWith<$Res>(_value.decoration!, (value) {
+      return _then(_value.copyWith(decoration: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $AlignmentCopyWith<$Res> get alignment {
+    return $AlignmentCopyWith<$Res>(_value.alignment, (value) {
+      return _then(_value.copyWith(alignment: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $BorderRadiusCopyWith<$Res>? get borderRadius {
+    if (_value.borderRadius == null) {
+      return null;
+    }
+
+    return $BorderRadiusCopyWith<$Res>(_value.borderRadius!, (value) {
+      return _then(_value.copyWith(borderRadius: value));
+    });
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$DropdownButtonFormField implements DropdownButtonFormField {
+  const _$DropdownButtonFormField(
+      {this.key,
+      this.field,
+      required final List<DropdownMenuItem> items,
+      this.value,
+      this.hint,
+      this.disabledHint,
+      this.onTap,
+      this.elevation = 8,
+      this.style,
+      this.icon,
+      this.iconDisabledColor,
+      this.iconEnabledColor,
+      this.iconSize = 24.0,
+      this.isDense = true,
+      this.isExpanded = false,
+      this.itemHeight,
+      this.focusColor,
+      this.autofocus = false,
+      this.dropdownColor,
+      this.decoration,
+      final Map<String, String>? validatorMessages,
+      this.autovalidateMode,
+      this.menuMaxHeight,
+      this.enableFeedback,
+      this.alignment = Alignment.centerLeft,
+      this.borderRadius,
+      final String? $type})
+      : _items = items,
+        _validatorMessages = validatorMessages,
+        $type = $type ?? 'dropdownButtonFormField';
+
+  factory _$DropdownButtonFormField.fromJson(Map<String, dynamic> json) =>
+      _$$DropdownButtonFormFieldFromJson(json);
+
+  @override
+  final Key? key;
+  @override
+  final FormStringField? field;
+  final List<DropdownMenuItem> _items;
+  @override
+  List<DropdownMenuItem> get items {
+    if (_items is EqualUnmodifiableListView) return _items;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_items);
+  }
+
+  @override
+  final String? value;
+  @override
+  final Widget? hint;
+  @override
+  final Widget? disabledHint;
+  @override
+  final Callback? onTap;
+  @override
+  @JsonKey()
+  final int elevation;
+  @override
+  final TextStyle? style;
+  @override
+  final Widget? icon;
+  @override
+  final Color? iconDisabledColor;
+  @override
+  final Color? iconEnabledColor;
+  @override
+  @JsonKey()
+  final double iconSize;
+  @override
+  @JsonKey()
+  final bool isDense;
+  @override
+  @JsonKey()
+  final bool isExpanded;
+  @override
+  final double? itemHeight;
+  @override
+  final Color? focusColor;
+  @override
+  @JsonKey()
+  final bool autofocus;
+  @override
+  final Color? dropdownColor;
+  @override
+  final InputDecoration? decoration;
+  final Map<String, String>? _validatorMessages;
+  @override
+  Map<String, String>? get validatorMessages {
+    final value = _validatorMessages;
+    if (value == null) return null;
+    if (_validatorMessages is EqualUnmodifiableMapView)
+      return _validatorMessages;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableMapView(value);
+  }
+
+  @override
+  final AutovalidateMode? autovalidateMode;
+  @override
+  final double? menuMaxHeight;
+  @override
+  final bool? enableFeedback;
+  @override
+  @JsonKey()
+  final Alignment alignment;
+  @override
+  final BorderRadius? borderRadius;
+
+  @JsonKey(name: 'runtimeType')
+  final String $type;
+
+  @override
+  String toString() {
+    return 'Widget.dropdownButtonFormField(key: $key, field: $field, items: $items, value: $value, hint: $hint, disabledHint: $disabledHint, onTap: $onTap, elevation: $elevation, style: $style, icon: $icon, iconDisabledColor: $iconDisabledColor, iconEnabledColor: $iconEnabledColor, iconSize: $iconSize, isDense: $isDense, isExpanded: $isExpanded, itemHeight: $itemHeight, focusColor: $focusColor, autofocus: $autofocus, dropdownColor: $dropdownColor, decoration: $decoration, validatorMessages: $validatorMessages, autovalidateMode: $autovalidateMode, menuMaxHeight: $menuMaxHeight, enableFeedback: $enableFeedback, alignment: $alignment, borderRadius: $borderRadius)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$DropdownButtonFormField &&
+            (identical(other.key, key) || other.key == key) &&
+            const DeepCollectionEquality().equals(other.field, field) &&
+            const DeepCollectionEquality().equals(other._items, _items) &&
+            (identical(other.value, value) || other.value == value) &&
+            (identical(other.hint, hint) || other.hint == hint) &&
+            (identical(other.disabledHint, disabledHint) ||
+                other.disabledHint == disabledHint) &&
+            (identical(other.onTap, onTap) || other.onTap == onTap) &&
+            (identical(other.elevation, elevation) ||
+                other.elevation == elevation) &&
+            (identical(other.style, style) || other.style == style) &&
+            (identical(other.icon, icon) || other.icon == icon) &&
+            (identical(other.iconDisabledColor, iconDisabledColor) ||
+                other.iconDisabledColor == iconDisabledColor) &&
+            (identical(other.iconEnabledColor, iconEnabledColor) ||
+                other.iconEnabledColor == iconEnabledColor) &&
+            (identical(other.iconSize, iconSize) ||
+                other.iconSize == iconSize) &&
+            (identical(other.isDense, isDense) || other.isDense == isDense) &&
+            (identical(other.isExpanded, isExpanded) ||
+                other.isExpanded == isExpanded) &&
+            (identical(other.itemHeight, itemHeight) ||
+                other.itemHeight == itemHeight) &&
+            (identical(other.focusColor, focusColor) ||
+                other.focusColor == focusColor) &&
+            (identical(other.autofocus, autofocus) ||
+                other.autofocus == autofocus) &&
+            (identical(other.dropdownColor, dropdownColor) ||
+                other.dropdownColor == dropdownColor) &&
+            (identical(other.decoration, decoration) ||
+                other.decoration == decoration) &&
+            const DeepCollectionEquality()
+                .equals(other._validatorMessages, _validatorMessages) &&
+            (identical(other.autovalidateMode, autovalidateMode) ||
+                other.autovalidateMode == autovalidateMode) &&
+            (identical(other.menuMaxHeight, menuMaxHeight) ||
+                other.menuMaxHeight == menuMaxHeight) &&
+            (identical(other.enableFeedback, enableFeedback) ||
+                other.enableFeedback == enableFeedback) &&
+            (identical(other.alignment, alignment) ||
+                other.alignment == alignment) &&
+            (identical(other.borderRadius, borderRadius) ||
+                other.borderRadius == borderRadius));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hashAll([
+        runtimeType,
+        key,
+        const DeepCollectionEquality().hash(field),
+        const DeepCollectionEquality().hash(_items),
+        value,
+        hint,
+        disabledHint,
+        onTap,
+        elevation,
+        style,
+        icon,
+        iconDisabledColor,
+        iconEnabledColor,
+        iconSize,
+        isDense,
+        isExpanded,
+        itemHeight,
+        focusColor,
+        autofocus,
+        dropdownColor,
+        decoration,
+        const DeepCollectionEquality().hash(_validatorMessages),
+        autovalidateMode,
+        menuMaxHeight,
+        enableFeedback,
+        alignment,
+        borderRadius
+      ]);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$DropdownButtonFormFieldCopyWith<_$DropdownButtonFormField> get copyWith =>
+      __$$DropdownButtonFormFieldCopyWithImpl<_$DropdownButtonFormField>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(
+            Key? key,
+            Color? color,
+            Color? shadowColor,
+            Color? surfaceTintColor,
+            double? elevation,
+            ShapeBorder? shape,
+            bool borderOnForeground,
+            EdgeInsets? margin,
+            Clip? clipBehavior,
+            Widget? child,
+            bool semanticContainer)
+        card,
+    required TResult Function(
+            Key? key,
+            Callback? onPressed,
+            Callback? onLongPress,
+            bool autofocus,
+            Clip clipBehavior,
+            Widget child,
+            ButtonStyle? style)
+        elevatedButton,
+    required TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)
+        filledButton,
+    required TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)
+        filledTonalButton,
+    required TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)
+        outlinedButton,
+    required TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)
+        textButton,
+    required TResult Function(
+            Key? key,
+            double? iconSize,
+            VisualDensity? visualDensity,
+            EdgeInsets? padding,
+            Alignment? alignment,
+            double? splashRadius,
+            Color? color,
+            Color? focusColor,
+            Color? hoverColor,
+            Color? highlightColor,
+            Color? splashColor,
+            Color? disabledColor,
+            Callback onPressed,
+            MouseCursor? mouseCursor,
+            bool autofocus,
+            String? tooltip,
+            bool? enableFeedback,
+            BoxConstraints? constraints,
+            bool? isSelected,
+            Widget? selectedIcon,
+            Widget icon)
+        iconButton,
+    required TResult Function(
+            Key? key,
+            PreferredSizeWidget? appBar,
+            Widget? body,
+            Widget? floatingActionButton,
+            FloatingActionButtonLocation? floatingActionButtonLocation,
+            List<Widget>? persistentFooterButtons,
+            Alignment persistentFooterAlignment,
+            Widget? drawer,
+            Widget? endDrawer,
+            Widget? bottomNavigationBar,
+            Widget? bottomSheet,
+            Color? backgroundColor,
+            bool? resizeToAvoidBottomInset,
+            bool primary,
+            bool extendBody,
+            bool extendBodyBehindAppBar,
+            Color? drawerScrimColor,
+            double? drawerEdgeDragWidth,
+            bool drawerEnableOpenDragGesture,
+            bool endDrawerEnableOpenDragGesture,
+            String? restorationId)
+        scaffold,
+    required TResult Function(Key? key, Widget? child, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, bool mini, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback) floatingActionButton,
+    required TResult Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback) floatingActionButtonExtended,
+    required TResult Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor) text,
+    required TResult Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior) container,
+    required TResult Function(Key? key, double? width, double? height, Widget? child) sizedBox,
+    required TResult Function(Key? key, double? widthFactor, double? heightFactor, Widget child) center,
+    required TResult Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection) icon,
+    required TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children) column,
+    required TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children) row,
+    required TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue) circularProgressIndicator,
+    required TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue) linearProgressIndicator,
+    required TResult Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color) divider,
+    required TResult Function(Key? key, Color? backgroundColor, bool extended, Widget? leading, Widget? trailing, List<NavigationRailDestination> destinations, int? selectedIndex, IntSelectionCallback? onDestinationSelected, double? elevation, double? groupAlignment, NavigationRailLabelType? labelType, TextStyle? unselectedLabelTextStyle, TextStyle? selectedLabelTextStyle, IconThemeData? unselectedIconTheme, IconThemeData? selectedIconTheme, double? minWidth, double? minExtendedWidth, bool? useIndicator, Color? indicatorColor, ShapeBorder? indicatorShape) navigationRail,
+    required TResult Function(Key? key, Duration? animationDuration, int selectedIndex, List<Widget> destinations, IntSelectionCallback? onDestinationSelected, Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, Color? indicatorColor, ShapeBorder? indicatorShape, double? height, NavigationDestinationLabelBehavior? labelBehavior) navigationBar,
+    required TResult Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration) defaultTabController,
+    required TResult Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child) tab,
+    required TResult Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior) tabBarView,
+    required TResult Function(Key? key, Axis scrollDirection, bool reverse, bool? primary, ScrollPhysics? physics, bool shrinkWrap, Key? center, double anchor, double? cacheExtent, List<Sliver> slivers, int? semanticChildCount, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior, String? restorationId, Clip clipBehavior) customScrollView,
+    required TResult Function(Key? key, bool? value, bool tristate, FormBoolField? field, MouseCursor? mouseCursor, Color? activeColor, MaterialStateProperty? fillColor, Color? checkColor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, MaterialTapTargetSize? materialTapTargetSize, VisualDensity? visualDensity, bool autofocus, ShapeBorder? shape, BorderSide? side, bool isError) checkbox,
+    required TResult Function(Key? key, FormStringField? field, List<DropdownMenuItem> items, String? value, Widget? hint, Widget? disabledHint, Callback? onTap, int elevation, TextStyle? style, Widget? icon, Color? iconDisabledColor, Color? iconEnabledColor, double iconSize, bool isDense, bool isExpanded, double? itemHeight, Color? focusColor, bool autofocus, Color? dropdownColor, InputDecoration? decoration, Map<String, String>? validatorMessages, AutovalidateMode? autovalidateMode, double? menuMaxHeight, bool? enableFeedback, Alignment alignment, BorderRadius? borderRadius) dropdownButtonFormField,
+    required TResult Function(Key? key, List<PopupMenuEntry> items, String? initialValue, Callback? onOpened, FormStringField? field, Callback? onCanceled, String? tooltip, double? elevation, Color? shadowColor, Color? surfaceTintColor, EdgeInsets padding, Widget? child, double? splashRadius, Widget? icon, double? iconSize, Offset offset, bool enabled, ShapeBorder? shape, Color? color, bool? enableFeedback, BoxConstraints? constraints, PopupMenuPosition? position, Clip clipBehavior) popupMenuButton,
+    required TResult Function(Key? key, Widget icon, Widget? selectedIcon, String label, String? tooltip) navigationDestination,
+    required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme) actionChip,
+    required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) filterChip,
+    required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) inputChip,
+  }) {
+    return dropdownButtonFormField(
+        key,
+        field,
+        items,
+        value,
+        hint,
+        disabledHint,
+        onTap,
+        elevation,
+        style,
+        this.icon,
+        iconDisabledColor,
+        iconEnabledColor,
+        iconSize,
+        isDense,
+        isExpanded,
+        itemHeight,
+        focusColor,
+        autofocus,
+        dropdownColor,
+        decoration,
+        validatorMessages,
+        autovalidateMode,
+        menuMaxHeight,
+        enableFeedback,
+        alignment,
+        borderRadius);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(
+            Key? key,
+            Color? color,
+            Color? shadowColor,
+            Color? surfaceTintColor,
+            double? elevation,
+            ShapeBorder? shape,
+            bool borderOnForeground,
+            EdgeInsets? margin,
+            Clip? clipBehavior,
+            Widget? child,
+            bool semanticContainer)?
+        card,
+    TResult? Function(
+            Key? key,
+            Callback? onPressed,
+            Callback? onLongPress,
+            bool autofocus,
+            Clip clipBehavior,
+            Widget child,
+            ButtonStyle? style)?
+        elevatedButton,
+    TResult? Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        filledButton,
+    TResult? Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        filledTonalButton,
+    TResult? Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        outlinedButton,
+    TResult? Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        textButton,
+    TResult? Function(
+            Key? key,
+            double? iconSize,
+            VisualDensity? visualDensity,
+            EdgeInsets? padding,
+            Alignment? alignment,
+            double? splashRadius,
+            Color? color,
+            Color? focusColor,
+            Color? hoverColor,
+            Color? highlightColor,
+            Color? splashColor,
+            Color? disabledColor,
+            Callback onPressed,
+            MouseCursor? mouseCursor,
+            bool autofocus,
+            String? tooltip,
+            bool? enableFeedback,
+            BoxConstraints? constraints,
+            bool? isSelected,
+            Widget? selectedIcon,
+            Widget icon)?
+        iconButton,
+    TResult? Function(
+            Key? key,
+            PreferredSizeWidget? appBar,
+            Widget? body,
+            Widget? floatingActionButton,
+            FloatingActionButtonLocation? floatingActionButtonLocation,
+            List<Widget>? persistentFooterButtons,
+            Alignment persistentFooterAlignment,
+            Widget? drawer,
+            Widget? endDrawer,
+            Widget? bottomNavigationBar,
+            Widget? bottomSheet,
+            Color? backgroundColor,
+            bool? resizeToAvoidBottomInset,
+            bool primary,
+            bool extendBody,
+            bool extendBodyBehindAppBar,
+            Color? drawerScrimColor,
+            double? drawerEdgeDragWidth,
+            bool drawerEnableOpenDragGesture,
+            bool endDrawerEnableOpenDragGesture,
+            String? restorationId)?
+        scaffold,
+    TResult? Function(Key? key, Widget? child, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, bool mini, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButton,
+    TResult? Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButtonExtended,
+    TResult? Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor)? text,
+    TResult? Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior)? container,
+    TResult? Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
+    TResult? Function(Key? key, double? widthFactor, double? heightFactor, Widget child)? center,
+    TResult? Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection)? icon,
+    TResult? Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? column,
+    TResult? Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? row,
+    TResult? Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue)? circularProgressIndicator,
+    TResult? Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue)? linearProgressIndicator,
+    TResult? Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color)? divider,
+    TResult? Function(Key? key, Color? backgroundColor, bool extended, Widget? leading, Widget? trailing, List<NavigationRailDestination> destinations, int? selectedIndex, IntSelectionCallback? onDestinationSelected, double? elevation, double? groupAlignment, NavigationRailLabelType? labelType, TextStyle? unselectedLabelTextStyle, TextStyle? selectedLabelTextStyle, IconThemeData? unselectedIconTheme, IconThemeData? selectedIconTheme, double? minWidth, double? minExtendedWidth, bool? useIndicator, Color? indicatorColor, ShapeBorder? indicatorShape)? navigationRail,
+    TResult? Function(Key? key, Duration? animationDuration, int selectedIndex, List<Widget> destinations, IntSelectionCallback? onDestinationSelected, Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, Color? indicatorColor, ShapeBorder? indicatorShape, double? height, NavigationDestinationLabelBehavior? labelBehavior)? navigationBar,
+    TResult? Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration)? defaultTabController,
+    TResult? Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child)? tab,
+    TResult? Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior)? tabBarView,
+    TResult? Function(Key? key, Axis scrollDirection, bool reverse, bool? primary, ScrollPhysics? physics, bool shrinkWrap, Key? center, double anchor, double? cacheExtent, List<Sliver> slivers, int? semanticChildCount, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior, String? restorationId, Clip clipBehavior)? customScrollView,
+    TResult? Function(Key? key, bool? value, bool tristate, FormBoolField? field, MouseCursor? mouseCursor, Color? activeColor, MaterialStateProperty? fillColor, Color? checkColor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, MaterialTapTargetSize? materialTapTargetSize, VisualDensity? visualDensity, bool autofocus, ShapeBorder? shape, BorderSide? side, bool isError)? checkbox,
+    TResult? Function(Key? key, FormStringField? field, List<DropdownMenuItem> items, String? value, Widget? hint, Widget? disabledHint, Callback? onTap, int elevation, TextStyle? style, Widget? icon, Color? iconDisabledColor, Color? iconEnabledColor, double iconSize, bool isDense, bool isExpanded, double? itemHeight, Color? focusColor, bool autofocus, Color? dropdownColor, InputDecoration? decoration, Map<String, String>? validatorMessages, AutovalidateMode? autovalidateMode, double? menuMaxHeight, bool? enableFeedback, Alignment alignment, BorderRadius? borderRadius)? dropdownButtonFormField,
+    TResult? Function(Key? key, List<PopupMenuEntry> items, String? initialValue, Callback? onOpened, FormStringField? field, Callback? onCanceled, String? tooltip, double? elevation, Color? shadowColor, Color? surfaceTintColor, EdgeInsets padding, Widget? child, double? splashRadius, Widget? icon, double? iconSize, Offset offset, bool enabled, ShapeBorder? shape, Color? color, bool? enableFeedback, BoxConstraints? constraints, PopupMenuPosition? position, Clip clipBehavior)? popupMenuButton,
+    TResult? Function(Key? key, Widget icon, Widget? selectedIcon, String label, String? tooltip)? navigationDestination,
+    TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
+    TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
+    TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
+  }) {
+    return dropdownButtonFormField?.call(
+        key,
+        field,
+        items,
+        value,
+        hint,
+        disabledHint,
+        onTap,
+        elevation,
+        style,
+        this.icon,
+        iconDisabledColor,
+        iconEnabledColor,
+        iconSize,
+        isDense,
+        isExpanded,
+        itemHeight,
+        focusColor,
+        autofocus,
+        dropdownColor,
+        decoration,
+        validatorMessages,
+        autovalidateMode,
+        menuMaxHeight,
+        enableFeedback,
+        alignment,
+        borderRadius);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(
+            Key? key,
+            Color? color,
+            Color? shadowColor,
+            Color? surfaceTintColor,
+            double? elevation,
+            ShapeBorder? shape,
+            bool borderOnForeground,
+            EdgeInsets? margin,
+            Clip? clipBehavior,
+            Widget? child,
+            bool semanticContainer)?
+        card,
+    TResult Function(
+            Key? key,
+            Callback? onPressed,
+            Callback? onLongPress,
+            bool autofocus,
+            Clip clipBehavior,
+            Widget child,
+            ButtonStyle? style)?
+        elevatedButton,
+    TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        filledButton,
+    TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        filledTonalButton,
+    TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        outlinedButton,
+    TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        textButton,
+    TResult Function(
+            Key? key,
+            double? iconSize,
+            VisualDensity? visualDensity,
+            EdgeInsets? padding,
+            Alignment? alignment,
+            double? splashRadius,
+            Color? color,
+            Color? focusColor,
+            Color? hoverColor,
+            Color? highlightColor,
+            Color? splashColor,
+            Color? disabledColor,
+            Callback onPressed,
+            MouseCursor? mouseCursor,
+            bool autofocus,
+            String? tooltip,
+            bool? enableFeedback,
+            BoxConstraints? constraints,
+            bool? isSelected,
+            Widget? selectedIcon,
+            Widget icon)?
+        iconButton,
+    TResult Function(
+            Key? key,
+            PreferredSizeWidget? appBar,
+            Widget? body,
+            Widget? floatingActionButton,
+            FloatingActionButtonLocation? floatingActionButtonLocation,
+            List<Widget>? persistentFooterButtons,
+            Alignment persistentFooterAlignment,
+            Widget? drawer,
+            Widget? endDrawer,
+            Widget? bottomNavigationBar,
+            Widget? bottomSheet,
+            Color? backgroundColor,
+            bool? resizeToAvoidBottomInset,
+            bool primary,
+            bool extendBody,
+            bool extendBodyBehindAppBar,
+            Color? drawerScrimColor,
+            double? drawerEdgeDragWidth,
+            bool drawerEnableOpenDragGesture,
+            bool endDrawerEnableOpenDragGesture,
+            String? restorationId)?
+        scaffold,
+    TResult Function(Key? key, Widget? child, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, bool mini, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButton,
+    TResult Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButtonExtended,
+    TResult Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor)? text,
+    TResult Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior)? container,
+    TResult Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
+    TResult Function(Key? key, double? widthFactor, double? heightFactor, Widget child)? center,
+    TResult Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection)? icon,
+    TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? column,
+    TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? row,
+    TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue)? circularProgressIndicator,
+    TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue)? linearProgressIndicator,
+    TResult Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color)? divider,
+    TResult Function(Key? key, Color? backgroundColor, bool extended, Widget? leading, Widget? trailing, List<NavigationRailDestination> destinations, int? selectedIndex, IntSelectionCallback? onDestinationSelected, double? elevation, double? groupAlignment, NavigationRailLabelType? labelType, TextStyle? unselectedLabelTextStyle, TextStyle? selectedLabelTextStyle, IconThemeData? unselectedIconTheme, IconThemeData? selectedIconTheme, double? minWidth, double? minExtendedWidth, bool? useIndicator, Color? indicatorColor, ShapeBorder? indicatorShape)? navigationRail,
+    TResult Function(Key? key, Duration? animationDuration, int selectedIndex, List<Widget> destinations, IntSelectionCallback? onDestinationSelected, Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, Color? indicatorColor, ShapeBorder? indicatorShape, double? height, NavigationDestinationLabelBehavior? labelBehavior)? navigationBar,
+    TResult Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration)? defaultTabController,
+    TResult Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child)? tab,
+    TResult Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior)? tabBarView,
+    TResult Function(Key? key, Axis scrollDirection, bool reverse, bool? primary, ScrollPhysics? physics, bool shrinkWrap, Key? center, double anchor, double? cacheExtent, List<Sliver> slivers, int? semanticChildCount, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior, String? restorationId, Clip clipBehavior)? customScrollView,
+    TResult Function(Key? key, bool? value, bool tristate, FormBoolField? field, MouseCursor? mouseCursor, Color? activeColor, MaterialStateProperty? fillColor, Color? checkColor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, MaterialTapTargetSize? materialTapTargetSize, VisualDensity? visualDensity, bool autofocus, ShapeBorder? shape, BorderSide? side, bool isError)? checkbox,
+    TResult Function(Key? key, FormStringField? field, List<DropdownMenuItem> items, String? value, Widget? hint, Widget? disabledHint, Callback? onTap, int elevation, TextStyle? style, Widget? icon, Color? iconDisabledColor, Color? iconEnabledColor, double iconSize, bool isDense, bool isExpanded, double? itemHeight, Color? focusColor, bool autofocus, Color? dropdownColor, InputDecoration? decoration, Map<String, String>? validatorMessages, AutovalidateMode? autovalidateMode, double? menuMaxHeight, bool? enableFeedback, Alignment alignment, BorderRadius? borderRadius)? dropdownButtonFormField,
+    TResult Function(Key? key, List<PopupMenuEntry> items, String? initialValue, Callback? onOpened, FormStringField? field, Callback? onCanceled, String? tooltip, double? elevation, Color? shadowColor, Color? surfaceTintColor, EdgeInsets padding, Widget? child, double? splashRadius, Widget? icon, double? iconSize, Offset offset, bool enabled, ShapeBorder? shape, Color? color, bool? enableFeedback, BoxConstraints? constraints, PopupMenuPosition? position, Clip clipBehavior)? popupMenuButton,
+    TResult Function(Key? key, Widget icon, Widget? selectedIcon, String label, String? tooltip)? navigationDestination,
+    TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
+    TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
+    TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
+    required TResult orElse(),
+  }) {
+    if (dropdownButtonFormField != null) {
+      return dropdownButtonFormField(
+          key,
+          field,
+          items,
+          value,
+          hint,
+          disabledHint,
+          onTap,
+          elevation,
+          style,
+          this.icon,
+          iconDisabledColor,
+          iconEnabledColor,
+          iconSize,
+          isDense,
+          isExpanded,
+          itemHeight,
+          focusColor,
+          autofocus,
+          dropdownColor,
+          decoration,
+          validatorMessages,
+          autovalidateMode,
+          menuMaxHeight,
+          enableFeedback,
+          alignment,
+          borderRadius);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(Card value) card,
+    required TResult Function(ElevatedButton value) elevatedButton,
+    required TResult Function(FilledButton value) filledButton,
+    required TResult Function(FilledTonalButton value) filledTonalButton,
+    required TResult Function(OutlinedButton value) outlinedButton,
+    required TResult Function(TextButton value) textButton,
+    required TResult Function(IconButton value) iconButton,
+    required TResult Function(Scaffold value) scaffold,
+    required TResult Function(FloatingActionButton value) floatingActionButton,
+    required TResult Function(FloatingActionButtonExtended value)
+        floatingActionButtonExtended,
+    required TResult Function(Text value) text,
+    required TResult Function(Container value) container,
+    required TResult Function(SizedBox value) sizedBox,
+    required TResult Function(Center value) center,
+    required TResult Function(Icon value) icon,
+    required TResult Function(Column value) column,
+    required TResult Function(Row value) row,
+    required TResult Function(CircularProgressIndicator value)
+        circularProgressIndicator,
+    required TResult Function(LinearProgressIndicator value)
+        linearProgressIndicator,
+    required TResult Function(Divider value) divider,
+    required TResult Function(NavigationRail value) navigationRail,
+    required TResult Function(NavigationBar value) navigationBar,
+    required TResult Function(DefaultTabController value) defaultTabController,
+    required TResult Function(Tab value) tab,
+    required TResult Function(TabBarView value) tabBarView,
+    required TResult Function(CustomScrollView value) customScrollView,
+    required TResult Function(Checkbox value) checkbox,
+    required TResult Function(DropdownButtonFormField value)
+        dropdownButtonFormField,
+    required TResult Function(PopupMenuButton value) popupMenuButton,
+    required TResult Function(NavigationDestination value)
+        navigationDestination,
+    required TResult Function(ActionChip value) actionChip,
+    required TResult Function(FilterChip value) filterChip,
+    required TResult Function(InputChip value) inputChip,
+  }) {
+    return dropdownButtonFormField(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(Card value)? card,
+    TResult? Function(ElevatedButton value)? elevatedButton,
+    TResult? Function(FilledButton value)? filledButton,
+    TResult? Function(FilledTonalButton value)? filledTonalButton,
+    TResult? Function(OutlinedButton value)? outlinedButton,
+    TResult? Function(TextButton value)? textButton,
+    TResult? Function(IconButton value)? iconButton,
+    TResult? Function(Scaffold value)? scaffold,
+    TResult? Function(FloatingActionButton value)? floatingActionButton,
+    TResult? Function(FloatingActionButtonExtended value)?
+        floatingActionButtonExtended,
+    TResult? Function(Text value)? text,
+    TResult? Function(Container value)? container,
+    TResult? Function(SizedBox value)? sizedBox,
+    TResult? Function(Center value)? center,
+    TResult? Function(Icon value)? icon,
+    TResult? Function(Column value)? column,
+    TResult? Function(Row value)? row,
+    TResult? Function(CircularProgressIndicator value)?
+        circularProgressIndicator,
+    TResult? Function(LinearProgressIndicator value)? linearProgressIndicator,
+    TResult? Function(Divider value)? divider,
+    TResult? Function(NavigationRail value)? navigationRail,
+    TResult? Function(NavigationBar value)? navigationBar,
+    TResult? Function(DefaultTabController value)? defaultTabController,
+    TResult? Function(Tab value)? tab,
+    TResult? Function(TabBarView value)? tabBarView,
+    TResult? Function(CustomScrollView value)? customScrollView,
+    TResult? Function(Checkbox value)? checkbox,
+    TResult? Function(DropdownButtonFormField value)? dropdownButtonFormField,
+    TResult? Function(PopupMenuButton value)? popupMenuButton,
+    TResult? Function(NavigationDestination value)? navigationDestination,
+    TResult? Function(ActionChip value)? actionChip,
+    TResult? Function(FilterChip value)? filterChip,
+    TResult? Function(InputChip value)? inputChip,
+  }) {
+    return dropdownButtonFormField?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(Card value)? card,
+    TResult Function(ElevatedButton value)? elevatedButton,
+    TResult Function(FilledButton value)? filledButton,
+    TResult Function(FilledTonalButton value)? filledTonalButton,
+    TResult Function(OutlinedButton value)? outlinedButton,
+    TResult Function(TextButton value)? textButton,
+    TResult Function(IconButton value)? iconButton,
+    TResult Function(Scaffold value)? scaffold,
+    TResult Function(FloatingActionButton value)? floatingActionButton,
+    TResult Function(FloatingActionButtonExtended value)?
+        floatingActionButtonExtended,
+    TResult Function(Text value)? text,
+    TResult Function(Container value)? container,
+    TResult Function(SizedBox value)? sizedBox,
+    TResult Function(Center value)? center,
+    TResult Function(Icon value)? icon,
+    TResult Function(Column value)? column,
+    TResult Function(Row value)? row,
+    TResult Function(CircularProgressIndicator value)?
+        circularProgressIndicator,
+    TResult Function(LinearProgressIndicator value)? linearProgressIndicator,
+    TResult Function(Divider value)? divider,
+    TResult Function(NavigationRail value)? navigationRail,
+    TResult Function(NavigationBar value)? navigationBar,
+    TResult Function(DefaultTabController value)? defaultTabController,
+    TResult Function(Tab value)? tab,
+    TResult Function(TabBarView value)? tabBarView,
+    TResult Function(CustomScrollView value)? customScrollView,
+    TResult Function(Checkbox value)? checkbox,
+    TResult Function(DropdownButtonFormField value)? dropdownButtonFormField,
+    TResult Function(PopupMenuButton value)? popupMenuButton,
+    TResult Function(NavigationDestination value)? navigationDestination,
+    TResult Function(ActionChip value)? actionChip,
+    TResult Function(FilterChip value)? filterChip,
+    TResult Function(InputChip value)? inputChip,
+    required TResult orElse(),
+  }) {
+    if (dropdownButtonFormField != null) {
+      return dropdownButtonFormField(this);
+    }
+    return orElse();
+  }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$DropdownButtonFormFieldToJson(
+      this,
+    );
+  }
+}
+
+abstract class DropdownButtonFormField implements Widget {
+  const factory DropdownButtonFormField(
+      {final Key? key,
+      final FormStringField? field,
+      required final List<DropdownMenuItem> items,
+      final String? value,
+      final Widget? hint,
+      final Widget? disabledHint,
+      final Callback? onTap,
+      final int elevation,
+      final TextStyle? style,
+      final Widget? icon,
+      final Color? iconDisabledColor,
+      final Color? iconEnabledColor,
+      final double iconSize,
+      final bool isDense,
+      final bool isExpanded,
+      final double? itemHeight,
+      final Color? focusColor,
+      final bool autofocus,
+      final Color? dropdownColor,
+      final InputDecoration? decoration,
+      final Map<String, String>? validatorMessages,
+      final AutovalidateMode? autovalidateMode,
+      final double? menuMaxHeight,
+      final bool? enableFeedback,
+      final Alignment alignment,
+      final BorderRadius? borderRadius}) = _$DropdownButtonFormField;
+
+  factory DropdownButtonFormField.fromJson(Map<String, dynamic> json) =
+      _$DropdownButtonFormField.fromJson;
+
+  @override
+  Key? get key;
+  FormStringField? get field;
+  List<DropdownMenuItem> get items;
+  String? get value;
+  Widget? get hint;
+  Widget? get disabledHint;
+  Callback? get onTap;
+  int get elevation;
+  TextStyle? get style;
+  Widget? get icon;
+  Color? get iconDisabledColor;
+  Color? get iconEnabledColor;
+  double get iconSize;
+  bool get isDense;
+  bool get isExpanded;
+  double? get itemHeight;
+  Color? get focusColor;
+  bool get autofocus;
+  Color? get dropdownColor;
+  InputDecoration? get decoration;
+  Map<String, String>? get validatorMessages;
+  AutovalidateMode? get autovalidateMode;
+  double? get menuMaxHeight;
+  bool? get enableFeedback;
+  Alignment get alignment;
+  BorderRadius? get borderRadius;
+  @override
+  @JsonKey(ignore: true)
+  _$$DropdownButtonFormFieldCopyWith<_$DropdownButtonFormField> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$PopupMenuButtonCopyWith<$Res>
+    implements $WidgetCopyWith<$Res> {
+  factory _$$PopupMenuButtonCopyWith(
+          _$PopupMenuButton value, $Res Function(_$PopupMenuButton) then) =
+      __$$PopupMenuButtonCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {Key? key,
+      List<PopupMenuEntry> items,
+      String? initialValue,
+      Callback? onOpened,
+      FormStringField? field,
+      Callback? onCanceled,
+      String? tooltip,
+      double? elevation,
+      Color? shadowColor,
+      Color? surfaceTintColor,
+      EdgeInsets padding,
+      Widget? child,
+      double? splashRadius,
+      Widget? icon,
+      double? iconSize,
+      Offset offset,
+      bool enabled,
+      ShapeBorder? shape,
+      Color? color,
+      bool? enableFeedback,
+      BoxConstraints? constraints,
+      PopupMenuPosition? position,
+      Clip clipBehavior});
+
+  @override
+  $KeyCopyWith<$Res>? get key;
+  $CallbackCopyWith<$Res>? get onOpened;
+  $CallbackCopyWith<$Res>? get onCanceled;
+  $ColorCopyWith<$Res>? get shadowColor;
+  $ColorCopyWith<$Res>? get surfaceTintColor;
+  $EdgeInsetsCopyWith<$Res> get padding;
+  $WidgetCopyWith<$Res>? get child;
+  $WidgetCopyWith<$Res>? get icon;
+  $OffsetCopyWith<$Res> get offset;
+  $ShapeBorderCopyWith<$Res>? get shape;
+  $ColorCopyWith<$Res>? get color;
+  $BoxConstraintsCopyWith<$Res>? get constraints;
+}
+
+/// @nodoc
+class __$$PopupMenuButtonCopyWithImpl<$Res>
+    extends _$WidgetCopyWithImpl<$Res, _$PopupMenuButton>
+    implements _$$PopupMenuButtonCopyWith<$Res> {
+  __$$PopupMenuButtonCopyWithImpl(
+      _$PopupMenuButton _value, $Res Function(_$PopupMenuButton) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? key = freezed,
+    Object? items = null,
+    Object? initialValue = freezed,
+    Object? onOpened = freezed,
+    Object? field = freezed,
+    Object? onCanceled = freezed,
+    Object? tooltip = freezed,
+    Object? elevation = freezed,
+    Object? shadowColor = freezed,
+    Object? surfaceTintColor = freezed,
+    Object? padding = null,
+    Object? child = freezed,
+    Object? splashRadius = freezed,
+    Object? icon = freezed,
+    Object? iconSize = freezed,
+    Object? offset = null,
+    Object? enabled = null,
+    Object? shape = freezed,
+    Object? color = freezed,
+    Object? enableFeedback = freezed,
+    Object? constraints = freezed,
+    Object? position = freezed,
+    Object? clipBehavior = null,
+  }) {
+    return _then(_$PopupMenuButton(
+      key: freezed == key
+          ? _value.key
+          : key // ignore: cast_nullable_to_non_nullable
+              as Key?,
+      items: null == items
+          ? _value._items
+          : items // ignore: cast_nullable_to_non_nullable
+              as List<PopupMenuEntry>,
+      initialValue: freezed == initialValue
+          ? _value.initialValue
+          : initialValue // ignore: cast_nullable_to_non_nullable
+              as String?,
+      onOpened: freezed == onOpened
+          ? _value.onOpened
+          : onOpened // ignore: cast_nullable_to_non_nullable
+              as Callback?,
+      field: freezed == field
+          ? _value.field
+          : field // ignore: cast_nullable_to_non_nullable
+              as FormStringField?,
+      onCanceled: freezed == onCanceled
+          ? _value.onCanceled
+          : onCanceled // ignore: cast_nullable_to_non_nullable
+              as Callback?,
+      tooltip: freezed == tooltip
+          ? _value.tooltip
+          : tooltip // ignore: cast_nullable_to_non_nullable
+              as String?,
+      elevation: freezed == elevation
+          ? _value.elevation
+          : elevation // ignore: cast_nullable_to_non_nullable
+              as double?,
+      shadowColor: freezed == shadowColor
+          ? _value.shadowColor
+          : shadowColor // ignore: cast_nullable_to_non_nullable
+              as Color?,
+      surfaceTintColor: freezed == surfaceTintColor
+          ? _value.surfaceTintColor
+          : surfaceTintColor // ignore: cast_nullable_to_non_nullable
+              as Color?,
+      padding: null == padding
+          ? _value.padding
+          : padding // ignore: cast_nullable_to_non_nullable
+              as EdgeInsets,
+      child: freezed == child
+          ? _value.child
+          : child // ignore: cast_nullable_to_non_nullable
+              as Widget?,
+      splashRadius: freezed == splashRadius
+          ? _value.splashRadius
+          : splashRadius // ignore: cast_nullable_to_non_nullable
+              as double?,
+      icon: freezed == icon
+          ? _value.icon
+          : icon // ignore: cast_nullable_to_non_nullable
+              as Widget?,
+      iconSize: freezed == iconSize
+          ? _value.iconSize
+          : iconSize // ignore: cast_nullable_to_non_nullable
+              as double?,
+      offset: null == offset
+          ? _value.offset
+          : offset // ignore: cast_nullable_to_non_nullable
+              as Offset,
+      enabled: null == enabled
+          ? _value.enabled
+          : enabled // ignore: cast_nullable_to_non_nullable
+              as bool,
+      shape: freezed == shape
+          ? _value.shape
+          : shape // ignore: cast_nullable_to_non_nullable
+              as ShapeBorder?,
+      color: freezed == color
+          ? _value.color
+          : color // ignore: cast_nullable_to_non_nullable
+              as Color?,
+      enableFeedback: freezed == enableFeedback
+          ? _value.enableFeedback
+          : enableFeedback // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      constraints: freezed == constraints
+          ? _value.constraints
+          : constraints // ignore: cast_nullable_to_non_nullable
+              as BoxConstraints?,
+      position: freezed == position
+          ? _value.position
+          : position // ignore: cast_nullable_to_non_nullable
+              as PopupMenuPosition?,
+      clipBehavior: null == clipBehavior
+          ? _value.clipBehavior
+          : clipBehavior // ignore: cast_nullable_to_non_nullable
+              as Clip,
+    ));
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $CallbackCopyWith<$Res>? get onOpened {
+    if (_value.onOpened == null) {
+      return null;
+    }
+
+    return $CallbackCopyWith<$Res>(_value.onOpened!, (value) {
+      return _then(_value.copyWith(onOpened: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $CallbackCopyWith<$Res>? get onCanceled {
+    if (_value.onCanceled == null) {
+      return null;
+    }
+
+    return $CallbackCopyWith<$Res>(_value.onCanceled!, (value) {
+      return _then(_value.copyWith(onCanceled: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ColorCopyWith<$Res>? get shadowColor {
+    if (_value.shadowColor == null) {
+      return null;
+    }
+
+    return $ColorCopyWith<$Res>(_value.shadowColor!, (value) {
+      return _then(_value.copyWith(shadowColor: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ColorCopyWith<$Res>? get surfaceTintColor {
+    if (_value.surfaceTintColor == null) {
+      return null;
+    }
+
+    return $ColorCopyWith<$Res>(_value.surfaceTintColor!, (value) {
+      return _then(_value.copyWith(surfaceTintColor: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $EdgeInsetsCopyWith<$Res> get padding {
+    return $EdgeInsetsCopyWith<$Res>(_value.padding, (value) {
+      return _then(_value.copyWith(padding: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $WidgetCopyWith<$Res>? get child {
+    if (_value.child == null) {
+      return null;
+    }
+
+    return $WidgetCopyWith<$Res>(_value.child!, (value) {
+      return _then(_value.copyWith(child: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $WidgetCopyWith<$Res>? get icon {
+    if (_value.icon == null) {
+      return null;
+    }
+
+    return $WidgetCopyWith<$Res>(_value.icon!, (value) {
+      return _then(_value.copyWith(icon: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $OffsetCopyWith<$Res> get offset {
+    return $OffsetCopyWith<$Res>(_value.offset, (value) {
+      return _then(_value.copyWith(offset: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ShapeBorderCopyWith<$Res>? get shape {
+    if (_value.shape == null) {
+      return null;
+    }
+
+    return $ShapeBorderCopyWith<$Res>(_value.shape!, (value) {
+      return _then(_value.copyWith(shape: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ColorCopyWith<$Res>? get color {
+    if (_value.color == null) {
+      return null;
+    }
+
+    return $ColorCopyWith<$Res>(_value.color!, (value) {
+      return _then(_value.copyWith(color: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $BoxConstraintsCopyWith<$Res>? get constraints {
+    if (_value.constraints == null) {
+      return null;
+    }
+
+    return $BoxConstraintsCopyWith<$Res>(_value.constraints!, (value) {
+      return _then(_value.copyWith(constraints: value));
+    });
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$PopupMenuButton implements PopupMenuButton {
+  const _$PopupMenuButton(
+      {this.key,
+      required final List<PopupMenuEntry> items,
+      this.initialValue,
+      this.onOpened,
+      this.field,
+      this.onCanceled,
+      this.tooltip,
+      this.elevation,
+      this.shadowColor,
+      this.surfaceTintColor,
+      this.padding = const EdgeInsets.all(8.0),
+      this.child,
+      this.splashRadius,
+      this.icon,
+      this.iconSize,
+      this.offset = Offset.zero,
+      this.enabled = true,
+      this.shape,
+      this.color,
+      this.enableFeedback,
+      this.constraints,
+      this.position,
+      this.clipBehavior = Clip.none,
+      final String? $type})
+      : _items = items,
+        $type = $type ?? 'popupMenuButton';
+
+  factory _$PopupMenuButton.fromJson(Map<String, dynamic> json) =>
+      _$$PopupMenuButtonFromJson(json);
+
+  @override
+  final Key? key;
+  final List<PopupMenuEntry> _items;
+  @override
+  List<PopupMenuEntry> get items {
+    if (_items is EqualUnmodifiableListView) return _items;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_items);
+  }
+
+  @override
+  final String? initialValue;
+  @override
+  final Callback? onOpened;
+  @override
+  final FormStringField? field;
+  @override
+  final Callback? onCanceled;
+  @override
+  final String? tooltip;
+  @override
+  final double? elevation;
+  @override
+  final Color? shadowColor;
+  @override
+  final Color? surfaceTintColor;
+  @override
+  @JsonKey()
+  final EdgeInsets padding;
+  @override
+  final Widget? child;
+  @override
+  final double? splashRadius;
+  @override
+  final Widget? icon;
+  @override
+  final double? iconSize;
+  @override
+  @JsonKey()
+  final Offset offset;
+  @override
+  @JsonKey()
+  final bool enabled;
+  @override
+  final ShapeBorder? shape;
+  @override
+  final Color? color;
+  @override
+  final bool? enableFeedback;
+  @override
+  final BoxConstraints? constraints;
+  @override
+  final PopupMenuPosition? position;
+  @override
+  @JsonKey()
+  final Clip clipBehavior;
+
+  @JsonKey(name: 'runtimeType')
+  final String $type;
+
+  @override
+  String toString() {
+    return 'Widget.popupMenuButton(key: $key, items: $items, initialValue: $initialValue, onOpened: $onOpened, field: $field, onCanceled: $onCanceled, tooltip: $tooltip, elevation: $elevation, shadowColor: $shadowColor, surfaceTintColor: $surfaceTintColor, padding: $padding, child: $child, splashRadius: $splashRadius, icon: $icon, iconSize: $iconSize, offset: $offset, enabled: $enabled, shape: $shape, color: $color, enableFeedback: $enableFeedback, constraints: $constraints, position: $position, clipBehavior: $clipBehavior)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$PopupMenuButton &&
+            (identical(other.key, key) || other.key == key) &&
+            const DeepCollectionEquality().equals(other._items, _items) &&
+            (identical(other.initialValue, initialValue) ||
+                other.initialValue == initialValue) &&
+            (identical(other.onOpened, onOpened) ||
+                other.onOpened == onOpened) &&
+            const DeepCollectionEquality().equals(other.field, field) &&
+            (identical(other.onCanceled, onCanceled) ||
+                other.onCanceled == onCanceled) &&
+            (identical(other.tooltip, tooltip) || other.tooltip == tooltip) &&
+            (identical(other.elevation, elevation) ||
+                other.elevation == elevation) &&
+            (identical(other.shadowColor, shadowColor) ||
+                other.shadowColor == shadowColor) &&
+            (identical(other.surfaceTintColor, surfaceTintColor) ||
+                other.surfaceTintColor == surfaceTintColor) &&
+            (identical(other.padding, padding) || other.padding == padding) &&
+            (identical(other.child, child) || other.child == child) &&
+            (identical(other.splashRadius, splashRadius) ||
+                other.splashRadius == splashRadius) &&
+            (identical(other.icon, icon) || other.icon == icon) &&
+            (identical(other.iconSize, iconSize) ||
+                other.iconSize == iconSize) &&
+            (identical(other.offset, offset) || other.offset == offset) &&
+            (identical(other.enabled, enabled) || other.enabled == enabled) &&
+            (identical(other.shape, shape) || other.shape == shape) &&
+            (identical(other.color, color) || other.color == color) &&
+            (identical(other.enableFeedback, enableFeedback) ||
+                other.enableFeedback == enableFeedback) &&
+            (identical(other.constraints, constraints) ||
+                other.constraints == constraints) &&
+            (identical(other.position, position) ||
+                other.position == position) &&
+            (identical(other.clipBehavior, clipBehavior) ||
+                other.clipBehavior == clipBehavior));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hashAll([
+        runtimeType,
+        key,
+        const DeepCollectionEquality().hash(_items),
+        initialValue,
+        onOpened,
+        const DeepCollectionEquality().hash(field),
+        onCanceled,
+        tooltip,
+        elevation,
+        shadowColor,
+        surfaceTintColor,
+        padding,
+        child,
+        splashRadius,
+        icon,
+        iconSize,
+        offset,
+        enabled,
+        shape,
+        color,
+        enableFeedback,
+        constraints,
+        position,
+        clipBehavior
+      ]);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$PopupMenuButtonCopyWith<_$PopupMenuButton> get copyWith =>
+      __$$PopupMenuButtonCopyWithImpl<_$PopupMenuButton>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(
+            Key? key,
+            Color? color,
+            Color? shadowColor,
+            Color? surfaceTintColor,
+            double? elevation,
+            ShapeBorder? shape,
+            bool borderOnForeground,
+            EdgeInsets? margin,
+            Clip? clipBehavior,
+            Widget? child,
+            bool semanticContainer)
+        card,
+    required TResult Function(
+            Key? key,
+            Callback? onPressed,
+            Callback? onLongPress,
+            bool autofocus,
+            Clip clipBehavior,
+            Widget child,
+            ButtonStyle? style)
+        elevatedButton,
+    required TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)
+        filledButton,
+    required TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)
+        filledTonalButton,
+    required TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)
+        outlinedButton,
+    required TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)
+        textButton,
+    required TResult Function(
+            Key? key,
+            double? iconSize,
+            VisualDensity? visualDensity,
+            EdgeInsets? padding,
+            Alignment? alignment,
+            double? splashRadius,
+            Color? color,
+            Color? focusColor,
+            Color? hoverColor,
+            Color? highlightColor,
+            Color? splashColor,
+            Color? disabledColor,
+            Callback onPressed,
+            MouseCursor? mouseCursor,
+            bool autofocus,
+            String? tooltip,
+            bool? enableFeedback,
+            BoxConstraints? constraints,
+            bool? isSelected,
+            Widget? selectedIcon,
+            Widget icon)
+        iconButton,
+    required TResult Function(
+            Key? key,
+            PreferredSizeWidget? appBar,
+            Widget? body,
+            Widget? floatingActionButton,
+            FloatingActionButtonLocation? floatingActionButtonLocation,
+            List<Widget>? persistentFooterButtons,
+            Alignment persistentFooterAlignment,
+            Widget? drawer,
+            Widget? endDrawer,
+            Widget? bottomNavigationBar,
+            Widget? bottomSheet,
+            Color? backgroundColor,
+            bool? resizeToAvoidBottomInset,
+            bool primary,
+            bool extendBody,
+            bool extendBodyBehindAppBar,
+            Color? drawerScrimColor,
+            double? drawerEdgeDragWidth,
+            bool drawerEnableOpenDragGesture,
+            bool endDrawerEnableOpenDragGesture,
+            String? restorationId)
+        scaffold,
+    required TResult Function(Key? key, Widget? child, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, bool mini, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback) floatingActionButton,
+    required TResult Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback) floatingActionButtonExtended,
+    required TResult Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor) text,
+    required TResult Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior) container,
+    required TResult Function(Key? key, double? width, double? height, Widget? child) sizedBox,
+    required TResult Function(Key? key, double? widthFactor, double? heightFactor, Widget child) center,
+    required TResult Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection) icon,
+    required TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children) column,
+    required TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children) row,
+    required TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue) circularProgressIndicator,
+    required TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue) linearProgressIndicator,
+    required TResult Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color) divider,
+    required TResult Function(Key? key, Color? backgroundColor, bool extended, Widget? leading, Widget? trailing, List<NavigationRailDestination> destinations, int? selectedIndex, IntSelectionCallback? onDestinationSelected, double? elevation, double? groupAlignment, NavigationRailLabelType? labelType, TextStyle? unselectedLabelTextStyle, TextStyle? selectedLabelTextStyle, IconThemeData? unselectedIconTheme, IconThemeData? selectedIconTheme, double? minWidth, double? minExtendedWidth, bool? useIndicator, Color? indicatorColor, ShapeBorder? indicatorShape) navigationRail,
+    required TResult Function(Key? key, Duration? animationDuration, int selectedIndex, List<Widget> destinations, IntSelectionCallback? onDestinationSelected, Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, Color? indicatorColor, ShapeBorder? indicatorShape, double? height, NavigationDestinationLabelBehavior? labelBehavior) navigationBar,
+    required TResult Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration) defaultTabController,
+    required TResult Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child) tab,
+    required TResult Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior) tabBarView,
+    required TResult Function(Key? key, Axis scrollDirection, bool reverse, bool? primary, ScrollPhysics? physics, bool shrinkWrap, Key? center, double anchor, double? cacheExtent, List<Sliver> slivers, int? semanticChildCount, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior, String? restorationId, Clip clipBehavior) customScrollView,
+    required TResult Function(Key? key, bool? value, bool tristate, FormBoolField? field, MouseCursor? mouseCursor, Color? activeColor, MaterialStateProperty? fillColor, Color? checkColor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, MaterialTapTargetSize? materialTapTargetSize, VisualDensity? visualDensity, bool autofocus, ShapeBorder? shape, BorderSide? side, bool isError) checkbox,
+    required TResult Function(Key? key, FormStringField? field, List<DropdownMenuItem> items, String? value, Widget? hint, Widget? disabledHint, Callback? onTap, int elevation, TextStyle? style, Widget? icon, Color? iconDisabledColor, Color? iconEnabledColor, double iconSize, bool isDense, bool isExpanded, double? itemHeight, Color? focusColor, bool autofocus, Color? dropdownColor, InputDecoration? decoration, Map<String, String>? validatorMessages, AutovalidateMode? autovalidateMode, double? menuMaxHeight, bool? enableFeedback, Alignment alignment, BorderRadius? borderRadius) dropdownButtonFormField,
+    required TResult Function(Key? key, List<PopupMenuEntry> items, String? initialValue, Callback? onOpened, FormStringField? field, Callback? onCanceled, String? tooltip, double? elevation, Color? shadowColor, Color? surfaceTintColor, EdgeInsets padding, Widget? child, double? splashRadius, Widget? icon, double? iconSize, Offset offset, bool enabled, ShapeBorder? shape, Color? color, bool? enableFeedback, BoxConstraints? constraints, PopupMenuPosition? position, Clip clipBehavior) popupMenuButton,
+    required TResult Function(Key? key, Widget icon, Widget? selectedIcon, String label, String? tooltip) navigationDestination,
+    required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme) actionChip,
+    required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) filterChip,
+    required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) inputChip,
+  }) {
+    return popupMenuButton(
+        key,
+        items,
+        initialValue,
+        onOpened,
+        field,
+        onCanceled,
+        tooltip,
+        elevation,
+        shadowColor,
+        surfaceTintColor,
+        padding,
+        child,
+        splashRadius,
+        this.icon,
+        iconSize,
+        offset,
+        enabled,
+        shape,
+        color,
+        enableFeedback,
+        constraints,
+        position,
+        clipBehavior);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(
+            Key? key,
+            Color? color,
+            Color? shadowColor,
+            Color? surfaceTintColor,
+            double? elevation,
+            ShapeBorder? shape,
+            bool borderOnForeground,
+            EdgeInsets? margin,
+            Clip? clipBehavior,
+            Widget? child,
+            bool semanticContainer)?
+        card,
+    TResult? Function(
+            Key? key,
+            Callback? onPressed,
+            Callback? onLongPress,
+            bool autofocus,
+            Clip clipBehavior,
+            Widget child,
+            ButtonStyle? style)?
+        elevatedButton,
+    TResult? Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        filledButton,
+    TResult? Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        filledTonalButton,
+    TResult? Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        outlinedButton,
+    TResult? Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        textButton,
+    TResult? Function(
+            Key? key,
+            double? iconSize,
+            VisualDensity? visualDensity,
+            EdgeInsets? padding,
+            Alignment? alignment,
+            double? splashRadius,
+            Color? color,
+            Color? focusColor,
+            Color? hoverColor,
+            Color? highlightColor,
+            Color? splashColor,
+            Color? disabledColor,
+            Callback onPressed,
+            MouseCursor? mouseCursor,
+            bool autofocus,
+            String? tooltip,
+            bool? enableFeedback,
+            BoxConstraints? constraints,
+            bool? isSelected,
+            Widget? selectedIcon,
+            Widget icon)?
+        iconButton,
+    TResult? Function(
+            Key? key,
+            PreferredSizeWidget? appBar,
+            Widget? body,
+            Widget? floatingActionButton,
+            FloatingActionButtonLocation? floatingActionButtonLocation,
+            List<Widget>? persistentFooterButtons,
+            Alignment persistentFooterAlignment,
+            Widget? drawer,
+            Widget? endDrawer,
+            Widget? bottomNavigationBar,
+            Widget? bottomSheet,
+            Color? backgroundColor,
+            bool? resizeToAvoidBottomInset,
+            bool primary,
+            bool extendBody,
+            bool extendBodyBehindAppBar,
+            Color? drawerScrimColor,
+            double? drawerEdgeDragWidth,
+            bool drawerEnableOpenDragGesture,
+            bool endDrawerEnableOpenDragGesture,
+            String? restorationId)?
+        scaffold,
+    TResult? Function(Key? key, Widget? child, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, bool mini, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButton,
+    TResult? Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButtonExtended,
+    TResult? Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor)? text,
+    TResult? Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior)? container,
+    TResult? Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
+    TResult? Function(Key? key, double? widthFactor, double? heightFactor, Widget child)? center,
+    TResult? Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection)? icon,
+    TResult? Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? column,
+    TResult? Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? row,
+    TResult? Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue)? circularProgressIndicator,
+    TResult? Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue)? linearProgressIndicator,
+    TResult? Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color)? divider,
+    TResult? Function(Key? key, Color? backgroundColor, bool extended, Widget? leading, Widget? trailing, List<NavigationRailDestination> destinations, int? selectedIndex, IntSelectionCallback? onDestinationSelected, double? elevation, double? groupAlignment, NavigationRailLabelType? labelType, TextStyle? unselectedLabelTextStyle, TextStyle? selectedLabelTextStyle, IconThemeData? unselectedIconTheme, IconThemeData? selectedIconTheme, double? minWidth, double? minExtendedWidth, bool? useIndicator, Color? indicatorColor, ShapeBorder? indicatorShape)? navigationRail,
+    TResult? Function(Key? key, Duration? animationDuration, int selectedIndex, List<Widget> destinations, IntSelectionCallback? onDestinationSelected, Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, Color? indicatorColor, ShapeBorder? indicatorShape, double? height, NavigationDestinationLabelBehavior? labelBehavior)? navigationBar,
+    TResult? Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration)? defaultTabController,
+    TResult? Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child)? tab,
+    TResult? Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior)? tabBarView,
+    TResult? Function(Key? key, Axis scrollDirection, bool reverse, bool? primary, ScrollPhysics? physics, bool shrinkWrap, Key? center, double anchor, double? cacheExtent, List<Sliver> slivers, int? semanticChildCount, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior, String? restorationId, Clip clipBehavior)? customScrollView,
+    TResult? Function(Key? key, bool? value, bool tristate, FormBoolField? field, MouseCursor? mouseCursor, Color? activeColor, MaterialStateProperty? fillColor, Color? checkColor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, MaterialTapTargetSize? materialTapTargetSize, VisualDensity? visualDensity, bool autofocus, ShapeBorder? shape, BorderSide? side, bool isError)? checkbox,
+    TResult? Function(Key? key, FormStringField? field, List<DropdownMenuItem> items, String? value, Widget? hint, Widget? disabledHint, Callback? onTap, int elevation, TextStyle? style, Widget? icon, Color? iconDisabledColor, Color? iconEnabledColor, double iconSize, bool isDense, bool isExpanded, double? itemHeight, Color? focusColor, bool autofocus, Color? dropdownColor, InputDecoration? decoration, Map<String, String>? validatorMessages, AutovalidateMode? autovalidateMode, double? menuMaxHeight, bool? enableFeedback, Alignment alignment, BorderRadius? borderRadius)? dropdownButtonFormField,
+    TResult? Function(Key? key, List<PopupMenuEntry> items, String? initialValue, Callback? onOpened, FormStringField? field, Callback? onCanceled, String? tooltip, double? elevation, Color? shadowColor, Color? surfaceTintColor, EdgeInsets padding, Widget? child, double? splashRadius, Widget? icon, double? iconSize, Offset offset, bool enabled, ShapeBorder? shape, Color? color, bool? enableFeedback, BoxConstraints? constraints, PopupMenuPosition? position, Clip clipBehavior)? popupMenuButton,
+    TResult? Function(Key? key, Widget icon, Widget? selectedIcon, String label, String? tooltip)? navigationDestination,
+    TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
+    TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
+    TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
+  }) {
+    return popupMenuButton?.call(
+        key,
+        items,
+        initialValue,
+        onOpened,
+        field,
+        onCanceled,
+        tooltip,
+        elevation,
+        shadowColor,
+        surfaceTintColor,
+        padding,
+        child,
+        splashRadius,
+        this.icon,
+        iconSize,
+        offset,
+        enabled,
+        shape,
+        color,
+        enableFeedback,
+        constraints,
+        position,
+        clipBehavior);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(
+            Key? key,
+            Color? color,
+            Color? shadowColor,
+            Color? surfaceTintColor,
+            double? elevation,
+            ShapeBorder? shape,
+            bool borderOnForeground,
+            EdgeInsets? margin,
+            Clip? clipBehavior,
+            Widget? child,
+            bool semanticContainer)?
+        card,
+    TResult Function(
+            Key? key,
+            Callback? onPressed,
+            Callback? onLongPress,
+            bool autofocus,
+            Clip clipBehavior,
+            Widget child,
+            ButtonStyle? style)?
+        elevatedButton,
+    TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        filledButton,
+    TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        filledTonalButton,
+    TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        outlinedButton,
+    TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        textButton,
+    TResult Function(
+            Key? key,
+            double? iconSize,
+            VisualDensity? visualDensity,
+            EdgeInsets? padding,
+            Alignment? alignment,
+            double? splashRadius,
+            Color? color,
+            Color? focusColor,
+            Color? hoverColor,
+            Color? highlightColor,
+            Color? splashColor,
+            Color? disabledColor,
+            Callback onPressed,
+            MouseCursor? mouseCursor,
+            bool autofocus,
+            String? tooltip,
+            bool? enableFeedback,
+            BoxConstraints? constraints,
+            bool? isSelected,
+            Widget? selectedIcon,
+            Widget icon)?
+        iconButton,
+    TResult Function(
+            Key? key,
+            PreferredSizeWidget? appBar,
+            Widget? body,
+            Widget? floatingActionButton,
+            FloatingActionButtonLocation? floatingActionButtonLocation,
+            List<Widget>? persistentFooterButtons,
+            Alignment persistentFooterAlignment,
+            Widget? drawer,
+            Widget? endDrawer,
+            Widget? bottomNavigationBar,
+            Widget? bottomSheet,
+            Color? backgroundColor,
+            bool? resizeToAvoidBottomInset,
+            bool primary,
+            bool extendBody,
+            bool extendBodyBehindAppBar,
+            Color? drawerScrimColor,
+            double? drawerEdgeDragWidth,
+            bool drawerEnableOpenDragGesture,
+            bool endDrawerEnableOpenDragGesture,
+            String? restorationId)?
+        scaffold,
+    TResult Function(Key? key, Widget? child, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, bool mini, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButton,
+    TResult Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButtonExtended,
+    TResult Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor)? text,
+    TResult Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior)? container,
+    TResult Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
+    TResult Function(Key? key, double? widthFactor, double? heightFactor, Widget child)? center,
+    TResult Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection)? icon,
+    TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? column,
+    TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? row,
+    TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue)? circularProgressIndicator,
+    TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue)? linearProgressIndicator,
+    TResult Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color)? divider,
+    TResult Function(Key? key, Color? backgroundColor, bool extended, Widget? leading, Widget? trailing, List<NavigationRailDestination> destinations, int? selectedIndex, IntSelectionCallback? onDestinationSelected, double? elevation, double? groupAlignment, NavigationRailLabelType? labelType, TextStyle? unselectedLabelTextStyle, TextStyle? selectedLabelTextStyle, IconThemeData? unselectedIconTheme, IconThemeData? selectedIconTheme, double? minWidth, double? minExtendedWidth, bool? useIndicator, Color? indicatorColor, ShapeBorder? indicatorShape)? navigationRail,
+    TResult Function(Key? key, Duration? animationDuration, int selectedIndex, List<Widget> destinations, IntSelectionCallback? onDestinationSelected, Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, Color? indicatorColor, ShapeBorder? indicatorShape, double? height, NavigationDestinationLabelBehavior? labelBehavior)? navigationBar,
+    TResult Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration)? defaultTabController,
+    TResult Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child)? tab,
+    TResult Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior)? tabBarView,
+    TResult Function(Key? key, Axis scrollDirection, bool reverse, bool? primary, ScrollPhysics? physics, bool shrinkWrap, Key? center, double anchor, double? cacheExtent, List<Sliver> slivers, int? semanticChildCount, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior, String? restorationId, Clip clipBehavior)? customScrollView,
+    TResult Function(Key? key, bool? value, bool tristate, FormBoolField? field, MouseCursor? mouseCursor, Color? activeColor, MaterialStateProperty? fillColor, Color? checkColor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, MaterialTapTargetSize? materialTapTargetSize, VisualDensity? visualDensity, bool autofocus, ShapeBorder? shape, BorderSide? side, bool isError)? checkbox,
+    TResult Function(Key? key, FormStringField? field, List<DropdownMenuItem> items, String? value, Widget? hint, Widget? disabledHint, Callback? onTap, int elevation, TextStyle? style, Widget? icon, Color? iconDisabledColor, Color? iconEnabledColor, double iconSize, bool isDense, bool isExpanded, double? itemHeight, Color? focusColor, bool autofocus, Color? dropdownColor, InputDecoration? decoration, Map<String, String>? validatorMessages, AutovalidateMode? autovalidateMode, double? menuMaxHeight, bool? enableFeedback, Alignment alignment, BorderRadius? borderRadius)? dropdownButtonFormField,
+    TResult Function(Key? key, List<PopupMenuEntry> items, String? initialValue, Callback? onOpened, FormStringField? field, Callback? onCanceled, String? tooltip, double? elevation, Color? shadowColor, Color? surfaceTintColor, EdgeInsets padding, Widget? child, double? splashRadius, Widget? icon, double? iconSize, Offset offset, bool enabled, ShapeBorder? shape, Color? color, bool? enableFeedback, BoxConstraints? constraints, PopupMenuPosition? position, Clip clipBehavior)? popupMenuButton,
+    TResult Function(Key? key, Widget icon, Widget? selectedIcon, String label, String? tooltip)? navigationDestination,
+    TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
+    TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
+    TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
+    required TResult orElse(),
+  }) {
+    if (popupMenuButton != null) {
+      return popupMenuButton(
+          key,
+          items,
+          initialValue,
+          onOpened,
+          field,
+          onCanceled,
+          tooltip,
+          elevation,
+          shadowColor,
+          surfaceTintColor,
+          padding,
+          child,
+          splashRadius,
+          this.icon,
+          iconSize,
+          offset,
+          enabled,
+          shape,
+          color,
+          enableFeedback,
+          constraints,
+          position,
+          clipBehavior);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(Card value) card,
+    required TResult Function(ElevatedButton value) elevatedButton,
+    required TResult Function(FilledButton value) filledButton,
+    required TResult Function(FilledTonalButton value) filledTonalButton,
+    required TResult Function(OutlinedButton value) outlinedButton,
+    required TResult Function(TextButton value) textButton,
+    required TResult Function(IconButton value) iconButton,
+    required TResult Function(Scaffold value) scaffold,
+    required TResult Function(FloatingActionButton value) floatingActionButton,
+    required TResult Function(FloatingActionButtonExtended value)
+        floatingActionButtonExtended,
+    required TResult Function(Text value) text,
+    required TResult Function(Container value) container,
+    required TResult Function(SizedBox value) sizedBox,
+    required TResult Function(Center value) center,
+    required TResult Function(Icon value) icon,
+    required TResult Function(Column value) column,
+    required TResult Function(Row value) row,
+    required TResult Function(CircularProgressIndicator value)
+        circularProgressIndicator,
+    required TResult Function(LinearProgressIndicator value)
+        linearProgressIndicator,
+    required TResult Function(Divider value) divider,
+    required TResult Function(NavigationRail value) navigationRail,
+    required TResult Function(NavigationBar value) navigationBar,
+    required TResult Function(DefaultTabController value) defaultTabController,
+    required TResult Function(Tab value) tab,
+    required TResult Function(TabBarView value) tabBarView,
+    required TResult Function(CustomScrollView value) customScrollView,
+    required TResult Function(Checkbox value) checkbox,
+    required TResult Function(DropdownButtonFormField value)
+        dropdownButtonFormField,
+    required TResult Function(PopupMenuButton value) popupMenuButton,
+    required TResult Function(NavigationDestination value)
+        navigationDestination,
+    required TResult Function(ActionChip value) actionChip,
+    required TResult Function(FilterChip value) filterChip,
+    required TResult Function(InputChip value) inputChip,
+  }) {
+    return popupMenuButton(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(Card value)? card,
+    TResult? Function(ElevatedButton value)? elevatedButton,
+    TResult? Function(FilledButton value)? filledButton,
+    TResult? Function(FilledTonalButton value)? filledTonalButton,
+    TResult? Function(OutlinedButton value)? outlinedButton,
+    TResult? Function(TextButton value)? textButton,
+    TResult? Function(IconButton value)? iconButton,
+    TResult? Function(Scaffold value)? scaffold,
+    TResult? Function(FloatingActionButton value)? floatingActionButton,
+    TResult? Function(FloatingActionButtonExtended value)?
+        floatingActionButtonExtended,
+    TResult? Function(Text value)? text,
+    TResult? Function(Container value)? container,
+    TResult? Function(SizedBox value)? sizedBox,
+    TResult? Function(Center value)? center,
+    TResult? Function(Icon value)? icon,
+    TResult? Function(Column value)? column,
+    TResult? Function(Row value)? row,
+    TResult? Function(CircularProgressIndicator value)?
+        circularProgressIndicator,
+    TResult? Function(LinearProgressIndicator value)? linearProgressIndicator,
+    TResult? Function(Divider value)? divider,
+    TResult? Function(NavigationRail value)? navigationRail,
+    TResult? Function(NavigationBar value)? navigationBar,
+    TResult? Function(DefaultTabController value)? defaultTabController,
+    TResult? Function(Tab value)? tab,
+    TResult? Function(TabBarView value)? tabBarView,
+    TResult? Function(CustomScrollView value)? customScrollView,
+    TResult? Function(Checkbox value)? checkbox,
+    TResult? Function(DropdownButtonFormField value)? dropdownButtonFormField,
+    TResult? Function(PopupMenuButton value)? popupMenuButton,
+    TResult? Function(NavigationDestination value)? navigationDestination,
+    TResult? Function(ActionChip value)? actionChip,
+    TResult? Function(FilterChip value)? filterChip,
+    TResult? Function(InputChip value)? inputChip,
+  }) {
+    return popupMenuButton?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(Card value)? card,
+    TResult Function(ElevatedButton value)? elevatedButton,
+    TResult Function(FilledButton value)? filledButton,
+    TResult Function(FilledTonalButton value)? filledTonalButton,
+    TResult Function(OutlinedButton value)? outlinedButton,
+    TResult Function(TextButton value)? textButton,
+    TResult Function(IconButton value)? iconButton,
+    TResult Function(Scaffold value)? scaffold,
+    TResult Function(FloatingActionButton value)? floatingActionButton,
+    TResult Function(FloatingActionButtonExtended value)?
+        floatingActionButtonExtended,
+    TResult Function(Text value)? text,
+    TResult Function(Container value)? container,
+    TResult Function(SizedBox value)? sizedBox,
+    TResult Function(Center value)? center,
+    TResult Function(Icon value)? icon,
+    TResult Function(Column value)? column,
+    TResult Function(Row value)? row,
+    TResult Function(CircularProgressIndicator value)?
+        circularProgressIndicator,
+    TResult Function(LinearProgressIndicator value)? linearProgressIndicator,
+    TResult Function(Divider value)? divider,
+    TResult Function(NavigationRail value)? navigationRail,
+    TResult Function(NavigationBar value)? navigationBar,
+    TResult Function(DefaultTabController value)? defaultTabController,
+    TResult Function(Tab value)? tab,
+    TResult Function(TabBarView value)? tabBarView,
+    TResult Function(CustomScrollView value)? customScrollView,
+    TResult Function(Checkbox value)? checkbox,
+    TResult Function(DropdownButtonFormField value)? dropdownButtonFormField,
+    TResult Function(PopupMenuButton value)? popupMenuButton,
+    TResult Function(NavigationDestination value)? navigationDestination,
+    TResult Function(ActionChip value)? actionChip,
+    TResult Function(FilterChip value)? filterChip,
+    TResult Function(InputChip value)? inputChip,
+    required TResult orElse(),
+  }) {
+    if (popupMenuButton != null) {
+      return popupMenuButton(this);
+    }
+    return orElse();
+  }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$PopupMenuButtonToJson(
+      this,
+    );
+  }
+}
+
+abstract class PopupMenuButton implements Widget {
+  const factory PopupMenuButton(
+      {final Key? key,
+      required final List<PopupMenuEntry> items,
+      final String? initialValue,
+      final Callback? onOpened,
+      final FormStringField? field,
+      final Callback? onCanceled,
+      final String? tooltip,
+      final double? elevation,
+      final Color? shadowColor,
+      final Color? surfaceTintColor,
+      final EdgeInsets padding,
+      final Widget? child,
+      final double? splashRadius,
+      final Widget? icon,
+      final double? iconSize,
+      final Offset offset,
+      final bool enabled,
+      final ShapeBorder? shape,
+      final Color? color,
+      final bool? enableFeedback,
+      final BoxConstraints? constraints,
+      final PopupMenuPosition? position,
+      final Clip clipBehavior}) = _$PopupMenuButton;
+
+  factory PopupMenuButton.fromJson(Map<String, dynamic> json) =
+      _$PopupMenuButton.fromJson;
+
+  @override
+  Key? get key;
+  List<PopupMenuEntry> get items;
+  String? get initialValue;
+  Callback? get onOpened;
+  FormStringField? get field;
+  Callback? get onCanceled;
+  String? get tooltip;
+  double? get elevation;
+  Color? get shadowColor;
+  Color? get surfaceTintColor;
+  EdgeInsets get padding;
+  Widget? get child;
+  double? get splashRadius;
+  Widget? get icon;
+  double? get iconSize;
+  Offset get offset;
+  bool get enabled;
+  ShapeBorder? get shape;
+  Color? get color;
+  bool? get enableFeedback;
+  BoxConstraints? get constraints;
+  PopupMenuPosition? get position;
+  Clip get clipBehavior;
+  @override
+  @JsonKey(ignore: true)
+  _$$PopupMenuButtonCopyWith<_$PopupMenuButton> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$NavigationDestinationCopyWith<$Res>
+    implements $WidgetCopyWith<$Res> {
+  factory _$$NavigationDestinationCopyWith(_$NavigationDestination value,
+          $Res Function(_$NavigationDestination) then) =
+      __$$NavigationDestinationCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {Key? key,
+      Widget icon,
+      Widget? selectedIcon,
+      String label,
+      String? tooltip});
+
+  @override
+  $KeyCopyWith<$Res>? get key;
+  $WidgetCopyWith<$Res> get icon;
+  $WidgetCopyWith<$Res>? get selectedIcon;
+}
+
+/// @nodoc
+class __$$NavigationDestinationCopyWithImpl<$Res>
+    extends _$WidgetCopyWithImpl<$Res, _$NavigationDestination>
+    implements _$$NavigationDestinationCopyWith<$Res> {
+  __$$NavigationDestinationCopyWithImpl(_$NavigationDestination _value,
+      $Res Function(_$NavigationDestination) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? key = freezed,
+    Object? icon = null,
+    Object? selectedIcon = freezed,
+    Object? label = null,
+    Object? tooltip = freezed,
+  }) {
+    return _then(_$NavigationDestination(
+      key: freezed == key
+          ? _value.key
+          : key // ignore: cast_nullable_to_non_nullable
+              as Key?,
+      icon: null == icon
+          ? _value.icon
+          : icon // ignore: cast_nullable_to_non_nullable
+              as Widget,
+      selectedIcon: freezed == selectedIcon
+          ? _value.selectedIcon
+          : selectedIcon // ignore: cast_nullable_to_non_nullable
+              as Widget?,
+      label: null == label
+          ? _value.label
+          : label // ignore: cast_nullable_to_non_nullable
+              as String,
+      tooltip: freezed == tooltip
+          ? _value.tooltip
+          : tooltip // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $WidgetCopyWith<$Res> get icon {
+    return $WidgetCopyWith<$Res>(_value.icon, (value) {
+      return _then(_value.copyWith(icon: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $WidgetCopyWith<$Res>? get selectedIcon {
+    if (_value.selectedIcon == null) {
+      return null;
+    }
+
+    return $WidgetCopyWith<$Res>(_value.selectedIcon!, (value) {
+      return _then(_value.copyWith(selectedIcon: value));
+    });
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$NavigationDestination implements NavigationDestination {
+  const _$NavigationDestination(
+      {this.key,
+      required this.icon,
+      this.selectedIcon,
+      required this.label,
+      this.tooltip,
+      final String? $type})
+      : $type = $type ?? 'navigationDestination';
+
+  factory _$NavigationDestination.fromJson(Map<String, dynamic> json) =>
+      _$$NavigationDestinationFromJson(json);
+
+  @override
+  final Key? key;
+  @override
+  final Widget icon;
+  @override
+  final Widget? selectedIcon;
+  @override
+  final String label;
+  @override
+  final String? tooltip;
+
+  @JsonKey(name: 'runtimeType')
+  final String $type;
+
+  @override
+  String toString() {
+    return 'Widget.navigationDestination(key: $key, icon: $icon, selectedIcon: $selectedIcon, label: $label, tooltip: $tooltip)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$NavigationDestination &&
+            (identical(other.key, key) || other.key == key) &&
+            (identical(other.icon, icon) || other.icon == icon) &&
+            (identical(other.selectedIcon, selectedIcon) ||
+                other.selectedIcon == selectedIcon) &&
+            (identical(other.label, label) || other.label == label) &&
+            (identical(other.tooltip, tooltip) || other.tooltip == tooltip));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, key, icon, selectedIcon, label, tooltip);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$NavigationDestinationCopyWith<_$NavigationDestination> get copyWith =>
+      __$$NavigationDestinationCopyWithImpl<_$NavigationDestination>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(
+            Key? key,
+            Color? color,
+            Color? shadowColor,
+            Color? surfaceTintColor,
+            double? elevation,
+            ShapeBorder? shape,
+            bool borderOnForeground,
+            EdgeInsets? margin,
+            Clip? clipBehavior,
+            Widget? child,
+            bool semanticContainer)
+        card,
+    required TResult Function(
+            Key? key,
+            Callback? onPressed,
+            Callback? onLongPress,
+            bool autofocus,
+            Clip clipBehavior,
+            Widget child,
+            ButtonStyle? style)
+        elevatedButton,
+    required TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)
+        filledButton,
+    required TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)
+        filledTonalButton,
+    required TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)
+        outlinedButton,
+    required TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)
+        textButton,
+    required TResult Function(
+            Key? key,
+            double? iconSize,
+            VisualDensity? visualDensity,
+            EdgeInsets? padding,
+            Alignment? alignment,
+            double? splashRadius,
+            Color? color,
+            Color? focusColor,
+            Color? hoverColor,
+            Color? highlightColor,
+            Color? splashColor,
+            Color? disabledColor,
+            Callback onPressed,
+            MouseCursor? mouseCursor,
+            bool autofocus,
+            String? tooltip,
+            bool? enableFeedback,
+            BoxConstraints? constraints,
+            bool? isSelected,
+            Widget? selectedIcon,
+            Widget icon)
+        iconButton,
+    required TResult Function(
+            Key? key,
+            PreferredSizeWidget? appBar,
+            Widget? body,
+            Widget? floatingActionButton,
+            FloatingActionButtonLocation? floatingActionButtonLocation,
+            List<Widget>? persistentFooterButtons,
+            Alignment persistentFooterAlignment,
+            Widget? drawer,
+            Widget? endDrawer,
+            Widget? bottomNavigationBar,
+            Widget? bottomSheet,
+            Color? backgroundColor,
+            bool? resizeToAvoidBottomInset,
+            bool primary,
+            bool extendBody,
+            bool extendBodyBehindAppBar,
+            Color? drawerScrimColor,
+            double? drawerEdgeDragWidth,
+            bool drawerEnableOpenDragGesture,
+            bool endDrawerEnableOpenDragGesture,
+            String? restorationId)
+        scaffold,
+    required TResult Function(Key? key, Widget? child, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, bool mini, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback) floatingActionButton,
+    required TResult Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback) floatingActionButtonExtended,
+    required TResult Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor) text,
+    required TResult Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior) container,
+    required TResult Function(Key? key, double? width, double? height, Widget? child) sizedBox,
+    required TResult Function(Key? key, double? widthFactor, double? heightFactor, Widget child) center,
+    required TResult Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection) icon,
+    required TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children) column,
+    required TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children) row,
+    required TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue) circularProgressIndicator,
+    required TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue) linearProgressIndicator,
+    required TResult Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color) divider,
+    required TResult Function(Key? key, Color? backgroundColor, bool extended, Widget? leading, Widget? trailing, List<NavigationRailDestination> destinations, int? selectedIndex, IntSelectionCallback? onDestinationSelected, double? elevation, double? groupAlignment, NavigationRailLabelType? labelType, TextStyle? unselectedLabelTextStyle, TextStyle? selectedLabelTextStyle, IconThemeData? unselectedIconTheme, IconThemeData? selectedIconTheme, double? minWidth, double? minExtendedWidth, bool? useIndicator, Color? indicatorColor, ShapeBorder? indicatorShape) navigationRail,
+    required TResult Function(Key? key, Duration? animationDuration, int selectedIndex, List<Widget> destinations, IntSelectionCallback? onDestinationSelected, Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, Color? indicatorColor, ShapeBorder? indicatorShape, double? height, NavigationDestinationLabelBehavior? labelBehavior) navigationBar,
+    required TResult Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration) defaultTabController,
+    required TResult Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child) tab,
+    required TResult Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior) tabBarView,
+    required TResult Function(Key? key, Axis scrollDirection, bool reverse, bool? primary, ScrollPhysics? physics, bool shrinkWrap, Key? center, double anchor, double? cacheExtent, List<Sliver> slivers, int? semanticChildCount, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior, String? restorationId, Clip clipBehavior) customScrollView,
+    required TResult Function(Key? key, bool? value, bool tristate, FormBoolField? field, MouseCursor? mouseCursor, Color? activeColor, MaterialStateProperty? fillColor, Color? checkColor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, MaterialTapTargetSize? materialTapTargetSize, VisualDensity? visualDensity, bool autofocus, ShapeBorder? shape, BorderSide? side, bool isError) checkbox,
+    required TResult Function(Key? key, FormStringField? field, List<DropdownMenuItem> items, String? value, Widget? hint, Widget? disabledHint, Callback? onTap, int elevation, TextStyle? style, Widget? icon, Color? iconDisabledColor, Color? iconEnabledColor, double iconSize, bool isDense, bool isExpanded, double? itemHeight, Color? focusColor, bool autofocus, Color? dropdownColor, InputDecoration? decoration, Map<String, String>? validatorMessages, AutovalidateMode? autovalidateMode, double? menuMaxHeight, bool? enableFeedback, Alignment alignment, BorderRadius? borderRadius) dropdownButtonFormField,
+    required TResult Function(Key? key, List<PopupMenuEntry> items, String? initialValue, Callback? onOpened, FormStringField? field, Callback? onCanceled, String? tooltip, double? elevation, Color? shadowColor, Color? surfaceTintColor, EdgeInsets padding, Widget? child, double? splashRadius, Widget? icon, double? iconSize, Offset offset, bool enabled, ShapeBorder? shape, Color? color, bool? enableFeedback, BoxConstraints? constraints, PopupMenuPosition? position, Clip clipBehavior) popupMenuButton,
+    required TResult Function(Key? key, Widget icon, Widget? selectedIcon, String label, String? tooltip) navigationDestination,
+    required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme) actionChip,
+    required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) filterChip,
+    required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) inputChip,
+  }) {
+    return navigationDestination(key, this.icon, selectedIcon, label, tooltip);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(
+            Key? key,
+            Color? color,
+            Color? shadowColor,
+            Color? surfaceTintColor,
+            double? elevation,
+            ShapeBorder? shape,
+            bool borderOnForeground,
+            EdgeInsets? margin,
+            Clip? clipBehavior,
+            Widget? child,
+            bool semanticContainer)?
+        card,
+    TResult? Function(
+            Key? key,
+            Callback? onPressed,
+            Callback? onLongPress,
+            bool autofocus,
+            Clip clipBehavior,
+            Widget child,
+            ButtonStyle? style)?
+        elevatedButton,
+    TResult? Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        filledButton,
+    TResult? Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        filledTonalButton,
+    TResult? Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        outlinedButton,
+    TResult? Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        textButton,
+    TResult? Function(
+            Key? key,
+            double? iconSize,
+            VisualDensity? visualDensity,
+            EdgeInsets? padding,
+            Alignment? alignment,
+            double? splashRadius,
+            Color? color,
+            Color? focusColor,
+            Color? hoverColor,
+            Color? highlightColor,
+            Color? splashColor,
+            Color? disabledColor,
+            Callback onPressed,
+            MouseCursor? mouseCursor,
+            bool autofocus,
+            String? tooltip,
+            bool? enableFeedback,
+            BoxConstraints? constraints,
+            bool? isSelected,
+            Widget? selectedIcon,
+            Widget icon)?
+        iconButton,
+    TResult? Function(
+            Key? key,
+            PreferredSizeWidget? appBar,
+            Widget? body,
+            Widget? floatingActionButton,
+            FloatingActionButtonLocation? floatingActionButtonLocation,
+            List<Widget>? persistentFooterButtons,
+            Alignment persistentFooterAlignment,
+            Widget? drawer,
+            Widget? endDrawer,
+            Widget? bottomNavigationBar,
+            Widget? bottomSheet,
+            Color? backgroundColor,
+            bool? resizeToAvoidBottomInset,
+            bool primary,
+            bool extendBody,
+            bool extendBodyBehindAppBar,
+            Color? drawerScrimColor,
+            double? drawerEdgeDragWidth,
+            bool drawerEnableOpenDragGesture,
+            bool endDrawerEnableOpenDragGesture,
+            String? restorationId)?
+        scaffold,
+    TResult? Function(Key? key, Widget? child, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, bool mini, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButton,
+    TResult? Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButtonExtended,
+    TResult? Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor)? text,
+    TResult? Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior)? container,
+    TResult? Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
+    TResult? Function(Key? key, double? widthFactor, double? heightFactor, Widget child)? center,
+    TResult? Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection)? icon,
+    TResult? Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? column,
+    TResult? Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? row,
+    TResult? Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue)? circularProgressIndicator,
+    TResult? Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue)? linearProgressIndicator,
+    TResult? Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color)? divider,
+    TResult? Function(Key? key, Color? backgroundColor, bool extended, Widget? leading, Widget? trailing, List<NavigationRailDestination> destinations, int? selectedIndex, IntSelectionCallback? onDestinationSelected, double? elevation, double? groupAlignment, NavigationRailLabelType? labelType, TextStyle? unselectedLabelTextStyle, TextStyle? selectedLabelTextStyle, IconThemeData? unselectedIconTheme, IconThemeData? selectedIconTheme, double? minWidth, double? minExtendedWidth, bool? useIndicator, Color? indicatorColor, ShapeBorder? indicatorShape)? navigationRail,
+    TResult? Function(Key? key, Duration? animationDuration, int selectedIndex, List<Widget> destinations, IntSelectionCallback? onDestinationSelected, Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, Color? indicatorColor, ShapeBorder? indicatorShape, double? height, NavigationDestinationLabelBehavior? labelBehavior)? navigationBar,
+    TResult? Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration)? defaultTabController,
+    TResult? Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child)? tab,
+    TResult? Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior)? tabBarView,
+    TResult? Function(Key? key, Axis scrollDirection, bool reverse, bool? primary, ScrollPhysics? physics, bool shrinkWrap, Key? center, double anchor, double? cacheExtent, List<Sliver> slivers, int? semanticChildCount, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior, String? restorationId, Clip clipBehavior)? customScrollView,
+    TResult? Function(Key? key, bool? value, bool tristate, FormBoolField? field, MouseCursor? mouseCursor, Color? activeColor, MaterialStateProperty? fillColor, Color? checkColor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, MaterialTapTargetSize? materialTapTargetSize, VisualDensity? visualDensity, bool autofocus, ShapeBorder? shape, BorderSide? side, bool isError)? checkbox,
+    TResult? Function(Key? key, FormStringField? field, List<DropdownMenuItem> items, String? value, Widget? hint, Widget? disabledHint, Callback? onTap, int elevation, TextStyle? style, Widget? icon, Color? iconDisabledColor, Color? iconEnabledColor, double iconSize, bool isDense, bool isExpanded, double? itemHeight, Color? focusColor, bool autofocus, Color? dropdownColor, InputDecoration? decoration, Map<String, String>? validatorMessages, AutovalidateMode? autovalidateMode, double? menuMaxHeight, bool? enableFeedback, Alignment alignment, BorderRadius? borderRadius)? dropdownButtonFormField,
+    TResult? Function(Key? key, List<PopupMenuEntry> items, String? initialValue, Callback? onOpened, FormStringField? field, Callback? onCanceled, String? tooltip, double? elevation, Color? shadowColor, Color? surfaceTintColor, EdgeInsets padding, Widget? child, double? splashRadius, Widget? icon, double? iconSize, Offset offset, bool enabled, ShapeBorder? shape, Color? color, bool? enableFeedback, BoxConstraints? constraints, PopupMenuPosition? position, Clip clipBehavior)? popupMenuButton,
+    TResult? Function(Key? key, Widget icon, Widget? selectedIcon, String label, String? tooltip)? navigationDestination,
+    TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
+    TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
+    TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
+  }) {
+    return navigationDestination?.call(
+        key, this.icon, selectedIcon, label, tooltip);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(
+            Key? key,
+            Color? color,
+            Color? shadowColor,
+            Color? surfaceTintColor,
+            double? elevation,
+            ShapeBorder? shape,
+            bool borderOnForeground,
+            EdgeInsets? margin,
+            Clip? clipBehavior,
+            Widget? child,
+            bool semanticContainer)?
+        card,
+    TResult Function(
+            Key? key,
+            Callback? onPressed,
+            Callback? onLongPress,
+            bool autofocus,
+            Clip clipBehavior,
+            Widget child,
+            ButtonStyle? style)?
+        elevatedButton,
+    TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        filledButton,
+    TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        filledTonalButton,
+    TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        outlinedButton,
+    TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        textButton,
+    TResult Function(
+            Key? key,
+            double? iconSize,
+            VisualDensity? visualDensity,
+            EdgeInsets? padding,
+            Alignment? alignment,
+            double? splashRadius,
+            Color? color,
+            Color? focusColor,
+            Color? hoverColor,
+            Color? highlightColor,
+            Color? splashColor,
+            Color? disabledColor,
+            Callback onPressed,
+            MouseCursor? mouseCursor,
+            bool autofocus,
+            String? tooltip,
+            bool? enableFeedback,
+            BoxConstraints? constraints,
+            bool? isSelected,
+            Widget? selectedIcon,
+            Widget icon)?
+        iconButton,
+    TResult Function(
+            Key? key,
+            PreferredSizeWidget? appBar,
+            Widget? body,
+            Widget? floatingActionButton,
+            FloatingActionButtonLocation? floatingActionButtonLocation,
+            List<Widget>? persistentFooterButtons,
+            Alignment persistentFooterAlignment,
+            Widget? drawer,
+            Widget? endDrawer,
+            Widget? bottomNavigationBar,
+            Widget? bottomSheet,
+            Color? backgroundColor,
+            bool? resizeToAvoidBottomInset,
+            bool primary,
+            bool extendBody,
+            bool extendBodyBehindAppBar,
+            Color? drawerScrimColor,
+            double? drawerEdgeDragWidth,
+            bool drawerEnableOpenDragGesture,
+            bool endDrawerEnableOpenDragGesture,
+            String? restorationId)?
+        scaffold,
+    TResult Function(Key? key, Widget? child, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, bool mini, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButton,
+    TResult Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButtonExtended,
+    TResult Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor)? text,
+    TResult Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior)? container,
+    TResult Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
+    TResult Function(Key? key, double? widthFactor, double? heightFactor, Widget child)? center,
+    TResult Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection)? icon,
+    TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? column,
+    TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? row,
+    TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue)? circularProgressIndicator,
+    TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue)? linearProgressIndicator,
+    TResult Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color)? divider,
+    TResult Function(Key? key, Color? backgroundColor, bool extended, Widget? leading, Widget? trailing, List<NavigationRailDestination> destinations, int? selectedIndex, IntSelectionCallback? onDestinationSelected, double? elevation, double? groupAlignment, NavigationRailLabelType? labelType, TextStyle? unselectedLabelTextStyle, TextStyle? selectedLabelTextStyle, IconThemeData? unselectedIconTheme, IconThemeData? selectedIconTheme, double? minWidth, double? minExtendedWidth, bool? useIndicator, Color? indicatorColor, ShapeBorder? indicatorShape)? navigationRail,
+    TResult Function(Key? key, Duration? animationDuration, int selectedIndex, List<Widget> destinations, IntSelectionCallback? onDestinationSelected, Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, Color? indicatorColor, ShapeBorder? indicatorShape, double? height, NavigationDestinationLabelBehavior? labelBehavior)? navigationBar,
+    TResult Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration)? defaultTabController,
+    TResult Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child)? tab,
+    TResult Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior)? tabBarView,
+    TResult Function(Key? key, Axis scrollDirection, bool reverse, bool? primary, ScrollPhysics? physics, bool shrinkWrap, Key? center, double anchor, double? cacheExtent, List<Sliver> slivers, int? semanticChildCount, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior, String? restorationId, Clip clipBehavior)? customScrollView,
+    TResult Function(Key? key, bool? value, bool tristate, FormBoolField? field, MouseCursor? mouseCursor, Color? activeColor, MaterialStateProperty? fillColor, Color? checkColor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, MaterialTapTargetSize? materialTapTargetSize, VisualDensity? visualDensity, bool autofocus, ShapeBorder? shape, BorderSide? side, bool isError)? checkbox,
+    TResult Function(Key? key, FormStringField? field, List<DropdownMenuItem> items, String? value, Widget? hint, Widget? disabledHint, Callback? onTap, int elevation, TextStyle? style, Widget? icon, Color? iconDisabledColor, Color? iconEnabledColor, double iconSize, bool isDense, bool isExpanded, double? itemHeight, Color? focusColor, bool autofocus, Color? dropdownColor, InputDecoration? decoration, Map<String, String>? validatorMessages, AutovalidateMode? autovalidateMode, double? menuMaxHeight, bool? enableFeedback, Alignment alignment, BorderRadius? borderRadius)? dropdownButtonFormField,
+    TResult Function(Key? key, List<PopupMenuEntry> items, String? initialValue, Callback? onOpened, FormStringField? field, Callback? onCanceled, String? tooltip, double? elevation, Color? shadowColor, Color? surfaceTintColor, EdgeInsets padding, Widget? child, double? splashRadius, Widget? icon, double? iconSize, Offset offset, bool enabled, ShapeBorder? shape, Color? color, bool? enableFeedback, BoxConstraints? constraints, PopupMenuPosition? position, Clip clipBehavior)? popupMenuButton,
+    TResult Function(Key? key, Widget icon, Widget? selectedIcon, String label, String? tooltip)? navigationDestination,
+    TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
+    TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
+    TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
+    required TResult orElse(),
+  }) {
+    if (navigationDestination != null) {
+      return navigationDestination(
+          key, this.icon, selectedIcon, label, tooltip);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(Card value) card,
+    required TResult Function(ElevatedButton value) elevatedButton,
+    required TResult Function(FilledButton value) filledButton,
+    required TResult Function(FilledTonalButton value) filledTonalButton,
+    required TResult Function(OutlinedButton value) outlinedButton,
+    required TResult Function(TextButton value) textButton,
+    required TResult Function(IconButton value) iconButton,
+    required TResult Function(Scaffold value) scaffold,
+    required TResult Function(FloatingActionButton value) floatingActionButton,
+    required TResult Function(FloatingActionButtonExtended value)
+        floatingActionButtonExtended,
+    required TResult Function(Text value) text,
+    required TResult Function(Container value) container,
+    required TResult Function(SizedBox value) sizedBox,
+    required TResult Function(Center value) center,
+    required TResult Function(Icon value) icon,
+    required TResult Function(Column value) column,
+    required TResult Function(Row value) row,
+    required TResult Function(CircularProgressIndicator value)
+        circularProgressIndicator,
+    required TResult Function(LinearProgressIndicator value)
+        linearProgressIndicator,
+    required TResult Function(Divider value) divider,
+    required TResult Function(NavigationRail value) navigationRail,
+    required TResult Function(NavigationBar value) navigationBar,
+    required TResult Function(DefaultTabController value) defaultTabController,
+    required TResult Function(Tab value) tab,
+    required TResult Function(TabBarView value) tabBarView,
+    required TResult Function(CustomScrollView value) customScrollView,
+    required TResult Function(Checkbox value) checkbox,
+    required TResult Function(DropdownButtonFormField value)
+        dropdownButtonFormField,
+    required TResult Function(PopupMenuButton value) popupMenuButton,
+    required TResult Function(NavigationDestination value)
+        navigationDestination,
+    required TResult Function(ActionChip value) actionChip,
+    required TResult Function(FilterChip value) filterChip,
+    required TResult Function(InputChip value) inputChip,
+  }) {
+    return navigationDestination(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(Card value)? card,
+    TResult? Function(ElevatedButton value)? elevatedButton,
+    TResult? Function(FilledButton value)? filledButton,
+    TResult? Function(FilledTonalButton value)? filledTonalButton,
+    TResult? Function(OutlinedButton value)? outlinedButton,
+    TResult? Function(TextButton value)? textButton,
+    TResult? Function(IconButton value)? iconButton,
+    TResult? Function(Scaffold value)? scaffold,
+    TResult? Function(FloatingActionButton value)? floatingActionButton,
+    TResult? Function(FloatingActionButtonExtended value)?
+        floatingActionButtonExtended,
+    TResult? Function(Text value)? text,
+    TResult? Function(Container value)? container,
+    TResult? Function(SizedBox value)? sizedBox,
+    TResult? Function(Center value)? center,
+    TResult? Function(Icon value)? icon,
+    TResult? Function(Column value)? column,
+    TResult? Function(Row value)? row,
+    TResult? Function(CircularProgressIndicator value)?
+        circularProgressIndicator,
+    TResult? Function(LinearProgressIndicator value)? linearProgressIndicator,
+    TResult? Function(Divider value)? divider,
+    TResult? Function(NavigationRail value)? navigationRail,
+    TResult? Function(NavigationBar value)? navigationBar,
+    TResult? Function(DefaultTabController value)? defaultTabController,
+    TResult? Function(Tab value)? tab,
+    TResult? Function(TabBarView value)? tabBarView,
+    TResult? Function(CustomScrollView value)? customScrollView,
+    TResult? Function(Checkbox value)? checkbox,
+    TResult? Function(DropdownButtonFormField value)? dropdownButtonFormField,
+    TResult? Function(PopupMenuButton value)? popupMenuButton,
+    TResult? Function(NavigationDestination value)? navigationDestination,
+    TResult? Function(ActionChip value)? actionChip,
+    TResult? Function(FilterChip value)? filterChip,
+    TResult? Function(InputChip value)? inputChip,
+  }) {
+    return navigationDestination?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(Card value)? card,
+    TResult Function(ElevatedButton value)? elevatedButton,
+    TResult Function(FilledButton value)? filledButton,
+    TResult Function(FilledTonalButton value)? filledTonalButton,
+    TResult Function(OutlinedButton value)? outlinedButton,
+    TResult Function(TextButton value)? textButton,
+    TResult Function(IconButton value)? iconButton,
+    TResult Function(Scaffold value)? scaffold,
+    TResult Function(FloatingActionButton value)? floatingActionButton,
+    TResult Function(FloatingActionButtonExtended value)?
+        floatingActionButtonExtended,
+    TResult Function(Text value)? text,
+    TResult Function(Container value)? container,
+    TResult Function(SizedBox value)? sizedBox,
+    TResult Function(Center value)? center,
+    TResult Function(Icon value)? icon,
+    TResult Function(Column value)? column,
+    TResult Function(Row value)? row,
+    TResult Function(CircularProgressIndicator value)?
+        circularProgressIndicator,
+    TResult Function(LinearProgressIndicator value)? linearProgressIndicator,
+    TResult Function(Divider value)? divider,
+    TResult Function(NavigationRail value)? navigationRail,
+    TResult Function(NavigationBar value)? navigationBar,
+    TResult Function(DefaultTabController value)? defaultTabController,
+    TResult Function(Tab value)? tab,
+    TResult Function(TabBarView value)? tabBarView,
+    TResult Function(CustomScrollView value)? customScrollView,
+    TResult Function(Checkbox value)? checkbox,
+    TResult Function(DropdownButtonFormField value)? dropdownButtonFormField,
+    TResult Function(PopupMenuButton value)? popupMenuButton,
+    TResult Function(NavigationDestination value)? navigationDestination,
+    TResult Function(ActionChip value)? actionChip,
+    TResult Function(FilterChip value)? filterChip,
+    TResult Function(InputChip value)? inputChip,
+    required TResult orElse(),
+  }) {
+    if (navigationDestination != null) {
+      return navigationDestination(this);
+    }
+    return orElse();
+  }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$NavigationDestinationToJson(
+      this,
+    );
+  }
+}
+
+abstract class NavigationDestination implements Widget {
+  const factory NavigationDestination(
+      {final Key? key,
+      required final Widget icon,
+      final Widget? selectedIcon,
+      required final String label,
+      final String? tooltip}) = _$NavigationDestination;
+
+  factory NavigationDestination.fromJson(Map<String, dynamic> json) =
+      _$NavigationDestination.fromJson;
+
+  @override
+  Key? get key;
+  Widget get icon;
+  Widget? get selectedIcon;
+  String get label;
+  String? get tooltip;
+  @override
+  @JsonKey(ignore: true)
+  _$$NavigationDestinationCopyWith<_$NavigationDestination> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$ActionChipCopyWith<$Res> implements $WidgetCopyWith<$Res> {
+  factory _$$ActionChipCopyWith(
+          _$ActionChip value, $Res Function(_$ActionChip) then) =
+      __$$ActionChipCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {Key? key,
+      Widget? avatar,
+      Widget label,
+      TextStyle? labelStyle,
+      EdgeInsets? labelPadding,
+      Callback? onPressed,
+      double? pressElevation,
+      String? tooltip,
+      BorderSide? side,
+      ShapeBorder? shape,
+      Clip clipBehavior,
+      bool autofocus,
+      Color? backgroundColor,
+      Color? disabledColor,
+      EdgeInsets? padding,
+      VisualDensity? visualDensity,
+      MaterialTapTargetSize? materialTapTargetSize,
+      double? elevation,
+      Color? shadowColor,
+      Color? surfaceTintColor,
+      IconThemeData? iconTheme});
+
+  @override
+  $KeyCopyWith<$Res>? get key;
+  $WidgetCopyWith<$Res>? get avatar;
+  $WidgetCopyWith<$Res> get label;
+  $TextStyleCopyWith<$Res>? get labelStyle;
+  $EdgeInsetsCopyWith<$Res>? get labelPadding;
+  $CallbackCopyWith<$Res>? get onPressed;
+  $BorderSideCopyWith<$Res>? get side;
+  $ShapeBorderCopyWith<$Res>? get shape;
+  $ColorCopyWith<$Res>? get backgroundColor;
+  $ColorCopyWith<$Res>? get disabledColor;
+  $EdgeInsetsCopyWith<$Res>? get padding;
+  $VisualDensityCopyWith<$Res>? get visualDensity;
+  $ColorCopyWith<$Res>? get shadowColor;
+  $ColorCopyWith<$Res>? get surfaceTintColor;
+  $IconThemeDataCopyWith<$Res>? get iconTheme;
+}
+
+/// @nodoc
+class __$$ActionChipCopyWithImpl<$Res>
+    extends _$WidgetCopyWithImpl<$Res, _$ActionChip>
+    implements _$$ActionChipCopyWith<$Res> {
+  __$$ActionChipCopyWithImpl(
+      _$ActionChip _value, $Res Function(_$ActionChip) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? key = freezed,
+    Object? avatar = freezed,
+    Object? label = null,
+    Object? labelStyle = freezed,
+    Object? labelPadding = freezed,
+    Object? onPressed = freezed,
+    Object? pressElevation = freezed,
+    Object? tooltip = freezed,
+    Object? side = freezed,
+    Object? shape = freezed,
+    Object? clipBehavior = null,
+    Object? autofocus = null,
+    Object? backgroundColor = freezed,
+    Object? disabledColor = freezed,
+    Object? padding = freezed,
+    Object? visualDensity = freezed,
+    Object? materialTapTargetSize = freezed,
+    Object? elevation = freezed,
+    Object? shadowColor = freezed,
+    Object? surfaceTintColor = freezed,
+    Object? iconTheme = freezed,
+  }) {
+    return _then(_$ActionChip(
+      key: freezed == key
+          ? _value.key
+          : key // ignore: cast_nullable_to_non_nullable
+              as Key?,
+      avatar: freezed == avatar
+          ? _value.avatar
+          : avatar // ignore: cast_nullable_to_non_nullable
+              as Widget?,
+      label: null == label
+          ? _value.label
+          : label // ignore: cast_nullable_to_non_nullable
+              as Widget,
+      labelStyle: freezed == labelStyle
+          ? _value.labelStyle
+          : labelStyle // ignore: cast_nullable_to_non_nullable
+              as TextStyle?,
+      labelPadding: freezed == labelPadding
+          ? _value.labelPadding
+          : labelPadding // ignore: cast_nullable_to_non_nullable
+              as EdgeInsets?,
+      onPressed: freezed == onPressed
+          ? _value.onPressed
+          : onPressed // ignore: cast_nullable_to_non_nullable
+              as Callback?,
+      pressElevation: freezed == pressElevation
+          ? _value.pressElevation
+          : pressElevation // ignore: cast_nullable_to_non_nullable
+              as double?,
+      tooltip: freezed == tooltip
+          ? _value.tooltip
+          : tooltip // ignore: cast_nullable_to_non_nullable
+              as String?,
+      side: freezed == side
+          ? _value.side
+          : side // ignore: cast_nullable_to_non_nullable
+              as BorderSide?,
+      shape: freezed == shape
+          ? _value.shape
+          : shape // ignore: cast_nullable_to_non_nullable
+              as ShapeBorder?,
+      clipBehavior: null == clipBehavior
+          ? _value.clipBehavior
+          : clipBehavior // ignore: cast_nullable_to_non_nullable
+              as Clip,
+      autofocus: null == autofocus
+          ? _value.autofocus
+          : autofocus // ignore: cast_nullable_to_non_nullable
+              as bool,
+      backgroundColor: freezed == backgroundColor
+          ? _value.backgroundColor
+          : backgroundColor // ignore: cast_nullable_to_non_nullable
+              as Color?,
+      disabledColor: freezed == disabledColor
+          ? _value.disabledColor
+          : disabledColor // ignore: cast_nullable_to_non_nullable
+              as Color?,
+      padding: freezed == padding
+          ? _value.padding
+          : padding // ignore: cast_nullable_to_non_nullable
+              as EdgeInsets?,
+      visualDensity: freezed == visualDensity
+          ? _value.visualDensity
+          : visualDensity // ignore: cast_nullable_to_non_nullable
+              as VisualDensity?,
+      materialTapTargetSize: freezed == materialTapTargetSize
+          ? _value.materialTapTargetSize
+          : materialTapTargetSize // ignore: cast_nullable_to_non_nullable
+              as MaterialTapTargetSize?,
+      elevation: freezed == elevation
+          ? _value.elevation
+          : elevation // ignore: cast_nullable_to_non_nullable
+              as double?,
+      shadowColor: freezed == shadowColor
+          ? _value.shadowColor
+          : shadowColor // ignore: cast_nullable_to_non_nullable
+              as Color?,
+      surfaceTintColor: freezed == surfaceTintColor
+          ? _value.surfaceTintColor
+          : surfaceTintColor // ignore: cast_nullable_to_non_nullable
+              as Color?,
+      iconTheme: freezed == iconTheme
+          ? _value.iconTheme
+          : iconTheme // ignore: cast_nullable_to_non_nullable
+              as IconThemeData?,
+    ));
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $WidgetCopyWith<$Res>? get avatar {
+    if (_value.avatar == null) {
+      return null;
+    }
+
+    return $WidgetCopyWith<$Res>(_value.avatar!, (value) {
+      return _then(_value.copyWith(avatar: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $WidgetCopyWith<$Res> get label {
+    return $WidgetCopyWith<$Res>(_value.label, (value) {
+      return _then(_value.copyWith(label: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $TextStyleCopyWith<$Res>? get labelStyle {
+    if (_value.labelStyle == null) {
+      return null;
+    }
+
+    return $TextStyleCopyWith<$Res>(_value.labelStyle!, (value) {
+      return _then(_value.copyWith(labelStyle: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $EdgeInsetsCopyWith<$Res>? get labelPadding {
+    if (_value.labelPadding == null) {
+      return null;
+    }
+
+    return $EdgeInsetsCopyWith<$Res>(_value.labelPadding!, (value) {
+      return _then(_value.copyWith(labelPadding: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $CallbackCopyWith<$Res>? get onPressed {
+    if (_value.onPressed == null) {
+      return null;
+    }
+
+    return $CallbackCopyWith<$Res>(_value.onPressed!, (value) {
+      return _then(_value.copyWith(onPressed: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $BorderSideCopyWith<$Res>? get side {
+    if (_value.side == null) {
+      return null;
+    }
+
+    return $BorderSideCopyWith<$Res>(_value.side!, (value) {
+      return _then(_value.copyWith(side: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ShapeBorderCopyWith<$Res>? get shape {
+    if (_value.shape == null) {
+      return null;
+    }
+
+    return $ShapeBorderCopyWith<$Res>(_value.shape!, (value) {
+      return _then(_value.copyWith(shape: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ColorCopyWith<$Res>? get backgroundColor {
+    if (_value.backgroundColor == null) {
+      return null;
+    }
+
+    return $ColorCopyWith<$Res>(_value.backgroundColor!, (value) {
+      return _then(_value.copyWith(backgroundColor: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ColorCopyWith<$Res>? get disabledColor {
+    if (_value.disabledColor == null) {
+      return null;
+    }
+
+    return $ColorCopyWith<$Res>(_value.disabledColor!, (value) {
+      return _then(_value.copyWith(disabledColor: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $EdgeInsetsCopyWith<$Res>? get padding {
+    if (_value.padding == null) {
+      return null;
+    }
+
+    return $EdgeInsetsCopyWith<$Res>(_value.padding!, (value) {
+      return _then(_value.copyWith(padding: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $VisualDensityCopyWith<$Res>? get visualDensity {
+    if (_value.visualDensity == null) {
+      return null;
+    }
+
+    return $VisualDensityCopyWith<$Res>(_value.visualDensity!, (value) {
+      return _then(_value.copyWith(visualDensity: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ColorCopyWith<$Res>? get shadowColor {
+    if (_value.shadowColor == null) {
+      return null;
+    }
+
+    return $ColorCopyWith<$Res>(_value.shadowColor!, (value) {
+      return _then(_value.copyWith(shadowColor: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ColorCopyWith<$Res>? get surfaceTintColor {
+    if (_value.surfaceTintColor == null) {
+      return null;
+    }
+
+    return $ColorCopyWith<$Res>(_value.surfaceTintColor!, (value) {
+      return _then(_value.copyWith(surfaceTintColor: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $IconThemeDataCopyWith<$Res>? get iconTheme {
+    if (_value.iconTheme == null) {
+      return null;
+    }
+
+    return $IconThemeDataCopyWith<$Res>(_value.iconTheme!, (value) {
+      return _then(_value.copyWith(iconTheme: value));
+    });
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$ActionChip implements ActionChip {
+  const _$ActionChip(
+      {this.key,
+      this.avatar,
+      required this.label,
+      this.labelStyle,
+      this.labelPadding,
+      this.onPressed,
+      this.pressElevation,
+      this.tooltip,
+      this.side,
+      this.shape,
+      this.clipBehavior = Clip.none,
+      this.autofocus = false,
+      this.backgroundColor,
+      this.disabledColor,
+      this.padding,
+      this.visualDensity,
+      this.materialTapTargetSize,
+      this.elevation,
+      this.shadowColor,
+      this.surfaceTintColor,
+      this.iconTheme,
+      final String? $type})
+      : $type = $type ?? 'actionChip';
+
+  factory _$ActionChip.fromJson(Map<String, dynamic> json) =>
+      _$$ActionChipFromJson(json);
+
+  @override
+  final Key? key;
+  @override
+  final Widget? avatar;
+// any
+  @override
+  final Widget label;
+  @override
+  final TextStyle? labelStyle;
+  @override
+  final EdgeInsets? labelPadding;
+  @override
+  final Callback? onPressed;
+  @override
+  final double? pressElevation;
+  @override
+  final String? tooltip;
+  @override
+  final BorderSide? side;
+  @override
+  final ShapeBorder? shape;
+  @override
+  @JsonKey()
+  final Clip clipBehavior;
+// Widget? focusNode, // any
+  @override
+  @JsonKey()
+  final bool autofocus;
+  @override
+  final Color? backgroundColor;
+  @override
+  final Color? disabledColor;
+  @override
+  final EdgeInsets? padding;
+  @override
+  final VisualDensity? visualDensity;
+  @override
+  final MaterialTapTargetSize? materialTapTargetSize;
+  @override
+  final double? elevation;
+  @override
+  final Color? shadowColor;
+  @override
+  final Color? surfaceTintColor;
+  @override
+  final IconThemeData? iconTheme;
+
+  @JsonKey(name: 'runtimeType')
+  final String $type;
+
+  @override
+  String toString() {
+    return 'Widget.actionChip(key: $key, avatar: $avatar, label: $label, labelStyle: $labelStyle, labelPadding: $labelPadding, onPressed: $onPressed, pressElevation: $pressElevation, tooltip: $tooltip, side: $side, shape: $shape, clipBehavior: $clipBehavior, autofocus: $autofocus, backgroundColor: $backgroundColor, disabledColor: $disabledColor, padding: $padding, visualDensity: $visualDensity, materialTapTargetSize: $materialTapTargetSize, elevation: $elevation, shadowColor: $shadowColor, surfaceTintColor: $surfaceTintColor, iconTheme: $iconTheme)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ActionChip &&
+            (identical(other.key, key) || other.key == key) &&
+            (identical(other.avatar, avatar) || other.avatar == avatar) &&
+            (identical(other.label, label) || other.label == label) &&
+            (identical(other.labelStyle, labelStyle) ||
+                other.labelStyle == labelStyle) &&
+            (identical(other.labelPadding, labelPadding) ||
+                other.labelPadding == labelPadding) &&
+            (identical(other.onPressed, onPressed) ||
+                other.onPressed == onPressed) &&
+            (identical(other.pressElevation, pressElevation) ||
+                other.pressElevation == pressElevation) &&
+            (identical(other.tooltip, tooltip) || other.tooltip == tooltip) &&
+            (identical(other.side, side) || other.side == side) &&
+            (identical(other.shape, shape) || other.shape == shape) &&
+            (identical(other.clipBehavior, clipBehavior) ||
+                other.clipBehavior == clipBehavior) &&
+            (identical(other.autofocus, autofocus) ||
+                other.autofocus == autofocus) &&
+            (identical(other.backgroundColor, backgroundColor) ||
+                other.backgroundColor == backgroundColor) &&
+            (identical(other.disabledColor, disabledColor) ||
+                other.disabledColor == disabledColor) &&
+            (identical(other.padding, padding) || other.padding == padding) &&
+            (identical(other.visualDensity, visualDensity) ||
+                other.visualDensity == visualDensity) &&
+            (identical(other.materialTapTargetSize, materialTapTargetSize) ||
+                other.materialTapTargetSize == materialTapTargetSize) &&
+            (identical(other.elevation, elevation) ||
+                other.elevation == elevation) &&
+            (identical(other.shadowColor, shadowColor) ||
+                other.shadowColor == shadowColor) &&
+            (identical(other.surfaceTintColor, surfaceTintColor) ||
+                other.surfaceTintColor == surfaceTintColor) &&
+            (identical(other.iconTheme, iconTheme) ||
+                other.iconTheme == iconTheme));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hashAll([
+        runtimeType,
+        key,
+        avatar,
+        label,
+        labelStyle,
+        labelPadding,
+        onPressed,
+        pressElevation,
+        tooltip,
+        side,
+        shape,
+        clipBehavior,
+        autofocus,
+        backgroundColor,
+        disabledColor,
+        padding,
+        visualDensity,
+        materialTapTargetSize,
+        elevation,
+        shadowColor,
+        surfaceTintColor,
+        iconTheme
+      ]);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ActionChipCopyWith<_$ActionChip> get copyWith =>
+      __$$ActionChipCopyWithImpl<_$ActionChip>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(
+            Key? key,
+            Color? color,
+            Color? shadowColor,
+            Color? surfaceTintColor,
+            double? elevation,
+            ShapeBorder? shape,
+            bool borderOnForeground,
+            EdgeInsets? margin,
+            Clip? clipBehavior,
+            Widget? child,
+            bool semanticContainer)
+        card,
+    required TResult Function(
+            Key? key,
+            Callback? onPressed,
+            Callback? onLongPress,
+            bool autofocus,
+            Clip clipBehavior,
+            Widget child,
+            ButtonStyle? style)
+        elevatedButton,
+    required TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)
+        filledButton,
+    required TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)
+        filledTonalButton,
+    required TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)
+        outlinedButton,
+    required TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)
+        textButton,
+    required TResult Function(
+            Key? key,
+            double? iconSize,
+            VisualDensity? visualDensity,
+            EdgeInsets? padding,
+            Alignment? alignment,
+            double? splashRadius,
+            Color? color,
+            Color? focusColor,
+            Color? hoverColor,
+            Color? highlightColor,
+            Color? splashColor,
+            Color? disabledColor,
+            Callback onPressed,
+            MouseCursor? mouseCursor,
+            bool autofocus,
+            String? tooltip,
+            bool? enableFeedback,
+            BoxConstraints? constraints,
+            bool? isSelected,
+            Widget? selectedIcon,
+            Widget icon)
+        iconButton,
+    required TResult Function(
+            Key? key,
+            PreferredSizeWidget? appBar,
+            Widget? body,
+            Widget? floatingActionButton,
+            FloatingActionButtonLocation? floatingActionButtonLocation,
+            List<Widget>? persistentFooterButtons,
+            Alignment persistentFooterAlignment,
+            Widget? drawer,
+            Widget? endDrawer,
+            Widget? bottomNavigationBar,
+            Widget? bottomSheet,
+            Color? backgroundColor,
+            bool? resizeToAvoidBottomInset,
+            bool primary,
+            bool extendBody,
+            bool extendBodyBehindAppBar,
+            Color? drawerScrimColor,
+            double? drawerEdgeDragWidth,
+            bool drawerEnableOpenDragGesture,
+            bool endDrawerEnableOpenDragGesture,
+            String? restorationId)
+        scaffold,
+    required TResult Function(Key? key, Widget? child, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, bool mini, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback) floatingActionButton,
+    required TResult Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback) floatingActionButtonExtended,
+    required TResult Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor) text,
+    required TResult Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior) container,
+    required TResult Function(Key? key, double? width, double? height, Widget? child) sizedBox,
+    required TResult Function(Key? key, double? widthFactor, double? heightFactor, Widget child) center,
+    required TResult Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection) icon,
+    required TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children) column,
+    required TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children) row,
+    required TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue) circularProgressIndicator,
+    required TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue) linearProgressIndicator,
+    required TResult Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color) divider,
+    required TResult Function(Key? key, Color? backgroundColor, bool extended, Widget? leading, Widget? trailing, List<NavigationRailDestination> destinations, int? selectedIndex, IntSelectionCallback? onDestinationSelected, double? elevation, double? groupAlignment, NavigationRailLabelType? labelType, TextStyle? unselectedLabelTextStyle, TextStyle? selectedLabelTextStyle, IconThemeData? unselectedIconTheme, IconThemeData? selectedIconTheme, double? minWidth, double? minExtendedWidth, bool? useIndicator, Color? indicatorColor, ShapeBorder? indicatorShape) navigationRail,
+    required TResult Function(Key? key, Duration? animationDuration, int selectedIndex, List<Widget> destinations, IntSelectionCallback? onDestinationSelected, Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, Color? indicatorColor, ShapeBorder? indicatorShape, double? height, NavigationDestinationLabelBehavior? labelBehavior) navigationBar,
+    required TResult Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration) defaultTabController,
+    required TResult Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child) tab,
+    required TResult Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior) tabBarView,
+    required TResult Function(Key? key, Axis scrollDirection, bool reverse, bool? primary, ScrollPhysics? physics, bool shrinkWrap, Key? center, double anchor, double? cacheExtent, List<Sliver> slivers, int? semanticChildCount, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior, String? restorationId, Clip clipBehavior) customScrollView,
+    required TResult Function(Key? key, bool? value, bool tristate, FormBoolField? field, MouseCursor? mouseCursor, Color? activeColor, MaterialStateProperty? fillColor, Color? checkColor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, MaterialTapTargetSize? materialTapTargetSize, VisualDensity? visualDensity, bool autofocus, ShapeBorder? shape, BorderSide? side, bool isError) checkbox,
+    required TResult Function(Key? key, FormStringField? field, List<DropdownMenuItem> items, String? value, Widget? hint, Widget? disabledHint, Callback? onTap, int elevation, TextStyle? style, Widget? icon, Color? iconDisabledColor, Color? iconEnabledColor, double iconSize, bool isDense, bool isExpanded, double? itemHeight, Color? focusColor, bool autofocus, Color? dropdownColor, InputDecoration? decoration, Map<String, String>? validatorMessages, AutovalidateMode? autovalidateMode, double? menuMaxHeight, bool? enableFeedback, Alignment alignment, BorderRadius? borderRadius) dropdownButtonFormField,
+    required TResult Function(Key? key, List<PopupMenuEntry> items, String? initialValue, Callback? onOpened, FormStringField? field, Callback? onCanceled, String? tooltip, double? elevation, Color? shadowColor, Color? surfaceTintColor, EdgeInsets padding, Widget? child, double? splashRadius, Widget? icon, double? iconSize, Offset offset, bool enabled, ShapeBorder? shape, Color? color, bool? enableFeedback, BoxConstraints? constraints, PopupMenuPosition? position, Clip clipBehavior) popupMenuButton,
+    required TResult Function(Key? key, Widget icon, Widget? selectedIcon, String label, String? tooltip) navigationDestination,
+    required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme) actionChip,
+    required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) filterChip,
+    required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) inputChip,
+  }) {
+    return actionChip(
+        key,
+        avatar,
+        label,
+        labelStyle,
+        labelPadding,
+        onPressed,
+        pressElevation,
+        tooltip,
+        side,
+        shape,
+        clipBehavior,
+        autofocus,
+        backgroundColor,
+        disabledColor,
+        padding,
+        visualDensity,
+        materialTapTargetSize,
+        elevation,
+        shadowColor,
+        surfaceTintColor,
+        iconTheme);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(
+            Key? key,
+            Color? color,
+            Color? shadowColor,
+            Color? surfaceTintColor,
+            double? elevation,
+            ShapeBorder? shape,
+            bool borderOnForeground,
+            EdgeInsets? margin,
+            Clip? clipBehavior,
+            Widget? child,
+            bool semanticContainer)?
+        card,
+    TResult? Function(
+            Key? key,
+            Callback? onPressed,
+            Callback? onLongPress,
+            bool autofocus,
+            Clip clipBehavior,
+            Widget child,
+            ButtonStyle? style)?
+        elevatedButton,
+    TResult? Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        filledButton,
+    TResult? Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        filledTonalButton,
+    TResult? Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        outlinedButton,
+    TResult? Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        textButton,
+    TResult? Function(
+            Key? key,
+            double? iconSize,
+            VisualDensity? visualDensity,
+            EdgeInsets? padding,
+            Alignment? alignment,
+            double? splashRadius,
+            Color? color,
+            Color? focusColor,
+            Color? hoverColor,
+            Color? highlightColor,
+            Color? splashColor,
+            Color? disabledColor,
+            Callback onPressed,
+            MouseCursor? mouseCursor,
+            bool autofocus,
+            String? tooltip,
+            bool? enableFeedback,
+            BoxConstraints? constraints,
+            bool? isSelected,
+            Widget? selectedIcon,
+            Widget icon)?
+        iconButton,
+    TResult? Function(
+            Key? key,
+            PreferredSizeWidget? appBar,
+            Widget? body,
+            Widget? floatingActionButton,
+            FloatingActionButtonLocation? floatingActionButtonLocation,
+            List<Widget>? persistentFooterButtons,
+            Alignment persistentFooterAlignment,
+            Widget? drawer,
+            Widget? endDrawer,
+            Widget? bottomNavigationBar,
+            Widget? bottomSheet,
+            Color? backgroundColor,
+            bool? resizeToAvoidBottomInset,
+            bool primary,
+            bool extendBody,
+            bool extendBodyBehindAppBar,
+            Color? drawerScrimColor,
+            double? drawerEdgeDragWidth,
+            bool drawerEnableOpenDragGesture,
+            bool endDrawerEnableOpenDragGesture,
+            String? restorationId)?
+        scaffold,
+    TResult? Function(Key? key, Widget? child, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, bool mini, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButton,
+    TResult? Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButtonExtended,
+    TResult? Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor)? text,
+    TResult? Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior)? container,
+    TResult? Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
+    TResult? Function(Key? key, double? widthFactor, double? heightFactor, Widget child)? center,
+    TResult? Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection)? icon,
+    TResult? Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? column,
+    TResult? Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? row,
+    TResult? Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue)? circularProgressIndicator,
+    TResult? Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue)? linearProgressIndicator,
+    TResult? Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color)? divider,
+    TResult? Function(Key? key, Color? backgroundColor, bool extended, Widget? leading, Widget? trailing, List<NavigationRailDestination> destinations, int? selectedIndex, IntSelectionCallback? onDestinationSelected, double? elevation, double? groupAlignment, NavigationRailLabelType? labelType, TextStyle? unselectedLabelTextStyle, TextStyle? selectedLabelTextStyle, IconThemeData? unselectedIconTheme, IconThemeData? selectedIconTheme, double? minWidth, double? minExtendedWidth, bool? useIndicator, Color? indicatorColor, ShapeBorder? indicatorShape)? navigationRail,
+    TResult? Function(Key? key, Duration? animationDuration, int selectedIndex, List<Widget> destinations, IntSelectionCallback? onDestinationSelected, Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, Color? indicatorColor, ShapeBorder? indicatorShape, double? height, NavigationDestinationLabelBehavior? labelBehavior)? navigationBar,
+    TResult? Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration)? defaultTabController,
+    TResult? Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child)? tab,
+    TResult? Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior)? tabBarView,
+    TResult? Function(Key? key, Axis scrollDirection, bool reverse, bool? primary, ScrollPhysics? physics, bool shrinkWrap, Key? center, double anchor, double? cacheExtent, List<Sliver> slivers, int? semanticChildCount, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior, String? restorationId, Clip clipBehavior)? customScrollView,
+    TResult? Function(Key? key, bool? value, bool tristate, FormBoolField? field, MouseCursor? mouseCursor, Color? activeColor, MaterialStateProperty? fillColor, Color? checkColor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, MaterialTapTargetSize? materialTapTargetSize, VisualDensity? visualDensity, bool autofocus, ShapeBorder? shape, BorderSide? side, bool isError)? checkbox,
+    TResult? Function(Key? key, FormStringField? field, List<DropdownMenuItem> items, String? value, Widget? hint, Widget? disabledHint, Callback? onTap, int elevation, TextStyle? style, Widget? icon, Color? iconDisabledColor, Color? iconEnabledColor, double iconSize, bool isDense, bool isExpanded, double? itemHeight, Color? focusColor, bool autofocus, Color? dropdownColor, InputDecoration? decoration, Map<String, String>? validatorMessages, AutovalidateMode? autovalidateMode, double? menuMaxHeight, bool? enableFeedback, Alignment alignment, BorderRadius? borderRadius)? dropdownButtonFormField,
+    TResult? Function(Key? key, List<PopupMenuEntry> items, String? initialValue, Callback? onOpened, FormStringField? field, Callback? onCanceled, String? tooltip, double? elevation, Color? shadowColor, Color? surfaceTintColor, EdgeInsets padding, Widget? child, double? splashRadius, Widget? icon, double? iconSize, Offset offset, bool enabled, ShapeBorder? shape, Color? color, bool? enableFeedback, BoxConstraints? constraints, PopupMenuPosition? position, Clip clipBehavior)? popupMenuButton,
+    TResult? Function(Key? key, Widget icon, Widget? selectedIcon, String label, String? tooltip)? navigationDestination,
+    TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
+    TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
+    TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
+  }) {
+    return actionChip?.call(
+        key,
+        avatar,
+        label,
+        labelStyle,
+        labelPadding,
+        onPressed,
+        pressElevation,
+        tooltip,
+        side,
+        shape,
+        clipBehavior,
+        autofocus,
+        backgroundColor,
+        disabledColor,
+        padding,
+        visualDensity,
+        materialTapTargetSize,
+        elevation,
+        shadowColor,
+        surfaceTintColor,
+        iconTheme);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(
+            Key? key,
+            Color? color,
+            Color? shadowColor,
+            Color? surfaceTintColor,
+            double? elevation,
+            ShapeBorder? shape,
+            bool borderOnForeground,
+            EdgeInsets? margin,
+            Clip? clipBehavior,
+            Widget? child,
+            bool semanticContainer)?
+        card,
+    TResult Function(
+            Key? key,
+            Callback? onPressed,
+            Callback? onLongPress,
+            bool autofocus,
+            Clip clipBehavior,
+            Widget child,
+            ButtonStyle? style)?
+        elevatedButton,
+    TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        filledButton,
+    TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        filledTonalButton,
+    TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        outlinedButton,
+    TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        textButton,
+    TResult Function(
+            Key? key,
+            double? iconSize,
+            VisualDensity? visualDensity,
+            EdgeInsets? padding,
+            Alignment? alignment,
+            double? splashRadius,
+            Color? color,
+            Color? focusColor,
+            Color? hoverColor,
+            Color? highlightColor,
+            Color? splashColor,
+            Color? disabledColor,
+            Callback onPressed,
+            MouseCursor? mouseCursor,
+            bool autofocus,
+            String? tooltip,
+            bool? enableFeedback,
+            BoxConstraints? constraints,
+            bool? isSelected,
+            Widget? selectedIcon,
+            Widget icon)?
+        iconButton,
+    TResult Function(
+            Key? key,
+            PreferredSizeWidget? appBar,
+            Widget? body,
+            Widget? floatingActionButton,
+            FloatingActionButtonLocation? floatingActionButtonLocation,
+            List<Widget>? persistentFooterButtons,
+            Alignment persistentFooterAlignment,
+            Widget? drawer,
+            Widget? endDrawer,
+            Widget? bottomNavigationBar,
+            Widget? bottomSheet,
+            Color? backgroundColor,
+            bool? resizeToAvoidBottomInset,
+            bool primary,
+            bool extendBody,
+            bool extendBodyBehindAppBar,
+            Color? drawerScrimColor,
+            double? drawerEdgeDragWidth,
+            bool drawerEnableOpenDragGesture,
+            bool endDrawerEnableOpenDragGesture,
+            String? restorationId)?
+        scaffold,
+    TResult Function(Key? key, Widget? child, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, bool mini, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButton,
+    TResult Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButtonExtended,
+    TResult Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor)? text,
+    TResult Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior)? container,
+    TResult Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
+    TResult Function(Key? key, double? widthFactor, double? heightFactor, Widget child)? center,
+    TResult Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection)? icon,
+    TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? column,
+    TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? row,
+    TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue)? circularProgressIndicator,
+    TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue)? linearProgressIndicator,
+    TResult Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color)? divider,
+    TResult Function(Key? key, Color? backgroundColor, bool extended, Widget? leading, Widget? trailing, List<NavigationRailDestination> destinations, int? selectedIndex, IntSelectionCallback? onDestinationSelected, double? elevation, double? groupAlignment, NavigationRailLabelType? labelType, TextStyle? unselectedLabelTextStyle, TextStyle? selectedLabelTextStyle, IconThemeData? unselectedIconTheme, IconThemeData? selectedIconTheme, double? minWidth, double? minExtendedWidth, bool? useIndicator, Color? indicatorColor, ShapeBorder? indicatorShape)? navigationRail,
+    TResult Function(Key? key, Duration? animationDuration, int selectedIndex, List<Widget> destinations, IntSelectionCallback? onDestinationSelected, Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, Color? indicatorColor, ShapeBorder? indicatorShape, double? height, NavigationDestinationLabelBehavior? labelBehavior)? navigationBar,
+    TResult Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration)? defaultTabController,
+    TResult Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child)? tab,
+    TResult Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior)? tabBarView,
+    TResult Function(Key? key, Axis scrollDirection, bool reverse, bool? primary, ScrollPhysics? physics, bool shrinkWrap, Key? center, double anchor, double? cacheExtent, List<Sliver> slivers, int? semanticChildCount, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior, String? restorationId, Clip clipBehavior)? customScrollView,
+    TResult Function(Key? key, bool? value, bool tristate, FormBoolField? field, MouseCursor? mouseCursor, Color? activeColor, MaterialStateProperty? fillColor, Color? checkColor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, MaterialTapTargetSize? materialTapTargetSize, VisualDensity? visualDensity, bool autofocus, ShapeBorder? shape, BorderSide? side, bool isError)? checkbox,
+    TResult Function(Key? key, FormStringField? field, List<DropdownMenuItem> items, String? value, Widget? hint, Widget? disabledHint, Callback? onTap, int elevation, TextStyle? style, Widget? icon, Color? iconDisabledColor, Color? iconEnabledColor, double iconSize, bool isDense, bool isExpanded, double? itemHeight, Color? focusColor, bool autofocus, Color? dropdownColor, InputDecoration? decoration, Map<String, String>? validatorMessages, AutovalidateMode? autovalidateMode, double? menuMaxHeight, bool? enableFeedback, Alignment alignment, BorderRadius? borderRadius)? dropdownButtonFormField,
+    TResult Function(Key? key, List<PopupMenuEntry> items, String? initialValue, Callback? onOpened, FormStringField? field, Callback? onCanceled, String? tooltip, double? elevation, Color? shadowColor, Color? surfaceTintColor, EdgeInsets padding, Widget? child, double? splashRadius, Widget? icon, double? iconSize, Offset offset, bool enabled, ShapeBorder? shape, Color? color, bool? enableFeedback, BoxConstraints? constraints, PopupMenuPosition? position, Clip clipBehavior)? popupMenuButton,
+    TResult Function(Key? key, Widget icon, Widget? selectedIcon, String label, String? tooltip)? navigationDestination,
+    TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
+    TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
+    TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
+    required TResult orElse(),
+  }) {
+    if (actionChip != null) {
+      return actionChip(
+          key,
+          avatar,
+          label,
+          labelStyle,
+          labelPadding,
+          onPressed,
+          pressElevation,
+          tooltip,
+          side,
+          shape,
+          clipBehavior,
+          autofocus,
+          backgroundColor,
+          disabledColor,
+          padding,
+          visualDensity,
+          materialTapTargetSize,
+          elevation,
+          shadowColor,
+          surfaceTintColor,
+          iconTheme);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(Card value) card,
+    required TResult Function(ElevatedButton value) elevatedButton,
+    required TResult Function(FilledButton value) filledButton,
+    required TResult Function(FilledTonalButton value) filledTonalButton,
+    required TResult Function(OutlinedButton value) outlinedButton,
+    required TResult Function(TextButton value) textButton,
+    required TResult Function(IconButton value) iconButton,
+    required TResult Function(Scaffold value) scaffold,
+    required TResult Function(FloatingActionButton value) floatingActionButton,
+    required TResult Function(FloatingActionButtonExtended value)
+        floatingActionButtonExtended,
+    required TResult Function(Text value) text,
+    required TResult Function(Container value) container,
+    required TResult Function(SizedBox value) sizedBox,
+    required TResult Function(Center value) center,
+    required TResult Function(Icon value) icon,
+    required TResult Function(Column value) column,
+    required TResult Function(Row value) row,
+    required TResult Function(CircularProgressIndicator value)
+        circularProgressIndicator,
+    required TResult Function(LinearProgressIndicator value)
+        linearProgressIndicator,
+    required TResult Function(Divider value) divider,
+    required TResult Function(NavigationRail value) navigationRail,
+    required TResult Function(NavigationBar value) navigationBar,
+    required TResult Function(DefaultTabController value) defaultTabController,
+    required TResult Function(Tab value) tab,
+    required TResult Function(TabBarView value) tabBarView,
+    required TResult Function(CustomScrollView value) customScrollView,
+    required TResult Function(Checkbox value) checkbox,
+    required TResult Function(DropdownButtonFormField value)
+        dropdownButtonFormField,
+    required TResult Function(PopupMenuButton value) popupMenuButton,
+    required TResult Function(NavigationDestination value)
+        navigationDestination,
+    required TResult Function(ActionChip value) actionChip,
+    required TResult Function(FilterChip value) filterChip,
+    required TResult Function(InputChip value) inputChip,
+  }) {
+    return actionChip(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(Card value)? card,
+    TResult? Function(ElevatedButton value)? elevatedButton,
+    TResult? Function(FilledButton value)? filledButton,
+    TResult? Function(FilledTonalButton value)? filledTonalButton,
+    TResult? Function(OutlinedButton value)? outlinedButton,
+    TResult? Function(TextButton value)? textButton,
+    TResult? Function(IconButton value)? iconButton,
+    TResult? Function(Scaffold value)? scaffold,
+    TResult? Function(FloatingActionButton value)? floatingActionButton,
+    TResult? Function(FloatingActionButtonExtended value)?
+        floatingActionButtonExtended,
+    TResult? Function(Text value)? text,
+    TResult? Function(Container value)? container,
+    TResult? Function(SizedBox value)? sizedBox,
+    TResult? Function(Center value)? center,
+    TResult? Function(Icon value)? icon,
+    TResult? Function(Column value)? column,
+    TResult? Function(Row value)? row,
+    TResult? Function(CircularProgressIndicator value)?
+        circularProgressIndicator,
+    TResult? Function(LinearProgressIndicator value)? linearProgressIndicator,
+    TResult? Function(Divider value)? divider,
+    TResult? Function(NavigationRail value)? navigationRail,
+    TResult? Function(NavigationBar value)? navigationBar,
+    TResult? Function(DefaultTabController value)? defaultTabController,
+    TResult? Function(Tab value)? tab,
+    TResult? Function(TabBarView value)? tabBarView,
+    TResult? Function(CustomScrollView value)? customScrollView,
+    TResult? Function(Checkbox value)? checkbox,
+    TResult? Function(DropdownButtonFormField value)? dropdownButtonFormField,
+    TResult? Function(PopupMenuButton value)? popupMenuButton,
+    TResult? Function(NavigationDestination value)? navigationDestination,
+    TResult? Function(ActionChip value)? actionChip,
+    TResult? Function(FilterChip value)? filterChip,
+    TResult? Function(InputChip value)? inputChip,
+  }) {
+    return actionChip?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(Card value)? card,
+    TResult Function(ElevatedButton value)? elevatedButton,
+    TResult Function(FilledButton value)? filledButton,
+    TResult Function(FilledTonalButton value)? filledTonalButton,
+    TResult Function(OutlinedButton value)? outlinedButton,
+    TResult Function(TextButton value)? textButton,
+    TResult Function(IconButton value)? iconButton,
+    TResult Function(Scaffold value)? scaffold,
+    TResult Function(FloatingActionButton value)? floatingActionButton,
+    TResult Function(FloatingActionButtonExtended value)?
+        floatingActionButtonExtended,
+    TResult Function(Text value)? text,
+    TResult Function(Container value)? container,
+    TResult Function(SizedBox value)? sizedBox,
+    TResult Function(Center value)? center,
+    TResult Function(Icon value)? icon,
+    TResult Function(Column value)? column,
+    TResult Function(Row value)? row,
+    TResult Function(CircularProgressIndicator value)?
+        circularProgressIndicator,
+    TResult Function(LinearProgressIndicator value)? linearProgressIndicator,
+    TResult Function(Divider value)? divider,
+    TResult Function(NavigationRail value)? navigationRail,
+    TResult Function(NavigationBar value)? navigationBar,
+    TResult Function(DefaultTabController value)? defaultTabController,
+    TResult Function(Tab value)? tab,
+    TResult Function(TabBarView value)? tabBarView,
+    TResult Function(CustomScrollView value)? customScrollView,
+    TResult Function(Checkbox value)? checkbox,
+    TResult Function(DropdownButtonFormField value)? dropdownButtonFormField,
+    TResult Function(PopupMenuButton value)? popupMenuButton,
+    TResult Function(NavigationDestination value)? navigationDestination,
+    TResult Function(ActionChip value)? actionChip,
+    TResult Function(FilterChip value)? filterChip,
+    TResult Function(InputChip value)? inputChip,
+    required TResult orElse(),
+  }) {
+    if (actionChip != null) {
+      return actionChip(this);
+    }
+    return orElse();
+  }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$ActionChipToJson(
+      this,
+    );
+  }
+}
+
+abstract class ActionChip implements Widget {
+  const factory ActionChip(
+      {final Key? key,
+      final Widget? avatar,
+      required final Widget label,
+      final TextStyle? labelStyle,
+      final EdgeInsets? labelPadding,
+      final Callback? onPressed,
+      final double? pressElevation,
+      final String? tooltip,
+      final BorderSide? side,
+      final ShapeBorder? shape,
+      final Clip clipBehavior,
+      final bool autofocus,
+      final Color? backgroundColor,
+      final Color? disabledColor,
+      final EdgeInsets? padding,
+      final VisualDensity? visualDensity,
+      final MaterialTapTargetSize? materialTapTargetSize,
+      final double? elevation,
+      final Color? shadowColor,
+      final Color? surfaceTintColor,
+      final IconThemeData? iconTheme}) = _$ActionChip;
+
+  factory ActionChip.fromJson(Map<String, dynamic> json) =
+      _$ActionChip.fromJson;
+
+  @override
+  Key? get key;
+  Widget? get avatar; // any
+  Widget get label;
+  TextStyle? get labelStyle;
+  EdgeInsets? get labelPadding;
+  Callback? get onPressed;
+  double? get pressElevation;
+  String? get tooltip;
+  BorderSide? get side;
+  ShapeBorder? get shape;
+  Clip get clipBehavior; // Widget? focusNode, // any
+  bool get autofocus;
+  Color? get backgroundColor;
+  Color? get disabledColor;
+  EdgeInsets? get padding;
+  VisualDensity? get visualDensity;
+  MaterialTapTargetSize? get materialTapTargetSize;
+  double? get elevation;
+  Color? get shadowColor;
+  Color? get surfaceTintColor;
+  IconThemeData? get iconTheme;
+  @override
+  @JsonKey(ignore: true)
+  _$$ActionChipCopyWith<_$ActionChip> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$FilterChipCopyWith<$Res> implements $WidgetCopyWith<$Res> {
+  factory _$$FilterChipCopyWith(
+          _$FilterChip value, $Res Function(_$FilterChip) then) =
+      __$$FilterChipCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {Key? key,
+      Widget? avatar,
+      Widget label,
+      TextStyle? labelStyle,
+      EdgeInsets? labelPadding,
+      bool selected,
+      BoolSelectionCallback onSelected,
+      double? pressElevation,
+      Color? disabledColor,
+      Color? selectedColor,
+      String? tooltip,
+      BorderSide? side,
+      ShapeBorder? shape,
+      Clip clipBehavior,
+      bool autofocus,
+      Color? backgroundColor,
+      EdgeInsets? padding,
+      VisualDensity? visualDensity,
+      MaterialTapTargetSize? materialTapTargetSize,
+      double? elevation,
+      Color? shadowColor,
+      Color? surfaceTintColor,
+      IconThemeData? iconTheme,
+      Color? selectedShadowColor,
+      bool? showCheckmark,
+      Color? checkmarkColor,
+      ShapeBorder avatarBorder});
+
+  @override
+  $KeyCopyWith<$Res>? get key;
+  $WidgetCopyWith<$Res>? get avatar;
+  $WidgetCopyWith<$Res> get label;
+  $TextStyleCopyWith<$Res>? get labelStyle;
+  $EdgeInsetsCopyWith<$Res>? get labelPadding;
+  $ColorCopyWith<$Res>? get disabledColor;
+  $ColorCopyWith<$Res>? get selectedColor;
+  $BorderSideCopyWith<$Res>? get side;
+  $ShapeBorderCopyWith<$Res>? get shape;
+  $ColorCopyWith<$Res>? get backgroundColor;
+  $EdgeInsetsCopyWith<$Res>? get padding;
+  $VisualDensityCopyWith<$Res>? get visualDensity;
+  $ColorCopyWith<$Res>? get shadowColor;
+  $ColorCopyWith<$Res>? get surfaceTintColor;
+  $IconThemeDataCopyWith<$Res>? get iconTheme;
+  $ColorCopyWith<$Res>? get selectedShadowColor;
+  $ColorCopyWith<$Res>? get checkmarkColor;
+  $ShapeBorderCopyWith<$Res> get avatarBorder;
+}
+
+/// @nodoc
+class __$$FilterChipCopyWithImpl<$Res>
+    extends _$WidgetCopyWithImpl<$Res, _$FilterChip>
+    implements _$$FilterChipCopyWith<$Res> {
+  __$$FilterChipCopyWithImpl(
+      _$FilterChip _value, $Res Function(_$FilterChip) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? key = freezed,
+    Object? avatar = freezed,
+    Object? label = null,
+    Object? labelStyle = freezed,
+    Object? labelPadding = freezed,
+    Object? selected = null,
+    Object? onSelected = freezed,
+    Object? pressElevation = freezed,
+    Object? disabledColor = freezed,
+    Object? selectedColor = freezed,
+    Object? tooltip = freezed,
+    Object? side = freezed,
+    Object? shape = freezed,
+    Object? clipBehavior = null,
+    Object? autofocus = null,
+    Object? backgroundColor = freezed,
+    Object? padding = freezed,
+    Object? visualDensity = freezed,
+    Object? materialTapTargetSize = freezed,
+    Object? elevation = freezed,
+    Object? shadowColor = freezed,
+    Object? surfaceTintColor = freezed,
+    Object? iconTheme = freezed,
+    Object? selectedShadowColor = freezed,
+    Object? showCheckmark = freezed,
+    Object? checkmarkColor = freezed,
+    Object? avatarBorder = null,
+  }) {
+    return _then(_$FilterChip(
+      key: freezed == key
+          ? _value.key
+          : key // ignore: cast_nullable_to_non_nullable
+              as Key?,
+      avatar: freezed == avatar
+          ? _value.avatar
+          : avatar // ignore: cast_nullable_to_non_nullable
+              as Widget?,
+      label: null == label
+          ? _value.label
+          : label // ignore: cast_nullable_to_non_nullable
+              as Widget,
+      labelStyle: freezed == labelStyle
+          ? _value.labelStyle
+          : labelStyle // ignore: cast_nullable_to_non_nullable
+              as TextStyle?,
+      labelPadding: freezed == labelPadding
+          ? _value.labelPadding
+          : labelPadding // ignore: cast_nullable_to_non_nullable
+              as EdgeInsets?,
+      selected: null == selected
+          ? _value.selected
+          : selected // ignore: cast_nullable_to_non_nullable
+              as bool,
+      onSelected: freezed == onSelected
+          ? _value.onSelected
+          : onSelected // ignore: cast_nullable_to_non_nullable
+              as BoolSelectionCallback,
+      pressElevation: freezed == pressElevation
+          ? _value.pressElevation
+          : pressElevation // ignore: cast_nullable_to_non_nullable
+              as double?,
+      disabledColor: freezed == disabledColor
+          ? _value.disabledColor
+          : disabledColor // ignore: cast_nullable_to_non_nullable
+              as Color?,
+      selectedColor: freezed == selectedColor
+          ? _value.selectedColor
+          : selectedColor // ignore: cast_nullable_to_non_nullable
+              as Color?,
+      tooltip: freezed == tooltip
+          ? _value.tooltip
+          : tooltip // ignore: cast_nullable_to_non_nullable
+              as String?,
+      side: freezed == side
+          ? _value.side
+          : side // ignore: cast_nullable_to_non_nullable
+              as BorderSide?,
+      shape: freezed == shape
+          ? _value.shape
+          : shape // ignore: cast_nullable_to_non_nullable
+              as ShapeBorder?,
+      clipBehavior: null == clipBehavior
+          ? _value.clipBehavior
+          : clipBehavior // ignore: cast_nullable_to_non_nullable
+              as Clip,
+      autofocus: null == autofocus
+          ? _value.autofocus
+          : autofocus // ignore: cast_nullable_to_non_nullable
+              as bool,
+      backgroundColor: freezed == backgroundColor
+          ? _value.backgroundColor
+          : backgroundColor // ignore: cast_nullable_to_non_nullable
+              as Color?,
+      padding: freezed == padding
+          ? _value.padding
+          : padding // ignore: cast_nullable_to_non_nullable
+              as EdgeInsets?,
+      visualDensity: freezed == visualDensity
+          ? _value.visualDensity
+          : visualDensity // ignore: cast_nullable_to_non_nullable
+              as VisualDensity?,
+      materialTapTargetSize: freezed == materialTapTargetSize
+          ? _value.materialTapTargetSize
+          : materialTapTargetSize // ignore: cast_nullable_to_non_nullable
+              as MaterialTapTargetSize?,
+      elevation: freezed == elevation
+          ? _value.elevation
+          : elevation // ignore: cast_nullable_to_non_nullable
+              as double?,
+      shadowColor: freezed == shadowColor
+          ? _value.shadowColor
+          : shadowColor // ignore: cast_nullable_to_non_nullable
+              as Color?,
+      surfaceTintColor: freezed == surfaceTintColor
+          ? _value.surfaceTintColor
+          : surfaceTintColor // ignore: cast_nullable_to_non_nullable
+              as Color?,
+      iconTheme: freezed == iconTheme
+          ? _value.iconTheme
+          : iconTheme // ignore: cast_nullable_to_non_nullable
+              as IconThemeData?,
+      selectedShadowColor: freezed == selectedShadowColor
+          ? _value.selectedShadowColor
+          : selectedShadowColor // ignore: cast_nullable_to_non_nullable
+              as Color?,
+      showCheckmark: freezed == showCheckmark
+          ? _value.showCheckmark
+          : showCheckmark // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      checkmarkColor: freezed == checkmarkColor
+          ? _value.checkmarkColor
+          : checkmarkColor // ignore: cast_nullable_to_non_nullable
+              as Color?,
+      avatarBorder: null == avatarBorder
+          ? _value.avatarBorder
+          : avatarBorder // ignore: cast_nullable_to_non_nullable
+              as ShapeBorder,
+    ));
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $WidgetCopyWith<$Res>? get avatar {
+    if (_value.avatar == null) {
+      return null;
+    }
+
+    return $WidgetCopyWith<$Res>(_value.avatar!, (value) {
+      return _then(_value.copyWith(avatar: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $WidgetCopyWith<$Res> get label {
+    return $WidgetCopyWith<$Res>(_value.label, (value) {
+      return _then(_value.copyWith(label: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $TextStyleCopyWith<$Res>? get labelStyle {
+    if (_value.labelStyle == null) {
+      return null;
+    }
+
+    return $TextStyleCopyWith<$Res>(_value.labelStyle!, (value) {
+      return _then(_value.copyWith(labelStyle: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $EdgeInsetsCopyWith<$Res>? get labelPadding {
+    if (_value.labelPadding == null) {
+      return null;
+    }
+
+    return $EdgeInsetsCopyWith<$Res>(_value.labelPadding!, (value) {
+      return _then(_value.copyWith(labelPadding: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ColorCopyWith<$Res>? get disabledColor {
+    if (_value.disabledColor == null) {
+      return null;
+    }
+
+    return $ColorCopyWith<$Res>(_value.disabledColor!, (value) {
+      return _then(_value.copyWith(disabledColor: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ColorCopyWith<$Res>? get selectedColor {
+    if (_value.selectedColor == null) {
+      return null;
+    }
+
+    return $ColorCopyWith<$Res>(_value.selectedColor!, (value) {
+      return _then(_value.copyWith(selectedColor: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $BorderSideCopyWith<$Res>? get side {
+    if (_value.side == null) {
+      return null;
+    }
+
+    return $BorderSideCopyWith<$Res>(_value.side!, (value) {
+      return _then(_value.copyWith(side: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ShapeBorderCopyWith<$Res>? get shape {
+    if (_value.shape == null) {
+      return null;
+    }
+
+    return $ShapeBorderCopyWith<$Res>(_value.shape!, (value) {
+      return _then(_value.copyWith(shape: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ColorCopyWith<$Res>? get backgroundColor {
+    if (_value.backgroundColor == null) {
+      return null;
+    }
+
+    return $ColorCopyWith<$Res>(_value.backgroundColor!, (value) {
+      return _then(_value.copyWith(backgroundColor: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $EdgeInsetsCopyWith<$Res>? get padding {
+    if (_value.padding == null) {
+      return null;
+    }
+
+    return $EdgeInsetsCopyWith<$Res>(_value.padding!, (value) {
+      return _then(_value.copyWith(padding: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $VisualDensityCopyWith<$Res>? get visualDensity {
+    if (_value.visualDensity == null) {
+      return null;
+    }
+
+    return $VisualDensityCopyWith<$Res>(_value.visualDensity!, (value) {
+      return _then(_value.copyWith(visualDensity: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ColorCopyWith<$Res>? get shadowColor {
+    if (_value.shadowColor == null) {
+      return null;
+    }
+
+    return $ColorCopyWith<$Res>(_value.shadowColor!, (value) {
+      return _then(_value.copyWith(shadowColor: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ColorCopyWith<$Res>? get surfaceTintColor {
+    if (_value.surfaceTintColor == null) {
+      return null;
+    }
+
+    return $ColorCopyWith<$Res>(_value.surfaceTintColor!, (value) {
+      return _then(_value.copyWith(surfaceTintColor: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $IconThemeDataCopyWith<$Res>? get iconTheme {
+    if (_value.iconTheme == null) {
+      return null;
+    }
+
+    return $IconThemeDataCopyWith<$Res>(_value.iconTheme!, (value) {
+      return _then(_value.copyWith(iconTheme: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ColorCopyWith<$Res>? get selectedShadowColor {
+    if (_value.selectedShadowColor == null) {
+      return null;
+    }
+
+    return $ColorCopyWith<$Res>(_value.selectedShadowColor!, (value) {
+      return _then(_value.copyWith(selectedShadowColor: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ColorCopyWith<$Res>? get checkmarkColor {
+    if (_value.checkmarkColor == null) {
+      return null;
+    }
+
+    return $ColorCopyWith<$Res>(_value.checkmarkColor!, (value) {
+      return _then(_value.copyWith(checkmarkColor: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ShapeBorderCopyWith<$Res> get avatarBorder {
+    return $ShapeBorderCopyWith<$Res>(_value.avatarBorder, (value) {
+      return _then(_value.copyWith(avatarBorder: value));
+    });
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$FilterChip implements FilterChip {
+  const _$FilterChip(
+      {this.key,
+      this.avatar,
+      required this.label,
+      this.labelStyle,
+      this.labelPadding,
+      this.selected = false,
+      required this.onSelected,
+      this.pressElevation,
+      this.disabledColor,
+      this.selectedColor,
+      this.tooltip,
+      this.side,
+      this.shape,
+      this.clipBehavior = Clip.none,
+      this.autofocus = false,
+      this.backgroundColor,
+      this.padding,
+      this.visualDensity,
+      this.materialTapTargetSize,
+      this.elevation,
+      this.shadowColor,
+      this.surfaceTintColor,
+      this.iconTheme,
+      this.selectedShadowColor,
+      this.showCheckmark,
+      this.checkmarkColor,
+      this.avatarBorder = const ShapeBorder.circle(),
+      final String? $type})
+      : $type = $type ?? 'filterChip';
+
+  factory _$FilterChip.fromJson(Map<String, dynamic> json) =>
+      _$$FilterChipFromJson(json);
+
+  @override
+  final Key? key;
+  @override
+  final Widget? avatar;
+// any
+  @override
+  final Widget label;
+  @override
+  final TextStyle? labelStyle;
+  @override
+  final EdgeInsets? labelPadding;
+  @override
+  @JsonKey()
+  final bool selected;
+  @override
+  final BoolSelectionCallback onSelected;
+//any  ValueChanged<bool>?
+  @override
+  final double? pressElevation;
+  @override
+  final Color? disabledColor;
+  @override
+  final Color? selectedColor;
+  @override
+  final String? tooltip;
+  @override
+  final BorderSide? side;
+  @override
+  final ShapeBorder? shape;
+  @override
+  @JsonKey()
+  final Clip clipBehavior;
+// Widget? focusNode, // any
+  @override
+  @JsonKey()
+  final bool autofocus;
+  @override
+  final Color? backgroundColor;
+  @override
+  final EdgeInsets? padding;
+  @override
+  final VisualDensity? visualDensity;
+  @override
+  final MaterialTapTargetSize? materialTapTargetSize;
+  @override
+  final double? elevation;
+  @override
+  final Color? shadowColor;
+  @override
+  final Color? surfaceTintColor;
+  @override
+  final IconThemeData? iconTheme;
+  @override
+  final Color? selectedShadowColor;
+  @override
+  final bool? showCheckmark;
+  @override
+  final Color? checkmarkColor;
+  @override
+  @JsonKey()
+  final ShapeBorder avatarBorder;
+
+  @JsonKey(name: 'runtimeType')
+  final String $type;
+
+  @override
+  String toString() {
+    return 'Widget.filterChip(key: $key, avatar: $avatar, label: $label, labelStyle: $labelStyle, labelPadding: $labelPadding, selected: $selected, onSelected: $onSelected, pressElevation: $pressElevation, disabledColor: $disabledColor, selectedColor: $selectedColor, tooltip: $tooltip, side: $side, shape: $shape, clipBehavior: $clipBehavior, autofocus: $autofocus, backgroundColor: $backgroundColor, padding: $padding, visualDensity: $visualDensity, materialTapTargetSize: $materialTapTargetSize, elevation: $elevation, shadowColor: $shadowColor, surfaceTintColor: $surfaceTintColor, iconTheme: $iconTheme, selectedShadowColor: $selectedShadowColor, showCheckmark: $showCheckmark, checkmarkColor: $checkmarkColor, avatarBorder: $avatarBorder)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$FilterChip &&
+            (identical(other.key, key) || other.key == key) &&
+            (identical(other.avatar, avatar) || other.avatar == avatar) &&
+            (identical(other.label, label) || other.label == label) &&
+            (identical(other.labelStyle, labelStyle) ||
+                other.labelStyle == labelStyle) &&
+            (identical(other.labelPadding, labelPadding) ||
+                other.labelPadding == labelPadding) &&
+            (identical(other.selected, selected) ||
+                other.selected == selected) &&
+            const DeepCollectionEquality()
+                .equals(other.onSelected, onSelected) &&
+            (identical(other.pressElevation, pressElevation) ||
+                other.pressElevation == pressElevation) &&
+            (identical(other.disabledColor, disabledColor) ||
+                other.disabledColor == disabledColor) &&
+            (identical(other.selectedColor, selectedColor) ||
+                other.selectedColor == selectedColor) &&
+            (identical(other.tooltip, tooltip) || other.tooltip == tooltip) &&
+            (identical(other.side, side) || other.side == side) &&
+            (identical(other.shape, shape) || other.shape == shape) &&
+            (identical(other.clipBehavior, clipBehavior) ||
+                other.clipBehavior == clipBehavior) &&
+            (identical(other.autofocus, autofocus) ||
+                other.autofocus == autofocus) &&
+            (identical(other.backgroundColor, backgroundColor) ||
+                other.backgroundColor == backgroundColor) &&
+            (identical(other.padding, padding) || other.padding == padding) &&
+            (identical(other.visualDensity, visualDensity) ||
+                other.visualDensity == visualDensity) &&
+            (identical(other.materialTapTargetSize, materialTapTargetSize) ||
+                other.materialTapTargetSize == materialTapTargetSize) &&
+            (identical(other.elevation, elevation) ||
+                other.elevation == elevation) &&
+            (identical(other.shadowColor, shadowColor) ||
+                other.shadowColor == shadowColor) &&
+            (identical(other.surfaceTintColor, surfaceTintColor) ||
+                other.surfaceTintColor == surfaceTintColor) &&
+            (identical(other.iconTheme, iconTheme) ||
+                other.iconTheme == iconTheme) &&
+            (identical(other.selectedShadowColor, selectedShadowColor) ||
+                other.selectedShadowColor == selectedShadowColor) &&
+            (identical(other.showCheckmark, showCheckmark) ||
+                other.showCheckmark == showCheckmark) &&
+            (identical(other.checkmarkColor, checkmarkColor) ||
+                other.checkmarkColor == checkmarkColor) &&
+            (identical(other.avatarBorder, avatarBorder) ||
+                other.avatarBorder == avatarBorder));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hashAll([
+        runtimeType,
+        key,
+        avatar,
+        label,
+        labelStyle,
+        labelPadding,
+        selected,
+        const DeepCollectionEquality().hash(onSelected),
+        pressElevation,
+        disabledColor,
+        selectedColor,
+        tooltip,
+        side,
+        shape,
+        clipBehavior,
+        autofocus,
+        backgroundColor,
+        padding,
+        visualDensity,
+        materialTapTargetSize,
+        elevation,
+        shadowColor,
+        surfaceTintColor,
+        iconTheme,
+        selectedShadowColor,
+        showCheckmark,
+        checkmarkColor,
+        avatarBorder
+      ]);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$FilterChipCopyWith<_$FilterChip> get copyWith =>
+      __$$FilterChipCopyWithImpl<_$FilterChip>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(
+            Key? key,
+            Color? color,
+            Color? shadowColor,
+            Color? surfaceTintColor,
+            double? elevation,
+            ShapeBorder? shape,
+            bool borderOnForeground,
+            EdgeInsets? margin,
+            Clip? clipBehavior,
+            Widget? child,
+            bool semanticContainer)
+        card,
+    required TResult Function(
+            Key? key,
+            Callback? onPressed,
+            Callback? onLongPress,
+            bool autofocus,
+            Clip clipBehavior,
+            Widget child,
+            ButtonStyle? style)
+        elevatedButton,
+    required TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)
+        filledButton,
+    required TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)
+        filledTonalButton,
+    required TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)
+        outlinedButton,
+    required TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)
+        textButton,
+    required TResult Function(
+            Key? key,
+            double? iconSize,
+            VisualDensity? visualDensity,
+            EdgeInsets? padding,
+            Alignment? alignment,
+            double? splashRadius,
+            Color? color,
+            Color? focusColor,
+            Color? hoverColor,
+            Color? highlightColor,
+            Color? splashColor,
+            Color? disabledColor,
+            Callback onPressed,
+            MouseCursor? mouseCursor,
+            bool autofocus,
+            String? tooltip,
+            bool? enableFeedback,
+            BoxConstraints? constraints,
+            bool? isSelected,
+            Widget? selectedIcon,
+            Widget icon)
+        iconButton,
+    required TResult Function(
+            Key? key,
+            PreferredSizeWidget? appBar,
+            Widget? body,
+            Widget? floatingActionButton,
+            FloatingActionButtonLocation? floatingActionButtonLocation,
+            List<Widget>? persistentFooterButtons,
+            Alignment persistentFooterAlignment,
+            Widget? drawer,
+            Widget? endDrawer,
+            Widget? bottomNavigationBar,
+            Widget? bottomSheet,
+            Color? backgroundColor,
+            bool? resizeToAvoidBottomInset,
+            bool primary,
+            bool extendBody,
+            bool extendBodyBehindAppBar,
+            Color? drawerScrimColor,
+            double? drawerEdgeDragWidth,
+            bool drawerEnableOpenDragGesture,
+            bool endDrawerEnableOpenDragGesture,
+            String? restorationId)
+        scaffold,
+    required TResult Function(Key? key, Widget? child, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, bool mini, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback) floatingActionButton,
+    required TResult Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback) floatingActionButtonExtended,
+    required TResult Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor) text,
+    required TResult Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior) container,
+    required TResult Function(Key? key, double? width, double? height, Widget? child) sizedBox,
+    required TResult Function(Key? key, double? widthFactor, double? heightFactor, Widget child) center,
+    required TResult Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection) icon,
+    required TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children) column,
+    required TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children) row,
+    required TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue) circularProgressIndicator,
+    required TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue) linearProgressIndicator,
+    required TResult Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color) divider,
+    required TResult Function(Key? key, Color? backgroundColor, bool extended, Widget? leading, Widget? trailing, List<NavigationRailDestination> destinations, int? selectedIndex, IntSelectionCallback? onDestinationSelected, double? elevation, double? groupAlignment, NavigationRailLabelType? labelType, TextStyle? unselectedLabelTextStyle, TextStyle? selectedLabelTextStyle, IconThemeData? unselectedIconTheme, IconThemeData? selectedIconTheme, double? minWidth, double? minExtendedWidth, bool? useIndicator, Color? indicatorColor, ShapeBorder? indicatorShape) navigationRail,
+    required TResult Function(Key? key, Duration? animationDuration, int selectedIndex, List<Widget> destinations, IntSelectionCallback? onDestinationSelected, Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, Color? indicatorColor, ShapeBorder? indicatorShape, double? height, NavigationDestinationLabelBehavior? labelBehavior) navigationBar,
+    required TResult Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration) defaultTabController,
+    required TResult Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child) tab,
+    required TResult Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior) tabBarView,
+    required TResult Function(Key? key, Axis scrollDirection, bool reverse, bool? primary, ScrollPhysics? physics, bool shrinkWrap, Key? center, double anchor, double? cacheExtent, List<Sliver> slivers, int? semanticChildCount, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior, String? restorationId, Clip clipBehavior) customScrollView,
+    required TResult Function(Key? key, bool? value, bool tristate, FormBoolField? field, MouseCursor? mouseCursor, Color? activeColor, MaterialStateProperty? fillColor, Color? checkColor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, MaterialTapTargetSize? materialTapTargetSize, VisualDensity? visualDensity, bool autofocus, ShapeBorder? shape, BorderSide? side, bool isError) checkbox,
+    required TResult Function(Key? key, FormStringField? field, List<DropdownMenuItem> items, String? value, Widget? hint, Widget? disabledHint, Callback? onTap, int elevation, TextStyle? style, Widget? icon, Color? iconDisabledColor, Color? iconEnabledColor, double iconSize, bool isDense, bool isExpanded, double? itemHeight, Color? focusColor, bool autofocus, Color? dropdownColor, InputDecoration? decoration, Map<String, String>? validatorMessages, AutovalidateMode? autovalidateMode, double? menuMaxHeight, bool? enableFeedback, Alignment alignment, BorderRadius? borderRadius) dropdownButtonFormField,
+    required TResult Function(Key? key, List<PopupMenuEntry> items, String? initialValue, Callback? onOpened, FormStringField? field, Callback? onCanceled, String? tooltip, double? elevation, Color? shadowColor, Color? surfaceTintColor, EdgeInsets padding, Widget? child, double? splashRadius, Widget? icon, double? iconSize, Offset offset, bool enabled, ShapeBorder? shape, Color? color, bool? enableFeedback, BoxConstraints? constraints, PopupMenuPosition? position, Clip clipBehavior) popupMenuButton,
+    required TResult Function(Key? key, Widget icon, Widget? selectedIcon, String label, String? tooltip) navigationDestination,
+    required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme) actionChip,
+    required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) filterChip,
+    required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) inputChip,
+  }) {
+    return filterChip(
+        key,
+        avatar,
+        label,
+        labelStyle,
+        labelPadding,
+        selected,
+        onSelected,
+        pressElevation,
+        disabledColor,
+        selectedColor,
+        tooltip,
+        side,
+        shape,
+        clipBehavior,
+        autofocus,
+        backgroundColor,
+        padding,
+        visualDensity,
+        materialTapTargetSize,
+        elevation,
+        shadowColor,
+        surfaceTintColor,
+        iconTheme,
+        selectedShadowColor,
+        showCheckmark,
+        checkmarkColor,
+        avatarBorder);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(
+            Key? key,
+            Color? color,
+            Color? shadowColor,
+            Color? surfaceTintColor,
+            double? elevation,
+            ShapeBorder? shape,
+            bool borderOnForeground,
+            EdgeInsets? margin,
+            Clip? clipBehavior,
+            Widget? child,
+            bool semanticContainer)?
+        card,
+    TResult? Function(
+            Key? key,
+            Callback? onPressed,
+            Callback? onLongPress,
+            bool autofocus,
+            Clip clipBehavior,
+            Widget child,
+            ButtonStyle? style)?
+        elevatedButton,
+    TResult? Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        filledButton,
+    TResult? Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        filledTonalButton,
+    TResult? Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        outlinedButton,
+    TResult? Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        textButton,
+    TResult? Function(
+            Key? key,
+            double? iconSize,
+            VisualDensity? visualDensity,
+            EdgeInsets? padding,
+            Alignment? alignment,
+            double? splashRadius,
+            Color? color,
+            Color? focusColor,
+            Color? hoverColor,
+            Color? highlightColor,
+            Color? splashColor,
+            Color? disabledColor,
+            Callback onPressed,
+            MouseCursor? mouseCursor,
+            bool autofocus,
+            String? tooltip,
+            bool? enableFeedback,
+            BoxConstraints? constraints,
+            bool? isSelected,
+            Widget? selectedIcon,
+            Widget icon)?
+        iconButton,
+    TResult? Function(
+            Key? key,
+            PreferredSizeWidget? appBar,
+            Widget? body,
+            Widget? floatingActionButton,
+            FloatingActionButtonLocation? floatingActionButtonLocation,
+            List<Widget>? persistentFooterButtons,
+            Alignment persistentFooterAlignment,
+            Widget? drawer,
+            Widget? endDrawer,
+            Widget? bottomNavigationBar,
+            Widget? bottomSheet,
+            Color? backgroundColor,
+            bool? resizeToAvoidBottomInset,
+            bool primary,
+            bool extendBody,
+            bool extendBodyBehindAppBar,
+            Color? drawerScrimColor,
+            double? drawerEdgeDragWidth,
+            bool drawerEnableOpenDragGesture,
+            bool endDrawerEnableOpenDragGesture,
+            String? restorationId)?
+        scaffold,
+    TResult? Function(Key? key, Widget? child, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, bool mini, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButton,
+    TResult? Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButtonExtended,
+    TResult? Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor)? text,
+    TResult? Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior)? container,
+    TResult? Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
+    TResult? Function(Key? key, double? widthFactor, double? heightFactor, Widget child)? center,
+    TResult? Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection)? icon,
+    TResult? Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? column,
+    TResult? Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? row,
+    TResult? Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue)? circularProgressIndicator,
+    TResult? Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue)? linearProgressIndicator,
+    TResult? Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color)? divider,
+    TResult? Function(Key? key, Color? backgroundColor, bool extended, Widget? leading, Widget? trailing, List<NavigationRailDestination> destinations, int? selectedIndex, IntSelectionCallback? onDestinationSelected, double? elevation, double? groupAlignment, NavigationRailLabelType? labelType, TextStyle? unselectedLabelTextStyle, TextStyle? selectedLabelTextStyle, IconThemeData? unselectedIconTheme, IconThemeData? selectedIconTheme, double? minWidth, double? minExtendedWidth, bool? useIndicator, Color? indicatorColor, ShapeBorder? indicatorShape)? navigationRail,
+    TResult? Function(Key? key, Duration? animationDuration, int selectedIndex, List<Widget> destinations, IntSelectionCallback? onDestinationSelected, Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, Color? indicatorColor, ShapeBorder? indicatorShape, double? height, NavigationDestinationLabelBehavior? labelBehavior)? navigationBar,
+    TResult? Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration)? defaultTabController,
+    TResult? Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child)? tab,
+    TResult? Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior)? tabBarView,
+    TResult? Function(Key? key, Axis scrollDirection, bool reverse, bool? primary, ScrollPhysics? physics, bool shrinkWrap, Key? center, double anchor, double? cacheExtent, List<Sliver> slivers, int? semanticChildCount, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior, String? restorationId, Clip clipBehavior)? customScrollView,
+    TResult? Function(Key? key, bool? value, bool tristate, FormBoolField? field, MouseCursor? mouseCursor, Color? activeColor, MaterialStateProperty? fillColor, Color? checkColor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, MaterialTapTargetSize? materialTapTargetSize, VisualDensity? visualDensity, bool autofocus, ShapeBorder? shape, BorderSide? side, bool isError)? checkbox,
+    TResult? Function(Key? key, FormStringField? field, List<DropdownMenuItem> items, String? value, Widget? hint, Widget? disabledHint, Callback? onTap, int elevation, TextStyle? style, Widget? icon, Color? iconDisabledColor, Color? iconEnabledColor, double iconSize, bool isDense, bool isExpanded, double? itemHeight, Color? focusColor, bool autofocus, Color? dropdownColor, InputDecoration? decoration, Map<String, String>? validatorMessages, AutovalidateMode? autovalidateMode, double? menuMaxHeight, bool? enableFeedback, Alignment alignment, BorderRadius? borderRadius)? dropdownButtonFormField,
+    TResult? Function(Key? key, List<PopupMenuEntry> items, String? initialValue, Callback? onOpened, FormStringField? field, Callback? onCanceled, String? tooltip, double? elevation, Color? shadowColor, Color? surfaceTintColor, EdgeInsets padding, Widget? child, double? splashRadius, Widget? icon, double? iconSize, Offset offset, bool enabled, ShapeBorder? shape, Color? color, bool? enableFeedback, BoxConstraints? constraints, PopupMenuPosition? position, Clip clipBehavior)? popupMenuButton,
+    TResult? Function(Key? key, Widget icon, Widget? selectedIcon, String label, String? tooltip)? navigationDestination,
+    TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
+    TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
+    TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
+  }) {
+    return filterChip?.call(
+        key,
+        avatar,
+        label,
+        labelStyle,
+        labelPadding,
+        selected,
+        onSelected,
+        pressElevation,
+        disabledColor,
+        selectedColor,
+        tooltip,
+        side,
+        shape,
+        clipBehavior,
+        autofocus,
+        backgroundColor,
+        padding,
+        visualDensity,
+        materialTapTargetSize,
+        elevation,
+        shadowColor,
+        surfaceTintColor,
+        iconTheme,
+        selectedShadowColor,
+        showCheckmark,
+        checkmarkColor,
+        avatarBorder);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(
+            Key? key,
+            Color? color,
+            Color? shadowColor,
+            Color? surfaceTintColor,
+            double? elevation,
+            ShapeBorder? shape,
+            bool borderOnForeground,
+            EdgeInsets? margin,
+            Clip? clipBehavior,
+            Widget? child,
+            bool semanticContainer)?
+        card,
+    TResult Function(
+            Key? key,
+            Callback? onPressed,
+            Callback? onLongPress,
+            bool autofocus,
+            Clip clipBehavior,
+            Widget child,
+            ButtonStyle? style)?
+        elevatedButton,
+    TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        filledButton,
+    TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        filledTonalButton,
+    TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        outlinedButton,
+    TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        textButton,
+    TResult Function(
+            Key? key,
+            double? iconSize,
+            VisualDensity? visualDensity,
+            EdgeInsets? padding,
+            Alignment? alignment,
+            double? splashRadius,
+            Color? color,
+            Color? focusColor,
+            Color? hoverColor,
+            Color? highlightColor,
+            Color? splashColor,
+            Color? disabledColor,
+            Callback onPressed,
+            MouseCursor? mouseCursor,
+            bool autofocus,
+            String? tooltip,
+            bool? enableFeedback,
+            BoxConstraints? constraints,
+            bool? isSelected,
+            Widget? selectedIcon,
+            Widget icon)?
+        iconButton,
+    TResult Function(
+            Key? key,
+            PreferredSizeWidget? appBar,
+            Widget? body,
+            Widget? floatingActionButton,
+            FloatingActionButtonLocation? floatingActionButtonLocation,
+            List<Widget>? persistentFooterButtons,
+            Alignment persistentFooterAlignment,
+            Widget? drawer,
+            Widget? endDrawer,
+            Widget? bottomNavigationBar,
+            Widget? bottomSheet,
+            Color? backgroundColor,
+            bool? resizeToAvoidBottomInset,
+            bool primary,
+            bool extendBody,
+            bool extendBodyBehindAppBar,
+            Color? drawerScrimColor,
+            double? drawerEdgeDragWidth,
+            bool drawerEnableOpenDragGesture,
+            bool endDrawerEnableOpenDragGesture,
+            String? restorationId)?
+        scaffold,
+    TResult Function(Key? key, Widget? child, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, bool mini, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButton,
+    TResult Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButtonExtended,
+    TResult Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor)? text,
+    TResult Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior)? container,
+    TResult Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
+    TResult Function(Key? key, double? widthFactor, double? heightFactor, Widget child)? center,
+    TResult Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection)? icon,
+    TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? column,
+    TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? row,
+    TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue)? circularProgressIndicator,
+    TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue)? linearProgressIndicator,
+    TResult Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color)? divider,
+    TResult Function(Key? key, Color? backgroundColor, bool extended, Widget? leading, Widget? trailing, List<NavigationRailDestination> destinations, int? selectedIndex, IntSelectionCallback? onDestinationSelected, double? elevation, double? groupAlignment, NavigationRailLabelType? labelType, TextStyle? unselectedLabelTextStyle, TextStyle? selectedLabelTextStyle, IconThemeData? unselectedIconTheme, IconThemeData? selectedIconTheme, double? minWidth, double? minExtendedWidth, bool? useIndicator, Color? indicatorColor, ShapeBorder? indicatorShape)? navigationRail,
+    TResult Function(Key? key, Duration? animationDuration, int selectedIndex, List<Widget> destinations, IntSelectionCallback? onDestinationSelected, Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, Color? indicatorColor, ShapeBorder? indicatorShape, double? height, NavigationDestinationLabelBehavior? labelBehavior)? navigationBar,
+    TResult Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration)? defaultTabController,
+    TResult Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child)? tab,
+    TResult Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior)? tabBarView,
+    TResult Function(Key? key, Axis scrollDirection, bool reverse, bool? primary, ScrollPhysics? physics, bool shrinkWrap, Key? center, double anchor, double? cacheExtent, List<Sliver> slivers, int? semanticChildCount, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior, String? restorationId, Clip clipBehavior)? customScrollView,
+    TResult Function(Key? key, bool? value, bool tristate, FormBoolField? field, MouseCursor? mouseCursor, Color? activeColor, MaterialStateProperty? fillColor, Color? checkColor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, MaterialTapTargetSize? materialTapTargetSize, VisualDensity? visualDensity, bool autofocus, ShapeBorder? shape, BorderSide? side, bool isError)? checkbox,
+    TResult Function(Key? key, FormStringField? field, List<DropdownMenuItem> items, String? value, Widget? hint, Widget? disabledHint, Callback? onTap, int elevation, TextStyle? style, Widget? icon, Color? iconDisabledColor, Color? iconEnabledColor, double iconSize, bool isDense, bool isExpanded, double? itemHeight, Color? focusColor, bool autofocus, Color? dropdownColor, InputDecoration? decoration, Map<String, String>? validatorMessages, AutovalidateMode? autovalidateMode, double? menuMaxHeight, bool? enableFeedback, Alignment alignment, BorderRadius? borderRadius)? dropdownButtonFormField,
+    TResult Function(Key? key, List<PopupMenuEntry> items, String? initialValue, Callback? onOpened, FormStringField? field, Callback? onCanceled, String? tooltip, double? elevation, Color? shadowColor, Color? surfaceTintColor, EdgeInsets padding, Widget? child, double? splashRadius, Widget? icon, double? iconSize, Offset offset, bool enabled, ShapeBorder? shape, Color? color, bool? enableFeedback, BoxConstraints? constraints, PopupMenuPosition? position, Clip clipBehavior)? popupMenuButton,
+    TResult Function(Key? key, Widget icon, Widget? selectedIcon, String label, String? tooltip)? navigationDestination,
+    TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
+    TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
+    TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
+    required TResult orElse(),
+  }) {
+    if (filterChip != null) {
+      return filterChip(
+          key,
+          avatar,
+          label,
+          labelStyle,
+          labelPadding,
+          selected,
+          onSelected,
+          pressElevation,
+          disabledColor,
+          selectedColor,
+          tooltip,
+          side,
+          shape,
+          clipBehavior,
+          autofocus,
+          backgroundColor,
+          padding,
+          visualDensity,
+          materialTapTargetSize,
+          elevation,
+          shadowColor,
+          surfaceTintColor,
+          iconTheme,
+          selectedShadowColor,
+          showCheckmark,
+          checkmarkColor,
+          avatarBorder);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(Card value) card,
+    required TResult Function(ElevatedButton value) elevatedButton,
+    required TResult Function(FilledButton value) filledButton,
+    required TResult Function(FilledTonalButton value) filledTonalButton,
+    required TResult Function(OutlinedButton value) outlinedButton,
+    required TResult Function(TextButton value) textButton,
+    required TResult Function(IconButton value) iconButton,
+    required TResult Function(Scaffold value) scaffold,
+    required TResult Function(FloatingActionButton value) floatingActionButton,
+    required TResult Function(FloatingActionButtonExtended value)
+        floatingActionButtonExtended,
+    required TResult Function(Text value) text,
+    required TResult Function(Container value) container,
+    required TResult Function(SizedBox value) sizedBox,
+    required TResult Function(Center value) center,
+    required TResult Function(Icon value) icon,
+    required TResult Function(Column value) column,
+    required TResult Function(Row value) row,
+    required TResult Function(CircularProgressIndicator value)
+        circularProgressIndicator,
+    required TResult Function(LinearProgressIndicator value)
+        linearProgressIndicator,
+    required TResult Function(Divider value) divider,
+    required TResult Function(NavigationRail value) navigationRail,
+    required TResult Function(NavigationBar value) navigationBar,
+    required TResult Function(DefaultTabController value) defaultTabController,
+    required TResult Function(Tab value) tab,
+    required TResult Function(TabBarView value) tabBarView,
+    required TResult Function(CustomScrollView value) customScrollView,
+    required TResult Function(Checkbox value) checkbox,
+    required TResult Function(DropdownButtonFormField value)
+        dropdownButtonFormField,
+    required TResult Function(PopupMenuButton value) popupMenuButton,
+    required TResult Function(NavigationDestination value)
+        navigationDestination,
+    required TResult Function(ActionChip value) actionChip,
+    required TResult Function(FilterChip value) filterChip,
+    required TResult Function(InputChip value) inputChip,
+  }) {
+    return filterChip(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(Card value)? card,
+    TResult? Function(ElevatedButton value)? elevatedButton,
+    TResult? Function(FilledButton value)? filledButton,
+    TResult? Function(FilledTonalButton value)? filledTonalButton,
+    TResult? Function(OutlinedButton value)? outlinedButton,
+    TResult? Function(TextButton value)? textButton,
+    TResult? Function(IconButton value)? iconButton,
+    TResult? Function(Scaffold value)? scaffold,
+    TResult? Function(FloatingActionButton value)? floatingActionButton,
+    TResult? Function(FloatingActionButtonExtended value)?
+        floatingActionButtonExtended,
+    TResult? Function(Text value)? text,
+    TResult? Function(Container value)? container,
+    TResult? Function(SizedBox value)? sizedBox,
+    TResult? Function(Center value)? center,
+    TResult? Function(Icon value)? icon,
+    TResult? Function(Column value)? column,
+    TResult? Function(Row value)? row,
+    TResult? Function(CircularProgressIndicator value)?
+        circularProgressIndicator,
+    TResult? Function(LinearProgressIndicator value)? linearProgressIndicator,
+    TResult? Function(Divider value)? divider,
+    TResult? Function(NavigationRail value)? navigationRail,
+    TResult? Function(NavigationBar value)? navigationBar,
+    TResult? Function(DefaultTabController value)? defaultTabController,
+    TResult? Function(Tab value)? tab,
+    TResult? Function(TabBarView value)? tabBarView,
+    TResult? Function(CustomScrollView value)? customScrollView,
+    TResult? Function(Checkbox value)? checkbox,
+    TResult? Function(DropdownButtonFormField value)? dropdownButtonFormField,
+    TResult? Function(PopupMenuButton value)? popupMenuButton,
+    TResult? Function(NavigationDestination value)? navigationDestination,
+    TResult? Function(ActionChip value)? actionChip,
+    TResult? Function(FilterChip value)? filterChip,
+    TResult? Function(InputChip value)? inputChip,
+  }) {
+    return filterChip?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(Card value)? card,
+    TResult Function(ElevatedButton value)? elevatedButton,
+    TResult Function(FilledButton value)? filledButton,
+    TResult Function(FilledTonalButton value)? filledTonalButton,
+    TResult Function(OutlinedButton value)? outlinedButton,
+    TResult Function(TextButton value)? textButton,
+    TResult Function(IconButton value)? iconButton,
+    TResult Function(Scaffold value)? scaffold,
+    TResult Function(FloatingActionButton value)? floatingActionButton,
+    TResult Function(FloatingActionButtonExtended value)?
+        floatingActionButtonExtended,
+    TResult Function(Text value)? text,
+    TResult Function(Container value)? container,
+    TResult Function(SizedBox value)? sizedBox,
+    TResult Function(Center value)? center,
+    TResult Function(Icon value)? icon,
+    TResult Function(Column value)? column,
+    TResult Function(Row value)? row,
+    TResult Function(CircularProgressIndicator value)?
+        circularProgressIndicator,
+    TResult Function(LinearProgressIndicator value)? linearProgressIndicator,
+    TResult Function(Divider value)? divider,
+    TResult Function(NavigationRail value)? navigationRail,
+    TResult Function(NavigationBar value)? navigationBar,
+    TResult Function(DefaultTabController value)? defaultTabController,
+    TResult Function(Tab value)? tab,
+    TResult Function(TabBarView value)? tabBarView,
+    TResult Function(CustomScrollView value)? customScrollView,
+    TResult Function(Checkbox value)? checkbox,
+    TResult Function(DropdownButtonFormField value)? dropdownButtonFormField,
+    TResult Function(PopupMenuButton value)? popupMenuButton,
+    TResult Function(NavigationDestination value)? navigationDestination,
+    TResult Function(ActionChip value)? actionChip,
+    TResult Function(FilterChip value)? filterChip,
+    TResult Function(InputChip value)? inputChip,
+    required TResult orElse(),
+  }) {
+    if (filterChip != null) {
+      return filterChip(this);
+    }
+    return orElse();
+  }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$FilterChipToJson(
+      this,
+    );
+  }
+}
+
+abstract class FilterChip implements Widget {
+  const factory FilterChip(
+      {final Key? key,
+      final Widget? avatar,
+      required final Widget label,
+      final TextStyle? labelStyle,
+      final EdgeInsets? labelPadding,
+      final bool selected,
+      required final BoolSelectionCallback onSelected,
+      final double? pressElevation,
+      final Color? disabledColor,
+      final Color? selectedColor,
+      final String? tooltip,
+      final BorderSide? side,
+      final ShapeBorder? shape,
+      final Clip clipBehavior,
+      final bool autofocus,
+      final Color? backgroundColor,
+      final EdgeInsets? padding,
+      final VisualDensity? visualDensity,
+      final MaterialTapTargetSize? materialTapTargetSize,
+      final double? elevation,
+      final Color? shadowColor,
+      final Color? surfaceTintColor,
+      final IconThemeData? iconTheme,
+      final Color? selectedShadowColor,
+      final bool? showCheckmark,
+      final Color? checkmarkColor,
+      final ShapeBorder avatarBorder}) = _$FilterChip;
+
+  factory FilterChip.fromJson(Map<String, dynamic> json) =
+      _$FilterChip.fromJson;
+
+  @override
+  Key? get key;
+  Widget? get avatar; // any
+  Widget get label;
+  TextStyle? get labelStyle;
+  EdgeInsets? get labelPadding;
+  bool get selected;
+  BoolSelectionCallback get onSelected; //any  ValueChanged<bool>?
+  double? get pressElevation;
+  Color? get disabledColor;
+  Color? get selectedColor;
+  String? get tooltip;
+  BorderSide? get side;
+  ShapeBorder? get shape;
+  Clip get clipBehavior; // Widget? focusNode, // any
+  bool get autofocus;
+  Color? get backgroundColor;
+  EdgeInsets? get padding;
+  VisualDensity? get visualDensity;
+  MaterialTapTargetSize? get materialTapTargetSize;
+  double? get elevation;
+  Color? get shadowColor;
+  Color? get surfaceTintColor;
+  IconThemeData? get iconTheme;
+  Color? get selectedShadowColor;
+  bool? get showCheckmark;
+  Color? get checkmarkColor;
+  ShapeBorder get avatarBorder;
+  @override
+  @JsonKey(ignore: true)
+  _$$FilterChipCopyWith<_$FilterChip> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$InputChipCopyWith<$Res> implements $WidgetCopyWith<$Res> {
+  factory _$$InputChipCopyWith(
+          _$InputChip value, $Res Function(_$InputChip) then) =
+      __$$InputChipCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {Key? key,
+      Widget? avatar,
+      Widget label,
+      TextStyle? labelStyle,
+      EdgeInsets? labelPadding,
+      bool selected,
+      bool isEnabled,
+      BoolSelectionCallback? onSelected,
+      Widget? deleteIcon,
+      Callback? onDeleted,
+      Color? deleteIconColor,
+      String? deleteButtonTooltipMessage,
+      Callback? onPressed,
+      double? pressElevation,
+      Color? disabledColor,
+      Color? selectedColor,
+      String? tooltip,
+      BorderSide? side,
+      ShapeBorder? shape,
+      Clip clipBehavior,
+      bool autofocus,
+      Color? backgroundColor,
+      EdgeInsets? padding,
+      VisualDensity? visualDensity,
+      MaterialTapTargetSize? materialTapTargetSize,
+      double? elevation,
+      Color? shadowColor,
+      Color? surfaceTintColor,
+      IconThemeData? iconTheme,
+      Color? selectedShadowColor,
+      bool? showCheckmark,
+      Color? checkmarkColor,
+      ShapeBorder avatarBorder});
+
+  @override
+  $KeyCopyWith<$Res>? get key;
+  $WidgetCopyWith<$Res>? get avatar;
+  $WidgetCopyWith<$Res> get label;
+  $TextStyleCopyWith<$Res>? get labelStyle;
+  $EdgeInsetsCopyWith<$Res>? get labelPadding;
+  $WidgetCopyWith<$Res>? get deleteIcon;
+  $CallbackCopyWith<$Res>? get onDeleted;
+  $ColorCopyWith<$Res>? get deleteIconColor;
+  $CallbackCopyWith<$Res>? get onPressed;
+  $ColorCopyWith<$Res>? get disabledColor;
+  $ColorCopyWith<$Res>? get selectedColor;
+  $BorderSideCopyWith<$Res>? get side;
+  $ShapeBorderCopyWith<$Res>? get shape;
+  $ColorCopyWith<$Res>? get backgroundColor;
+  $EdgeInsetsCopyWith<$Res>? get padding;
+  $VisualDensityCopyWith<$Res>? get visualDensity;
+  $ColorCopyWith<$Res>? get shadowColor;
+  $ColorCopyWith<$Res>? get surfaceTintColor;
+  $IconThemeDataCopyWith<$Res>? get iconTheme;
+  $ColorCopyWith<$Res>? get selectedShadowColor;
+  $ColorCopyWith<$Res>? get checkmarkColor;
+  $ShapeBorderCopyWith<$Res> get avatarBorder;
+}
+
+/// @nodoc
+class __$$InputChipCopyWithImpl<$Res>
+    extends _$WidgetCopyWithImpl<$Res, _$InputChip>
+    implements _$$InputChipCopyWith<$Res> {
+  __$$InputChipCopyWithImpl(
+      _$InputChip _value, $Res Function(_$InputChip) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? key = freezed,
+    Object? avatar = freezed,
+    Object? label = null,
+    Object? labelStyle = freezed,
+    Object? labelPadding = freezed,
+    Object? selected = null,
+    Object? isEnabled = null,
+    Object? onSelected = freezed,
+    Object? deleteIcon = freezed,
+    Object? onDeleted = freezed,
+    Object? deleteIconColor = freezed,
+    Object? deleteButtonTooltipMessage = freezed,
+    Object? onPressed = freezed,
+    Object? pressElevation = freezed,
+    Object? disabledColor = freezed,
+    Object? selectedColor = freezed,
+    Object? tooltip = freezed,
+    Object? side = freezed,
+    Object? shape = freezed,
+    Object? clipBehavior = null,
+    Object? autofocus = null,
+    Object? backgroundColor = freezed,
+    Object? padding = freezed,
+    Object? visualDensity = freezed,
+    Object? materialTapTargetSize = freezed,
+    Object? elevation = freezed,
+    Object? shadowColor = freezed,
+    Object? surfaceTintColor = freezed,
+    Object? iconTheme = freezed,
+    Object? selectedShadowColor = freezed,
+    Object? showCheckmark = freezed,
+    Object? checkmarkColor = freezed,
+    Object? avatarBorder = null,
+  }) {
+    return _then(_$InputChip(
+      key: freezed == key
+          ? _value.key
+          : key // ignore: cast_nullable_to_non_nullable
+              as Key?,
+      avatar: freezed == avatar
+          ? _value.avatar
+          : avatar // ignore: cast_nullable_to_non_nullable
+              as Widget?,
+      label: null == label
+          ? _value.label
+          : label // ignore: cast_nullable_to_non_nullable
+              as Widget,
+      labelStyle: freezed == labelStyle
+          ? _value.labelStyle
+          : labelStyle // ignore: cast_nullable_to_non_nullable
+              as TextStyle?,
+      labelPadding: freezed == labelPadding
+          ? _value.labelPadding
+          : labelPadding // ignore: cast_nullable_to_non_nullable
+              as EdgeInsets?,
+      selected: null == selected
+          ? _value.selected
+          : selected // ignore: cast_nullable_to_non_nullable
+              as bool,
+      isEnabled: null == isEnabled
+          ? _value.isEnabled
+          : isEnabled // ignore: cast_nullable_to_non_nullable
+              as bool,
+      onSelected: freezed == onSelected
+          ? _value.onSelected
+          : onSelected // ignore: cast_nullable_to_non_nullable
+              as BoolSelectionCallback?,
+      deleteIcon: freezed == deleteIcon
+          ? _value.deleteIcon
+          : deleteIcon // ignore: cast_nullable_to_non_nullable
+              as Widget?,
+      onDeleted: freezed == onDeleted
+          ? _value.onDeleted
+          : onDeleted // ignore: cast_nullable_to_non_nullable
+              as Callback?,
+      deleteIconColor: freezed == deleteIconColor
+          ? _value.deleteIconColor
+          : deleteIconColor // ignore: cast_nullable_to_non_nullable
+              as Color?,
+      deleteButtonTooltipMessage: freezed == deleteButtonTooltipMessage
+          ? _value.deleteButtonTooltipMessage
+          : deleteButtonTooltipMessage // ignore: cast_nullable_to_non_nullable
+              as String?,
+      onPressed: freezed == onPressed
+          ? _value.onPressed
+          : onPressed // ignore: cast_nullable_to_non_nullable
+              as Callback?,
+      pressElevation: freezed == pressElevation
+          ? _value.pressElevation
+          : pressElevation // ignore: cast_nullable_to_non_nullable
+              as double?,
+      disabledColor: freezed == disabledColor
+          ? _value.disabledColor
+          : disabledColor // ignore: cast_nullable_to_non_nullable
+              as Color?,
+      selectedColor: freezed == selectedColor
+          ? _value.selectedColor
+          : selectedColor // ignore: cast_nullable_to_non_nullable
+              as Color?,
+      tooltip: freezed == tooltip
+          ? _value.tooltip
+          : tooltip // ignore: cast_nullable_to_non_nullable
+              as String?,
+      side: freezed == side
+          ? _value.side
+          : side // ignore: cast_nullable_to_non_nullable
+              as BorderSide?,
+      shape: freezed == shape
+          ? _value.shape
+          : shape // ignore: cast_nullable_to_non_nullable
+              as ShapeBorder?,
+      clipBehavior: null == clipBehavior
+          ? _value.clipBehavior
+          : clipBehavior // ignore: cast_nullable_to_non_nullable
+              as Clip,
+      autofocus: null == autofocus
+          ? _value.autofocus
+          : autofocus // ignore: cast_nullable_to_non_nullable
+              as bool,
+      backgroundColor: freezed == backgroundColor
+          ? _value.backgroundColor
+          : backgroundColor // ignore: cast_nullable_to_non_nullable
+              as Color?,
+      padding: freezed == padding
+          ? _value.padding
+          : padding // ignore: cast_nullable_to_non_nullable
+              as EdgeInsets?,
+      visualDensity: freezed == visualDensity
+          ? _value.visualDensity
+          : visualDensity // ignore: cast_nullable_to_non_nullable
+              as VisualDensity?,
+      materialTapTargetSize: freezed == materialTapTargetSize
+          ? _value.materialTapTargetSize
+          : materialTapTargetSize // ignore: cast_nullable_to_non_nullable
+              as MaterialTapTargetSize?,
+      elevation: freezed == elevation
+          ? _value.elevation
+          : elevation // ignore: cast_nullable_to_non_nullable
+              as double?,
+      shadowColor: freezed == shadowColor
+          ? _value.shadowColor
+          : shadowColor // ignore: cast_nullable_to_non_nullable
+              as Color?,
+      surfaceTintColor: freezed == surfaceTintColor
+          ? _value.surfaceTintColor
+          : surfaceTintColor // ignore: cast_nullable_to_non_nullable
+              as Color?,
+      iconTheme: freezed == iconTheme
+          ? _value.iconTheme
+          : iconTheme // ignore: cast_nullable_to_non_nullable
+              as IconThemeData?,
+      selectedShadowColor: freezed == selectedShadowColor
+          ? _value.selectedShadowColor
+          : selectedShadowColor // ignore: cast_nullable_to_non_nullable
+              as Color?,
+      showCheckmark: freezed == showCheckmark
+          ? _value.showCheckmark
+          : showCheckmark // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      checkmarkColor: freezed == checkmarkColor
+          ? _value.checkmarkColor
+          : checkmarkColor // ignore: cast_nullable_to_non_nullable
+              as Color?,
+      avatarBorder: null == avatarBorder
+          ? _value.avatarBorder
+          : avatarBorder // ignore: cast_nullable_to_non_nullable
+              as ShapeBorder,
+    ));
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $WidgetCopyWith<$Res>? get avatar {
+    if (_value.avatar == null) {
+      return null;
+    }
+
+    return $WidgetCopyWith<$Res>(_value.avatar!, (value) {
+      return _then(_value.copyWith(avatar: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $WidgetCopyWith<$Res> get label {
+    return $WidgetCopyWith<$Res>(_value.label, (value) {
+      return _then(_value.copyWith(label: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $TextStyleCopyWith<$Res>? get labelStyle {
+    if (_value.labelStyle == null) {
+      return null;
+    }
+
+    return $TextStyleCopyWith<$Res>(_value.labelStyle!, (value) {
+      return _then(_value.copyWith(labelStyle: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $EdgeInsetsCopyWith<$Res>? get labelPadding {
+    if (_value.labelPadding == null) {
+      return null;
+    }
+
+    return $EdgeInsetsCopyWith<$Res>(_value.labelPadding!, (value) {
+      return _then(_value.copyWith(labelPadding: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $WidgetCopyWith<$Res>? get deleteIcon {
+    if (_value.deleteIcon == null) {
+      return null;
+    }
+
+    return $WidgetCopyWith<$Res>(_value.deleteIcon!, (value) {
+      return _then(_value.copyWith(deleteIcon: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $CallbackCopyWith<$Res>? get onDeleted {
+    if (_value.onDeleted == null) {
+      return null;
+    }
+
+    return $CallbackCopyWith<$Res>(_value.onDeleted!, (value) {
+      return _then(_value.copyWith(onDeleted: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ColorCopyWith<$Res>? get deleteIconColor {
+    if (_value.deleteIconColor == null) {
+      return null;
+    }
+
+    return $ColorCopyWith<$Res>(_value.deleteIconColor!, (value) {
+      return _then(_value.copyWith(deleteIconColor: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $CallbackCopyWith<$Res>? get onPressed {
+    if (_value.onPressed == null) {
+      return null;
+    }
+
+    return $CallbackCopyWith<$Res>(_value.onPressed!, (value) {
+      return _then(_value.copyWith(onPressed: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ColorCopyWith<$Res>? get disabledColor {
+    if (_value.disabledColor == null) {
+      return null;
+    }
+
+    return $ColorCopyWith<$Res>(_value.disabledColor!, (value) {
+      return _then(_value.copyWith(disabledColor: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ColorCopyWith<$Res>? get selectedColor {
+    if (_value.selectedColor == null) {
+      return null;
+    }
+
+    return $ColorCopyWith<$Res>(_value.selectedColor!, (value) {
+      return _then(_value.copyWith(selectedColor: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $BorderSideCopyWith<$Res>? get side {
+    if (_value.side == null) {
+      return null;
+    }
+
+    return $BorderSideCopyWith<$Res>(_value.side!, (value) {
+      return _then(_value.copyWith(side: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ShapeBorderCopyWith<$Res>? get shape {
+    if (_value.shape == null) {
+      return null;
+    }
+
+    return $ShapeBorderCopyWith<$Res>(_value.shape!, (value) {
+      return _then(_value.copyWith(shape: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ColorCopyWith<$Res>? get backgroundColor {
+    if (_value.backgroundColor == null) {
+      return null;
+    }
+
+    return $ColorCopyWith<$Res>(_value.backgroundColor!, (value) {
+      return _then(_value.copyWith(backgroundColor: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $EdgeInsetsCopyWith<$Res>? get padding {
+    if (_value.padding == null) {
+      return null;
+    }
+
+    return $EdgeInsetsCopyWith<$Res>(_value.padding!, (value) {
+      return _then(_value.copyWith(padding: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $VisualDensityCopyWith<$Res>? get visualDensity {
+    if (_value.visualDensity == null) {
+      return null;
+    }
+
+    return $VisualDensityCopyWith<$Res>(_value.visualDensity!, (value) {
+      return _then(_value.copyWith(visualDensity: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ColorCopyWith<$Res>? get shadowColor {
+    if (_value.shadowColor == null) {
+      return null;
+    }
+
+    return $ColorCopyWith<$Res>(_value.shadowColor!, (value) {
+      return _then(_value.copyWith(shadowColor: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ColorCopyWith<$Res>? get surfaceTintColor {
+    if (_value.surfaceTintColor == null) {
+      return null;
+    }
+
+    return $ColorCopyWith<$Res>(_value.surfaceTintColor!, (value) {
+      return _then(_value.copyWith(surfaceTintColor: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $IconThemeDataCopyWith<$Res>? get iconTheme {
+    if (_value.iconTheme == null) {
+      return null;
+    }
+
+    return $IconThemeDataCopyWith<$Res>(_value.iconTheme!, (value) {
+      return _then(_value.copyWith(iconTheme: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ColorCopyWith<$Res>? get selectedShadowColor {
+    if (_value.selectedShadowColor == null) {
+      return null;
+    }
+
+    return $ColorCopyWith<$Res>(_value.selectedShadowColor!, (value) {
+      return _then(_value.copyWith(selectedShadowColor: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ColorCopyWith<$Res>? get checkmarkColor {
+    if (_value.checkmarkColor == null) {
+      return null;
+    }
+
+    return $ColorCopyWith<$Res>(_value.checkmarkColor!, (value) {
+      return _then(_value.copyWith(checkmarkColor: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ShapeBorderCopyWith<$Res> get avatarBorder {
+    return $ShapeBorderCopyWith<$Res>(_value.avatarBorder, (value) {
+      return _then(_value.copyWith(avatarBorder: value));
+    });
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$InputChip implements InputChip {
+  const _$InputChip(
+      {this.key,
+      this.avatar,
+      required this.label,
+      this.labelStyle,
+      this.labelPadding,
+      this.selected = false,
+      this.isEnabled = true,
+      this.onSelected,
+      this.deleteIcon,
+      this.onDeleted,
+      this.deleteIconColor,
+      this.deleteButtonTooltipMessage,
+      this.onPressed,
+      this.pressElevation,
+      this.disabledColor,
+      this.selectedColor,
+      this.tooltip,
+      this.side,
+      this.shape,
+      this.clipBehavior = Clip.none,
+      this.autofocus = false,
+      this.backgroundColor,
+      this.padding,
+      this.visualDensity,
+      this.materialTapTargetSize,
+      this.elevation,
+      this.shadowColor,
+      this.surfaceTintColor,
+      this.iconTheme,
+      this.selectedShadowColor,
+      this.showCheckmark,
+      this.checkmarkColor,
+      this.avatarBorder = const ShapeBorder.circle(),
+      final String? $type})
+      : $type = $type ?? 'inputChip';
+
+  factory _$InputChip.fromJson(Map<String, dynamic> json) =>
+      _$$InputChipFromJson(json);
+
+  @override
+  final Key? key;
+  @override
+  final Widget? avatar;
+// any
+  @override
+  final Widget label;
+  @override
+  final TextStyle? labelStyle;
+  @override
+  final EdgeInsets? labelPadding;
+  @override
+  @JsonKey()
+  final bool selected;
+  @override
+  @JsonKey()
+  final bool isEnabled;
+  @override
+  final BoolSelectionCallback? onSelected;
+//any  ValueChanged<bool>?
+  @override
+  final Widget? deleteIcon;
+  @override
+  final Callback? onDeleted;
+  @override
+  final Color? deleteIconColor;
+  @override
+  final String? deleteButtonTooltipMessage;
+  @override
+  final Callback? onPressed;
+  @override
+  final double? pressElevation;
+  @override
+  final Color? disabledColor;
+  @override
+  final Color? selectedColor;
+  @override
+  final String? tooltip;
+  @override
+  final BorderSide? side;
+  @override
+  final ShapeBorder? shape;
+  @override
+  @JsonKey()
+  final Clip clipBehavior;
+// Widget? focusNode, // any
+  @override
+  @JsonKey()
+  final bool autofocus;
+  @override
+  final Color? backgroundColor;
+  @override
+  final EdgeInsets? padding;
+  @override
+  final VisualDensity? visualDensity;
+  @override
+  final MaterialTapTargetSize? materialTapTargetSize;
+  @override
+  final double? elevation;
+  @override
+  final Color? shadowColor;
+  @override
+  final Color? surfaceTintColor;
+  @override
+  final IconThemeData? iconTheme;
+  @override
+  final Color? selectedShadowColor;
+  @override
+  final bool? showCheckmark;
+  @override
+  final Color? checkmarkColor;
+  @override
+  @JsonKey()
+  final ShapeBorder avatarBorder;
+
+  @JsonKey(name: 'runtimeType')
+  final String $type;
+
+  @override
+  String toString() {
+    return 'Widget.inputChip(key: $key, avatar: $avatar, label: $label, labelStyle: $labelStyle, labelPadding: $labelPadding, selected: $selected, isEnabled: $isEnabled, onSelected: $onSelected, deleteIcon: $deleteIcon, onDeleted: $onDeleted, deleteIconColor: $deleteIconColor, deleteButtonTooltipMessage: $deleteButtonTooltipMessage, onPressed: $onPressed, pressElevation: $pressElevation, disabledColor: $disabledColor, selectedColor: $selectedColor, tooltip: $tooltip, side: $side, shape: $shape, clipBehavior: $clipBehavior, autofocus: $autofocus, backgroundColor: $backgroundColor, padding: $padding, visualDensity: $visualDensity, materialTapTargetSize: $materialTapTargetSize, elevation: $elevation, shadowColor: $shadowColor, surfaceTintColor: $surfaceTintColor, iconTheme: $iconTheme, selectedShadowColor: $selectedShadowColor, showCheckmark: $showCheckmark, checkmarkColor: $checkmarkColor, avatarBorder: $avatarBorder)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$InputChip &&
+            (identical(other.key, key) || other.key == key) &&
+            (identical(other.avatar, avatar) || other.avatar == avatar) &&
+            (identical(other.label, label) || other.label == label) &&
+            (identical(other.labelStyle, labelStyle) ||
+                other.labelStyle == labelStyle) &&
+            (identical(other.labelPadding, labelPadding) ||
+                other.labelPadding == labelPadding) &&
+            (identical(other.selected, selected) ||
+                other.selected == selected) &&
+            (identical(other.isEnabled, isEnabled) ||
+                other.isEnabled == isEnabled) &&
+            const DeepCollectionEquality()
+                .equals(other.onSelected, onSelected) &&
+            (identical(other.deleteIcon, deleteIcon) ||
+                other.deleteIcon == deleteIcon) &&
+            (identical(other.onDeleted, onDeleted) ||
+                other.onDeleted == onDeleted) &&
+            (identical(other.deleteIconColor, deleteIconColor) ||
+                other.deleteIconColor == deleteIconColor) &&
+            (identical(other.deleteButtonTooltipMessage,
+                    deleteButtonTooltipMessage) ||
+                other.deleteButtonTooltipMessage ==
+                    deleteButtonTooltipMessage) &&
+            (identical(other.onPressed, onPressed) ||
+                other.onPressed == onPressed) &&
+            (identical(other.pressElevation, pressElevation) ||
+                other.pressElevation == pressElevation) &&
+            (identical(other.disabledColor, disabledColor) ||
+                other.disabledColor == disabledColor) &&
+            (identical(other.selectedColor, selectedColor) ||
+                other.selectedColor == selectedColor) &&
+            (identical(other.tooltip, tooltip) || other.tooltip == tooltip) &&
+            (identical(other.side, side) || other.side == side) &&
+            (identical(other.shape, shape) || other.shape == shape) &&
+            (identical(other.clipBehavior, clipBehavior) ||
+                other.clipBehavior == clipBehavior) &&
+            (identical(other.autofocus, autofocus) ||
+                other.autofocus == autofocus) &&
+            (identical(other.backgroundColor, backgroundColor) ||
+                other.backgroundColor == backgroundColor) &&
+            (identical(other.padding, padding) || other.padding == padding) &&
+            (identical(other.visualDensity, visualDensity) ||
+                other.visualDensity == visualDensity) &&
+            (identical(other.materialTapTargetSize, materialTapTargetSize) ||
+                other.materialTapTargetSize == materialTapTargetSize) &&
+            (identical(other.elevation, elevation) ||
+                other.elevation == elevation) &&
+            (identical(other.shadowColor, shadowColor) ||
+                other.shadowColor == shadowColor) &&
+            (identical(other.surfaceTintColor, surfaceTintColor) ||
+                other.surfaceTintColor == surfaceTintColor) &&
+            (identical(other.iconTheme, iconTheme) ||
+                other.iconTheme == iconTheme) &&
+            (identical(other.selectedShadowColor, selectedShadowColor) ||
+                other.selectedShadowColor == selectedShadowColor) &&
+            (identical(other.showCheckmark, showCheckmark) ||
+                other.showCheckmark == showCheckmark) &&
+            (identical(other.checkmarkColor, checkmarkColor) ||
+                other.checkmarkColor == checkmarkColor) &&
+            (identical(other.avatarBorder, avatarBorder) ||
+                other.avatarBorder == avatarBorder));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hashAll([
+        runtimeType,
+        key,
+        avatar,
+        label,
+        labelStyle,
+        labelPadding,
+        selected,
+        isEnabled,
+        const DeepCollectionEquality().hash(onSelected),
+        deleteIcon,
+        onDeleted,
+        deleteIconColor,
+        deleteButtonTooltipMessage,
+        onPressed,
+        pressElevation,
+        disabledColor,
+        selectedColor,
+        tooltip,
+        side,
+        shape,
+        clipBehavior,
+        autofocus,
+        backgroundColor,
+        padding,
+        visualDensity,
+        materialTapTargetSize,
+        elevation,
+        shadowColor,
+        surfaceTintColor,
+        iconTheme,
+        selectedShadowColor,
+        showCheckmark,
+        checkmarkColor,
+        avatarBorder
+      ]);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$InputChipCopyWith<_$InputChip> get copyWith =>
+      __$$InputChipCopyWithImpl<_$InputChip>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(
+            Key? key,
+            Color? color,
+            Color? shadowColor,
+            Color? surfaceTintColor,
+            double? elevation,
+            ShapeBorder? shape,
+            bool borderOnForeground,
+            EdgeInsets? margin,
+            Clip? clipBehavior,
+            Widget? child,
+            bool semanticContainer)
+        card,
+    required TResult Function(
+            Key? key,
+            Callback? onPressed,
+            Callback? onLongPress,
+            bool autofocus,
+            Clip clipBehavior,
+            Widget child,
+            ButtonStyle? style)
+        elevatedButton,
+    required TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)
+        filledButton,
+    required TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)
+        filledTonalButton,
+    required TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)
+        outlinedButton,
+    required TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)
+        textButton,
+    required TResult Function(
+            Key? key,
+            double? iconSize,
+            VisualDensity? visualDensity,
+            EdgeInsets? padding,
+            Alignment? alignment,
+            double? splashRadius,
+            Color? color,
+            Color? focusColor,
+            Color? hoverColor,
+            Color? highlightColor,
+            Color? splashColor,
+            Color? disabledColor,
+            Callback onPressed,
+            MouseCursor? mouseCursor,
+            bool autofocus,
+            String? tooltip,
+            bool? enableFeedback,
+            BoxConstraints? constraints,
+            bool? isSelected,
+            Widget? selectedIcon,
+            Widget icon)
+        iconButton,
+    required TResult Function(
+            Key? key,
+            PreferredSizeWidget? appBar,
+            Widget? body,
+            Widget? floatingActionButton,
+            FloatingActionButtonLocation? floatingActionButtonLocation,
+            List<Widget>? persistentFooterButtons,
+            Alignment persistentFooterAlignment,
+            Widget? drawer,
+            Widget? endDrawer,
+            Widget? bottomNavigationBar,
+            Widget? bottomSheet,
+            Color? backgroundColor,
+            bool? resizeToAvoidBottomInset,
+            bool primary,
+            bool extendBody,
+            bool extendBodyBehindAppBar,
+            Color? drawerScrimColor,
+            double? drawerEdgeDragWidth,
+            bool drawerEnableOpenDragGesture,
+            bool endDrawerEnableOpenDragGesture,
+            String? restorationId)
+        scaffold,
+    required TResult Function(Key? key, Widget? child, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, bool mini, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback) floatingActionButton,
+    required TResult Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback) floatingActionButtonExtended,
+    required TResult Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor) text,
+    required TResult Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior) container,
+    required TResult Function(Key? key, double? width, double? height, Widget? child) sizedBox,
+    required TResult Function(Key? key, double? widthFactor, double? heightFactor, Widget child) center,
+    required TResult Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection) icon,
+    required TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children) column,
+    required TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children) row,
+    required TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue) circularProgressIndicator,
+    required TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue) linearProgressIndicator,
+    required TResult Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color) divider,
+    required TResult Function(Key? key, Color? backgroundColor, bool extended, Widget? leading, Widget? trailing, List<NavigationRailDestination> destinations, int? selectedIndex, IntSelectionCallback? onDestinationSelected, double? elevation, double? groupAlignment, NavigationRailLabelType? labelType, TextStyle? unselectedLabelTextStyle, TextStyle? selectedLabelTextStyle, IconThemeData? unselectedIconTheme, IconThemeData? selectedIconTheme, double? minWidth, double? minExtendedWidth, bool? useIndicator, Color? indicatorColor, ShapeBorder? indicatorShape) navigationRail,
+    required TResult Function(Key? key, Duration? animationDuration, int selectedIndex, List<Widget> destinations, IntSelectionCallback? onDestinationSelected, Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, Color? indicatorColor, ShapeBorder? indicatorShape, double? height, NavigationDestinationLabelBehavior? labelBehavior) navigationBar,
+    required TResult Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration) defaultTabController,
+    required TResult Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child) tab,
+    required TResult Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior) tabBarView,
+    required TResult Function(Key? key, Axis scrollDirection, bool reverse, bool? primary, ScrollPhysics? physics, bool shrinkWrap, Key? center, double anchor, double? cacheExtent, List<Sliver> slivers, int? semanticChildCount, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior, String? restorationId, Clip clipBehavior) customScrollView,
+    required TResult Function(Key? key, bool? value, bool tristate, FormBoolField? field, MouseCursor? mouseCursor, Color? activeColor, MaterialStateProperty? fillColor, Color? checkColor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, MaterialTapTargetSize? materialTapTargetSize, VisualDensity? visualDensity, bool autofocus, ShapeBorder? shape, BorderSide? side, bool isError) checkbox,
+    required TResult Function(Key? key, FormStringField? field, List<DropdownMenuItem> items, String? value, Widget? hint, Widget? disabledHint, Callback? onTap, int elevation, TextStyle? style, Widget? icon, Color? iconDisabledColor, Color? iconEnabledColor, double iconSize, bool isDense, bool isExpanded, double? itemHeight, Color? focusColor, bool autofocus, Color? dropdownColor, InputDecoration? decoration, Map<String, String>? validatorMessages, AutovalidateMode? autovalidateMode, double? menuMaxHeight, bool? enableFeedback, Alignment alignment, BorderRadius? borderRadius) dropdownButtonFormField,
+    required TResult Function(Key? key, List<PopupMenuEntry> items, String? initialValue, Callback? onOpened, FormStringField? field, Callback? onCanceled, String? tooltip, double? elevation, Color? shadowColor, Color? surfaceTintColor, EdgeInsets padding, Widget? child, double? splashRadius, Widget? icon, double? iconSize, Offset offset, bool enabled, ShapeBorder? shape, Color? color, bool? enableFeedback, BoxConstraints? constraints, PopupMenuPosition? position, Clip clipBehavior) popupMenuButton,
+    required TResult Function(Key? key, Widget icon, Widget? selectedIcon, String label, String? tooltip) navigationDestination,
+    required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme) actionChip,
+    required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) filterChip,
+    required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) inputChip,
+  }) {
+    return inputChip(
+        key,
+        avatar,
+        label,
+        labelStyle,
+        labelPadding,
+        selected,
+        isEnabled,
+        onSelected,
+        deleteIcon,
+        onDeleted,
+        deleteIconColor,
+        deleteButtonTooltipMessage,
+        onPressed,
+        pressElevation,
+        disabledColor,
+        selectedColor,
+        tooltip,
+        side,
+        shape,
+        clipBehavior,
+        autofocus,
+        backgroundColor,
+        padding,
+        visualDensity,
+        materialTapTargetSize,
+        elevation,
+        shadowColor,
+        surfaceTintColor,
+        iconTheme,
+        selectedShadowColor,
+        showCheckmark,
+        checkmarkColor,
+        avatarBorder);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(
+            Key? key,
+            Color? color,
+            Color? shadowColor,
+            Color? surfaceTintColor,
+            double? elevation,
+            ShapeBorder? shape,
+            bool borderOnForeground,
+            EdgeInsets? margin,
+            Clip? clipBehavior,
+            Widget? child,
+            bool semanticContainer)?
+        card,
+    TResult? Function(
+            Key? key,
+            Callback? onPressed,
+            Callback? onLongPress,
+            bool autofocus,
+            Clip clipBehavior,
+            Widget child,
+            ButtonStyle? style)?
+        elevatedButton,
+    TResult? Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        filledButton,
+    TResult? Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        filledTonalButton,
+    TResult? Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        outlinedButton,
+    TResult? Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        textButton,
+    TResult? Function(
+            Key? key,
+            double? iconSize,
+            VisualDensity? visualDensity,
+            EdgeInsets? padding,
+            Alignment? alignment,
+            double? splashRadius,
+            Color? color,
+            Color? focusColor,
+            Color? hoverColor,
+            Color? highlightColor,
+            Color? splashColor,
+            Color? disabledColor,
+            Callback onPressed,
+            MouseCursor? mouseCursor,
+            bool autofocus,
+            String? tooltip,
+            bool? enableFeedback,
+            BoxConstraints? constraints,
+            bool? isSelected,
+            Widget? selectedIcon,
+            Widget icon)?
+        iconButton,
+    TResult? Function(
+            Key? key,
+            PreferredSizeWidget? appBar,
+            Widget? body,
+            Widget? floatingActionButton,
+            FloatingActionButtonLocation? floatingActionButtonLocation,
+            List<Widget>? persistentFooterButtons,
+            Alignment persistentFooterAlignment,
+            Widget? drawer,
+            Widget? endDrawer,
+            Widget? bottomNavigationBar,
+            Widget? bottomSheet,
+            Color? backgroundColor,
+            bool? resizeToAvoidBottomInset,
+            bool primary,
+            bool extendBody,
+            bool extendBodyBehindAppBar,
+            Color? drawerScrimColor,
+            double? drawerEdgeDragWidth,
+            bool drawerEnableOpenDragGesture,
+            bool endDrawerEnableOpenDragGesture,
+            String? restorationId)?
+        scaffold,
+    TResult? Function(Key? key, Widget? child, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, bool mini, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButton,
+    TResult? Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButtonExtended,
+    TResult? Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor)? text,
+    TResult? Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior)? container,
+    TResult? Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
+    TResult? Function(Key? key, double? widthFactor, double? heightFactor, Widget child)? center,
+    TResult? Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection)? icon,
+    TResult? Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? column,
+    TResult? Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? row,
+    TResult? Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue)? circularProgressIndicator,
+    TResult? Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue)? linearProgressIndicator,
+    TResult? Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color)? divider,
+    TResult? Function(Key? key, Color? backgroundColor, bool extended, Widget? leading, Widget? trailing, List<NavigationRailDestination> destinations, int? selectedIndex, IntSelectionCallback? onDestinationSelected, double? elevation, double? groupAlignment, NavigationRailLabelType? labelType, TextStyle? unselectedLabelTextStyle, TextStyle? selectedLabelTextStyle, IconThemeData? unselectedIconTheme, IconThemeData? selectedIconTheme, double? minWidth, double? minExtendedWidth, bool? useIndicator, Color? indicatorColor, ShapeBorder? indicatorShape)? navigationRail,
+    TResult? Function(Key? key, Duration? animationDuration, int selectedIndex, List<Widget> destinations, IntSelectionCallback? onDestinationSelected, Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, Color? indicatorColor, ShapeBorder? indicatorShape, double? height, NavigationDestinationLabelBehavior? labelBehavior)? navigationBar,
+    TResult? Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration)? defaultTabController,
+    TResult? Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child)? tab,
+    TResult? Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior)? tabBarView,
+    TResult? Function(Key? key, Axis scrollDirection, bool reverse, bool? primary, ScrollPhysics? physics, bool shrinkWrap, Key? center, double anchor, double? cacheExtent, List<Sliver> slivers, int? semanticChildCount, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior, String? restorationId, Clip clipBehavior)? customScrollView,
+    TResult? Function(Key? key, bool? value, bool tristate, FormBoolField? field, MouseCursor? mouseCursor, Color? activeColor, MaterialStateProperty? fillColor, Color? checkColor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, MaterialTapTargetSize? materialTapTargetSize, VisualDensity? visualDensity, bool autofocus, ShapeBorder? shape, BorderSide? side, bool isError)? checkbox,
+    TResult? Function(Key? key, FormStringField? field, List<DropdownMenuItem> items, String? value, Widget? hint, Widget? disabledHint, Callback? onTap, int elevation, TextStyle? style, Widget? icon, Color? iconDisabledColor, Color? iconEnabledColor, double iconSize, bool isDense, bool isExpanded, double? itemHeight, Color? focusColor, bool autofocus, Color? dropdownColor, InputDecoration? decoration, Map<String, String>? validatorMessages, AutovalidateMode? autovalidateMode, double? menuMaxHeight, bool? enableFeedback, Alignment alignment, BorderRadius? borderRadius)? dropdownButtonFormField,
+    TResult? Function(Key? key, List<PopupMenuEntry> items, String? initialValue, Callback? onOpened, FormStringField? field, Callback? onCanceled, String? tooltip, double? elevation, Color? shadowColor, Color? surfaceTintColor, EdgeInsets padding, Widget? child, double? splashRadius, Widget? icon, double? iconSize, Offset offset, bool enabled, ShapeBorder? shape, Color? color, bool? enableFeedback, BoxConstraints? constraints, PopupMenuPosition? position, Clip clipBehavior)? popupMenuButton,
+    TResult? Function(Key? key, Widget icon, Widget? selectedIcon, String label, String? tooltip)? navigationDestination,
+    TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
+    TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
+    TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
+  }) {
+    return inputChip?.call(
+        key,
+        avatar,
+        label,
+        labelStyle,
+        labelPadding,
+        selected,
+        isEnabled,
+        onSelected,
+        deleteIcon,
+        onDeleted,
+        deleteIconColor,
+        deleteButtonTooltipMessage,
+        onPressed,
+        pressElevation,
+        disabledColor,
+        selectedColor,
+        tooltip,
+        side,
+        shape,
+        clipBehavior,
+        autofocus,
+        backgroundColor,
+        padding,
+        visualDensity,
+        materialTapTargetSize,
+        elevation,
+        shadowColor,
+        surfaceTintColor,
+        iconTheme,
+        selectedShadowColor,
+        showCheckmark,
+        checkmarkColor,
+        avatarBorder);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(
+            Key? key,
+            Color? color,
+            Color? shadowColor,
+            Color? surfaceTintColor,
+            double? elevation,
+            ShapeBorder? shape,
+            bool borderOnForeground,
+            EdgeInsets? margin,
+            Clip? clipBehavior,
+            Widget? child,
+            bool semanticContainer)?
+        card,
+    TResult Function(
+            Key? key,
+            Callback? onPressed,
+            Callback? onLongPress,
+            bool autofocus,
+            Clip clipBehavior,
+            Widget child,
+            ButtonStyle? style)?
+        elevatedButton,
+    TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        filledButton,
+    TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        filledTonalButton,
+    TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        outlinedButton,
+    TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        textButton,
+    TResult Function(
+            Key? key,
+            double? iconSize,
+            VisualDensity? visualDensity,
+            EdgeInsets? padding,
+            Alignment? alignment,
+            double? splashRadius,
+            Color? color,
+            Color? focusColor,
+            Color? hoverColor,
+            Color? highlightColor,
+            Color? splashColor,
+            Color? disabledColor,
+            Callback onPressed,
+            MouseCursor? mouseCursor,
+            bool autofocus,
+            String? tooltip,
+            bool? enableFeedback,
+            BoxConstraints? constraints,
+            bool? isSelected,
+            Widget? selectedIcon,
+            Widget icon)?
+        iconButton,
+    TResult Function(
+            Key? key,
+            PreferredSizeWidget? appBar,
+            Widget? body,
+            Widget? floatingActionButton,
+            FloatingActionButtonLocation? floatingActionButtonLocation,
+            List<Widget>? persistentFooterButtons,
+            Alignment persistentFooterAlignment,
+            Widget? drawer,
+            Widget? endDrawer,
+            Widget? bottomNavigationBar,
+            Widget? bottomSheet,
+            Color? backgroundColor,
+            bool? resizeToAvoidBottomInset,
+            bool primary,
+            bool extendBody,
+            bool extendBodyBehindAppBar,
+            Color? drawerScrimColor,
+            double? drawerEdgeDragWidth,
+            bool drawerEnableOpenDragGesture,
+            bool endDrawerEnableOpenDragGesture,
+            String? restorationId)?
+        scaffold,
+    TResult Function(Key? key, Widget? child, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, bool mini, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButton,
+    TResult Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButtonExtended,
+    TResult Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor)? text,
+    TResult Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior)? container,
+    TResult Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
+    TResult Function(Key? key, double? widthFactor, double? heightFactor, Widget child)? center,
+    TResult Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection)? icon,
+    TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? column,
+    TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? row,
+    TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue)? circularProgressIndicator,
+    TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue)? linearProgressIndicator,
+    TResult Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color)? divider,
+    TResult Function(Key? key, Color? backgroundColor, bool extended, Widget? leading, Widget? trailing, List<NavigationRailDestination> destinations, int? selectedIndex, IntSelectionCallback? onDestinationSelected, double? elevation, double? groupAlignment, NavigationRailLabelType? labelType, TextStyle? unselectedLabelTextStyle, TextStyle? selectedLabelTextStyle, IconThemeData? unselectedIconTheme, IconThemeData? selectedIconTheme, double? minWidth, double? minExtendedWidth, bool? useIndicator, Color? indicatorColor, ShapeBorder? indicatorShape)? navigationRail,
+    TResult Function(Key? key, Duration? animationDuration, int selectedIndex, List<Widget> destinations, IntSelectionCallback? onDestinationSelected, Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, Color? indicatorColor, ShapeBorder? indicatorShape, double? height, NavigationDestinationLabelBehavior? labelBehavior)? navigationBar,
+    TResult Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration)? defaultTabController,
+    TResult Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child)? tab,
+    TResult Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior)? tabBarView,
+    TResult Function(Key? key, Axis scrollDirection, bool reverse, bool? primary, ScrollPhysics? physics, bool shrinkWrap, Key? center, double anchor, double? cacheExtent, List<Sliver> slivers, int? semanticChildCount, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior, String? restorationId, Clip clipBehavior)? customScrollView,
+    TResult Function(Key? key, bool? value, bool tristate, FormBoolField? field, MouseCursor? mouseCursor, Color? activeColor, MaterialStateProperty? fillColor, Color? checkColor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, MaterialTapTargetSize? materialTapTargetSize, VisualDensity? visualDensity, bool autofocus, ShapeBorder? shape, BorderSide? side, bool isError)? checkbox,
+    TResult Function(Key? key, FormStringField? field, List<DropdownMenuItem> items, String? value, Widget? hint, Widget? disabledHint, Callback? onTap, int elevation, TextStyle? style, Widget? icon, Color? iconDisabledColor, Color? iconEnabledColor, double iconSize, bool isDense, bool isExpanded, double? itemHeight, Color? focusColor, bool autofocus, Color? dropdownColor, InputDecoration? decoration, Map<String, String>? validatorMessages, AutovalidateMode? autovalidateMode, double? menuMaxHeight, bool? enableFeedback, Alignment alignment, BorderRadius? borderRadius)? dropdownButtonFormField,
+    TResult Function(Key? key, List<PopupMenuEntry> items, String? initialValue, Callback? onOpened, FormStringField? field, Callback? onCanceled, String? tooltip, double? elevation, Color? shadowColor, Color? surfaceTintColor, EdgeInsets padding, Widget? child, double? splashRadius, Widget? icon, double? iconSize, Offset offset, bool enabled, ShapeBorder? shape, Color? color, bool? enableFeedback, BoxConstraints? constraints, PopupMenuPosition? position, Clip clipBehavior)? popupMenuButton,
+    TResult Function(Key? key, Widget icon, Widget? selectedIcon, String label, String? tooltip)? navigationDestination,
+    TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
+    TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
+    TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
+    required TResult orElse(),
+  }) {
+    if (inputChip != null) {
+      return inputChip(
+          key,
+          avatar,
+          label,
+          labelStyle,
+          labelPadding,
+          selected,
+          isEnabled,
+          onSelected,
+          deleteIcon,
+          onDeleted,
+          deleteIconColor,
+          deleteButtonTooltipMessage,
+          onPressed,
+          pressElevation,
+          disabledColor,
+          selectedColor,
+          tooltip,
+          side,
+          shape,
+          clipBehavior,
+          autofocus,
+          backgroundColor,
+          padding,
+          visualDensity,
+          materialTapTargetSize,
+          elevation,
+          shadowColor,
+          surfaceTintColor,
+          iconTheme,
+          selectedShadowColor,
+          showCheckmark,
+          checkmarkColor,
+          avatarBorder);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(Card value) card,
+    required TResult Function(ElevatedButton value) elevatedButton,
+    required TResult Function(FilledButton value) filledButton,
+    required TResult Function(FilledTonalButton value) filledTonalButton,
+    required TResult Function(OutlinedButton value) outlinedButton,
+    required TResult Function(TextButton value) textButton,
+    required TResult Function(IconButton value) iconButton,
+    required TResult Function(Scaffold value) scaffold,
+    required TResult Function(FloatingActionButton value) floatingActionButton,
+    required TResult Function(FloatingActionButtonExtended value)
+        floatingActionButtonExtended,
+    required TResult Function(Text value) text,
+    required TResult Function(Container value) container,
+    required TResult Function(SizedBox value) sizedBox,
+    required TResult Function(Center value) center,
+    required TResult Function(Icon value) icon,
+    required TResult Function(Column value) column,
+    required TResult Function(Row value) row,
+    required TResult Function(CircularProgressIndicator value)
+        circularProgressIndicator,
+    required TResult Function(LinearProgressIndicator value)
+        linearProgressIndicator,
+    required TResult Function(Divider value) divider,
+    required TResult Function(NavigationRail value) navigationRail,
+    required TResult Function(NavigationBar value) navigationBar,
+    required TResult Function(DefaultTabController value) defaultTabController,
+    required TResult Function(Tab value) tab,
+    required TResult Function(TabBarView value) tabBarView,
+    required TResult Function(CustomScrollView value) customScrollView,
+    required TResult Function(Checkbox value) checkbox,
+    required TResult Function(DropdownButtonFormField value)
+        dropdownButtonFormField,
+    required TResult Function(PopupMenuButton value) popupMenuButton,
+    required TResult Function(NavigationDestination value)
+        navigationDestination,
+    required TResult Function(ActionChip value) actionChip,
+    required TResult Function(FilterChip value) filterChip,
+    required TResult Function(InputChip value) inputChip,
+  }) {
+    return inputChip(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(Card value)? card,
+    TResult? Function(ElevatedButton value)? elevatedButton,
+    TResult? Function(FilledButton value)? filledButton,
+    TResult? Function(FilledTonalButton value)? filledTonalButton,
+    TResult? Function(OutlinedButton value)? outlinedButton,
+    TResult? Function(TextButton value)? textButton,
+    TResult? Function(IconButton value)? iconButton,
+    TResult? Function(Scaffold value)? scaffold,
+    TResult? Function(FloatingActionButton value)? floatingActionButton,
+    TResult? Function(FloatingActionButtonExtended value)?
+        floatingActionButtonExtended,
+    TResult? Function(Text value)? text,
+    TResult? Function(Container value)? container,
+    TResult? Function(SizedBox value)? sizedBox,
+    TResult? Function(Center value)? center,
+    TResult? Function(Icon value)? icon,
+    TResult? Function(Column value)? column,
+    TResult? Function(Row value)? row,
+    TResult? Function(CircularProgressIndicator value)?
+        circularProgressIndicator,
+    TResult? Function(LinearProgressIndicator value)? linearProgressIndicator,
+    TResult? Function(Divider value)? divider,
+    TResult? Function(NavigationRail value)? navigationRail,
+    TResult? Function(NavigationBar value)? navigationBar,
+    TResult? Function(DefaultTabController value)? defaultTabController,
+    TResult? Function(Tab value)? tab,
+    TResult? Function(TabBarView value)? tabBarView,
+    TResult? Function(CustomScrollView value)? customScrollView,
+    TResult? Function(Checkbox value)? checkbox,
+    TResult? Function(DropdownButtonFormField value)? dropdownButtonFormField,
+    TResult? Function(PopupMenuButton value)? popupMenuButton,
+    TResult? Function(NavigationDestination value)? navigationDestination,
+    TResult? Function(ActionChip value)? actionChip,
+    TResult? Function(FilterChip value)? filterChip,
+    TResult? Function(InputChip value)? inputChip,
+  }) {
+    return inputChip?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(Card value)? card,
+    TResult Function(ElevatedButton value)? elevatedButton,
+    TResult Function(FilledButton value)? filledButton,
+    TResult Function(FilledTonalButton value)? filledTonalButton,
+    TResult Function(OutlinedButton value)? outlinedButton,
+    TResult Function(TextButton value)? textButton,
+    TResult Function(IconButton value)? iconButton,
+    TResult Function(Scaffold value)? scaffold,
+    TResult Function(FloatingActionButton value)? floatingActionButton,
+    TResult Function(FloatingActionButtonExtended value)?
+        floatingActionButtonExtended,
+    TResult Function(Text value)? text,
+    TResult Function(Container value)? container,
+    TResult Function(SizedBox value)? sizedBox,
+    TResult Function(Center value)? center,
+    TResult Function(Icon value)? icon,
+    TResult Function(Column value)? column,
+    TResult Function(Row value)? row,
+    TResult Function(CircularProgressIndicator value)?
+        circularProgressIndicator,
+    TResult Function(LinearProgressIndicator value)? linearProgressIndicator,
+    TResult Function(Divider value)? divider,
+    TResult Function(NavigationRail value)? navigationRail,
+    TResult Function(NavigationBar value)? navigationBar,
+    TResult Function(DefaultTabController value)? defaultTabController,
+    TResult Function(Tab value)? tab,
+    TResult Function(TabBarView value)? tabBarView,
+    TResult Function(CustomScrollView value)? customScrollView,
+    TResult Function(Checkbox value)? checkbox,
+    TResult Function(DropdownButtonFormField value)? dropdownButtonFormField,
+    TResult Function(PopupMenuButton value)? popupMenuButton,
+    TResult Function(NavigationDestination value)? navigationDestination,
+    TResult Function(ActionChip value)? actionChip,
+    TResult Function(FilterChip value)? filterChip,
+    TResult Function(InputChip value)? inputChip,
+    required TResult orElse(),
+  }) {
+    if (inputChip != null) {
+      return inputChip(this);
+    }
+    return orElse();
+  }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$InputChipToJson(
+      this,
+    );
+  }
+}
+
+abstract class InputChip implements Widget {
+  const factory InputChip(
+      {final Key? key,
+      final Widget? avatar,
+      required final Widget label,
+      final TextStyle? labelStyle,
+      final EdgeInsets? labelPadding,
+      final bool selected,
+      final bool isEnabled,
+      final BoolSelectionCallback? onSelected,
+      final Widget? deleteIcon,
+      final Callback? onDeleted,
+      final Color? deleteIconColor,
+      final String? deleteButtonTooltipMessage,
+      final Callback? onPressed,
+      final double? pressElevation,
+      final Color? disabledColor,
+      final Color? selectedColor,
+      final String? tooltip,
+      final BorderSide? side,
+      final ShapeBorder? shape,
+      final Clip clipBehavior,
+      final bool autofocus,
+      final Color? backgroundColor,
+      final EdgeInsets? padding,
+      final VisualDensity? visualDensity,
+      final MaterialTapTargetSize? materialTapTargetSize,
+      final double? elevation,
+      final Color? shadowColor,
+      final Color? surfaceTintColor,
+      final IconThemeData? iconTheme,
+      final Color? selectedShadowColor,
+      final bool? showCheckmark,
+      final Color? checkmarkColor,
+      final ShapeBorder avatarBorder}) = _$InputChip;
+
+  factory InputChip.fromJson(Map<String, dynamic> json) = _$InputChip.fromJson;
+
+  @override
+  Key? get key;
+  Widget? get avatar; // any
+  Widget get label;
+  TextStyle? get labelStyle;
+  EdgeInsets? get labelPadding;
+  bool get selected;
+  bool get isEnabled;
+  BoolSelectionCallback? get onSelected; //any  ValueChanged<bool>?
+  Widget? get deleteIcon;
+  Callback? get onDeleted;
+  Color? get deleteIconColor;
+  String? get deleteButtonTooltipMessage;
+  Callback? get onPressed;
+  double? get pressElevation;
+  Color? get disabledColor;
+  Color? get selectedColor;
+  String? get tooltip;
+  BorderSide? get side;
+  ShapeBorder? get shape;
+  Clip get clipBehavior; // Widget? focusNode, // any
+  bool get autofocus;
+  Color? get backgroundColor;
+  EdgeInsets? get padding;
+  VisualDensity? get visualDensity;
+  MaterialTapTargetSize? get materialTapTargetSize;
+  double? get elevation;
+  Color? get shadowColor;
+  Color? get surfaceTintColor;
+  IconThemeData? get iconTheme;
+  Color? get selectedShadowColor;
+  bool? get showCheckmark;
+  Color? get checkmarkColor;
+  ShapeBorder get avatarBorder;
+  @override
+  @JsonKey(ignore: true)
+  _$$InputChipCopyWith<_$InputChip> get copyWith =>
       throw _privateConstructorUsedError;
 }

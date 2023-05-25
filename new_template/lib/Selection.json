@@ -1,0 +1,71 @@
+    {
+        "body": {
+            "child": {
+                "mainAxisAlignment": "center",
+                "mainAxisSize": "max",
+                "crossAxisAlignment": "center",
+                "verticalDirection": "down",
+                "children": [
+                    {
+                        "child": {
+                            "value": true,
+                            "runtimeType": "checkbox"
+                        },
+                        "width": 100,
+                        "height": 30,
+                        "runtimeType": "sizedBox"
+                    },
+                    {
+                        "child": {
+                            "value": false,
+                            "runtimeType": "checkbox"
+                        },
+                        "width": 100,
+                        "height": 30,
+                        "runtimeType": "sizedBox"
+                    },
+                    {
+                        "child": {
+                            "items": [
+                                {
+                                    "child": {
+                                        "data": "Blue",
+                                        "runtimeType": "text"
+                                    }
+                                },
+                                {
+                                    "child": {
+                                        "data": "Filled Button",
+                                        "runtimeType": "text"
+                                    }
+                                },
+                                {
+                                    "child": {
+                                        "data": "Filled Button",
+                                        "runtimeType": "text"
+                                    }
+                                },
+                                {
+                                    "child": {
+                                        "data": "Filled Button",
+                                        "runtimeType": "text"
+                                    }
+                                }
+                            ],
+                            "hint": {
+                                "data": "Color",
+                                "runtimeType": "text"
+                            },
+                            "runtimeType": "dropdownButtonFormField"
+                        },
+                        "width": 125,
+                        "height": 50,
+                        "runtimeType": "sizedBox"
+                    }
+                ],
+                "runtimeType": "column"
+            },
+            "runtimeType": "center"
+        },
+        "runtimeType": "scaffold"
+    }

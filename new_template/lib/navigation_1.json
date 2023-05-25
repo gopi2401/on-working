@@ -13,67 +13,40 @@
     "bottomNavigationBar": {
         "destinations": [
             {
-                "child": {
-                    "onPressed": {
-                        "runtimeType": "empty"
-                    },
+                "icon": {
                     "icon": {
-                        "icon": {
-                            "codePoint": 57415,
-                            "fontFamily": "MaterialIcons",
-                            "matchTextDirection": false
-                        },
-                        "runtimeType": "icon"
+                        "codePoint": 57415,
+                        "fontFamily": "MaterialIcons",
+                        "matchTextDirection": false
                     },
-                    "runtimeType": "iconButton"
+                    "runtimeType": "icon"
                 },
-                "padding": {
-                    "horizontal": 60,
-                    "runtimeType": "symmetric"
-                },
-                "runtimeType": "container"
+                "label": "Explore",
+                "runtimeType": "navigationDestination"
             },
             {
-                "child": {
-                    "onPressed": {
-                        "runtimeType": "empty"
-                    },
+                "icon": {
                     "icon": {
-                        "icon": {
-                            "codePoint": 57415,
-                            "fontFamily": "MaterialIcons",
-                            "matchTextDirection": false
-                        },
-                        "runtimeType": "icon"
+                        "codePoint": 57415,
+                        "fontFamily": "MaterialIcons",
+                        "matchTextDirection": false
                     },
-                    "runtimeType": "iconButton"
+                    "runtimeType": "icon"
                 },
-                "padding": {
-                    "horizontal": 60,
-                    "runtimeType": "symmetric"
-                },
-                "runtimeType": "container"
+                "label": "Pets",
+                "runtimeType": "navigationDestination"
             },
             {
-                "child": {
-                    "onPressed": {
-                        "runtimeType": "empty"
-                    },
+                "icon": {
                     "icon": {
-                        "icon": {
-                            "codePoint": 57415,
-                            "fontFamily": "MaterialIcons",
-                            "matchTextDirection": false
-                        },
-                        "runtimeType": "icon"
+                        "codePoint": 57415,
+                        "fontFamily": "MaterialIcons",
+                        "matchTextDirection": false
                     },
-                    "runtimeType": "iconButton"
+                    "runtimeType": "icon"
                 },
-                "padding": {
-                    "horizontal": 60,
-                    "runtimeType": "symmetric"
-                },
-                "runtimeType": "container"
+                "label": "Account",
+                "runtimeType": "navigationDestination"
             }
         ],
         "runtimeType": "navigationBar"

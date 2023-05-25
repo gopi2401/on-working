@@ -1,0 +1,93 @@
+    {
+        "body": {
+            "child": {
+                "mainAxisAlignment": "center",
+                "mainAxisSize": "max",
+                "crossAxisAlignment": "center",
+                "verticalDirection": "down",
+                "children": [
+                    {
+                        "child": {
+                            "onPressed": {
+                                "runtimeType": "empty"
+                            },
+                            "avatar": {
+                                "icon": {
+                                    "codePoint": 57415,
+                                    "fontFamily": "MaterialIcons",
+                                    "matchTextDirection": false
+                                },
+                                "runtimeType": "icon"
+                            },
+                            "label": {
+                                "data": "Assist",
+                                "runtimeType": "text"
+                            },
+                            "runtimeType": "actionChip"
+                        },
+                        "width": 125,
+                        "height": 50,
+                        "runtimeType": "sizedBox"
+                    },
+                    {
+                        "child": {
+                            "selected": true,
+                            "onSelected": {
+                                "trueCallback": {
+                                    "runtimeType": "empty"
+                                },
+                                "falseCallback": {
+                                    "runtimeType": "empty"
+                                },
+                                "runtimeType": "boolSelection"
+                            },
+                            "label": {
+                                "data": "Filter",
+                                "runtimeType": "text"
+                            },
+                            "runtimeType": "filterChip"
+                        },
+                        "width": 125,
+                        "height": 50,
+                        "runtimeType": "sizedBox"
+                    },
+                    {
+                        "child": {
+                            "onPressed": {
+                                "runtimeType": "empty"
+                            },
+                            "onDeleted": {
+                                "runtimeType": "empty"
+                            },
+                            "label": {
+                                "data": "Input",
+                                "runtimeType": "text"
+                            },
+                            "runtimeType": "inputChip"
+                        },
+                        "width": 125,
+                        "height": 50,
+                        "runtimeType": "sizedBox"
+                    },
+                    {
+                        "child": {
+                            "onPressed": {
+                                "runtimeType": "empty"
+                            },
+                            "label": {
+                                "data": "Suggestion",
+                                "runtimeType": "text"
+                            },
+                            "runtimeType": "actionChip"
+                        },
+                        "width": 125,
+                        "height": 50,
+                        "runtimeType": "sizedBox"
+                    }
+                ],
+                "runtimeType": "column"
+            },
+            "runtimeType": "center"
+        },
+        "runtimeType": "scaffold"
+    }

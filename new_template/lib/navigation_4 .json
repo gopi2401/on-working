@@ -9,6 +9,27 @@
                     {
                         "child": {
                             "appBar": {
+                                "actions": [
+                                    {
+                                        "onPressed": {
+                                            "runtimeType": "empty"
+                                        },
+                                        "icon": {
+                                            "icon": {
+                                                "codePoint": 57415,
+                                                "fontFamily": "MaterialIcons",
+                                                "matchTextDirection": false
+                                            },
+                                            "runtimeType": "icon"
+                                        },
+                                        "runtimeType": "iconButton"
+                                    }
+                                ],
+                                "title": {
+                                    "data": "Center-alinged",
+                                    "runtimeType": "text"
+                                },
+                                "centerTitle": true,
                                 "leading": {
                                     "onPressed": {
                                         "runtimeType": "empty"
@@ -28,7 +49,208 @@
                             "runtimeType": "scaffold"
                         },
                         "width": 420,
+                        "height": 70,
+                        "runtimeType": "sizedBox"
+                    },
+                    {
+                        "child": {
+                            "appBar": {
+                                "actions": [
+                                    {
+                                        "onPressed": {
+                                            "runtimeType": "empty"
+                                        },
+                                        "icon": {
+                                            "icon": {
+                                                "codePoint": 57415,
+                                                "fontFamily": "MaterialIcons",
+                                                "matchTextDirection": false
+                                            },
+                                            "runtimeType": "icon"
+                                        },
+                                        "runtimeType": "iconButton"
+                                    }
+                                ],
+                                "title": {
+                                    "data": "Small",
+                                    "runtimeType": "text"
+                                },
+                                "leading": {
+                                    "onPressed": {
+                                        "runtimeType": "empty"
+                                    },
+                                    "icon": {
+                                        "icon": {
+                                            "codePoint": 57415,
+                                            "fontFamily": "MaterialIcons",
+                                            "matchTextDirection": false
+                                        },
+                                        "runtimeType": "icon"
+                                    },
+                                    "runtimeType": "iconButton"
+                                },
+                                "runtimeType": "appBar"
+                            },
+                            "runtimeType": "scaffold"
+                        },
+                        "width": 420,
+                        "height": 70,
+                        "runtimeType": "sizedBox"
+                    },
+                    {
+                        "child": {
+                            "slivers": [
+                                {
+                                    "leading": {
+                                        "onPressed": {
+                                            "runtimeType": "empty"
+                                        },
+                                        "icon": {
+                                            "icon": {
+                                                "codePoint": 57415,
+                                                "fontFamily": "MaterialIcons",
+                                                "matchTextDirection": false
+                                            },
+                                            "runtimeType": "icon"
+                                        },
+                                        "runtimeType": "iconButton"
+                                    },
+                                    "title": {
+                                        "data": "Medium",
+                                        "runtimeType": "text"
+                                    },
+                                    "actions": [
+                                        {
+                                            "onPressed": {
+                                                "runtimeType": "empty"
+                                            },
+                                            "icon": {
+                                                "icon": {
+                                                    "codePoint": 57415,
+                                                    "fontFamily": "MaterialIcons",
+                                                    "matchTextDirection": false
+                                                },
+                                                "runtimeType": "icon"
+                                            },
+                                            "runtimeType": "iconButton"
+                                        },
+                                        {
+                                            "onPressed": {
+                                                "runtimeType": "empty"
+                                            },
+                                            "icon": {
+                                                "icon": {
+                                                    "codePoint": 57415,
+                                                    "fontFamily": "MaterialIcons",
+                                                    "matchTextDirection": false
+                                                },
+                                                "runtimeType": "icon"
+                                            },
+                                            "runtimeType": "iconButton"
+                                        },
+                                        {
+                                            "onPressed": {
+                                                "runtimeType": "empty"
+                                            },
+                                            "icon": {
+                                                "icon": {
+                                                    "codePoint": 57415,
+                                                    "fontFamily": "MaterialIcons",
+                                                    "matchTextDirection": false
+                                                },
+                                                "runtimeType": "icon"
+                                            },
+                                            "runtimeType": "iconButton"
+                                        }
+                                    ],
+                                    "runtimeType": "appBarMedium"
+                                },
+                                {
+                                    "runtimeType": "fillRemaining"
+                                }
+                            ],
+                            "runtimeType": "customScrollView"
+                        },
+                        "width": 420,
                         "height": 100,
+                        "runtimeType": "sizedBox"
+                    },
+                    {
+                        "child": {
+                            "slivers": [
+                                {
+                                    "leading": {
+                                        "onPressed": {
+                                            "runtimeType": "empty"
+                                        },
+                                        "icon": {
+                                            "icon": {
+                                                "codePoint": 57415,
+                                                "fontFamily": "MaterialIcons",
+                                                "matchTextDirection": false
+                                            },
+                                            "runtimeType": "icon"
+                                        },
+                                        "runtimeType": "iconButton"
+                                    },
+                                    "title": {
+                                        "data": "Large",
+                                        "runtimeType": "text"
+                                    },
+                                    "actions": [
+                                        {
+                                            "onPressed": {
+                                                "runtimeType": "empty"
+                                            },
+                                            "icon": {
+                                                "icon": {
+                                                    "codePoint": 57415,
+                                                    "fontFamily": "MaterialIcons",
+                                                    "matchTextDirection": false
+                                                },
+                                                "runtimeType": "icon"
+                                            },
+                                            "runtimeType": "iconButton"
+                                        },
+                                        {
+                                            "onPressed": {
+                                                "runtimeType": "empty"
+                                            },
+                                            "icon": {
+                                                "icon": {
+                                                    "codePoint": 57415,
+                                                    "fontFamily": "MaterialIcons",
+                                                    "matchTextDirection": false
+                                                },
+                                                "runtimeType": "icon"
+                                            },
+                                            "runtimeType": "iconButton"
+                                        },
+                                        {
+                                            "onPressed": {
+                                                "runtimeType": "empty"
+                                            },
+                                            "icon": {
+                                                "icon": {
+                                                    "codePoint": 57415,
+                                                    "fontFamily": "MaterialIcons",
+                                                    "matchTextDirection": false
+                                                },
+                                                "runtimeType": "icon"
+                                            },
+                                            "runtimeType": "iconButton"
+                                        }
+                                    ],
+                                    "runtimeType": "appBarLarge"
+                                },
+                                {
+                                    "runtimeType": "fillRemaining"
+                                }
+                            ],
+                            "runtimeType": "customScrollView"
+                        },
+                        "width": 420,
+                        "height": 130,
                         "runtimeType": "sizedBox"
                     }
                 ],

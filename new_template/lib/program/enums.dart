@@ -403,3 +403,9 @@ enum PopupMenuPosition {
   over,
   under,
 }
+
+enum SliderInteraction {
+  tapAndSlide,
+  tapOnly,
+  slideOnly,
+}
