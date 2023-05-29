@@ -1879,3 +1879,96 @@ Map<String, dynamic> _$$InputChipToJson(_$InputChip instance) =>
       'avatarBorder': instance.avatarBorder,
       'runtimeType': instance.$type,
     };
+
+_$Switch _$$SwitchFromJson(Map<String, dynamic> json) => _$Switch(
+      key: json['key'] == null
+          ? null
+          : Key.fromJson(json['key'] as Map<String, dynamic>),
+      value: json['value'] as bool,
+      onChanged: BoolSelectionCallback.fromJson(
+          json['onChanged'] as Map<String, dynamic>),
+      activeColor: json['activeColor'] == null
+          ? null
+          : Color.fromJson(json['activeColor'] as Map<String, dynamic>),
+      activeTrackColor: json['activeTrackColor'] == null
+          ? null
+          : Color.fromJson(json['activeTrackColor'] as Map<String, dynamic>),
+      inactiveThumbColor: json['inactiveThumbColor'] == null
+          ? null
+          : Color.fromJson(json['inactiveThumbColor'] as Map<String, dynamic>),
+      inactiveTrackColor: json['inactiveTrackColor'] == null
+          ? null
+          : Color.fromJson(json['inactiveTrackColor'] as Map<String, dynamic>),
+      activeThumbImage: json['activeThumbImage'] == null
+          ? null
+          : ImageProvider.fromJson(
+              json['activeThumbImage'] as Map<String, dynamic>),
+      inactiveThumbImage: json['inactiveThumbImage'] == null
+          ? null
+          : ImageProvider.fromJson(
+              json['inactiveThumbImage'] as Map<String, dynamic>),
+      thumbColor: json['thumbColor'] == null
+          ? null
+          : MaterialStateProperty.fromJson(
+              json['thumbColor'] as Map<String, dynamic>),
+      trackColor: json['trackColor'] == null
+          ? null
+          : MaterialStateProperty.fromJson(
+              json['trackColor'] as Map<String, dynamic>),
+      trackOutlineColor: json['trackOutlineColor'] == null
+          ? null
+          : MaterialStateProperty.fromJson(
+              json['trackOutlineColor'] as Map<String, dynamic>),
+      materialTapTargetSize: $enumDecodeNullable(
+          _$MaterialTapTargetSizeEnumMap, json['materialTapTargetSize']),
+      dragStartBehavior: $enumDecodeNullable(
+              _$DragStartBehaviorEnumMap, json['dragStartBehavior']) ??
+          DragStartBehavior.start,
+      mouseCursor: json['mouseCursor'] == null
+          ? null
+          : MouseCursor.fromJson(json['mouseCursor'] as Map<String, dynamic>),
+      focusColor: json['focusColor'] == null
+          ? null
+          : Color.fromJson(json['focusColor'] as Map<String, dynamic>),
+      hoverColor: json['hoverColor'] == null
+          ? null
+          : Color.fromJson(json['hoverColor'] as Map<String, dynamic>),
+      overlayColor: json['overlayColor'] == null
+          ? null
+          : MaterialStateProperty.fromJson(
+              json['overlayColor'] as Map<String, dynamic>),
+      splashRadius: (json['splashRadius'] as num?)?.toDouble(),
+      onFocusChange: json['onFocusChange'] == null
+          ? null
+          : BoolSelectionCallback.fromJson(
+              json['onFocusChange'] as Map<String, dynamic>),
+      autofocus: json['autofocus'] as bool? ?? false,
+      $type: json['runtimeType'] as String?,
+    );
+
+Map<String, dynamic> _$$SwitchToJson(_$Switch instance) => <String, dynamic>{
+      'key': instance.key,
+      'value': instance.value,
+      'onChanged': instance.onChanged,
+      'activeColor': instance.activeColor,
+      'activeTrackColor': instance.activeTrackColor,
+      'inactiveThumbColor': instance.inactiveThumbColor,
+      'inactiveTrackColor': instance.inactiveTrackColor,
+      'activeThumbImage': instance.activeThumbImage,
+      'inactiveThumbImage': instance.inactiveThumbImage,
+      'thumbColor': instance.thumbColor,
+      'trackColor': instance.trackColor,
+      'trackOutlineColor': instance.trackOutlineColor,
+      'materialTapTargetSize':
+          _$MaterialTapTargetSizeEnumMap[instance.materialTapTargetSize],
+      'dragStartBehavior':
+          _$DragStartBehaviorEnumMap[instance.dragStartBehavior]!,
+      'mouseCursor': instance.mouseCursor,
+      'focusColor': instance.focusColor,
+      'hoverColor': instance.hoverColor,
+      'overlayColor': instance.overlayColor,
+      'splashRadius': instance.splashRadius,
+      'onFocusChange': instance.onFocusChange,
+      'autofocus': instance.autofocus,
+      'runtimeType': instance.$type,
+    };

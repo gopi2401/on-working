@@ -1,0 +1,51 @@
+    {
+        "body": {
+            "child": {
+                "mainAxisAlignment": "center",
+                "mainAxisSize": "max",
+                "crossAxisAlignment": "center",
+                "verticalDirection": "down",
+                "children": [
+                    {
+                        "child": {
+                            "onChanged": {
+                                "trueCallback": {
+                                    "runtimeType": "empty"
+                                },
+                                "falseCallback": {
+                                    "runtimeType": "empty"
+                                },
+                                "runtimeType": "boolSelection"
+                            },
+                            "value": true,
+                            "runtimeType": "materialSwitch"
+                        },
+                        "width": 125,
+                        "height": 50,
+                        "runtimeType": "sizedBox"
+                    },
+                    {
+                        "child": {
+                            "onChanged": {
+                                "trueCallback": {
+                                    "runtimeType": "empty"
+                                },
+                                "falseCallback": {
+                                    "runtimeType": "empty"
+                                },
+                                "runtimeType": "boolSelection"
+                            },
+                            "value": false,
+                            "runtimeType": "materialSwitch"
+                        },
+                        "width": 125,
+                        "height": 50,
+                        "runtimeType": "sizedBox"
+                    }
+                ],
+                "runtimeType": "column"
+            },
+            "runtimeType": "center"
+        },
+        "runtimeType": "scaffold"
+    }

@@ -82,6 +82,8 @@ Widget _$WidgetFromJson(Map<String, dynamic> json) {
       return FilterChip.fromJson(json);
     case 'inputChip':
       return InputChip.fromJson(json);
+    case 'materialSwitch':
+      return Switch.fromJson(json);
 
     default:
       throw CheckedFromJsonException(json, 'runtimeType', 'Widget',
@@ -195,6 +197,7 @@ mixin _$Widget {
     required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme) actionChip,
     required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) filterChip,
     required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) inputChip,
+    required TResult Function(Key? key, bool value, BoolSelectionCallback onChanged, Color? activeColor, Color? activeTrackColor, Color? inactiveThumbColor, Color? inactiveTrackColor, ImageProvider? activeThumbImage, ImageProvider? inactiveThumbImage, MaterialStateProperty? thumbColor, MaterialStateProperty? trackColor, MaterialStateProperty? trackOutlineColor, MaterialTapTargetSize? materialTapTargetSize, DragStartBehavior dragStartBehavior, MouseCursor? mouseCursor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, BoolSelectionCallback? onFocusChange, bool autofocus) materialSwitch,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -300,6 +303,7 @@ mixin _$Widget {
     TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
     TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
     TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
+    TResult? Function(Key? key, bool value, BoolSelectionCallback onChanged, Color? activeColor, Color? activeTrackColor, Color? inactiveThumbColor, Color? inactiveTrackColor, ImageProvider? activeThumbImage, ImageProvider? inactiveThumbImage, MaterialStateProperty? thumbColor, MaterialStateProperty? trackColor, MaterialStateProperty? trackOutlineColor, MaterialTapTargetSize? materialTapTargetSize, DragStartBehavior dragStartBehavior, MouseCursor? mouseCursor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, BoolSelectionCallback? onFocusChange, bool autofocus)? materialSwitch,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -405,6 +409,7 @@ mixin _$Widget {
     TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
     TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
     TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
+    TResult Function(Key? key, bool value, BoolSelectionCallback onChanged, Color? activeColor, Color? activeTrackColor, Color? inactiveThumbColor, Color? inactiveTrackColor, ImageProvider? activeThumbImage, ImageProvider? inactiveThumbImage, MaterialStateProperty? thumbColor, MaterialStateProperty? trackColor, MaterialStateProperty? trackOutlineColor, MaterialTapTargetSize? materialTapTargetSize, DragStartBehavior dragStartBehavior, MouseCursor? mouseCursor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, BoolSelectionCallback? onFocusChange, bool autofocus)? materialSwitch,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -448,6 +453,7 @@ mixin _$Widget {
     required TResult Function(ActionChip value) actionChip,
     required TResult Function(FilterChip value) filterChip,
     required TResult Function(InputChip value) inputChip,
+    required TResult Function(Switch value) materialSwitch,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -487,6 +493,7 @@ mixin _$Widget {
     TResult? Function(ActionChip value)? actionChip,
     TResult? Function(FilterChip value)? filterChip,
     TResult? Function(InputChip value)? inputChip,
+    TResult? Function(Switch value)? materialSwitch,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -526,6 +533,7 @@ mixin _$Widget {
     TResult Function(ActionChip value)? actionChip,
     TResult Function(FilterChip value)? filterChip,
     TResult Function(InputChip value)? inputChip,
+    TResult Function(Switch value)? materialSwitch,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -954,6 +962,7 @@ class _$Card implements Card {
     required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme) actionChip,
     required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) filterChip,
     required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) inputChip,
+    required TResult Function(Key? key, bool value, BoolSelectionCallback onChanged, Color? activeColor, Color? activeTrackColor, Color? inactiveThumbColor, Color? inactiveTrackColor, ImageProvider? activeThumbImage, ImageProvider? inactiveThumbImage, MaterialStateProperty? thumbColor, MaterialStateProperty? trackColor, MaterialStateProperty? trackOutlineColor, MaterialTapTargetSize? materialTapTargetSize, DragStartBehavior dragStartBehavior, MouseCursor? mouseCursor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, BoolSelectionCallback? onFocusChange, bool autofocus) materialSwitch,
   }) {
     return card(key, color, shadowColor, surfaceTintColor, elevation, shape,
         borderOnForeground, margin, clipBehavior, child, semanticContainer);
@@ -1063,6 +1072,7 @@ class _$Card implements Card {
     TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
     TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
     TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
+    TResult? Function(Key? key, bool value, BoolSelectionCallback onChanged, Color? activeColor, Color? activeTrackColor, Color? inactiveThumbColor, Color? inactiveTrackColor, ImageProvider? activeThumbImage, ImageProvider? inactiveThumbImage, MaterialStateProperty? thumbColor, MaterialStateProperty? trackColor, MaterialStateProperty? trackOutlineColor, MaterialTapTargetSize? materialTapTargetSize, DragStartBehavior dragStartBehavior, MouseCursor? mouseCursor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, BoolSelectionCallback? onFocusChange, bool autofocus)? materialSwitch,
   }) {
     return card?.call(
         key,
@@ -1182,6 +1192,7 @@ class _$Card implements Card {
     TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
     TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
     TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
+    TResult Function(Key? key, bool value, BoolSelectionCallback onChanged, Color? activeColor, Color? activeTrackColor, Color? inactiveThumbColor, Color? inactiveTrackColor, ImageProvider? activeThumbImage, ImageProvider? inactiveThumbImage, MaterialStateProperty? thumbColor, MaterialStateProperty? trackColor, MaterialStateProperty? trackOutlineColor, MaterialTapTargetSize? materialTapTargetSize, DragStartBehavior dragStartBehavior, MouseCursor? mouseCursor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, BoolSelectionCallback? onFocusChange, bool autofocus)? materialSwitch,
     required TResult orElse(),
   }) {
     if (card != null) {
@@ -1232,6 +1243,7 @@ class _$Card implements Card {
     required TResult Function(ActionChip value) actionChip,
     required TResult Function(FilterChip value) filterChip,
     required TResult Function(InputChip value) inputChip,
+    required TResult Function(Switch value) materialSwitch,
   }) {
     return card(this);
   }
@@ -1274,6 +1286,7 @@ class _$Card implements Card {
     TResult? Function(ActionChip value)? actionChip,
     TResult? Function(FilterChip value)? filterChip,
     TResult? Function(InputChip value)? inputChip,
+    TResult? Function(Switch value)? materialSwitch,
   }) {
     return card?.call(this);
   }
@@ -1316,6 +1329,7 @@ class _$Card implements Card {
     TResult Function(ActionChip value)? actionChip,
     TResult Function(FilterChip value)? filterChip,
     TResult Function(InputChip value)? inputChip,
+    TResult Function(Switch value)? materialSwitch,
     required TResult orElse(),
   }) {
     if (card != null) {
@@ -1661,6 +1675,7 @@ class _$ElevatedButton implements ElevatedButton {
     required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme) actionChip,
     required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) filterChip,
     required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) inputChip,
+    required TResult Function(Key? key, bool value, BoolSelectionCallback onChanged, Color? activeColor, Color? activeTrackColor, Color? inactiveThumbColor, Color? inactiveTrackColor, ImageProvider? activeThumbImage, ImageProvider? inactiveThumbImage, MaterialStateProperty? thumbColor, MaterialStateProperty? trackColor, MaterialStateProperty? trackOutlineColor, MaterialTapTargetSize? materialTapTargetSize, DragStartBehavior dragStartBehavior, MouseCursor? mouseCursor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, BoolSelectionCallback? onFocusChange, bool autofocus) materialSwitch,
   }) {
     return elevatedButton(
         key, onPressed, onLongPress, autofocus, clipBehavior, child, style);
@@ -1770,6 +1785,7 @@ class _$ElevatedButton implements ElevatedButton {
     TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
     TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
     TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
+    TResult? Function(Key? key, bool value, BoolSelectionCallback onChanged, Color? activeColor, Color? activeTrackColor, Color? inactiveThumbColor, Color? inactiveTrackColor, ImageProvider? activeThumbImage, ImageProvider? inactiveThumbImage, MaterialStateProperty? thumbColor, MaterialStateProperty? trackColor, MaterialStateProperty? trackOutlineColor, MaterialTapTargetSize? materialTapTargetSize, DragStartBehavior dragStartBehavior, MouseCursor? mouseCursor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, BoolSelectionCallback? onFocusChange, bool autofocus)? materialSwitch,
   }) {
     return elevatedButton?.call(
         key, onPressed, onLongPress, autofocus, clipBehavior, child, style);
@@ -1879,6 +1895,7 @@ class _$ElevatedButton implements ElevatedButton {
     TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
     TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
     TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
+    TResult Function(Key? key, bool value, BoolSelectionCallback onChanged, Color? activeColor, Color? activeTrackColor, Color? inactiveThumbColor, Color? inactiveTrackColor, ImageProvider? activeThumbImage, ImageProvider? inactiveThumbImage, MaterialStateProperty? thumbColor, MaterialStateProperty? trackColor, MaterialStateProperty? trackOutlineColor, MaterialTapTargetSize? materialTapTargetSize, DragStartBehavior dragStartBehavior, MouseCursor? mouseCursor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, BoolSelectionCallback? onFocusChange, bool autofocus)? materialSwitch,
     required TResult orElse(),
   }) {
     if (elevatedButton != null) {
@@ -1929,6 +1946,7 @@ class _$ElevatedButton implements ElevatedButton {
     required TResult Function(ActionChip value) actionChip,
     required TResult Function(FilterChip value) filterChip,
     required TResult Function(InputChip value) inputChip,
+    required TResult Function(Switch value) materialSwitch,
   }) {
     return elevatedButton(this);
   }
@@ -1971,6 +1989,7 @@ class _$ElevatedButton implements ElevatedButton {
     TResult? Function(ActionChip value)? actionChip,
     TResult? Function(FilterChip value)? filterChip,
     TResult? Function(InputChip value)? inputChip,
+    TResult? Function(Switch value)? materialSwitch,
   }) {
     return elevatedButton?.call(this);
   }
@@ -2013,6 +2032,7 @@ class _$ElevatedButton implements ElevatedButton {
     TResult Function(ActionChip value)? actionChip,
     TResult Function(FilterChip value)? filterChip,
     TResult Function(InputChip value)? inputChip,
+    TResult Function(Switch value)? materialSwitch,
     required TResult orElse(),
   }) {
     if (elevatedButton != null) {
@@ -2328,6 +2348,7 @@ class _$FilledButton implements FilledButton {
     required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme) actionChip,
     required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) filterChip,
     required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) inputChip,
+    required TResult Function(Key? key, bool value, BoolSelectionCallback onChanged, Color? activeColor, Color? activeTrackColor, Color? inactiveThumbColor, Color? inactiveTrackColor, ImageProvider? activeThumbImage, ImageProvider? inactiveThumbImage, MaterialStateProperty? thumbColor, MaterialStateProperty? trackColor, MaterialStateProperty? trackOutlineColor, MaterialTapTargetSize? materialTapTargetSize, DragStartBehavior dragStartBehavior, MouseCursor? mouseCursor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, BoolSelectionCallback? onFocusChange, bool autofocus) materialSwitch,
   }) {
     return filledButton(
         key, onPressed, onLongPress, autofocus, clipBehavior, child);
@@ -2437,6 +2458,7 @@ class _$FilledButton implements FilledButton {
     TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
     TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
     TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
+    TResult? Function(Key? key, bool value, BoolSelectionCallback onChanged, Color? activeColor, Color? activeTrackColor, Color? inactiveThumbColor, Color? inactiveTrackColor, ImageProvider? activeThumbImage, ImageProvider? inactiveThumbImage, MaterialStateProperty? thumbColor, MaterialStateProperty? trackColor, MaterialStateProperty? trackOutlineColor, MaterialTapTargetSize? materialTapTargetSize, DragStartBehavior dragStartBehavior, MouseCursor? mouseCursor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, BoolSelectionCallback? onFocusChange, bool autofocus)? materialSwitch,
   }) {
     return filledButton?.call(
         key, onPressed, onLongPress, autofocus, clipBehavior, child);
@@ -2546,6 +2568,7 @@ class _$FilledButton implements FilledButton {
     TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
     TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
     TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
+    TResult Function(Key? key, bool value, BoolSelectionCallback onChanged, Color? activeColor, Color? activeTrackColor, Color? inactiveThumbColor, Color? inactiveTrackColor, ImageProvider? activeThumbImage, ImageProvider? inactiveThumbImage, MaterialStateProperty? thumbColor, MaterialStateProperty? trackColor, MaterialStateProperty? trackOutlineColor, MaterialTapTargetSize? materialTapTargetSize, DragStartBehavior dragStartBehavior, MouseCursor? mouseCursor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, BoolSelectionCallback? onFocusChange, bool autofocus)? materialSwitch,
     required TResult orElse(),
   }) {
     if (filledButton != null) {
@@ -2596,6 +2619,7 @@ class _$FilledButton implements FilledButton {
     required TResult Function(ActionChip value) actionChip,
     required TResult Function(FilterChip value) filterChip,
     required TResult Function(InputChip value) inputChip,
+    required TResult Function(Switch value) materialSwitch,
   }) {
     return filledButton(this);
   }
@@ -2638,6 +2662,7 @@ class _$FilledButton implements FilledButton {
     TResult? Function(ActionChip value)? actionChip,
     TResult? Function(FilterChip value)? filterChip,
     TResult? Function(InputChip value)? inputChip,
+    TResult? Function(Switch value)? materialSwitch,
   }) {
     return filledButton?.call(this);
   }
@@ -2680,6 +2705,7 @@ class _$FilledButton implements FilledButton {
     TResult Function(ActionChip value)? actionChip,
     TResult Function(FilterChip value)? filterChip,
     TResult Function(InputChip value)? inputChip,
+    TResult Function(Switch value)? materialSwitch,
     required TResult orElse(),
   }) {
     if (filledButton != null) {
@@ -2994,6 +3020,7 @@ class _$FilledTonalButton implements FilledTonalButton {
     required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme) actionChip,
     required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) filterChip,
     required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) inputChip,
+    required TResult Function(Key? key, bool value, BoolSelectionCallback onChanged, Color? activeColor, Color? activeTrackColor, Color? inactiveThumbColor, Color? inactiveTrackColor, ImageProvider? activeThumbImage, ImageProvider? inactiveThumbImage, MaterialStateProperty? thumbColor, MaterialStateProperty? trackColor, MaterialStateProperty? trackOutlineColor, MaterialTapTargetSize? materialTapTargetSize, DragStartBehavior dragStartBehavior, MouseCursor? mouseCursor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, BoolSelectionCallback? onFocusChange, bool autofocus) materialSwitch,
   }) {
     return filledTonalButton(
         key, onPressed, onLongPress, autofocus, clipBehavior, child);
@@ -3103,6 +3130,7 @@ class _$FilledTonalButton implements FilledTonalButton {
     TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
     TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
     TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
+    TResult? Function(Key? key, bool value, BoolSelectionCallback onChanged, Color? activeColor, Color? activeTrackColor, Color? inactiveThumbColor, Color? inactiveTrackColor, ImageProvider? activeThumbImage, ImageProvider? inactiveThumbImage, MaterialStateProperty? thumbColor, MaterialStateProperty? trackColor, MaterialStateProperty? trackOutlineColor, MaterialTapTargetSize? materialTapTargetSize, DragStartBehavior dragStartBehavior, MouseCursor? mouseCursor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, BoolSelectionCallback? onFocusChange, bool autofocus)? materialSwitch,
   }) {
     return filledTonalButton?.call(
         key, onPressed, onLongPress, autofocus, clipBehavior, child);
@@ -3212,6 +3240,7 @@ class _$FilledTonalButton implements FilledTonalButton {
     TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
     TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
     TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
+    TResult Function(Key? key, bool value, BoolSelectionCallback onChanged, Color? activeColor, Color? activeTrackColor, Color? inactiveThumbColor, Color? inactiveTrackColor, ImageProvider? activeThumbImage, ImageProvider? inactiveThumbImage, MaterialStateProperty? thumbColor, MaterialStateProperty? trackColor, MaterialStateProperty? trackOutlineColor, MaterialTapTargetSize? materialTapTargetSize, DragStartBehavior dragStartBehavior, MouseCursor? mouseCursor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, BoolSelectionCallback? onFocusChange, bool autofocus)? materialSwitch,
     required TResult orElse(),
   }) {
     if (filledTonalButton != null) {
@@ -3262,6 +3291,7 @@ class _$FilledTonalButton implements FilledTonalButton {
     required TResult Function(ActionChip value) actionChip,
     required TResult Function(FilterChip value) filterChip,
     required TResult Function(InputChip value) inputChip,
+    required TResult Function(Switch value) materialSwitch,
   }) {
     return filledTonalButton(this);
   }
@@ -3304,6 +3334,7 @@ class _$FilledTonalButton implements FilledTonalButton {
     TResult? Function(ActionChip value)? actionChip,
     TResult? Function(FilterChip value)? filterChip,
     TResult? Function(InputChip value)? inputChip,
+    TResult? Function(Switch value)? materialSwitch,
   }) {
     return filledTonalButton?.call(this);
   }
@@ -3346,6 +3377,7 @@ class _$FilledTonalButton implements FilledTonalButton {
     TResult Function(ActionChip value)? actionChip,
     TResult Function(FilterChip value)? filterChip,
     TResult Function(InputChip value)? inputChip,
+    TResult Function(Switch value)? materialSwitch,
     required TResult orElse(),
   }) {
     if (filledTonalButton != null) {
@@ -3660,6 +3692,7 @@ class _$OutlinedButton implements OutlinedButton {
     required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme) actionChip,
     required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) filterChip,
     required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) inputChip,
+    required TResult Function(Key? key, bool value, BoolSelectionCallback onChanged, Color? activeColor, Color? activeTrackColor, Color? inactiveThumbColor, Color? inactiveTrackColor, ImageProvider? activeThumbImage, ImageProvider? inactiveThumbImage, MaterialStateProperty? thumbColor, MaterialStateProperty? trackColor, MaterialStateProperty? trackOutlineColor, MaterialTapTargetSize? materialTapTargetSize, DragStartBehavior dragStartBehavior, MouseCursor? mouseCursor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, BoolSelectionCallback? onFocusChange, bool autofocus) materialSwitch,
   }) {
     return outlinedButton(
         key, onPressed, onLongPress, autofocus, clipBehavior, child);
@@ -3769,6 +3802,7 @@ class _$OutlinedButton implements OutlinedButton {
     TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
     TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
     TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
+    TResult? Function(Key? key, bool value, BoolSelectionCallback onChanged, Color? activeColor, Color? activeTrackColor, Color? inactiveThumbColor, Color? inactiveTrackColor, ImageProvider? activeThumbImage, ImageProvider? inactiveThumbImage, MaterialStateProperty? thumbColor, MaterialStateProperty? trackColor, MaterialStateProperty? trackOutlineColor, MaterialTapTargetSize? materialTapTargetSize, DragStartBehavior dragStartBehavior, MouseCursor? mouseCursor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, BoolSelectionCallback? onFocusChange, bool autofocus)? materialSwitch,
   }) {
     return outlinedButton?.call(
         key, onPressed, onLongPress, autofocus, clipBehavior, child);
@@ -3878,6 +3912,7 @@ class _$OutlinedButton implements OutlinedButton {
     TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
     TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
     TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
+    TResult Function(Key? key, bool value, BoolSelectionCallback onChanged, Color? activeColor, Color? activeTrackColor, Color? inactiveThumbColor, Color? inactiveTrackColor, ImageProvider? activeThumbImage, ImageProvider? inactiveThumbImage, MaterialStateProperty? thumbColor, MaterialStateProperty? trackColor, MaterialStateProperty? trackOutlineColor, MaterialTapTargetSize? materialTapTargetSize, DragStartBehavior dragStartBehavior, MouseCursor? mouseCursor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, BoolSelectionCallback? onFocusChange, bool autofocus)? materialSwitch,
     required TResult orElse(),
   }) {
     if (outlinedButton != null) {
@@ -3928,6 +3963,7 @@ class _$OutlinedButton implements OutlinedButton {
     required TResult Function(ActionChip value) actionChip,
     required TResult Function(FilterChip value) filterChip,
     required TResult Function(InputChip value) inputChip,
+    required TResult Function(Switch value) materialSwitch,
   }) {
     return outlinedButton(this);
   }
@@ -3970,6 +4006,7 @@ class _$OutlinedButton implements OutlinedButton {
     TResult? Function(ActionChip value)? actionChip,
     TResult? Function(FilterChip value)? filterChip,
     TResult? Function(InputChip value)? inputChip,
+    TResult? Function(Switch value)? materialSwitch,
   }) {
     return outlinedButton?.call(this);
   }
@@ -4012,6 +4049,7 @@ class _$OutlinedButton implements OutlinedButton {
     TResult Function(ActionChip value)? actionChip,
     TResult Function(FilterChip value)? filterChip,
     TResult Function(InputChip value)? inputChip,
+    TResult Function(Switch value)? materialSwitch,
     required TResult orElse(),
   }) {
     if (outlinedButton != null) {
@@ -4325,6 +4363,7 @@ class _$TextButton implements TextButton {
     required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme) actionChip,
     required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) filterChip,
     required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) inputChip,
+    required TResult Function(Key? key, bool value, BoolSelectionCallback onChanged, Color? activeColor, Color? activeTrackColor, Color? inactiveThumbColor, Color? inactiveTrackColor, ImageProvider? activeThumbImage, ImageProvider? inactiveThumbImage, MaterialStateProperty? thumbColor, MaterialStateProperty? trackColor, MaterialStateProperty? trackOutlineColor, MaterialTapTargetSize? materialTapTargetSize, DragStartBehavior dragStartBehavior, MouseCursor? mouseCursor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, BoolSelectionCallback? onFocusChange, bool autofocus) materialSwitch,
   }) {
     return textButton(
         key, onPressed, onLongPress, autofocus, clipBehavior, child);
@@ -4434,6 +4473,7 @@ class _$TextButton implements TextButton {
     TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
     TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
     TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
+    TResult? Function(Key? key, bool value, BoolSelectionCallback onChanged, Color? activeColor, Color? activeTrackColor, Color? inactiveThumbColor, Color? inactiveTrackColor, ImageProvider? activeThumbImage, ImageProvider? inactiveThumbImage, MaterialStateProperty? thumbColor, MaterialStateProperty? trackColor, MaterialStateProperty? trackOutlineColor, MaterialTapTargetSize? materialTapTargetSize, DragStartBehavior dragStartBehavior, MouseCursor? mouseCursor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, BoolSelectionCallback? onFocusChange, bool autofocus)? materialSwitch,
   }) {
     return textButton?.call(
         key, onPressed, onLongPress, autofocus, clipBehavior, child);
@@ -4543,6 +4583,7 @@ class _$TextButton implements TextButton {
     TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
     TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
     TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
+    TResult Function(Key? key, bool value, BoolSelectionCallback onChanged, Color? activeColor, Color? activeTrackColor, Color? inactiveThumbColor, Color? inactiveTrackColor, ImageProvider? activeThumbImage, ImageProvider? inactiveThumbImage, MaterialStateProperty? thumbColor, MaterialStateProperty? trackColor, MaterialStateProperty? trackOutlineColor, MaterialTapTargetSize? materialTapTargetSize, DragStartBehavior dragStartBehavior, MouseCursor? mouseCursor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, BoolSelectionCallback? onFocusChange, bool autofocus)? materialSwitch,
     required TResult orElse(),
   }) {
     if (textButton != null) {
@@ -4593,6 +4634,7 @@ class _$TextButton implements TextButton {
     required TResult Function(ActionChip value) actionChip,
     required TResult Function(FilterChip value) filterChip,
     required TResult Function(InputChip value) inputChip,
+    required TResult Function(Switch value) materialSwitch,
   }) {
     return textButton(this);
   }
@@ -4635,6 +4677,7 @@ class _$TextButton implements TextButton {
     TResult? Function(ActionChip value)? actionChip,
     TResult? Function(FilterChip value)? filterChip,
     TResult? Function(InputChip value)? inputChip,
+    TResult? Function(Switch value)? materialSwitch,
   }) {
     return textButton?.call(this);
   }
@@ -4677,6 +4720,7 @@ class _$TextButton implements TextButton {
     TResult Function(ActionChip value)? actionChip,
     TResult Function(FilterChip value)? filterChip,
     TResult Function(InputChip value)? inputChip,
+    TResult Function(Switch value)? materialSwitch,
     required TResult orElse(),
   }) {
     if (textButton != null) {
@@ -5312,6 +5356,7 @@ class _$IconButton implements IconButton {
     required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme) actionChip,
     required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) filterChip,
     required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) inputChip,
+    required TResult Function(Key? key, bool value, BoolSelectionCallback onChanged, Color? activeColor, Color? activeTrackColor, Color? inactiveThumbColor, Color? inactiveTrackColor, ImageProvider? activeThumbImage, ImageProvider? inactiveThumbImage, MaterialStateProperty? thumbColor, MaterialStateProperty? trackColor, MaterialStateProperty? trackOutlineColor, MaterialTapTargetSize? materialTapTargetSize, DragStartBehavior dragStartBehavior, MouseCursor? mouseCursor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, BoolSelectionCallback? onFocusChange, bool autofocus) materialSwitch,
   }) {
     return iconButton(
         key,
@@ -5441,6 +5486,7 @@ class _$IconButton implements IconButton {
     TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
     TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
     TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
+    TResult? Function(Key? key, bool value, BoolSelectionCallback onChanged, Color? activeColor, Color? activeTrackColor, Color? inactiveThumbColor, Color? inactiveTrackColor, ImageProvider? activeThumbImage, ImageProvider? inactiveThumbImage, MaterialStateProperty? thumbColor, MaterialStateProperty? trackColor, MaterialStateProperty? trackOutlineColor, MaterialTapTargetSize? materialTapTargetSize, DragStartBehavior dragStartBehavior, MouseCursor? mouseCursor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, BoolSelectionCallback? onFocusChange, bool autofocus)? materialSwitch,
   }) {
     return iconButton?.call(
         key,
@@ -5570,6 +5616,7 @@ class _$IconButton implements IconButton {
     TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
     TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
     TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
+    TResult Function(Key? key, bool value, BoolSelectionCallback onChanged, Color? activeColor, Color? activeTrackColor, Color? inactiveThumbColor, Color? inactiveTrackColor, ImageProvider? activeThumbImage, ImageProvider? inactiveThumbImage, MaterialStateProperty? thumbColor, MaterialStateProperty? trackColor, MaterialStateProperty? trackOutlineColor, MaterialTapTargetSize? materialTapTargetSize, DragStartBehavior dragStartBehavior, MouseCursor? mouseCursor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, BoolSelectionCallback? onFocusChange, bool autofocus)? materialSwitch,
     required TResult orElse(),
   }) {
     if (iconButton != null) {
@@ -5640,6 +5687,7 @@ class _$IconButton implements IconButton {
     required TResult Function(ActionChip value) actionChip,
     required TResult Function(FilterChip value) filterChip,
     required TResult Function(InputChip value) inputChip,
+    required TResult Function(Switch value) materialSwitch,
   }) {
     return iconButton(this);
   }
@@ -5682,6 +5730,7 @@ class _$IconButton implements IconButton {
     TResult? Function(ActionChip value)? actionChip,
     TResult? Function(FilterChip value)? filterChip,
     TResult? Function(InputChip value)? inputChip,
+    TResult? Function(Switch value)? materialSwitch,
   }) {
     return iconButton?.call(this);
   }
@@ -5724,6 +5773,7 @@ class _$IconButton implements IconButton {
     TResult Function(ActionChip value)? actionChip,
     TResult Function(FilterChip value)? filterChip,
     TResult Function(InputChip value)? inputChip,
+    TResult Function(Switch value)? materialSwitch,
     required TResult orElse(),
   }) {
     if (iconButton != null) {
@@ -6375,6 +6425,7 @@ class _$Scaffold implements Scaffold {
     required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme) actionChip,
     required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) filterChip,
     required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) inputChip,
+    required TResult Function(Key? key, bool value, BoolSelectionCallback onChanged, Color? activeColor, Color? activeTrackColor, Color? inactiveThumbColor, Color? inactiveTrackColor, ImageProvider? activeThumbImage, ImageProvider? inactiveThumbImage, MaterialStateProperty? thumbColor, MaterialStateProperty? trackColor, MaterialStateProperty? trackOutlineColor, MaterialTapTargetSize? materialTapTargetSize, DragStartBehavior dragStartBehavior, MouseCursor? mouseCursor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, BoolSelectionCallback? onFocusChange, bool autofocus) materialSwitch,
   }) {
     return scaffold(
         key,
@@ -6504,6 +6555,7 @@ class _$Scaffold implements Scaffold {
     TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
     TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
     TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
+    TResult? Function(Key? key, bool value, BoolSelectionCallback onChanged, Color? activeColor, Color? activeTrackColor, Color? inactiveThumbColor, Color? inactiveTrackColor, ImageProvider? activeThumbImage, ImageProvider? inactiveThumbImage, MaterialStateProperty? thumbColor, MaterialStateProperty? trackColor, MaterialStateProperty? trackOutlineColor, MaterialTapTargetSize? materialTapTargetSize, DragStartBehavior dragStartBehavior, MouseCursor? mouseCursor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, BoolSelectionCallback? onFocusChange, bool autofocus)? materialSwitch,
   }) {
     return scaffold?.call(
         key,
@@ -6633,6 +6685,7 @@ class _$Scaffold implements Scaffold {
     TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
     TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
     TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
+    TResult Function(Key? key, bool value, BoolSelectionCallback onChanged, Color? activeColor, Color? activeTrackColor, Color? inactiveThumbColor, Color? inactiveTrackColor, ImageProvider? activeThumbImage, ImageProvider? inactiveThumbImage, MaterialStateProperty? thumbColor, MaterialStateProperty? trackColor, MaterialStateProperty? trackOutlineColor, MaterialTapTargetSize? materialTapTargetSize, DragStartBehavior dragStartBehavior, MouseCursor? mouseCursor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, BoolSelectionCallback? onFocusChange, bool autofocus)? materialSwitch,
     required TResult orElse(),
   }) {
     if (scaffold != null) {
@@ -6703,6 +6756,7 @@ class _$Scaffold implements Scaffold {
     required TResult Function(ActionChip value) actionChip,
     required TResult Function(FilterChip value) filterChip,
     required TResult Function(InputChip value) inputChip,
+    required TResult Function(Switch value) materialSwitch,
   }) {
     return scaffold(this);
   }
@@ -6745,6 +6799,7 @@ class _$Scaffold implements Scaffold {
     TResult? Function(ActionChip value)? actionChip,
     TResult? Function(FilterChip value)? filterChip,
     TResult? Function(InputChip value)? inputChip,
+    TResult? Function(Switch value)? materialSwitch,
   }) {
     return scaffold?.call(this);
   }
@@ -6787,6 +6842,7 @@ class _$Scaffold implements Scaffold {
     TResult Function(ActionChip value)? actionChip,
     TResult Function(FilterChip value)? filterChip,
     TResult Function(InputChip value)? inputChip,
+    TResult Function(Switch value)? materialSwitch,
     required TResult orElse(),
   }) {
     if (scaffold != null) {
@@ -7411,6 +7467,7 @@ class _$FloatingActionButton implements FloatingActionButton {
     required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme) actionChip,
     required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) filterChip,
     required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) inputChip,
+    required TResult Function(Key? key, bool value, BoolSelectionCallback onChanged, Color? activeColor, Color? activeTrackColor, Color? inactiveThumbColor, Color? inactiveTrackColor, ImageProvider? activeThumbImage, ImageProvider? inactiveThumbImage, MaterialStateProperty? thumbColor, MaterialStateProperty? trackColor, MaterialStateProperty? trackOutlineColor, MaterialTapTargetSize? materialTapTargetSize, DragStartBehavior dragStartBehavior, MouseCursor? mouseCursor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, BoolSelectionCallback? onFocusChange, bool autofocus) materialSwitch,
   }) {
     return floatingActionButton(
         key,
@@ -7541,6 +7598,7 @@ class _$FloatingActionButton implements FloatingActionButton {
     TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
     TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
     TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
+    TResult? Function(Key? key, bool value, BoolSelectionCallback onChanged, Color? activeColor, Color? activeTrackColor, Color? inactiveThumbColor, Color? inactiveTrackColor, ImageProvider? activeThumbImage, ImageProvider? inactiveThumbImage, MaterialStateProperty? thumbColor, MaterialStateProperty? trackColor, MaterialStateProperty? trackOutlineColor, MaterialTapTargetSize? materialTapTargetSize, DragStartBehavior dragStartBehavior, MouseCursor? mouseCursor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, BoolSelectionCallback? onFocusChange, bool autofocus)? materialSwitch,
   }) {
     return floatingActionButton?.call(
         key,
@@ -7671,6 +7729,7 @@ class _$FloatingActionButton implements FloatingActionButton {
     TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
     TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
     TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
+    TResult Function(Key? key, bool value, BoolSelectionCallback onChanged, Color? activeColor, Color? activeTrackColor, Color? inactiveThumbColor, Color? inactiveTrackColor, ImageProvider? activeThumbImage, ImageProvider? inactiveThumbImage, MaterialStateProperty? thumbColor, MaterialStateProperty? trackColor, MaterialStateProperty? trackOutlineColor, MaterialTapTargetSize? materialTapTargetSize, DragStartBehavior dragStartBehavior, MouseCursor? mouseCursor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, BoolSelectionCallback? onFocusChange, bool autofocus)? materialSwitch,
     required TResult orElse(),
   }) {
     if (floatingActionButton != null) {
@@ -7742,6 +7801,7 @@ class _$FloatingActionButton implements FloatingActionButton {
     required TResult Function(ActionChip value) actionChip,
     required TResult Function(FilterChip value) filterChip,
     required TResult Function(InputChip value) inputChip,
+    required TResult Function(Switch value) materialSwitch,
   }) {
     return floatingActionButton(this);
   }
@@ -7784,6 +7844,7 @@ class _$FloatingActionButton implements FloatingActionButton {
     TResult? Function(ActionChip value)? actionChip,
     TResult? Function(FilterChip value)? filterChip,
     TResult? Function(InputChip value)? inputChip,
+    TResult? Function(Switch value)? materialSwitch,
   }) {
     return floatingActionButton?.call(this);
   }
@@ -7826,6 +7887,7 @@ class _$FloatingActionButton implements FloatingActionButton {
     TResult Function(ActionChip value)? actionChip,
     TResult Function(FilterChip value)? filterChip,
     TResult Function(InputChip value)? inputChip,
+    TResult Function(Switch value)? materialSwitch,
     required TResult orElse(),
   }) {
     if (floatingActionButton != null) {
@@ -8463,6 +8525,7 @@ class _$FloatingActionButtonExtended implements FloatingActionButtonExtended {
     required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme) actionChip,
     required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) filterChip,
     required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) inputChip,
+    required TResult Function(Key? key, bool value, BoolSelectionCallback onChanged, Color? activeColor, Color? activeTrackColor, Color? inactiveThumbColor, Color? inactiveTrackColor, ImageProvider? activeThumbImage, ImageProvider? inactiveThumbImage, MaterialStateProperty? thumbColor, MaterialStateProperty? trackColor, MaterialStateProperty? trackOutlineColor, MaterialTapTargetSize? materialTapTargetSize, DragStartBehavior dragStartBehavior, MouseCursor? mouseCursor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, BoolSelectionCallback? onFocusChange, bool autofocus) materialSwitch,
   }) {
     return floatingActionButtonExtended(
         key,
@@ -8593,6 +8656,7 @@ class _$FloatingActionButtonExtended implements FloatingActionButtonExtended {
     TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
     TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
     TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
+    TResult? Function(Key? key, bool value, BoolSelectionCallback onChanged, Color? activeColor, Color? activeTrackColor, Color? inactiveThumbColor, Color? inactiveTrackColor, ImageProvider? activeThumbImage, ImageProvider? inactiveThumbImage, MaterialStateProperty? thumbColor, MaterialStateProperty? trackColor, MaterialStateProperty? trackOutlineColor, MaterialTapTargetSize? materialTapTargetSize, DragStartBehavior dragStartBehavior, MouseCursor? mouseCursor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, BoolSelectionCallback? onFocusChange, bool autofocus)? materialSwitch,
   }) {
     return floatingActionButtonExtended?.call(
         key,
@@ -8723,6 +8787,7 @@ class _$FloatingActionButtonExtended implements FloatingActionButtonExtended {
     TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
     TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
     TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
+    TResult Function(Key? key, bool value, BoolSelectionCallback onChanged, Color? activeColor, Color? activeTrackColor, Color? inactiveThumbColor, Color? inactiveTrackColor, ImageProvider? activeThumbImage, ImageProvider? inactiveThumbImage, MaterialStateProperty? thumbColor, MaterialStateProperty? trackColor, MaterialStateProperty? trackOutlineColor, MaterialTapTargetSize? materialTapTargetSize, DragStartBehavior dragStartBehavior, MouseCursor? mouseCursor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, BoolSelectionCallback? onFocusChange, bool autofocus)? materialSwitch,
     required TResult orElse(),
   }) {
     if (floatingActionButtonExtended != null) {
@@ -8794,6 +8859,7 @@ class _$FloatingActionButtonExtended implements FloatingActionButtonExtended {
     required TResult Function(ActionChip value) actionChip,
     required TResult Function(FilterChip value) filterChip,
     required TResult Function(InputChip value) inputChip,
+    required TResult Function(Switch value) materialSwitch,
   }) {
     return floatingActionButtonExtended(this);
   }
@@ -8836,6 +8902,7 @@ class _$FloatingActionButtonExtended implements FloatingActionButtonExtended {
     TResult? Function(ActionChip value)? actionChip,
     TResult? Function(FilterChip value)? filterChip,
     TResult? Function(InputChip value)? inputChip,
+    TResult? Function(Switch value)? materialSwitch,
   }) {
     return floatingActionButtonExtended?.call(this);
   }
@@ -8878,6 +8945,7 @@ class _$FloatingActionButtonExtended implements FloatingActionButtonExtended {
     TResult Function(ActionChip value)? actionChip,
     TResult Function(FilterChip value)? filterChip,
     TResult Function(InputChip value)? inputChip,
+    TResult Function(Switch value)? materialSwitch,
     required TResult orElse(),
   }) {
     if (floatingActionButtonExtended != null) {
@@ -9359,6 +9427,7 @@ class _$Text implements Text {
     required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme) actionChip,
     required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) filterChip,
     required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) inputChip,
+    required TResult Function(Key? key, bool value, BoolSelectionCallback onChanged, Color? activeColor, Color? activeTrackColor, Color? inactiveThumbColor, Color? inactiveTrackColor, ImageProvider? activeThumbImage, ImageProvider? inactiveThumbImage, MaterialStateProperty? thumbColor, MaterialStateProperty? trackColor, MaterialStateProperty? trackOutlineColor, MaterialTapTargetSize? materialTapTargetSize, DragStartBehavior dragStartBehavior, MouseCursor? mouseCursor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, BoolSelectionCallback? onFocusChange, bool autofocus) materialSwitch,
   }) {
     return text(
         data,
@@ -9482,6 +9551,7 @@ class _$Text implements Text {
     TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
     TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
     TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
+    TResult? Function(Key? key, bool value, BoolSelectionCallback onChanged, Color? activeColor, Color? activeTrackColor, Color? inactiveThumbColor, Color? inactiveTrackColor, ImageProvider? activeThumbImage, ImageProvider? inactiveThumbImage, MaterialStateProperty? thumbColor, MaterialStateProperty? trackColor, MaterialStateProperty? trackOutlineColor, MaterialTapTargetSize? materialTapTargetSize, DragStartBehavior dragStartBehavior, MouseCursor? mouseCursor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, BoolSelectionCallback? onFocusChange, bool autofocus)? materialSwitch,
   }) {
     return text?.call(
         data,
@@ -9605,6 +9675,7 @@ class _$Text implements Text {
     TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
     TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
     TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
+    TResult Function(Key? key, bool value, BoolSelectionCallback onChanged, Color? activeColor, Color? activeTrackColor, Color? inactiveThumbColor, Color? inactiveTrackColor, ImageProvider? activeThumbImage, ImageProvider? inactiveThumbImage, MaterialStateProperty? thumbColor, MaterialStateProperty? trackColor, MaterialStateProperty? trackOutlineColor, MaterialTapTargetSize? materialTapTargetSize, DragStartBehavior dragStartBehavior, MouseCursor? mouseCursor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, BoolSelectionCallback? onFocusChange, bool autofocus)? materialSwitch,
     required TResult orElse(),
   }) {
     if (text != null) {
@@ -9669,6 +9740,7 @@ class _$Text implements Text {
     required TResult Function(ActionChip value) actionChip,
     required TResult Function(FilterChip value) filterChip,
     required TResult Function(InputChip value) inputChip,
+    required TResult Function(Switch value) materialSwitch,
   }) {
     return text(this);
   }
@@ -9711,6 +9783,7 @@ class _$Text implements Text {
     TResult? Function(ActionChip value)? actionChip,
     TResult? Function(FilterChip value)? filterChip,
     TResult? Function(InputChip value)? inputChip,
+    TResult? Function(Switch value)? materialSwitch,
   }) {
     return text?.call(this);
   }
@@ -9753,6 +9826,7 @@ class _$Text implements Text {
     TResult Function(ActionChip value)? actionChip,
     TResult Function(FilterChip value)? filterChip,
     TResult Function(InputChip value)? inputChip,
+    TResult Function(Switch value)? materialSwitch,
     required TResult orElse(),
   }) {
     if (text != null) {
@@ -10260,6 +10334,7 @@ class _$Container implements Container {
     required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme) actionChip,
     required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) filterChip,
     required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) inputChip,
+    required TResult Function(Key? key, bool value, BoolSelectionCallback onChanged, Color? activeColor, Color? activeTrackColor, Color? inactiveThumbColor, Color? inactiveTrackColor, ImageProvider? activeThumbImage, ImageProvider? inactiveThumbImage, MaterialStateProperty? thumbColor, MaterialStateProperty? trackColor, MaterialStateProperty? trackOutlineColor, MaterialTapTargetSize? materialTapTargetSize, DragStartBehavior dragStartBehavior, MouseCursor? mouseCursor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, BoolSelectionCallback? onFocusChange, bool autofocus) materialSwitch,
   }) {
     return container(
         key,
@@ -10382,6 +10457,7 @@ class _$Container implements Container {
     TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
     TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
     TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
+    TResult? Function(Key? key, bool value, BoolSelectionCallback onChanged, Color? activeColor, Color? activeTrackColor, Color? inactiveThumbColor, Color? inactiveTrackColor, ImageProvider? activeThumbImage, ImageProvider? inactiveThumbImage, MaterialStateProperty? thumbColor, MaterialStateProperty? trackColor, MaterialStateProperty? trackOutlineColor, MaterialTapTargetSize? materialTapTargetSize, DragStartBehavior dragStartBehavior, MouseCursor? mouseCursor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, BoolSelectionCallback? onFocusChange, bool autofocus)? materialSwitch,
   }) {
     return container?.call(
         key,
@@ -10504,6 +10580,7 @@ class _$Container implements Container {
     TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
     TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
     TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
+    TResult Function(Key? key, bool value, BoolSelectionCallback onChanged, Color? activeColor, Color? activeTrackColor, Color? inactiveThumbColor, Color? inactiveTrackColor, ImageProvider? activeThumbImage, ImageProvider? inactiveThumbImage, MaterialStateProperty? thumbColor, MaterialStateProperty? trackColor, MaterialStateProperty? trackOutlineColor, MaterialTapTargetSize? materialTapTargetSize, DragStartBehavior dragStartBehavior, MouseCursor? mouseCursor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, BoolSelectionCallback? onFocusChange, bool autofocus)? materialSwitch,
     required TResult orElse(),
   }) {
     if (container != null) {
@@ -10567,6 +10644,7 @@ class _$Container implements Container {
     required TResult Function(ActionChip value) actionChip,
     required TResult Function(FilterChip value) filterChip,
     required TResult Function(InputChip value) inputChip,
+    required TResult Function(Switch value) materialSwitch,
   }) {
     return container(this);
   }
@@ -10609,6 +10687,7 @@ class _$Container implements Container {
     TResult? Function(ActionChip value)? actionChip,
     TResult? Function(FilterChip value)? filterChip,
     TResult? Function(InputChip value)? inputChip,
+    TResult? Function(Switch value)? materialSwitch,
   }) {
     return container?.call(this);
   }
@@ -10651,6 +10730,7 @@ class _$Container implements Container {
     TResult Function(ActionChip value)? actionChip,
     TResult Function(FilterChip value)? filterChip,
     TResult Function(InputChip value)? inputChip,
+    TResult Function(Switch value)? materialSwitch,
     required TResult orElse(),
   }) {
     if (container != null) {
@@ -10922,6 +11002,7 @@ class _$SizedBox implements SizedBox {
     required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme) actionChip,
     required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) filterChip,
     required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) inputChip,
+    required TResult Function(Key? key, bool value, BoolSelectionCallback onChanged, Color? activeColor, Color? activeTrackColor, Color? inactiveThumbColor, Color? inactiveTrackColor, ImageProvider? activeThumbImage, ImageProvider? inactiveThumbImage, MaterialStateProperty? thumbColor, MaterialStateProperty? trackColor, MaterialStateProperty? trackOutlineColor, MaterialTapTargetSize? materialTapTargetSize, DragStartBehavior dragStartBehavior, MouseCursor? mouseCursor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, BoolSelectionCallback? onFocusChange, bool autofocus) materialSwitch,
   }) {
     return sizedBox(key, width, height, child);
   }
@@ -11030,6 +11111,7 @@ class _$SizedBox implements SizedBox {
     TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
     TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
     TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
+    TResult? Function(Key? key, bool value, BoolSelectionCallback onChanged, Color? activeColor, Color? activeTrackColor, Color? inactiveThumbColor, Color? inactiveTrackColor, ImageProvider? activeThumbImage, ImageProvider? inactiveThumbImage, MaterialStateProperty? thumbColor, MaterialStateProperty? trackColor, MaterialStateProperty? trackOutlineColor, MaterialTapTargetSize? materialTapTargetSize, DragStartBehavior dragStartBehavior, MouseCursor? mouseCursor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, BoolSelectionCallback? onFocusChange, bool autofocus)? materialSwitch,
   }) {
     return sizedBox?.call(key, width, height, child);
   }
@@ -11138,6 +11220,7 @@ class _$SizedBox implements SizedBox {
     TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
     TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
     TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
+    TResult Function(Key? key, bool value, BoolSelectionCallback onChanged, Color? activeColor, Color? activeTrackColor, Color? inactiveThumbColor, Color? inactiveTrackColor, ImageProvider? activeThumbImage, ImageProvider? inactiveThumbImage, MaterialStateProperty? thumbColor, MaterialStateProperty? trackColor, MaterialStateProperty? trackOutlineColor, MaterialTapTargetSize? materialTapTargetSize, DragStartBehavior dragStartBehavior, MouseCursor? mouseCursor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, BoolSelectionCallback? onFocusChange, bool autofocus)? materialSwitch,
     required TResult orElse(),
   }) {
     if (sizedBox != null) {
@@ -11187,6 +11270,7 @@ class _$SizedBox implements SizedBox {
     required TResult Function(ActionChip value) actionChip,
     required TResult Function(FilterChip value) filterChip,
     required TResult Function(InputChip value) inputChip,
+    required TResult Function(Switch value) materialSwitch,
   }) {
     return sizedBox(this);
   }
@@ -11229,6 +11313,7 @@ class _$SizedBox implements SizedBox {
     TResult? Function(ActionChip value)? actionChip,
     TResult? Function(FilterChip value)? filterChip,
     TResult? Function(InputChip value)? inputChip,
+    TResult? Function(Switch value)? materialSwitch,
   }) {
     return sizedBox?.call(this);
   }
@@ -11271,6 +11356,7 @@ class _$SizedBox implements SizedBox {
     TResult Function(ActionChip value)? actionChip,
     TResult Function(FilterChip value)? filterChip,
     TResult Function(InputChip value)? inputChip,
+    TResult Function(Switch value)? materialSwitch,
     required TResult orElse(),
   }) {
     if (sizedBox != null) {
@@ -11523,6 +11609,7 @@ class _$Center implements Center {
     required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme) actionChip,
     required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) filterChip,
     required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) inputChip,
+    required TResult Function(Key? key, bool value, BoolSelectionCallback onChanged, Color? activeColor, Color? activeTrackColor, Color? inactiveThumbColor, Color? inactiveTrackColor, ImageProvider? activeThumbImage, ImageProvider? inactiveThumbImage, MaterialStateProperty? thumbColor, MaterialStateProperty? trackColor, MaterialStateProperty? trackOutlineColor, MaterialTapTargetSize? materialTapTargetSize, DragStartBehavior dragStartBehavior, MouseCursor? mouseCursor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, BoolSelectionCallback? onFocusChange, bool autofocus) materialSwitch,
   }) {
     return center(key, widthFactor, heightFactor, child);
   }
@@ -11631,6 +11718,7 @@ class _$Center implements Center {
     TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
     TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
     TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
+    TResult? Function(Key? key, bool value, BoolSelectionCallback onChanged, Color? activeColor, Color? activeTrackColor, Color? inactiveThumbColor, Color? inactiveTrackColor, ImageProvider? activeThumbImage, ImageProvider? inactiveThumbImage, MaterialStateProperty? thumbColor, MaterialStateProperty? trackColor, MaterialStateProperty? trackOutlineColor, MaterialTapTargetSize? materialTapTargetSize, DragStartBehavior dragStartBehavior, MouseCursor? mouseCursor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, BoolSelectionCallback? onFocusChange, bool autofocus)? materialSwitch,
   }) {
     return center?.call(key, widthFactor, heightFactor, child);
   }
@@ -11739,6 +11827,7 @@ class _$Center implements Center {
     TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
     TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
     TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
+    TResult Function(Key? key, bool value, BoolSelectionCallback onChanged, Color? activeColor, Color? activeTrackColor, Color? inactiveThumbColor, Color? inactiveTrackColor, ImageProvider? activeThumbImage, ImageProvider? inactiveThumbImage, MaterialStateProperty? thumbColor, MaterialStateProperty? trackColor, MaterialStateProperty? trackOutlineColor, MaterialTapTargetSize? materialTapTargetSize, DragStartBehavior dragStartBehavior, MouseCursor? mouseCursor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, BoolSelectionCallback? onFocusChange, bool autofocus)? materialSwitch,
     required TResult orElse(),
   }) {
     if (center != null) {
@@ -11788,6 +11877,7 @@ class _$Center implements Center {
     required TResult Function(ActionChip value) actionChip,
     required TResult Function(FilterChip value) filterChip,
     required TResult Function(InputChip value) inputChip,
+    required TResult Function(Switch value) materialSwitch,
   }) {
     return center(this);
   }
@@ -11830,6 +11920,7 @@ class _$Center implements Center {
     TResult? Function(ActionChip value)? actionChip,
     TResult? Function(FilterChip value)? filterChip,
     TResult? Function(InputChip value)? inputChip,
+    TResult? Function(Switch value)? materialSwitch,
   }) {
     return center?.call(this);
   }
@@ -11872,6 +11963,7 @@ class _$Center implements Center {
     TResult Function(ActionChip value)? actionChip,
     TResult Function(FilterChip value)? filterChip,
     TResult Function(InputChip value)? inputChip,
+    TResult Function(Switch value)? materialSwitch,
     required TResult orElse(),
   }) {
     if (center != null) {
@@ -12233,6 +12325,7 @@ class _$Icon implements Icon {
     required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme) actionChip,
     required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) filterChip,
     required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) inputChip,
+    required TResult Function(Key? key, bool value, BoolSelectionCallback onChanged, Color? activeColor, Color? activeTrackColor, Color? inactiveThumbColor, Color? inactiveTrackColor, ImageProvider? activeThumbImage, ImageProvider? inactiveThumbImage, MaterialStateProperty? thumbColor, MaterialStateProperty? trackColor, MaterialStateProperty? trackOutlineColor, MaterialTapTargetSize? materialTapTargetSize, DragStartBehavior dragStartBehavior, MouseCursor? mouseCursor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, BoolSelectionCallback? onFocusChange, bool autofocus) materialSwitch,
   }) {
     return icon(this.icon, key, size, fill, weight, grade, opticalSize, color,
         shadows, semanticLabel, textDirection);
@@ -12342,6 +12435,7 @@ class _$Icon implements Icon {
     TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
     TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
     TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
+    TResult? Function(Key? key, bool value, BoolSelectionCallback onChanged, Color? activeColor, Color? activeTrackColor, Color? inactiveThumbColor, Color? inactiveTrackColor, ImageProvider? activeThumbImage, ImageProvider? inactiveThumbImage, MaterialStateProperty? thumbColor, MaterialStateProperty? trackColor, MaterialStateProperty? trackOutlineColor, MaterialTapTargetSize? materialTapTargetSize, DragStartBehavior dragStartBehavior, MouseCursor? mouseCursor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, BoolSelectionCallback? onFocusChange, bool autofocus)? materialSwitch,
   }) {
     return icon?.call(this.icon, key, size, fill, weight, grade, opticalSize,
         color, shadows, semanticLabel, textDirection);
@@ -12451,6 +12545,7 @@ class _$Icon implements Icon {
     TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
     TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
     TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
+    TResult Function(Key? key, bool value, BoolSelectionCallback onChanged, Color? activeColor, Color? activeTrackColor, Color? inactiveThumbColor, Color? inactiveTrackColor, ImageProvider? activeThumbImage, ImageProvider? inactiveThumbImage, MaterialStateProperty? thumbColor, MaterialStateProperty? trackColor, MaterialStateProperty? trackOutlineColor, MaterialTapTargetSize? materialTapTargetSize, DragStartBehavior dragStartBehavior, MouseCursor? mouseCursor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, BoolSelectionCallback? onFocusChange, bool autofocus)? materialSwitch,
     required TResult orElse(),
   }) {
     if (icon != null) {
@@ -12501,6 +12596,7 @@ class _$Icon implements Icon {
     required TResult Function(ActionChip value) actionChip,
     required TResult Function(FilterChip value) filterChip,
     required TResult Function(InputChip value) inputChip,
+    required TResult Function(Switch value) materialSwitch,
   }) {
     return icon(this);
   }
@@ -12543,6 +12639,7 @@ class _$Icon implements Icon {
     TResult? Function(ActionChip value)? actionChip,
     TResult? Function(FilterChip value)? filterChip,
     TResult? Function(InputChip value)? inputChip,
+    TResult? Function(Switch value)? materialSwitch,
   }) {
     return icon?.call(this);
   }
@@ -12585,6 +12682,7 @@ class _$Icon implements Icon {
     TResult Function(ActionChip value)? actionChip,
     TResult Function(FilterChip value)? filterChip,
     TResult Function(InputChip value)? inputChip,
+    TResult Function(Switch value)? materialSwitch,
     required TResult orElse(),
   }) {
     if (icon != null) {
@@ -12906,6 +13004,7 @@ class _$Column implements Column {
     required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme) actionChip,
     required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) filterChip,
     required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) inputChip,
+    required TResult Function(Key? key, bool value, BoolSelectionCallback onChanged, Color? activeColor, Color? activeTrackColor, Color? inactiveThumbColor, Color? inactiveTrackColor, ImageProvider? activeThumbImage, ImageProvider? inactiveThumbImage, MaterialStateProperty? thumbColor, MaterialStateProperty? trackColor, MaterialStateProperty? trackOutlineColor, MaterialTapTargetSize? materialTapTargetSize, DragStartBehavior dragStartBehavior, MouseCursor? mouseCursor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, BoolSelectionCallback? onFocusChange, bool autofocus) materialSwitch,
   }) {
     return column(key, mainAxisAlignment, mainAxisSize, crossAxisAlignment,
         textDirection, verticalDirection, textBaseline, children);
@@ -13015,6 +13114,7 @@ class _$Column implements Column {
     TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
     TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
     TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
+    TResult? Function(Key? key, bool value, BoolSelectionCallback onChanged, Color? activeColor, Color? activeTrackColor, Color? inactiveThumbColor, Color? inactiveTrackColor, ImageProvider? activeThumbImage, ImageProvider? inactiveThumbImage, MaterialStateProperty? thumbColor, MaterialStateProperty? trackColor, MaterialStateProperty? trackOutlineColor, MaterialTapTargetSize? materialTapTargetSize, DragStartBehavior dragStartBehavior, MouseCursor? mouseCursor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, BoolSelectionCallback? onFocusChange, bool autofocus)? materialSwitch,
   }) {
     return column?.call(
         key,
@@ -13131,6 +13231,7 @@ class _$Column implements Column {
     TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
     TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
     TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
+    TResult Function(Key? key, bool value, BoolSelectionCallback onChanged, Color? activeColor, Color? activeTrackColor, Color? inactiveThumbColor, Color? inactiveTrackColor, ImageProvider? activeThumbImage, ImageProvider? inactiveThumbImage, MaterialStateProperty? thumbColor, MaterialStateProperty? trackColor, MaterialStateProperty? trackOutlineColor, MaterialTapTargetSize? materialTapTargetSize, DragStartBehavior dragStartBehavior, MouseCursor? mouseCursor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, BoolSelectionCallback? onFocusChange, bool autofocus)? materialSwitch,
     required TResult orElse(),
   }) {
     if (column != null) {
@@ -13181,6 +13282,7 @@ class _$Column implements Column {
     required TResult Function(ActionChip value) actionChip,
     required TResult Function(FilterChip value) filterChip,
     required TResult Function(InputChip value) inputChip,
+    required TResult Function(Switch value) materialSwitch,
   }) {
     return column(this);
   }
@@ -13223,6 +13325,7 @@ class _$Column implements Column {
     TResult? Function(ActionChip value)? actionChip,
     TResult? Function(FilterChip value)? filterChip,
     TResult? Function(InputChip value)? inputChip,
+    TResult? Function(Switch value)? materialSwitch,
   }) {
     return column?.call(this);
   }
@@ -13265,6 +13368,7 @@ class _$Column implements Column {
     TResult Function(ActionChip value)? actionChip,
     TResult Function(FilterChip value)? filterChip,
     TResult Function(InputChip value)? inputChip,
+    TResult Function(Switch value)? materialSwitch,
     required TResult orElse(),
   }) {
     if (column != null) {
@@ -13581,6 +13685,7 @@ class _$Row implements Row {
     required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme) actionChip,
     required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) filterChip,
     required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) inputChip,
+    required TResult Function(Key? key, bool value, BoolSelectionCallback onChanged, Color? activeColor, Color? activeTrackColor, Color? inactiveThumbColor, Color? inactiveTrackColor, ImageProvider? activeThumbImage, ImageProvider? inactiveThumbImage, MaterialStateProperty? thumbColor, MaterialStateProperty? trackColor, MaterialStateProperty? trackOutlineColor, MaterialTapTargetSize? materialTapTargetSize, DragStartBehavior dragStartBehavior, MouseCursor? mouseCursor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, BoolSelectionCallback? onFocusChange, bool autofocus) materialSwitch,
   }) {
     return row(key, mainAxisAlignment, mainAxisSize, crossAxisAlignment,
         textDirection, verticalDirection, textBaseline, children);
@@ -13690,6 +13795,7 @@ class _$Row implements Row {
     TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
     TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
     TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
+    TResult? Function(Key? key, bool value, BoolSelectionCallback onChanged, Color? activeColor, Color? activeTrackColor, Color? inactiveThumbColor, Color? inactiveTrackColor, ImageProvider? activeThumbImage, ImageProvider? inactiveThumbImage, MaterialStateProperty? thumbColor, MaterialStateProperty? trackColor, MaterialStateProperty? trackOutlineColor, MaterialTapTargetSize? materialTapTargetSize, DragStartBehavior dragStartBehavior, MouseCursor? mouseCursor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, BoolSelectionCallback? onFocusChange, bool autofocus)? materialSwitch,
   }) {
     return row?.call(key, mainAxisAlignment, mainAxisSize, crossAxisAlignment,
         textDirection, verticalDirection, textBaseline, children);
@@ -13799,6 +13905,7 @@ class _$Row implements Row {
     TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
     TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
     TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
+    TResult Function(Key? key, bool value, BoolSelectionCallback onChanged, Color? activeColor, Color? activeTrackColor, Color? inactiveThumbColor, Color? inactiveTrackColor, ImageProvider? activeThumbImage, ImageProvider? inactiveThumbImage, MaterialStateProperty? thumbColor, MaterialStateProperty? trackColor, MaterialStateProperty? trackOutlineColor, MaterialTapTargetSize? materialTapTargetSize, DragStartBehavior dragStartBehavior, MouseCursor? mouseCursor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, BoolSelectionCallback? onFocusChange, bool autofocus)? materialSwitch,
     required TResult orElse(),
   }) {
     if (row != null) {
@@ -13849,6 +13956,7 @@ class _$Row implements Row {
     required TResult Function(ActionChip value) actionChip,
     required TResult Function(FilterChip value) filterChip,
     required TResult Function(InputChip value) inputChip,
+    required TResult Function(Switch value) materialSwitch,
   }) {
     return row(this);
   }
@@ -13891,6 +13999,7 @@ class _$Row implements Row {
     TResult? Function(ActionChip value)? actionChip,
     TResult? Function(FilterChip value)? filterChip,
     TResult? Function(InputChip value)? inputChip,
+    TResult? Function(Switch value)? materialSwitch,
   }) {
     return row?.call(this);
   }
@@ -13933,6 +14042,7 @@ class _$Row implements Row {
     TResult Function(ActionChip value)? actionChip,
     TResult Function(FilterChip value)? filterChip,
     TResult Function(InputChip value)? inputChip,
+    TResult Function(Switch value)? materialSwitch,
     required TResult orElse(),
   }) {
     if (row != null) {
@@ -14251,6 +14361,7 @@ class _$CircularProgressIndicator implements CircularProgressIndicator {
     required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme) actionChip,
     required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) filterChip,
     required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) inputChip,
+    required TResult Function(Key? key, bool value, BoolSelectionCallback onChanged, Color? activeColor, Color? activeTrackColor, Color? inactiveThumbColor, Color? inactiveTrackColor, ImageProvider? activeThumbImage, ImageProvider? inactiveThumbImage, MaterialStateProperty? thumbColor, MaterialStateProperty? trackColor, MaterialStateProperty? trackOutlineColor, MaterialTapTargetSize? materialTapTargetSize, DragStartBehavior dragStartBehavior, MouseCursor? mouseCursor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, BoolSelectionCallback? onFocusChange, bool autofocus) materialSwitch,
   }) {
     return circularProgressIndicator(key, value, backgroundColor, color,
         strokeWidth, semanticsLabel, semanticsValue);
@@ -14360,6 +14471,7 @@ class _$CircularProgressIndicator implements CircularProgressIndicator {
     TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
     TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
     TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
+    TResult? Function(Key? key, bool value, BoolSelectionCallback onChanged, Color? activeColor, Color? activeTrackColor, Color? inactiveThumbColor, Color? inactiveTrackColor, ImageProvider? activeThumbImage, ImageProvider? inactiveThumbImage, MaterialStateProperty? thumbColor, MaterialStateProperty? trackColor, MaterialStateProperty? trackOutlineColor, MaterialTapTargetSize? materialTapTargetSize, DragStartBehavior dragStartBehavior, MouseCursor? mouseCursor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, BoolSelectionCallback? onFocusChange, bool autofocus)? materialSwitch,
   }) {
     return circularProgressIndicator?.call(key, value, backgroundColor, color,
         strokeWidth, semanticsLabel, semanticsValue);
@@ -14469,6 +14581,7 @@ class _$CircularProgressIndicator implements CircularProgressIndicator {
     TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
     TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
     TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
+    TResult Function(Key? key, bool value, BoolSelectionCallback onChanged, Color? activeColor, Color? activeTrackColor, Color? inactiveThumbColor, Color? inactiveTrackColor, ImageProvider? activeThumbImage, ImageProvider? inactiveThumbImage, MaterialStateProperty? thumbColor, MaterialStateProperty? trackColor, MaterialStateProperty? trackOutlineColor, MaterialTapTargetSize? materialTapTargetSize, DragStartBehavior dragStartBehavior, MouseCursor? mouseCursor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, BoolSelectionCallback? onFocusChange, bool autofocus)? materialSwitch,
     required TResult orElse(),
   }) {
     if (circularProgressIndicator != null) {
@@ -14519,6 +14632,7 @@ class _$CircularProgressIndicator implements CircularProgressIndicator {
     required TResult Function(ActionChip value) actionChip,
     required TResult Function(FilterChip value) filterChip,
     required TResult Function(InputChip value) inputChip,
+    required TResult Function(Switch value) materialSwitch,
   }) {
     return circularProgressIndicator(this);
   }
@@ -14561,6 +14675,7 @@ class _$CircularProgressIndicator implements CircularProgressIndicator {
     TResult? Function(ActionChip value)? actionChip,
     TResult? Function(FilterChip value)? filterChip,
     TResult? Function(InputChip value)? inputChip,
+    TResult? Function(Switch value)? materialSwitch,
   }) {
     return circularProgressIndicator?.call(this);
   }
@@ -14603,6 +14718,7 @@ class _$CircularProgressIndicator implements CircularProgressIndicator {
     TResult Function(ActionChip value)? actionChip,
     TResult Function(FilterChip value)? filterChip,
     TResult Function(InputChip value)? inputChip,
+    TResult Function(Switch value)? materialSwitch,
     required TResult orElse(),
   }) {
     if (circularProgressIndicator != null) {
@@ -14919,6 +15035,7 @@ class _$LinearProgressIndicator implements LinearProgressIndicator {
     required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme) actionChip,
     required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) filterChip,
     required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) inputChip,
+    required TResult Function(Key? key, bool value, BoolSelectionCallback onChanged, Color? activeColor, Color? activeTrackColor, Color? inactiveThumbColor, Color? inactiveTrackColor, ImageProvider? activeThumbImage, ImageProvider? inactiveThumbImage, MaterialStateProperty? thumbColor, MaterialStateProperty? trackColor, MaterialStateProperty? trackOutlineColor, MaterialTapTargetSize? materialTapTargetSize, DragStartBehavior dragStartBehavior, MouseCursor? mouseCursor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, BoolSelectionCallback? onFocusChange, bool autofocus) materialSwitch,
   }) {
     return linearProgressIndicator(key, value, backgroundColor, color,
         minHeight, semanticsLabel, semanticsValue);
@@ -15028,6 +15145,7 @@ class _$LinearProgressIndicator implements LinearProgressIndicator {
     TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
     TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
     TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
+    TResult? Function(Key? key, bool value, BoolSelectionCallback onChanged, Color? activeColor, Color? activeTrackColor, Color? inactiveThumbColor, Color? inactiveTrackColor, ImageProvider? activeThumbImage, ImageProvider? inactiveThumbImage, MaterialStateProperty? thumbColor, MaterialStateProperty? trackColor, MaterialStateProperty? trackOutlineColor, MaterialTapTargetSize? materialTapTargetSize, DragStartBehavior dragStartBehavior, MouseCursor? mouseCursor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, BoolSelectionCallback? onFocusChange, bool autofocus)? materialSwitch,
   }) {
     return linearProgressIndicator?.call(key, value, backgroundColor, color,
         minHeight, semanticsLabel, semanticsValue);
@@ -15137,6 +15255,7 @@ class _$LinearProgressIndicator implements LinearProgressIndicator {
     TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
     TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
     TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
+    TResult Function(Key? key, bool value, BoolSelectionCallback onChanged, Color? activeColor, Color? activeTrackColor, Color? inactiveThumbColor, Color? inactiveTrackColor, ImageProvider? activeThumbImage, ImageProvider? inactiveThumbImage, MaterialStateProperty? thumbColor, MaterialStateProperty? trackColor, MaterialStateProperty? trackOutlineColor, MaterialTapTargetSize? materialTapTargetSize, DragStartBehavior dragStartBehavior, MouseCursor? mouseCursor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, BoolSelectionCallback? onFocusChange, bool autofocus)? materialSwitch,
     required TResult orElse(),
   }) {
     if (linearProgressIndicator != null) {
@@ -15187,6 +15306,7 @@ class _$LinearProgressIndicator implements LinearProgressIndicator {
     required TResult Function(ActionChip value) actionChip,
     required TResult Function(FilterChip value) filterChip,
     required TResult Function(InputChip value) inputChip,
+    required TResult Function(Switch value) materialSwitch,
   }) {
     return linearProgressIndicator(this);
   }
@@ -15229,6 +15349,7 @@ class _$LinearProgressIndicator implements LinearProgressIndicator {
     TResult? Function(ActionChip value)? actionChip,
     TResult? Function(FilterChip value)? filterChip,
     TResult? Function(InputChip value)? inputChip,
+    TResult? Function(Switch value)? materialSwitch,
   }) {
     return linearProgressIndicator?.call(this);
   }
@@ -15271,6 +15392,7 @@ class _$LinearProgressIndicator implements LinearProgressIndicator {
     TResult Function(ActionChip value)? actionChip,
     TResult Function(FilterChip value)? filterChip,
     TResult Function(InputChip value)? inputChip,
+    TResult Function(Switch value)? materialSwitch,
     required TResult orElse(),
   }) {
     if (linearProgressIndicator != null) {
@@ -15558,6 +15680,7 @@ class _$Divider implements Divider {
     required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme) actionChip,
     required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) filterChip,
     required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) inputChip,
+    required TResult Function(Key? key, bool value, BoolSelectionCallback onChanged, Color? activeColor, Color? activeTrackColor, Color? inactiveThumbColor, Color? inactiveTrackColor, ImageProvider? activeThumbImage, ImageProvider? inactiveThumbImage, MaterialStateProperty? thumbColor, MaterialStateProperty? trackColor, MaterialStateProperty? trackOutlineColor, MaterialTapTargetSize? materialTapTargetSize, DragStartBehavior dragStartBehavior, MouseCursor? mouseCursor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, BoolSelectionCallback? onFocusChange, bool autofocus) materialSwitch,
   }) {
     return divider(key, height, thickness, indent, endIndent, color);
   }
@@ -15666,6 +15789,7 @@ class _$Divider implements Divider {
     TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
     TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
     TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
+    TResult? Function(Key? key, bool value, BoolSelectionCallback onChanged, Color? activeColor, Color? activeTrackColor, Color? inactiveThumbColor, Color? inactiveTrackColor, ImageProvider? activeThumbImage, ImageProvider? inactiveThumbImage, MaterialStateProperty? thumbColor, MaterialStateProperty? trackColor, MaterialStateProperty? trackOutlineColor, MaterialTapTargetSize? materialTapTargetSize, DragStartBehavior dragStartBehavior, MouseCursor? mouseCursor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, BoolSelectionCallback? onFocusChange, bool autofocus)? materialSwitch,
   }) {
     return divider?.call(key, height, thickness, indent, endIndent, color);
   }
@@ -15774,6 +15898,7 @@ class _$Divider implements Divider {
     TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
     TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
     TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
+    TResult Function(Key? key, bool value, BoolSelectionCallback onChanged, Color? activeColor, Color? activeTrackColor, Color? inactiveThumbColor, Color? inactiveTrackColor, ImageProvider? activeThumbImage, ImageProvider? inactiveThumbImage, MaterialStateProperty? thumbColor, MaterialStateProperty? trackColor, MaterialStateProperty? trackOutlineColor, MaterialTapTargetSize? materialTapTargetSize, DragStartBehavior dragStartBehavior, MouseCursor? mouseCursor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, BoolSelectionCallback? onFocusChange, bool autofocus)? materialSwitch,
     required TResult orElse(),
   }) {
     if (divider != null) {
@@ -15823,6 +15948,7 @@ class _$Divider implements Divider {
     required TResult Function(ActionChip value) actionChip,
     required TResult Function(FilterChip value) filterChip,
     required TResult Function(InputChip value) inputChip,
+    required TResult Function(Switch value) materialSwitch,
   }) {
     return divider(this);
   }
@@ -15865,6 +15991,7 @@ class _$Divider implements Divider {
     TResult? Function(ActionChip value)? actionChip,
     TResult? Function(FilterChip value)? filterChip,
     TResult? Function(InputChip value)? inputChip,
+    TResult? Function(Switch value)? materialSwitch,
   }) {
     return divider?.call(this);
   }
@@ -15907,6 +16034,7 @@ class _$Divider implements Divider {
     TResult Function(ActionChip value)? actionChip,
     TResult Function(FilterChip value)? filterChip,
     TResult Function(InputChip value)? inputChip,
+    TResult Function(Switch value)? materialSwitch,
     required TResult orElse(),
   }) {
     if (divider != null) {
@@ -16484,6 +16612,7 @@ class _$NavigationRail implements NavigationRail {
     required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme) actionChip,
     required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) filterChip,
     required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) inputChip,
+    required TResult Function(Key? key, bool value, BoolSelectionCallback onChanged, Color? activeColor, Color? activeTrackColor, Color? inactiveThumbColor, Color? inactiveTrackColor, ImageProvider? activeThumbImage, ImageProvider? inactiveThumbImage, MaterialStateProperty? thumbColor, MaterialStateProperty? trackColor, MaterialStateProperty? trackOutlineColor, MaterialTapTargetSize? materialTapTargetSize, DragStartBehavior dragStartBehavior, MouseCursor? mouseCursor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, BoolSelectionCallback? onFocusChange, bool autofocus) materialSwitch,
   }) {
     return navigationRail(
         key,
@@ -16612,6 +16741,7 @@ class _$NavigationRail implements NavigationRail {
     TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
     TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
     TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
+    TResult? Function(Key? key, bool value, BoolSelectionCallback onChanged, Color? activeColor, Color? activeTrackColor, Color? inactiveThumbColor, Color? inactiveTrackColor, ImageProvider? activeThumbImage, ImageProvider? inactiveThumbImage, MaterialStateProperty? thumbColor, MaterialStateProperty? trackColor, MaterialStateProperty? trackOutlineColor, MaterialTapTargetSize? materialTapTargetSize, DragStartBehavior dragStartBehavior, MouseCursor? mouseCursor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, BoolSelectionCallback? onFocusChange, bool autofocus)? materialSwitch,
   }) {
     return navigationRail?.call(
         key,
@@ -16740,6 +16870,7 @@ class _$NavigationRail implements NavigationRail {
     TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
     TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
     TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
+    TResult Function(Key? key, bool value, BoolSelectionCallback onChanged, Color? activeColor, Color? activeTrackColor, Color? inactiveThumbColor, Color? inactiveTrackColor, ImageProvider? activeThumbImage, ImageProvider? inactiveThumbImage, MaterialStateProperty? thumbColor, MaterialStateProperty? trackColor, MaterialStateProperty? trackOutlineColor, MaterialTapTargetSize? materialTapTargetSize, DragStartBehavior dragStartBehavior, MouseCursor? mouseCursor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, BoolSelectionCallback? onFocusChange, bool autofocus)? materialSwitch,
     required TResult orElse(),
   }) {
     if (navigationRail != null) {
@@ -16809,6 +16940,7 @@ class _$NavigationRail implements NavigationRail {
     required TResult Function(ActionChip value) actionChip,
     required TResult Function(FilterChip value) filterChip,
     required TResult Function(InputChip value) inputChip,
+    required TResult Function(Switch value) materialSwitch,
   }) {
     return navigationRail(this);
   }
@@ -16851,6 +16983,7 @@ class _$NavigationRail implements NavigationRail {
     TResult? Function(ActionChip value)? actionChip,
     TResult? Function(FilterChip value)? filterChip,
     TResult? Function(InputChip value)? inputChip,
+    TResult? Function(Switch value)? materialSwitch,
   }) {
     return navigationRail?.call(this);
   }
@@ -16893,6 +17026,7 @@ class _$NavigationRail implements NavigationRail {
     TResult Function(ActionChip value)? actionChip,
     TResult Function(FilterChip value)? filterChip,
     TResult Function(InputChip value)? inputChip,
+    TResult Function(Switch value)? materialSwitch,
     required TResult orElse(),
   }) {
     if (navigationRail != null) {
@@ -17360,6 +17494,7 @@ class _$NavigationBar implements NavigationBar {
     required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme) actionChip,
     required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) filterChip,
     required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) inputChip,
+    required TResult Function(Key? key, bool value, BoolSelectionCallback onChanged, Color? activeColor, Color? activeTrackColor, Color? inactiveThumbColor, Color? inactiveTrackColor, ImageProvider? activeThumbImage, ImageProvider? inactiveThumbImage, MaterialStateProperty? thumbColor, MaterialStateProperty? trackColor, MaterialStateProperty? trackOutlineColor, MaterialTapTargetSize? materialTapTargetSize, DragStartBehavior dragStartBehavior, MouseCursor? mouseCursor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, BoolSelectionCallback? onFocusChange, bool autofocus) materialSwitch,
   }) {
     return navigationBar(
         key,
@@ -17481,6 +17616,7 @@ class _$NavigationBar implements NavigationBar {
     TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
     TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
     TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
+    TResult? Function(Key? key, bool value, BoolSelectionCallback onChanged, Color? activeColor, Color? activeTrackColor, Color? inactiveThumbColor, Color? inactiveTrackColor, ImageProvider? activeThumbImage, ImageProvider? inactiveThumbImage, MaterialStateProperty? thumbColor, MaterialStateProperty? trackColor, MaterialStateProperty? trackOutlineColor, MaterialTapTargetSize? materialTapTargetSize, DragStartBehavior dragStartBehavior, MouseCursor? mouseCursor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, BoolSelectionCallback? onFocusChange, bool autofocus)? materialSwitch,
   }) {
     return navigationBar?.call(
         key,
@@ -17602,6 +17738,7 @@ class _$NavigationBar implements NavigationBar {
     TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
     TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
     TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
+    TResult Function(Key? key, bool value, BoolSelectionCallback onChanged, Color? activeColor, Color? activeTrackColor, Color? inactiveThumbColor, Color? inactiveTrackColor, ImageProvider? activeThumbImage, ImageProvider? inactiveThumbImage, MaterialStateProperty? thumbColor, MaterialStateProperty? trackColor, MaterialStateProperty? trackOutlineColor, MaterialTapTargetSize? materialTapTargetSize, DragStartBehavior dragStartBehavior, MouseCursor? mouseCursor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, BoolSelectionCallback? onFocusChange, bool autofocus)? materialSwitch,
     required TResult orElse(),
   }) {
     if (navigationBar != null) {
@@ -17664,6 +17801,7 @@ class _$NavigationBar implements NavigationBar {
     required TResult Function(ActionChip value) actionChip,
     required TResult Function(FilterChip value) filterChip,
     required TResult Function(InputChip value) inputChip,
+    required TResult Function(Switch value) materialSwitch,
   }) {
     return navigationBar(this);
   }
@@ -17706,6 +17844,7 @@ class _$NavigationBar implements NavigationBar {
     TResult? Function(ActionChip value)? actionChip,
     TResult? Function(FilterChip value)? filterChip,
     TResult? Function(InputChip value)? inputChip,
+    TResult? Function(Switch value)? materialSwitch,
   }) {
     return navigationBar?.call(this);
   }
@@ -17748,6 +17887,7 @@ class _$NavigationBar implements NavigationBar {
     TResult Function(ActionChip value)? actionChip,
     TResult Function(FilterChip value)? filterChip,
     TResult Function(InputChip value)? inputChip,
+    TResult Function(Switch value)? materialSwitch,
     required TResult orElse(),
   }) {
     if (navigationBar != null) {
@@ -18039,6 +18179,7 @@ class _$DefaultTabController implements DefaultTabController {
     required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme) actionChip,
     required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) filterChip,
     required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) inputChip,
+    required TResult Function(Key? key, bool value, BoolSelectionCallback onChanged, Color? activeColor, Color? activeTrackColor, Color? inactiveThumbColor, Color? inactiveTrackColor, ImageProvider? activeThumbImage, ImageProvider? inactiveThumbImage, MaterialStateProperty? thumbColor, MaterialStateProperty? trackColor, MaterialStateProperty? trackOutlineColor, MaterialTapTargetSize? materialTapTargetSize, DragStartBehavior dragStartBehavior, MouseCursor? mouseCursor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, BoolSelectionCallback? onFocusChange, bool autofocus) materialSwitch,
   }) {
     return defaultTabController(
         key, length, initialIndex, child, animationDuration);
@@ -18148,6 +18289,7 @@ class _$DefaultTabController implements DefaultTabController {
     TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
     TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
     TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
+    TResult? Function(Key? key, bool value, BoolSelectionCallback onChanged, Color? activeColor, Color? activeTrackColor, Color? inactiveThumbColor, Color? inactiveTrackColor, ImageProvider? activeThumbImage, ImageProvider? inactiveThumbImage, MaterialStateProperty? thumbColor, MaterialStateProperty? trackColor, MaterialStateProperty? trackOutlineColor, MaterialTapTargetSize? materialTapTargetSize, DragStartBehavior dragStartBehavior, MouseCursor? mouseCursor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, BoolSelectionCallback? onFocusChange, bool autofocus)? materialSwitch,
   }) {
     return defaultTabController?.call(
         key, length, initialIndex, child, animationDuration);
@@ -18257,6 +18399,7 @@ class _$DefaultTabController implements DefaultTabController {
     TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
     TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
     TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
+    TResult Function(Key? key, bool value, BoolSelectionCallback onChanged, Color? activeColor, Color? activeTrackColor, Color? inactiveThumbColor, Color? inactiveTrackColor, ImageProvider? activeThumbImage, ImageProvider? inactiveThumbImage, MaterialStateProperty? thumbColor, MaterialStateProperty? trackColor, MaterialStateProperty? trackOutlineColor, MaterialTapTargetSize? materialTapTargetSize, DragStartBehavior dragStartBehavior, MouseCursor? mouseCursor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, BoolSelectionCallback? onFocusChange, bool autofocus)? materialSwitch,
     required TResult orElse(),
   }) {
     if (defaultTabController != null) {
@@ -18307,6 +18450,7 @@ class _$DefaultTabController implements DefaultTabController {
     required TResult Function(ActionChip value) actionChip,
     required TResult Function(FilterChip value) filterChip,
     required TResult Function(InputChip value) inputChip,
+    required TResult Function(Switch value) materialSwitch,
   }) {
     return defaultTabController(this);
   }
@@ -18349,6 +18493,7 @@ class _$DefaultTabController implements DefaultTabController {
     TResult? Function(ActionChip value)? actionChip,
     TResult? Function(FilterChip value)? filterChip,
     TResult? Function(InputChip value)? inputChip,
+    TResult? Function(Switch value)? materialSwitch,
   }) {
     return defaultTabController?.call(this);
   }
@@ -18391,6 +18536,7 @@ class _$DefaultTabController implements DefaultTabController {
     TResult Function(ActionChip value)? actionChip,
     TResult Function(FilterChip value)? filterChip,
     TResult Function(InputChip value)? inputChip,
+    TResult Function(Switch value)? materialSwitch,
     required TResult orElse(),
   }) {
     if (defaultTabController != null) {
@@ -18694,6 +18840,7 @@ class _$Tab implements Tab {
     required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme) actionChip,
     required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) filterChip,
     required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) inputChip,
+    required TResult Function(Key? key, bool value, BoolSelectionCallback onChanged, Color? activeColor, Color? activeTrackColor, Color? inactiveThumbColor, Color? inactiveTrackColor, ImageProvider? activeThumbImage, ImageProvider? inactiveThumbImage, MaterialStateProperty? thumbColor, MaterialStateProperty? trackColor, MaterialStateProperty? trackOutlineColor, MaterialTapTargetSize? materialTapTargetSize, DragStartBehavior dragStartBehavior, MouseCursor? mouseCursor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, BoolSelectionCallback? onFocusChange, bool autofocus) materialSwitch,
   }) {
     return tab(key, this.text, this.icon, iconMargin, height, child);
   }
@@ -18802,6 +18949,7 @@ class _$Tab implements Tab {
     TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
     TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
     TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
+    TResult? Function(Key? key, bool value, BoolSelectionCallback onChanged, Color? activeColor, Color? activeTrackColor, Color? inactiveThumbColor, Color? inactiveTrackColor, ImageProvider? activeThumbImage, ImageProvider? inactiveThumbImage, MaterialStateProperty? thumbColor, MaterialStateProperty? trackColor, MaterialStateProperty? trackOutlineColor, MaterialTapTargetSize? materialTapTargetSize, DragStartBehavior dragStartBehavior, MouseCursor? mouseCursor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, BoolSelectionCallback? onFocusChange, bool autofocus)? materialSwitch,
   }) {
     return tab?.call(key, this.text, this.icon, iconMargin, height, child);
   }
@@ -18910,6 +19058,7 @@ class _$Tab implements Tab {
     TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
     TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
     TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
+    TResult Function(Key? key, bool value, BoolSelectionCallback onChanged, Color? activeColor, Color? activeTrackColor, Color? inactiveThumbColor, Color? inactiveTrackColor, ImageProvider? activeThumbImage, ImageProvider? inactiveThumbImage, MaterialStateProperty? thumbColor, MaterialStateProperty? trackColor, MaterialStateProperty? trackOutlineColor, MaterialTapTargetSize? materialTapTargetSize, DragStartBehavior dragStartBehavior, MouseCursor? mouseCursor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, BoolSelectionCallback? onFocusChange, bool autofocus)? materialSwitch,
     required TResult orElse(),
   }) {
     if (tab != null) {
@@ -18959,6 +19108,7 @@ class _$Tab implements Tab {
     required TResult Function(ActionChip value) actionChip,
     required TResult Function(FilterChip value) filterChip,
     required TResult Function(InputChip value) inputChip,
+    required TResult Function(Switch value) materialSwitch,
   }) {
     return tab(this);
   }
@@ -19001,6 +19151,7 @@ class _$Tab implements Tab {
     TResult? Function(ActionChip value)? actionChip,
     TResult? Function(FilterChip value)? filterChip,
     TResult? Function(InputChip value)? inputChip,
+    TResult? Function(Switch value)? materialSwitch,
   }) {
     return tab?.call(this);
   }
@@ -19043,6 +19194,7 @@ class _$Tab implements Tab {
     TResult Function(ActionChip value)? actionChip,
     TResult Function(FilterChip value)? filterChip,
     TResult Function(InputChip value)? inputChip,
+    TResult Function(Switch value)? materialSwitch,
     required TResult orElse(),
   }) {
     if (tab != null) {
@@ -19345,6 +19497,7 @@ class _$TabBarView implements TabBarView {
     required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme) actionChip,
     required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) filterChip,
     required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) inputChip,
+    required TResult Function(Key? key, bool value, BoolSelectionCallback onChanged, Color? activeColor, Color? activeTrackColor, Color? inactiveThumbColor, Color? inactiveTrackColor, ImageProvider? activeThumbImage, ImageProvider? inactiveThumbImage, MaterialStateProperty? thumbColor, MaterialStateProperty? trackColor, MaterialStateProperty? trackOutlineColor, MaterialTapTargetSize? materialTapTargetSize, DragStartBehavior dragStartBehavior, MouseCursor? mouseCursor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, BoolSelectionCallback? onFocusChange, bool autofocus) materialSwitch,
   }) {
     return tabBarView(key, children, physics, dragStartBehavior,
         viewportFraction, clipBehavior);
@@ -19454,6 +19607,7 @@ class _$TabBarView implements TabBarView {
     TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
     TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
     TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
+    TResult? Function(Key? key, bool value, BoolSelectionCallback onChanged, Color? activeColor, Color? activeTrackColor, Color? inactiveThumbColor, Color? inactiveTrackColor, ImageProvider? activeThumbImage, ImageProvider? inactiveThumbImage, MaterialStateProperty? thumbColor, MaterialStateProperty? trackColor, MaterialStateProperty? trackOutlineColor, MaterialTapTargetSize? materialTapTargetSize, DragStartBehavior dragStartBehavior, MouseCursor? mouseCursor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, BoolSelectionCallback? onFocusChange, bool autofocus)? materialSwitch,
   }) {
     return tabBarView?.call(key, children, physics, dragStartBehavior,
         viewportFraction, clipBehavior);
@@ -19563,6 +19717,7 @@ class _$TabBarView implements TabBarView {
     TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
     TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
     TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
+    TResult Function(Key? key, bool value, BoolSelectionCallback onChanged, Color? activeColor, Color? activeTrackColor, Color? inactiveThumbColor, Color? inactiveTrackColor, ImageProvider? activeThumbImage, ImageProvider? inactiveThumbImage, MaterialStateProperty? thumbColor, MaterialStateProperty? trackColor, MaterialStateProperty? trackOutlineColor, MaterialTapTargetSize? materialTapTargetSize, DragStartBehavior dragStartBehavior, MouseCursor? mouseCursor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, BoolSelectionCallback? onFocusChange, bool autofocus)? materialSwitch,
     required TResult orElse(),
   }) {
     if (tabBarView != null) {
@@ -19613,6 +19768,7 @@ class _$TabBarView implements TabBarView {
     required TResult Function(ActionChip value) actionChip,
     required TResult Function(FilterChip value) filterChip,
     required TResult Function(InputChip value) inputChip,
+    required TResult Function(Switch value) materialSwitch,
   }) {
     return tabBarView(this);
   }
@@ -19655,6 +19811,7 @@ class _$TabBarView implements TabBarView {
     TResult? Function(ActionChip value)? actionChip,
     TResult? Function(FilterChip value)? filterChip,
     TResult? Function(InputChip value)? inputChip,
+    TResult? Function(Switch value)? materialSwitch,
   }) {
     return tabBarView?.call(this);
   }
@@ -19697,6 +19854,7 @@ class _$TabBarView implements TabBarView {
     TResult Function(ActionChip value)? actionChip,
     TResult Function(FilterChip value)? filterChip,
     TResult Function(InputChip value)? inputChip,
+    TResult Function(Switch value)? materialSwitch,
     required TResult orElse(),
   }) {
     if (tabBarView != null) {
@@ -20112,6 +20270,7 @@ class _$CustomScrollView implements CustomScrollView {
     required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme) actionChip,
     required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) filterChip,
     required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) inputChip,
+    required TResult Function(Key? key, bool value, BoolSelectionCallback onChanged, Color? activeColor, Color? activeTrackColor, Color? inactiveThumbColor, Color? inactiveTrackColor, ImageProvider? activeThumbImage, ImageProvider? inactiveThumbImage, MaterialStateProperty? thumbColor, MaterialStateProperty? trackColor, MaterialStateProperty? trackOutlineColor, MaterialTapTargetSize? materialTapTargetSize, DragStartBehavior dragStartBehavior, MouseCursor? mouseCursor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, BoolSelectionCallback? onFocusChange, bool autofocus) materialSwitch,
   }) {
     return customScrollView(
         key,
@@ -20234,6 +20393,7 @@ class _$CustomScrollView implements CustomScrollView {
     TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
     TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
     TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
+    TResult? Function(Key? key, bool value, BoolSelectionCallback onChanged, Color? activeColor, Color? activeTrackColor, Color? inactiveThumbColor, Color? inactiveTrackColor, ImageProvider? activeThumbImage, ImageProvider? inactiveThumbImage, MaterialStateProperty? thumbColor, MaterialStateProperty? trackColor, MaterialStateProperty? trackOutlineColor, MaterialTapTargetSize? materialTapTargetSize, DragStartBehavior dragStartBehavior, MouseCursor? mouseCursor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, BoolSelectionCallback? onFocusChange, bool autofocus)? materialSwitch,
   }) {
     return customScrollView?.call(
         key,
@@ -20356,6 +20516,7 @@ class _$CustomScrollView implements CustomScrollView {
     TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
     TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
     TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
+    TResult Function(Key? key, bool value, BoolSelectionCallback onChanged, Color? activeColor, Color? activeTrackColor, Color? inactiveThumbColor, Color? inactiveTrackColor, ImageProvider? activeThumbImage, ImageProvider? inactiveThumbImage, MaterialStateProperty? thumbColor, MaterialStateProperty? trackColor, MaterialStateProperty? trackOutlineColor, MaterialTapTargetSize? materialTapTargetSize, DragStartBehavior dragStartBehavior, MouseCursor? mouseCursor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, BoolSelectionCallback? onFocusChange, bool autofocus)? materialSwitch,
     required TResult orElse(),
   }) {
     if (customScrollView != null) {
@@ -20419,6 +20580,7 @@ class _$CustomScrollView implements CustomScrollView {
     required TResult Function(ActionChip value) actionChip,
     required TResult Function(FilterChip value) filterChip,
     required TResult Function(InputChip value) inputChip,
+    required TResult Function(Switch value) materialSwitch,
   }) {
     return customScrollView(this);
   }
@@ -20461,6 +20623,7 @@ class _$CustomScrollView implements CustomScrollView {
     TResult? Function(ActionChip value)? actionChip,
     TResult? Function(FilterChip value)? filterChip,
     TResult? Function(InputChip value)? inputChip,
+    TResult? Function(Switch value)? materialSwitch,
   }) {
     return customScrollView?.call(this);
   }
@@ -20503,6 +20666,7 @@ class _$CustomScrollView implements CustomScrollView {
     TResult Function(ActionChip value)? actionChip,
     TResult Function(FilterChip value)? filterChip,
     TResult Function(InputChip value)? inputChip,
+    TResult Function(Switch value)? materialSwitch,
     required TResult orElse(),
   }) {
     if (customScrollView != null) {
@@ -21073,6 +21237,7 @@ class _$Checkbox implements Checkbox {
     required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme) actionChip,
     required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) filterChip,
     required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) inputChip,
+    required TResult Function(Key? key, bool value, BoolSelectionCallback onChanged, Color? activeColor, Color? activeTrackColor, Color? inactiveThumbColor, Color? inactiveTrackColor, ImageProvider? activeThumbImage, ImageProvider? inactiveThumbImage, MaterialStateProperty? thumbColor, MaterialStateProperty? trackColor, MaterialStateProperty? trackOutlineColor, MaterialTapTargetSize? materialTapTargetSize, DragStartBehavior dragStartBehavior, MouseCursor? mouseCursor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, BoolSelectionCallback? onFocusChange, bool autofocus) materialSwitch,
   }) {
     return checkbox(
         key,
@@ -21199,6 +21364,7 @@ class _$Checkbox implements Checkbox {
     TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
     TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
     TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
+    TResult? Function(Key? key, bool value, BoolSelectionCallback onChanged, Color? activeColor, Color? activeTrackColor, Color? inactiveThumbColor, Color? inactiveTrackColor, ImageProvider? activeThumbImage, ImageProvider? inactiveThumbImage, MaterialStateProperty? thumbColor, MaterialStateProperty? trackColor, MaterialStateProperty? trackOutlineColor, MaterialTapTargetSize? materialTapTargetSize, DragStartBehavior dragStartBehavior, MouseCursor? mouseCursor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, BoolSelectionCallback? onFocusChange, bool autofocus)? materialSwitch,
   }) {
     return checkbox?.call(
         key,
@@ -21325,6 +21491,7 @@ class _$Checkbox implements Checkbox {
     TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
     TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
     TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
+    TResult Function(Key? key, bool value, BoolSelectionCallback onChanged, Color? activeColor, Color? activeTrackColor, Color? inactiveThumbColor, Color? inactiveTrackColor, ImageProvider? activeThumbImage, ImageProvider? inactiveThumbImage, MaterialStateProperty? thumbColor, MaterialStateProperty? trackColor, MaterialStateProperty? trackOutlineColor, MaterialTapTargetSize? materialTapTargetSize, DragStartBehavior dragStartBehavior, MouseCursor? mouseCursor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, BoolSelectionCallback? onFocusChange, bool autofocus)? materialSwitch,
     required TResult orElse(),
   }) {
     if (checkbox != null) {
@@ -21392,6 +21559,7 @@ class _$Checkbox implements Checkbox {
     required TResult Function(ActionChip value) actionChip,
     required TResult Function(FilterChip value) filterChip,
     required TResult Function(InputChip value) inputChip,
+    required TResult Function(Switch value) materialSwitch,
   }) {
     return checkbox(this);
   }
@@ -21434,6 +21602,7 @@ class _$Checkbox implements Checkbox {
     TResult? Function(ActionChip value)? actionChip,
     TResult? Function(FilterChip value)? filterChip,
     TResult? Function(InputChip value)? inputChip,
+    TResult? Function(Switch value)? materialSwitch,
   }) {
     return checkbox?.call(this);
   }
@@ -21476,6 +21645,7 @@ class _$Checkbox implements Checkbox {
     TResult Function(ActionChip value)? actionChip,
     TResult Function(FilterChip value)? filterChip,
     TResult Function(InputChip value)? inputChip,
+    TResult Function(Switch value)? materialSwitch,
     required TResult orElse(),
   }) {
     if (checkbox != null) {
@@ -22192,6 +22362,7 @@ class _$DropdownButtonFormField implements DropdownButtonFormField {
     required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme) actionChip,
     required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) filterChip,
     required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) inputChip,
+    required TResult Function(Key? key, bool value, BoolSelectionCallback onChanged, Color? activeColor, Color? activeTrackColor, Color? inactiveThumbColor, Color? inactiveTrackColor, ImageProvider? activeThumbImage, ImageProvider? inactiveThumbImage, MaterialStateProperty? thumbColor, MaterialStateProperty? trackColor, MaterialStateProperty? trackOutlineColor, MaterialTapTargetSize? materialTapTargetSize, DragStartBehavior dragStartBehavior, MouseCursor? mouseCursor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, BoolSelectionCallback? onFocusChange, bool autofocus) materialSwitch,
   }) {
     return dropdownButtonFormField(
         key,
@@ -22326,6 +22497,7 @@ class _$DropdownButtonFormField implements DropdownButtonFormField {
     TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
     TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
     TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
+    TResult? Function(Key? key, bool value, BoolSelectionCallback onChanged, Color? activeColor, Color? activeTrackColor, Color? inactiveThumbColor, Color? inactiveTrackColor, ImageProvider? activeThumbImage, ImageProvider? inactiveThumbImage, MaterialStateProperty? thumbColor, MaterialStateProperty? trackColor, MaterialStateProperty? trackOutlineColor, MaterialTapTargetSize? materialTapTargetSize, DragStartBehavior dragStartBehavior, MouseCursor? mouseCursor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, BoolSelectionCallback? onFocusChange, bool autofocus)? materialSwitch,
   }) {
     return dropdownButtonFormField?.call(
         key,
@@ -22460,6 +22632,7 @@ class _$DropdownButtonFormField implements DropdownButtonFormField {
     TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
     TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
     TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
+    TResult Function(Key? key, bool value, BoolSelectionCallback onChanged, Color? activeColor, Color? activeTrackColor, Color? inactiveThumbColor, Color? inactiveTrackColor, ImageProvider? activeThumbImage, ImageProvider? inactiveThumbImage, MaterialStateProperty? thumbColor, MaterialStateProperty? trackColor, MaterialStateProperty? trackOutlineColor, MaterialTapTargetSize? materialTapTargetSize, DragStartBehavior dragStartBehavior, MouseCursor? mouseCursor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, BoolSelectionCallback? onFocusChange, bool autofocus)? materialSwitch,
     required TResult orElse(),
   }) {
     if (dropdownButtonFormField != null) {
@@ -22535,6 +22708,7 @@ class _$DropdownButtonFormField implements DropdownButtonFormField {
     required TResult Function(ActionChip value) actionChip,
     required TResult Function(FilterChip value) filterChip,
     required TResult Function(InputChip value) inputChip,
+    required TResult Function(Switch value) materialSwitch,
   }) {
     return dropdownButtonFormField(this);
   }
@@ -22577,6 +22751,7 @@ class _$DropdownButtonFormField implements DropdownButtonFormField {
     TResult? Function(ActionChip value)? actionChip,
     TResult? Function(FilterChip value)? filterChip,
     TResult? Function(InputChip value)? inputChip,
+    TResult? Function(Switch value)? materialSwitch,
   }) {
     return dropdownButtonFormField?.call(this);
   }
@@ -22619,6 +22794,7 @@ class _$DropdownButtonFormField implements DropdownButtonFormField {
     TResult Function(ActionChip value)? actionChip,
     TResult Function(FilterChip value)? filterChip,
     TResult Function(InputChip value)? inputChip,
+    TResult Function(Switch value)? materialSwitch,
     required TResult orElse(),
   }) {
     if (dropdownButtonFormField != null) {
@@ -23284,6 +23460,7 @@ class _$PopupMenuButton implements PopupMenuButton {
     required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme) actionChip,
     required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) filterChip,
     required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) inputChip,
+    required TResult Function(Key? key, bool value, BoolSelectionCallback onChanged, Color? activeColor, Color? activeTrackColor, Color? inactiveThumbColor, Color? inactiveTrackColor, ImageProvider? activeThumbImage, ImageProvider? inactiveThumbImage, MaterialStateProperty? thumbColor, MaterialStateProperty? trackColor, MaterialStateProperty? trackOutlineColor, MaterialTapTargetSize? materialTapTargetSize, DragStartBehavior dragStartBehavior, MouseCursor? mouseCursor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, BoolSelectionCallback? onFocusChange, bool autofocus) materialSwitch,
   }) {
     return popupMenuButton(
         key,
@@ -23415,6 +23592,7 @@ class _$PopupMenuButton implements PopupMenuButton {
     TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
     TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
     TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
+    TResult? Function(Key? key, bool value, BoolSelectionCallback onChanged, Color? activeColor, Color? activeTrackColor, Color? inactiveThumbColor, Color? inactiveTrackColor, ImageProvider? activeThumbImage, ImageProvider? inactiveThumbImage, MaterialStateProperty? thumbColor, MaterialStateProperty? trackColor, MaterialStateProperty? trackOutlineColor, MaterialTapTargetSize? materialTapTargetSize, DragStartBehavior dragStartBehavior, MouseCursor? mouseCursor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, BoolSelectionCallback? onFocusChange, bool autofocus)? materialSwitch,
   }) {
     return popupMenuButton?.call(
         key,
@@ -23546,6 +23724,7 @@ class _$PopupMenuButton implements PopupMenuButton {
     TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
     TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
     TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
+    TResult Function(Key? key, bool value, BoolSelectionCallback onChanged, Color? activeColor, Color? activeTrackColor, Color? inactiveThumbColor, Color? inactiveTrackColor, ImageProvider? activeThumbImage, ImageProvider? inactiveThumbImage, MaterialStateProperty? thumbColor, MaterialStateProperty? trackColor, MaterialStateProperty? trackOutlineColor, MaterialTapTargetSize? materialTapTargetSize, DragStartBehavior dragStartBehavior, MouseCursor? mouseCursor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, BoolSelectionCallback? onFocusChange, bool autofocus)? materialSwitch,
     required TResult orElse(),
   }) {
     if (popupMenuButton != null) {
@@ -23618,6 +23797,7 @@ class _$PopupMenuButton implements PopupMenuButton {
     required TResult Function(ActionChip value) actionChip,
     required TResult Function(FilterChip value) filterChip,
     required TResult Function(InputChip value) inputChip,
+    required TResult Function(Switch value) materialSwitch,
   }) {
     return popupMenuButton(this);
   }
@@ -23660,6 +23840,7 @@ class _$PopupMenuButton implements PopupMenuButton {
     TResult? Function(ActionChip value)? actionChip,
     TResult? Function(FilterChip value)? filterChip,
     TResult? Function(InputChip value)? inputChip,
+    TResult? Function(Switch value)? materialSwitch,
   }) {
     return popupMenuButton?.call(this);
   }
@@ -23702,6 +23883,7 @@ class _$PopupMenuButton implements PopupMenuButton {
     TResult Function(ActionChip value)? actionChip,
     TResult Function(FilterChip value)? filterChip,
     TResult Function(InputChip value)? inputChip,
+    TResult Function(Switch value)? materialSwitch,
     required TResult orElse(),
   }) {
     if (popupMenuButton != null) {
@@ -24023,6 +24205,7 @@ class _$NavigationDestination implements NavigationDestination {
     required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme) actionChip,
     required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) filterChip,
     required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) inputChip,
+    required TResult Function(Key? key, bool value, BoolSelectionCallback onChanged, Color? activeColor, Color? activeTrackColor, Color? inactiveThumbColor, Color? inactiveTrackColor, ImageProvider? activeThumbImage, ImageProvider? inactiveThumbImage, MaterialStateProperty? thumbColor, MaterialStateProperty? trackColor, MaterialStateProperty? trackOutlineColor, MaterialTapTargetSize? materialTapTargetSize, DragStartBehavior dragStartBehavior, MouseCursor? mouseCursor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, BoolSelectionCallback? onFocusChange, bool autofocus) materialSwitch,
   }) {
     return navigationDestination(key, this.icon, selectedIcon, label, tooltip);
   }
@@ -24131,6 +24314,7 @@ class _$NavigationDestination implements NavigationDestination {
     TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
     TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
     TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
+    TResult? Function(Key? key, bool value, BoolSelectionCallback onChanged, Color? activeColor, Color? activeTrackColor, Color? inactiveThumbColor, Color? inactiveTrackColor, ImageProvider? activeThumbImage, ImageProvider? inactiveThumbImage, MaterialStateProperty? thumbColor, MaterialStateProperty? trackColor, MaterialStateProperty? trackOutlineColor, MaterialTapTargetSize? materialTapTargetSize, DragStartBehavior dragStartBehavior, MouseCursor? mouseCursor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, BoolSelectionCallback? onFocusChange, bool autofocus)? materialSwitch,
   }) {
     return navigationDestination?.call(
         key, this.icon, selectedIcon, label, tooltip);
@@ -24240,6 +24424,7 @@ class _$NavigationDestination implements NavigationDestination {
     TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
     TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
     TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
+    TResult Function(Key? key, bool value, BoolSelectionCallback onChanged, Color? activeColor, Color? activeTrackColor, Color? inactiveThumbColor, Color? inactiveTrackColor, ImageProvider? activeThumbImage, ImageProvider? inactiveThumbImage, MaterialStateProperty? thumbColor, MaterialStateProperty? trackColor, MaterialStateProperty? trackOutlineColor, MaterialTapTargetSize? materialTapTargetSize, DragStartBehavior dragStartBehavior, MouseCursor? mouseCursor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, BoolSelectionCallback? onFocusChange, bool autofocus)? materialSwitch,
     required TResult orElse(),
   }) {
     if (navigationDestination != null) {
@@ -24290,6 +24475,7 @@ class _$NavigationDestination implements NavigationDestination {
     required TResult Function(ActionChip value) actionChip,
     required TResult Function(FilterChip value) filterChip,
     required TResult Function(InputChip value) inputChip,
+    required TResult Function(Switch value) materialSwitch,
   }) {
     return navigationDestination(this);
   }
@@ -24332,6 +24518,7 @@ class _$NavigationDestination implements NavigationDestination {
     TResult? Function(ActionChip value)? actionChip,
     TResult? Function(FilterChip value)? filterChip,
     TResult? Function(InputChip value)? inputChip,
+    TResult? Function(Switch value)? materialSwitch,
   }) {
     return navigationDestination?.call(this);
   }
@@ -24374,6 +24561,7 @@ class _$NavigationDestination implements NavigationDestination {
     TResult Function(ActionChip value)? actionChip,
     TResult Function(FilterChip value)? filterChip,
     TResult Function(InputChip value)? inputChip,
+    TResult Function(Switch value)? materialSwitch,
     required TResult orElse(),
   }) {
     if (navigationDestination != null) {
@@ -25012,6 +25200,7 @@ class _$ActionChip implements ActionChip {
     required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme) actionChip,
     required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) filterChip,
     required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) inputChip,
+    required TResult Function(Key? key, bool value, BoolSelectionCallback onChanged, Color? activeColor, Color? activeTrackColor, Color? inactiveThumbColor, Color? inactiveTrackColor, ImageProvider? activeThumbImage, ImageProvider? inactiveThumbImage, MaterialStateProperty? thumbColor, MaterialStateProperty? trackColor, MaterialStateProperty? trackOutlineColor, MaterialTapTargetSize? materialTapTargetSize, DragStartBehavior dragStartBehavior, MouseCursor? mouseCursor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, BoolSelectionCallback? onFocusChange, bool autofocus) materialSwitch,
   }) {
     return actionChip(
         key,
@@ -25141,6 +25330,7 @@ class _$ActionChip implements ActionChip {
     TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
     TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
     TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
+    TResult? Function(Key? key, bool value, BoolSelectionCallback onChanged, Color? activeColor, Color? activeTrackColor, Color? inactiveThumbColor, Color? inactiveTrackColor, ImageProvider? activeThumbImage, ImageProvider? inactiveThumbImage, MaterialStateProperty? thumbColor, MaterialStateProperty? trackColor, MaterialStateProperty? trackOutlineColor, MaterialTapTargetSize? materialTapTargetSize, DragStartBehavior dragStartBehavior, MouseCursor? mouseCursor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, BoolSelectionCallback? onFocusChange, bool autofocus)? materialSwitch,
   }) {
     return actionChip?.call(
         key,
@@ -25270,6 +25460,7 @@ class _$ActionChip implements ActionChip {
     TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
     TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
     TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
+    TResult Function(Key? key, bool value, BoolSelectionCallback onChanged, Color? activeColor, Color? activeTrackColor, Color? inactiveThumbColor, Color? inactiveTrackColor, ImageProvider? activeThumbImage, ImageProvider? inactiveThumbImage, MaterialStateProperty? thumbColor, MaterialStateProperty? trackColor, MaterialStateProperty? trackOutlineColor, MaterialTapTargetSize? materialTapTargetSize, DragStartBehavior dragStartBehavior, MouseCursor? mouseCursor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, BoolSelectionCallback? onFocusChange, bool autofocus)? materialSwitch,
     required TResult orElse(),
   }) {
     if (actionChip != null) {
@@ -25340,6 +25531,7 @@ class _$ActionChip implements ActionChip {
     required TResult Function(ActionChip value) actionChip,
     required TResult Function(FilterChip value) filterChip,
     required TResult Function(InputChip value) inputChip,
+    required TResult Function(Switch value) materialSwitch,
   }) {
     return actionChip(this);
   }
@@ -25382,6 +25574,7 @@ class _$ActionChip implements ActionChip {
     TResult? Function(ActionChip value)? actionChip,
     TResult? Function(FilterChip value)? filterChip,
     TResult? Function(InputChip value)? inputChip,
+    TResult? Function(Switch value)? materialSwitch,
   }) {
     return actionChip?.call(this);
   }
@@ -25424,6 +25617,7 @@ class _$ActionChip implements ActionChip {
     TResult Function(ActionChip value)? actionChip,
     TResult Function(FilterChip value)? filterChip,
     TResult Function(InputChip value)? inputChip,
+    TResult Function(Switch value)? materialSwitch,
     required TResult orElse(),
   }) {
     if (actionChip != null) {
@@ -26204,6 +26398,7 @@ class _$FilterChip implements FilterChip {
     required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme) actionChip,
     required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) filterChip,
     required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) inputChip,
+    required TResult Function(Key? key, bool value, BoolSelectionCallback onChanged, Color? activeColor, Color? activeTrackColor, Color? inactiveThumbColor, Color? inactiveTrackColor, ImageProvider? activeThumbImage, ImageProvider? inactiveThumbImage, MaterialStateProperty? thumbColor, MaterialStateProperty? trackColor, MaterialStateProperty? trackOutlineColor, MaterialTapTargetSize? materialTapTargetSize, DragStartBehavior dragStartBehavior, MouseCursor? mouseCursor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, BoolSelectionCallback? onFocusChange, bool autofocus) materialSwitch,
   }) {
     return filterChip(
         key,
@@ -26339,6 +26534,7 @@ class _$FilterChip implements FilterChip {
     TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
     TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
     TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
+    TResult? Function(Key? key, bool value, BoolSelectionCallback onChanged, Color? activeColor, Color? activeTrackColor, Color? inactiveThumbColor, Color? inactiveTrackColor, ImageProvider? activeThumbImage, ImageProvider? inactiveThumbImage, MaterialStateProperty? thumbColor, MaterialStateProperty? trackColor, MaterialStateProperty? trackOutlineColor, MaterialTapTargetSize? materialTapTargetSize, DragStartBehavior dragStartBehavior, MouseCursor? mouseCursor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, BoolSelectionCallback? onFocusChange, bool autofocus)? materialSwitch,
   }) {
     return filterChip?.call(
         key,
@@ -26474,6 +26670,7 @@ class _$FilterChip implements FilterChip {
     TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
     TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
     TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
+    TResult Function(Key? key, bool value, BoolSelectionCallback onChanged, Color? activeColor, Color? activeTrackColor, Color? inactiveThumbColor, Color? inactiveTrackColor, ImageProvider? activeThumbImage, ImageProvider? inactiveThumbImage, MaterialStateProperty? thumbColor, MaterialStateProperty? trackColor, MaterialStateProperty? trackOutlineColor, MaterialTapTargetSize? materialTapTargetSize, DragStartBehavior dragStartBehavior, MouseCursor? mouseCursor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, BoolSelectionCallback? onFocusChange, bool autofocus)? materialSwitch,
     required TResult orElse(),
   }) {
     if (filterChip != null) {
@@ -26550,6 +26747,7 @@ class _$FilterChip implements FilterChip {
     required TResult Function(ActionChip value) actionChip,
     required TResult Function(FilterChip value) filterChip,
     required TResult Function(InputChip value) inputChip,
+    required TResult Function(Switch value) materialSwitch,
   }) {
     return filterChip(this);
   }
@@ -26592,6 +26790,7 @@ class _$FilterChip implements FilterChip {
     TResult? Function(ActionChip value)? actionChip,
     TResult? Function(FilterChip value)? filterChip,
     TResult? Function(InputChip value)? inputChip,
+    TResult? Function(Switch value)? materialSwitch,
   }) {
     return filterChip?.call(this);
   }
@@ -26634,6 +26833,7 @@ class _$FilterChip implements FilterChip {
     TResult Function(ActionChip value)? actionChip,
     TResult Function(FilterChip value)? filterChip,
     TResult Function(InputChip value)? inputChip,
+    TResult Function(Switch value)? materialSwitch,
     required TResult orElse(),
   }) {
     if (filterChip != null) {
@@ -27553,6 +27753,7 @@ class _$InputChip implements InputChip {
     required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme) actionChip,
     required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) filterChip,
     required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) inputChip,
+    required TResult Function(Key? key, bool value, BoolSelectionCallback onChanged, Color? activeColor, Color? activeTrackColor, Color? inactiveThumbColor, Color? inactiveTrackColor, ImageProvider? activeThumbImage, ImageProvider? inactiveThumbImage, MaterialStateProperty? thumbColor, MaterialStateProperty? trackColor, MaterialStateProperty? trackOutlineColor, MaterialTapTargetSize? materialTapTargetSize, DragStartBehavior dragStartBehavior, MouseCursor? mouseCursor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, BoolSelectionCallback? onFocusChange, bool autofocus) materialSwitch,
   }) {
     return inputChip(
         key,
@@ -27694,6 +27895,7 @@ class _$InputChip implements InputChip {
     TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
     TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
     TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
+    TResult? Function(Key? key, bool value, BoolSelectionCallback onChanged, Color? activeColor, Color? activeTrackColor, Color? inactiveThumbColor, Color? inactiveTrackColor, ImageProvider? activeThumbImage, ImageProvider? inactiveThumbImage, MaterialStateProperty? thumbColor, MaterialStateProperty? trackColor, MaterialStateProperty? trackOutlineColor, MaterialTapTargetSize? materialTapTargetSize, DragStartBehavior dragStartBehavior, MouseCursor? mouseCursor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, BoolSelectionCallback? onFocusChange, bool autofocus)? materialSwitch,
   }) {
     return inputChip?.call(
         key,
@@ -27835,6 +28037,7 @@ class _$InputChip implements InputChip {
     TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
     TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
     TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
+    TResult Function(Key? key, bool value, BoolSelectionCallback onChanged, Color? activeColor, Color? activeTrackColor, Color? inactiveThumbColor, Color? inactiveTrackColor, ImageProvider? activeThumbImage, ImageProvider? inactiveThumbImage, MaterialStateProperty? thumbColor, MaterialStateProperty? trackColor, MaterialStateProperty? trackOutlineColor, MaterialTapTargetSize? materialTapTargetSize, DragStartBehavior dragStartBehavior, MouseCursor? mouseCursor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, BoolSelectionCallback? onFocusChange, bool autofocus)? materialSwitch,
     required TResult orElse(),
   }) {
     if (inputChip != null) {
@@ -27917,6 +28120,7 @@ class _$InputChip implements InputChip {
     required TResult Function(ActionChip value) actionChip,
     required TResult Function(FilterChip value) filterChip,
     required TResult Function(InputChip value) inputChip,
+    required TResult Function(Switch value) materialSwitch,
   }) {
     return inputChip(this);
   }
@@ -27959,6 +28163,7 @@ class _$InputChip implements InputChip {
     TResult? Function(ActionChip value)? actionChip,
     TResult? Function(FilterChip value)? filterChip,
     TResult? Function(InputChip value)? inputChip,
+    TResult? Function(Switch value)? materialSwitch,
   }) {
     return inputChip?.call(this);
   }
@@ -28001,6 +28206,7 @@ class _$InputChip implements InputChip {
     TResult Function(ActionChip value)? actionChip,
     TResult Function(FilterChip value)? filterChip,
     TResult Function(InputChip value)? inputChip,
+    TResult Function(Switch value)? materialSwitch,
     required TResult orElse(),
   }) {
     if (inputChip != null) {
@@ -28092,5 +28298,1092 @@ abstract class InputChip implements Widget {
   @override
   @JsonKey(ignore: true)
   _$$InputChipCopyWith<_$InputChip> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$SwitchCopyWith<$Res> implements $WidgetCopyWith<$Res> {
+  factory _$$SwitchCopyWith(_$Switch value, $Res Function(_$Switch) then) =
+      __$$SwitchCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {Key? key,
+      bool value,
+      BoolSelectionCallback onChanged,
+      Color? activeColor,
+      Color? activeTrackColor,
+      Color? inactiveThumbColor,
+      Color? inactiveTrackColor,
+      ImageProvider? activeThumbImage,
+      ImageProvider? inactiveThumbImage,
+      MaterialStateProperty? thumbColor,
+      MaterialStateProperty? trackColor,
+      MaterialStateProperty? trackOutlineColor,
+      MaterialTapTargetSize? materialTapTargetSize,
+      DragStartBehavior dragStartBehavior,
+      MouseCursor? mouseCursor,
+      Color? focusColor,
+      Color? hoverColor,
+      MaterialStateProperty? overlayColor,
+      double? splashRadius,
+      BoolSelectionCallback? onFocusChange,
+      bool autofocus});
+
+  @override
+  $KeyCopyWith<$Res>? get key;
+  $ColorCopyWith<$Res>? get activeColor;
+  $ColorCopyWith<$Res>? get activeTrackColor;
+  $ColorCopyWith<$Res>? get inactiveThumbColor;
+  $ColorCopyWith<$Res>? get inactiveTrackColor;
+  $ImageProviderCopyWith<$Res>? get activeThumbImage;
+  $ImageProviderCopyWith<$Res>? get inactiveThumbImage;
+  $MaterialStatePropertyCopyWith<$Res>? get thumbColor;
+  $MaterialStatePropertyCopyWith<$Res>? get trackColor;
+  $MaterialStatePropertyCopyWith<$Res>? get trackOutlineColor;
+  $MouseCursorCopyWith<$Res>? get mouseCursor;
+  $ColorCopyWith<$Res>? get focusColor;
+  $ColorCopyWith<$Res>? get hoverColor;
+  $MaterialStatePropertyCopyWith<$Res>? get overlayColor;
+}
+
+/// @nodoc
+class __$$SwitchCopyWithImpl<$Res> extends _$WidgetCopyWithImpl<$Res, _$Switch>
+    implements _$$SwitchCopyWith<$Res> {
+  __$$SwitchCopyWithImpl(_$Switch _value, $Res Function(_$Switch) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? key = freezed,
+    Object? value = null,
+    Object? onChanged = freezed,
+    Object? activeColor = freezed,
+    Object? activeTrackColor = freezed,
+    Object? inactiveThumbColor = freezed,
+    Object? inactiveTrackColor = freezed,
+    Object? activeThumbImage = freezed,
+    Object? inactiveThumbImage = freezed,
+    Object? thumbColor = freezed,
+    Object? trackColor = freezed,
+    Object? trackOutlineColor = freezed,
+    Object? materialTapTargetSize = freezed,
+    Object? dragStartBehavior = null,
+    Object? mouseCursor = freezed,
+    Object? focusColor = freezed,
+    Object? hoverColor = freezed,
+    Object? overlayColor = freezed,
+    Object? splashRadius = freezed,
+    Object? onFocusChange = freezed,
+    Object? autofocus = null,
+  }) {
+    return _then(_$Switch(
+      key: freezed == key
+          ? _value.key
+          : key // ignore: cast_nullable_to_non_nullable
+              as Key?,
+      value: null == value
+          ? _value.value
+          : value // ignore: cast_nullable_to_non_nullable
+              as bool,
+      onChanged: freezed == onChanged
+          ? _value.onChanged
+          : onChanged // ignore: cast_nullable_to_non_nullable
+              as BoolSelectionCallback,
+      activeColor: freezed == activeColor
+          ? _value.activeColor
+          : activeColor // ignore: cast_nullable_to_non_nullable
+              as Color?,
+      activeTrackColor: freezed == activeTrackColor
+          ? _value.activeTrackColor
+          : activeTrackColor // ignore: cast_nullable_to_non_nullable
+              as Color?,
+      inactiveThumbColor: freezed == inactiveThumbColor
+          ? _value.inactiveThumbColor
+          : inactiveThumbColor // ignore: cast_nullable_to_non_nullable
+              as Color?,
+      inactiveTrackColor: freezed == inactiveTrackColor
+          ? _value.inactiveTrackColor
+          : inactiveTrackColor // ignore: cast_nullable_to_non_nullable
+              as Color?,
+      activeThumbImage: freezed == activeThumbImage
+          ? _value.activeThumbImage
+          : activeThumbImage // ignore: cast_nullable_to_non_nullable
+              as ImageProvider?,
+      inactiveThumbImage: freezed == inactiveThumbImage
+          ? _value.inactiveThumbImage
+          : inactiveThumbImage // ignore: cast_nullable_to_non_nullable
+              as ImageProvider?,
+      thumbColor: freezed == thumbColor
+          ? _value.thumbColor
+          : thumbColor // ignore: cast_nullable_to_non_nullable
+              as MaterialStateProperty?,
+      trackColor: freezed == trackColor
+          ? _value.trackColor
+          : trackColor // ignore: cast_nullable_to_non_nullable
+              as MaterialStateProperty?,
+      trackOutlineColor: freezed == trackOutlineColor
+          ? _value.trackOutlineColor
+          : trackOutlineColor // ignore: cast_nullable_to_non_nullable
+              as MaterialStateProperty?,
+      materialTapTargetSize: freezed == materialTapTargetSize
+          ? _value.materialTapTargetSize
+          : materialTapTargetSize // ignore: cast_nullable_to_non_nullable
+              as MaterialTapTargetSize?,
+      dragStartBehavior: null == dragStartBehavior
+          ? _value.dragStartBehavior
+          : dragStartBehavior // ignore: cast_nullable_to_non_nullable
+              as DragStartBehavior,
+      mouseCursor: freezed == mouseCursor
+          ? _value.mouseCursor
+          : mouseCursor // ignore: cast_nullable_to_non_nullable
+              as MouseCursor?,
+      focusColor: freezed == focusColor
+          ? _value.focusColor
+          : focusColor // ignore: cast_nullable_to_non_nullable
+              as Color?,
+      hoverColor: freezed == hoverColor
+          ? _value.hoverColor
+          : hoverColor // ignore: cast_nullable_to_non_nullable
+              as Color?,
+      overlayColor: freezed == overlayColor
+          ? _value.overlayColor
+          : overlayColor // ignore: cast_nullable_to_non_nullable
+              as MaterialStateProperty?,
+      splashRadius: freezed == splashRadius
+          ? _value.splashRadius
+          : splashRadius // ignore: cast_nullable_to_non_nullable
+              as double?,
+      onFocusChange: freezed == onFocusChange
+          ? _value.onFocusChange
+          : onFocusChange // ignore: cast_nullable_to_non_nullable
+              as BoolSelectionCallback?,
+      autofocus: null == autofocus
+          ? _value.autofocus
+          : autofocus // ignore: cast_nullable_to_non_nullable
+              as bool,
+    ));
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ColorCopyWith<$Res>? get activeColor {
+    if (_value.activeColor == null) {
+      return null;
+    }
+
+    return $ColorCopyWith<$Res>(_value.activeColor!, (value) {
+      return _then(_value.copyWith(activeColor: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ColorCopyWith<$Res>? get activeTrackColor {
+    if (_value.activeTrackColor == null) {
+      return null;
+    }
+
+    return $ColorCopyWith<$Res>(_value.activeTrackColor!, (value) {
+      return _then(_value.copyWith(activeTrackColor: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ColorCopyWith<$Res>? get inactiveThumbColor {
+    if (_value.inactiveThumbColor == null) {
+      return null;
+    }
+
+    return $ColorCopyWith<$Res>(_value.inactiveThumbColor!, (value) {
+      return _then(_value.copyWith(inactiveThumbColor: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ColorCopyWith<$Res>? get inactiveTrackColor {
+    if (_value.inactiveTrackColor == null) {
+      return null;
+    }
+
+    return $ColorCopyWith<$Res>(_value.inactiveTrackColor!, (value) {
+      return _then(_value.copyWith(inactiveTrackColor: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ImageProviderCopyWith<$Res>? get activeThumbImage {
+    if (_value.activeThumbImage == null) {
+      return null;
+    }
+
+    return $ImageProviderCopyWith<$Res>(_value.activeThumbImage!, (value) {
+      return _then(_value.copyWith(activeThumbImage: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ImageProviderCopyWith<$Res>? get inactiveThumbImage {
+    if (_value.inactiveThumbImage == null) {
+      return null;
+    }
+
+    return $ImageProviderCopyWith<$Res>(_value.inactiveThumbImage!, (value) {
+      return _then(_value.copyWith(inactiveThumbImage: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $MaterialStatePropertyCopyWith<$Res>? get thumbColor {
+    if (_value.thumbColor == null) {
+      return null;
+    }
+
+    return $MaterialStatePropertyCopyWith<$Res>(_value.thumbColor!, (value) {
+      return _then(_value.copyWith(thumbColor: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $MaterialStatePropertyCopyWith<$Res>? get trackColor {
+    if (_value.trackColor == null) {
+      return null;
+    }
+
+    return $MaterialStatePropertyCopyWith<$Res>(_value.trackColor!, (value) {
+      return _then(_value.copyWith(trackColor: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $MaterialStatePropertyCopyWith<$Res>? get trackOutlineColor {
+    if (_value.trackOutlineColor == null) {
+      return null;
+    }
+
+    return $MaterialStatePropertyCopyWith<$Res>(_value.trackOutlineColor!,
+        (value) {
+      return _then(_value.copyWith(trackOutlineColor: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $MouseCursorCopyWith<$Res>? get mouseCursor {
+    if (_value.mouseCursor == null) {
+      return null;
+    }
+
+    return $MouseCursorCopyWith<$Res>(_value.mouseCursor!, (value) {
+      return _then(_value.copyWith(mouseCursor: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ColorCopyWith<$Res>? get focusColor {
+    if (_value.focusColor == null) {
+      return null;
+    }
+
+    return $ColorCopyWith<$Res>(_value.focusColor!, (value) {
+      return _then(_value.copyWith(focusColor: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ColorCopyWith<$Res>? get hoverColor {
+    if (_value.hoverColor == null) {
+      return null;
+    }
+
+    return $ColorCopyWith<$Res>(_value.hoverColor!, (value) {
+      return _then(_value.copyWith(hoverColor: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $MaterialStatePropertyCopyWith<$Res>? get overlayColor {
+    if (_value.overlayColor == null) {
+      return null;
+    }
+
+    return $MaterialStatePropertyCopyWith<$Res>(_value.overlayColor!, (value) {
+      return _then(_value.copyWith(overlayColor: value));
+    });
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$Switch implements Switch {
+  const _$Switch(
+      {this.key,
+      required this.value,
+      required this.onChanged,
+      this.activeColor,
+      this.activeTrackColor,
+      this.inactiveThumbColor,
+      this.inactiveTrackColor,
+      this.activeThumbImage,
+      this.inactiveThumbImage,
+      this.thumbColor,
+      this.trackColor,
+      this.trackOutlineColor,
+      this.materialTapTargetSize,
+      this.dragStartBehavior = DragStartBehavior.start,
+      this.mouseCursor,
+      this.focusColor,
+      this.hoverColor,
+      this.overlayColor,
+      this.splashRadius,
+      this.onFocusChange,
+      this.autofocus = false,
+      final String? $type})
+      : $type = $type ?? 'materialSwitch';
+
+  factory _$Switch.fromJson(Map<String, dynamic> json) =>
+      _$$SwitchFromJson(json);
+
+  @override
+  final Key? key;
+  @override
+  final bool value;
+  @override
+  final BoolSelectionCallback onChanged;
+  @override
+  final Color? activeColor;
+  @override
+  final Color? activeTrackColor;
+  @override
+  final Color? inactiveThumbColor;
+  @override
+  final Color? inactiveTrackColor;
+  @override
+  final ImageProvider? activeThumbImage;
+// ImageErrorListener? onActiveThumbImageError,
+  @override
+  final ImageProvider? inactiveThumbImage;
+//ImageErrorListener onInactiveThumbImageError,
+  @override
+  final MaterialStateProperty? thumbColor;
+  @override
+  final MaterialStateProperty? trackColor;
+  @override
+  final MaterialStateProperty? trackOutlineColor;
+// MaterialStateProperty? trackOutlineWidth,
+// MaterialStateProperty? thumbIcon,
+  @override
+  final MaterialTapTargetSize? materialTapTargetSize;
+  @override
+  @JsonKey()
+  final DragStartBehavior dragStartBehavior;
+  @override
+  final MouseCursor? mouseCursor;
+  @override
+  final Color? focusColor;
+  @override
+  final Color? hoverColor;
+  @override
+  final MaterialStateProperty? overlayColor;
+  @override
+  final double? splashRadius;
+//FocusNode? focusNode,
+  @override
+  final BoolSelectionCallback? onFocusChange;
+  @override
+  @JsonKey()
+  final bool autofocus;
+
+  @JsonKey(name: 'runtimeType')
+  final String $type;
+
+  @override
+  String toString() {
+    return 'Widget.materialSwitch(key: $key, value: $value, onChanged: $onChanged, activeColor: $activeColor, activeTrackColor: $activeTrackColor, inactiveThumbColor: $inactiveThumbColor, inactiveTrackColor: $inactiveTrackColor, activeThumbImage: $activeThumbImage, inactiveThumbImage: $inactiveThumbImage, thumbColor: $thumbColor, trackColor: $trackColor, trackOutlineColor: $trackOutlineColor, materialTapTargetSize: $materialTapTargetSize, dragStartBehavior: $dragStartBehavior, mouseCursor: $mouseCursor, focusColor: $focusColor, hoverColor: $hoverColor, overlayColor: $overlayColor, splashRadius: $splashRadius, onFocusChange: $onFocusChange, autofocus: $autofocus)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$Switch &&
+            (identical(other.key, key) || other.key == key) &&
+            (identical(other.value, value) || other.value == value) &&
+            const DeepCollectionEquality().equals(other.onChanged, onChanged) &&
+            (identical(other.activeColor, activeColor) ||
+                other.activeColor == activeColor) &&
+            (identical(other.activeTrackColor, activeTrackColor) ||
+                other.activeTrackColor == activeTrackColor) &&
+            (identical(other.inactiveThumbColor, inactiveThumbColor) ||
+                other.inactiveThumbColor == inactiveThumbColor) &&
+            (identical(other.inactiveTrackColor, inactiveTrackColor) ||
+                other.inactiveTrackColor == inactiveTrackColor) &&
+            (identical(other.activeThumbImage, activeThumbImage) ||
+                other.activeThumbImage == activeThumbImage) &&
+            (identical(other.inactiveThumbImage, inactiveThumbImage) ||
+                other.inactiveThumbImage == inactiveThumbImage) &&
+            (identical(other.thumbColor, thumbColor) ||
+                other.thumbColor == thumbColor) &&
+            (identical(other.trackColor, trackColor) ||
+                other.trackColor == trackColor) &&
+            (identical(other.trackOutlineColor, trackOutlineColor) ||
+                other.trackOutlineColor == trackOutlineColor) &&
+            (identical(other.materialTapTargetSize, materialTapTargetSize) ||
+                other.materialTapTargetSize == materialTapTargetSize) &&
+            (identical(other.dragStartBehavior, dragStartBehavior) ||
+                other.dragStartBehavior == dragStartBehavior) &&
+            (identical(other.mouseCursor, mouseCursor) ||
+                other.mouseCursor == mouseCursor) &&
+            (identical(other.focusColor, focusColor) ||
+                other.focusColor == focusColor) &&
+            (identical(other.hoverColor, hoverColor) ||
+                other.hoverColor == hoverColor) &&
+            (identical(other.overlayColor, overlayColor) ||
+                other.overlayColor == overlayColor) &&
+            (identical(other.splashRadius, splashRadius) ||
+                other.splashRadius == splashRadius) &&
+            const DeepCollectionEquality()
+                .equals(other.onFocusChange, onFocusChange) &&
+            (identical(other.autofocus, autofocus) ||
+                other.autofocus == autofocus));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hashAll([
+        runtimeType,
+        key,
+        value,
+        const DeepCollectionEquality().hash(onChanged),
+        activeColor,
+        activeTrackColor,
+        inactiveThumbColor,
+        inactiveTrackColor,
+        activeThumbImage,
+        inactiveThumbImage,
+        thumbColor,
+        trackColor,
+        trackOutlineColor,
+        materialTapTargetSize,
+        dragStartBehavior,
+        mouseCursor,
+        focusColor,
+        hoverColor,
+        overlayColor,
+        splashRadius,
+        const DeepCollectionEquality().hash(onFocusChange),
+        autofocus
+      ]);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$SwitchCopyWith<_$Switch> get copyWith =>
+      __$$SwitchCopyWithImpl<_$Switch>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(
+            Key? key,
+            Color? color,
+            Color? shadowColor,
+            Color? surfaceTintColor,
+            double? elevation,
+            ShapeBorder? shape,
+            bool borderOnForeground,
+            EdgeInsets? margin,
+            Clip? clipBehavior,
+            Widget? child,
+            bool semanticContainer)
+        card,
+    required TResult Function(
+            Key? key,
+            Callback? onPressed,
+            Callback? onLongPress,
+            bool autofocus,
+            Clip clipBehavior,
+            Widget child,
+            ButtonStyle? style)
+        elevatedButton,
+    required TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)
+        filledButton,
+    required TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)
+        filledTonalButton,
+    required TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)
+        outlinedButton,
+    required TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)
+        textButton,
+    required TResult Function(
+            Key? key,
+            double? iconSize,
+            VisualDensity? visualDensity,
+            EdgeInsets? padding,
+            Alignment? alignment,
+            double? splashRadius,
+            Color? color,
+            Color? focusColor,
+            Color? hoverColor,
+            Color? highlightColor,
+            Color? splashColor,
+            Color? disabledColor,
+            Callback onPressed,
+            MouseCursor? mouseCursor,
+            bool autofocus,
+            String? tooltip,
+            bool? enableFeedback,
+            BoxConstraints? constraints,
+            bool? isSelected,
+            Widget? selectedIcon,
+            Widget icon)
+        iconButton,
+    required TResult Function(
+            Key? key,
+            PreferredSizeWidget? appBar,
+            Widget? body,
+            Widget? floatingActionButton,
+            FloatingActionButtonLocation? floatingActionButtonLocation,
+            List<Widget>? persistentFooterButtons,
+            Alignment persistentFooterAlignment,
+            Widget? drawer,
+            Widget? endDrawer,
+            Widget? bottomNavigationBar,
+            Widget? bottomSheet,
+            Color? backgroundColor,
+            bool? resizeToAvoidBottomInset,
+            bool primary,
+            bool extendBody,
+            bool extendBodyBehindAppBar,
+            Color? drawerScrimColor,
+            double? drawerEdgeDragWidth,
+            bool drawerEnableOpenDragGesture,
+            bool endDrawerEnableOpenDragGesture,
+            String? restorationId)
+        scaffold,
+    required TResult Function(Key? key, Widget? child, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, bool mini, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback) floatingActionButton,
+    required TResult Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback) floatingActionButtonExtended,
+    required TResult Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor) text,
+    required TResult Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior) container,
+    required TResult Function(Key? key, double? width, double? height, Widget? child) sizedBox,
+    required TResult Function(Key? key, double? widthFactor, double? heightFactor, Widget child) center,
+    required TResult Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection) icon,
+    required TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children) column,
+    required TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children) row,
+    required TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue) circularProgressIndicator,
+    required TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue) linearProgressIndicator,
+    required TResult Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color) divider,
+    required TResult Function(Key? key, Color? backgroundColor, bool extended, Widget? leading, Widget? trailing, List<NavigationRailDestination> destinations, int? selectedIndex, IntSelectionCallback? onDestinationSelected, double? elevation, double? groupAlignment, NavigationRailLabelType? labelType, TextStyle? unselectedLabelTextStyle, TextStyle? selectedLabelTextStyle, IconThemeData? unselectedIconTheme, IconThemeData? selectedIconTheme, double? minWidth, double? minExtendedWidth, bool? useIndicator, Color? indicatorColor, ShapeBorder? indicatorShape) navigationRail,
+    required TResult Function(Key? key, Duration? animationDuration, int selectedIndex, List<Widget> destinations, IntSelectionCallback? onDestinationSelected, Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, Color? indicatorColor, ShapeBorder? indicatorShape, double? height, NavigationDestinationLabelBehavior? labelBehavior) navigationBar,
+    required TResult Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration) defaultTabController,
+    required TResult Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child) tab,
+    required TResult Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior) tabBarView,
+    required TResult Function(Key? key, Axis scrollDirection, bool reverse, bool? primary, ScrollPhysics? physics, bool shrinkWrap, Key? center, double anchor, double? cacheExtent, List<Sliver> slivers, int? semanticChildCount, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior, String? restorationId, Clip clipBehavior) customScrollView,
+    required TResult Function(Key? key, bool? value, bool tristate, FormBoolField? field, MouseCursor? mouseCursor, Color? activeColor, MaterialStateProperty? fillColor, Color? checkColor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, MaterialTapTargetSize? materialTapTargetSize, VisualDensity? visualDensity, bool autofocus, ShapeBorder? shape, BorderSide? side, bool isError) checkbox,
+    required TResult Function(Key? key, FormStringField? field, List<DropdownMenuItem> items, String? value, Widget? hint, Widget? disabledHint, Callback? onTap, int elevation, TextStyle? style, Widget? icon, Color? iconDisabledColor, Color? iconEnabledColor, double iconSize, bool isDense, bool isExpanded, double? itemHeight, Color? focusColor, bool autofocus, Color? dropdownColor, InputDecoration? decoration, Map<String, String>? validatorMessages, AutovalidateMode? autovalidateMode, double? menuMaxHeight, bool? enableFeedback, Alignment alignment, BorderRadius? borderRadius) dropdownButtonFormField,
+    required TResult Function(Key? key, List<PopupMenuEntry> items, String? initialValue, Callback? onOpened, FormStringField? field, Callback? onCanceled, String? tooltip, double? elevation, Color? shadowColor, Color? surfaceTintColor, EdgeInsets padding, Widget? child, double? splashRadius, Widget? icon, double? iconSize, Offset offset, bool enabled, ShapeBorder? shape, Color? color, bool? enableFeedback, BoxConstraints? constraints, PopupMenuPosition? position, Clip clipBehavior) popupMenuButton,
+    required TResult Function(Key? key, Widget icon, Widget? selectedIcon, String label, String? tooltip) navigationDestination,
+    required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme) actionChip,
+    required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) filterChip,
+    required TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder) inputChip,
+    required TResult Function(Key? key, bool value, BoolSelectionCallback onChanged, Color? activeColor, Color? activeTrackColor, Color? inactiveThumbColor, Color? inactiveTrackColor, ImageProvider? activeThumbImage, ImageProvider? inactiveThumbImage, MaterialStateProperty? thumbColor, MaterialStateProperty? trackColor, MaterialStateProperty? trackOutlineColor, MaterialTapTargetSize? materialTapTargetSize, DragStartBehavior dragStartBehavior, MouseCursor? mouseCursor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, BoolSelectionCallback? onFocusChange, bool autofocus) materialSwitch,
+  }) {
+    return materialSwitch(
+        key,
+        value,
+        onChanged,
+        activeColor,
+        activeTrackColor,
+        inactiveThumbColor,
+        inactiveTrackColor,
+        activeThumbImage,
+        inactiveThumbImage,
+        thumbColor,
+        trackColor,
+        trackOutlineColor,
+        materialTapTargetSize,
+        dragStartBehavior,
+        mouseCursor,
+        focusColor,
+        hoverColor,
+        overlayColor,
+        splashRadius,
+        onFocusChange,
+        autofocus);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(
+            Key? key,
+            Color? color,
+            Color? shadowColor,
+            Color? surfaceTintColor,
+            double? elevation,
+            ShapeBorder? shape,
+            bool borderOnForeground,
+            EdgeInsets? margin,
+            Clip? clipBehavior,
+            Widget? child,
+            bool semanticContainer)?
+        card,
+    TResult? Function(
+            Key? key,
+            Callback? onPressed,
+            Callback? onLongPress,
+            bool autofocus,
+            Clip clipBehavior,
+            Widget child,
+            ButtonStyle? style)?
+        elevatedButton,
+    TResult? Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        filledButton,
+    TResult? Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        filledTonalButton,
+    TResult? Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        outlinedButton,
+    TResult? Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        textButton,
+    TResult? Function(
+            Key? key,
+            double? iconSize,
+            VisualDensity? visualDensity,
+            EdgeInsets? padding,
+            Alignment? alignment,
+            double? splashRadius,
+            Color? color,
+            Color? focusColor,
+            Color? hoverColor,
+            Color? highlightColor,
+            Color? splashColor,
+            Color? disabledColor,
+            Callback onPressed,
+            MouseCursor? mouseCursor,
+            bool autofocus,
+            String? tooltip,
+            bool? enableFeedback,
+            BoxConstraints? constraints,
+            bool? isSelected,
+            Widget? selectedIcon,
+            Widget icon)?
+        iconButton,
+    TResult? Function(
+            Key? key,
+            PreferredSizeWidget? appBar,
+            Widget? body,
+            Widget? floatingActionButton,
+            FloatingActionButtonLocation? floatingActionButtonLocation,
+            List<Widget>? persistentFooterButtons,
+            Alignment persistentFooterAlignment,
+            Widget? drawer,
+            Widget? endDrawer,
+            Widget? bottomNavigationBar,
+            Widget? bottomSheet,
+            Color? backgroundColor,
+            bool? resizeToAvoidBottomInset,
+            bool primary,
+            bool extendBody,
+            bool extendBodyBehindAppBar,
+            Color? drawerScrimColor,
+            double? drawerEdgeDragWidth,
+            bool drawerEnableOpenDragGesture,
+            bool endDrawerEnableOpenDragGesture,
+            String? restorationId)?
+        scaffold,
+    TResult? Function(Key? key, Widget? child, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, bool mini, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButton,
+    TResult? Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButtonExtended,
+    TResult? Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor)? text,
+    TResult? Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior)? container,
+    TResult? Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
+    TResult? Function(Key? key, double? widthFactor, double? heightFactor, Widget child)? center,
+    TResult? Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection)? icon,
+    TResult? Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? column,
+    TResult? Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? row,
+    TResult? Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue)? circularProgressIndicator,
+    TResult? Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue)? linearProgressIndicator,
+    TResult? Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color)? divider,
+    TResult? Function(Key? key, Color? backgroundColor, bool extended, Widget? leading, Widget? trailing, List<NavigationRailDestination> destinations, int? selectedIndex, IntSelectionCallback? onDestinationSelected, double? elevation, double? groupAlignment, NavigationRailLabelType? labelType, TextStyle? unselectedLabelTextStyle, TextStyle? selectedLabelTextStyle, IconThemeData? unselectedIconTheme, IconThemeData? selectedIconTheme, double? minWidth, double? minExtendedWidth, bool? useIndicator, Color? indicatorColor, ShapeBorder? indicatorShape)? navigationRail,
+    TResult? Function(Key? key, Duration? animationDuration, int selectedIndex, List<Widget> destinations, IntSelectionCallback? onDestinationSelected, Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, Color? indicatorColor, ShapeBorder? indicatorShape, double? height, NavigationDestinationLabelBehavior? labelBehavior)? navigationBar,
+    TResult? Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration)? defaultTabController,
+    TResult? Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child)? tab,
+    TResult? Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior)? tabBarView,
+    TResult? Function(Key? key, Axis scrollDirection, bool reverse, bool? primary, ScrollPhysics? physics, bool shrinkWrap, Key? center, double anchor, double? cacheExtent, List<Sliver> slivers, int? semanticChildCount, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior, String? restorationId, Clip clipBehavior)? customScrollView,
+    TResult? Function(Key? key, bool? value, bool tristate, FormBoolField? field, MouseCursor? mouseCursor, Color? activeColor, MaterialStateProperty? fillColor, Color? checkColor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, MaterialTapTargetSize? materialTapTargetSize, VisualDensity? visualDensity, bool autofocus, ShapeBorder? shape, BorderSide? side, bool isError)? checkbox,
+    TResult? Function(Key? key, FormStringField? field, List<DropdownMenuItem> items, String? value, Widget? hint, Widget? disabledHint, Callback? onTap, int elevation, TextStyle? style, Widget? icon, Color? iconDisabledColor, Color? iconEnabledColor, double iconSize, bool isDense, bool isExpanded, double? itemHeight, Color? focusColor, bool autofocus, Color? dropdownColor, InputDecoration? decoration, Map<String, String>? validatorMessages, AutovalidateMode? autovalidateMode, double? menuMaxHeight, bool? enableFeedback, Alignment alignment, BorderRadius? borderRadius)? dropdownButtonFormField,
+    TResult? Function(Key? key, List<PopupMenuEntry> items, String? initialValue, Callback? onOpened, FormStringField? field, Callback? onCanceled, String? tooltip, double? elevation, Color? shadowColor, Color? surfaceTintColor, EdgeInsets padding, Widget? child, double? splashRadius, Widget? icon, double? iconSize, Offset offset, bool enabled, ShapeBorder? shape, Color? color, bool? enableFeedback, BoxConstraints? constraints, PopupMenuPosition? position, Clip clipBehavior)? popupMenuButton,
+    TResult? Function(Key? key, Widget icon, Widget? selectedIcon, String label, String? tooltip)? navigationDestination,
+    TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
+    TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
+    TResult? Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
+    TResult? Function(Key? key, bool value, BoolSelectionCallback onChanged, Color? activeColor, Color? activeTrackColor, Color? inactiveThumbColor, Color? inactiveTrackColor, ImageProvider? activeThumbImage, ImageProvider? inactiveThumbImage, MaterialStateProperty? thumbColor, MaterialStateProperty? trackColor, MaterialStateProperty? trackOutlineColor, MaterialTapTargetSize? materialTapTargetSize, DragStartBehavior dragStartBehavior, MouseCursor? mouseCursor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, BoolSelectionCallback? onFocusChange, bool autofocus)? materialSwitch,
+  }) {
+    return materialSwitch?.call(
+        key,
+        value,
+        onChanged,
+        activeColor,
+        activeTrackColor,
+        inactiveThumbColor,
+        inactiveTrackColor,
+        activeThumbImage,
+        inactiveThumbImage,
+        thumbColor,
+        trackColor,
+        trackOutlineColor,
+        materialTapTargetSize,
+        dragStartBehavior,
+        mouseCursor,
+        focusColor,
+        hoverColor,
+        overlayColor,
+        splashRadius,
+        onFocusChange,
+        autofocus);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(
+            Key? key,
+            Color? color,
+            Color? shadowColor,
+            Color? surfaceTintColor,
+            double? elevation,
+            ShapeBorder? shape,
+            bool borderOnForeground,
+            EdgeInsets? margin,
+            Clip? clipBehavior,
+            Widget? child,
+            bool semanticContainer)?
+        card,
+    TResult Function(
+            Key? key,
+            Callback? onPressed,
+            Callback? onLongPress,
+            bool autofocus,
+            Clip clipBehavior,
+            Widget child,
+            ButtonStyle? style)?
+        elevatedButton,
+    TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        filledButton,
+    TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        filledTonalButton,
+    TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        outlinedButton,
+    TResult Function(Key? key, Callback? onPressed, Callback? onLongPress, bool autofocus, Clip clipBehavior, Widget child)?
+        textButton,
+    TResult Function(
+            Key? key,
+            double? iconSize,
+            VisualDensity? visualDensity,
+            EdgeInsets? padding,
+            Alignment? alignment,
+            double? splashRadius,
+            Color? color,
+            Color? focusColor,
+            Color? hoverColor,
+            Color? highlightColor,
+            Color? splashColor,
+            Color? disabledColor,
+            Callback onPressed,
+            MouseCursor? mouseCursor,
+            bool autofocus,
+            String? tooltip,
+            bool? enableFeedback,
+            BoxConstraints? constraints,
+            bool? isSelected,
+            Widget? selectedIcon,
+            Widget icon)?
+        iconButton,
+    TResult Function(
+            Key? key,
+            PreferredSizeWidget? appBar,
+            Widget? body,
+            Widget? floatingActionButton,
+            FloatingActionButtonLocation? floatingActionButtonLocation,
+            List<Widget>? persistentFooterButtons,
+            Alignment persistentFooterAlignment,
+            Widget? drawer,
+            Widget? endDrawer,
+            Widget? bottomNavigationBar,
+            Widget? bottomSheet,
+            Color? backgroundColor,
+            bool? resizeToAvoidBottomInset,
+            bool primary,
+            bool extendBody,
+            bool extendBodyBehindAppBar,
+            Color? drawerScrimColor,
+            double? drawerEdgeDragWidth,
+            bool drawerEnableOpenDragGesture,
+            bool endDrawerEnableOpenDragGesture,
+            String? restorationId)?
+        scaffold,
+    TResult Function(Key? key, Widget? child, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, bool mini, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButton,
+    TResult Function(Key? key, Widget label, Widget? icon, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, Callback? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior, bool autofocus, MaterialTapTargetSize? materialTapTargetSize, bool isExtended, bool? enableFeedback)? floatingActionButtonExtended,
+    TResult Function(String data, Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor)? text,
+    TResult Function(Key? key, Alignment? alignment, EdgeInsets? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsets? margin, @matrixConverter Matrix4? transform, Alignment? transformAlignment, Widget? child, Clip clipBehavior)? container,
+    TResult Function(Key? key, double? width, double? height, Widget? child)? sizedBox,
+    TResult Function(Key? key, double? widthFactor, double? heightFactor, Widget child)? center,
+    TResult Function(IconData? icon, Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection)? icon,
+    TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? column,
+    TResult Function(Key? key, MainAxisAlignment mainAxisAlignment, MainAxisSize mainAxisSize, CrossAxisAlignment crossAxisAlignment, TextDirection? textDirection, VerticalDirection verticalDirection, TextBaseline? textBaseline, List<Widget> children)? row,
+    TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double strokeWidth, String? semanticsLabel, String? semanticsValue)? circularProgressIndicator,
+    TResult Function(Key? key, double? value, Color? backgroundColor, Color? color, double? minHeight, String? semanticsLabel, String? semanticsValue)? linearProgressIndicator,
+    TResult Function(Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color)? divider,
+    TResult Function(Key? key, Color? backgroundColor, bool extended, Widget? leading, Widget? trailing, List<NavigationRailDestination> destinations, int? selectedIndex, IntSelectionCallback? onDestinationSelected, double? elevation, double? groupAlignment, NavigationRailLabelType? labelType, TextStyle? unselectedLabelTextStyle, TextStyle? selectedLabelTextStyle, IconThemeData? unselectedIconTheme, IconThemeData? selectedIconTheme, double? minWidth, double? minExtendedWidth, bool? useIndicator, Color? indicatorColor, ShapeBorder? indicatorShape)? navigationRail,
+    TResult Function(Key? key, Duration? animationDuration, int selectedIndex, List<Widget> destinations, IntSelectionCallback? onDestinationSelected, Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, Color? indicatorColor, ShapeBorder? indicatorShape, double? height, NavigationDestinationLabelBehavior? labelBehavior)? navigationBar,
+    TResult Function(Key? key, int length, int initialIndex, Widget child, Duration? animationDuration)? defaultTabController,
+    TResult Function(Key? key, String? text, Widget? icon, EdgeInsets iconMargin, double? height, Widget? child)? tab,
+    TResult Function(Key? key, List<Widget> children, ScrollPhysics? physics, DragStartBehavior dragStartBehavior, double viewportFraction, Clip clipBehavior)? tabBarView,
+    TResult Function(Key? key, Axis scrollDirection, bool reverse, bool? primary, ScrollPhysics? physics, bool shrinkWrap, Key? center, double anchor, double? cacheExtent, List<Sliver> slivers, int? semanticChildCount, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior, String? restorationId, Clip clipBehavior)? customScrollView,
+    TResult Function(Key? key, bool? value, bool tristate, FormBoolField? field, MouseCursor? mouseCursor, Color? activeColor, MaterialStateProperty? fillColor, Color? checkColor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, MaterialTapTargetSize? materialTapTargetSize, VisualDensity? visualDensity, bool autofocus, ShapeBorder? shape, BorderSide? side, bool isError)? checkbox,
+    TResult Function(Key? key, FormStringField? field, List<DropdownMenuItem> items, String? value, Widget? hint, Widget? disabledHint, Callback? onTap, int elevation, TextStyle? style, Widget? icon, Color? iconDisabledColor, Color? iconEnabledColor, double iconSize, bool isDense, bool isExpanded, double? itemHeight, Color? focusColor, bool autofocus, Color? dropdownColor, InputDecoration? decoration, Map<String, String>? validatorMessages, AutovalidateMode? autovalidateMode, double? menuMaxHeight, bool? enableFeedback, Alignment alignment, BorderRadius? borderRadius)? dropdownButtonFormField,
+    TResult Function(Key? key, List<PopupMenuEntry> items, String? initialValue, Callback? onOpened, FormStringField? field, Callback? onCanceled, String? tooltip, double? elevation, Color? shadowColor, Color? surfaceTintColor, EdgeInsets padding, Widget? child, double? splashRadius, Widget? icon, double? iconSize, Offset offset, bool enabled, ShapeBorder? shape, Color? color, bool? enableFeedback, BoxConstraints? constraints, PopupMenuPosition? position, Clip clipBehavior)? popupMenuButton,
+    TResult Function(Key? key, Widget icon, Widget? selectedIcon, String label, String? tooltip)? navigationDestination,
+    TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, Callback? onPressed, double? pressElevation, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, Color? disabledColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme)? actionChip,
+    TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, BoolSelectionCallback onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? filterChip,
+    TResult Function(Key? key, Widget? avatar, Widget label, TextStyle? labelStyle, EdgeInsets? labelPadding, bool selected, bool isEnabled, BoolSelectionCallback? onSelected, Widget? deleteIcon, Callback? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, Callback? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, ShapeBorder? shape, Clip clipBehavior, bool autofocus, Color? backgroundColor, EdgeInsets? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder)? inputChip,
+    TResult Function(Key? key, bool value, BoolSelectionCallback onChanged, Color? activeColor, Color? activeTrackColor, Color? inactiveThumbColor, Color? inactiveTrackColor, ImageProvider? activeThumbImage, ImageProvider? inactiveThumbImage, MaterialStateProperty? thumbColor, MaterialStateProperty? trackColor, MaterialStateProperty? trackOutlineColor, MaterialTapTargetSize? materialTapTargetSize, DragStartBehavior dragStartBehavior, MouseCursor? mouseCursor, Color? focusColor, Color? hoverColor, MaterialStateProperty? overlayColor, double? splashRadius, BoolSelectionCallback? onFocusChange, bool autofocus)? materialSwitch,
+    required TResult orElse(),
+  }) {
+    if (materialSwitch != null) {
+      return materialSwitch(
+          key,
+          value,
+          onChanged,
+          activeColor,
+          activeTrackColor,
+          inactiveThumbColor,
+          inactiveTrackColor,
+          activeThumbImage,
+          inactiveThumbImage,
+          thumbColor,
+          trackColor,
+          trackOutlineColor,
+          materialTapTargetSize,
+          dragStartBehavior,
+          mouseCursor,
+          focusColor,
+          hoverColor,
+          overlayColor,
+          splashRadius,
+          onFocusChange,
+          autofocus);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(Card value) card,
+    required TResult Function(ElevatedButton value) elevatedButton,
+    required TResult Function(FilledButton value) filledButton,
+    required TResult Function(FilledTonalButton value) filledTonalButton,
+    required TResult Function(OutlinedButton value) outlinedButton,
+    required TResult Function(TextButton value) textButton,
+    required TResult Function(IconButton value) iconButton,
+    required TResult Function(Scaffold value) scaffold,
+    required TResult Function(FloatingActionButton value) floatingActionButton,
+    required TResult Function(FloatingActionButtonExtended value)
+        floatingActionButtonExtended,
+    required TResult Function(Text value) text,
+    required TResult Function(Container value) container,
+    required TResult Function(SizedBox value) sizedBox,
+    required TResult Function(Center value) center,
+    required TResult Function(Icon value) icon,
+    required TResult Function(Column value) column,
+    required TResult Function(Row value) row,
+    required TResult Function(CircularProgressIndicator value)
+        circularProgressIndicator,
+    required TResult Function(LinearProgressIndicator value)
+        linearProgressIndicator,
+    required TResult Function(Divider value) divider,
+    required TResult Function(NavigationRail value) navigationRail,
+    required TResult Function(NavigationBar value) navigationBar,
+    required TResult Function(DefaultTabController value) defaultTabController,
+    required TResult Function(Tab value) tab,
+    required TResult Function(TabBarView value) tabBarView,
+    required TResult Function(CustomScrollView value) customScrollView,
+    required TResult Function(Checkbox value) checkbox,
+    required TResult Function(DropdownButtonFormField value)
+        dropdownButtonFormField,
+    required TResult Function(PopupMenuButton value) popupMenuButton,
+    required TResult Function(NavigationDestination value)
+        navigationDestination,
+    required TResult Function(ActionChip value) actionChip,
+    required TResult Function(FilterChip value) filterChip,
+    required TResult Function(InputChip value) inputChip,
+    required TResult Function(Switch value) materialSwitch,
+  }) {
+    return materialSwitch(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(Card value)? card,
+    TResult? Function(ElevatedButton value)? elevatedButton,
+    TResult? Function(FilledButton value)? filledButton,
+    TResult? Function(FilledTonalButton value)? filledTonalButton,
+    TResult? Function(OutlinedButton value)? outlinedButton,
+    TResult? Function(TextButton value)? textButton,
+    TResult? Function(IconButton value)? iconButton,
+    TResult? Function(Scaffold value)? scaffold,
+    TResult? Function(FloatingActionButton value)? floatingActionButton,
+    TResult? Function(FloatingActionButtonExtended value)?
+        floatingActionButtonExtended,
+    TResult? Function(Text value)? text,
+    TResult? Function(Container value)? container,
+    TResult? Function(SizedBox value)? sizedBox,
+    TResult? Function(Center value)? center,
+    TResult? Function(Icon value)? icon,
+    TResult? Function(Column value)? column,
+    TResult? Function(Row value)? row,
+    TResult? Function(CircularProgressIndicator value)?
+        circularProgressIndicator,
+    TResult? Function(LinearProgressIndicator value)? linearProgressIndicator,
+    TResult? Function(Divider value)? divider,
+    TResult? Function(NavigationRail value)? navigationRail,
+    TResult? Function(NavigationBar value)? navigationBar,
+    TResult? Function(DefaultTabController value)? defaultTabController,
+    TResult? Function(Tab value)? tab,
+    TResult? Function(TabBarView value)? tabBarView,
+    TResult? Function(CustomScrollView value)? customScrollView,
+    TResult? Function(Checkbox value)? checkbox,
+    TResult? Function(DropdownButtonFormField value)? dropdownButtonFormField,
+    TResult? Function(PopupMenuButton value)? popupMenuButton,
+    TResult? Function(NavigationDestination value)? navigationDestination,
+    TResult? Function(ActionChip value)? actionChip,
+    TResult? Function(FilterChip value)? filterChip,
+    TResult? Function(InputChip value)? inputChip,
+    TResult? Function(Switch value)? materialSwitch,
+  }) {
+    return materialSwitch?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(Card value)? card,
+    TResult Function(ElevatedButton value)? elevatedButton,
+    TResult Function(FilledButton value)? filledButton,
+    TResult Function(FilledTonalButton value)? filledTonalButton,
+    TResult Function(OutlinedButton value)? outlinedButton,
+    TResult Function(TextButton value)? textButton,
+    TResult Function(IconButton value)? iconButton,
+    TResult Function(Scaffold value)? scaffold,
+    TResult Function(FloatingActionButton value)? floatingActionButton,
+    TResult Function(FloatingActionButtonExtended value)?
+        floatingActionButtonExtended,
+    TResult Function(Text value)? text,
+    TResult Function(Container value)? container,
+    TResult Function(SizedBox value)? sizedBox,
+    TResult Function(Center value)? center,
+    TResult Function(Icon value)? icon,
+    TResult Function(Column value)? column,
+    TResult Function(Row value)? row,
+    TResult Function(CircularProgressIndicator value)?
+        circularProgressIndicator,
+    TResult Function(LinearProgressIndicator value)? linearProgressIndicator,
+    TResult Function(Divider value)? divider,
+    TResult Function(NavigationRail value)? navigationRail,
+    TResult Function(NavigationBar value)? navigationBar,
+    TResult Function(DefaultTabController value)? defaultTabController,
+    TResult Function(Tab value)? tab,
+    TResult Function(TabBarView value)? tabBarView,
+    TResult Function(CustomScrollView value)? customScrollView,
+    TResult Function(Checkbox value)? checkbox,
+    TResult Function(DropdownButtonFormField value)? dropdownButtonFormField,
+    TResult Function(PopupMenuButton value)? popupMenuButton,
+    TResult Function(NavigationDestination value)? navigationDestination,
+    TResult Function(ActionChip value)? actionChip,
+    TResult Function(FilterChip value)? filterChip,
+    TResult Function(InputChip value)? inputChip,
+    TResult Function(Switch value)? materialSwitch,
+    required TResult orElse(),
+  }) {
+    if (materialSwitch != null) {
+      return materialSwitch(this);
+    }
+    return orElse();
+  }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$SwitchToJson(
+      this,
+    );
+  }
+}
+
+abstract class Switch implements Widget {
+  const factory Switch(
+      {final Key? key,
+      required final bool value,
+      required final BoolSelectionCallback onChanged,
+      final Color? activeColor,
+      final Color? activeTrackColor,
+      final Color? inactiveThumbColor,
+      final Color? inactiveTrackColor,
+      final ImageProvider? activeThumbImage,
+      final ImageProvider? inactiveThumbImage,
+      final MaterialStateProperty? thumbColor,
+      final MaterialStateProperty? trackColor,
+      final MaterialStateProperty? trackOutlineColor,
+      final MaterialTapTargetSize? materialTapTargetSize,
+      final DragStartBehavior dragStartBehavior,
+      final MouseCursor? mouseCursor,
+      final Color? focusColor,
+      final Color? hoverColor,
+      final MaterialStateProperty? overlayColor,
+      final double? splashRadius,
+      final BoolSelectionCallback? onFocusChange,
+      final bool autofocus}) = _$Switch;
+
+  factory Switch.fromJson(Map<String, dynamic> json) = _$Switch.fromJson;
+
+  @override
+  Key? get key;
+  bool get value;
+  BoolSelectionCallback get onChanged;
+  Color? get activeColor;
+  Color? get activeTrackColor;
+  Color? get inactiveThumbColor;
+  Color? get inactiveTrackColor;
+  ImageProvider?
+      get activeThumbImage; // ImageErrorListener? onActiveThumbImageError,
+  ImageProvider?
+      get inactiveThumbImage; //ImageErrorListener onInactiveThumbImageError,
+  MaterialStateProperty? get thumbColor;
+  MaterialStateProperty? get trackColor;
+  MaterialStateProperty?
+      get trackOutlineColor; // MaterialStateProperty? trackOutlineWidth,
+// MaterialStateProperty? thumbIcon,
+  MaterialTapTargetSize? get materialTapTargetSize;
+  DragStartBehavior get dragStartBehavior;
+  MouseCursor? get mouseCursor;
+  Color? get focusColor;
+  Color? get hoverColor;
+  MaterialStateProperty? get overlayColor;
+  double? get splashRadius; //FocusNode? focusNode,
+  BoolSelectionCallback? get onFocusChange;
+  bool get autofocus;
+  @override
+  @JsonKey(ignore: true)
+  _$$SwitchCopyWith<_$Switch> get copyWith =>
       throw _privateConstructorUsedError;
 }
