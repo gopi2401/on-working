@@ -1,0 +1,39 @@
+    {
+        "body": {
+            "child": {
+                "mainAxisAlignment": "center",
+                "mainAxisSize": "max",
+                "crossAxisAlignment": "center",
+                "verticalDirection": "down",
+                "children": [
+                    {
+                        "child": {
+                            "menuChildren": [
+                                {
+                                    "child": {
+                                        "data": "Menu 1",
+                                        "runtimeType": "text"
+                                    },
+                                    "runtimeType": "menuItemButton"
+                                },
+                                {
+                                    "child": {
+                                        "data": "Menu 2",
+                                        "runtimeType": "text"
+                                    },
+                                    "runtimeType": "menuItemButton"
+                                }
+                            ],
+                            "runtimeType": "menuAnchor"
+                        },
+                        "width": 200,
+                        "height": 200,
+                        "runtimeType": "sizedBox"
+                    }
+                ],
+                "runtimeType": "column"
+            },
+            "runtimeType": "center"
+        },
+        "runtimeType": "scaffold"
+    }

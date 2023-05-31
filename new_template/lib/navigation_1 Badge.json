@@ -1,0 +1,85 @@
+{
+    "body": {
+        "child": {
+            "mainAxisAlignment": "center",
+            "mainAxisSize": "max",
+            "crossAxisAlignment": "center",
+            "verticalDirection": "down",
+            "children": [],
+            "runtimeType": "column"
+        },
+        "runtimeType": "center"
+    },
+    "bottomNavigationBar": {
+        "destinations": [
+            {
+                "icon": {
+                    "child": {
+                        "icon": {
+                            "codePoint": 57415,
+                            "fontFamily": "MaterialIcons",
+                            "matchTextDirection": false
+                        },
+                        "runtimeType": "icon"
+                    },
+                    "count": 1000,
+                    "runtimeType": "badgeCount"
+                },
+                "label": "Mail",
+                "runtimeType": "navigationDestination"
+            },
+            {
+                "icon": {
+                    "child": {
+                        "icon": {
+                            "codePoint": 57415,
+                            "fontFamily": "MaterialIcons",
+                            "matchTextDirection": false
+                        },
+                        "runtimeType": "icon"
+                    },
+                    "label": {
+                        "data": "10",
+                        "runtimeType": "text"
+                    },
+                    "runtimeType": "badge"
+                },
+                "label": "Chat",
+                "runtimeType": "navigationDestination"
+            },
+            {
+                "icon": {
+                    "child": {
+                        "icon": {
+                            "codePoint": 57415,
+                            "fontFamily": "MaterialIcons",
+                            "matchTextDirection": false
+                        },
+                        "runtimeType": "icon"
+                    },
+                    "runtimeType": "badge"
+                },
+                "label": "Rooms",
+                "runtimeType": "navigationDestination"
+            },
+            {
+                "icon": {
+                    "child": {
+                        "icon": {
+                            "codePoint": 57415,
+                            "fontFamily": "MaterialIcons",
+                            "matchTextDirection": false
+                        },
+                        "runtimeType": "icon"
+                    },
+                    "count": 3,
+                    "runtimeType": "badgeCount"
+                },
+                "label": "Meet",
+                "runtimeType": "navigationDestination"
+            }
+        ],
+        "runtimeType": "navigationBar"
+    },
+    "runtimeType": "scaffold"
+}

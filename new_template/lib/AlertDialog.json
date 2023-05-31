@@ -1,0 +1,53 @@
+    {
+        "body": {
+            "child": {
+                "mainAxisAlignment": "center",
+                "mainAxisSize": "max",
+                "crossAxisAlignment": "center",
+                "verticalDirection": "down",
+                "children": [
+                    {
+                        "child": {
+                            "title": {
+                                "data": "What is a dialog?",
+                                "runtimeType": "text"
+                            },
+                            "content": {
+                                "data": "A dialog is a type of modal window that appears in front of app content to provide critical information, or prompt for a decision to be made.?",
+                                "runtimeType": "text"
+                            },
+                            "actions": [
+                                {
+                                    "onPressed": {
+                                        "runtimeType": "empty"
+                                    },
+                                    "child": {
+                                        "data": "Okay",
+                                        "runtimeType": "text"
+                                    },
+                                    "runtimeType": "textButton"
+                                },
+                                {
+                                    "onPressed": {
+                                        "runtimeType": "empty"
+                                    },
+                                    "child": {
+                                        "data": "Dismiss",
+                                        "runtimeType": "text"
+                                    },
+                                    "runtimeType": "filledButton"
+                                }
+                            ],
+                            "runtimeType": "alertDialog"
+                        },
+                        "width": 700,
+                        "height": 400,
+                        "runtimeType": "sizedBox"
+                    }
+                ],
+                "runtimeType": "column"
+            },
+            "runtimeType": "center"
+        },
+        "runtimeType": "scaffold"
+    }

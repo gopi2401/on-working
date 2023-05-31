@@ -1880,6 +1880,154 @@ Map<String, dynamic> _$$InputChipToJson(_$InputChip instance) =>
       'runtimeType': instance.$type,
     };
 
+_$MenuAnchor _$$MenuAnchorFromJson(Map<String, dynamic> json) => _$MenuAnchor(
+      key: json['key'] == null
+          ? null
+          : Key.fromJson(json['key'] as Map<String, dynamic>),
+      alignmentOffset: json['alignmentOffset'] == null
+          ? Offset.zero
+          : Offset.fromJson(json['alignmentOffset'] as Map<String, dynamic>),
+      clipBehavior: $enumDecodeNullable(_$ClipEnumMap, json['clipBehavior']) ??
+          Clip.hardEdge,
+      anchorTapClosesMenu: json['anchorTapClosesMenu'] as bool? ?? false,
+      onOpen: json['onOpen'] == null
+          ? null
+          : Callback.fromJson(json['onOpen'] as Map<String, dynamic>),
+      onClose: json['onClose'] == null
+          ? null
+          : Callback.fromJson(json['onClose'] as Map<String, dynamic>),
+      crossAxisUnconstrained: json['crossAxisUnconstrained'] as bool? ?? true,
+      menuChildren: (json['menuChildren'] as List<dynamic>)
+          .map((e) => Widget.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      child: json['child'] == null
+          ? null
+          : Widget.fromJson(json['child'] as Map<String, dynamic>),
+      $type: json['runtimeType'] as String?,
+    );
+
+Map<String, dynamic> _$$MenuAnchorToJson(_$MenuAnchor instance) =>
+    <String, dynamic>{
+      'key': instance.key,
+      'alignmentOffset': instance.alignmentOffset,
+      'clipBehavior': _$ClipEnumMap[instance.clipBehavior]!,
+      'anchorTapClosesMenu': instance.anchorTapClosesMenu,
+      'onOpen': instance.onOpen,
+      'onClose': instance.onClose,
+      'crossAxisUnconstrained': instance.crossAxisUnconstrained,
+      'menuChildren': instance.menuChildren,
+      'child': instance.child,
+      'runtimeType': instance.$type,
+    };
+
+_$SubmenuButton _$$SubmenuButtonFromJson(Map<String, dynamic> json) =>
+    _$SubmenuButton(
+      key: json['key'] == null
+          ? null
+          : Key.fromJson(json['key'] as Map<String, dynamic>),
+      onHover: json['onHover'] == null
+          ? null
+          : BoolSelectionCallback.fromJson(
+              json['onHover'] as Map<String, dynamic>),
+      onFocusChange: json['onFocusChange'] == null
+          ? null
+          : BoolSelectionCallback.fromJson(
+              json['onFocusChange'] as Map<String, dynamic>),
+      onOpen: json['onOpen'] == null
+          ? null
+          : Callback.fromJson(json['onOpen'] as Map<String, dynamic>),
+      onClose: json['onClose'] == null
+          ? null
+          : Callback.fromJson(json['onClose'] as Map<String, dynamic>),
+      style: json['style'] == null
+          ? null
+          : ButtonStyle.fromJson(json['style'] as Map<String, dynamic>),
+      alignmentOffset: json['alignmentOffset'] == null
+          ? null
+          : Offset.fromJson(json['alignmentOffset'] as Map<String, dynamic>),
+      clipBehavior: $enumDecodeNullable(_$ClipEnumMap, json['clipBehavior']) ??
+          Clip.hardEdge,
+      leadingIcon: json['leadingIcon'] == null
+          ? null
+          : Widget.fromJson(json['leadingIcon'] as Map<String, dynamic>),
+      trailingIcon: json['trailingIcon'] == null
+          ? null
+          : Widget.fromJson(json['trailingIcon'] as Map<String, dynamic>),
+      menuChildren: (json['menuChildren'] as List<dynamic>)
+          .map((e) => Widget.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      child: Widget.fromJson(json['child'] as Map<String, dynamic>),
+      $type: json['runtimeType'] as String?,
+    );
+
+Map<String, dynamic> _$$SubmenuButtonToJson(_$SubmenuButton instance) =>
+    <String, dynamic>{
+      'key': instance.key,
+      'onHover': instance.onHover,
+      'onFocusChange': instance.onFocusChange,
+      'onOpen': instance.onOpen,
+      'onClose': instance.onClose,
+      'style': instance.style,
+      'alignmentOffset': instance.alignmentOffset,
+      'clipBehavior': _$ClipEnumMap[instance.clipBehavior]!,
+      'leadingIcon': instance.leadingIcon,
+      'trailingIcon': instance.trailingIcon,
+      'menuChildren': instance.menuChildren,
+      'child': instance.child,
+      'runtimeType': instance.$type,
+    };
+
+_$MenuItemButton _$$MenuItemButtonFromJson(Map<String, dynamic> json) =>
+    _$MenuItemButton(
+      key: json['key'] == null
+          ? null
+          : Key.fromJson(json['key'] as Map<String, dynamic>),
+      onPressed: json['onPressed'] == null
+          ? null
+          : Callback.fromJson(json['onPressed'] as Map<String, dynamic>),
+      onHover: json['onHover'] == null
+          ? null
+          : BoolSelectionCallback.fromJson(
+              json['onHover'] as Map<String, dynamic>),
+      requestFocusOnHover: json['requestFocusOnHover'] as bool? ?? true,
+      onFocusChange: json['onFocusChange'] == null
+          ? null
+          : BoolSelectionCallback.fromJson(
+              json['onFocusChange'] as Map<String, dynamic>),
+      style: json['style'] == null
+          ? null
+          : ButtonStyle.fromJson(json['style'] as Map<String, dynamic>),
+      clipBehavior:
+          $enumDecodeNullable(_$ClipEnumMap, json['clipBehavior']) ?? Clip.none,
+      leadingIcon: json['leadingIcon'] == null
+          ? null
+          : Widget.fromJson(json['leadingIcon'] as Map<String, dynamic>),
+      trailingIcon: json['trailingIcon'] == null
+          ? null
+          : Widget.fromJson(json['trailingIcon'] as Map<String, dynamic>),
+      closeOnActivate: json['closeOnActivate'] as bool? ?? true,
+      child: json['child'] == null
+          ? null
+          : Widget.fromJson(json['child'] as Map<String, dynamic>),
+      $type: json['runtimeType'] as String?,
+    );
+
+Map<String, dynamic> _$$MenuItemButtonToJson(_$MenuItemButton instance) =>
+    <String, dynamic>{
+      'key': instance.key,
+      'onPressed': instance.onPressed,
+      'onHover': instance.onHover,
+      'requestFocusOnHover': instance.requestFocusOnHover,
+      'onFocusChange': instance.onFocusChange,
+      'style': instance.style,
+      'clipBehavior': _$ClipEnumMap[instance.clipBehavior]!,
+      'leadingIcon': instance.leadingIcon,
+      'trailingIcon': instance.trailingIcon,
+      'closeOnActivate': instance.closeOnActivate,
+      'child': instance.child,
+      'runtimeType': instance.$type,
+    };
+
 _$Switch _$$SwitchFromJson(Map<String, dynamic> json) => _$Switch(
       key: json['key'] == null
           ? null
@@ -1972,3 +2120,498 @@ Map<String, dynamic> _$$SwitchToJson(_$Switch instance) => <String, dynamic>{
       'autofocus': instance.autofocus,
       'runtimeType': instance.$type,
     };
+
+_$BottomAppBar _$$BottomAppBarFromJson(Map<String, dynamic> json) =>
+    _$BottomAppBar(
+      key: json['key'] == null
+          ? null
+          : Key.fromJson(json['key'] as Map<String, dynamic>),
+      color: json['color'] == null
+          ? null
+          : Color.fromJson(json['color'] as Map<String, dynamic>),
+      elevation: (json['elevation'] as num?)?.toDouble(),
+      clipBehavior:
+          $enumDecodeNullable(_$ClipEnumMap, json['clipBehavior']) ?? Clip.none,
+      notchMargin: (json['notchMargin'] as num?)?.toDouble() ?? 4.0,
+      child: json['child'] == null
+          ? null
+          : Widget.fromJson(json['child'] as Map<String, dynamic>),
+      padding: json['padding'] == null
+          ? null
+          : EdgeInsets.fromJson(json['padding'] as Map<String, dynamic>),
+      surfaceTintColor: json['surfaceTintColor'] == null
+          ? null
+          : Color.fromJson(json['surfaceTintColor'] as Map<String, dynamic>),
+      shadowColor: json['shadowColor'] == null
+          ? null
+          : Color.fromJson(json['shadowColor'] as Map<String, dynamic>),
+      height: (json['height'] as num?)?.toDouble(),
+      $type: json['runtimeType'] as String?,
+    );
+
+Map<String, dynamic> _$$BottomAppBarToJson(_$BottomAppBar instance) =>
+    <String, dynamic>{
+      'key': instance.key,
+      'color': instance.color,
+      'elevation': instance.elevation,
+      'clipBehavior': _$ClipEnumMap[instance.clipBehavior]!,
+      'notchMargin': instance.notchMargin,
+      'child': instance.child,
+      'padding': instance.padding,
+      'surfaceTintColor': instance.surfaceTintColor,
+      'shadowColor': instance.shadowColor,
+      'height': instance.height,
+      'runtimeType': instance.$type,
+    };
+
+_$NavigationDrawer _$$NavigationDrawerFromJson(Map<String, dynamic> json) =>
+    _$NavigationDrawer(
+      key: json['key'] == null
+          ? null
+          : Key.fromJson(json['key'] as Map<String, dynamic>),
+      children: (json['children'] as List<dynamic>)
+          .map((e) => Widget.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      backgroundColor: json['backgroundColor'] == null
+          ? null
+          : Color.fromJson(json['backgroundColor'] as Map<String, dynamic>),
+      shadowColor: json['shadowColor'] == null
+          ? null
+          : Color.fromJson(json['shadowColor'] as Map<String, dynamic>),
+      surfaceTintColor: json['surfaceTintColor'] == null
+          ? null
+          : Color.fromJson(json['surfaceTintColor'] as Map<String, dynamic>),
+      elevation: (json['elevation'] as num?)?.toDouble(),
+      indicatorColor: json['indicatorColor'] == null
+          ? null
+          : Color.fromJson(json['indicatorColor'] as Map<String, dynamic>),
+      indicatorShape: json['indicatorShape'] == null
+          ? null
+          : ShapeBorder.fromJson(
+              json['indicatorShape'] as Map<String, dynamic>),
+      onDestinationSelected: json['onDestinationSelected'] == null
+          ? null
+          : IntSelectionCallback.fromJson(
+              json['onDestinationSelected'] as Map<String, dynamic>),
+      selectedIndex: json['selectedIndex'] as int? ?? 0,
+      tilePadding: json['tilePadding'] == null
+          ? const EdgeInsets.symmetric(horizontal: 12.0)
+          : EdgeInsets.fromJson(json['tilePadding'] as Map<String, dynamic>),
+      $type: json['runtimeType'] as String?,
+    );
+
+Map<String, dynamic> _$$NavigationDrawerToJson(_$NavigationDrawer instance) =>
+    <String, dynamic>{
+      'key': instance.key,
+      'children': instance.children,
+      'backgroundColor': instance.backgroundColor,
+      'shadowColor': instance.shadowColor,
+      'surfaceTintColor': instance.surfaceTintColor,
+      'elevation': instance.elevation,
+      'indicatorColor': instance.indicatorColor,
+      'indicatorShape': instance.indicatorShape,
+      'onDestinationSelected': instance.onDestinationSelected,
+      'selectedIndex': instance.selectedIndex,
+      'tilePadding': instance.tilePadding,
+      'runtimeType': instance.$type,
+    };
+
+_$NavigationDrawerDestination _$$NavigationDrawerDestinationFromJson(
+        Map<String, dynamic> json) =>
+    _$NavigationDrawerDestination(
+      key: json['key'] == null
+          ? null
+          : Key.fromJson(json['key'] as Map<String, dynamic>),
+      backgroundColor: json['backgroundColor'] == null
+          ? null
+          : Color.fromJson(json['backgroundColor'] as Map<String, dynamic>),
+      icon: Widget.fromJson(json['icon'] as Map<String, dynamic>),
+      selectedIcon: json['selectedIcon'] == null
+          ? null
+          : Widget.fromJson(json['selectedIcon'] as Map<String, dynamic>),
+      label: Widget.fromJson(json['label'] as Map<String, dynamic>),
+      $type: json['runtimeType'] as String?,
+    );
+
+Map<String, dynamic> _$$NavigationDrawerDestinationToJson(
+        _$NavigationDrawerDestination instance) =>
+    <String, dynamic>{
+      'key': instance.key,
+      'backgroundColor': instance.backgroundColor,
+      'icon': instance.icon,
+      'selectedIcon': instance.selectedIcon,
+      'label': instance.label,
+      'runtimeType': instance.$type,
+    };
+
+_$TextField _$$TextFieldFromJson(Map<String, dynamic> json) => _$TextField(
+      key: json['key'] == null
+          ? null
+          : Key.fromJson(json['key'] as Map<String, dynamic>),
+      decoration: json['decoration'] == null
+          ? const InputDecoration()
+          : InputDecoration.fromJson(
+              json['decoration'] as Map<String, dynamic>),
+      textInputAction: $enumDecodeNullable(
+          _$TextInputActionEnumMap, json['textInputAction']),
+      textCapitalization: $enumDecodeNullable(
+              _$TextCapitalizationEnumMap, json['textCapitalization']) ??
+          TextCapitalization.none,
+      style: json['style'] == null
+          ? null
+          : TextStyle.fromJson(json['style'] as Map<String, dynamic>),
+      strutStyle: json['strutStyle'] == null
+          ? null
+          : StrutStyle.fromJson(json['strutStyle'] as Map<String, dynamic>),
+      textAlign: $enumDecodeNullable(_$TextAlignEnumMap, json['textAlign']) ??
+          TextAlign.start,
+      textDirection:
+          $enumDecodeNullable(_$TextDirectionEnumMap, json['textDirection']),
+      readOnly: json['readOnly'] as bool? ?? false,
+      showCursor: json['showCursor'] as bool?,
+      autofocus: json['autofocus'] as bool? ?? false,
+      obscuringCharacter: json['obscuringCharacter'] as String? ?? '•',
+      obscureText: json['obscureText'] as bool? ?? false,
+      autocorrect: json['autocorrect'] as bool? ?? true,
+      smartDashesType: $enumDecodeNullable(
+          _$SmartDashesTypeEnumMap, json['smartDashesType']),
+      smartQuotesType: $enumDecodeNullable(
+          _$SmartQuotesTypeEnumMap, json['smartQuotesType']),
+      enableSuggestions: json['enableSuggestions'] as bool? ?? true,
+      maxLines: json['maxLines'] as int? ?? 1,
+      minLines: json['minLines'] as int?,
+      expands: json['expands'] as bool? ?? false,
+      maxLength: json['maxLength'] as int?,
+      maxLengthEnforcement: $enumDecodeNullable(
+          _$MaxLengthEnforcementEnumMap, json['maxLengthEnforcement']),
+      onEditingComplete: json['onEditingComplete'] == null
+          ? null
+          : Callback.fromJson(
+              json['onEditingComplete'] as Map<String, dynamic>),
+      enabled: json['enabled'] as bool?,
+      cursorWidth: (json['cursorWidth'] as num?)?.toDouble() ?? 2.0,
+      cursorHeight: (json['cursorHeight'] as num?)?.toDouble(),
+      cursorOpacityAnimates: json['cursorOpacityAnimates'] as bool?,
+      cursorColor: json['cursorColor'] == null
+          ? null
+          : Color.fromJson(json['cursorColor'] as Map<String, dynamic>),
+      keyboardAppearance:
+          $enumDecodeNullable(_$BrightnessEnumMap, json['keyboardAppearance']),
+      scrollPadding: json['scrollPadding'] == null
+          ? const EdgeInsets.all(20.0)
+          : EdgeInsets.fromJson(json['scrollPadding'] as Map<String, dynamic>),
+      dragStartBehavior: $enumDecodeNullable(
+              _$DragStartBehaviorEnumMap, json['dragStartBehavior']) ??
+          DragStartBehavior.start,
+      enableInteractiveSelection: json['enableInteractiveSelection'] as bool?,
+      mouseCursor: json['mouseCursor'] == null
+          ? null
+          : MouseCursor.fromJson(json['mouseCursor'] as Map<String, dynamic>),
+      scrollPhysics: json['scrollPhysics'] == null
+          ? null
+          : ScrollPhysics.fromJson(
+              json['scrollPhysics'] as Map<String, dynamic>),
+      clipBehavior: $enumDecodeNullable(_$ClipEnumMap, json['clipBehavior']) ??
+          Clip.hardEdge,
+      restorationId: json['restorationId'] as String?,
+      scribbleEnabled: json['scribbleEnabled'] as bool? ?? true,
+      enableIMEPersonalizedLearning:
+          json['enableIMEPersonalizedLearning'] as bool? ?? true,
+      canRequestFocus: json['canRequestFocus'] as bool? ?? true,
+      $type: json['runtimeType'] as String?,
+    );
+
+Map<String, dynamic> _$$TextFieldToJson(_$TextField instance) =>
+    <String, dynamic>{
+      'key': instance.key,
+      'decoration': instance.decoration,
+      'textInputAction': _$TextInputActionEnumMap[instance.textInputAction],
+      'textCapitalization':
+          _$TextCapitalizationEnumMap[instance.textCapitalization]!,
+      'style': instance.style,
+      'strutStyle': instance.strutStyle,
+      'textAlign': _$TextAlignEnumMap[instance.textAlign]!,
+      'textDirection': _$TextDirectionEnumMap[instance.textDirection],
+      'readOnly': instance.readOnly,
+      'showCursor': instance.showCursor,
+      'autofocus': instance.autofocus,
+      'obscuringCharacter': instance.obscuringCharacter,
+      'obscureText': instance.obscureText,
+      'autocorrect': instance.autocorrect,
+      'smartDashesType': _$SmartDashesTypeEnumMap[instance.smartDashesType],
+      'smartQuotesType': _$SmartQuotesTypeEnumMap[instance.smartQuotesType],
+      'enableSuggestions': instance.enableSuggestions,
+      'maxLines': instance.maxLines,
+      'minLines': instance.minLines,
+      'expands': instance.expands,
+      'maxLength': instance.maxLength,
+      'maxLengthEnforcement':
+          _$MaxLengthEnforcementEnumMap[instance.maxLengthEnforcement],
+      'onEditingComplete': instance.onEditingComplete,
+      'enabled': instance.enabled,
+      'cursorWidth': instance.cursorWidth,
+      'cursorHeight': instance.cursorHeight,
+      'cursorOpacityAnimates': instance.cursorOpacityAnimates,
+      'cursorColor': instance.cursorColor,
+      'keyboardAppearance': _$BrightnessEnumMap[instance.keyboardAppearance],
+      'scrollPadding': instance.scrollPadding,
+      'dragStartBehavior':
+          _$DragStartBehaviorEnumMap[instance.dragStartBehavior]!,
+      'enableInteractiveSelection': instance.enableInteractiveSelection,
+      'mouseCursor': instance.mouseCursor,
+      'scrollPhysics': instance.scrollPhysics,
+      'clipBehavior': _$ClipEnumMap[instance.clipBehavior]!,
+      'restorationId': instance.restorationId,
+      'scribbleEnabled': instance.scribbleEnabled,
+      'enableIMEPersonalizedLearning': instance.enableIMEPersonalizedLearning,
+      'canRequestFocus': instance.canRequestFocus,
+      'runtimeType': instance.$type,
+    };
+
+const _$TextInputActionEnumMap = {
+  TextInputAction.none: 'none',
+  TextInputAction.unspecified: 'unspecified',
+  TextInputAction.done: 'done',
+  TextInputAction.go: 'go',
+  TextInputAction.search: 'search',
+  TextInputAction.send: 'send',
+  TextInputAction.next: 'next',
+  TextInputAction.previous: 'previous',
+  TextInputAction.continueAction: 'continueAction',
+  TextInputAction.join: 'join',
+  TextInputAction.route: 'route',
+  TextInputAction.emergencyCall: 'emergencyCall',
+  TextInputAction.newline: 'newline',
+};
+
+const _$TextCapitalizationEnumMap = {
+  TextCapitalization.words: 'words',
+  TextCapitalization.sentences: 'sentences',
+  TextCapitalization.characters: 'characters',
+  TextCapitalization.none: 'none',
+};
+
+const _$SmartDashesTypeEnumMap = {
+  SmartDashesType.disabled: 'disabled',
+  SmartDashesType.enabled: 'enabled',
+};
+
+const _$SmartQuotesTypeEnumMap = {
+  SmartQuotesType.disabled: 'disabled',
+  SmartQuotesType.enabled: 'enabled',
+};
+
+const _$MaxLengthEnforcementEnumMap = {
+  MaxLengthEnforcement.none: 'none',
+  MaxLengthEnforcement.enforced: 'enforced',
+  MaxLengthEnforcement.truncateAfterCompositionEnds:
+      'truncateAfterCompositionEnds',
+};
+
+const _$BrightnessEnumMap = {
+  Brightness.dark: 'dark',
+  Brightness.light: 'light',
+};
+
+_$BadgeCount _$$BadgeCountFromJson(Map<String, dynamic> json) => _$BadgeCount(
+      key: json['key'] == null
+          ? null
+          : Key.fromJson(json['key'] as Map<String, dynamic>),
+      backgroundColor: json['backgroundColor'] == null
+          ? null
+          : Color.fromJson(json['backgroundColor'] as Map<String, dynamic>),
+      textColor: json['textColor'] == null
+          ? null
+          : Color.fromJson(json['textColor'] as Map<String, dynamic>),
+      smallSize: (json['smallSize'] as num?)?.toDouble(),
+      largeSize: (json['largeSize'] as num?)?.toDouble(),
+      textStyle: json['textStyle'] == null
+          ? null
+          : TextStyle.fromJson(json['textStyle'] as Map<String, dynamic>),
+      padding: json['padding'] == null
+          ? null
+          : EdgeInsets.fromJson(json['padding'] as Map<String, dynamic>),
+      offset: json['offset'] == null
+          ? null
+          : Offset.fromJson(json['offset'] as Map<String, dynamic>),
+      count: json['count'] as int,
+      isLabelVisible: json['isLabelVisible'] as bool? ?? true,
+      child: json['child'] == null
+          ? null
+          : Widget.fromJson(json['child'] as Map<String, dynamic>),
+      $type: json['runtimeType'] as String?,
+    );
+
+Map<String, dynamic> _$$BadgeCountToJson(_$BadgeCount instance) =>
+    <String, dynamic>{
+      'key': instance.key,
+      'backgroundColor': instance.backgroundColor,
+      'textColor': instance.textColor,
+      'smallSize': instance.smallSize,
+      'largeSize': instance.largeSize,
+      'textStyle': instance.textStyle,
+      'padding': instance.padding,
+      'offset': instance.offset,
+      'count': instance.count,
+      'isLabelVisible': instance.isLabelVisible,
+      'child': instance.child,
+      'runtimeType': instance.$type,
+    };
+
+_$Badge _$$BadgeFromJson(Map<String, dynamic> json) => _$Badge(
+      key: json['key'] == null
+          ? null
+          : Key.fromJson(json['key'] as Map<String, dynamic>),
+      backgroundColor: json['backgroundColor'] == null
+          ? null
+          : Color.fromJson(json['backgroundColor'] as Map<String, dynamic>),
+      textColor: json['textColor'] == null
+          ? null
+          : Color.fromJson(json['textColor'] as Map<String, dynamic>),
+      smallSize: (json['smallSize'] as num?)?.toDouble(),
+      largeSize: (json['largeSize'] as num?)?.toDouble(),
+      textStyle: json['textStyle'] == null
+          ? null
+          : TextStyle.fromJson(json['textStyle'] as Map<String, dynamic>),
+      padding: json['padding'] == null
+          ? null
+          : EdgeInsets.fromJson(json['padding'] as Map<String, dynamic>),
+      offset: json['offset'] == null
+          ? null
+          : Offset.fromJson(json['offset'] as Map<String, dynamic>),
+      label: json['label'] == null
+          ? null
+          : Widget.fromJson(json['label'] as Map<String, dynamic>),
+      isLabelVisible: json['isLabelVisible'] as bool? ?? true,
+      child: json['child'] == null
+          ? null
+          : Widget.fromJson(json['child'] as Map<String, dynamic>),
+      $type: json['runtimeType'] as String?,
+    );
+
+Map<String, dynamic> _$$BadgeToJson(_$Badge instance) => <String, dynamic>{
+      'key': instance.key,
+      'backgroundColor': instance.backgroundColor,
+      'textColor': instance.textColor,
+      'smallSize': instance.smallSize,
+      'largeSize': instance.largeSize,
+      'textStyle': instance.textStyle,
+      'padding': instance.padding,
+      'offset': instance.offset,
+      'label': instance.label,
+      'isLabelVisible': instance.isLabelVisible,
+      'child': instance.child,
+      'runtimeType': instance.$type,
+    };
+
+_$AlertDialog _$$AlertDialogFromJson(Map<String, dynamic> json) =>
+    _$AlertDialog(
+      key: json['key'] == null
+          ? null
+          : Key.fromJson(json['key'] as Map<String, dynamic>),
+      icon: json['icon'] == null
+          ? null
+          : Widget.fromJson(json['icon'] as Map<String, dynamic>),
+      iconPadding: json['iconPadding'] == null
+          ? null
+          : EdgeInsets.fromJson(json['iconPadding'] as Map<String, dynamic>),
+      iconColor: json['iconColor'] == null
+          ? null
+          : Color.fromJson(json['iconColor'] as Map<String, dynamic>),
+      title: json['title'] == null
+          ? null
+          : Widget.fromJson(json['title'] as Map<String, dynamic>),
+      titlePadding: json['titlePadding'] == null
+          ? null
+          : EdgeInsets.fromJson(json['titlePadding'] as Map<String, dynamic>),
+      titleTextStyle: json['titleTextStyle'] == null
+          ? null
+          : TextStyle.fromJson(json['titleTextStyle'] as Map<String, dynamic>),
+      content: json['content'] == null
+          ? null
+          : Widget.fromJson(json['content'] as Map<String, dynamic>),
+      contentPadding: json['contentPadding'] == null
+          ? null
+          : EdgeInsets.fromJson(json['contentPadding'] as Map<String, dynamic>),
+      contentTextStyle: json['contentTextStyle'] == null
+          ? null
+          : TextStyle.fromJson(
+              json['contentTextStyle'] as Map<String, dynamic>),
+      actions: (json['actions'] as List<dynamic>?)
+          ?.map((e) => Widget.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      actionsPadding: json['actionsPadding'] == null
+          ? null
+          : EdgeInsets.fromJson(json['actionsPadding'] as Map<String, dynamic>),
+      actionsAlignment: $enumDecodeNullable(
+          _$MainAxisAlignmentEnumMap, json['actionsAlignment']),
+      actionsOverflowAlignment: $enumDecodeNullable(
+          _$OverflowBarAlignmentEnumMap, json['actionsOverflowAlignment']),
+      actionsOverflowDirection: $enumDecodeNullable(
+          _$VerticalDirectionEnumMap, json['actionsOverflowDirection']),
+      actionsOverflowButtonSpacing:
+          (json['actionsOverflowButtonSpacing'] as num?)?.toDouble(),
+      buttonPadding: json['buttonPadding'] == null
+          ? null
+          : EdgeInsets.fromJson(json['buttonPadding'] as Map<String, dynamic>),
+      backgroundColor: json['backgroundColor'] == null
+          ? null
+          : Color.fromJson(json['backgroundColor'] as Map<String, dynamic>),
+      elevation: (json['elevation'] as num?)?.toDouble(),
+      shadowColor: json['shadowColor'] == null
+          ? null
+          : Color.fromJson(json['shadowColor'] as Map<String, dynamic>),
+      surfaceTintColor: json['surfaceTintColor'] == null
+          ? null
+          : Color.fromJson(json['surfaceTintColor'] as Map<String, dynamic>),
+      semanticLabel: json['semanticLabel'] as String?,
+      insetPadding: json['insetPadding'] == null
+          ? const EdgeInsets.symmetric(horizontal: 40.0, vertical: 24.0)
+          : EdgeInsets.fromJson(json['insetPadding'] as Map<String, dynamic>),
+      clipBehavior:
+          $enumDecodeNullable(_$ClipEnumMap, json['clipBehavior']) ?? Clip.none,
+      shape: json['shape'] == null
+          ? null
+          : ShapeBorder.fromJson(json['shape'] as Map<String, dynamic>),
+      scrollable: json['scrollable'] as bool? ?? false,
+      $type: json['runtimeType'] as String?,
+    );
+
+Map<String, dynamic> _$$AlertDialogToJson(_$AlertDialog instance) =>
+    <String, dynamic>{
+      'key': instance.key,
+      'icon': instance.icon,
+      'iconPadding': instance.iconPadding,
+      'iconColor': instance.iconColor,
+      'title': instance.title,
+      'titlePadding': instance.titlePadding,
+      'titleTextStyle': instance.titleTextStyle,
+      'content': instance.content,
+      'contentPadding': instance.contentPadding,
+      'contentTextStyle': instance.contentTextStyle,
+      'actions': instance.actions,
+      'actionsPadding': instance.actionsPadding,
+      'actionsAlignment': _$MainAxisAlignmentEnumMap[instance.actionsAlignment],
+      'actionsOverflowAlignment':
+          _$OverflowBarAlignmentEnumMap[instance.actionsOverflowAlignment],
+      'actionsOverflowDirection':
+          _$VerticalDirectionEnumMap[instance.actionsOverflowDirection],
+      'actionsOverflowButtonSpacing': instance.actionsOverflowButtonSpacing,
+      'buttonPadding': instance.buttonPadding,
+      'backgroundColor': instance.backgroundColor,
+      'elevation': instance.elevation,
+      'shadowColor': instance.shadowColor,
+      'surfaceTintColor': instance.surfaceTintColor,
+      'semanticLabel': instance.semanticLabel,
+      'insetPadding': instance.insetPadding,
+      'clipBehavior': _$ClipEnumMap[instance.clipBehavior]!,
+      'shape': instance.shape,
+      'scrollable': instance.scrollable,
+      'runtimeType': instance.$type,
+    };
+
+const _$OverflowBarAlignmentEnumMap = {
+  OverflowBarAlignment.start: 'start',
+  OverflowBarAlignment.end: 'end',
+  OverflowBarAlignment.center: 'center',
+};

@@ -1,0 +1,276 @@
+    {
+        "body": {
+            "child": {
+                "mainAxisAlignment": "center",
+                "mainAxisSize": "max",
+                "crossAxisAlignment": "center",
+                "verticalDirection": "down",
+                "children": [
+                    {
+                        "child": {
+                            "decoration": {
+                                "prefixIcon": {
+                                    "icon": {
+                                        "codePoint": 57415,
+                                        "fontFamily": "MaterialIcons",
+                                        "matchTextDirection": false
+                                    },
+                                    "runtimeType": "icon"
+                                },
+                                "suffixIcon": {
+                                    "onPressed": {
+                                        "runtimeType": "empty"
+                                    },
+                                    "icon": {
+                                        "icon": {
+                                            "codePoint": 57415,
+                                            "fontFamily": "MaterialIcons",
+                                            "matchTextDirection": false
+                                        },
+                                        "runtimeType": "icon"
+                                    },
+                                    "autofocus": true,
+                                    "runtimeType": "iconButton"
+                                },
+                                "labelText": "Filled",
+                                "hintText": "hint text",
+                                "helperText": "supporting text",
+                                "filled": true
+                            },
+                            "runtimeType": "textField"
+                        },
+                        "width": 410,
+                        "height": 100,
+                        "runtimeType": "sizedBox"
+                    },
+                    {
+                        "children": [
+                            {
+                                "child": {
+                                    "decoration": {
+                                        "prefixIcon": {
+                                            "icon": {
+                                                "codePoint": 57415,
+                                                "fontFamily": "MaterialIcons",
+                                                "matchTextDirection": false
+                                            },
+                                            "runtimeType": "icon"
+                                        },
+                                        "suffixIcon": {
+                                            "onPressed": {
+                                                "runtimeType": "empty"
+                                            },
+                                            "icon": {
+                                                "icon": {
+                                                    "codePoint": 57415,
+                                                    "fontFamily": "MaterialIcons",
+                                                    "matchTextDirection": false
+                                                },
+                                                "runtimeType": "icon"
+                                            },
+                                            "autofocus": true,
+                                            "runtimeType": "iconButton"
+                                        },
+                                        "labelText": "Filled",
+                                        "hintText": "hint text",
+                                        "helperText": "supporting text",
+                                        "filled": true,
+                                        "errorText": "error text"
+                                    },
+                                    "maxLength": 10,
+                                    "runtimeType": "textField"
+                                },
+                                "width": 200,
+                                "height": 100,
+                                "runtimeType": "sizedBox"
+                            },
+                            {
+                                "width": 10,
+                                "runtimeType": "sizedBox"
+                            },
+                            {
+                                "child": {
+                                    "decoration": {
+                                        "prefixIcon": {
+                                            "icon": {
+                                                "codePoint": 57415,
+                                                "fontFamily": "MaterialIcons",
+                                                "matchTextDirection": false
+                                            },
+                                            "runtimeType": "icon"
+                                        },
+                                        "suffixIcon": {
+                                            "onPressed": {
+                                                "runtimeType": "empty"
+                                            },
+                                            "icon": {
+                                                "icon": {
+                                                    "codePoint": 57415,
+                                                    "fontFamily": "MaterialIcons",
+                                                    "matchTextDirection": false
+                                                },
+                                                "runtimeType": "icon"
+                                            },
+                                            "autofocus": true,
+                                            "runtimeType": "iconButton"
+                                        },
+                                        "labelText": "Disabled",
+                                        "hintText": "hint text",
+                                        "helperText": "supporting text",
+                                        "filled": true
+                                    },
+                                    "enabled": false,
+                                    "runtimeType": "textField"
+                                },
+                                "width": 200,
+                                "height": 100,
+                                "runtimeType": "sizedBox"
+                            }
+                        ],
+                        "mainAxisAlignment": "center",
+                        "mainAxisSize": "max",
+                        "crossAxisAlignment": "center",
+                        "verticalDirection": "down",
+                        "runtimeType": "row"
+                    },
+                    {
+                        "child": {
+                            "decoration": {
+                                "prefixIcon": {
+                                    "icon": {
+                                        "codePoint": 57415,
+                                        "fontFamily": "MaterialIcons",
+                                        "matchTextDirection": false
+                                    },
+                                    "runtimeType": "icon"
+                                },
+                                "suffixIcon": {
+                                    "onPressed": {
+                                        "runtimeType": "empty"
+                                    },
+                                    "icon": {
+                                        "icon": {
+                                            "codePoint": 57415,
+                                            "fontFamily": "MaterialIcons",
+                                            "matchTextDirection": false
+                                        },
+                                        "runtimeType": "icon"
+                                    },
+                                    "autofocus": true,
+                                    "runtimeType": "iconButton"
+                                },
+                                "labelText": "Outlined",
+                                "hintText": "hint text",
+                                "helperText": "supporting text",
+                                "border": {
+                                    "runtimeType": "outlineInput"
+                                }
+                            },
+                            "runtimeType": "textField"
+                        },
+                        "width": 410,
+                        "height": 100,
+                        "runtimeType": "sizedBox"
+                    },
+                    {
+                        "children": [
+                            {
+                                "child": {
+                                    "decoration": {
+                                        "prefixIcon": {
+                                            "icon": {
+                                                "codePoint": 57415,
+                                                "fontFamily": "MaterialIcons",
+                                                "matchTextDirection": false
+                                            },
+                                            "runtimeType": "icon"
+                                        },
+                                        "suffixIcon": {
+                                            "onPressed": {
+                                                "runtimeType": "empty"
+                                            },
+                                            "icon": {
+                                                "icon": {
+                                                    "codePoint": 57415,
+                                                    "fontFamily": "MaterialIcons",
+                                                    "matchTextDirection": false
+                                                },
+                                                "runtimeType": "icon"
+                                            },
+                                            "autofocus": true,
+                                            "runtimeType": "iconButton"
+                                        },
+                                        "labelText": "Outlined",
+                                        "hintText": "hint text",
+                                        "helperText": "supporting text",
+                                        "errorText": "error text",
+                                        "border": {
+                                            "runtimeType": "outlineInput"
+                                        },
+                                        "filled": true
+                                    },
+                                    "runtimeType": "textField"
+                                },
+                                "width": 200,
+                                "height": 100,
+                                "runtimeType": "sizedBox"
+                            },
+                            {
+                                "width": 10,
+                                "runtimeType": "sizedBox"
+                            },
+                            {
+                                "child": {
+                                    "decoration": {
+                                        "prefixIcon": {
+                                            "icon": {
+                                                "codePoint": 57415,
+                                                "fontFamily": "MaterialIcons",
+                                                "matchTextDirection": false
+                                            },
+                                            "runtimeType": "icon"
+                                        },
+                                        "suffixIcon": {
+                                            "onPressed": {
+                                                "runtimeType": "empty"
+                                            },
+                                            "icon": {
+                                                "icon": {
+                                                    "codePoint": 57415,
+                                                    "fontFamily": "MaterialIcons",
+                                                    "matchTextDirection": false
+                                                },
+                                                "runtimeType": "icon"
+                                            },
+                                            "autofocus": true,
+                                            "runtimeType": "iconButton"
+                                        },
+                                        "labelText": "Disabled",
+                                        "hintText": "hint text",
+                                        "helperText": "supporting text",
+                                        "border": {
+                                            "runtimeType": "outlineInput"
+                                        },
+                                        "filled": true
+                                    },
+                                    "enabled": false,
+                                    "runtimeType": "textField"
+                                },
+                                "width": 200,
+                                "height": 100,
+                                "runtimeType": "sizedBox"
+                            }
+                        ],
+                        "mainAxisAlignment": "center",
+                        "mainAxisSize": "max",
+                        "crossAxisAlignment": "center",
+                        "verticalDirection": "down",
+                        "runtimeType": "row"
+                    }
+                ],
+                "runtimeType": "column"
+            },
+            "runtimeType": "center"
+        },
+        "runtimeType": "scaffold"
+    }

@@ -1,0 +1,143 @@
+    {
+        "body": {
+            "child": {
+                "mainAxisAlignment": "center",
+                "mainAxisSize": "max",
+                "crossAxisAlignment": "center",
+                "verticalDirection": "down",
+                "children": [
+                    {
+                        "child": {
+                            "children": [
+                                {
+                                    "data": "Mail",
+                                    "runtimeType": "text"
+                                },
+                                {
+                                    "label": {
+                                        "data": "Inbox",
+                                        "runtimeType": "text"
+                                    },
+                                    "icon": {
+                                        "icon": {
+                                            "codePoint": 57415,
+                                            "fontFamily": "MaterialIcons",
+                                            "matchTextDirection": false
+                                        },
+                                        "runtimeType": "icon"
+                                    },
+                                    "runtimeType": "navigationDrawerDestination"
+                                },
+                                {
+                                    "label": {
+                                        "data": "Outbox",
+                                        "runtimeType": "text"
+                                    },
+                                    "icon": {
+                                        "icon": {
+                                            "codePoint": 57415,
+                                            "fontFamily": "MaterialIcons",
+                                            "matchTextDirection": false
+                                        },
+                                        "runtimeType": "icon"
+                                    },
+                                    "runtimeType": "navigationDrawerDestination"
+                                },
+                                {
+                                    "label": {
+                                        "data": "Favorites",
+                                        "runtimeType": "text"
+                                    },
+                                    "icon": {
+                                        "icon": {
+                                            "codePoint": 57415,
+                                            "fontFamily": "MaterialIcons",
+                                            "matchTextDirection": false
+                                        },
+                                        "runtimeType": "icon"
+                                    },
+                                    "runtimeType": "navigationDrawerDestination"
+                                },
+                                {
+                                    "label": {
+                                        "data": "Trash",
+                                        "runtimeType": "text"
+                                    },
+                                    "icon": {
+                                        "icon": {
+                                            "codePoint": 57415,
+                                            "fontFamily": "MaterialIcons",
+                                            "matchTextDirection": false
+                                        },
+                                        "runtimeType": "icon"
+                                    },
+                                    "runtimeType": "navigationDrawerDestination"
+                                },
+                                {
+                                    "indent": 28,
+                                    "endIndent": 28,
+                                    "runtimeType": "divider"
+                                },
+                                {
+                                    "data": "Labels",
+                                    "runtimeType": "text"
+                                },
+                                {
+                                    "label": {
+                                        "data": "Family",
+                                        "runtimeType": "text"
+                                    },
+                                    "icon": {
+                                        "icon": {
+                                            "codePoint": 57415,
+                                            "fontFamily": "MaterialIcons",
+                                            "matchTextDirection": false
+                                        },
+                                        "runtimeType": "icon"
+                                    },
+                                    "runtimeType": "navigationDrawerDestination"
+                                },
+                                {
+                                    "label": {
+                                        "data": "School",
+                                        "runtimeType": "text"
+                                    },
+                                    "icon": {
+                                        "icon": {
+                                            "codePoint": 57415,
+                                            "fontFamily": "MaterialIcons",
+                                            "matchTextDirection": false
+                                        },
+                                        "runtimeType": "icon"
+                                    },
+                                    "runtimeType": "navigationDrawerDestination"
+                                },
+                                {
+                                    "label": {
+                                        "data": "Work",
+                                        "runtimeType": "text"
+                                    },
+                                    "icon": {
+                                        "icon": {
+                                            "codePoint": 57415,
+                                            "fontFamily": "MaterialIcons",
+                                            "matchTextDirection": false
+                                        },
+                                        "runtimeType": "icon"
+                                    },
+                                    "runtimeType": "navigationDrawerDestination"
+                                }
+                            ],
+                            "runtimeType": "navigationDrawer"
+                        },
+                        "width": 275,
+                        "height": 475,
+                        "runtimeType": "sizedBox"
+                    }
+                ],
+                "runtimeType": "column"
+            },
+            "runtimeType": "center"
+        },
+        "runtimeType": "scaffold"
+    }
