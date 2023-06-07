@@ -2474,6 +2474,184 @@ class _FlutterWidgetState extends material.State<FlutterWidget> {
     );
   }
 
+  material.ThemeData? $themeData(
+    final material.BuildContext context,
+    final widgets.ThemeData? themeData,
+  ) {
+    if (themeData == null) return null;
+    return material.ThemeData(
+      applyElevationOverlayColor: themeData.applyElevationOverlayColor,
+      platform: $enum(themeData.platform, material.TargetPlatform.values),
+      useMaterial3: themeData.useMaterial3,
+      visualDensity: $visualDensity(context, themeData.visualDensity),
+      brightness: $enum(themeData.brightness, material.Brightness.values),
+      canvasColor: $color(context, themeData.canvasColor),
+      cardColor: $color(context, themeData.cardColor),
+      colorScheme: $colorScheme(context, themeData.colorScheme),
+      colorSchemeSeed: $color(context, themeData.colorSchemeSeed),
+      dialogBackgroundColor: $color(context, themeData.dialogBackgroundColor),
+      disabledColor: $color(context, themeData.disabledColor),
+      dividerColor: $color(context, themeData.dividerColor),
+      focusColor: $color(context, themeData.focusColor),
+      highlightColor: $color(context, themeData.highlightColor),
+      hintColor: $color(context, themeData.hintColor),
+      hoverColor: $color(context, themeData.hoverColor),
+      indicatorColor: $color(context, themeData.indicatorColor),
+      primaryColor: $color(context, themeData.primaryColor),
+      primaryColorDark: $color(context, themeData.primaryColorDark),
+      primaryColorLight: $color(context, themeData.primaryColorLight),
+      primarySwatch: $materialColor(context, themeData.primarySwatch),
+      scaffoldBackgroundColor:
+          $color(context, themeData.scaffoldBackgroundColor),
+      secondaryHeaderColor: $color(context, themeData.secondaryHeaderColor),
+      shadowColor: $color(context, themeData.shadowColor),
+      splashColor: $color(context, themeData.splashColor),
+      unselectedWidgetColor: $color(context, themeData.unselectedWidgetColor),
+      fontFamily: themeData.fontFamily,
+      fontFamilyFallback: themeData.fontFamilyFallback,
+      package: themeData.package,
+      textTheme: $textTheme(context, themeData.textTheme),
+    );
+  }
+
+  material.MaterialColor? $materialColor(
+    final material.BuildContext context,
+    final widgets.MaterialColor? color,
+  ) {
+    if (color == null) return null;
+    return material.MaterialColor(
+      color.value,
+      color.swatch.map(
+        (key, value) => MapEntry(
+          key,
+          $color(context, value)!,
+        ),
+      ),
+    );
+  }
+
+  material.ColorScheme? $colorScheme(
+    final material.BuildContext context,
+    final widgets.ColorScheme? colorScheme,
+  ) {
+    if (colorScheme == null) return null;
+    return colorScheme.map(
+      (value) => material.ColorScheme(
+        brightness: $enum(value.brightness, material.Brightness.values)!,
+        primary: $color(context, value.primary)!,
+        onPrimary: $color(context, value.onPrimary)!,
+        primaryContainer: $color(context, value.primaryContainer),
+        onPrimaryContainer: $color(context, value.onPrimaryContainer),
+        secondary: $color(context, value.secondary)!,
+        onSecondary: $color(context, value.onSecondary)!,
+        secondaryContainer: $color(context, value.secondaryContainer),
+        onSecondaryContainer: $color(context, value.onSecondaryContainer),
+        tertiary: $color(context, value.tertiary),
+        onTertiary: $color(context, value.onTertiary),
+        tertiaryContainer: $color(context, value.tertiaryContainer),
+        onTertiaryContainer: $color(context, value.onTertiaryContainer),
+        error: $color(context, value.error)!,
+        onError: $color(context, value.onError)!,
+        errorContainer: $color(context, value.errorContainer),
+        onErrorContainer: $color(context, value.onErrorContainer),
+        background: $color(context, value.background)!,
+        onBackground: $color(context, value.onBackground)!,
+        surface: $color(context, value.surface)!,
+        onSurface: $color(context, value.onSurface)!,
+        surfaceVariant: $color(context, value.surfaceVariant),
+        onSurfaceVariant: $color(context, value.onSurfaceVariant),
+        outline: $color(context, value.outline),
+        outlineVariant: $color(context, value.outlineVariant),
+        shadow: $color(context, value.shadow),
+        scrim: $color(context, value.scrim),
+        inverseSurface: $color(context, value.inverseSurface),
+        onInverseSurface: $color(context, value.onInverseSurface),
+        inversePrimary: $color(context, value.inversePrimary),
+        surfaceTint: $color(context, value.surfaceTint),
+      ),
+      fromSeed: (value) => material.ColorScheme.fromSeed(
+        seedColor: $color(context, value.seedColor)!,
+        brightness: $enum(value.brightness, material.Brightness.values)!,
+        primary: $color(context, value.primary),
+        onPrimary: $color(context, value.onPrimary),
+        primaryContainer: $color(context, value.primaryContainer),
+        onPrimaryContainer: $color(context, value.onPrimaryContainer),
+        secondary: $color(context, value.secondary),
+        onSecondary: $color(context, value.onSecondary),
+        secondaryContainer: $color(context, value.secondaryContainer),
+        onSecondaryContainer: $color(context, value.onSecondaryContainer),
+        tertiary: $color(context, value.tertiary),
+        onTertiary: $color(context, value.onTertiary),
+        tertiaryContainer: $color(context, value.tertiaryContainer),
+        onTertiaryContainer: $color(context, value.onTertiaryContainer),
+        error: $color(context, value.error),
+        onError: $color(context, value.onError),
+        errorContainer: $color(context, value.errorContainer),
+        onErrorContainer: $color(context, value.onErrorContainer),
+        background: $color(context, value.background),
+        onBackground: $color(context, value.onBackground),
+        surface: $color(context, value.surface),
+        onSurface: $color(context, value.onSurface),
+        surfaceVariant: $color(context, value.surfaceVariant),
+        onSurfaceVariant: $color(context, value.onSurfaceVariant),
+        outline: $color(context, value.outline),
+        outlineVariant: $color(context, value.outlineVariant),
+        shadow: $color(context, value.shadow),
+        scrim: $color(context, value.scrim),
+        inverseSurface: $color(context, value.inverseSurface),
+        onInverseSurface: $color(context, value.onInverseSurface),
+        inversePrimary: $color(context, value.inversePrimary),
+        surfaceTint: $color(context, value.surfaceTint),
+      ),
+    );
+  }
+
+  material.TextTheme? $textTheme(
+    final material.BuildContext context,
+    final widgets.TextTheme? textTheme,
+  ) {
+    if (textTheme == null) return null;
+    return material.TextTheme(
+      displayLarge: $textStyle(context, textTheme.displayLarge),
+      displayMedium: $textStyle(context, textTheme.displayMedium),
+      displaySmall: $textStyle(context, textTheme.displaySmall),
+      headlineLarge: $textStyle(context, textTheme.headlineLarge),
+      headlineMedium: $textStyle(context, textTheme.headlineMedium),
+      headlineSmall: $textStyle(context, textTheme.headlineSmall),
+      titleLarge: $textStyle(context, textTheme.titleLarge),
+      titleMedium: $textStyle(context, textTheme.titleMedium),
+      titleSmall: $textStyle(context, textTheme.titleSmall),
+      bodyLarge: $textStyle(context, textTheme.bodyLarge),
+      bodyMedium: $textStyle(context, textTheme.bodyMedium),
+      bodySmall: $textStyle(context, textTheme.bodySmall),
+      labelLarge: $textStyle(context, textTheme.labelLarge),
+      labelMedium: $textStyle(context, textTheme.labelMedium),
+      labelSmall: $textStyle(context, textTheme.labelSmall),
+    );
+  }
+
+  material.Curve? $curve(
+    final widgets.Curves? curves,
+  ) {
+    if (curves == null) return null;
+    return curves.map(
+      linear: (value) => material.Curves.linear,
+      cubic: (value) => material.Cubic(
+        value.x1,
+        value.y1,
+        value.x2,
+        value.y2,
+      ),
+      decelerate: (value) => material.Curves.decelerate,
+      bounceIn: (value) => material.Curves.bounceIn,
+      bounceOut: (value) => material.Curves.bounceOut,
+      bounceInOut: (value) => material.Curves.bounceInOut,
+      elasticIn: (value) => material.Curves.elasticIn,
+      elasticOut: (value) => material.Curves.elasticOut,
+      elasticInOut: (value) => material.Curves.elasticInOut,
+    );
+  }
+
   List<material.Widget>? $widgets(
     final material.BuildContext context,
     final List<widgets.Widget>? widgets,
@@ -3647,6 +3825,100 @@ class _FlutterWidgetState extends material.State<FlutterWidget> {
       //   // @Default(Curves.decelerate) Curves insetAnimationCurve,
       //   child: $widget(context, value.child),
       // ),
+      image: (value) => material.Image(
+        key: $key(value.key),
+        image: $imageProvider(context, value.image)!,
+        semanticLabel: value.semanticLabel,
+        excludeFromSemantics: value.excludeFromSemantics,
+        width: value.width,
+        height: value.height,
+        color: $color(context, value.color),
+        colorBlendMode: $enum(value.colorBlendMode, ui.BlendMode.values),
+        fit: $enum(value.fit, material.BoxFit.values),
+        alignment: $alignment(value.alignment)!,
+        repeat: $enum(value.repeat, material.ImageRepeat.values)!,
+        centerSlice: $rect(value.centerSlice),
+        matchTextDirection: value.matchTextDirection,
+        gaplessPlayback: value.gaplessPlayback,
+        isAntiAlias: value.isAntiAlias,
+        filterQuality: $enum(value.filterQuality, ui.FilterQuality.values)!,
+      ),
+      safeArea: (value) => material.SafeArea(
+        key: $key(value.key),
+        minimum: $edgeInsets(value.minimum)!,
+        left: value.left,
+        top: value.top,
+        right: value.right,
+        bottom: value.bottom,
+        child: $widget(context, value.child)!,
+      ),
+      singleChildScrollView: (value) => material.SingleChildScrollView(
+        key: $key(value.key),
+        scrollDirection: $enum(
+          value.scrollDirection,
+          material.Axis.values,
+        )!,
+        reverse: value.reverse,
+        padding: $edgeInsets(value.padding),
+        primary: value.primary,
+        physics: $scrollPhysics(value.physics),
+        clipBehavior: $enum(
+          value.clipBehavior,
+          material.Clip.values,
+        )!,
+        restorationId: value.restorationId,
+        keyboardDismissBehavior: $enum(
+          value.keyboardDismissBehavior,
+          material.ScrollViewKeyboardDismissBehavior.values,
+        )!,
+        child: $widget(context, value.child),
+      ),
+      align: (value) => material.Align(
+        key: $key(value.key),
+        alignment: $alignment(value.alignment)!,
+        widthFactor: value.widthFactor,
+        heightFactor: value.heightFactor,
+        child: $widget(context, value.child),
+      ),
+      padding: (value) => material.Padding(
+        key: $key(value.key),
+        padding: $edgeInsets(value.padding)!,
+        child: $widget(context, value.child),
+      ),
+      clipRRect: (value) => material.ClipRRect(
+        key: $key(value.key),
+        borderRadius: $borderRadius(value.borderRadius)!,
+        clipBehavior: $enum(value.clipBehavior, material.Clip.values)!,
+        child: $widget(context, value.child),
+      ),
+      materialApp: (value) => material.MaterialApp(
+        scaffoldMessengerKey: _messengerKey,
+        navigatorKey: _navigatorKey,
+        key: $key(value.key),
+        home: $widget(context, value.home),
+        initialRoute: value.initialRoute,
+        title: value.title,
+        color: $color(context, value.color),
+        theme: $themeData(context, value.theme),
+        darkTheme: $themeData(context, value.darkTheme),
+        highContrastTheme: $themeData(context, value.highContrastTheme),
+        highContrastDarkTheme: $themeData(context, value.highContrastDarkTheme),
+        themeMode: $enum(value.themeMode, material.ThemeMode.values),
+        themeAnimationDuration: value.themeAnimationDuration,
+        themeAnimationCurve: $curve(value.themeAnimationCurve)!,
+        locale: $locale(value.locale),
+        supportedLocales: value.supportedLocales.map((e) => $locale(e)!),
+        debugShowMaterialGrid: value.debugShowMaterialGrid,
+        showPerformanceOverlay: value.showPerformanceOverlay,
+        checkerboardRasterCacheImages: value.checkerboardRasterCacheImages,
+        checkerboardOffscreenLayers: value.checkerboardOffscreenLayers,
+        showSemanticsDebugger: value.showSemanticsDebugger,
+        debugShowCheckedModeBanner: value.debugShowCheckedModeBanner,
+        restorationScopeId: value.restorationScopeId,
+        useInheritedMediaQuery: value.useInheritedMediaQuery,
+        routes: value.routes.map((key, value) =>
+            MapEntry(key, (context) => $widget(context, value)!)),
+      ),
     );
     if (this.widget.wrappingBuilder != null) {
       final wrap = this.widget.wrappingBuilder!(context, widget, child);

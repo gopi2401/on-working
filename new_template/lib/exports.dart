@@ -54,3 +54,7 @@ export 'program/dropdown_menu_item.dart';
 export 'program/floating_label_alignment.dart';
 export 'program/input_decoration.dart';
 export 'program/popup_menu_entry.dart';
+export 'program/theme_data.dart';
+export 'program/text_theme.dart';
+export 'program/color_scheme.dart';
+export 'program/curves.dart';

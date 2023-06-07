@@ -6,6 +6,7 @@ import 'package:vector_math/vector_math.dart';
 import 'border_radius.dart';
 import 'border_side.dart';
 import 'color.dart';
+import 'curves.dart';
 import 'dropdown_menu_item.dart';
 import 'edge_insets.dart';
 import 'enums.dart';
@@ -36,7 +37,9 @@ import 'box_constraints.dart';
 import 'matrix_4.dart';
 import 'icon_data.dart';
 import 'shadow.dart';
+import 'theme_data.dart';
 import 'visual_density.dart';
+import 'rect.dart';
 
 part 'widget.freezed.dart';
 part 'widget.g.dart';
@@ -1036,6 +1039,97 @@ class Widget with _$Widget {
   //   // @Default(Curves.decelerate) Curves insetAnimationCurve,
   //   Widget? child,
   // }) = DialogFullscreen;
+
+  const factory Widget.image({
+    Key? key,
+    required ImageProvider image,
+    String? semanticLabel,
+    @Default(false) bool excludeFromSemantics,
+    double? width,
+    double? height,
+    Color? color,
+    BlendMode? colorBlendMode,
+    BoxFit? fit,
+    @Default(Alignment.center) Alignment alignment,
+    @Default(ImageRepeat.noRepeat) ImageRepeat repeat,
+    Rect? centerSlice,
+    @Default(false) bool matchTextDirection,
+    @Default(false) bool gaplessPlayback,
+    @Default(false) bool isAntiAlias,
+    @Default(FilterQuality.low) FilterQuality filterQuality,
+  }) = Image;
+
+  const factory Widget.safeArea({
+    Key? key,
+    @Default(true) bool left,
+    @Default(true) bool top,
+    @Default(true) bool right,
+    @Default(true) bool bottom,
+    @Default(EdgeInsets.zero) EdgeInsets minimum,
+    @Default(false) bool maintainBottomViewPadding,
+    required Widget child,
+  }) = SafeArea;
+
+  const factory Widget.singleChildScrollView({
+    Key? key,
+    @Default(Axis.vertical) Axis scrollDirection,
+    @Default(false) bool reverse,
+    EdgeInsets? padding,
+    bool? primary,
+    ScrollPhysics? physics,
+    Widget? child,
+    @Default(Clip.hardEdge) Clip clipBehavior,
+    String? restorationId,
+    @Default(ScrollViewKeyboardDismissBehavior.manual)
+    ScrollViewKeyboardDismissBehavior keyboardDismissBehavior,
+  }) = SingleChildScrollView;
+
+  const factory Widget.align({
+    Key? key,
+    @Default(Alignment.center) Alignment alignment,
+    double? widthFactor,
+    double? heightFactor,
+    Widget? child,
+  }) = Align;
+
+  const factory Widget.padding({
+    Key? key,
+    required EdgeInsets padding,
+    Widget? child,
+  }) = Padding;
+
+  const factory Widget.clipRRect({
+    Key? key,
+    @Default(BorderRadius.zero) BorderRadius? borderRadius,
+    @Default(Clip.antiAlias) Clip clipBehavior,
+    Widget? child,
+  }) = ClipRRect;
+
+  const factory Widget.materialApp({
+    Key? key,
+    Widget? home,
+    String? initialRoute,
+    @Default('') String title,
+    Color? color,
+    ThemeData? theme,
+    ThemeData? darkTheme,
+    ThemeData? highContrastTheme,
+    ThemeData? highContrastDarkTheme,
+    @Default(ThemeMode.system) ThemeMode? themeMode,
+    @Default(Duration(milliseconds: 200)) Duration themeAnimationDuration,
+    @Default(Curves.linear()) Curves themeAnimationCurve,
+    Locale? locale,
+    @Default([Locale('en', 'US')]) Iterable<Locale> supportedLocales,
+    @Default(false) bool debugShowMaterialGrid,
+    @Default(false) bool showPerformanceOverlay,
+    @Default(false) bool checkerboardRasterCacheImages,
+    @Default(false) bool checkerboardOffscreenLayers,
+    @Default(false) bool showSemanticsDebugger,
+    @Default(true) bool debugShowCheckedModeBanner,
+    String? restorationScopeId,
+    @Default(false) bool useInheritedMediaQuery,
+    @Default({}) Map<String, Widget> routes,
+  }) = MaterialApp;
 
   factory Widget.fromJson(Map<String, Object?> json) => _$WidgetFromJson(json);
 }

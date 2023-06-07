@@ -1,0 +1,921 @@
+{
+    "body": {
+        "child": {
+            "child": {
+                "children": [
+                    {
+                        "child": {
+                            "children": [
+                                {
+                                    "child": {
+                                        "child": {
+                                            "textScaleFactor": 3,
+                                            "data": "Beautiful Place to Live",
+                                            "runtimeType": "text"
+                                        },
+                                        "padding": {
+                                            "left": 20,
+                                            "runtimeType": "only"
+                                        },
+                                        "runtimeType": "padding"
+                                    },
+                                    "runtimeType": "sizedBox"
+                                },
+                                {
+                                    "child": {
+                                        "child": {
+                                            "data": "Find a Source You Want to Spent times",
+                                            "runtimeType": "text"
+                                        },
+                                        "padding": {
+                                            "top": 10,
+                                            "left": 20,
+                                            "runtimeType": "only"
+                                        },
+                                        "runtimeType": "padding"
+                                    },
+                                    "runtimeType": "sizedBox"
+                                },
+                                {
+                                    "child": {
+                                        "decoration": {
+                                            "prefixIcon": {
+                                                "icon": {
+                                                    "codePoint": 57415,
+                                                    "fontFamily": "MaterialIcons",
+                                                    "matchTextDirection": false
+                                                },
+                                                "runtimeType": "icon"
+                                            },
+                                            "suffixIcon": {
+                                                "onPressed": {
+                                                    "runtimeType": "empty"
+                                                },
+                                                "icon": {
+                                                    "icon": {
+                                                        "codePoint": 57415,
+                                                        "fontFamily": "MaterialIcons",
+                                                        "matchTextDirection": false
+                                                    },
+                                                    "runtimeType": "icon"
+                                                },
+                                                "autofocus": true,
+                                                "runtimeType": "iconButton"
+                                            },
+                                            "hintText": "Search here...",
+                                            "filled": true,
+                                            "contentPadding": {
+                                                "value": 5,
+                                                "runtimeType": "all"
+                                            }
+                                        },
+                                        "runtimeType": "textField"
+                                    },
+                                    "padding": {
+                                        "top": 10,
+                                        "left": 15,
+                                        "right": 20,
+                                        "runtimeType": "only"
+                                    },
+                                    "runtimeType": "padding"
+                                }
+                            ],
+                            "mainAxisAlignment": "center",
+                            "crossAxisAlignment": "start",
+                            "runtimeType": "column"
+                        },
+                        "color": {
+                            "runtimeType": "fromARGB",
+                            "a": 251,
+                            "r": 19,
+                            "g": 157,
+                            "b": 211
+                        },
+                        "runtimeType": "container"
+                    },
+                    {
+                        "padding": {
+                            "top": 5,
+                            "runtimeType": "only"
+                        },
+                        "runtimeType": "padding"
+                    },
+                    {
+                        "children": [
+                            {
+                                "child": {
+                                    "child": {
+                                        "children": [
+                                            {
+                                                "children": [
+                                                    {
+                                                        "image": {
+                                                            "url": "https://static.independent.co.uk/2022/11/04/09/Oku%20hotel.png",
+                                                            "runtimeType": "network"
+                                                        },
+                                                        "fit": "cover",
+                                                        "height": 60,
+                                                        "width": 70,
+                                                        "runtimeType": "image"
+                                                    },
+                                                    {
+                                                        "children": [
+                                                            {
+                                                                "children": [
+                                                                    {
+                                                                        "padding": {
+                                                                            "left": 18,
+                                                                            "runtimeType": "only"
+                                                                        },
+                                                                        "runtimeType": "padding"
+                                                                    },
+                                                                    {
+                                                                        "textScaleFactor": 1,
+                                                                        "data": "ITC Hotel",
+                                                                        "runtimeType": "text"
+                                                                    }
+                                                                ],
+                                                                "mainAxisAlignment": "start",
+                                                                "crossAxisAlignment": "start",
+                                                                "runtimeType": "row"
+                                                            },
+                                                            {
+                                                                "children": [
+                                                                    {
+                                                                        "padding": {
+                                                                            "left": 15,
+                                                                            "runtimeType": "only"
+                                                                        },
+                                                                        "runtimeType": "padding"
+                                                                    },
+                                                                    {
+                                                                        "icon": {
+                                                                            "codePoint": 57415,
+                                                                            "fontFamily": "MaterialIcons",
+                                                                            "matchTextDirection": false
+                                                                        },
+                                                                        "size": 18,
+                                                                        "runtimeType": "icon"
+                                                                    },
+                                                                    {
+                                                                        "icon": {
+                                                                            "codePoint": 57415,
+                                                                            "fontFamily": "MaterialIcons",
+                                                                            "matchTextDirection": false
+                                                                        },
+                                                                        "size": 18,
+                                                                        "runtimeType": "icon"
+                                                                    },
+                                                                    {
+                                                                        "icon": {
+                                                                            "codePoint": 57415,
+                                                                            "fontFamily": "MaterialIcons",
+                                                                            "matchTextDirection": false
+                                                                        },
+                                                                        "size": 18,
+                                                                        "runtimeType": "icon"
+                                                                    },
+                                                                    {
+                                                                        "icon": {
+                                                                            "codePoint": 57415,
+                                                                            "fontFamily": "MaterialIcons",
+                                                                            "matchTextDirection": false
+                                                                        },
+                                                                        "size": 18,
+                                                                        "runtimeType": "icon"
+                                                                    },
+                                                                    {
+                                                                        "icon": {
+                                                                            "codePoint": 57415,
+                                                                            "fontFamily": "MaterialIcons",
+                                                                            "matchTextDirection": false
+                                                                        },
+                                                                        "size": 18,
+                                                                        "runtimeType": "icon"
+                                                                    }
+                                                                ],
+                                                                "crossAxisAlignment": "start",
+                                                                "mainAxisAlignment": "spaceBetween",
+                                                                "runtimeType": "row"
+                                                            },
+                                                            {
+                                                                "children": [
+                                                                    {
+                                                                        "padding": {
+                                                                            "left": 15,
+                                                                            "runtimeType": "only"
+                                                                        },
+                                                                        "runtimeType": "padding"
+                                                                    },
+                                                                    {
+                                                                        "icon": {
+                                                                            "codePoint": 57415,
+                                                                            "fontFamily": "MaterialIcons",
+                                                                            "matchTextDirection": false
+                                                                        },
+                                                                        "size": 15,
+                                                                        "runtimeType": "icon"
+                                                                    },
+                                                                    {
+                                                                        "padding": {
+                                                                            "left": 5,
+                                                                            "runtimeType": "only"
+                                                                        },
+                                                                        "runtimeType": "padding"
+                                                                    },
+                                                                    {
+                                                                        "data": "Coimbatore",
+                                                                        "runtimeType": "text"
+                                                                    }
+                                                                ],
+                                                                "crossAxisAlignment": "start",
+                                                                "mainAxisAlignment": "start",
+                                                                "runtimeType": "row"
+                                                            }
+                                                        ],
+                                                        "crossAxisAlignment": "start",
+                                                        "runtimeType": "column"
+                                                    },
+                                                    {
+                                                        "padding": {
+                                                            "left": 80,
+                                                            "runtimeType": "only"
+                                                        },
+                                                        "runtimeType": "padding"
+                                                    },
+                                                    {
+                                                        "children": [
+                                                            {
+                                                                "children": [
+                                                                    {
+                                                                        "textScaleFactor": 2,
+                                                                        "data": "RS. 3500",
+                                                                        "runtimeType": "text"
+                                                                    }
+                                                                ],
+                                                                "crossAxisAlignment": "start",
+                                                                "mainAxisAlignment": "start",
+                                                                "runtimeType": "row"
+                                                            },
+                                                            {
+                                                                "children": [
+                                                                    {
+                                                                        "textScaleFactor": 1,
+                                                                        "data": "1 room | 1 Night",
+                                                                        "runtimeType": "text"
+                                                                    }
+                                                                ],
+                                                                "crossAxisAlignment": "start",
+                                                                "mainAxisAlignment": "start",
+                                                                "runtimeType": "row"
+                                                            }
+                                                        ],
+                                                        "crossAxisAlignment": "start",
+                                                        "mainAxisAlignment": "spaceBetween",
+                                                        "runtimeType": "column"
+                                                    }
+                                                ],
+                                                "runtimeType": "row"
+                                            }
+                                        ],
+                                        "runtimeType": "column"
+                                    },
+                                    "padding": {
+                                        "value": 15,
+                                        "runtimeType": "all"
+                                    },
+                                    "runtimeType": "padding"
+                                },
+                                "margin": {
+                                    "value": 5,
+                                    "runtimeType": "all"
+                                },
+                                "clipBehavior": "antiAliasWithSaveLayer",
+                                "semanticContainer": true,
+                                "shape": {
+                                    "borderRadius": {
+                                        "radius": 10,
+                                        "runtimeType": "circular"
+                                    },
+                                    "runtimeType": "roundedRectangle"
+                                },
+                                "runtimeType": "card"
+                            },
+                            {
+                                "child": {
+                                    "child": {
+                                        "children": [
+                                            {
+                                                "children": [
+                                                    {
+                                                        "image": {
+                                                            "url": "https://www.takethefamily.com/sites/default/files/styles/ttf_2_1/public/uk_cotswolds_calcot_outdoorpool_1000x500.jpg?itok=Xi5iGeIj",
+                                                            "runtimeType": "network"
+                                                        },
+                                                        "fit": "cover",
+                                                        "height": 60,
+                                                        "width": 70,
+                                                        "runtimeType": "image"
+                                                    },
+                                                    {
+                                                        "children": [
+                                                            {
+                                                                "children": [
+                                                                    {
+                                                                        "padding": {
+                                                                            "left": 18,
+                                                                            "runtimeType": "only"
+                                                                        },
+                                                                        "runtimeType": "padding"
+                                                                    },
+                                                                    {
+                                                                        "textScaleFactor": 1,
+                                                                        "data": "Park Hotel",
+                                                                        "runtimeType": "text"
+                                                                    }
+                                                                ],
+                                                                "mainAxisAlignment": "start",
+                                                                "crossAxisAlignment": "start",
+                                                                "runtimeType": "row"
+                                                            },
+                                                            {
+                                                                "children": [
+                                                                    {
+                                                                        "padding": {
+                                                                            "left": 15,
+                                                                            "runtimeType": "only"
+                                                                        },
+                                                                        "runtimeType": "padding"
+                                                                    },
+                                                                    {
+                                                                        "icon": {
+                                                                            "codePoint": 57415,
+                                                                            "fontFamily": "MaterialIcons",
+                                                                            "matchTextDirection": false
+                                                                        },
+                                                                        "size": 18,
+                                                                        "runtimeType": "icon"
+                                                                    },
+                                                                    {
+                                                                        "icon": {
+                                                                            "codePoint": 57415,
+                                                                            "fontFamily": "MaterialIcons",
+                                                                            "matchTextDirection": false
+                                                                        },
+                                                                        "size": 18,
+                                                                        "runtimeType": "icon"
+                                                                    },
+                                                                    {
+                                                                        "icon": {
+                                                                            "codePoint": 57415,
+                                                                            "fontFamily": "MaterialIcons",
+                                                                            "matchTextDirection": false
+                                                                        },
+                                                                        "size": 18,
+                                                                        "runtimeType": "icon"
+                                                                    },
+                                                                    {
+                                                                        "icon": {
+                                                                            "codePoint": 57415,
+                                                                            "fontFamily": "MaterialIcons",
+                                                                            "matchTextDirection": false
+                                                                        },
+                                                                        "size": 18,
+                                                                        "runtimeType": "icon"
+                                                                    },
+                                                                    {
+                                                                        "icon": {
+                                                                            "codePoint": 57415,
+                                                                            "fontFamily": "MaterialIcons",
+                                                                            "matchTextDirection": false
+                                                                        },
+                                                                        "size": 18,
+                                                                        "runtimeType": "icon"
+                                                                    }
+                                                                ],
+                                                                "crossAxisAlignment": "start",
+                                                                "mainAxisAlignment": "spaceBetween",
+                                                                "runtimeType": "row"
+                                                            },
+                                                            {
+                                                                "children": [
+                                                                    {
+                                                                        "padding": {
+                                                                            "left": 15,
+                                                                            "runtimeType": "only"
+                                                                        },
+                                                                        "runtimeType": "padding"
+                                                                    },
+                                                                    {
+                                                                        "icon": {
+                                                                            "codePoint": 57415,
+                                                                            "fontFamily": "MaterialIcons",
+                                                                            "matchTextDirection": false
+                                                                        },
+                                                                        "size": 15,
+                                                                        "runtimeType": "icon"
+                                                                    },
+                                                                    {
+                                                                        "padding": {
+                                                                            "left": 5,
+                                                                            "runtimeType": "only"
+                                                                        },
+                                                                        "runtimeType": "padding"
+                                                                    },
+                                                                    {
+                                                                        "data": "Coimbatore",
+                                                                        "runtimeType": "text"
+                                                                    }
+                                                                ],
+                                                                "crossAxisAlignment": "start",
+                                                                "mainAxisAlignment": "start",
+                                                                "runtimeType": "row"
+                                                            }
+                                                        ],
+                                                        "crossAxisAlignment": "start",
+                                                        "runtimeType": "column"
+                                                    },
+                                                    {
+                                                        "padding": {
+                                                            "left": 80,
+                                                            "runtimeType": "only"
+                                                        },
+                                                        "runtimeType": "padding"
+                                                    },
+                                                    {
+                                                        "children": [
+                                                            {
+                                                                "children": [
+                                                                    {
+                                                                        "textScaleFactor": 2,
+                                                                        "data": "RS. 2500",
+                                                                        "runtimeType": "text"
+                                                                    }
+                                                                ],
+                                                                "crossAxisAlignment": "start",
+                                                                "mainAxisAlignment": "start",
+                                                                "runtimeType": "row"
+                                                            },
+                                                            {
+                                                                "children": [
+                                                                    {
+                                                                        "textScaleFactor": 1,
+                                                                        "data": "1 room | 1 Night",
+                                                                        "runtimeType": "text"
+                                                                    }
+                                                                ],
+                                                                "crossAxisAlignment": "start",
+                                                                "mainAxisAlignment": "start",
+                                                                "runtimeType": "row"
+                                                            }
+                                                        ],
+                                                        "crossAxisAlignment": "start",
+                                                        "mainAxisAlignment": "spaceBetween",
+                                                        "runtimeType": "column"
+                                                    }
+                                                ],
+                                                "runtimeType": "row"
+                                            }
+                                        ],
+                                        "runtimeType": "column"
+                                    },
+                                    "padding": {
+                                        "value": 15,
+                                        "runtimeType": "all"
+                                    },
+                                    "runtimeType": "padding"
+                                },
+                                "margin": {
+                                    "value": 5,
+                                    "runtimeType": "all"
+                                },
+                                "clipBehavior": "antiAliasWithSaveLayer",
+                                "semanticContainer": true,
+                                "shape": {
+                                    "borderRadius": {
+                                        "radius": 10,
+                                        "runtimeType": "circular"
+                                    },
+                                    "runtimeType": "roundedRectangle"
+                                },
+                                "runtimeType": "card"
+                            },
+                            {
+                                "child": {
+                                    "child": {
+                                        "children": [
+                                            {
+                                                "children": [
+                                                    {
+                                                        "image": {
+                                                            "url": "https://www.gulfcourthotelbusinessbay.com/files/2022/10/fifa-world-cup-dubai-getaway-5.png",
+                                                            "runtimeType": "network"
+                                                        },
+                                                        "fit": "cover",
+                                                        "height": 60,
+                                                        "width": 70,
+                                                        "runtimeType": "image"
+                                                    },
+                                                    {
+                                                        "children": [
+                                                            {
+                                                                "children": [
+                                                                    {
+                                                                        "padding": {
+                                                                            "left": 18,
+                                                                            "runtimeType": "only"
+                                                                        },
+                                                                        "runtimeType": "padding"
+                                                                    },
+                                                                    {
+                                                                        "textScaleFactor": 1,
+                                                                        "data": "Lemon Hotel",
+                                                                        "runtimeType": "text"
+                                                                    }
+                                                                ],
+                                                                "mainAxisAlignment": "start",
+                                                                "crossAxisAlignment": "start",
+                                                                "runtimeType": "row"
+                                                            },
+                                                            {
+                                                                "children": [
+                                                                    {
+                                                                        "padding": {
+                                                                            "left": 15,
+                                                                            "runtimeType": "only"
+                                                                        },
+                                                                        "runtimeType": "padding"
+                                                                    },
+                                                                    {
+                                                                        "icon": {
+                                                                            "codePoint": 57415,
+                                                                            "fontFamily": "MaterialIcons",
+                                                                            "matchTextDirection": false
+                                                                        },
+                                                                        "size": 18,
+                                                                        "runtimeType": "icon"
+                                                                    },
+                                                                    {
+                                                                        "icon": {
+                                                                            "codePoint": 57415,
+                                                                            "fontFamily": "MaterialIcons",
+                                                                            "matchTextDirection": false
+                                                                        },
+                                                                        "size": 18,
+                                                                        "runtimeType": "icon"
+                                                                    },
+                                                                    {
+                                                                        "icon": {
+                                                                            "codePoint": 57415,
+                                                                            "fontFamily": "MaterialIcons",
+                                                                            "matchTextDirection": false
+                                                                        },
+                                                                        "size": 18,
+                                                                        "runtimeType": "icon"
+                                                                    },
+                                                                    {
+                                                                        "icon": {
+                                                                            "codePoint": 57415,
+                                                                            "fontFamily": "MaterialIcons",
+                                                                            "matchTextDirection": false
+                                                                        },
+                                                                        "size": 18,
+                                                                        "runtimeType": "icon"
+                                                                    },
+                                                                    {
+                                                                        "icon": {
+                                                                            "codePoint": 57415,
+                                                                            "fontFamily": "MaterialIcons",
+                                                                            "matchTextDirection": false
+                                                                        },
+                                                                        "size": 18,
+                                                                        "runtimeType": "icon"
+                                                                    }
+                                                                ],
+                                                                "crossAxisAlignment": "start",
+                                                                "mainAxisAlignment": "spaceBetween",
+                                                                "runtimeType": "row"
+                                                            },
+                                                            {
+                                                                "children": [
+                                                                    {
+                                                                        "padding": {
+                                                                            "left": 15,
+                                                                            "runtimeType": "only"
+                                                                        },
+                                                                        "runtimeType": "padding"
+                                                                    },
+                                                                    {
+                                                                        "icon": {
+                                                                            "codePoint": 57415,
+                                                                            "fontFamily": "MaterialIcons",
+                                                                            "matchTextDirection": false
+                                                                        },
+                                                                        "size": 15,
+                                                                        "runtimeType": "icon"
+                                                                    },
+                                                                    {
+                                                                        "padding": {
+                                                                            "left": 5,
+                                                                            "runtimeType": "only"
+                                                                        },
+                                                                        "runtimeType": "padding"
+                                                                    },
+                                                                    {
+                                                                        "data": "Coimbatore",
+                                                                        "runtimeType": "text"
+                                                                    }
+                                                                ],
+                                                                "crossAxisAlignment": "start",
+                                                                "mainAxisAlignment": "start",
+                                                                "runtimeType": "row"
+                                                            }
+                                                        ],
+                                                        "crossAxisAlignment": "start",
+                                                        "runtimeType": "column"
+                                                    },
+                                                    {
+                                                        "padding": {
+                                                            "left": 80,
+                                                            "runtimeType": "only"
+                                                        },
+                                                        "runtimeType": "padding"
+                                                    },
+                                                    {
+                                                        "children": [
+                                                            {
+                                                                "children": [
+                                                                    {
+                                                                        "textScaleFactor": 2,
+                                                                        "data": "RS. 2000",
+                                                                        "runtimeType": "text"
+                                                                    }
+                                                                ],
+                                                                "crossAxisAlignment": "start",
+                                                                "mainAxisAlignment": "start",
+                                                                "runtimeType": "row"
+                                                            },
+                                                            {
+                                                                "children": [
+                                                                    {
+                                                                        "textScaleFactor": 1,
+                                                                        "data": "1 room | 1 Night",
+                                                                        "runtimeType": "text"
+                                                                    }
+                                                                ],
+                                                                "crossAxisAlignment": "start",
+                                                                "mainAxisAlignment": "start",
+                                                                "runtimeType": "row"
+                                                            }
+                                                        ],
+                                                        "crossAxisAlignment": "start",
+                                                        "mainAxisAlignment": "spaceBetween",
+                                                        "runtimeType": "column"
+                                                    }
+                                                ],
+                                                "runtimeType": "row"
+                                            }
+                                        ],
+                                        "runtimeType": "column"
+                                    },
+                                    "padding": {
+                                        "value": 15,
+                                        "runtimeType": "all"
+                                    },
+                                    "runtimeType": "padding"
+                                },
+                                "margin": {
+                                    "value": 5,
+                                    "runtimeType": "all"
+                                },
+                                "clipBehavior": "antiAliasWithSaveLayer",
+                                "semanticContainer": true,
+                                "shape": {
+                                    "borderRadius": {
+                                        "radius": 10,
+                                        "runtimeType": "circular"
+                                    },
+                                    "runtimeType": "roundedRectangle"
+                                },
+                                "runtimeType": "card"
+                            },
+                            {
+                                "child": {
+                                    "child": {
+                                        "children": [
+                                            {
+                                                "children": [
+                                                    {
+                                                        "image": {
+                                                            "url": "https://q-xx.bstatic.com/xdata/images/hotel/max750/151411582.jpg?k=488833ff82f7175913920d4aee839a6339ced38e712b53988b9a015464aecab0&o=",
+                                                            "runtimeType": "network"
+                                                        },
+                                                        "fit": "cover",
+                                                        "height": 60,
+                                                        "width": 70,
+                                                        "runtimeType": "image"
+                                                    },
+                                                    {
+                                                        "children": [
+                                                            {
+                                                                "children": [
+                                                                    {
+                                                                        "padding": {
+                                                                            "left": 18,
+                                                                            "runtimeType": "only"
+                                                                        },
+                                                                        "runtimeType": "padding"
+                                                                    },
+                                                                    {
+                                                                        "textScaleFactor": 1,
+                                                                        "data": "Hotel Trinity",
+                                                                        "runtimeType": "text"
+                                                                    }
+                                                                ],
+                                                                "mainAxisAlignment": "start",
+                                                                "crossAxisAlignment": "start",
+                                                                "runtimeType": "row"
+                                                            },
+                                                            {
+                                                                "children": [
+                                                                    {
+                                                                        "padding": {
+                                                                            "left": 15,
+                                                                            "runtimeType": "only"
+                                                                        },
+                                                                        "runtimeType": "padding"
+                                                                    },
+                                                                    {
+                                                                        "icon": {
+                                                                            "codePoint": 57415,
+                                                                            "fontFamily": "MaterialIcons",
+                                                                            "matchTextDirection": false
+                                                                        },
+                                                                        "size": 18,
+                                                                        "runtimeType": "icon"
+                                                                    },
+                                                                    {
+                                                                        "icon": {
+                                                                            "codePoint": 57415,
+                                                                            "fontFamily": "MaterialIcons",
+                                                                            "matchTextDirection": false
+                                                                        },
+                                                                        "size": 18,
+                                                                        "runtimeType": "icon"
+                                                                    },
+                                                                    {
+                                                                        "icon": {
+                                                                            "codePoint": 57415,
+                                                                            "fontFamily": "MaterialIcons",
+                                                                            "matchTextDirection": false
+                                                                        },
+                                                                        "size": 18,
+                                                                        "runtimeType": "icon"
+                                                                    },
+                                                                    {
+                                                                        "icon": {
+                                                                            "codePoint": 57415,
+                                                                            "fontFamily": "MaterialIcons",
+                                                                            "matchTextDirection": false
+                                                                        },
+                                                                        "size": 18,
+                                                                        "runtimeType": "icon"
+                                                                    },
+                                                                    {
+                                                                        "icon": {
+                                                                            "codePoint": 57415,
+                                                                            "fontFamily": "MaterialIcons",
+                                                                            "matchTextDirection": false
+                                                                        },
+                                                                        "size": 18,
+                                                                        "runtimeType": "icon"
+                                                                    }
+                                                                ],
+                                                                "crossAxisAlignment": "start",
+                                                                "mainAxisAlignment": "spaceBetween",
+                                                                "runtimeType": "row"
+                                                            },
+                                                            {
+                                                                "children": [
+                                                                    {
+                                                                        "padding": {
+                                                                            "left": 15,
+                                                                            "runtimeType": "only"
+                                                                        },
+                                                                        "runtimeType": "padding"
+                                                                    },
+                                                                    {
+                                                                        "icon": {
+                                                                            "codePoint": 57415,
+                                                                            "fontFamily": "MaterialIcons",
+                                                                            "matchTextDirection": false
+                                                                        },
+                                                                        "size": 15,
+                                                                        "runtimeType": "icon"
+                                                                    },
+                                                                    {
+                                                                        "padding": {
+                                                                            "left": 5,
+                                                                            "runtimeType": "only"
+                                                                        },
+                                                                        "runtimeType": "padding"
+                                                                    },
+                                                                    {
+                                                                        "data": "Coimbatore",
+                                                                        "runtimeType": "text"
+                                                                    }
+                                                                ],
+                                                                "crossAxisAlignment": "start",
+                                                                "mainAxisAlignment": "start",
+                                                                "runtimeType": "row"
+                                                            }
+                                                        ],
+                                                        "crossAxisAlignment": "start",
+                                                        "runtimeType": "column"
+                                                    },
+                                                    {
+                                                        "padding": {
+                                                            "left": 80,
+                                                            "runtimeType": "only"
+                                                        },
+                                                        "runtimeType": "padding"
+                                                    },
+                                                    {
+                                                        "children": [
+                                                            {
+                                                                "children": [
+                                                                    {
+                                                                        "textScaleFactor": 2,
+                                                                        "data": "RS. 4000",
+                                                                        "runtimeType": "text"
+                                                                    }
+                                                                ],
+                                                                "crossAxisAlignment": "start",
+                                                                "mainAxisAlignment": "start",
+                                                                "runtimeType": "row"
+                                                            },
+                                                            {
+                                                                "children": [
+                                                                    {
+                                                                        "textScaleFactor": 1,
+                                                                        "data": "1 room | 1 Night",
+                                                                        "runtimeType": "text"
+                                                                    }
+                                                                ],
+                                                                "crossAxisAlignment": "start",
+                                                                "mainAxisAlignment": "start",
+                                                                "runtimeType": "row"
+                                                            }
+                                                        ],
+                                                        "crossAxisAlignment": "start",
+                                                        "mainAxisAlignment": "spaceBetween",
+                                                        "runtimeType": "column"
+                                                    }
+                                                ],
+                                                "runtimeType": "row"
+                                            }
+                                        ],
+                                        "runtimeType": "column"
+                                    },
+                                    "padding": {
+                                        "value": 15,
+                                        "runtimeType": "all"
+                                    },
+                                    "runtimeType": "padding"
+                                },
+                                "margin": {
+                                    "value": 5,
+                                    "runtimeType": "all"
+                                },
+                                "clipBehavior": "antiAliasWithSaveLayer",
+                                "semanticContainer": true,
+                                "shape": {
+                                    "borderRadius": {
+                                        "radius": 10,
+                                        "runtimeType": "circular"
+                                    },
+                                    "runtimeType": "roundedRectangle"
+                                },
+                                "runtimeType": "card"
+                            }
+                        ],
+                        "runtimeType": "column"
+                    }
+                ],
+                "mainAxisAlignment": "spaceAround",
+                "runtimeType": "column"
+            },
+            "runtimeType": "singleChildScrollView"
+        },
+        "runtimeType": "safeArea"
+    },
+    "resizeToAvoidBottomInset": false,
+    "backgroundColor": {
+        "runtimeType": "fromARGB",
+        "a": 255,
+        "r": 233,
+        "g": 218,
+        "b": 229
+    },
+    "runtimeType": "scaffold"
+}

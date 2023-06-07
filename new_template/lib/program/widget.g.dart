@@ -2615,3 +2615,348 @@ const _$OverflowBarAlignmentEnumMap = {
   OverflowBarAlignment.end: 'end',
   OverflowBarAlignment.center: 'center',
 };
+
+_$Image _$$ImageFromJson(Map<String, dynamic> json) => _$Image(
+      key: json['key'] == null
+          ? null
+          : Key.fromJson(json['key'] as Map<String, dynamic>),
+      image: ImageProvider.fromJson(json['image'] as Map<String, dynamic>),
+      semanticLabel: json['semanticLabel'] as String?,
+      excludeFromSemantics: json['excludeFromSemantics'] as bool? ?? false,
+      width: (json['width'] as num?)?.toDouble(),
+      height: (json['height'] as num?)?.toDouble(),
+      color: json['color'] == null
+          ? null
+          : Color.fromJson(json['color'] as Map<String, dynamic>),
+      colorBlendMode:
+          $enumDecodeNullable(_$BlendModeEnumMap, json['colorBlendMode']),
+      fit: $enumDecodeNullable(_$BoxFitEnumMap, json['fit']),
+      alignment: json['alignment'] == null
+          ? Alignment.center
+          : Alignment.fromJson(json['alignment'] as Map<String, dynamic>),
+      repeat: $enumDecodeNullable(_$ImageRepeatEnumMap, json['repeat']) ??
+          ImageRepeat.noRepeat,
+      centerSlice: json['centerSlice'] == null
+          ? null
+          : Rect.fromJson(json['centerSlice'] as Map<String, dynamic>),
+      matchTextDirection: json['matchTextDirection'] as bool? ?? false,
+      gaplessPlayback: json['gaplessPlayback'] as bool? ?? false,
+      isAntiAlias: json['isAntiAlias'] as bool? ?? false,
+      filterQuality:
+          $enumDecodeNullable(_$FilterQualityEnumMap, json['filterQuality']) ??
+              FilterQuality.low,
+      $type: json['runtimeType'] as String?,
+    );
+
+Map<String, dynamic> _$$ImageToJson(_$Image instance) => <String, dynamic>{
+      'key': instance.key,
+      'image': instance.image,
+      'semanticLabel': instance.semanticLabel,
+      'excludeFromSemantics': instance.excludeFromSemantics,
+      'width': instance.width,
+      'height': instance.height,
+      'color': instance.color,
+      'colorBlendMode': _$BlendModeEnumMap[instance.colorBlendMode],
+      'fit': _$BoxFitEnumMap[instance.fit],
+      'alignment': instance.alignment,
+      'repeat': _$ImageRepeatEnumMap[instance.repeat]!,
+      'centerSlice': instance.centerSlice,
+      'matchTextDirection': instance.matchTextDirection,
+      'gaplessPlayback': instance.gaplessPlayback,
+      'isAntiAlias': instance.isAntiAlias,
+      'filterQuality': _$FilterQualityEnumMap[instance.filterQuality]!,
+      'runtimeType': instance.$type,
+    };
+
+const _$BlendModeEnumMap = {
+  BlendMode.clear: 'clear',
+  BlendMode.src: 'src',
+  BlendMode.dst: 'dst',
+  BlendMode.srcOver: 'srcOver',
+  BlendMode.dstOver: 'dstOver',
+  BlendMode.srcIn: 'srcIn',
+  BlendMode.dstIn: 'dstIn',
+  BlendMode.srcOut: 'srcOut',
+  BlendMode.dstOut: 'dstOut',
+  BlendMode.srcATop: 'srcATop',
+  BlendMode.dstATop: 'dstATop',
+  BlendMode.xor: 'xor',
+  BlendMode.plus: 'plus',
+  BlendMode.modulate: 'modulate',
+  BlendMode.screen: 'screen',
+  BlendMode.overlay: 'overlay',
+  BlendMode.darken: 'darken',
+  BlendMode.lighten: 'lighten',
+  BlendMode.colorDodge: 'colorDodge',
+  BlendMode.colorBurn: 'colorBurn',
+  BlendMode.hardLight: 'hardLight',
+  BlendMode.softLight: 'softLight',
+  BlendMode.difference: 'difference',
+  BlendMode.exclusion: 'exclusion',
+  BlendMode.multiply: 'multiply',
+  BlendMode.hue: 'hue',
+  BlendMode.saturation: 'saturation',
+  BlendMode.color: 'color',
+  BlendMode.luminosity: 'luminosity',
+};
+
+const _$BoxFitEnumMap = {
+  BoxFit.fill: 'fill',
+  BoxFit.contain: 'contain',
+  BoxFit.cover: 'cover',
+  BoxFit.fitWidth: 'fitWidth',
+  BoxFit.fitHeight: 'fitHeight',
+  BoxFit.none: 'none',
+  BoxFit.scaleDown: 'scaleDown',
+};
+
+const _$ImageRepeatEnumMap = {
+  ImageRepeat.repeat: 'repeat',
+  ImageRepeat.repeatX: 'repeatX',
+  ImageRepeat.repeatY: 'repeatY',
+  ImageRepeat.noRepeat: 'noRepeat',
+};
+
+const _$FilterQualityEnumMap = {
+  FilterQuality.none: 'none',
+  FilterQuality.low: 'low',
+  FilterQuality.medium: 'medium',
+  FilterQuality.high: 'high',
+};
+
+_$SafeArea _$$SafeAreaFromJson(Map<String, dynamic> json) => _$SafeArea(
+      key: json['key'] == null
+          ? null
+          : Key.fromJson(json['key'] as Map<String, dynamic>),
+      left: json['left'] as bool? ?? true,
+      top: json['top'] as bool? ?? true,
+      right: json['right'] as bool? ?? true,
+      bottom: json['bottom'] as bool? ?? true,
+      minimum: json['minimum'] == null
+          ? EdgeInsets.zero
+          : EdgeInsets.fromJson(json['minimum'] as Map<String, dynamic>),
+      maintainBottomViewPadding:
+          json['maintainBottomViewPadding'] as bool? ?? false,
+      child: Widget.fromJson(json['child'] as Map<String, dynamic>),
+      $type: json['runtimeType'] as String?,
+    );
+
+Map<String, dynamic> _$$SafeAreaToJson(_$SafeArea instance) =>
+    <String, dynamic>{
+      'key': instance.key,
+      'left': instance.left,
+      'top': instance.top,
+      'right': instance.right,
+      'bottom': instance.bottom,
+      'minimum': instance.minimum,
+      'maintainBottomViewPadding': instance.maintainBottomViewPadding,
+      'child': instance.child,
+      'runtimeType': instance.$type,
+    };
+
+_$SingleChildScrollView _$$SingleChildScrollViewFromJson(
+        Map<String, dynamic> json) =>
+    _$SingleChildScrollView(
+      key: json['key'] == null
+          ? null
+          : Key.fromJson(json['key'] as Map<String, dynamic>),
+      scrollDirection:
+          $enumDecodeNullable(_$AxisEnumMap, json['scrollDirection']) ??
+              Axis.vertical,
+      reverse: json['reverse'] as bool? ?? false,
+      padding: json['padding'] == null
+          ? null
+          : EdgeInsets.fromJson(json['padding'] as Map<String, dynamic>),
+      primary: json['primary'] as bool?,
+      physics: json['physics'] == null
+          ? null
+          : ScrollPhysics.fromJson(json['physics'] as Map<String, dynamic>),
+      child: json['child'] == null
+          ? null
+          : Widget.fromJson(json['child'] as Map<String, dynamic>),
+      clipBehavior: $enumDecodeNullable(_$ClipEnumMap, json['clipBehavior']) ??
+          Clip.hardEdge,
+      restorationId: json['restorationId'] as String?,
+      keyboardDismissBehavior: $enumDecodeNullable(
+              _$ScrollViewKeyboardDismissBehaviorEnumMap,
+              json['keyboardDismissBehavior']) ??
+          ScrollViewKeyboardDismissBehavior.manual,
+      $type: json['runtimeType'] as String?,
+    );
+
+Map<String, dynamic> _$$SingleChildScrollViewToJson(
+        _$SingleChildScrollView instance) =>
+    <String, dynamic>{
+      'key': instance.key,
+      'scrollDirection': _$AxisEnumMap[instance.scrollDirection]!,
+      'reverse': instance.reverse,
+      'padding': instance.padding,
+      'primary': instance.primary,
+      'physics': instance.physics,
+      'child': instance.child,
+      'clipBehavior': _$ClipEnumMap[instance.clipBehavior]!,
+      'restorationId': instance.restorationId,
+      'keyboardDismissBehavior': _$ScrollViewKeyboardDismissBehaviorEnumMap[
+          instance.keyboardDismissBehavior]!,
+      'runtimeType': instance.$type,
+    };
+
+_$Align _$$AlignFromJson(Map<String, dynamic> json) => _$Align(
+      key: json['key'] == null
+          ? null
+          : Key.fromJson(json['key'] as Map<String, dynamic>),
+      alignment: json['alignment'] == null
+          ? Alignment.center
+          : Alignment.fromJson(json['alignment'] as Map<String, dynamic>),
+      widthFactor: (json['widthFactor'] as num?)?.toDouble(),
+      heightFactor: (json['heightFactor'] as num?)?.toDouble(),
+      child: json['child'] == null
+          ? null
+          : Widget.fromJson(json['child'] as Map<String, dynamic>),
+      $type: json['runtimeType'] as String?,
+    );
+
+Map<String, dynamic> _$$AlignToJson(_$Align instance) => <String, dynamic>{
+      'key': instance.key,
+      'alignment': instance.alignment,
+      'widthFactor': instance.widthFactor,
+      'heightFactor': instance.heightFactor,
+      'child': instance.child,
+      'runtimeType': instance.$type,
+    };
+
+_$Padding _$$PaddingFromJson(Map<String, dynamic> json) => _$Padding(
+      key: json['key'] == null
+          ? null
+          : Key.fromJson(json['key'] as Map<String, dynamic>),
+      padding: EdgeInsets.fromJson(json['padding'] as Map<String, dynamic>),
+      child: json['child'] == null
+          ? null
+          : Widget.fromJson(json['child'] as Map<String, dynamic>),
+      $type: json['runtimeType'] as String?,
+    );
+
+Map<String, dynamic> _$$PaddingToJson(_$Padding instance) => <String, dynamic>{
+      'key': instance.key,
+      'padding': instance.padding,
+      'child': instance.child,
+      'runtimeType': instance.$type,
+    };
+
+_$ClipRRect _$$ClipRRectFromJson(Map<String, dynamic> json) => _$ClipRRect(
+      key: json['key'] == null
+          ? null
+          : Key.fromJson(json['key'] as Map<String, dynamic>),
+      borderRadius: json['borderRadius'] == null
+          ? BorderRadius.zero
+          : BorderRadius.fromJson(json['borderRadius'] as Map<String, dynamic>),
+      clipBehavior: $enumDecodeNullable(_$ClipEnumMap, json['clipBehavior']) ??
+          Clip.antiAlias,
+      child: json['child'] == null
+          ? null
+          : Widget.fromJson(json['child'] as Map<String, dynamic>),
+      $type: json['runtimeType'] as String?,
+    );
+
+Map<String, dynamic> _$$ClipRRectToJson(_$ClipRRect instance) =>
+    <String, dynamic>{
+      'key': instance.key,
+      'borderRadius': instance.borderRadius,
+      'clipBehavior': _$ClipEnumMap[instance.clipBehavior]!,
+      'child': instance.child,
+      'runtimeType': instance.$type,
+    };
+
+_$MaterialApp _$$MaterialAppFromJson(Map<String, dynamic> json) =>
+    _$MaterialApp(
+      key: json['key'] == null
+          ? null
+          : Key.fromJson(json['key'] as Map<String, dynamic>),
+      home: json['home'] == null
+          ? null
+          : Widget.fromJson(json['home'] as Map<String, dynamic>),
+      initialRoute: json['initialRoute'] as String?,
+      title: json['title'] as String? ?? '',
+      color: json['color'] == null
+          ? null
+          : Color.fromJson(json['color'] as Map<String, dynamic>),
+      theme: json['theme'] == null
+          ? null
+          : ThemeData.fromJson(json['theme'] as Map<String, dynamic>),
+      darkTheme: json['darkTheme'] == null
+          ? null
+          : ThemeData.fromJson(json['darkTheme'] as Map<String, dynamic>),
+      highContrastTheme: json['highContrastTheme'] == null
+          ? null
+          : ThemeData.fromJson(
+              json['highContrastTheme'] as Map<String, dynamic>),
+      highContrastDarkTheme: json['highContrastDarkTheme'] == null
+          ? null
+          : ThemeData.fromJson(
+              json['highContrastDarkTheme'] as Map<String, dynamic>),
+      themeMode: $enumDecodeNullable(_$ThemeModeEnumMap, json['themeMode']) ??
+          ThemeMode.system,
+      themeAnimationDuration: json['themeAnimationDuration'] == null
+          ? const Duration(milliseconds: 200)
+          : Duration(microseconds: json['themeAnimationDuration'] as int),
+      themeAnimationCurve: json['themeAnimationCurve'] == null
+          ? const Curves.linear()
+          : Curves.fromJson(
+              json['themeAnimationCurve'] as Map<String, dynamic>),
+      locale: json['locale'] == null
+          ? null
+          : Locale.fromJson(json['locale'] as Map<String, dynamic>),
+      supportedLocales: (json['supportedLocales'] as List<dynamic>?)
+              ?.map((e) => Locale.fromJson(e as Map<String, dynamic>)) ??
+          const [Locale('en', 'US')],
+      debugShowMaterialGrid: json['debugShowMaterialGrid'] as bool? ?? false,
+      showPerformanceOverlay: json['showPerformanceOverlay'] as bool? ?? false,
+      checkerboardRasterCacheImages:
+          json['checkerboardRasterCacheImages'] as bool? ?? false,
+      checkerboardOffscreenLayers:
+          json['checkerboardOffscreenLayers'] as bool? ?? false,
+      showSemanticsDebugger: json['showSemanticsDebugger'] as bool? ?? false,
+      debugShowCheckedModeBanner:
+          json['debugShowCheckedModeBanner'] as bool? ?? true,
+      restorationScopeId: json['restorationScopeId'] as String?,
+      useInheritedMediaQuery: json['useInheritedMediaQuery'] as bool? ?? false,
+      routes: (json['routes'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(k, Widget.fromJson(e as Map<String, dynamic>)),
+          ) ??
+          const {},
+      $type: json['runtimeType'] as String?,
+    );
+
+Map<String, dynamic> _$$MaterialAppToJson(_$MaterialApp instance) =>
+    <String, dynamic>{
+      'key': instance.key,
+      'home': instance.home,
+      'initialRoute': instance.initialRoute,
+      'title': instance.title,
+      'color': instance.color,
+      'theme': instance.theme,
+      'darkTheme': instance.darkTheme,
+      'highContrastTheme': instance.highContrastTheme,
+      'highContrastDarkTheme': instance.highContrastDarkTheme,
+      'themeMode': _$ThemeModeEnumMap[instance.themeMode],
+      'themeAnimationDuration': instance.themeAnimationDuration.inMicroseconds,
+      'themeAnimationCurve': instance.themeAnimationCurve,
+      'locale': instance.locale,
+      'supportedLocales': instance.supportedLocales.toList(),
+      'debugShowMaterialGrid': instance.debugShowMaterialGrid,
+      'showPerformanceOverlay': instance.showPerformanceOverlay,
+      'checkerboardRasterCacheImages': instance.checkerboardRasterCacheImages,
+      'checkerboardOffscreenLayers': instance.checkerboardOffscreenLayers,
+      'showSemanticsDebugger': instance.showSemanticsDebugger,
+      'debugShowCheckedModeBanner': instance.debugShowCheckedModeBanner,
+      'restorationScopeId': instance.restorationScopeId,
+      'useInheritedMediaQuery': instance.useInheritedMediaQuery,
+      'routes': instance.routes,
+      'runtimeType': instance.$type,
+    };
+
+const _$ThemeModeEnumMap = {
+  ThemeMode.system: 'system',
+  ThemeMode.light: 'light',
+  ThemeMode.dark: 'dark',
+};

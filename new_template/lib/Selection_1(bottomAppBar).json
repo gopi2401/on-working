@@ -1,93 +1,93 @@
-    {
-        "body": {
-            "child": {
-                "mainAxisAlignment": "center",
-                "mainAxisSize": "max",
-                "crossAxisAlignment": "center",
-                "verticalDirection": "down",
-                "children": [
-                    {
-                        "child": {
-                            "floatingActionButton": {
-                                "child": {
-                                    "icon": {
-                                        "codePoint": 57415,
-                                        "fontFamily": "MaterialIcons",
-                                        "matchTextDirection": false
+        {
+            "body": {
+                "child": {
+                    "mainAxisAlignment": "center",
+                    "mainAxisSize": "max",
+                    "crossAxisAlignment": "center",
+                    "verticalDirection": "down",
+                    "children": [
+                        {
+                            "child": {
+                                "floatingActionButton": {
+                                    "child": {
+                                        "icon": {
+                                            "codePoint": 57415,
+                                            "fontFamily": "MaterialIcons",
+                                            "matchTextDirection": false
+                                        },
+                                        "runtimeType": "icon"
                                     },
-                                    "runtimeType": "icon"
+                                    "onPressed": {
+                                        "runtimeType": "empty"
+                                    },
+                                    "runtimeType": "floatingActionButton"
                                 },
-                                "onPressed": {
-                                    "runtimeType": "empty"
+                                "FloatingActionButtonLocation": {
+                                    "runtimeType": "endContained"
                                 },
-                                "runtimeType": "floatingActionButton"
-                            },
-                            "FloatingActionButtonLocation": {
-                                "runtimeType": "endContained"
-                            },
-                            "bottomNavigationBar": {
-                                "child": {
-                                    "children": [
-                                        {
-                                            "onPressed": {
-                                                "runtimeType": "empty"
-                                            },
-                                            "icon": {
-                                                "icon": {
-                                                    "codePoint": 57415,
-                                                    "fontFamily": "MaterialIcons",
-                                                    "matchTextDirection": false
+                                "bottomNavigationBar": {
+                                    "child": {
+                                        "children": [
+                                            {
+                                                "onPressed": {
+                                                    "runtimeType": "empty"
                                                 },
-                                                "runtimeType": "icon"
-                                            },
-                                            "autofocus": true,
-                                            "runtimeType": "iconButton"
-                                        },
-                                        {
-                                            "onPressed": {
-                                                "runtimeType": "empty"
-                                            },
-                                            "icon": {
                                                 "icon": {
-                                                    "codePoint": 57415,
-                                                    "fontFamily": "MaterialIcons",
-                                                    "matchTextDirection": false
+                                                    "icon": {
+                                                        "codePoint": 57415,
+                                                        "fontFamily": "MaterialIcons",
+                                                        "matchTextDirection": false
+                                                    },
+                                                    "runtimeType": "icon"
                                                 },
-                                                "runtimeType": "icon"
+                                                "autofocus": true,
+                                                "runtimeType": "iconButton"
                                             },
-                                            "autofocus": true,
-                                            "runtimeType": "iconButton"
-                                        },
-                                        {
-                                            "onPressed": {
-                                                "runtimeType": "empty"
-                                            },
-                                            "icon": {
+                                            {
+                                                "onPressed": {
+                                                    "runtimeType": "empty"
+                                                },
                                                 "icon": {
-                                                    "codePoint": 57415,
-                                                    "fontFamily": "MaterialIcons",
-                                                    "matchTextDirection": false
+                                                    "icon": {
+                                                        "codePoint": 57415,
+                                                        "fontFamily": "MaterialIcons",
+                                                        "matchTextDirection": false
+                                                    },
+                                                    "runtimeType": "icon"
                                                 },
-                                                "runtimeType": "icon"
+                                                "autofocus": true,
+                                                "runtimeType": "iconButton"
                                             },
-                                            "autofocus": true,
-                                            "runtimeType": "iconButton"
-                                        }
-                                    ],
-                                    "runtimeType": "row"
+                                            {
+                                                "onPressed": {
+                                                    "runtimeType": "empty"
+                                                },
+                                                "icon": {
+                                                    "icon": {
+                                                        "codePoint": 57415,
+                                                        "fontFamily": "MaterialIcons",
+                                                        "matchTextDirection": false
+                                                    },
+                                                    "runtimeType": "icon"
+                                                },
+                                                "autofocus": true,
+                                                "runtimeType": "iconButton"
+                                            }
+                                        ],
+                                        "runtimeType": "row"
+                                    },
+                                    "runtimeType": "bottomAppBar"
                                 },
-                                "runtimeType": "bottomAppBar"
+                                "runtimeType": "scaffold"
                             },
-                            "runtimeType": "scaffold"
-                        },
-                        "width": 125,
-                        "height": 50,
-                        "runtimeType": "sizedBox"
-                    }
-                ],
-                "runtimeType": "column"
+                            "width": 500,
+                            "height": 200,
+                            "runtimeType": "sizedBox"
+                        }
+                    ],
+                    "runtimeType": "column"
+                },
+                "runtimeType": "center"
             },
-            "runtimeType": "center"
-        },
-        "runtimeType": "scaffold"
-    }
+            "runtimeType": "scaffold"
+        }
