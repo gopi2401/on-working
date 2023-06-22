@@ -2,7 +2,7 @@ library ButtonStyle;
 
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-import '../color.dart';
+import './color.dart';
 
 part 'buttonStyle.freezed.dart';
 part 'buttonStyle.g.dart';

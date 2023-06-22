@@ -57,7 +57,7 @@
 /// ```
 library flutter_widget;
 
-export 'package:new_template/convter.dart';
+export './convter.dart';
 
 import 'dart:convert';
 import 'dart:ffi';
@@ -70,10 +70,10 @@ import 'package:flutter/gestures.dart' as gestures;
 import 'dart:ui' as ui;
 // import 'package:flutter_json_widgets/flutter_json_widgets.dart' as widgets;
 import 'package:http/http.dart' as http;
-import 'package:new_template/program/matrix_4.dart';
+import 'freezd_package/matrix_4.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:vector_math/vector_math.dart';
-import 'package:new_template/exports.dart' as widgets;
+import './exports.dart' as widgets;
 
 /// Custom widget builder.
 typedef CustomWidgetBuilder = material.Widget Function(
@@ -132,7 +132,7 @@ class _FlutterWidgetState extends material.State<FlutterWidget> {
     if (widget.json != null) {
       try {
         final widget = widgets.Widget.fromJson(this.widget.json!);
-        print(widget);
+        // print(widget);
         // print($widget(context, widget));
         return $widget(context, widget)!;
       } catch (e) {
